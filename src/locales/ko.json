@@ -1,0 +1,1488 @@
+{
+  "admin": {
+    "accounts": {
+      "backToMembers": "회원가입",
+      "eyebrow": "관리자",
+      "title": "계좌정보",
+      "closeForm": "본문 바로가기",
+      "newAccount": "새 계정",
+      "filters": {
+        "all": "전체",
+        "members": "DAD 회원",
+        "allies": "동맹"
+      },
+      "emptyState": "이 필터에 계정이 없습니다.",
+      "youLabel": "you",
+      "lastLogin": "마지막 로그인 {{when}}",
+      "rosterTooltip": "로스터: {{nick}} ({{rank}})",
+      "rosterFallback": "roster",
+      "lvlShort": "lvl {{level}}",
+      "unlinkTitle": "로스터의 링크",
+      "unlink": "관련 상품",
+      "linkTitle": "로스터 회원 링크",
+      "link": "링크 메뉴",
+      "resetTitle": "비밀번호 재설정",
+      "reset": "이름 *",
+      "deactivateTitle": "수정하기",
+      "reactivateTitle": "재활성화",
+      "off": "이름 *",
+      "on": "이름 *",
+      "passwordTooShort": "암호는 적어도 6개의 특성이어야 합니다.",
+      "resetPasswordPrompt": "{{name}} (@{{username}})에 대한 새로운 TEMPORARY 암호를 설정합니다.\n회원은 다음 로그인에서 변경할 수 있습니다.",
+      "cantDeactivateSelf": "자신을 비활성화 할 수 없습니다 - 다른 R5를 요청하십시오.",
+      "confirmDeactivate": "{{name}}를 비활성화합니까?",
+      "confirmReactivate": "{{name}}를 활성화합니까?",
+      "errors": {
+        "failedToCreate": "계정 만들기",
+        "failedToReset": "비밀번호 재설정",
+        "failedToLink": "연결하기",
+        "failedToToggle": "Active 상태 업데이트 실패"
+      },
+      "feedback": {
+        "created": "계정 \"{{name}}\"({{role}}) 생성.",
+        "passwordReset": "{{name}}에 대한 암호 재설정.",
+        "linked": "{{name}}는 {{target}}에 연결했습니다.",
+        "unlinked": "{{name}}는 연결되지 않았습니다.",
+        "reactivated": "{{name}}는 재 활성화했습니다.",
+        "deactivated": "{{name}} 비활성화."
+      },
+      "form": {
+        "heading": "새 계정",
+        "usernameLabel": "사용자 이름 *",
+        "usernamePlaceholder": "alice",
+        "usernameHint": "로그인하기",
+        "displayNameLabel": "표시 이름",
+        "displayNameHint": "사용자 이름",
+        "passwordLabel": "비밀번호 *",
+        "passwordPlaceholder": "적어도 6개의 특성",
+        "roleLabel": "역할 *",
+        "languageLabel": "한국어",
+        "cancel": "취소",
+        "creating": "회사 소개",
+        "create": "계정 만들기"
+      },
+      "roles": {
+        "ally": {
+          "label": "모든 것",
+          "description": "외교 손님 — 읽기 전용, 채팅 게시물."
+        },
+        "member": {
+          "label": "회원 (R1)",
+          "description": "일반 DAD 회원."
+        },
+        "r2": {
+          "label": "R2",
+          "description": "임원 (관리자가 아직 추가되지 않음)."
+        },
+        "r3": {
+          "label": "R3",
+          "description": "임원 (관리자가 아직 추가되지 않음)."
+        },
+        "r4": {
+          "label": "R4 — Admin",
+          "description": "Polls/events 만들기, allies 관리."
+        },
+        "r5": {
+          "label": "R5 — Admin",
+          "description": "다른 계정 관리 (다른 R5 포함)."
+        }
+      },
+      "relative": {
+        "never": "전혀",
+        "justNow": "지금 시작",
+        "minutesAgo": "{{count}}m 전",
+        "hoursAgo": "{{count}}h 전",
+        "daysAgo": "{{count}}d 전",
+        "monthsAgo": "{{count}}mo 전",
+        "yearsAgo": "{{count}}y 전"
+      },
+      "linkPicker": {
+        "heading": "로스터 링크",
+        "close": "닫기",
+        "searchPlaceholder": "검색 roster ..",
+        "noMatch": "회원이 \"{{query}}\".",
+        "allLinked": "모든 roster 회원이 연결됩니다."
+      }
+    },
+    "alliance": {
+      "backToAdmin": "관리자로 돌아가기",
+      "eyebrow": "관리자",
+      "title": "동맹",
+      "cards": {
+        "timeline": {
+          "title": "대한민국",
+          "subtitle": "TG tiers, hero/pet generations, masters, fog에 대한 잠금 해제 날짜를 편집합니다."
+        },
+        "catalogue": {
+          "title": "카탈로그",
+          "subtitle": "영웅, 애완 동물, 마스터 및 troop tiers - 모든 페이지 뒤에 게임 데이터."
+        },
+        "announcements": {
+          "title": "공지사항",
+          "subtitle": "회원에게 알림 및 일정 푸시 알림."
+        }
+      },
+      "metadata": {
+        "eyebrow": "공지사항",
+        "title": "메타데이터",
+        "intro": "순위, 좌우, 브랜드 색상, 캡처 날짜는 <allianceLink>/alliance</allianceLink>에 나타납니다. 이 값은 <c>alliance settings</c> 테이블에 살고 있습니다.",
+        "rankLabel": "순위",
+        "rankPlaceholder": "#2",
+        "taglineLabel": "제품 정보",
+        "taglinePlaceholder": "영국 1652",
+        "mottoLabel": "사이트맵",
+        "mottoPlaceholder": "평화의 우아함, 전투에서 Chaos.",
+        "brandPrimaryLabel": "상표 1 차 (hex)",
+        "brandAccentLabel": "브랜드 악센트 (hex)",
+        "capturedAtLabel": "다운로드",
+        "loadError": "짐 과실: {{message}}",
+        "saveError": "오류 저장 : {{message}}",
+        "saved": "저장됨",
+        "updatedAt": "{{date}} 업데이트",
+        "loading": "로드 중…",
+        "saving": "저장..",
+        "save": "저장"
+      }
+    },
+    "analytics": {
+      "backToAdmin": "관리자로 돌아가기",
+      "eyebrow": "관리자",
+      "title": "분석",
+      "kpi": {
+        "onlineNow": {
+          "label": "현재 온라인",
+          "sub": "지난 5 분 동안 로그인"
+        },
+        "activeSessions": {
+          "label": "Active 세션",
+          "sub": "마지막 24 시간에 있는 표시에서"
+        },
+        "totalAccounts": {
+          "label": "총 계정",
+          "sub": "{{count}} 활성"
+        },
+        "neverLoggedIn": {
+          "label": "로그인한 적 없음",
+          "sub": "관련 제품"
+        },
+        "failedSignins": {
+          "label": "실패한 표시",
+          "sub": "마지막 24시간"
+        }
+      },
+      "activity": {
+        "heading": "활동 창",
+        "intro": "계정은 윈도우에서 터치 (Last login at에서 파생), 아니 raw sign-ins.",
+        "last24h": "마지막 24시간",
+        "last7d": "마지막 7d",
+        "last30d": "마지막 30d",
+        "pctOfAccounts": "계정의 {{pct}}%"
+      },
+      "pwa": {
+        "heading": "PWA 설치 분할",
+        "installed": "설치하기",
+        "browserOnly": "브라우저만",
+        "summary": "{{installed}}의 {{total}} 계정 ({{pct}} %)은 가정 화면에 War Room을 추가했습니다."
+      },
+      "push": {
+        "heading": "푸시 배송 (마지막 30d)",
+        "opened": "이름 *",
+        "ignored": "이름 *",
+        "note": "지금 Mock — 한 번 밀어 배를 철사. 알림 패널에 per-notification를 추적했습니다."
+      },
+      "never": {
+        "heading": "로그인한 적 없음"
+      },
+      "langs": {
+        "heading": "한국어"
+      },
+      "footnote": "지금 온라인과 활성 세션은 login events에서 읽습니다. 푸시 배송은 푸시 배송까지 조이됩니다."
+    },
+    "catalogue": {
+      "backToAlliance": "동맹으로 돌아가기",
+      "eyebrow": "관리자 · 카탈로그",
+      "title": "게임 카탈로그",
+      "intro": "파워 타임라인, avatars, troop guides 및 stat 카드가 있는 카탈로그 테이블을 관리합니다. <c>heroes</c>, <c>pets</c>, <c>masters</c> 및 <c>troop tiers</c>에서 읽는 모든 공공 페이지로 이동합니다.",
+      "cards": {
+        "heroes": {
+          "title": "영웅",
+          "subtitle": "로스터, 초상화, 세대 및 선호 troop 지점."
+        },
+        "pets": {
+          "title": "펫",
+          "subtitle": "세대의 동반자 - 초상화, 설명, 출시."
+        },
+        "masters": {
+          "title": "마스터",
+          "subtitle": "명령을 잠금 해제하여 명령된 전략 고문."
+        },
+        "troopTiers": {
+          "title": "병종 단계",
+          "subtitle": "T1..T10 및 Truegold 계층 — 라벨, 교육, 아이콘."
+        }
+      }
+    },
+    "chat": {
+      "backToAdmin": "관리자로 돌아가기",
+      "eyebrow": "관리자",
+      "title": "채팅",
+      "unsaved": "unsaved",
+      "save": "저장",
+      "savedAt": "저장 · {{time}}",
+      "rateLimit": {
+        "title": "비율 제한 (사용자당)",
+        "subtitle": "여러 메시지가 단일 계정이 1 시간 내에 게시 할 수있는 방법에 대한 소프트 캡.",
+        "messagesPerHour": "메시지 / 시간",
+        "minSeconds": "메시지 사이 분 초"
+      },
+      "attachments": {
+        "title": "첨부파일",
+        "subtitle": "어떤 회원이 업로드 할 수 있습니다. 오디오 + 비디오는 v1에서 비활성화됩니다.",
+        "allowImages": "이미지 업로드 허용",
+        "maxFileSize": "최대 파일 크기"
+      },
+      "purge": {
+        "title": "Purge 메시지",
+        "subtitle": "모든 채팅 메시지 및 업로드 된 이미지의 One-shot 와이퍼. 할 수 없습니다.",
+        "clearAll": "모든 메시지",
+        "confirmHeading": "자주 묻는 질문",
+        "confirmBody": "모든 채팅 메시지 및 업로드 된 이미지가 사라질 것입니다. 과거 설문 조사, 이벤트 및 회원은 비접촉되지 않습니다.",
+        "cancel": "취소",
+        "confirmYes": "예, 모든 것을 닦아"
+      },
+      "defaults": {
+        "title": "기본 사항",
+        "subtitle": "추천된 출발점에 각 값을 재설정합니다.",
+        "restore": "기본값 복원"
+      },
+      "footnote": "참고 : 나중에 자체 배송. 이 컨트롤은 오늘 로컬로 지속되므로 패널이 준비됩니다. 한 번 메시지 테이블이 라이브됩니다. 이 페이지는 UI를 터치하지 않고 서버 백업 설정 행으로 교환합니다."
+    },
+    "eventParticipants": {
+      "backToOccurrences": "자주 묻는 질문",
+      "eyebrow": "이벤트 참가자",
+      "eventFallback": "행사일정",
+      "durationMin": "{{count}} 분",
+      "addHeading": "Participant 추가",
+      "memberLabel": "이름 *",
+      "allAssigned": "모든 회원은 이미 할당됩니다",
+      "roleLabel": "역할",
+      "notesLabel": "(선택 사항)",
+      "notesPlaceholder": "Squad 할당, 백업 계획, 특수 지침 ..",
+      "notesInputPlaceholder": "(선택 사항)",
+      "adding": "더 보기",
+      "addButton": "Participant 추가",
+      "assignedHeading": "할당 된 · {{count}}",
+      "emptyState": "아직 지정되지 않은 참가자가 없습니다.",
+      "statusTempOut": "아웃 (temp)",
+      "statusLeft": "왼쪽",
+      "cancel": "취소",
+      "save": "저장",
+      "confirm": "확인",
+      "cancelDelete": "삭제 취소",
+      "editAria": "{{nick}} 편집",
+      "removeAria": "{{nick}} 제거",
+      "roles": {
+        "leader": "Leader",
+        "joiner": "Joiner",
+        "standby": "Standby",
+        "unset": "기타 제품",
+        "unsetOption": "- 언셋 —"
+      },
+      "errors": {
+        "notFound": "찾을 수 없습니다.",
+        "failedToLoad": "짐 발생에 실패.",
+        "failedToAdd": "참가자를 추가하는 실패.",
+        "failedToUpdate": "참가자를 업데이트하는 실패.",
+        "failedToRemove": "참가자를 제거하는 실패."
+      },
+      "feedback": {
+        "added": "참가자 추가.",
+        "updated": "Participant 업데이트.",
+        "removed": "부분 제거."
+      }
+    },
+    "events": {
+      "backToAdmin": "관리자로 돌아가기",
+      "eyebrow": "관리자",
+      "title": "이벤트 카탈로그",
+      "occurrencesLink": "관련 기사",
+      "newEvent": "새로운 이벤트",
+      "close": "닫기",
+      "confirmArchive": "이 이벤트를 보관? 그것은 All-events 그리드에서 숨길 것입니다.",
+      "errorFailed": "실패한",
+      "feedback": {
+        "archived": "다운로드.",
+        "restored": "오순으로 복원.",
+        "created": "이벤트 생성."
+      },
+      "form": {
+        "heading": "새로운 계절 행사",
+        "nameLabel": "이름 *",
+        "namePlaceholder": "Lunar Festival",
+        "shortNameLabel": "이름 *",
+        "shortNamePlaceholder": "Lunar",
+        "descriptionLabel": "설명",
+        "iconUrlLabel": "아이콘 URL",
+        "iconUrlPlaceholder": "/images/events/lunar.png",
+        "seasonal": "일식 / 계절",
+        "create": "생성"
+      },
+      "seasonalBadge": "계절별",
+      "actions": {
+        "restore": "관련 상품",
+        "archive": "관련 기사"
+      }
+    },
+    "heroes": {
+      "backToCatalogue": "카탈로그",
+      "eyebrow": "관리자 · 카탈로그",
+      "title": "영웅",
+      "newHero": "새로운 영웅",
+      "cancel": "취소",
+      "create": "생성",
+      "edit": "편집",
+      "cancelEdit": "취소",
+      "save": "저장",
+      "inactive": "inactive",
+      "genLabel": "Gen {{gen}}",
+      "branch": {
+        "none": "—",
+        "infantry": "회사 소개",
+        "cavalry": "스낵 바",
+        "archer": "언어 선택"
+      },
+      "errors": {
+        "nameRequired": "영웅의 이름을 입력합니다.",
+        "invalidSlug": "잘못된 slug. 문자와 숫자를 사용합니다.",
+        "failedToCreate": "영웅 만들기",
+        "failedToDelete": "삭제 취소",
+        "nameRequiredShort": "이름필수.",
+        "failedToSave": "자주 묻는 질문"
+      },
+      "confirmDelete": {
+        "heading": "영구적으로 \"{{name}}\"를 삭제합니까?",
+        "body": "슬러그 {{slug}} 및 초상화가 제거됩니다. 이 동작은 undone일 수 없습니다.",
+        "yes": "예, 삭제"
+      },
+      "fields": {
+        "name": "이름",
+        "slugSuggested": "Slug (가장 :",
+        "slugPlaceholder": "ex: shen-yu",
+        "generation": "세대 (1-12)",
+        "role": "역할",
+        "rolePlaceholder": "전: Marshal",
+        "preferredBranch": "Preferred 지점",
+        "portrait": "포트레이트(Portrait)",
+        "portraitUploadLabel": "영웅 portrait",
+        "description": "설명",
+        "releasedAt": "출시 예정",
+        "displayOrder": "전시 순서",
+        "active": "활성"
+      }
+    },
+    "iconPicker": {
+      "groups": {
+        "truegoldTiers": "Truegold tiers",
+        "items": "이름 *",
+        "buildings": "회사연혁",
+        "events": "이벤트",
+        "heroes": "영웅"
+      },
+      "currentIcon": "현재 아이콘",
+      "noOverride": "이름 *",
+      "autoLabel": "자동 · {{path}}",
+      "clear": "지우기",
+      "customUrlLabel": "또는 사용자 정의 URL을 붙여 (웹에 어떤 이미지)",
+      "customUrlPlaceholder": "https://wiki.kingshot.gg/.../some-icon.png",
+      "apply": "적용",
+      "uploadOwn": "또는 자신의 이미지를 업로드"
+    },
+    "masters": {
+      "backToCatalogue": "카탈로그",
+      "eyebrow": "관리자 · 카탈로그",
+      "title": "마스터",
+      "newMaster": "새로운 마스터",
+      "cancel": "취소",
+      "create": "생성",
+      "edit": "편집",
+      "cancelEdit": "취소",
+      "save": "저장",
+      "inactive": "inactive",
+      "unlockOrderLabel": "#{{order}}를 잠금 해제",
+      "errors": {
+        "nameRequired": "마스터의 이름을 입력합니다.",
+        "invalidSlug": "잘못된 slug. 문자와 숫자를 사용합니다.",
+        "failedToCreate": "마스터 만들기",
+        "failedToDelete": "삭제 취소",
+        "nameRequiredShort": "이름필수.",
+        "failedToSave": "자주 묻는 질문"
+      },
+      "confirmDelete": {
+        "heading": "영구적으로 \"{{name}}\"를 삭제합니까?",
+        "body": "Slug {{slug}}는 제거됩니다. 이 동작은 undone일 수 없습니다.",
+        "yes": "예, 삭제"
+      },
+      "fields": {
+        "name": "이름",
+        "slugSuggested": "Slug (가장 :",
+        "unlockOrder": "관련 상품",
+        "portrait": "포트레이트(Portrait)",
+        "portraitUploadLabel": "마스터 초상화",
+        "description": "설명",
+        "releasedAt": "출시 예정",
+        "active": "활성"
+      }
+    },
+    "members": {
+      "backToAdmin": "관리자로 돌아가기",
+      "eyebrow": "관리자",
+      "title": "회원 roster",
+      "statsMembers": "{{count}} 회원",
+      "statsTempOut": "{{count}} 온도. 밖으로",
+      "combinedPower": "결합된 힘",
+      "accountsLink": "계좌정보",
+      "searchPlaceholder": "닉네임 검색…",
+      "filters": {
+        "all": "전체",
+        "out": "더 알아보기"
+      },
+      "feedbackSaved": "{{nick}} 저장.",
+      "emptyState": "이 필터는 없습니다.",
+      "tempOutShort": "인기있는",
+      "leftShort": "left",
+      "lvlLabel": "lvl {{level}}",
+      "editButton": "편집",
+      "subgroups": {
+        "supreme": "Supreme (R4)",
+        "enforcerer": "Enforcerer (R3)",
+        "alpha": "Alpha (R2)",
+        "lieutenant": "Lieutenant (R1)"
+      },
+      "statuses": {
+        "active": "활성",
+        "temporaryOut": "온도. 밖으로",
+        "left": "왼쪽"
+      },
+      "errors": {
+        "tgOrTc": "TG 수준 또는 도시 센터, 둘 다 아닙니다.",
+        "failedToSave": "자주 묻는 질문"
+      },
+      "edit": {
+        "heading": "편집 · {{nick}}",
+        "close": "닫기",
+        "nickLabel": "Nick",
+        "rankLabel": "순위",
+        "subgroupLabel": "서브그룹",
+        "noneOption": "- 없음 -",
+        "powerLabel": "힘 (방사)",
+        "powerHint": "— 예. 158.7",
+        "tgLabel": "TG 수준",
+        "tgPlaceholder": "1-8",
+        "tcLabel": "타운 센터",
+        "tcPlaceholder": "25-30",
+        "statusLabel": "상태",
+        "tempOutNote": "왜 & 다시 때?",
+        "leftNote": "떠나는 이유",
+        "langHintLabel": "랭킨",
+        "langHintHint": "- 예. zh-CN, pt",
+        "optional": "optional",
+        "cancel": "취소",
+        "saving": "저장..",
+        "save": "저장"
+      }
+    },
+    "milestones": {
+      "backToAlliance": "동맹으로 돌아가기",
+      "eyebrow": "관리자",
+      "title": "왕국 이정표",
+      "newMilestone": "새로운 이정표",
+      "cancel": "취소",
+      "create": "생성",
+      "edit": "편집",
+      "cancelEdit": "취소",
+      "save": "저장",
+      "intro": "각 이정표에 대한 예상 잠금 해제 날짜를 설정합니다. 대시보드는 다음 단계의 라이브 일 이동 카운트 다운을 보여줍니다.",
+      "view": "- 연혁",
+      "openPublic": "본문 바로가기",
+      "deleteTitle": "계정 삭제",
+      "achievedBadge": "achieved",
+      "preview": "미리보기",
+      "afterCreateHint": "작성 후, 아래의 목록에서 아이템을 열려면 풍부한 콘텐츠 (Tiptap)을 작성하십시오.",
+      "bodyPlaceholder": "이 이정표에 대해 작성 : 그것이 무엇인지, 그것은 얼라이언스에 영향을 미치는 방법, 전략 변경, 유용한 링크 ..",
+      "errors": {
+        "nameRequired": "새로운 이정표의 이름을 입력합니다.",
+        "invalidSlug": "Slug 세대에 대한 잘못된 이름. 문자와 숫자를 사용합니다.",
+        "failedToCreate": "이정표를 만들기 위해 실패",
+        "failedToDelete": "삭제 취소",
+        "nameRequiredShort": "Milestone 이름은 필요합니다.",
+        "failedToSave": "자주 묻는 질문"
+      },
+      "confirmDelete": {
+        "heading": "영구적으로 \"{{name}}\"를 삭제합니까?",
+        "body": "공개 페이지 /timeline/{{slug}} 및 모든 콘텐츠는 삭제됩니다. 이 동작은 undone일 수 없습니다.",
+        "yes": "예, 삭제"
+      },
+      "categories": {
+        "truegold": "Truegold",
+        "heroes": "영웅",
+        "pets": "펫",
+        "pvp": "PvP",
+        "feature": "Feature",
+        "master": "주 메뉴",
+        "fog": "Fog",
+        "warAcademy": "War Academy",
+        "other": "이름 *"
+      },
+      "fields": {
+        "name": "이름",
+        "namePlaceholder": "e.g. Truegold 6 (유효한 향상)",
+        "category": "(주)",
+        "unlockDate": "날짜를 자물쇠로 엽니다 (UTC, 선택)",
+        "slugAuto": "Slug (자동:",
+        "slugPlaceholder": "옵션 — 사용은 문자/숫자/hyphen",
+        "notes": "짧은 노트 (옵션)",
+        "notesPublic": "짧은 노트 (공기 목록에 표시)",
+        "notesPublicPlaceholder": "e.g. Crucible 및 T8 테러를 잠금 해제합니다.",
+        "unlockDateUtc": "날짜 잠금 해제 (UTC)",
+        "achieved": "수상 경력",
+        "icon": "Milestone 아이콘",
+        "milestoneName": "Milestone 이름",
+        "contentFor": "/timeline/{{slug}}를 위한 내용"
+      }
+    },
+    "notifications": {
+      "backToAdmin": "관리자로 돌아가기",
+      "eyebrow": "관리자",
+      "title": "알림",
+      "compose": "작성",
+      "titleLabel": "이름 *",
+      "titlePlaceholder": "곰 사냥 단계 3 시작 15 분",
+      "bodyLabel": "이름 *",
+      "bodyPlaceholder": "불타는 rallies는 15 분에서 시작합니다 - 당신의 성에있고 행진 할 준비가되어 있습니다.",
+      "emojiLabel": "이모티콘",
+      "imageLabel": "(선택) 큰 이미지",
+      "uploadImage": "이미지 업로드",
+      "orPasteUrl": "...또는 URL을 붙여",
+      "imageUrlPlaceholder": "https://…/banner.png",
+      "audienceLabel": "대상",
+      "tapTargetLabel": "탭 대상",
+      "tapUrlPlaceholder": "https://war-room.local/p/abc",
+      "scheduleLabel": "예약",
+      "recurrencePlaceholder": "예. 매주 화요일 20:00 UTC",
+      "discard": "팟캐스트",
+      "sending": "이름 *",
+      "send": "보내기",
+      "scheduling": "일정 ..",
+      "scheduleAction": "예약",
+      "preview": "미리보기",
+      "previewNow": "지금",
+      "previewDefaultTitle": "공지사항",
+      "previewDefaultBody": "Body text shows here as member will see it on the lock 화면.",
+      "targetArrow": "대상 →",
+      "recentPushes": "최근 푸시",
+      "loading": "로드 중…",
+      "noneSent": "아직 발송되지 않습니다.",
+      "deliveredCount": "{{count}} 배달",
+      "openedCount": "{{count}} 오픈 · {{pct}} %",
+      "pushedTo": "{{audience}} · {{time}}에 푸시",
+      "audience": {
+        "all": "모든 계정",
+        "voting": "투표 회원 (R1-R5)",
+        "admins": "관리자 만 (R4 / R5)",
+        "allies": "모든 것만",
+        "custom": "공지사항"
+      },
+      "schedule": {
+        "now": "지금 보내기",
+        "later": "예약",
+        "recurring": "관련 상품"
+      },
+      "tap": {
+        "hub": "전쟁 방 / 집",
+        "events": "이벤트 탭",
+        "polls": "투표 목록",
+        "alliance": "제휴 페이지",
+        "url": "사용자 정의 URL"
+      },
+      "errors": {
+        "mustBeSignedIn": "알림을 보내야 합니다.",
+        "failedToSend": "알림을 보낼 실패."
+      }
+    },
+    "occurrences": {
+      "backToEvents": "행사안내",
+      "eyebrow": "관리자",
+      "title": "이벤트 캘린더",
+      "intro": "다음 곰, KvK 단계 및 계절 행사 일정.",
+      "form": {
+        "heading": "새로운 발생",
+        "eventLabel": "행사일정",
+        "startsAtLabel": "시작 (당신의 현지 시간)",
+        "durationLabel": "기간 (분)",
+        "phaseLabel": "단계 상표 (선택)",
+        "phasePlaceholder": "Prep / 성 전투 / 브롤",
+        "notesLabel": "(선택 사항)",
+        "repeatLabel": "고정 간격에서 반복",
+        "intervalLabel": "간격 (시간)",
+        "bearHint": "곰 사냥 일반적으로 48",
+        "countLabel": "파기방법",
+        "saving": "저장...",
+        "submit": "파기방법",
+        "submitMany": "{{count}} 발생 추가"
+      },
+      "feedback": {
+        "added": "Occurrence 추가.",
+        "addedMany": "{{count}}가 모든 {{hours}}h를 발생시킵니다."
+      },
+      "errors": {
+        "failedToLoad": "짐에 실패",
+        "failedToSave": "자주 묻는 질문",
+        "failedToDelete": "삭제 취소"
+      },
+      "confirmDelete": "이 발생을 삭제?",
+      "upcomingHeading": "예정 · 다음 30 일",
+      "loading": "로드 중 ...",
+      "emptyState": "30 일 후에 예정되지 않습니다.",
+      "durationMin": "{{count}} 분",
+      "cancelled": "cancelled",
+      "manageSquad": "Squad 관리",
+      "squads": "기타 제품",
+      "delete": "삭제"
+    },
+    "pets": {
+      "backToCatalogue": "카탈로그",
+      "eyebrow": "관리자 · 카탈로그",
+      "title": "펫",
+      "newPet": "새로운 애완 동물",
+      "cancel": "취소",
+      "create": "생성",
+      "edit": "편집",
+      "cancelEdit": "취소",
+      "save": "저장",
+      "inactive": "inactive",
+      "genLabel": "Gen {{gen}}",
+      "errors": {
+        "nameRequired": "애완 동물의 이름을 입력하십시오.",
+        "invalidSlug": "잘못된 slug. 문자와 숫자를 사용합니다.",
+        "failedToCreate": "애완 동물 만들기 실패",
+        "failedToDelete": "삭제 취소",
+        "nameRequiredShort": "이름필수.",
+        "failedToSave": "자주 묻는 질문"
+      },
+      "confirmDelete": {
+        "heading": "영구적으로 \"{{name}}\"를 삭제합니까?",
+        "body": "Slug {{slug}}는 제거됩니다. 이 동작은 undone일 수 없습니다.",
+        "yes": "예, 삭제"
+      },
+      "fields": {
+        "name": "이름",
+        "slugSuggested": "Slug (가장 :",
+        "generation": "주요연혁",
+        "portrait": "포트레이트(Portrait)",
+        "portraitUploadLabel": "PET 초상화",
+        "description": "설명",
+        "releasedAt": "출시 예정",
+        "displayOrder": "전시 순서",
+        "active": "활성"
+      }
+    },
+    "polls": {
+      "backToAdmin": "관리자로 돌아가기",
+      "eyebrow": "관리자",
+      "title": "투표",
+      "closeForm": "본문 바로가기",
+      "newPoll": "뉴스레터",
+      "filters": {
+        "all": "all",
+        "open": "open",
+        "closed": "closed",
+        "draft": "draft",
+        "archived": "archived"
+      },
+      "statusTints": {
+        "draft": "사이트맵",
+        "open": "열기",
+        "closed": "마감",
+        "archived": "관련 기사"
+      },
+      "visibility": {
+        "during": {
+          "label": "라이브 (여행)",
+          "hint": "회원은 업데이트로 계산합니다"
+        },
+        "afterClose": {
+          "label": "자주 묻는 질문",
+          "hint": "설문 조사가 닫을 때까지 숨겨진 수"
+        },
+        "adminOnly": {
+          "label": "관리자 전용",
+          "hint": "항상 회원으로 숨겨"
+        }
+      },
+      "visibilityShort": {
+        "adminOnly": "admin-only",
+        "afterClose": "마지막 후에"
+      },
+      "errors": {
+        "minOptions": "최소 {{min}} 옵션 추가.",
+        "duplicates": "중복 옵션은 허용되지 않습니다.",
+        "failedToCreate": "투표하기",
+        "actionFailed": "활동 실패",
+        "clipboardBlocked": "브라우저에 의해 차단 클립보드."
+      },
+      "feedback": {
+        "created": "\"{{title}}\" ({{status}})를 만들었습니다.",
+        "published": "\"{{title}}\".",
+        "closed": "닫히는 \"{{title}}\".",
+        "reopened": "\"{{title}}\".",
+        "archived": "아카이브 \"{{title}}\".",
+        "restored": "닫히는 \"{{title}}\"를 복원했습니다.",
+        "deleted": "삭제 된 \"{{title}}\"."
+      },
+      "confirmDelete": "영구적으로 \"{{title}}\"를 삭제합니까? 모든 투표는 손실됩니다.",
+      "form": {
+        "heading": "뉴스레터",
+        "titleLabel": "이름 *",
+        "titlePlaceholder": "우리는 Viking Vengeance를 실행해야 할 시간?",
+        "descriptionLabel": "설명",
+        "descriptionHint": "— Markdown (**bold**, *italic*, `code`, [text](url), - 목록)",
+        "descriptionPlaceholder": "** 18:00 UTC**는 EU + 아시아 오버랩에 적합합니다. *당신은 그것을 만들 수없는 경우에도 투표하십시오. *",
+        "typeLabel": "유형 *",
+        "typeSingle": "제품정보",
+        "typeSingleHint": "1개의 선택",
+        "typeMulti": "지원하다",
+        "typeMultiHint": "많은 선택",
+        "initialStatusLabel": "초기 상태 *",
+        "statusOpenOption": "오픈 · 즉시 게시",
+        "statusDraftOption": "Draft · 단지 관리자는 그것을 볼",
+        "opensAtLabel": "공지사항",
+        "opensAtHint": "- 옵션 · UTC",
+        "closesAtLabel": "맨 위로",
+        "closesAtHint": "- 옵션 · UTC",
+        "resultsVisibilityLabel": "결과 가시성 *",
+        "optionsLabel": "옵션 *",
+        "optionPlaceholder": "선택권 {{n}}",
+        "removeOption": "옵션 제거",
+        "addOption": "옵션 추가",
+        "cancel": "취소",
+        "creating": "회사 소개",
+        "create": "비밀번호"
+      },
+      "emptyAll": "아직 설문 조사 없음.",
+      "emptyFiltered": "{{filter}} 오염 없음.",
+      "row": {
+        "closesAt": "xPH0XPH 닫기",
+        "openIndefinitely": "자주 묻는 질문",
+        "closedAt": "닫히는 {{date}}"
+      },
+      "actions": {
+        "copyLinkTitle": "짧은 공유 링크",
+        "copied": "뚱 베어",
+        "link": "링크 메뉴",
+        "publishTitle": "게시 · 회원은 투표 할 수 있습니다",
+        "publish": "관련 기사",
+        "closeTitle": "현재 위치",
+        "close": "닫기",
+        "reopenTitle": "공지사항",
+        "reopen": "공지사항",
+        "archiveTitle": "Archive · 기본 목록에서 숨기기",
+        "archive": "관련 기사",
+        "unarchiveTitle": "Unarchive (닫기)",
+        "restore": "관련 상품",
+        "deleteTitle": "삭제"
+      }
+    },
+    "richTextEditor": {
+      "placeholder": "이정표의 이야기 ..",
+      "title": "이름 *",
+      "subtitle": "이름 *",
+      "bold": "지원하다",
+      "italic": "사이트맵",
+      "underline": "이름 *",
+      "bulletList": "게시판 목록",
+      "orderedList": "번호 목록",
+      "quote": "제품 정보",
+      "alignLeft": "Align 왼쪽",
+      "alignCenter": "Align 센터",
+      "alignRight": "Align 권리",
+      "insertImage": "삽입 이미지",
+      "undo": "이름 *",
+      "redo": "레드오",
+      "close": "닫기",
+      "uploadImage": "본문 바로가기",
+      "or": "or",
+      "imageUrl": "이미지 URL",
+      "imageUrlPlaceholder": "https://…/figure.png",
+      "insert": "제품정보"
+    },
+    "troopTiers": {
+      "backToCatalogue": "카탈로그",
+      "eyebrow": "관리자 · 카탈로그",
+      "title": "병종 단계",
+      "newTier": "새로운 층",
+      "cancel": "취소",
+      "create": "생성",
+      "edit": "편집",
+      "cancelEdit": "취소",
+      "save": "저장",
+      "orderLabel": "주문 #{{order}}",
+      "truegoldBadge": "Truegold",
+      "buildingLv": "Building lv {{lv}}",
+      "errors": {
+        "tierLabelRequired": "층 라벨 (예 : T8, TG3)을 입력하십시오.",
+        "tierLabelRequiredShort": "필요한 Tier 라벨.",
+        "failedToCreate": "Tier를 만드는 실패",
+        "failedToDelete": "삭제 취소",
+        "failedToSave": "자주 묻는 질문"
+      },
+      "confirmDelete": {
+        "heading": "영구적으로 \"{{name}}\"를 삭제합니까?",
+        "body": "이 행동은 undone이 될 수 있으며이 계층을 참조하는 가이드를 깰 수 있습니다.",
+        "yes": "예, 삭제"
+      },
+      "fields": {
+        "tierLabel": "층 상표",
+        "tierLabelPlaceholder": "예: T8, TG3",
+        "displayOrder": "전시 순서",
+        "trainingBuildingLevel": "교육 건물 수준",
+        "optional": "optional",
+        "truegoldTier": "Truegold 층",
+        "icon": "아이콘",
+        "iconUploadLabel": "계층 아이콘",
+        "description": "설명"
+      }
+    }
+  },
+  "alliance": {
+    "timeAgo": {
+      "now": "지금"
+    },
+    "stats": {
+      "rank": "순위",
+      "members": "구성원",
+      "membersSub": "로스터에 {{count}}",
+      "power": "출력 전력",
+      "powerSub": "지원하다"
+    },
+    "cta": {
+      "open": "열기",
+      "polls": {
+        "title": "투표",
+        "subtitle": "이벤트 타이밍, 다리 선호도, 동맹 결정."
+      },
+      "members": {
+        "title": "구성원",
+        "subtitle": "로스터 검색 — 니켈, 순위, 힘, troop tier."
+      }
+    },
+    "catalogue": {
+      "eyebrow": "이름 *",
+      "title": "게임 카탈로그",
+      "description": "영웅, 애완 동물, 마스터 및 부대 계층 — 얼라이언스의 공유된 참조는 검색할 수 있습니다.",
+      "heroes": "영웅",
+      "pets": "펫",
+      "masters": "마스터",
+      "troopTiers": "Troop 층"
+    },
+    "composition": {
+      "eyebrow": "구성",
+      "title": "수집된 힘",
+      "truegoldMembers": "Truegold 회원",
+      "tg5Ready": "TG5+ 준비",
+      "avgPower": "Avg 힘",
+      "minTroopTier": "미니 troop 층"
+    },
+    "announcements": {
+      "eyebrow": "공지사항",
+      "title": "최신 공지",
+      "emptyHint": "공지 사항이 일단 관리자가 그들을 밀어.",
+      "showing_one": "{{count}} 공지사항",
+      "showing_other": "{{count}} 공지 사항 보기",
+      "none": "최근 공지"
+    }
+  },
+  "auth": {
+    "allyChip": {
+      "label": "모든 것",
+      "tooltip": "Ally — 다른 동맹의 게스트 (읽기 전용)"
+    },
+    "signIn": "로그인",
+    "signOut": "로그아웃",
+    "checkingSession": "회의 일정"
+  },
+  "brand": {
+    "name": "DAD War Room",
+    "alliance": "[DAD] BIGDADDYS",
+    "kingdom": "영국 1652",
+    "motto": "평화의 우아함, 전투에서 Chaos."
+  },
+  "catalogue": {
+    "eyebrow": "카탈로그",
+    "loading": "로드 중…",
+    "filter": {
+      "all": "전체",
+      "gen": "Gen {{gen}}"
+    },
+    "genBadge": "Gen {{gen}}",
+    "branch": {
+      "infantry": "회사 소개",
+      "cavalry": "스낵 바",
+      "archer": "언어 선택"
+    },
+    "heroes": {
+      "title": "현실의 영웅",
+      "summary": "{{heroCount}} 영웅 {{genCount}} 발생 전 카탈로그",
+      "empty": {
+        "all": "아직 카탈로그에서 영웅이 없습니다.",
+        "gen": "아직 세대 {{gen}}에서 영웅이 없습니다.",
+        "subtitle": "관리자는 카탈로그 콘솔에서 영웅을 추가 할 수 있습니다."
+      },
+      "openAria": "{{name}}를 여십시오 (Generation {{gen}})",
+      "backToList": "영웅으로 돌아가기",
+      "notFoundTitle": "영웅이 없습니다.",
+      "notFoundSubtitle": "카탈로그에는 이 슬러그와 일치하는 기록이 없습니다.",
+      "returnToList": "영웅으로 돌아가기",
+      "generation": "Generation {{gen}}",
+      "archivedBadge": "관련 기사",
+      "noDescription": "이 영웅에 대한 설명이 아직 없습니다.",
+      "releasedOn": "{{date}} 출시"
+    },
+    "pets": {
+      "title": "현실의 애완 동물",
+      "summary_one": "{{count}} 애완 동물 카탈로그",
+      "summary_other": "{{count}} 애완 동물 카탈로그",
+      "empty": {
+        "nextGen": "세대 {{gen}}로 오는 애완 동물",
+        "gen": "아직 세대 {{gen}}에 애완 동물이 없습니다.",
+        "subtitle": "관리자는 카탈로그에 등록 할 수 있습니다."
+      },
+      "cardAria": "{{name}} (일반 {{gen}})"
+    },
+    "masters": {
+      "title": "Realm의 마스터",
+      "summary_one": "{{count}} 마스터 잠금 해제",
+      "summary_other": "{{count}} 마스터 잠금 해제",
+      "empty": {
+        "title": "카탈로그에는 아직 없습니다.",
+        "subtitle": "관리자는 카탈로그 콘솔에서 마스터를 등록할 수 있습니다."
+      },
+      "unlockLabel": "마스터 #{{order}}",
+      "noDescription": "이 마스터에 대한 설명이 아직 없습니다.",
+      "releasedOn": "{{date}} 출시"
+    },
+    "tiers": {
+      "title": "병종 단계",
+      "summary_one": "{{count}} tier 일반 및 truegold 트랙",
+      "summary_other": "{{count}}는 일반 및 진정한 골드 트랙을 통해 계층",
+      "empty": {
+        "title": "아직 등록된 troop 계층 없음.",
+        "subtitle": "관리자는 카탈로그 콘솔에서 계층을 등록 할 수 있습니다."
+      },
+      "regular": {
+        "title": "일반 층",
+        "subtitle": "고전적인 사다리는 troop 교육 업그레이드를 통해 잠금 해제됩니다."
+      },
+      "truegold": {
+        "title": "Truegold tiers",
+        "subtitle": "Truegold 전용 진행은 Foundry 변환 후 잠금 해제됩니다."
+      },
+      "standardEyebrow": "주요 특징",
+      "truegoldEyebrow": "Truegold",
+      "noDescription": "설명 없음",
+      "trainingLevel": "훈련 배경 수준 {{level}}"
+    }
+  },
+  "chat": {
+    "eyebrow": "작품에서",
+    "title": "Alliance 채팅",
+    "tagline": "[DAD] BIGDADDYS - 시간대별 좌표 이벤트, 공유 전략, 승리를 hype.",
+    "pushHint": "배송까지 긴급 통화가 푸시 알림으로 이동합니다. 설정에서 설정하여 다음 곰 창 또는 KvK 통화를 놓치지 마세요.",
+    "enablePush": "푸시 알림 활성화",
+    "features": {
+      "images": {
+        "title": "이미지 첨부 파일",
+        "text": "곰의 스크린 샷을 공유, 레이아웃, 기어 빌드 - 직접 채팅."
+      },
+      "crossAlliance": {
+        "title": "Cross-alliance 조정",
+        "text": "Allies는 읽고 쓸 수 있습니다. 그들의 메시지는 ALLY 칩으로 태그를 얻을 그래서 컨텍스트는 즉시."
+      },
+      "historyReactions": {
+        "title": "역사, 반응 읽기",
+        "text": "오프라인 · emoji · 검색으로 반응 할 때 놓친 메시지를보십시오."
+      }
+    }
+  },
+  "common": {
+    "loading": "로드 중…"
+  },
+  "events": {
+    "bear1": {
+      "title": "곰 사냥 1 — 랠리 파 전략",
+      "short": "Bear Hunt 1"
+    },
+    "bear2": {
+      "title": "Bear Hunt 2",
+      "short": "Bear Hunt 2"
+    },
+    "kingsCastle": {
+      "title": "왕의 성 전투",
+      "short": "왕의 성"
+    },
+    "kvk": {
+      "title": "KvK · 힘의 왕국",
+      "short": "KvK"
+    },
+    "viking": {
+      "title": "Viking Vengeance",
+      "short": "Viking Vengeance"
+    },
+    "swordland": {
+      "title": "Swordland Showdown",
+      "short": "Swordland Showdown"
+    },
+    "triAlliance": {
+      "title": "Tri-Alliance Clash",
+      "short": "Tri-Alliance Clash"
+    },
+    "cesar": {
+      "title": "Cesar's Fury",
+      "short": "Cesar's Fury"
+    },
+    "page": {
+      "eyebrow": "카탈로그",
+      "title": "Realm의 이벤트",
+      "subtitle": "곰, KvK, 바이킹, 트라이애슬 & 시즌 이벤트. 활동 가이드는 여기에서 열립니다."
+    },
+    "upcoming": {
+      "eyebrow": "다음",
+      "title": "다가오는 행사",
+      "subtitle": "다음 14 일 · swipe 수평으로.",
+      "empty": "다음 14 일 동안 예정된 이벤트 없음.",
+      "eventCount_one": "{{count}} 이벤트",
+      "eventCount_other": "{{count}} 이벤트",
+      "viewAll": "모두 보기",
+      "today": "오늘",
+      "tomorrow": "내일"
+    },
+    "filter": {
+      "all": "전체",
+      "active": "활성",
+      "comingSoon": "곧 출시",
+      "archived": "관련 기사"
+    },
+    "empty": {
+      "filter": "이 필터의 이벤트 없음."
+    },
+    "status": {
+      "active": "활성",
+      "archived": "관련 기사",
+      "comingSoon": "곧 출시"
+    },
+    "card": {
+      "openGuide": "공지사항",
+      "noLongerActive": "더 이상 활동 없음",
+      "stayTuned": "사이트 맵"
+    }
+  },
+  "footer": {
+    "madeWith": "♥로 만드는",
+    "alliance": "[DAD] BIGDADDYS",
+    "kingdom": "킹샷 1652",
+    "creator": "에 의해",
+    "creatorName": "Salles",
+    "creatorRole": "제휴회원"
+  },
+  "header": {
+    "kingdomTag": "영국 1652"
+  },
+  "hub": {
+    "title": "DAD War Room",
+    "tagline": "[DAD] BIGDADDYS · 왕국 1652 전략 허브",
+    "intro": "모든 이벤트에 대한 비주얼 전략 가이드. 아래 가이드를 선택하십시오.",
+    "comingSoon": "곧 출시",
+    "userHero": {
+      "visitorEyebrow": "회사연혁",
+      "visitorTitle": "전쟁 방을 열려면 로그인",
+      "visitorSubtitle": "회원, 임원 및 동맹 - 여기에 모든 것은 로그인에 달려 있습니다.",
+      "signIn": "로그인",
+      "allyBadge": "모든 것",
+      "editProfile": "관련 기사",
+      "stat": {
+        "power": "출력 전력",
+        "truegold": "Truegold",
+        "role": "역할"
+      },
+      "role": {
+        "r5": "Leader",
+        "r4": "회사 소개",
+        "r3": "R3 Officer",
+        "r2": "R2 Officer",
+        "member": "이름 *",
+        "ally": "모든 것"
+      }
+    },
+    "nextEvent": {
+      "eyebrow": "다음 이벤트",
+      "loadError": "다음 이벤트를로드 할 수 없습니다",
+      "empty": {
+        "title": "아직 예정되지 않음",
+        "subtitle": "관리자가 다음 곰, KvK, 또는 계절 이벤트를 추가하면 라이브 카운트 다운으로 표시됩니다."
+      },
+      "addEvent": "이벤트 추가",
+      "guide": "가이드",
+      "startedAgo": "이 이벤트는 {{days}}d {{hours}}h 전에 시작 — 다음을 추가 한 후 새로 고침.",
+      "countdown": {
+        "days": "일",
+        "hours": "시",
+        "min": "분",
+        "sec": "초"
+      },
+      "utcTitle": "모든 시간은 우주 비행 시간에 있습니다"
+    },
+    "pendingPolls": {
+      "allClearEyebrow": "모든 명확한",
+      "actionEyebrow": "자주 묻는 질문",
+      "emptyTitle": "자주 묻는 질문",
+      "emptySubtitle": "모든 오픈 투표는 이미 투표를 받았습니다.",
+      "waitingTitle_one": "{{count}} 투표 대기",
+      "waitingTitle_other": "{{count}} 투표를 기다리고 있습니다",
+      "footerEmpty": "전쟁 방 · 오염",
+      "footerCount": "{{total}}의 {{shown}}",
+      "viewAll": "모두 보기"
+    },
+    "timeline": {
+      "title": "- 연혁",
+      "empty": {
+        "title": "예정된 이정표 없음.",
+        "subtitle": "관리자 패널에서 잠금 해제 날짜를 설정하고 여기에 보여줍니다."
+      },
+      "toGo": "오시는 길",
+      "past": "past"
+    }
+  },
+  "login": {
+    "brandSuffix": "War Room",
+    "changeLanguage": "한국어",
+    "eyebrow": "동맹 명령",
+    "fields": {
+      "username": "사용자명",
+      "usernamePlaceholder": "your_handle",
+      "password": "비밀번호",
+      "showPassword": "비밀번호",
+      "hidePassword": "비밀번호"
+    },
+    "errors": {
+      "required": "사용자 이름 및 암호가 필요합니다.",
+      "signInFailed": "로그인 실패.",
+      "wrongCredentials": "사용자 이름 또는 암호."
+    },
+    "submitting": "이름 *",
+    "enter": "이름 *",
+    "forgot": {
+      "prefix": "자주 묻는 질문?",
+      "askR4R5": "R4 또는 R5에 문의하십시오."
+    },
+    "installPwa": "DAD 전쟁 방 설치",
+    "builtBy": "에 의해"
+  },
+  "members": {
+    "page": {
+      "eyebrow": "로스터",
+      "title": "연합 회원",
+      "loading": "로드 중…",
+      "memberCount_one": "{{count}} 회원",
+      "memberCount_other": "{{count}} 회원",
+      "combinedPower": "결합된 힘"
+    },
+    "search": {
+      "placeholder": "닉네임 검색…"
+    },
+    "sort": {
+      "label": "제품정보",
+      "power": "출력 전력",
+      "tier": "사이트맵",
+      "rank": "순위",
+      "nick": "Nick"
+    },
+    "empty": {
+      "noMatch": "회원이 \"{{query}}\".",
+      "noMembers": "아직 로스터에 회원이 없습니다."
+    },
+    "rank": {
+      "r1Title": "회사연혁",
+      "r2Title": "이름 *",
+      "r3Title": "채용정보",
+      "r4Title": "주요연혁",
+      "r5Title": "Leader",
+      "defaultTitle": "이름 *"
+    },
+    "role": {
+      "leader": "Leader",
+      "joiner": "Joiner",
+      "standby": "Standby"
+    },
+    "status": {
+      "temporaryOut": "자주 묻는 질문",
+      "temporarilyOut": "자주 묻는 질문",
+      "out": "더 알아보기"
+    },
+    "detail": {
+      "backToList": "본문 바로가기",
+      "notFoundEyebrow": "견적 요청",
+      "notFoundWithNick": "Nick \"{{nick}}\"의 회원이 없습니다",
+      "notFoundNoNick": "회원은 없습니다",
+      "notFoundDescription": "회원은 얼라이언스를 떠나거나 링크가 잘못될 수 있습니다.",
+      "dadTagLabel": "DAD 태그 · {{tag}}",
+      "noteLabel": "이름 *"
+    },
+    "stat": {
+      "power": "출력 전력",
+      "truegold": "Truegold"
+    },
+    "participation": {
+      "eyebrow": "참가안내",
+      "title": "이벤트 역사",
+      "empty": "아직 기록에 이벤트가 없습니다 — 이 회원은 어떤 발생에 피되지 않았습니다.",
+      "latest": "인기 있는"
+    },
+    "card": {
+      "openProfileAria": "{{nick}}를 위한 단면도를 여십시오",
+      "tcLevel": "Lv.{{level}} · {{tier}}"
+    },
+    "powerChart": {
+      "eyebrow": "시간에 힘",
+      "title": "제품 정보",
+      "notEnoughData": "아직 데이터가 아니라면 전력 변화가 기록되어 있습니다.",
+      "snapshotCount_one": "{{count}} 스냅 샷",
+      "snapshotCount_other": "{{count}} 스냅 샷"
+    }
+  },
+  "nav": {
+    "home": "홈",
+    "events": "이벤트",
+    "chat": "채팅",
+    "alliance": "동맹",
+    "settings": "설정",
+    "primaryAriaLabel": "주요 특징",
+    "adminAriaLabel": "관리자",
+    "exitAdmin": "Exit 관리자 모드",
+    "exitAdminShort": "오시는 길",
+    "adminEvents": "이벤트",
+    "adminPolls": "투표",
+    "adminMembers": "구성원",
+    "adminChat": "채팅",
+    "adminAlliance": "동맹",
+    "adminNotifications": "Notif.",
+    "adminAnalytics": "통계 정보"
+  },
+  "notifications": {
+    "bellAriaLabel": "알림",
+    "bellAriaLabelUnread": "알림, {{count}} 읽지 않은",
+    "panelAriaLabel": "최근 알림",
+    "title": "알림",
+    "empty": "최근 알림 없음.",
+    "timeNow": "지금",
+    "viewAll": "모두 보기"
+  },
+  "polls": {
+    "eyebrow": "투표",
+    "title": "Alliance 투표",
+    "loading": "로드 중…",
+    "countLine_one": "비행에 {{count}} 설문 조사",
+    "countLine_other": "비행에서 {{count}} 설문 조사",
+    "readOnly": "read-only",
+    "empty": {
+      "title": "아직 오염 없음",
+      "adminPrefix": "관리자는 첫 번째 투표를 만들 수 있습니다",
+      "adminLink": "관리자 → 설문 조사"
+    },
+    "view": "- 연혁",
+    "status": {
+      "closed": "마감",
+      "draft": "사이트맵",
+      "open": "열기"
+    },
+    "type": {
+      "single": "제품정보",
+      "multi": "지원하다",
+      "singleChoice": "단일 초이스",
+      "multiChoice": "멀티 초이스"
+    },
+    "countdown": {
+      "minutes_one": "{{count}}m에서 닫기",
+      "minutes_other": "{{count}}m에서 닫기",
+      "hours_one": "{{count}}h에서 닫기",
+      "hours_other": "{{count}}h에서 닫기",
+      "days_one": "{{count}}d에서 닫기",
+      "days_other": "{{count}}d에서 닫기"
+    },
+    "shareToken": {
+      "invalid": "이 공유 링크는 유효하지 않았거나 poll는 삭제되었습니다.",
+      "browse": "비밀번호"
+    },
+    "detail": {
+      "back": "이름 *",
+      "backToPolls": "자주 묻는 질문",
+      "notFound": "찾을 수 없음.",
+      "countdown": {
+        "archived": "관련 기사",
+        "draftNotPublished": "Draft (발행되지 않음)",
+        "closedAt": "닫히는 {{date}} {{time}}",
+        "openIndefinitely": "자주 묻는 질문"
+      },
+      "draftBanner": {
+        "prefix": "이 설문 조사는",
+        "draft": "draft",
+        "suffix": "— 회원은 아직 투표 할 수 없습니다. 에 게시 됨",
+        "link": "관리자 → 설문 조사"
+      },
+      "resultsHidden": {
+        "adminOnly": "결과가 이 설문 조사에서만 관리 할 수 있습니다.",
+        "untilClose": "투표 수는 투표가 닫힐 때까지 숨겨집니다."
+      },
+      "signedOutBanner": "투표하기 로그인 중에 결과를 볼 수 있습니다.",
+      "allyBanner": "계정은 결과를 볼 수 있지만 투표 할 수 없습니다 (읽기 전용 액세스).",
+      "voteFailed": "투표 실패",
+      "clearFailed": "취소 실패",
+      "voterCount_one": "{{count}} 투표",
+      "voterCount_other": "{{count}} 투표자",
+      "totalPicks": "{{count}} 총 선택",
+      "resultsHiddenShort": "설문 조사가 닫힐 때까지 숨겨진 결과.",
+      "reVotePrefix": "까지 열 수 있습니다",
+      "clearMyVote": "내 투표를 취소",
+      "shareTitle": "비밀번호",
+      "share": "지원하다",
+      "copied": "뚱 베어"
+    }
+  },
+  "settings": {
+    "eyebrow": "환경설정",
+    "title": "설정",
+    "account": {
+      "heading": "계좌정보",
+      "signedInFallback": "이름 *",
+      "openAdmin": "Open admin 설정",
+      "openAdminTooltip": "관리자 모드로 전체 앱 크롬을 전환 (범슨 헤어 라인 + 8 tab admin nav)",
+      "signInHint": "회원, allies 및 관리자."
+    },
+    "language": {
+      "eyebrow": "한국어",
+      "available_one": "{{count}} 언어 사용 가능",
+      "available_other": "{{count}} 언어 사용 가능",
+      "close": "닫기",
+      "change": "- 기타"
+    },
+    "pwa": {
+      "eyebrow": "Progressive Web App",
+      "title": "전쟁 방 설치",
+      "alreadyInstalled": "Already 설치 - 오프라인을 열고 홈 화면에서 시작합니다.",
+      "addToHomescreen": "빠른 액세스 및 푸시 알림을위한 홈 화면에 추가.",
+      "openInBrowser": "Chrome / Edge / Safari에서 앱으로 설치하십시오.",
+      "standaloneMode": "독립 형태",
+      "browserMode": "브라우저 모드",
+      "installed": "설치하기",
+      "install": "설치하기"
+    },
+    "push": {
+      "eyebrow": "알림",
+      "title": "푸시 알림",
+      "description": "이벤트가 시작될 때 인앱 핑을 수신, 새로운 설문 조사가 열리고, 또는 관리자는 선택한 언어로 발표를 보냅니다.",
+      "notConfigured": "이 배포를 위해 설정되지 않았습니다. 제휴 관리자에게 문의하십시오.",
+      "blocked": "브라우저 설정에서 차단된 알림 — 구독할 수 있습니다.",
+      "active": "활성",
+      "deactivate": "수정하기",
+      "permissionGranted": "권한 부여",
+      "notSubscribed": "구독하다",
+      "activate": "이름 *"
+    },
+    "profile": {
+      "eyebrow": "프로필",
+      "displayName": "표시 이름",
+      "password": "비밀번호",
+      "avatar": "아바타",
+      "avatarValue": {
+        "custom": "주문 이미지",
+        "hero": "Hero: {{slug}}",
+        "default": "기본 (hash)"
+      },
+      "edit": "편집",
+      "newDisplayName": "새로운 표시 이름",
+      "newPassword": "새로운 비밀번호",
+      "passwordMinimum": "최소 8자.",
+      "confirm": "확인",
+      "passwordsDontMatch": "비밀번호는 일치하지 않습니다.",
+      "preview": "미리보기",
+      "resetTooltip": "자동 아바타로 돌아가기 (사용자 이름의 해시)",
+      "reset": "이름 *",
+      "chooseHero": "영웅 선택",
+      "customImage": "주문 이미지",
+      "uploadImage": "본문 바로가기",
+      "or": "or",
+      "imageUrl": "이미지 URL",
+      "imageUrlHint": "모든 공공 링크 (Discord, Imgur, wiki 등)를 붙여 넣으십시오. 선택된 영웅을 오버라이드합니다.",
+      "close": "닫기",
+      "cancel": "취소",
+      "save": "저장",
+      "feedback": {
+        "displayNameUpdated": "업데이트된 이름.",
+        "passwordChanged": "비밀번호 변경.",
+        "avatarUpdated": "Avatar 업데이트.",
+        "avatarReset": "자동 avatar로 다시.",
+        "failed": "실패.",
+        "failedShort": "실패."
+      }
+    }
+  },
+  "timeline": {
+    "detail": {
+      "back": "이름 *",
+      "loadError": "짐에 실패",
+      "notFound": "마일스톤이 없습니다.",
+      "reference": "이름 *",
+      "source": "이름 *",
+      "daysToGo": "{{days}}d 이동",
+      "today": "today",
+      "daysAgo": "{{days}}d 전",
+      "noBody": "이 이정표에 대한 자세한 설명이 없습니다. 관리자는 관리자 타임 라인 편집기에서 풍부한 콘텐츠 (텍스트, 이미지, 목록, 링크)를 채울 수 있습니다."
+    },
+    "category": {
+      "truegold": "Truegold",
+      "heroes": "영웅",
+      "pets": "펫",
+      "pvp": "PvP",
+      "feature": "Feature",
+      "master": "주 메뉴",
+      "fog": "Fog",
+      "warAcademy": "War Academy",
+      "other": "이름 *"
+    },
+    "relative": {
+      "today": "오늘",
+      "tomorrow": "내일",
+      "daysAgo": "{{days}}d 전",
+      "daysCount": "{{count}} 일"
+    }
+  },
+  "ui": {
+    "language": "한국어",
+    "back": "이름 *",
+    "backToHub": "맨 위로",
+    "copy": "관련 기사",
+    "copied": "뚱 베어!",
+    "toTop": "맨 위로",
+    "skipToContent": "내용으로 건너뛰기",
+    "imageUpload": {
+      "label": "Image 업로드",
+      "previewAlt": "미리보기",
+      "currentImage": "현재 이미지",
+      "swap": "스왑",
+      "remove": "제거",
+      "uploading": "관련 기사",
+      "dropOrClick": "이미지를 드래그하거나 클릭",
+      "limitsHint": "{{allowedHuman}} · 최대 {{maxMb}} MB",
+      "errorTooLarge": "파일 너무 크다. 최대 {{maxMb}} MB.",
+      "errorUploadFailed": "업로드 실패."
+    }
+  }
+}

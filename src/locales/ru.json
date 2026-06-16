@@ -1,0 +1,1488 @@
+{
+  "admin": {
+    "accounts": {
+      "backToMembers": "Вернуться к членам",
+      "eyebrow": "Админ",
+      "title": "Счета",
+      "closeForm": "Близкая форма",
+      "newAccount": "Новый аккаунт",
+      "filters": {
+        "all": "Все",
+        "members": "Члены DAD",
+        "allies": "Союзники"
+      },
+      "emptyState": "Никаких учетных записей в этом фильтре.",
+      "youLabel": "you",
+      "lastLogin": "последний вход {{when}}",
+      "rosterTooltip": "Ростер: {{nick}} ({{rank}})",
+      "rosterFallback": "roster",
+      "lvlShort": "lvl {{level}}",
+      "unlinkTitle": "Ссылка из реестра",
+      "unlink": "Ссылка",
+      "linkTitle": "Ссылка на члена реестра",
+      "link": "Ссылка",
+      "resetTitle": "Сбросить пароль",
+      "reset": "Сброс",
+      "deactivateTitle": "Деактивировать",
+      "reactivateTitle": "Реактивировать",
+      "off": "Оставить",
+      "on": "На",
+      "passwordTooShort": "Пароль должен быть не менее 6 символов.",
+      "resetPasswordPrompt": "Установите новый временный пароль для {{name}} (@{{username}}).\nУчастник будет вынужден изменить его при следующей регистрации.",
+      "cantDeactivateSelf": "Вы не можете отключить себя — попросите другой R5 сделать это.",
+      "confirmDeactivate": "Деактивировать {{name}}?",
+      "confirmReactivate": "Реактивировать {{name}}?",
+      "errors": {
+        "failedToCreate": "Не удалось создать аккаунт",
+        "failedToReset": "Не удалось восстановить пароль",
+        "failedToLink": "Не удалось связать",
+        "failedToToggle": "Не удалось обновить активный статус"
+      },
+      "feedback": {
+        "created": "Создан аккаунт «{{name}}» ({{role}}).",
+        "passwordReset": "Сброс пароля для {{name}}.",
+        "linked": "{{name}} связан с {{target}}.",
+        "unlinked": "{{name}} несвязан.",
+        "reactivated": "{{name}} реактивируется.",
+        "deactivated": "{{name}} деактивирован."
+      },
+      "form": {
+        "heading": "Новый аккаунт",
+        "usernameLabel": "Имя пользователя *",
+        "usernamePlaceholder": "alice",
+        "usernameHint": "используется для входа",
+        "displayNameLabel": "Имя дисплея",
+        "displayNameHint": "по умолчанию для имени пользователя",
+        "passwordLabel": "Пароль *",
+        "passwordPlaceholder": "не менее 6 символов",
+        "roleLabel": "Роль *",
+        "languageLabel": "Язык языка",
+        "cancel": "Отмена",
+        "creating": "Создание..",
+        "create": "Создать аккаунт"
+      },
+      "roles": {
+        "ally": {
+          "label": "Союзник",
+          "description": "Дипломатический гость — только чтение, посты в чате."
+        },
+        "member": {
+          "label": "Член (R1)",
+          "description": "Постоянный член DAD."
+        },
+        "r2": {
+          "label": "R2",
+          "description": "Офицер (дополнительных администраторов пока нет)."
+        },
+        "r3": {
+          "label": "R3",
+          "description": "Офицер (дополнительных администраторов пока нет)."
+        },
+        "r4": {
+          "label": "R4 — Admin",
+          "description": "Создавать опросы/события, управлять союзниками."
+        },
+        "r5": {
+          "label": "R5 — Admin",
+          "description": "Управлять другими учетными записями (включая другие R5)."
+        }
+      },
+      "relative": {
+        "never": "никогда",
+        "justNow": "только сейчас",
+        "minutesAgo": "{{count}}H",
+        "hoursAgo": "{{count}}H",
+        "daysAgo": "{{count}}, ранее",
+        "monthsAgo": "{{count}}",
+        "yearsAgo": "{{count}}Y назад"
+      },
+      "linkPicker": {
+        "heading": "Ссылка на реестр",
+        "close": "Закрыть",
+        "searchPlaceholder": "Поисковый список..",
+        "noMatch": "Никаких матчей \"{{query}}\".",
+        "allLinked": "Все члены реестра связаны между собой."
+      }
+    },
+    "alliance": {
+      "backToAdmin": "Назад в админ",
+      "eyebrow": "Админ",
+      "title": "Альянс",
+      "cards": {
+        "timeline": {
+          "title": "Kingdom Timeline",
+          "subtitle": "Редактируйте даты разблокировки для уровней TG, поколений героев / домашних животных, мастеров, тумана."
+        },
+        "catalogue": {
+          "title": "Каталог",
+          "subtitle": "Герои, домашние животные, мастера и уровни войск — игровые данные за каждой страницей."
+        },
+        "announcements": {
+          "title": "Объявления",
+          "subtitle": "Составляйте и планируйте push-уведомления для участников."
+        }
+      },
+      "metadata": {
+        "eyebrow": "Публичная информация",
+        "title": "Редактировать метаданные",
+        "intro": "Ранг, девиз, слоган, цвета бренда и дата захвата отображаются на <allianceLink>/alliance</allianceLink>. Эти значения находятся в таблице <c>alliance settings</c>.",
+        "rankLabel": "Ранг",
+        "rankPlaceholder": "#2",
+        "taglineLabel": "Слоган:",
+        "taglinePlaceholder": "Kingdom 1652",
+        "mottoLabel": "Девиз",
+        "mottoPlaceholder": "Элегантность в мире, хаос в бою.",
+        "brandPrimaryLabel": "Бренд первичный (hex)",
+        "brandAccentLabel": "Брендовый акцент (hex)",
+        "capturedAtLabel": "Захваченный в",
+        "loadError": "Ошибка загрузки: {{message}}",
+        "saveError": "Ошибка сохранения: {{message}}",
+        "saved": "Сохранено",
+        "updatedAt": "Обновленный {{date}}",
+        "loading": "Загрузка…",
+        "saving": "Спасти..",
+        "save": "Сохранить"
+      }
+    },
+    "analytics": {
+      "backToAdmin": "Назад в админ",
+      "eyebrow": "Админ",
+      "title": "Аналитика",
+      "kpi": {
+        "onlineNow": {
+          "label": "Сейчас онлайн",
+          "sub": "вход за последние 5 минут"
+        },
+        "activeSessions": {
+          "label": "Активные сеансы",
+          "sub": "вход в последние 24 часа"
+        },
+        "totalAccounts": {
+          "label": "Всего аккаунтов",
+          "sub": "Активный {{count}}"
+        },
+        "neverLoggedIn": {
+          "label": "Никогда не входил",
+          "sub": "нуждается в погрузке"
+        },
+        "failedSignins": {
+          "label": "Неудачная регистрация",
+          "sub": "последние 24 часа"
+        }
+      },
+      "activity": {
+        "heading": "Окна активности",
+        "intro": "Учетные записи, затронутые в окне (полученные из last login at), а не необработанные входы.",
+        "last24h": "Последние 24 часа",
+        "last7d": "Последний 7D",
+        "last30d": "Последний 30d",
+        "pctOfAccounts": "{{pct}} % счетов"
+      },
+      "pwa": {
+        "heading": "PWA установит сплит",
+        "installed": "Установленный",
+        "browserOnly": "Только браузер",
+        "summary": "{{installed}} учетных записей {{total}} ({{pct}}%) добавили War Room на свой домашний экран."
+      },
+      "push": {
+        "heading": "Push-доставка (последний 30d)",
+        "opened": "Открыто",
+        "ignored": "Игнорируемый",
+        "note": "Mock for now — провода вверх однажды толкают корабли. Отслеженное пер-уведомление на панели уведомлений."
+      },
+      "never": {
+        "heading": "Никогда не входил"
+      },
+      "langs": {
+        "heading": "Языковое распределение"
+      },
+      "footnote": "Онлайн сейчас и активные сессии читать с login events. Пустая доставка высмеивается до толкания судов."
+    },
+    "catalogue": {
+      "backToAlliance": "Назад в Альянс",
+      "eyebrow": "Администрирование · Каталог",
+      "title": "Каталог игр",
+      "intro": "Управляйте таблицами каталогов, которые определяют временную шкалу, аватары, путеводители по войскам и карты состояния. Изменения здесь распространяются на каждую публичную страницу, которая читает от <c>heroes</c>, <c>pets</c>, <c>masters</c> и <c>troop tiers</c>.",
+      "cards": {
+        "heroes": {
+          "title": "Герои",
+          "subtitle": "Реестр, портрет, поколение и предпочитаемый отряд."
+        },
+        "pets": {
+          "title": "Питомцы",
+          "subtitle": "Спутники по поколению — портрет, описание, выпуск."
+        },
+        "masters": {
+          "title": "Мастера",
+          "subtitle": "Стратегические советники по порядку разблокировки."
+        },
+        "troopTiers": {
+          "title": "Уровни войск",
+          "subtitle": "T1..T10 и ярусы Truegold — этикетки, тренинги, иконки."
+        }
+      }
+    },
+    "chat": {
+      "backToAdmin": "Назад в админ",
+      "eyebrow": "Админ",
+      "title": "Чат",
+      "unsaved": "unsaved",
+      "save": "Сохранить",
+      "savedAt": "Экономия · {{time}}",
+      "rateLimit": {
+        "title": "Ограничение скорости (для пользователя)",
+        "subtitle": "Мягкое ограничение на количество сообщений, которые одна учетная запись может отправить за один час.",
+        "messagesPerHour": "Сообщения/час",
+        "minSeconds": "Минус секунды между сообщениями"
+      },
+      "attachments": {
+        "title": "Прикрепления",
+        "subtitle": "Какие пользователи могут загружать. Аудио + видео остается отключенным в v1.",
+        "allowImages": "Разрешить загрузку изображений",
+        "maxFileSize": "Размер файла Max"
+      },
+      "purge": {
+        "title": "Прямые сообщения",
+        "subtitle": "Однократная стирка всех сообщений чата и загруженных изображений. Нельзя отменить.",
+        "clearAll": "Очистить все сообщения",
+        "confirmHeading": "Подтвердить окончательное удаление",
+        "confirmBody": "Каждое сообщение в чате и загруженное изображение исчезнут. Прошлые опросы, события и члены остаются нетронутыми.",
+        "cancel": "Отмена",
+        "confirmYes": "Да, стереть все"
+      },
+      "defaults": {
+        "title": "Недостатки",
+        "subtitle": "Сбросьте все значения до рекомендуемой начальной точки.",
+        "restore": "Восстановление дефолтов"
+      },
+      "footnote": "Примечание: Чат сам корабль позже. Эти элементы управления сохраняются локально сегодня, поэтому панель готова - как только таблица сообщений будет работать, эта страница переключается на строку конфигураций, поддерживаемую сервером, не касаясь пользовательского интерфейса."
+    },
+    "eventParticipants": {
+      "backToOccurrences": "Вернуться к событиям",
+      "eyebrow": "Участники мероприятия",
+      "eventFallback": "Событие",
+      "durationMin": "{{count}}H",
+      "addHeading": "Добавить участника",
+      "memberLabel": "Член",
+      "allAssigned": "Все члены уже назначены",
+      "roleLabel": "Роль",
+      "notesLabel": "Примечания (факультативно)",
+      "notesPlaceholder": "Задание отряда, запасной план, специальные инструкции..",
+      "notesInputPlaceholder": "Примечания (факультативно)",
+      "adding": "Добавить..",
+      "addButton": "Добавить участника",
+      "assignedHeading": "Производитель: {{count}}",
+      "emptyState": "Участников пока не назначили — добавьте первый выше.",
+      "statusTempOut": "Out (Темп)",
+      "statusLeft": "Левый",
+      "cancel": "Отмена",
+      "save": "Сохранить",
+      "confirm": "Подтвердить",
+      "cancelDelete": "Отменить удаление",
+      "editAria": "Редактировать {{nick}}",
+      "removeAria": "Удалить {{nick}}",
+      "roles": {
+        "leader": "Leader",
+        "joiner": "Joiner",
+        "standby": "Standby",
+        "unset": "Отключено",
+        "unsetOption": "- Неустановленно"
+      },
+      "errors": {
+        "notFound": "Случайности не найдены.",
+        "failedToLoad": "Не удалось загрузиться.",
+        "failedToAdd": "Не удалось добавить участника.",
+        "failedToUpdate": "Не удалось обновить участника.",
+        "failedToRemove": "Не удалось удалить участника."
+      },
+      "feedback": {
+        "added": "Участник добавил.",
+        "updated": "Участник обновлен.",
+        "removed": "Участник удален."
+      }
+    },
+    "events": {
+      "backToAdmin": "Назад в админ",
+      "eyebrow": "Админ",
+      "title": "Каталог событий",
+      "occurrencesLink": "Последствия",
+      "newEvent": "Новое событие",
+      "close": "Закрыть",
+      "confirmArchive": "Архивировать это событие? Он будет скрыт от сетки событий.",
+      "errorFailed": "Неудачник",
+      "feedback": {
+        "archived": "Архивировано.",
+        "restored": "Восстановлен как скоро.",
+        "created": "Событие создано."
+      },
+      "form": {
+        "heading": "Новое сезонное событие",
+        "nameLabel": "Имя *",
+        "namePlaceholder": "Lunar Festival",
+        "shortNameLabel": "Короткое имя",
+        "shortNamePlaceholder": "Lunar",
+        "descriptionLabel": "Описание",
+        "iconUrlLabel": "Иконка URL",
+        "iconUrlPlaceholder": "/images/events/lunar.png",
+        "seasonal": "Одноразовый / сезонный",
+        "create": "Создать"
+      },
+      "seasonalBadge": "Сезонный",
+      "actions": {
+        "restore": "Восстановить",
+        "archive": "Архив"
+      }
+    },
+    "heroes": {
+      "backToCatalogue": "Вернуться в Каталог",
+      "eyebrow": "Администрирование · Каталог",
+      "title": "Герои",
+      "newHero": "Новый герой",
+      "cancel": "Отмена",
+      "create": "Создать",
+      "edit": "Изменить",
+      "cancelEdit": "Отмена",
+      "save": "Сохранить",
+      "inactive": "inactive",
+      "genLabel": "Gen {{gen}}",
+      "branch": {
+        "none": "—",
+        "infantry": "Пехота",
+        "cavalry": "Кавалерия",
+        "archer": "Арчер"
+      },
+      "errors": {
+        "nameRequired": "Введите имя героя.",
+        "invalidSlug": "Недействительный слизняк. Используйте буквы и цифры.",
+        "failedToCreate": "Не удалось создать героя",
+        "failedToDelete": "Не удалось удалить",
+        "nameRequiredShort": "Имя необходимо.",
+        "failedToSave": "Не удалось спасти"
+      },
+      "confirmDelete": {
+        "heading": "Удалить \"{{name}}\" навсегда?",
+        "body": "Слизняк {{slug}} и портрет будут удалены. Это действие не может быть отменено.",
+        "yes": "Да, удалить"
+      },
+      "fields": {
+        "name": "Имя",
+        "slugSuggested": "Слизняк (предлагается:",
+        "slugPlaceholder": "ex: shen-yu",
+        "generation": "Поколение (1-12)",
+        "role": "Роль",
+        "rolePlaceholder": "исполнитель: Marshal",
+        "preferredBranch": "Предпочтительная ветвь",
+        "portrait": "Портрет",
+        "portraitUploadLabel": "Портрет героя",
+        "description": "Описание",
+        "releasedAt": "Освобожденный в",
+        "displayOrder": "Порядок отображения",
+        "active": "Активен"
+      }
+    },
+    "iconPicker": {
+      "groups": {
+        "truegoldTiers": "Truegold tiers",
+        "items": "Пункты",
+        "buildings": "Здания",
+        "events": "События",
+        "heroes": "Герои"
+      },
+      "currentIcon": "Текущая икона",
+      "noOverride": "не отменять",
+      "autoLabel": "автомобили: {{path}}",
+      "clear": "Очистить",
+      "customUrlLabel": "Или вставьте пользовательский URL (любое изображение в Интернете)",
+      "customUrlPlaceholder": "https://wiki.kingshot.gg/.../some-icon.png",
+      "apply": "Применить",
+      "uploadOwn": "Или загрузите собственное изображение"
+    },
+    "masters": {
+      "backToCatalogue": "Вернуться в Каталог",
+      "eyebrow": "Администрирование · Каталог",
+      "title": "Мастера",
+      "newMaster": "Новый мастер",
+      "cancel": "Отмена",
+      "create": "Создать",
+      "edit": "Изменить",
+      "cancelEdit": "Отмена",
+      "save": "Сохранить",
+      "inactive": "inactive",
+      "unlockOrderLabel": "Скачать #{{order}}",
+      "errors": {
+        "nameRequired": "Введите имя мастера.",
+        "invalidSlug": "Недействительный слизняк. Используйте буквы и цифры.",
+        "failedToCreate": "Не удалось создать мастера",
+        "failedToDelete": "Не удалось удалить",
+        "nameRequiredShort": "Имя необходимо.",
+        "failedToSave": "Не удалось спасти"
+      },
+      "confirmDelete": {
+        "heading": "Удалить \"{{name}}\" навсегда?",
+        "body": "Слизняк {{slug}} будет удален. Это действие не может быть отменено.",
+        "yes": "Да, удалить"
+      },
+      "fields": {
+        "name": "Имя",
+        "slugSuggested": "Слизняк (предлагается:",
+        "unlockOrder": "Разблокировать приказ",
+        "portrait": "Портрет",
+        "portraitUploadLabel": "Мастер портрета",
+        "description": "Описание",
+        "releasedAt": "Освобожденный в",
+        "active": "Активен"
+      }
+    },
+    "members": {
+      "backToAdmin": "Назад в админ",
+      "eyebrow": "Админ",
+      "title": "Список членов",
+      "statsMembers": "{{count}} - это",
+      "statsTempOut": "{{count}} темп",
+      "combinedPower": "объединенная мощность",
+      "accountsLink": "Счета",
+      "searchPlaceholder": "Поиск по нику…",
+      "filters": {
+        "all": "Все",
+        "out": "Выходи"
+      },
+      "feedbackSaved": "Экономия {{nick}}.",
+      "emptyState": "Ни один из участников не соответствует этому фильтру.",
+      "tempOutShort": "темп",
+      "leftShort": "left",
+      "lvlLabel": "lvl {{level}}",
+      "editButton": "Изменить",
+      "subgroups": {
+        "supreme": "Supreme (R4)",
+        "enforcerer": "Enforcerer (R3)",
+        "alpha": "Alpha (R2)",
+        "lieutenant": "Lieutenant (R1)"
+      },
+      "statuses": {
+        "active": "Активен",
+        "temporaryOut": "Темп",
+        "left": "Левый"
+      },
+      "errors": {
+        "tgOrTc": "Используйте уровень TG или центр города, а не оба.",
+        "failedToSave": "Не удалось спасти"
+      },
+      "edit": {
+        "heading": "Редактировать · {{nick}}",
+        "close": "Закрыть",
+        "nickLabel": "Nick",
+        "rankLabel": "Ранг",
+        "subgroupLabel": "Подгруппа",
+        "noneOption": "- нет, нет",
+        "powerLabel": "Мощность (миллионы)",
+        "powerHint": "- например, 158.7",
+        "tgLabel": "Уровень TG",
+        "tgPlaceholder": "1-8",
+        "tcLabel": "Центр города",
+        "tcPlaceholder": "25-30",
+        "statusLabel": "Статус",
+        "tempOutNote": "Почему и когда вернулся?",
+        "leftNote": "Причина ухода",
+        "langHintLabel": "Ланг намек",
+        "langHintHint": "- например, zh-CN, pt",
+        "optional": "optional",
+        "cancel": "Отмена",
+        "saving": "Спасти..",
+        "save": "Сохранить"
+      }
+    },
+    "milestones": {
+      "backToAlliance": "Назад в Альянс",
+      "eyebrow": "Админ",
+      "title": "Вехи королевства",
+      "newMilestone": "Новая веха",
+      "cancel": "Отмена",
+      "create": "Создать",
+      "edit": "Изменить",
+      "cancelEdit": "Отмена",
+      "save": "Сохранить",
+      "intro": "Установите ожидаемую дату разблокировки для каждой вехи. Затем приборная панель показывает обратный отсчет дней в реальном времени для следующих.",
+      "view": "Посмотреть",
+      "openPublic": "Открытая общественная страница",
+      "deleteTitle": "Исключить веху",
+      "achievedBadge": "achieved",
+      "preview": "Предпросмотр",
+      "afterCreateHint": "После создания откройте пункт в списке ниже, чтобы заполнить богатый контент (Tiptap).",
+      "bodyPlaceholder": "Напишите об этом рубеже: что это такое, как влияет на альянс, меняется стратегия, полезные связи..",
+      "errors": {
+        "nameRequired": "Введите имя для новой вехи.",
+        "invalidSlug": "Недействительное название для поколения слизней. Используйте буквы и цифры.",
+        "failedToCreate": "Не удалось создать прорыв",
+        "failedToDelete": "Не удалось удалить",
+        "nameRequiredShort": "Требуется название Milestone.",
+        "failedToSave": "Не удалось спасти"
+      },
+      "confirmDelete": {
+        "heading": "Удалить \"{{name}}\" навсегда?",
+        "body": "Публичная страница /timeline/{{slug}} и весь контент будут удалены. Это действие не может быть отменено.",
+        "yes": "Да, удалить"
+      },
+      "categories": {
+        "truegold": "Truegold",
+        "heroes": "Герои",
+        "pets": "Питомцы",
+        "pvp": "PvP",
+        "feature": "Feature",
+        "master": "Мастер",
+        "fog": "Fog",
+        "warAcademy": "War Academy",
+        "other": "Другой"
+      },
+      "fields": {
+        "name": "Имя",
+        "namePlaceholder": "truegold 6 (Обновление Crucible)",
+        "category": "Категория",
+        "unlockDate": "Дата разблокировки (UTC, факультативно)",
+        "slugAuto": "Слизняк (авто:",
+        "slugPlaceholder": "необязательно — используйте только буквы / цифры / дефис",
+        "notes": "Короткие заметки (необязательно)",
+        "notesPublic": "Короткие заметки (показаны в открытом списке)",
+        "notesPublicPlaceholder": "разблокирует Crucible и T8 Terror.",
+        "unlockDateUtc": "Дата разблокировки (UTC)",
+        "achieved": "Достигнутый",
+        "icon": "Икона Милестоун",
+        "milestoneName": "Имя Майлстоун",
+        "contentFor": "Содержание /timeline/{{slug}}"
+      }
+    },
+    "notifications": {
+      "backToAdmin": "Назад в админ",
+      "eyebrow": "Админ",
+      "title": "Уведомления",
+      "compose": "Создать",
+      "titleLabel": "Название",
+      "titlePlaceholder": "Фаза 3 Bear Hunt начинается через 15 минут",
+      "bodyLabel": "Тело",
+      "bodyPlaceholder": "Горящие митинги начинаются через 15 минут — будьте в своем замке и готовы к маршу.",
+      "emojiLabel": "Эмодзи",
+      "imageLabel": "Big Image (необязательно)",
+      "uploadImage": "Загрузить изображение",
+      "orPasteUrl": "Или вставить URL",
+      "imageUrlPlaceholder": "https://…/banner.png",
+      "audienceLabel": "Аудитория",
+      "tapTargetLabel": "Нажмите цель",
+      "tapUrlPlaceholder": "https://war-room.local/p/abc",
+      "scheduleLabel": "Запланировать",
+      "recurrencePlaceholder": "например, каждый вторник 20:00 UTC",
+      "discard": "Выбрасывать",
+      "sending": "Отправить..",
+      "send": "Отправить",
+      "scheduling": "Расписание..",
+      "scheduleAction": "Запланировать",
+      "preview": "Предпросмотр",
+      "previewNow": "сейчас",
+      "previewDefaultTitle": "Название уведомления",
+      "previewDefaultBody": "Текст тела отображается здесь, так как члены видят его на экране блокировки.",
+      "targetArrow": "Цель",
+      "recentPushes": "Последние толчки",
+      "loading": "Загрузка…",
+      "noneSent": "Уведомлений пока нет.",
+      "deliveredCount": "{{count}} доставлен",
+      "openedCount": "{{count}} открыт · {{pct}}%",
+      "pushedTo": "Нажмите на {{audience}} · {{time}}",
+      "audience": {
+        "all": "Все счета",
+        "voting": "Участники голосования (R1-R5)",
+        "admins": "Только администраторы (R4 / R5)",
+        "allies": "Только союзники",
+        "custom": "Выберите членов"
+      },
+      "schedule": {
+        "now": "Отправить сейчас",
+        "later": "Запланировать",
+        "recurring": "Повторяющийся"
+      },
+      "tap": {
+        "hub": "Военная комната / Home",
+        "events": "Вкладка событий",
+        "polls": "Список опросов",
+        "alliance": "Страница Альянса",
+        "url": "Пользовательский URL"
+      },
+      "errors": {
+        "mustBeSignedIn": "Вы должны быть подписаны для отправки уведомлений.",
+        "failedToSend": "Не удалось отправить уведомление."
+      }
+    },
+    "occurrences": {
+      "backToEvents": "Вернуться к событиям",
+      "eyebrow": "Админ",
+      "title": "Расписание событий",
+      "intro": "Запланируйте следующий медведь, фазы KvK и сезонные события.",
+      "form": {
+        "heading": "Новое явление",
+        "eventLabel": "Событие",
+        "startsAtLabel": "Начинается в (местное время)",
+        "durationLabel": "Продолжительность (мин)",
+        "phaseLabel": "Фазовая маркировка (необязательно)",
+        "phasePlaceholder": "Оригинальное название: Castle Battle / Brawl",
+        "notesLabel": "Примечания (факультативно)",
+        "repeatLabel": "Повторять с фиксированным интервалом",
+        "intervalLabel": "Интервал (часы)",
+        "bearHint": "Медвежья охота 48",
+        "countLabel": "Количество происшествий",
+        "saving": "Спасти...",
+        "submit": "Добавить появление",
+        "submitMany": "Добавить события {{count}}"
+      },
+      "feedback": {
+        "added": "Появление добавлено.",
+        "addedMany": "Добавляется {{count}} в каждом {{hours}}h."
+      },
+      "errors": {
+        "failedToLoad": "Не удалось загрузить",
+        "failedToSave": "Не удалось спасти",
+        "failedToDelete": "Не удалось удалить"
+      },
+      "confirmDelete": "Исключить это явление?",
+      "upcomingHeading": "Ближайшие 30 дней",
+      "loading": "Загрузка...",
+      "emptyState": "В ближайшие 30 дней ничего не запланировано.",
+      "durationMin": "{{count}}H",
+      "cancelled": "cancelled",
+      "manageSquad": "Управление отрядом",
+      "squads": "Отряды",
+      "delete": "Удалить"
+    },
+    "pets": {
+      "backToCatalogue": "Вернуться в Каталог",
+      "eyebrow": "Администрирование · Каталог",
+      "title": "Питомцы",
+      "newPet": "Новый питомец",
+      "cancel": "Отмена",
+      "create": "Создать",
+      "edit": "Изменить",
+      "cancelEdit": "Отмена",
+      "save": "Сохранить",
+      "inactive": "inactive",
+      "genLabel": "Gen {{gen}}",
+      "errors": {
+        "nameRequired": "Введите имя для питомца.",
+        "invalidSlug": "Недействительный слизняк. Используйте буквы и цифры.",
+        "failedToCreate": "Не удалось создать питомца",
+        "failedToDelete": "Не удалось удалить",
+        "nameRequiredShort": "Имя необходимо.",
+        "failedToSave": "Не удалось спасти"
+      },
+      "confirmDelete": {
+        "heading": "Удалить \"{{name}}\" навсегда?",
+        "body": "Слизняк {{slug}} будет удален. Это действие не может быть отменено.",
+        "yes": "Да, удалить"
+      },
+      "fields": {
+        "name": "Имя",
+        "slugSuggested": "Слизняк (предлагается:",
+        "generation": "Поколение",
+        "portrait": "Портрет",
+        "portraitUploadLabel": "Портретный портрет",
+        "description": "Описание",
+        "releasedAt": "Освобожденный в",
+        "displayOrder": "Порядок отображения",
+        "active": "Активен"
+      }
+    },
+    "polls": {
+      "backToAdmin": "Назад в админ",
+      "eyebrow": "Админ",
+      "title": "Опросы",
+      "closeForm": "Близкая форма",
+      "newPoll": "Новый опрос",
+      "filters": {
+        "all": "all",
+        "open": "open",
+        "closed": "closed",
+        "draft": "draft",
+        "archived": "archived"
+      },
+      "statusTints": {
+        "draft": "Проект",
+        "open": "Открыть",
+        "closed": "Закрыт",
+        "archived": "Архив"
+      },
+      "visibility": {
+        "during": {
+          "label": "В прямом эфире (во время голосования)",
+          "hint": "Участники видят счета, когда они обновляются"
+        },
+        "afterClose": {
+          "label": "После закрытия только",
+          "hint": "Графики скрыты до закрытия опроса"
+        },
+        "adminOnly": {
+          "label": "Только администратор",
+          "hint": "Графики, всегда скрытые от членов"
+        }
+      },
+      "visibilityShort": {
+        "adminOnly": "admin-only",
+        "afterClose": "после закрытия"
+      },
+      "errors": {
+        "minOptions": "Добавьте, по крайней мере, опции {{min}}.",
+        "duplicates": "Дублирующие варианты не допускаются.",
+        "failedToCreate": "Не удалось создать опрос",
+        "actionFailed": "Действия провалились",
+        "clipboardBlocked": "Клавиатура заблокирована браузером."
+      },
+      "feedback": {
+        "created": "Создан «{{title}}» ({{status}}).",
+        "published": "Издательство: «{{title}}».",
+        "closed": "Закрыт «{{title}}».",
+        "reopened": "Вновь открылся «{{title}}».",
+        "archived": "Архивировано \"{{title}}\".",
+        "restored": "Восстановлено \"{{title}}\" до закрытия.",
+        "deleted": "Удален \"{{title}}\"."
+      },
+      "confirmDelete": "Удалить \"{{title}}\" навсегда? Все голоса будут потеряны.",
+      "form": {
+        "heading": "Новый опрос",
+        "titleLabel": "Название*",
+        "titlePlaceholder": "В какое время следует бежать викингов?",
+        "descriptionLabel": "Описание",
+        "descriptionHint": "— Markdown (**bold**, *italic*, 'code', [text](url), - списки)",
+        "descriptionPlaceholder": "**18:00 UTC** отлично подходит для перекрытия ЕС + Азия. Пожалуйста, голосуйте, даже если вы не можете сделать это",
+        "typeLabel": "Тип **",
+        "typeSingle": "Сингл",
+        "typeSingleHint": "Один выбор",
+        "typeMulti": "Мульти",
+        "typeMultiHint": "Много вариантов",
+        "initialStatusLabel": "Начальный статус *",
+        "statusOpenOption": "Открытый - немедленно",
+        "statusDraftOption": "Проект: его видят только администраторы",
+        "opensAtLabel": "Открывается на",
+        "opensAtHint": "опционально · UTC",
+        "closesAtLabel": "Закрывается на",
+        "closesAtHint": "опционально · UTC",
+        "resultsVisibilityLabel": "Наглядность результатов*",
+        "optionsLabel": "Варианты*",
+        "optionPlaceholder": "Вариант {{n}}",
+        "removeOption": "Удалить опцию",
+        "addOption": "Добавить опцию",
+        "cancel": "Отмена",
+        "creating": "Создание..",
+        "create": "Создать опрос"
+      },
+      "emptyAll": "Опросов пока нет.",
+      "emptyFiltered": "Нет опросов {{filter}}.",
+      "row": {
+        "closesAt": "закрытие {{date}}",
+        "openIndefinitely": "бессрочно открытый",
+        "closedAt": "закрытый {{date}}"
+      },
+      "actions": {
+        "copyLinkTitle": "Копии коротких ссылок",
+        "copied": "Копирован",
+        "link": "Ссылка",
+        "publishTitle": "Издательство: члены могут голосовать",
+        "publish": "Публиковать",
+        "closeTitle": "Закрыть сейчас",
+        "close": "Закрыть",
+        "reopenTitle": "Открыть",
+        "reopen": "Открыть",
+        "archiveTitle": "Архив · Скрыть от списков по умолчанию",
+        "archive": "Архив",
+        "unarchiveTitle": "Unarchive (вернуться к закрытому)",
+        "restore": "Восстановить",
+        "deleteTitle": "Удалить"
+      }
+    },
+    "richTextEditor": {
+      "placeholder": "Расскажи историю этой вехи..",
+      "title": "Название",
+      "subtitle": "Подзаголовок",
+      "bold": "Смелый",
+      "italic": "Итальянский",
+      "underline": "Подчеркнуть",
+      "bulletList": "Список пуль",
+      "orderedList": "Номерной список",
+      "quote": "Цитата",
+      "alignLeft": "Элемент слева",
+      "alignCenter": "Центр связи",
+      "alignRight": "Выровнять право",
+      "insertImage": "Вставить изображение",
+      "undo": "Снять",
+      "redo": "Реда",
+      "close": "Закрыть",
+      "uploadImage": "Загрузить изображение",
+      "or": "or",
+      "imageUrl": "Изображение URL",
+      "imageUrlPlaceholder": "https://…/figure.png",
+      "insert": "Включить"
+    },
+    "troopTiers": {
+      "backToCatalogue": "Вернуться в Каталог",
+      "eyebrow": "Администрирование · Каталог",
+      "title": "Уровни войск",
+      "newTier": "Новый уровень",
+      "cancel": "Отмена",
+      "create": "Создать",
+      "edit": "Изменить",
+      "cancelEdit": "Отмена",
+      "save": "Сохранить",
+      "orderLabel": "Заказ #{{order}}",
+      "truegoldBadge": "Truegold",
+      "buildingLv": "Building lv {{lv}}",
+      "errors": {
+        "tierLabelRequired": "Введите ярлык уровня (например, T8, TG3).",
+        "tierLabelRequiredShort": "Требуется этикетка.",
+        "failedToCreate": "Не удалось создать ярус",
+        "failedToDelete": "Не удалось удалить",
+        "failedToSave": "Не удалось спасти"
+      },
+      "confirmDelete": {
+        "heading": "Удалить \"{{name}}\" навсегда?",
+        "body": "Это действие не может быть отменено и может нарушить руководства, которые ссылаются на этот уровень.",
+        "yes": "Да, удалить"
+      },
+      "fields": {
+        "tierLabel": "Этикетка",
+        "tierLabelPlaceholder": "например, T8, TG3",
+        "displayOrder": "Порядок отображения",
+        "trainingBuildingLevel": "Уровень подготовки",
+        "optional": "optional",
+        "truegoldTier": "Тругоголдский ярус",
+        "icon": "Икона",
+        "iconUploadLabel": "Икона уровня",
+        "description": "Описание"
+      }
+    }
+  },
+  "alliance": {
+    "timeAgo": {
+      "now": "сейчас"
+    },
+    "stats": {
+      "rank": "Ранг",
+      "members": "Участники",
+      "membersSub": "{{count}} в реестре",
+      "power": "Власть",
+      "powerSub": "Комбинированный"
+    },
+    "cta": {
+      "open": "Открыть",
+      "polls": {
+        "title": "Опросы",
+        "subtitle": "Координировать сроки проведения мероприятий, предпочтения легиона, решения альянса."
+      },
+      "members": {
+        "title": "Участники",
+        "subtitle": "Просмотрите список — Ник, ранг, власть, ярус войск."
+      }
+    },
+    "catalogue": {
+      "eyebrow": "Ссылка",
+      "title": "Каталог игр",
+      "description": "Герои, домашние животные, мастера и солдаты — общая ссылка, которую может просмотреть каждый в альянсе.",
+      "heroes": "Герои",
+      "pets": "Питомцы",
+      "masters": "Мастера",
+      "troopTiers": "Группа войск"
+    },
+    "composition": {
+      "eyebrow": "Состав",
+      "title": "Собранные силы",
+      "truegoldMembers": "Члены TrueGold",
+      "tg5Ready": "TG5+ готов",
+      "avgPower": "Сила света",
+      "minTroopTier": "Ярус минских войск"
+    },
+    "announcements": {
+      "eyebrow": "Объявления",
+      "title": "Последние уведомления",
+      "emptyHint": "Объявления появляются здесь, как только администратор нажимает на них.",
+      "showing_one": "Отображение {{count}}",
+      "showing_other": "Показать уведомления {{count}}",
+      "none": "Нет последних уведомлений"
+    }
+  },
+  "auth": {
+    "allyChip": {
+      "label": "Союзник",
+      "tooltip": "Ally — гость из другого альянса (только чтение)"
+    },
+    "signIn": "Войти",
+    "signOut": "Выйти",
+    "checkingSession": "Проверка сеанса.."
+  },
+  "brand": {
+    "name": "DAD War Room",
+    "alliance": "[DAD] BIGDADDYS",
+    "kingdom": "Kingdom 1652",
+    "motto": "Элегантность в мире, хаос в бою."
+  },
+  "catalogue": {
+    "eyebrow": "Каталог",
+    "loading": "Загрузка…",
+    "filter": {
+      "all": "Все",
+      "gen": "Gen {{gen}}"
+    },
+    "genBadge": "Gen {{gen}}",
+    "branch": {
+      "infantry": "Пехота",
+      "cavalry": "Кавалерия",
+      "archer": "Арчер"
+    },
+    "heroes": {
+      "title": "Герои королевства",
+      "summary": "Герои {{heroCount}} каталогизированы по поколениям {{genCount}}",
+      "empty": {
+        "all": "Героев в каталоге пока нет.",
+        "gen": "Героев в Generation {{gen}} пока нет.",
+        "subtitle": "Администраторы могут добавлять героев из консоли каталога."
+      },
+      "openAria": "Открытый {{name}} (поколение {{gen}})",
+      "backToList": "Вернуться к героям",
+      "notFoundTitle": "Герой не найден.",
+      "notFoundSubtitle": "В каталоге нет записей, соответствующих этому слизняку.",
+      "returnToList": "Вернуться к героям",
+      "generation": "Generation {{gen}}",
+      "archivedBadge": "Архив",
+      "noDescription": "Описания этого героя пока не зафиксировано.",
+      "releasedOn": "Выпущен {{date}}"
+    },
+    "pets": {
+      "title": "Домашние животные королевства",
+      "summary_one": "Домашнее животное {{count}} каталогизировано",
+      "summary_other": "Домашние животные {{count}} каталогизированы",
+      "empty": {
+        "nextGen": "Домашние животные с поколением {{gen}}",
+        "gen": "Поколения {{gen}} пока нет.",
+        "subtitle": "Администраторы могут зарегистрировать их в каталоге."
+      },
+      "cardAria": "{{name}} (поколение {{gen}})"
+    },
+    "masters": {
+      "title": "Мастера королевства",
+      "summary_one": "{{count}} Master разблокирован",
+      "summary_other": "Мастера {{count}} разблокированы",
+      "empty": {
+        "title": "Мастеров в каталоге пока нет.",
+        "subtitle": "Администраторы могут регистрировать мастеров из консоли каталога."
+      },
+      "unlockLabel": "Мастер #{{order}}",
+      "noDescription": "Описания для этого мастера пока нет.",
+      "releasedOn": "Выпущен {{date}}"
+    },
+    "tiers": {
+      "title": "Уровни войск",
+      "summary_one": "Уровень {{count}} по регулярным и истиннозолотым трекам",
+      "summary_other": "Уровни {{count}} по регулярным и истиннозолотым трекам",
+      "empty": {
+        "title": "Пока не зарегистрировано ни одного уровня войск.",
+        "subtitle": "Администраторы могут регистрировать уровни из консоли каталога."
+      },
+      "regular": {
+        "title": "Регулярные уровни",
+        "subtitle": "Классическая лестница разблокирована с помощью повышения квалификации войск."
+      },
+      "truegold": {
+        "title": "Truegold tiers",
+        "subtitle": "Прогрессия Truegold открывается только после преобразования литейного цеха."
+      },
+      "standardEyebrow": "Стандарт",
+      "truegoldEyebrow": "Truegold",
+      "noDescription": "Нет описания",
+      "trainingLevel": "Тренировочный уровень {{level}}"
+    }
+  },
+  "chat": {
+    "eyebrow": "В работах",
+    "title": "Альянс чат",
+    "tagline": "Прямой канал разговора для [DAD] BIGDADDYS — координируйте события по часовым поясам, делитесь стратегией, рекламируйте победы.",
+    "pushHint": "Пока он не отправляется, срочные звонки выходят в виде push-уведомлений. Включите их в настройках, чтобы не пропустить следующее медвежье окно или вызов KvK.",
+    "enablePush": "Включить push-уведомления",
+    "features": {
+      "images": {
+        "title": "Вложения изображений",
+        "text": "Делитесь скриншотами медвежьих хитов, макетов, сборок передач — прямо внутри чата."
+      },
+      "crossAlliance": {
+        "title": "Координация между союзниками",
+        "text": "Союзники умеют читать и писать. Их сообщения помечаются чипом ALLY, поэтому контекст мгновенный."
+      },
+      "historyReactions": {
+        "title": "Читайте историю, реакции",
+        "text": "Смотрите сообщения, которые вы пропустили в автономном режиме · реагируйте с смайликами · поиск автором."
+      }
+    }
+  },
+  "common": {
+    "loading": "Загрузка…"
+  },
+  "events": {
+    "bear1": {
+      "title": "Медвежья Охота 1 - Ралли-волновая стратегия",
+      "short": "Bear Hunt 1"
+    },
+    "bear2": {
+      "title": "Bear Hunt 2",
+      "short": "Bear Hunt 2"
+    },
+    "kingsCastle": {
+      "title": "Королевский замок Битва",
+      "short": "Королевский замок"
+    },
+    "kvk": {
+      "title": "KvK - Королевство власти",
+      "short": "KvK"
+    },
+    "viking": {
+      "title": "Viking Vengeance",
+      "short": "Viking Vengeance"
+    },
+    "swordland": {
+      "title": "Swordland Showdown",
+      "short": "Swordland Showdown"
+    },
+    "triAlliance": {
+      "title": "Tri-Alliance Clash",
+      "short": "Tri-Alliance Clash"
+    },
+    "cesar": {
+      "title": "Cesar's Fury",
+      "short": "Cesar's Fury"
+    },
+    "page": {
+      "eyebrow": "Каталог",
+      "title": "События королевства",
+      "subtitle": "Медведь, КвК, Викинг, Три-Альянс и сезонные мероприятия. Здесь открываются активные гиды."
+    },
+    "upcoming": {
+      "eyebrow": "Далее",
+      "title": "Предстоящие события",
+      "subtitle": "Следующие 14 дней · проведите горизонтально.",
+      "empty": "В ближайшие 14 дней никаких мероприятий не запланировано.",
+      "eventCount_one": "Событие {{count}}",
+      "eventCount_other": "События {{count}}",
+      "viewAll": "Все",
+      "today": "Сегодня",
+      "tomorrow": "Завтра"
+    },
+    "filter": {
+      "all": "Все",
+      "active": "Активен",
+      "comingSoon": "Скоро будет",
+      "archived": "Архив"
+    },
+    "empty": {
+      "filter": "Никаких событий в этом фильтре."
+    },
+    "status": {
+      "active": "Активен",
+      "archived": "Архив",
+      "comingSoon": "Скоро будет"
+    },
+    "card": {
+      "openGuide": "Открытое руководство",
+      "noLongerActive": "Больше не активны",
+      "stayTuned": "Оставайтесь на связи"
+    }
+  },
+  "footer": {
+    "madeWith": "Сделано с ♥ для",
+    "alliance": "[DAD] BIGDADDYS",
+    "kingdom": "Королевство 1652 · Кингшот",
+    "creator": "Построенный",
+    "creatorName": "Salles",
+    "creatorRole": "Член Альянса"
+  },
+  "header": {
+    "kingdomTag": "Kingdom 1652"
+  },
+  "hub": {
+    "title": "DAD War Room",
+    "tagline": "Стратегический центр для [DAD] BIGDADDYS · Королевство 1652",
+    "intro": "Визуальные стратегии для каждого события. Выберите руководство ниже.",
+    "comingSoon": "Скоро будет",
+    "userHero": {
+      "visitorEyebrow": "Посетитель",
+      "visitorTitle": "Войдите, чтобы открыть War Room",
+      "visitorSubtitle": "Члены, офицеры и союзники — все здесь зависит от вашего логина.",
+      "signIn": "Войти",
+      "allyBadge": "Союзник",
+      "editProfile": "Редактировать профиль",
+      "stat": {
+        "power": "Власть",
+        "truegold": "Truegold",
+        "role": "Роль"
+      },
+      "role": {
+        "r5": "Leader",
+        "r4": "Соруководитель",
+        "r3": "R3 Officer",
+        "r2": "R2 Officer",
+        "member": "Член",
+        "ally": "Союзник"
+      }
+    },
+    "nextEvent": {
+      "eyebrow": "Следующее событие",
+      "loadError": "Не удалось загрузить следующее событие",
+      "empty": {
+        "title": "Событие пока не запланировано",
+        "subtitle": "Как только администратор добавляет следующего медведя, KvK или сезонное событие, он появится здесь с обратным отсчетом."
+      },
+      "addEvent": "Добавить событие",
+      "guide": "Гайд",
+      "startedAgo": "Это событие началось с {{days}}d {{hours}}h назад — обновите после добавления следующего.",
+      "countdown": {
+        "days": "Дни",
+        "hours": "Часы",
+        "min": "Мин",
+        "sec": "Сек"
+      },
+      "utcTitle": "Все времена в скоординированное универсальное время"
+    },
+    "pendingPolls": {
+      "allClearEyebrow": "Все чисто",
+      "actionEyebrow": "Необходимые меры",
+      "emptyTitle": "Никаких предварительных опросов",
+      "emptySubtitle": "Все открытые голоса уже получили ваши голоса.",
+      "waitingTitle_one": "Опрос {{count}} ждет вашего голоса",
+      "waitingTitle_other": "Опросы {{count}} ждут вашего голоса",
+      "footerEmpty": "Военный кабинет · Опросы",
+      "footerCount": "Топ {{shown}} от {{total}}",
+      "viewAll": "Все"
+    },
+    "timeline": {
+      "title": "График",
+      "empty": {
+        "title": "Никаких предстоящих этапов не запланировано.",
+        "subtitle": "Установите даты разблокировки с панели администратора, и они появятся здесь."
+      },
+      "toGo": "идти",
+      "past": "past"
+    }
+  },
+  "login": {
+    "brandSuffix": "War Room",
+    "changeLanguage": "Изменить язык",
+    "eyebrow": "Командование Альянса",
+    "fields": {
+      "username": "Имя пользователя",
+      "usernamePlaceholder": "your_handle",
+      "password": "Пароль",
+      "showPassword": "Показать пароль",
+      "hidePassword": "Скрыть пароль"
+    },
+    "errors": {
+      "required": "Имя пользователя и пароль необходимы.",
+      "signInFailed": "Регистрация провалилась.",
+      "wrongCredentials": "Неправильное имя пользователя или пароль."
+    },
+    "submitting": "Подписаться",
+    "enter": "Входить",
+    "forgot": {
+      "prefix": "Забыл?",
+      "askR4R5": "Спроси R4 или R5."
+    },
+    "installPwa": "Скачать игру DAD War Room",
+    "builtBy": "построенный"
+  },
+  "members": {
+    "page": {
+      "eyebrow": "Регистр",
+      "title": "Члены Альянса",
+      "loading": "Загрузка…",
+      "memberCount_one": "{{count}} член",
+      "memberCount_other": "{{count}} - это",
+      "combinedPower": "объединенная мощность"
+    },
+    "search": {
+      "placeholder": "Поиск по нику…"
+    },
+    "sort": {
+      "label": "Сортировать",
+      "power": "Власть",
+      "tier": "Уровень",
+      "rank": "Ранг",
+      "nick": "Nick"
+    },
+    "empty": {
+      "noMatch": "Никаких матчей \"{{query}}\".",
+      "noMembers": "Членов в реестре пока нет."
+    },
+    "rank": {
+      "r1Title": "Набирать",
+      "r2Title": "Член",
+      "r3Title": "Ветеран",
+      "r4Title": "Офицер",
+      "r5Title": "Leader",
+      "defaultTitle": "Член"
+    },
+    "role": {
+      "leader": "Leader",
+      "joiner": "Joiner",
+      "standby": "Standby"
+    },
+    "status": {
+      "temporaryOut": "Временный выход",
+      "temporarilyOut": "Временно выйти",
+      "out": "Выходи"
+    },
+    "detail": {
+      "backToList": "Вернуться в список",
+      "notFoundEyebrow": "Не найдено",
+      "notFoundWithNick": "Нет участника с Ником \"{{nick}}\"",
+      "notFoundNoNick": "Члена не существует",
+      "notFoundDescription": "Член альянса, возможно, покинул его, или связь неверна.",
+      "dadTagLabel": "Тег DAD · {{tag}}",
+      "noteLabel": "Примечание"
+    },
+    "stat": {
+      "power": "Власть",
+      "truegold": "Truegold"
+    },
+    "participation": {
+      "eyebrow": "Участие",
+      "title": "История событий",
+      "empty": "Никаких событий пока не зафиксировано — этот член не был привязан к какому-либо происшествию.",
+      "latest": "Последний"
+    },
+    "card": {
+      "openProfileAria": "Открытый профиль для {{nick}}",
+      "tcLevel": "Lv.{{level}} · {{tier}}"
+    },
+    "powerChart": {
+      "eyebrow": "Власть во времени",
+      "title": "Эволюция",
+      "notEnoughData": "Пока недостаточно данных — изменения мощности будут появляться по мере их записи.",
+      "snapshotCount_one": "{{count}} снимок",
+      "snapshotCount_other": "Снимки {{count}}"
+    }
+  },
+  "nav": {
+    "home": "Главная",
+    "events": "События",
+    "chat": "Чат",
+    "alliance": "Альянс",
+    "settings": "Настройки",
+    "primaryAriaLabel": "Первичный",
+    "adminAriaLabel": "Админ",
+    "exitAdmin": "Режим выхода admin",
+    "exitAdminShort": "Выход",
+    "adminEvents": "События",
+    "adminPolls": "Опросы",
+    "adminMembers": "Участники",
+    "adminChat": "Чат",
+    "adminAlliance": "Альянс",
+    "adminNotifications": "Notif.",
+    "adminAnalytics": "Статистика"
+  },
+  "notifications": {
+    "bellAriaLabel": "Уведомления",
+    "bellAriaLabelUnread": "Уведомления, {{count}} unread",
+    "panelAriaLabel": "Последние уведомления",
+    "title": "Уведомления",
+    "empty": "Никаких последних уведомлений.",
+    "timeNow": "сейчас",
+    "viewAll": "Все"
+  },
+  "polls": {
+    "eyebrow": "Голосовать",
+    "title": "Опросы Альянса",
+    "loading": "Загрузка…",
+    "countLine_one": "Опрос {{count}} в полете",
+    "countLine_other": "Опросы {{count}} в полете",
+    "readOnly": "read-only",
+    "empty": {
+      "title": "Опросов пока нет",
+      "adminPrefix": "Администратор может создать первый опрос",
+      "adminLink": "admin - опросы"
+    },
+    "view": "Посмотреть",
+    "status": {
+      "closed": "Закрыт",
+      "draft": "Проект",
+      "open": "Открыть"
+    },
+    "type": {
+      "single": "Сингл",
+      "multi": "Мульти",
+      "singleChoice": "Одноразовый выбор",
+      "multiChoice": "Мультивыбор"
+    },
+    "countdown": {
+      "minutes_one": "Закрыт в {{count}}m",
+      "minutes_other": "Закрыт в {{count}}m",
+      "hours_one": "Закрытие в {{count}}h",
+      "hours_other": "Закрытие в {{count}}h",
+      "days_one": "Закрытие в {{count}}d",
+      "days_other": "Закрытие в {{count}}d"
+    },
+    "shareToken": {
+      "invalid": "Эта ссылка на акции недействительна или опрос был удален.",
+      "browse": "Просмотреть опросы"
+    },
+    "detail": {
+      "back": "Назад",
+      "backToPolls": "Вернуться к опросам",
+      "notFound": "Опрос не найден.",
+      "countdown": {
+        "archived": "Архив",
+        "draftNotPublished": "Проект (не опубликован)",
+        "closedAt": "Закрытый {{date}} {{time}}",
+        "openIndefinitely": "Открыто бессрочно"
+      },
+      "draftBanner": {
+        "prefix": "Этот опрос находится в",
+        "draft": "draft",
+        "suffix": "Депутаты пока не могут голосовать. Опубликовать из",
+        "link": "admin - опросы"
+      },
+      "resultsHidden": {
+        "adminOnly": "Результаты видны администраторам только на этом опросе.",
+        "untilClose": "Подсчет голосов скрывается до закрытия опроса."
+      },
+      "signedOutBanner": "голосовать. Вы можете просматривать результаты во время подписки.",
+      "allyBanner": "учетные записи могут просматривать результаты, но не могут голосовать (доступ только для чтения).",
+      "voteFailed": "Голосование провалилось",
+      "clearFailed": "Явный провал",
+      "voterCount_one": "Избиратель {{count}}",
+      "voterCount_other": "{{count}} избиратели",
+      "totalPicks": "{{count}} общий выбор",
+      "resultsHiddenShort": "Результаты скрыты до закрытия опроса.",
+      "reVotePrefix": "Вы можете проголосовать до",
+      "clearMyVote": "Очистите мой голос",
+      "shareTitle": "Поделиться",
+      "share": "Доля",
+      "copied": "Копирован"
+    }
+  },
+  "settings": {
+    "eyebrow": "Настройки",
+    "title": "Настройки",
+    "account": {
+      "heading": "Счет",
+      "signedInFallback": "Подписано в",
+      "openAdmin": "Настройки Open Admin",
+      "openAdminTooltip": "Переключите весь хром приложения в режим администратора (красная линия волос + 8-табовый админ нав)",
+      "signInHint": "Члены, союзники и администраторы."
+    },
+    "language": {
+      "eyebrow": "Язык языка",
+      "available_one": "Язык {{count}} доступен",
+      "available_other": "Языки {{count}} доступны",
+      "close": "Закрыть",
+      "change": "Изменения"
+    },
+    "pwa": {
+      "eyebrow": "Progressive Web App",
+      "title": "Установите War Room",
+      "alreadyInstalled": "Уже установлен — открывается офлайн, запускается с домашнего экрана.",
+      "addToHomescreen": "Добавьте на домашний экран для быстрого доступа и push-уведомлений.",
+      "openInBrowser": "Откройте в Chrome / Edge / Safari для установки в качестве приложения.",
+      "standaloneMode": "Автономный режим",
+      "browserMode": "Браузерный режим",
+      "installed": "Установленный",
+      "install": "Устанавливать"
+    },
+    "push": {
+      "eyebrow": "Уведомления",
+      "title": "Push-уведомления",
+      "description": "Получайте пинг в приложении, когда начинается событие, открывается новый опрос или администратор отправляет объявление на выбранном вами языке.",
+      "notConfigured": "Нажмите не настроенный для этого развертывания. Спросите админ альянса.",
+      "blocked": "Уведомления, заблокированные в настройках браузера — повторно включить подписку.",
+      "active": "Активен",
+      "deactivate": "Деактивировать",
+      "permissionGranted": "Разрешение предоставлено",
+      "notSubscribed": "Не подписано",
+      "activate": "Активировать"
+    },
+    "profile": {
+      "eyebrow": "Профиль",
+      "displayName": "Имя дисплея",
+      "password": "Пароль",
+      "avatar": "Аватар",
+      "avatarValue": {
+        "custom": "Пользовательское изображение",
+        "hero": "Hero: {{slug}}",
+        "default": "По умолчанию (hash)"
+      },
+      "edit": "Изменить",
+      "newDisplayName": "Новое дисплейное имя",
+      "newPassword": "Новый пароль",
+      "passwordMinimum": "Минимум 8 персонажей.",
+      "confirm": "Подтвердить",
+      "passwordsDontMatch": "Пароли не совпадают.",
+      "preview": "Предпросмотр",
+      "resetTooltip": "Назад к автоматическому аватару (хэш имени пользователя)",
+      "reset": "Сброс",
+      "chooseHero": "Выбирайте героя",
+      "customImage": "Пользовательское изображение",
+      "uploadImage": "Загрузить изображение",
+      "or": "or",
+      "imageUrl": "Изображение URL",
+      "imageUrlHint": "Вставьте любую общедоступную ссылку (Discord, Imgur, wiki и т. Д.). Будет переопределять выбранного героя.",
+      "close": "Закрыть",
+      "cancel": "Отмена",
+      "save": "Сохранить",
+      "feedback": {
+        "displayNameUpdated": "Имя дисплея обновлено.",
+        "passwordChanged": "Пароль изменился.",
+        "avatarUpdated": "Аватар обновлен.",
+        "avatarReset": "Вернемся к автоматическому аватару.",
+        "failed": "Провал.",
+        "failedShort": "Провал."
+      }
+    }
+  },
+  "timeline": {
+    "detail": {
+      "back": "Назад",
+      "loadError": "Не удалось загрузить",
+      "notFound": "Камень не найден.",
+      "reference": "Ссылка",
+      "source": "Источник",
+      "daysToGo": "{{days}}d выйдет",
+      "today": "today",
+      "daysAgo": "{{days}}, ранее",
+      "noBody": "Подробного описания этой вехи пока нет. Администратор может заполнять богатый контент (текст, изображения, списки, ссылки) в редакторе временной шкалы администратора."
+    },
+    "category": {
+      "truegold": "Truegold",
+      "heroes": "Герои",
+      "pets": "Питомцы",
+      "pvp": "PvP",
+      "feature": "Feature",
+      "master": "Мастер",
+      "fog": "Fog",
+      "warAcademy": "War Academy",
+      "other": "Другой"
+    },
+    "relative": {
+      "today": "Сегодня",
+      "tomorrow": "Завтра",
+      "daysAgo": "{{days}}, ранее",
+      "daysCount": "{{count}} дни"
+    }
+  },
+  "ui": {
+    "language": "Язык языка",
+    "back": "Назад",
+    "backToHub": "Назад в Хаб",
+    "copy": "Копия",
+    "copied": "Копирован!",
+    "toTop": "Назад к вершине",
+    "skipToContent": "Перейти к содержимому",
+    "imageUpload": {
+      "label": "Загрузить изображение",
+      "previewAlt": "Предпросмотр",
+      "currentImage": "Текущее изображение",
+      "swap": "Своп",
+      "remove": "Убрать",
+      "uploading": "Загрузить..",
+      "dropOrClick": "Перетащите изображение или нажмите, чтобы выбрать",
+      "limitsHint": "{{allowedHuman}} · до {{maxMb}} MB",
+      "errorTooLarge": "Файл слишком большой. Максимальный {{maxMb}} MB.",
+      "errorUploadFailed": "Загрузить не удалось."
+    }
+  }
+}

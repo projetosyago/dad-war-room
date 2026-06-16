@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin
+Disallow: /login
+Disallow: /p/
+Allow: /
+Sitemap: https://dad-1652.vercel.app/sitemap.xml

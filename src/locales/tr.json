@@ -1,0 +1,1488 @@
+{
+  "admin": {
+    "accounts": {
+      "backToMembers": "Üyeliğe geri dön",
+      "eyebrow": "Yönetici",
+      "title": "Hesaplar",
+      "closeForm": "Kapat form",
+      "newAccount": "Yeni hesap",
+      "filters": {
+        "all": "Tümü",
+        "members": "DAD Üyeleri",
+        "allies": "Müttefikler"
+      },
+      "emptyState": "Bu filtrede hesap yok.",
+      "youLabel": "you",
+      "lastLogin": "son Giriş {{when}}",
+      "rosterTooltip": "Roster: {{nick}} ({{rank}})",
+      "rosterFallback": "roster",
+      "lvlShort": "lvl {{level}}",
+      "unlinkTitle": "Roster'dan alıntı",
+      "unlink": "Unlink",
+      "linkTitle": "Bir roster üyesine bağlantı",
+      "link": "Link",
+      "resetTitle": "Şifre sıfırlama şifresi",
+      "reset": "Reset",
+      "deactivateTitle": "Deactivate",
+      "reactivateTitle": "Reactivate",
+      "off": "Off",
+      "on": "Onda",
+      "passwordTooShort": "Şifre en az 6 karakter olmalıdır.",
+      "resetPasswordPrompt": "{{name}} (@{{username}}) için yeni bir TEMPORARY parolasını ayarlayın.\nÜye bir sonraki oturumda değiştirmek zorunda kalacak.",
+      "cantDeactivateSelf": "Kendinizi devre dışı bırakamazsınız – bunu yapmak için başka bir R5’e sorun.",
+      "confirmDeactivate": "Deactivate {{name}}?",
+      "confirmReactivate": "Reakt {{name}}?",
+      "errors": {
+        "failedToCreate": "Hesap oluşturmak için başarısız oldu",
+        "failedToReset": "Şifreyi sıfırlamayı başaramadı",
+        "failedToLink": "Bağlantı kurmak için başarısız oldu",
+        "failedToToggle": "Aktif durumu güncellemeye başarısız oldu"
+      },
+      "feedback": {
+        "created": "Hesap \"{{name}}\" ({{role}}) oluşturuldu.",
+        "passwordReset": "{{name}} için parola sıfırlama.",
+        "linked": "{{name}} {{target}} ile bağlantılı.",
+        "unlinked": "{{name}} bağlantılandı.",
+        "reactivated": "{{name}} yeniden etkinleştirildi.",
+        "deactivated": "{{name}} devre dışı bırakıldı."
+      },
+      "form": {
+        "heading": "Yeni hesap",
+        "usernameLabel": "Username *",
+        "usernamePlaceholder": "alice",
+        "usernameHint": "giriş yapmak için kullanılır",
+        "displayNameLabel": "Ekran adı",
+        "displayNameHint": "kullanıcı adı",
+        "passwordLabel": "Şifre * *",
+        "passwordPlaceholder": "en az 6 karakter",
+        "roleLabel": "Rol *",
+        "languageLabel": "Dil Dili",
+        "cancel": "İptal",
+        "creating": "Oluşturma..",
+        "create": "Create account"
+      },
+      "roles": {
+        "ally": {
+          "label": "Ally",
+          "description": "Diplomatik misafir - sadece, sohbette yazılar."
+        },
+        "member": {
+          "label": "Üye (R1)",
+          "description": "Düzenli DAD üyesi."
+        },
+        "r2": {
+          "label": "R2",
+          "description": "Memur ( henüz fazla yönetici değil)."
+        },
+        "r3": {
+          "label": "R3",
+          "description": "Memur ( henüz fazla yönetici değil)."
+        },
+        "r4": {
+          "label": "R4 — Admin",
+          "description": "Anketler / keşifler oluşturun, müttefikleri yönetir."
+        },
+        "r5": {
+          "label": "R5 — Admin",
+          "description": "Diğer hesapları yönetin (diğer R5)."
+        }
+      },
+      "relative": {
+        "never": "asla",
+        "justNow": "şimdi sadece şimdi",
+        "minutesAgo": "{{count}}m önce",
+        "hoursAgo": "{{count}}h daha önce",
+        "daysAgo": "{{count}}d önce",
+        "monthsAgo": "{{count}}mo önce",
+        "yearsAgo": "{{count}}y önce"
+      },
+      "linkPicker": {
+        "heading": "Link to roster",
+        "close": "Kapat",
+        "searchPlaceholder": "Arama roster..",
+        "noMatch": "Üye yok \"{{query}}\".",
+        "allLinked": "Tüm roster üyeleri bağlantılıdır."
+      }
+    },
+    "alliance": {
+      "backToAdmin": "Yöneticiye dön",
+      "eyebrow": "Yönetici",
+      "title": "İttifak",
+      "cards": {
+        "timeline": {
+          "title": "Kingdom Timeline",
+          "subtitle": "Edit, TG tiers, kahraman/pet nesiller, ustalar, fog için tarihler açıyor."
+        },
+        "catalogue": {
+          "title": "Katalog",
+          "subtitle": "Kahramanlar, evcil hayvanlar, ustalar ve troop tiers - her sayfanın arkasındaki oyun verileri."
+        },
+        "announcements": {
+          "title": "Duyurular",
+          "subtitle": "Kompup ve program bildirimleri üyelere itiyor."
+        }
+      },
+      "metadata": {
+        "eyebrow": "Public info",
+        "title": "Edit metadata",
+        "intro": "Rank, sloganı, tagline, marka renkleri ve yakalama tarihi <allianceLink>/alliance</allianceLink>'de görünür. Bu değerler <c>alliance pts</c> masasında yaşıyor.",
+        "rankLabel": "Rank",
+        "rankPlaceholder": "#2",
+        "taglineLabel": "Tagline",
+        "taglinePlaceholder": "Kingdom 1652",
+        "mottoLabel": "Motto",
+        "mottoPlaceholder": "Barışta Şık, Savaşta Kaos.",
+        "brandPrimaryLabel": "Marka birincil (hex)",
+        "brandAccentLabel": "Brand aks (hex)",
+        "capturedAtLabel": "Yakaladı",
+        "loadError": "Yük hatası: {{message}}",
+        "saveError": "Hata Kaydet: {{message}}",
+        "saved": "Kaydedildi",
+        "updatedAt": "Güncelleme {{date}}",
+        "loading": "Yükleniyor…",
+        "saving": "Tasarruf..",
+        "save": "Kaydet"
+      }
+    },
+    "analytics": {
+      "backToAdmin": "Yöneticiye dön",
+      "eyebrow": "Yönetici",
+      "title": "Analitik",
+      "kpi": {
+        "onlineNow": {
+          "label": "Şu an çevrimiçi",
+          "sub": "son 5 dakika içinde işaret-in"
+        },
+        "activeSessions": {
+          "label": "Aktif seanslar",
+          "sub": "son 24h"
+        },
+        "totalAccounts": {
+          "label": "Toplam hesap",
+          "sub": "{{count}} aktif"
+        },
+        "neverLoggedIn": {
+          "label": "Hiç giriş yapmadı",
+          "sub": "gemide ihtiyaç var"
+        },
+        "failedSignins": {
+          "label": "Başarısız işareti-ins",
+          "sub": "son 24h"
+        }
+      },
+      "activity": {
+        "heading": "Aktivite pencereleri",
+        "intro": "Hesaplar pencereye dokundu (son login at'dan alındı), ham işaret-ins değil.",
+        "last24h": "Son 24h",
+        "last7d": "Son 7d",
+        "last30d": "Son 30d",
+        "pctOfAccounts": "{{pct}}% of hesaplar"
+      },
+      "pwa": {
+        "heading": "PWA install bölünmüş",
+        "installed": "Yükleme",
+        "browserOnly": "Tarayıcı sadece tarayıcı",
+        "summary": "{{installed}} {{total}} hesaplarının ({{pct}}%) War Room'u ev ekranlarına ekledi."
+      },
+      "push": {
+        "heading": "Push delivery (last 30d)",
+        "opened": "Açıklandı",
+        "ignored": "Ignored",
+        "note": "Şimdi için Mock - bir kez gemileri itti. Bildirim panelinde per-notification izlendi."
+      },
+      "never": {
+        "heading": "Hiç giriş yapmadı"
+      },
+      "langs": {
+        "heading": "Dil dağılımı"
+      },
+      "footnote": "Online şimdi ve aktif seanslar giriş events'tan okuyun. Push teslimat gemileri itene kadar alay edilir."
+    },
+    "catalogue": {
+      "backToAlliance": "İttifaka dön",
+      "eyebrow": "Admin · Kataloğu",
+      "title": "Oyun kataloğu",
+      "intro": "Zaman çizelgesi, avatarlar, troop rehberleri ve yasal kartların katalog tablolarını yönetin. <c>heroes</c>pets</c>, <c>masters<c>troop tiers</c>.",
+      "cards": {
+        "heroes": {
+          "title": "Kahramanlar",
+          "subtitle": "Roster, portre, nesil ve tercih troop şubesi."
+        },
+        "pets": {
+          "title": "Evcil Hayvanlar",
+          "subtitle": "Ev sahibi - portre, açıklama, salıver."
+        },
+        "masters": {
+          "title": "Ustalar",
+          "subtitle": "Stratejik danışmanlar sırayla sipariş etti."
+        },
+        "troopTiers": {
+          "title": "Asker seviyeleri",
+          "subtitle": "T1.T10 ve Truealtı tiers - etiketler, eğitim, ikonlar."
+        }
+      }
+    },
+    "chat": {
+      "backToAdmin": "Yöneticiye dön",
+      "eyebrow": "Yönetici",
+      "title": "Chat",
+      "unsaved": "unsaved",
+      "save": "Kaydet",
+      "savedAt": "Kurtarıldı · {{time}}",
+      "rateLimit": {
+        "title": "Seviye limit (per user)",
+        "subtitle": "Tek bir hesabın bir saat içinde kaç mesaj gönderebileceğine dair yumuşak kap.",
+        "messagesPerHour": "Mesajlar / saat",
+        "minSeconds": "Mesajların arasında Dakika saniye"
+      },
+      "attachments": {
+        "title": "Atalar",
+        "subtitle": "Hangi üyeler yükleyebilir. Audio + video v1'de devre dışı kalır.",
+        "allowImages": "İzin görüntü yüklemeleri",
+        "maxFileSize": "Max dosya büyüklüğü"
+      },
+      "purge": {
+        "title": "Purge mesajları",
+        "subtitle": "Bir-shot tüm sohbet mesajlarını sildi ve görüntüleri yükledi. Yok olamaz.",
+        "clearAll": "Tüm mesajları temizleyin",
+        "confirmHeading": "Kalıcı yıkımı onaylayın",
+        "confirmBody": "Her sohbet mesajı ve yüklenen görüntü gitti. Geçmiş anketler, olaylar ve üyeler böyle kalır.",
+        "cancel": "İptal",
+        "confirmYes": "Evet, her şeyi yok et"
+      },
+      "defaults": {
+        "title": "Temsiller",
+        "subtitle": "Önerilen başlangıç noktasına her değeri sıfırlayın.",
+        "restore": "Geri yükleme varsayılanleri geri yükleme"
+      },
+      "footnote": "Not: Daha sonra kendi gemilerine sohbet edin. Bu kontroller bugün yerel olarak devam ediyor, bu yüzden panel hazır - mesaj masası yaşar, bu sayfa UI'ye dokunmadan bir sunucu yeniden yapılandırılır."
+    },
+    "eventParticipants": {
+      "backToOccurrences": "Olaylara geri dön",
+      "eyebrow": "Event katılımcıları",
+      "eventFallback": "Event",
+      "durationMin": "{{count}}min",
+      "addHeading": "Add katılımcı ekle",
+      "memberLabel": "Üye",
+      "allAssigned": "Tüm üyeler zaten atanmış",
+      "roleLabel": "Rol",
+      "notesLabel": "Notlar (isteğe)",
+      "notesPlaceholder": "Squad atama, yedekleme planı, özel talimatlar..",
+      "notesInputPlaceholder": "Notlar (isteğe)",
+      "adding": "Add..",
+      "addButton": "Add katılımcı ekle",
+      "assignedHeading": "Assigned · {{count}}",
+      "emptyState": "Henüz atanmış kimse - yukarıdaki ilki ekleyin.",
+      "statusTempOut": "Out (temp)",
+      "statusLeft": "Sol sol sol",
+      "cancel": "İptal",
+      "save": "Kaydet",
+      "confirm": "Onayla",
+      "cancelDelete": "Cancel delete",
+      "editAria": "Edit {{nick}}",
+      "removeAria": "{{nick}}",
+      "roles": {
+        "leader": "Leader",
+        "joiner": "Joiner",
+        "standby": "Standby",
+        "unset": "Unset",
+        "unsetOption": "– Unset –"
+      },
+      "errors": {
+        "notFound": "Occurrence bulunamadı.",
+        "failedToLoad": "Olayı yüklemek için başarısız oldu.",
+        "failedToAdd": "Katılımcı eklemek için başarısız oldu.",
+        "failedToUpdate": "Katılımcıyı güncellemek için başarısız oldu.",
+        "failedToRemove": "Katılımcıyı kaldırmak için başarısız oldu."
+      },
+      "feedback": {
+        "added": "Katılımcı ekledi.",
+        "updated": "Katılımcı güncellendi.",
+        "removed": "Katılımcı kaldırıldı."
+      }
+    },
+    "events": {
+      "backToAdmin": "Yöneticiye dön",
+      "eyebrow": "Yönetici",
+      "title": "Event kataloğu",
+      "occurrencesLink": "Occurrences",
+      "newEvent": "Yeni olay",
+      "close": "Kapat",
+      "confirmArchive": "Bu olay mı? All-events ızgarasından gizlenecek.",
+      "errorFailed": "Başarısızlık",
+      "feedback": {
+        "archived": "Archived.",
+        "restored": "Gelmiş gibi geri çekildi.",
+        "created": "Olay yarattı."
+      },
+      "form": {
+        "heading": "Yeni mevsimsel olay",
+        "nameLabel": "İsim *",
+        "namePlaceholder": "Lunar Festival",
+        "shortNameLabel": "Kısa isim",
+        "shortNamePlaceholder": "Lunar",
+        "descriptionLabel": "Açıklama",
+        "iconUrlLabel": "Icon URL",
+        "iconUrlPlaceholder": "/images/events/lunar.png",
+        "seasonal": "One-off / mevsim",
+        "create": "Oluştur"
+      },
+      "seasonalBadge": "Mevsimsel Mevsim",
+      "actions": {
+        "restore": "Geri yükleme geri yükleme",
+        "archive": "Archive"
+      }
+    },
+    "heroes": {
+      "backToCatalogue": "Back to katalog",
+      "eyebrow": "Admin · Kataloğu",
+      "title": "Kahramanlar",
+      "newHero": "Yeni kahraman",
+      "cancel": "İptal",
+      "create": "Oluştur",
+      "edit": "Düzenle",
+      "cancelEdit": "İptal",
+      "save": "Kaydet",
+      "inactive": "inactive",
+      "genLabel": "Gen {{gen}}",
+      "branch": {
+        "none": "—",
+        "infantry": "Infantry",
+        "cavalry": "Cavalry",
+        "archer": "Archer"
+      },
+      "errors": {
+        "nameRequired": "Kahraman için bir isim girin.",
+        "invalidSlug": "Invalid slug. Mektupları ve sayıları kullanın.",
+        "failedToCreate": "Kahraman yaratmak için başarısız oldu",
+        "failedToDelete": "Başarısızlık",
+        "nameRequiredShort": "Adı gerekli.",
+        "failedToSave": "Kurtarmak için başarısız oldu"
+      },
+      "confirmDelete": {
+        "heading": "Delete \"{{name}}\" kalıcı olarak?",
+        "body": "The slug {{slug}} ve portre kaldırılacaktır. Bu eylem geri alınamaz.",
+        "yes": "Evet, silin"
+      },
+      "fields": {
+        "name": "İsim",
+        "slugSuggested": "Slug (suggested:",
+        "slugPlaceholder": "ex: shen-yu",
+        "generation": "Nesil (1-12)",
+        "role": "Rol",
+        "rolePlaceholder": "ex: Marshal",
+        "preferredBranch": "Tercih edilen şube",
+        "portrait": "Portre",
+        "portraitUploadLabel": "Kahraman portre",
+        "description": "Açıklama",
+        "releasedAt": "Gitti",
+        "displayOrder": "Ekran düzeni",
+        "active": "Aktif"
+      }
+    },
+    "iconPicker": {
+      "groups": {
+        "truegoldTiers": "Truegold tiers",
+        "items": "Maddeler",
+        "buildings": "Binalar",
+        "events": "Etkinlikler",
+        "heroes": "Kahramanlar"
+      },
+      "currentIcon": "Current icon",
+      "noOverride": "yok hayır",
+      "autoLabel": "auto · {{path}}",
+      "clear": "Temizle",
+      "customUrlLabel": "Ya da özel bir URL (web'deki herhangi bir görüntü) sallayın",
+      "customUrlPlaceholder": "https://wiki.kingshot.gg/.../some-icon.png",
+      "apply": "Uygula",
+      "uploadOwn": "Ya da kendi imajınızı yükleyin"
+    },
+    "masters": {
+      "backToCatalogue": "Back to katalog",
+      "eyebrow": "Admin · Kataloğu",
+      "title": "Ustalar",
+      "newMaster": "Yeni usta",
+      "cancel": "İptal",
+      "create": "Oluştur",
+      "edit": "Düzenle",
+      "cancelEdit": "İptal",
+      "save": "Kaydet",
+      "inactive": "inactive",
+      "unlockOrderLabel": "Unlock #{{order}}",
+      "errors": {
+        "nameRequired": "Usta için bir isim girin.",
+        "invalidSlug": "Invalid slug. Mektupları ve sayıları kullanın.",
+        "failedToCreate": "Usta oluşturmak için başarısız oldu",
+        "failedToDelete": "Başarısızlık",
+        "nameRequiredShort": "Adı gerekli.",
+        "failedToSave": "Kurtarmak için başarısız oldu"
+      },
+      "confirmDelete": {
+        "heading": "Delete \"{{name}}\" kalıcı olarak?",
+        "body": "The slug {{slug}} kaldırıldı. Bu eylem geri alınamaz.",
+        "yes": "Evet, silin"
+      },
+      "fields": {
+        "name": "İsim",
+        "slugSuggested": "Slug (suggested:",
+        "unlockOrder": "Unlock order",
+        "portrait": "Portre",
+        "portraitUploadLabel": "Master portre",
+        "description": "Açıklama",
+        "releasedAt": "Gitti",
+        "active": "Aktif"
+      }
+    },
+    "members": {
+      "backToAdmin": "Yöneticiye dön",
+      "eyebrow": "Yönetici",
+      "title": "Üye roster",
+      "statsMembers": "{{count}} üyeleri",
+      "statsTempOut": "{{count}} cazip. out",
+      "combinedPower": "birleştirilmiş güç",
+      "accountsLink": "Hesaplar",
+      "searchPlaceholder": "Nick ile ara…",
+      "filters": {
+        "all": "Tümü",
+        "out": "Out"
+      },
+      "feedbackSaved": "Saved {{nick}}.",
+      "emptyState": "Hiçbir üye bu filtreyi eşleştirmiyor.",
+      "tempOutShort": "şaşırtıcı bir şekilde",
+      "leftShort": "left",
+      "lvlLabel": "lvl {{level}}",
+      "editButton": "Düzenle",
+      "subgroups": {
+        "supreme": "Supreme (R4)",
+        "enforcerer": "Enforcerer (R3)",
+        "alpha": "Alpha (R2)",
+        "lieutenant": "Lieutenant (R1)"
+      },
+      "statuses": {
+        "active": "Aktif",
+        "temporaryOut": "Temp. out",
+        "left": "Sol sol sol"
+      },
+      "errors": {
+        "tgOrTc": "TG seviyesi OR şehir merkezi kullanın, ikisi de değil.",
+        "failedToSave": "Kurtarmak için başarısız oldu"
+      },
+      "edit": {
+        "heading": "Edit · {{nick}}",
+        "close": "Kapat",
+        "nickLabel": "Nick",
+        "rankLabel": "Rank",
+        "subgroupLabel": "Subgroup",
+        "noneOption": "- hayır - hayır -",
+        "powerLabel": "Güç ( milyonlar)",
+        "powerHint": "- e.g. 158.7",
+        "tgLabel": "TG seviyesi",
+        "tgPlaceholder": "1-8",
+        "tcLabel": "Town merkezi",
+        "tcPlaceholder": "25-30",
+        "statusLabel": "Durum",
+        "tempOutNote": "Neden ve geri döndüğünde?",
+        "leftNote": "Ayrılma Sebepleri",
+        "langHintLabel": "Lang ipucu",
+        "langHintHint": "- e.g. zh-CN, pt",
+        "optional": "optional",
+        "cancel": "İptal",
+        "saving": "Tasarruf..",
+        "save": "Kaydet"
+      }
+    },
+    "milestones": {
+      "backToAlliance": "İttifaka dön",
+      "eyebrow": "Yönetici",
+      "title": "Krallık kilometre taşları",
+      "newMilestone": "Yeni kilometre",
+      "cancel": "İptal",
+      "create": "Oluştur",
+      "edit": "Düzenle",
+      "cancelEdit": "İptal",
+      "save": "Kaydet",
+      "intro": "Her bir kilometre için beklenen açık tarihi ayarlayın. Pano daha sonra gelecek olanlar için canlı günler-to-go countdowns gösteriyor.",
+      "view": "View",
+      "openPublic": "Open public page",
+      "deleteTitle": "Delete kilometre",
+      "achievedBadge": "achieved",
+      "preview": "Önizleme",
+      "afterCreateHint": "Yaratıldıktan sonra, aşağıdaki listedeki öğeyi zengin içerikle (Tiptap).",
+      "bodyPlaceholder": "Bu dönüm noktası hakkında yazın: ne olduğu, ittifakı nasıl etkilediği, strateji değişiklikleri, faydalı bağlantılar..",
+      "errors": {
+        "nameRequired": "Yeni kilometre için bir isim girin.",
+        "invalidSlug": "Kaug nesli için uygun olmayan bir isim. Mektupları ve sayıları kullanın.",
+        "failedToCreate": "Bir dönüm yaratmak için başarısız oldu",
+        "failedToDelete": "Başarısızlık",
+        "nameRequiredShort": "Milestone adı gereklidir.",
+        "failedToSave": "Kurtarmak için başarısız oldu"
+      },
+      "confirmDelete": {
+        "heading": "Delete \"{{name}}\" kalıcı olarak?",
+        "body": "Halk sayfası / zaman çizgisi/{{slug}} ve tüm içerik silinecektir. Bu eylem geri alınamaz.",
+        "yes": "Evet, silin"
+      },
+      "categories": {
+        "truegold": "Truegold",
+        "heroes": "Kahramanlar",
+        "pets": "Evcil Hayvanlar",
+        "pvp": "PvP",
+        "feature": "Feature",
+        "master": "Master",
+        "fog": "Fog",
+        "warAcademy": "War Academy",
+        "other": "Diğer"
+      },
+      "fields": {
+        "name": "İsim",
+        "namePlaceholder": "e.g. Truegold 6 (Crucible yükseltme)",
+        "category": "Kategori",
+        "unlockDate": "Unlock date (UTC, Seçmeli)",
+        "slugAuto": "Slug (auto:",
+        "slugPlaceholder": "seçmeli - sadece harfler / numaralar /hyphen",
+        "notes": "Kısa notlar (isteğenim)",
+        "notesPublic": "Kısa notlar (halk listesinde)",
+        "notesPublicPlaceholder": "e.g. Unlocks Crucible ve T8 Terör birlikleri.",
+        "unlockDateUtc": "Unlock date (UTC)",
+        "achieved": "Achieved",
+        "icon": "Milestone ikonağı",
+        "milestoneName": "Milestone adı",
+        "contentFor": "Content for /timeline/{{slug}}"
+      }
+    },
+    "notifications": {
+      "backToAdmin": "Yöneticiye dön",
+      "eyebrow": "Yönetici",
+      "title": "Bildirimler",
+      "compose": "Oluştur",
+      "titleLabel": "Başlık:",
+      "titlePlaceholder": "Bear Hunt Stage 3 15 dakika içinde başlar",
+      "bodyLabel": "Vücut Bedeni",
+      "bodyPlaceholder": "Burn toplantıları 15 dakika içinde başlıyor - kalenizde olun ve yürümeye hazır olun.",
+      "emojiLabel": "Duygu",
+      "imageLabel": "Big image (optional)",
+      "uploadImage": "Bir görüntü indir",
+      "orPasteUrl": "...veya bir URL'yi sallayın",
+      "imageUrlPlaceholder": "https://…/banner.png",
+      "audienceLabel": "Hedef kitle",
+      "tapTargetLabel": "Tap hedef",
+      "tapUrlPlaceholder": "https://war-room.local/p/abc",
+      "scheduleLabel": "Planla",
+      "recurrencePlaceholder": "e.g. her Salı 20:00 UTC",
+      "discard": "Discard",
+      "sending": "Gönder..",
+      "send": "Gönder",
+      "scheduling": "Scheduling..",
+      "scheduleAction": "Planla",
+      "preview": "Önizleme",
+      "previewNow": "şimdi",
+      "previewDefaultTitle": "Bildirim başlığı",
+      "previewDefaultBody": "Vücut metni burada üyeler kilit ekranda görecek gibi gösterir.",
+      "targetArrow": "Hedef →",
+      "recentPushes": "Son iterler",
+      "loading": "Yükleniyor…",
+      "noneSent": "Henüz gönderilen bildirim yok.",
+      "deliveredCount": "{{count}} teslim edildi",
+      "openedCount": "{{count}} açıldı · {{pct}}%% %",
+      "pushedTo": "{{audience}} · {{time}}",
+      "audience": {
+        "all": "Tüm hesaplar",
+        "voting": "Voting members (R1-R5)",
+        "admins": "Yöneticiler sadece (R4 / R5)",
+        "allies": "Bütünler sadece",
+        "custom": "Üye Olun"
+      },
+      "schedule": {
+        "now": "Şimdi gönder",
+        "later": "Planla",
+        "recurring": "Yeniden değerlendirme"
+      },
+      "tap": {
+        "hub": "War Room / Home",
+        "events": "Events sekmesi",
+        "polls": "Anketler listesi",
+        "alliance": "Alliance page",
+        "url": "Özel URL URL"
+      },
+      "errors": {
+        "mustBeSignedIn": "Bildirimleri göndermek için imzalanmalıdır.",
+        "failedToSend": "Bildirim göndermek için başarısız oldu."
+      }
+    },
+    "occurrences": {
+      "backToEvents": "Olaylara geri dön",
+      "eyebrow": "Yönetici",
+      "title": "Event takvimi",
+      "intro": "Sonraki ayı, KvK aşamaları ve mevsimsel olaylar.",
+      "form": {
+        "heading": "Yeni olaylar",
+        "eventLabel": "Event",
+        "startsAtLabel": "Başlayın (Yerel zamanınız)",
+        "durationLabel": "Süre (min)",
+        "phaseLabel": "Faz etiketi (isteğenim)",
+        "phasePlaceholder": "Prep / Castle Battle / Brawl",
+        "notesLabel": "Notlar (isteğe)",
+        "repeatLabel": "Tekrar sabit aralıklarla",
+        "intervalLabel": "Interval (hours)",
+        "bearHint": "Ayı Hunt tipik olarak 48",
+        "countLabel": "Olay Sayısı",
+        "saving": "Tasarruf...",
+        "submit": "Add events",
+        "submitMany": "{{count}} olayları ekleyin"
+      },
+      "feedback": {
+        "added": "Occurrence ekledi.",
+        "addedMany": "{{count}} her {{hours}}h'i ekledi."
+      },
+      "errors": {
+        "failedToLoad": "Yüklemek için başarısız oldu",
+        "failedToSave": "Kurtarmak için başarısız oldu",
+        "failedToDelete": "Başarısızlık"
+      },
+      "confirmDelete": "Bu olayı mı sil?",
+      "upcomingHeading": "Gelecek 30 gün",
+      "loading": "Yükleniyor...",
+      "emptyState": "Önümüzdeki 30 günde planlanan hiçbir şey.",
+      "durationMin": "{{count}}min",
+      "cancelled": "cancelled",
+      "manageSquad": "Takım Yönetimi",
+      "squads": "Squads",
+      "delete": "Sil"
+    },
+    "pets": {
+      "backToCatalogue": "Back to katalog",
+      "eyebrow": "Admin · Kataloğu",
+      "title": "Evcil Hayvanlar",
+      "newPet": "Yeni evcil hayvan",
+      "cancel": "İptal",
+      "create": "Oluştur",
+      "edit": "Düzenle",
+      "cancelEdit": "İptal",
+      "save": "Kaydet",
+      "inactive": "inactive",
+      "genLabel": "Gen {{gen}}",
+      "errors": {
+        "nameRequired": "Hayvan için bir isim girin.",
+        "invalidSlug": "Invalid slug. Mektupları ve sayıları kullanın.",
+        "failedToCreate": "Hayvan oluşturmak için başarısız oldu",
+        "failedToDelete": "Başarısızlık",
+        "nameRequiredShort": "Adı gerekli.",
+        "failedToSave": "Kurtarmak için başarısız oldu"
+      },
+      "confirmDelete": {
+        "heading": "Delete \"{{name}}\" kalıcı olarak?",
+        "body": "The slug {{slug}} kaldırıldı. Bu eylem geri alınamaz.",
+        "yes": "Evet, silin"
+      },
+      "fields": {
+        "name": "İsim",
+        "slugSuggested": "Slug (suggested:",
+        "generation": "Nesil",
+        "portrait": "Portre",
+        "portraitUploadLabel": "Pet portre",
+        "description": "Açıklama",
+        "releasedAt": "Gitti",
+        "displayOrder": "Ekran düzeni",
+        "active": "Aktif"
+      }
+    },
+    "polls": {
+      "backToAdmin": "Yöneticiye dön",
+      "eyebrow": "Yönetici",
+      "title": "Anketler",
+      "closeForm": "Kapat form",
+      "newPoll": "Yeni anket",
+      "filters": {
+        "all": "all",
+        "open": "open",
+        "closed": "closed",
+        "draft": "draft",
+        "archived": "archived"
+      },
+      "statusTints": {
+        "draft": "Tas taslağı",
+        "open": "Aç",
+        "closed": "Kapalı",
+        "archived": "Archived"
+      },
+      "visibility": {
+        "during": {
+          "label": "Canlı (veya oy kullanma)",
+          "hint": "Üyeler güncellemek için sayıları görüyorlar"
+        },
+        "afterClose": {
+          "label": "Sadece yakın kaldıktan sonra",
+          "hint": "Anket yakınlara kadar saklı tutarlar"
+        },
+        "adminOnly": {
+          "label": "Admin-sadece",
+          "hint": "Sayılar her zaman üyelerden gizlenmiştir"
+        }
+      },
+      "visibilityShort": {
+        "adminOnly": "admin-only",
+        "afterClose": "kısa bir süre sonra"
+      },
+      "errors": {
+        "minOptions": "En az {{min}} seçenekleri ekleyin.",
+        "duplicates": "Duplicate seçeneklerine izin verilmez.",
+        "failedToCreate": "Anket oluşturmak için başarısız oldu",
+        "actionFailed": "Aksiyon başarısız oldu",
+        "clipboardBlocked": "Clipboard tarayıcı tarafından bloke edildi."
+      },
+      "feedback": {
+        "created": "\"{{title}}\" ({{status}}).",
+        "published": "\"{{title}}\".",
+        "closed": "Kapalı \"{{title}}\".",
+        "reopened": "\"{{title}}\".",
+        "archived": "Archived \"{{title}}\".",
+        "restored": "Kapalı kalmak için \"{{title}}\" geri yükleyin.",
+        "deleted": "Deleted \"{{title}}\"."
+      },
+      "confirmDelete": "Delete \"{{title}}\" kalıcı olarak? Bütün oylar kaybedilecektir.",
+      "form": {
+        "heading": "Yeni anket",
+        "titleLabel": "Başlık *",
+        "titlePlaceholder": "Viking Vengeance'ı ne zaman çalıştırmalıyız?",
+        "descriptionLabel": "Açıklama",
+        "descriptionHint": "Markdown (**bold**, *italic*, \"code\", [text](url) - listeler)",
+        "descriptionPlaceholder": "**18:00 UTC** AB + ASIA çakışması için harika. *Lütfen bunu yapamıyorsanız bile oy verin.*",
+        "typeLabel": "Tipi *",
+        "typeSingle": "Single",
+        "typeSingleHint": "Bir seçim",
+        "typeMulti": "Çok",
+        "typeMultiHint": "Birçok seçenek",
+        "initialStatusLabel": "İlk statü *",
+        "statusOpenOption": "Open · Hemen yayın",
+        "statusDraftOption": "Taslak · sadece yöneticiler bunu görüyor",
+        "opensAtLabel": "Opens at",
+        "opensAtHint": "- Seçmeli · UTC",
+        "closesAtLabel": "Yakınlarda",
+        "closesAtHint": "- Seçmeli · UTC",
+        "resultsVisibilityLabel": "Sonuçlar görünürlüğü *",
+        "optionsLabel": "Seçenekler *",
+        "optionPlaceholder": "Seçenek {{n}}",
+        "removeOption": "Kaldır seçeneği",
+        "addOption": "Add seçeneği ekle",
+        "cancel": "İptal",
+        "creating": "Oluşturma..",
+        "create": "Anket oluşturun"
+      },
+      "emptyAll": "Henüz anket yok.",
+      "emptyFiltered": "{{filter}} anketleri yok.",
+      "row": {
+        "closesAt": "xPH0XPH",
+        "openIndefinitely": "son zamanlarda açık",
+        "closedAt": "kapalı {{date}}"
+      },
+      "actions": {
+        "copyLinkTitle": "Kısa paylaşım linki",
+        "copied": "Copied",
+        "link": "Link",
+        "publishTitle": "Publish · üyeler oy kullanabilir",
+        "publish": "Publish",
+        "closeTitle": "Şimdi Kapat",
+        "close": "Kapat",
+        "reopenTitle": "Reopen",
+        "reopen": "Reopen",
+        "archiveTitle": "Archive · varsayılan listelerden gizleniyor",
+        "archive": "Archive",
+        "unarchiveTitle": "Unarchive (geçmiş)",
+        "restore": "Geri yükleme geri yükleme",
+        "deleteTitle": "Sil"
+      }
+    },
+    "richTextEditor": {
+      "placeholder": "Bu dönümün hikayesini anlatın..",
+      "title": "Başlık:",
+      "subtitle": "Subtitle",
+      "bold": "Bold",
+      "italic": "Italicic",
+      "underline": "Underline",
+      "bulletList": "Bülten listesi",
+      "orderedList": "Sayılan liste",
+      "quote": "Alıntı",
+      "alignLeft": "Align ayrıldı",
+      "alignCenter": "Align merkezi",
+      "alignRight": "Align haklı",
+      "insertImage": "Ekle image",
+      "undo": "Undo",
+      "redo": "Redo",
+      "close": "Kapat",
+      "uploadImage": "Upload image",
+      "or": "or",
+      "imageUrl": "Resim URL",
+      "imageUrlPlaceholder": "https://…/figure.png",
+      "insert": "Ekle"
+    },
+    "troopTiers": {
+      "backToCatalogue": "Back to katalog",
+      "eyebrow": "Admin · Kataloğu",
+      "title": "Asker seviyeleri",
+      "newTier": "Yeni tier",
+      "cancel": "İptal",
+      "create": "Oluştur",
+      "edit": "Düzenle",
+      "cancelEdit": "İptal",
+      "save": "Kaydet",
+      "orderLabel": "Sipariş #{{order}}",
+      "truegoldBadge": "Truegold",
+      "buildingLv": "Building lv {{lv}}",
+      "errors": {
+        "tierLabelRequired": "Tier etiketi girin (e.g. T8, TG3).",
+        "tierLabelRequiredShort": "Katman etiketi gerekli.",
+        "failedToCreate": "Tier oluşturmak için başarısız oldu",
+        "failedToDelete": "Başarısızlık",
+        "failedToSave": "Kurtarmak için başarısız oldu"
+      },
+      "confirmDelete": {
+        "heading": "Delete \"{{name}}\" kalıcı olarak?",
+        "body": "Bu eylem geri alınamaz ve bu katmanı referans eden kılavuzları kırabilir.",
+        "yes": "Evet, silin"
+      },
+      "fields": {
+        "tierLabel": "Katman etiketi",
+        "tierLabelPlaceholder": "e.g. T8, TG3",
+        "displayOrder": "Ekran düzeni",
+        "trainingBuildingLevel": "Eğitim bina seviyesi",
+        "optional": "optional",
+        "truegoldTier": "Gerçekaltın",
+        "icon": "Icon",
+        "iconUploadLabel": "Tier ikon",
+        "description": "Açıklama"
+      }
+    }
+  },
+  "alliance": {
+    "timeAgo": {
+      "now": "şimdi"
+    },
+    "stats": {
+      "rank": "Rank",
+      "members": "Üyeler",
+      "membersSub": "{{count}}'de",
+      "power": "Güç gücü",
+      "powerSub": "Kombine"
+    },
+    "cta": {
+      "open": "Aç",
+      "polls": {
+        "title": "Anketler",
+        "subtitle": "Olay zamanlaması, bacak tercihleri, ittifak kararları."
+      },
+      "members": {
+        "title": "Üyeler",
+        "subtitle": "Roster'a göz atın - nick, rütbe, güç, troop tier."
+      }
+    },
+    "catalogue": {
+      "eyebrow": "Referans",
+      "title": "Oyun kataloğu",
+      "description": "Kahramanlar, evcil hayvanlar, ustalar ve troop tiers - ittifaktaki herkes göz atabilir.",
+      "heroes": "Kahramanlar",
+      "pets": "Evcil Hayvanlar",
+      "masters": "Ustalar",
+      "troopTiers": "Troop Tiers"
+    },
+    "composition": {
+      "eyebrow": "Bileşim",
+      "title": "Toplanan kuvvet",
+      "truegoldMembers": "Gerçekaltı üyeleri",
+      "tg5Ready": "TG5+ hazır",
+      "avgPower": "Avg güç gücü",
+      "minTroopTier": "Min troop tier"
+    },
+    "announcements": {
+      "eyebrow": "Duyurular",
+      "title": "Son bildirimler",
+      "emptyHint": "Duyurular burada bir kez yönetici onları itiyor.",
+      "showing_one": "{{count}} fark",
+      "showing_other": "{{count}}'yi Göstermek",
+      "none": "Son zamanlarda fark yok"
+    }
+  },
+  "auth": {
+    "allyChip": {
+      "label": "Ally",
+      "tooltip": "Ally – başka bir ittifaktan misafir (yalnızca)"
+    },
+    "signIn": "Giriş yap",
+    "signOut": "Çıkış yap",
+    "checkingSession": "Oturumu kontrol edin.."
+  },
+  "brand": {
+    "name": "DAD War Room",
+    "alliance": "[DAD] BIGDADDYS",
+    "kingdom": "Kingdom 1652",
+    "motto": "Barışta Şık, Savaşta Kaos."
+  },
+  "catalogue": {
+    "eyebrow": "Katalog",
+    "loading": "Yükleniyor…",
+    "filter": {
+      "all": "Tümü",
+      "gen": "Gen {{gen}}"
+    },
+    "genBadge": "Gen {{gen}}",
+    "branch": {
+      "infantry": "Infantry",
+      "cavalry": "Cavalry",
+      "archer": "Archer"
+    },
+    "heroes": {
+      "title": "Göklerin Kahramanları",
+      "summary": "{{heroCount}} kahramanları {{genCount}} nesiller boyunca katalogladı",
+      "empty": {
+        "all": "Henüz katalogda kahraman yok.",
+        "gen": "Henüz Nesil {{gen}}'de kahraman yok.",
+        "subtitle": "Adminler katalog konsolundan kahramanlar ekleyebilir."
+      },
+      "openAria": "Open {{name}} (Generation {{gen}})",
+      "backToList": "Kahramanlara geri dön",
+      "notFoundTitle": "Kahraman bulunamadı.",
+      "notFoundSubtitle": "Katalog bu darbeyi eşleşen bir kayıt yok.",
+      "returnToList": "Kahramanlara dön",
+      "generation": "Generation {{gen}}",
+      "archivedBadge": "Archived",
+      "noDescription": "Henüz bu kahraman için kaydedilen bir açıklama yok.",
+      "releasedOn": "{{date}}"
+    },
+    "pets": {
+      "title": "Hayvanlar",
+      "summary_one": "{{count}} pet kataloglandı",
+      "summary_other": "{{count}} evcil kataloglanmış",
+      "empty": {
+        "nextGen": "Evcil hayvanlar Nesil {{gen}} ile geliyor",
+        "gen": "Henüz Nesil {{gen}}'de evcil hayvan yok.",
+        "subtitle": "Yöneticiler katalogda kayıt olabilirler."
+      },
+      "cardAria": "{{name}} (Generation {{gen}})"
+    },
+    "masters": {
+      "title": "Uzayın Üstleri",
+      "summary_one": "{{count}} master kilidini açtı",
+      "summary_other": "{{count}} ustaları kilitlendi",
+      "empty": {
+        "title": "Henüz katalogda usta yok.",
+        "subtitle": "Yöneticiler katalog konsolundan ustaları kayıt olabilirler."
+      },
+      "unlockLabel": "Master #{{order}}",
+      "noDescription": "Henüz bu usta için kaydedilen bir açıklama yok.",
+      "releasedOn": "{{date}}"
+    },
+    "tiers": {
+      "title": "Asker seviyeleri",
+      "summary_one": "{{count}} normal ve gerçek yüzey parçaları arasında",
+      "summary_other": "{{count}} düzenli ve gerçek yüzey parçaları arasında",
+      "empty": {
+        "title": "Henüz troop tiers kayıtlı değil.",
+        "subtitle": "Yöneticiler katalog konsolundan tiers kayıt olabilirler."
+      },
+      "regular": {
+        "title": "Düzenli tiers",
+        "subtitle": "Klasik merdiven troop eğitim yükseltmeleri aracılığıyla ortaya çıktı."
+      },
+      "truegold": {
+        "title": "Truegold tiers",
+        "subtitle": "Gerçekaltı-sadece ilerleme, bulunan dönüşümden sonra ortaya çıktı."
+      },
+      "standardEyebrow": "Standart",
+      "truegoldEyebrow": "Truegold",
+      "noDescription": "Hiçbir açıklama",
+      "trainingLevel": "Eğitim zemin seviyesi {{level}}"
+    }
+  },
+  "chat": {
+    "eyebrow": "Eserlerde",
+    "title": "Alliance chat",
+    "tagline": "[DAD] BÜYÜKDADYS için canlı bir konuşma kanalı – zaman bölgelerindeki olayları koordine etmek, stratejiyi paylaşmak, kazancı arttırmak.",
+    "pushHint": "Gemilere kadar, acil aramalar bildirimleri zorlama olarak dışarı çıkıyor. Onları Ayarlarda açın, böylece sonraki ayı penceresini veya KvK çağrısını kaçırmayın.",
+    "enablePush": "Enable push bildirimleri",
+    "features": {
+      "images": {
+        "title": "Görüntü ekleri",
+        "text": "Ayı görüntülerinin görüntülerini paylaşın, yapılar, dişli inşaları - doğrudan sohbetin içinde."
+      },
+      "crossAlliance": {
+        "title": "Cross-alliance koordinasyon",
+        "text": "Bütünler okuyabiliyor ve yazabiliyor. Onların mesajları ALLY çipi ile etiketlenir, bu yüzden bağlam anında."
+      },
+      "historyReactions": {
+        "title": "Tarih okuyun, tepkiler",
+        "text": "Çevrimdışı · emoji ile tepki verirken kaçırdığınız mesajları görün · yazar tarafından arama."
+      }
+    }
+  },
+  "common": {
+    "loading": "Yükleniyor…"
+  },
+  "events": {
+    "bear1": {
+      "title": "Ayı Hunt 1 – Rally Wave Strategy",
+      "short": "Bear Hunt 1"
+    },
+    "bear2": {
+      "title": "Bear Hunt 2",
+      "short": "Bear Hunt 2"
+    },
+    "kingsCastle": {
+      "title": "King's Castle Battle",
+      "short": "King's Castle"
+    },
+    "kvk": {
+      "title": "KvK · Güç Krallığı",
+      "short": "KvK"
+    },
+    "viking": {
+      "title": "Viking Vengeance",
+      "short": "Viking Vengeance"
+    },
+    "swordland": {
+      "title": "Swordland Showdown",
+      "short": "Swordland Showdown"
+    },
+    "triAlliance": {
+      "title": "Tri-Alliance Clash",
+      "short": "Tri-Alliance Clash"
+    },
+    "cesar": {
+      "title": "Cesar's Fury",
+      "short": "Cesar's Fury"
+    },
+    "page": {
+      "eyebrow": "Katalog",
+      "title": "Alanın Etkinlikleri",
+      "subtitle": "Ayı, KvK, Viking, Tri-Alliance & mevsimsel olaylar. Aktif rehberler buradan açılıyor."
+    },
+    "upcoming": {
+      "eyebrow": "Sırada",
+      "title": "Upcoming events",
+      "subtitle": "Sonraki 14 gün · yatay olarak.",
+      "empty": "Önümüzdeki 14 gün boyunca planlanan olaylar yok.",
+      "eventCount_one": "{{count}} olayı",
+      "eventCount_other": "{{count}} olayları",
+      "viewAll": "Tümünü gör",
+      "today": "Bugün",
+      "tomorrow": "Yarın"
+    },
+    "filter": {
+      "all": "Tümü",
+      "active": "Aktif",
+      "comingSoon": "Yakında yakında geliyor",
+      "archived": "Archived"
+    },
+    "empty": {
+      "filter": "Bu filtrede hiçbir olay yok."
+    },
+    "status": {
+      "active": "Aktif",
+      "archived": "Archived",
+      "comingSoon": "Yakında yakında geliyor"
+    },
+    "card": {
+      "openGuide": "Open guide",
+      "noLongerActive": "Artık aktif değil",
+      "stayTuned": "Stay melodi"
+    }
+  },
+  "footer": {
+    "madeWith": "Made with ♥ for",
+    "alliance": "[DAD] BIGDADDYS",
+    "kingdom": "Kingdom 1652 · Kingshot",
+    "creator": "Tarafından İnşa Edildi",
+    "creatorName": "Salles",
+    "creatorRole": "Alliance member"
+  },
+  "header": {
+    "kingdomTag": "Kingdom 1652"
+  },
+  "hub": {
+    "title": "DAD War Room",
+    "tagline": "[DAD] için strateji merkezi 1652",
+    "intro": "Her olay için görsel strateji kılavuzları. Aşağıdaki bir kılavuz seçin.",
+    "comingSoon": "Yakında yakında geliyor",
+    "userHero": {
+      "visitorEyebrow": "Ziyaretçi",
+      "visitorTitle": "Savaş Odası'nı açmak için oturum açın",
+      "visitorSubtitle": "Üyeler, memurlar ve müttefikler - buradaki her şey girişinize bağlıdır.",
+      "signIn": "Giriş yap",
+      "allyBadge": "Ally",
+      "editProfile": "Edit Profil",
+      "stat": {
+        "power": "Güç gücü",
+        "truegold": "Truegold",
+        "role": "Rol"
+      },
+      "role": {
+        "r5": "Leader",
+        "r4": "Co- Leader",
+        "r3": "R3 Officer",
+        "r2": "R2 Officer",
+        "member": "Üye",
+        "ally": "Ally"
+      }
+    },
+    "nextEvent": {
+      "eyebrow": "Sıradaki etkinlik",
+      "loadError": "Bir sonraki olayı yükleyemez",
+      "empty": {
+        "title": "Henüz planlanan hiçbir olay henüz planlanmadı",
+        "subtitle": "Bir yönetici bir sonraki ayı, KvK veya mevsimsel olay eklerken, burada canlı bir sayıyla görünecektir."
+      },
+      "addEvent": "Bir etkinlik ekleyin",
+      "guide": "Rehber",
+      "startedAgo": "Bu olay {{days}}d {{hours}}h önce başladı - bir sonrakisini ekledikten sonra yenilendi.",
+      "countdown": {
+        "days": "Gün",
+        "hours": "Saat",
+        "min": "Dk",
+        "sec": "Sn"
+      },
+      "utcTitle": "Tüm zamanlarda Evrensel Zamanları koordine edilir"
+    },
+    "pendingPolls": {
+      "allClearEyebrow": "Tüm açık",
+      "actionEyebrow": "Eylem gerekiyordu",
+      "emptyTitle": "Hiç beklemezler",
+      "emptySubtitle": "Tüm açık oylar zaten oy aldı.",
+      "waitingTitle_one": "{{count}} anketi oylamanızı bekliyor",
+      "waitingTitle_other": "{{count}} anketleri oylarınızı bekliyor",
+      "footerEmpty": "Savaş Odası · Anketler",
+      "footerCount": "En İyi {{shown}}",
+      "viewAll": "Tümünü gör"
+    },
+    "timeline": {
+      "title": "Timeline",
+      "empty": {
+        "title": "Planlanan yeni kilometre taşları yok.",
+        "subtitle": "Set, yönetici panelinden tarihler açıyor ve burada gösteriyorlar."
+      },
+      "toGo": "gitmek için",
+      "past": "past"
+    }
+  },
+  "login": {
+    "brandSuffix": "War Room",
+    "changeLanguage": "Dil Değiştiri",
+    "eyebrow": "İttifak Komutanlığı",
+    "fields": {
+      "username": "Kullanıcı adı",
+      "usernamePlaceholder": "your_handle",
+      "password": "Şifre",
+      "showPassword": "Show password",
+      "hidePassword": "Gizle parola"
+    },
+    "errors": {
+      "required": "Kullanıcı adı ve şifre gereklidir.",
+      "signInFailed": "Sign-in başarısız oldu.",
+      "wrongCredentials": "Yanlış kullanıcı veya şifre."
+    },
+    "submitting": "Signing in in",
+    "enter": "Enter",
+    "forgot": {
+      "prefix": "Unutun mu?",
+      "askR4R5": "Bir R4 veya R5 sorun."
+    },
+    "installPwa": "DAD War Room",
+    "builtBy": "tarafından i̇nşa edildi"
+  },
+  "members": {
+    "page": {
+      "eyebrow": "Roster",
+      "title": "Alliance üyeleri",
+      "loading": "Yükleniyor…",
+      "memberCount_one": "{{count}} üyesi",
+      "memberCount_other": "{{count}} üyeleri",
+      "combinedPower": "birleştirilmiş güç"
+    },
+    "search": {
+      "placeholder": "Nick ile ara…"
+    },
+    "sort": {
+      "label": "Sort",
+      "power": "Güç gücü",
+      "tier": "Katman",
+      "rank": "Rank",
+      "nick": "Nick"
+    },
+    "empty": {
+      "noMatch": "Üye yok \"{{query}}\".",
+      "noMembers": "Henüz roster'da üyeler yok."
+    },
+    "rank": {
+      "r1Title": "İşe Alım",
+      "r2Title": "Üye",
+      "r3Title": "Gazi",
+      "r4Title": "Memur",
+      "r5Title": "Leader",
+      "defaultTitle": "Üye"
+    },
+    "role": {
+      "leader": "Leader",
+      "joiner": "Joiner",
+      "standby": "Standby"
+    },
+    "status": {
+      "temporaryOut": "Geçici çıktı",
+      "temporarilyOut": "Temporly out",
+      "out": "Out"
+    },
+    "detail": {
+      "backToList": "Back to list",
+      "notFoundEyebrow": "Bulunamadı",
+      "notFoundWithNick": "Nick \"{{nick}}\" ile üye yok",
+      "notFoundNoNick": "Üye yok",
+      "notFoundDescription": "Üye ittifakı terk edebilir veya bağlantı yanlış.",
+      "dadTagLabel": "DAD etiketi · {{tag}}",
+      "noteLabel": "Not"
+    },
+    "stat": {
+      "power": "Güç gücü",
+      "truegold": "Truegold"
+    },
+    "participation": {
+      "eyebrow": "Katılıma katılım",
+      "title": "Olay tarihi",
+      "empty": "Henüz kayıtta hiçbir olay yok - bu üye herhangi bir olay için pinlenmedi.",
+      "latest": "Son"
+    },
+    "card": {
+      "openProfileAria": "{{nick}} için açık profil",
+      "tcLevel": "Lv.{{level}} · {{tier}}"
+    },
+    "powerChart": {
+      "eyebrow": "Zamanla güç",
+      "title": "Evrim Evrim Evrimi",
+      "notEnoughData": "Henüz yeterli veri değil - güç değişiklikleri kaydedildiği gibi burada görünecektir.",
+      "snapshotCount_one": "{{count}} snapshot",
+      "snapshotCount_other": "{{count}} anlık görüntüler"
+    }
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "events": "Etkinlikler",
+    "chat": "Chat",
+    "alliance": "İttifak",
+    "settings": "Ayarlar",
+    "primaryAriaLabel": "İlk önce birincil birincil birincil birincil",
+    "adminAriaLabel": "Yönetici",
+    "exitAdmin": "Çıkış",
+    "exitAdminShort": "Çıkış",
+    "adminEvents": "Etkinlikler",
+    "adminPolls": "Anketler",
+    "adminMembers": "Üyeler",
+    "adminChat": "Chat",
+    "adminAlliance": "İttifak",
+    "adminNotifications": "Notif.",
+    "adminAnalytics": "Stats"
+  },
+  "notifications": {
+    "bellAriaLabel": "Bildirimler",
+    "bellAriaLabelUnread": "Bildirimler, {{count}} geri döndü",
+    "panelAriaLabel": "Son Yazılar",
+    "title": "Bildirimler",
+    "empty": "Son bildirim yok.",
+    "timeNow": "şimdi",
+    "viewAll": "Tümünü gör"
+  },
+  "polls": {
+    "eyebrow": "Oy ver",
+    "title": "Alliance polls",
+    "loading": "Yükleniyor…",
+    "countLine_one": "{{count}} uçağında anket",
+    "countLine_other": "{{count}} uçuşlarında anketler",
+    "readOnly": "read-only",
+    "empty": {
+      "title": "Henüz anket yok",
+      "adminPrefix": "Bir yönetici ilk anketi oluşturabilir",
+      "adminLink": "admin"
+    },
+    "view": "View",
+    "status": {
+      "closed": "Kapalı",
+      "draft": "Tas taslağı",
+      "open": "Aç"
+    },
+    "type": {
+      "single": "Single",
+      "multi": "Çok",
+      "singleChoice": "Single-choice",
+      "multiChoice": "Multi-choice"
+    },
+    "countdown": {
+      "minutes_one": "{{count}}m",
+      "minutes_other": "{{count}}m",
+      "hours_one": "{{count}}h",
+      "hours_other": "{{count}}h",
+      "days_one": "{{count}}d",
+      "days_other": "{{count}}d"
+    },
+    "shareToken": {
+      "invalid": "Bu pay bağlantısı geçersizdir veya anket silindi.",
+      "browse": "Anketlere göz atın"
+    },
+    "detail": {
+      "back": "Geri dön",
+      "backToPolls": "Anketlere geri dön",
+      "notFound": "Anket bulunamadı.",
+      "countdown": {
+        "archived": "Archived",
+        "draftNotPublished": "Taslak ( yayınlanmadı)",
+        "closedAt": "Kapalı {{date}} {{time}}",
+        "openIndefinitely": "Open inde süresiz olarak"
+      },
+      "draftBanner": {
+        "prefix": "Bu anket içeridedir",
+        "draft": "draft",
+        "suffix": "- üyeler henüz oy kullanamazlar. Publish from",
+        "link": "admin"
+      },
+      "resultsHidden": {
+        "adminOnly": "Sonuçlar sadece bu ankette yöneticiler için görünür.",
+        "untilClose": "Oy sayıları anket yakınlarına kadar gizlidir."
+      },
+      "signedOutBanner": "oy vermek için. İmzalandığında sonuçları görebilirsiniz.",
+      "allyBanner": "hesaplar sonuçları görebilir, ancak oy kullanamaz (yalnızca erişim).",
+      "voteFailed": "Oy başarısız oldu",
+      "clearFailed": "Clear başarısız oldu",
+      "voterCount_one": "{{count}} oyr",
+      "voterCount_other": "{{count}} seçmenler",
+      "totalPicks": "{{count}} toplam picks",
+      "resultsHiddenShort": "Anket kapanana kadar gizlenmiş sonuçlar.",
+      "reVotePrefix": "Sen yeniden icat edebilirsin",
+      "clearMyVote": "Oylarımı Temizleyin",
+      "shareTitle": "Paylaş anket",
+      "share": "Share",
+      "copied": "Copied"
+    }
+  },
+  "settings": {
+    "eyebrow": "Tercihler",
+    "title": "Ayarlar",
+    "account": {
+      "heading": "Hesap Hesabı",
+      "signedInFallback": "Signed in in",
+      "openAdmin": "Open admin ayarları",
+      "openAdminTooltip": "Tüm uygulama kromunu yönetici modunda (crimson saç çizgisi + 8tab admin nav)",
+      "signInHint": "Üyeler, müttefikler ve yöneticiler."
+    },
+    "language": {
+      "eyebrow": "Dil Dili",
+      "available_one": "{{count}} dili mevcut",
+      "available_other": "{{count}} dilleri mevcut",
+      "close": "Kapat",
+      "change": "Change"
+    },
+    "pwa": {
+      "eyebrow": "Progressive Web App",
+      "title": "Savaş Odası",
+      "alreadyInstalled": "Zaten kuruldu - çevrimdışı açılır, ev ekranından başlayın.",
+      "addToHomescreen": "Hızlı erişim için eve ekran ekleyin ve bildirimleri zorlayın.",
+      "openInBrowser": "Chrome / Edge / Safari'de bir uygulama olarak kurmak için açın.",
+      "standaloneMode": "Standalone modunda",
+      "browserMode": "Tarayıcı modu",
+      "installed": "Yükleme",
+      "install": "Yükleme"
+    },
+    "push": {
+      "eyebrow": "Bildirimler",
+      "title": "Push bildirimleri",
+      "description": "Bir olay başladığında, yeni bir anket açılır veya yönetici bir duyuru gönderir - seçtiğiniz dilde.",
+      "notConfigured": "Bu dağıtım için yapılandırılmamalıdır. ittifak yöneticisine sorun.",
+      "blocked": "Tarayıcı ayarlarında bloke edilen bildirimler - abone olmak için yeniden kullanılabilir.",
+      "active": "Aktif",
+      "deactivate": "Deactivate",
+      "permissionGranted": "İzin verildi",
+      "notSubscribed": "Abone değil",
+      "activate": "Activate"
+    },
+    "profile": {
+      "eyebrow": "Profil",
+      "displayName": "Ekran adı",
+      "password": "Şifre",
+      "avatar": "Avatar",
+      "avatarValue": {
+        "custom": "Özel görüntü",
+        "hero": "Hero: {{slug}}",
+        "default": "Varsayılan (hash)"
+      },
+      "edit": "Düzenle",
+      "newDisplayName": "Yeni ekran adı",
+      "newPassword": "Yeni şifre",
+      "passwordMinimum": "Minimum 8 karakter.",
+      "confirm": "Onayla",
+      "passwordsDontMatch": "Şifreler eşleşmez.",
+      "preview": "Önizleme",
+      "resetTooltip": "Otomatik avatar'a geri dönün (kullanıcıya bakın)",
+      "reset": "Reset",
+      "chooseHero": "Kahraman seçin kahraman",
+      "customImage": "Özel görüntü",
+      "uploadImage": "Upload image",
+      "or": "or",
+      "imageUrl": "Resim URL",
+      "imageUrlHint": "Herhangi bir halka açık bağlantı (Discord, Imgur, wiki, vs). Seçilmiş kahramanı onaracak.",
+      "close": "Kapat",
+      "cancel": "İptal",
+      "save": "Kaydet",
+      "feedback": {
+        "displayNameUpdated": "Ekran adı güncellendi.",
+        "passwordChanged": "Şifre değişti.",
+        "avatarUpdated": "Avatar güncellendi.",
+        "avatarReset": "Otomatik avatara geri dönün.",
+        "failed": "Başarısız oldu.",
+        "failedShort": "Başarısız oldu."
+      }
+    }
+  },
+  "timeline": {
+    "detail": {
+      "back": "Geri dön",
+      "loadError": "Yüklemek için başarısız oldu",
+      "notFound": "Milestone bulunamadı.",
+      "reference": "Referans",
+      "source": "Kaynak Kaynağı",
+      "daysToGo": "{{days}}d gitmek için",
+      "today": "today",
+      "daysAgo": "{{days}}d önce",
+      "noBody": "Bu dönüm için henüz ayrıntılı bir açıklama yok. Bir yönetici zengin içerik (rap, görüntüler, listeler, bağlantılar) yönetici zaman editöründe doldurabilir."
+    },
+    "category": {
+      "truegold": "Truegold",
+      "heroes": "Kahramanlar",
+      "pets": "Evcil Hayvanlar",
+      "pvp": "PvP",
+      "feature": "Feature",
+      "master": "Master",
+      "fog": "Fog",
+      "warAcademy": "War Academy",
+      "other": "Diğer"
+    },
+    "relative": {
+      "today": "Bugün",
+      "tomorrow": "Yarın",
+      "daysAgo": "{{days}}d önce",
+      "daysCount": "{{count}} günleri"
+    }
+  },
+  "ui": {
+    "language": "Dil Dili",
+    "back": "Geri dön",
+    "backToHub": "Eve dön",
+    "copy": "Kopya kopya",
+    "copied": "Copied!",
+    "toTop": "Back to top",
+    "skipToContent": "İçeriğe atla",
+    "imageUpload": {
+      "label": "Image upload",
+      "previewAlt": "Önizleme",
+      "currentImage": "Şimdiki görüntü",
+      "swap": "Swap",
+      "remove": "Kaldır",
+      "uploading": "Yükleniyor..",
+      "dropOrClick": "Bir görüntüyü sürükleyin veya seçmek için tıklayın",
+      "limitsHint": "{{allowedHuman}} · {{maxMb}} MB",
+      "errorTooLarge": "Dosya çok büyük. Maksimum {{maxMb}} MB.",
+      "errorUploadFailed": "Yükleme başarısız oldu."
+    }
+  }
+}

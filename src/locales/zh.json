@@ -1,0 +1,1488 @@
+{
+  "admin": {
+    "accounts": {
+      "backToMembers": "回复成员",
+      "eyebrow": "管理",
+      "title": "账户",
+      "closeForm": "关闭窗体",
+      "newAccount": "新账户",
+      "filters": {
+        "all": "全部",
+        "members": "DAD 成员",
+        "allies": "盟友"
+      },
+      "emptyState": "此过滤器中没有账户 .",
+      "youLabel": "you",
+      "lastLogin": "上次登录 {{when}}",
+      "rosterTooltip": "名册:{{nick}}({{rank}})",
+      "rosterFallback": "roster",
+      "lvlShort": "lvl {{level}}",
+      "unlinkTitle": "与名册脱钩",
+      "unlink": "取消链接",
+      "linkTitle": "与名册成员的联系",
+      "link": "链接",
+      "resetTitle": "重置密码",
+      "reset": "重设",
+      "deactivateTitle": "删除",
+      "reactivateTitle": "重新启动",
+      "off": "关",
+      "on": "打开",
+      "passwordTooShort": "密码必须是至少6个字符 .",
+      "resetPasswordPrompt": "为{{name}}(QQPH1XPH)设置新的临时密码.\n成员在下次登录时将被迫更改.",
+      "cantDeactivateSelf": "你不能关闭自己——要求另一个R5来完成.",
+      "confirmDeactivate": "关掉{{name}}?",
+      "confirmReactivate": "重新启动{{name}}?",
+      "errors": {
+        "failedToCreate": "创建账户失败",
+        "failedToReset": "重设密码失败",
+        "failedToLink": "链接失败",
+        "failedToToggle": "更新活动状态失败"
+      },
+      "feedback": {
+        "created": "创建账户\"{{name}}\"({{role}}).",
+        "passwordReset": "{{name}}的密码重置.",
+        "linked": "{{name}}与{{target}}连接.",
+        "unlinked": "{{name}} 脱钩.",
+        "reactivated": "{{name}}重启.",
+        "deactivated": "{{name}}已失效."
+      },
+      "form": {
+        "heading": "新账户",
+        "usernameLabel": "用户名*",
+        "usernamePlaceholder": "alice",
+        "usernameHint": "用于登录",
+        "displayNameLabel": "显示名称",
+        "displayNameHint": "默认用户名",
+        "passwordLabel": "密码*",
+        "passwordPlaceholder": "至少6个字符",
+        "roleLabel": "作用*",
+        "languageLabel": "语言",
+        "cancel": "取消",
+        "creating": "正在创建..",
+        "create": "创建账户"
+      },
+      "roles": {
+        "ally": {
+          "label": "爱丽",
+          "description": "外交嘉宾——只读,文章聊天."
+        },
+        "member": {
+          "label": "成员(R1)",
+          "description": "正式的DAD成员."
+        },
+        "r2": {
+          "label": "R2",
+          "description": "警官(尚未增加管理人员)."
+        },
+        "r3": {
+          "label": "R3",
+          "description": "警官(尚未增加管理人员)."
+        },
+        "r4": {
+          "label": "R4 — Admin",
+          "description": "创建民调/活动,管理盟友."
+        },
+        "r5": {
+          "label": "R5 — Admin",
+          "description": "管理其他账户(包括其他R5)."
+        }
+      },
+      "relative": {
+        "never": "从不",
+        "justNow": "刚才",
+        "minutesAgo": "之前的{{count}}m (英语)",
+        "hoursAgo": "刚才的{{count}}",
+        "daysAgo": "{{count}}d 早点开始",
+        "monthsAgo": "之前的{{count}}mo(英语:",
+        "yearsAgo": "刚才的{{count}}y"
+      },
+      "linkPicker": {
+        "heading": "与名册的链接",
+        "close": "关闭",
+        "searchPlaceholder": "搜索名册..",
+        "noMatch": "没有成员匹配\"{{query}}\".",
+        "allLinked": "所有名册成员都有联系."
+      }
+    },
+    "alliance": {
+      "backToAdmin": "返回管理",
+      "eyebrow": "管理",
+      "title": "联盟",
+      "cards": {
+        "timeline": {
+          "title": "王国时间线",
+          "subtitle": "编辑解锁日期为 TG 级,英雄/人物代,主,雾."
+        },
+        "catalogue": {
+          "title": "目录",
+          "subtitle": "英雄,宠物,主人公和部队级别——每页背后的游戏数据."
+        },
+        "announcements": {
+          "title": "通知",
+          "subtitle": "编写和安排向各成员发出的通知."
+        }
+      },
+      "metadata": {
+        "eyebrow": "公共资料",
+        "title": "编辑元数据",
+        "intro": "排名,格言,标记线,品牌颜色,和捕捉日期出现在<allianceLink>/Alliance</allianceLink>上. 这些值存在于<c>alliance settings</c>表中.",
+        "rankLabel": "军衔",
+        "rankPlaceholder": "#2",
+        "taglineLabel": "标记",
+        "taglinePlaceholder": "王国 1652年",
+        "mottoLabel": "莫图",
+        "mottoPlaceholder": "和平中的优雅,战役中的混乱.",
+        "brandPrimaryLabel": "初级品牌(hex)",
+        "brandAccentLabel": "品牌重音( hex)",
+        "capturedAtLabel": "被俘虏",
+        "loadError": "装入错误: {{message}}",
+        "saveError": "保存错误: {{message}}",
+        "saved": "已保存",
+        "updatedAt": "更新的 {{date}}",
+        "loading": "加载中…",
+        "saving": "正在保存..",
+        "save": "保存"
+      }
+    },
+    "analytics": {
+      "backToAdmin": "返回管理",
+      "eyebrow": "管理",
+      "title": "分析",
+      "kpi": {
+        "onlineNow": {
+          "label": "当前在线",
+          "sub": "在最后5分钟注册"
+        },
+        "activeSessions": {
+          "label": "活动会议",
+          "sub": "最近24小时注册"
+        },
+        "totalAccounts": {
+          "label": "账户总数",
+          "sub": "{{count}} 活动"
+        },
+        "neverLoggedIn": {
+          "label": "从未登录",
+          "sub": "需要登机"
+        },
+        "failedSignins": {
+          "label": "登录失败",
+          "sub": "最后24小时"
+        }
+      },
+      "activity": {
+        "heading": "活动窗口",
+        "intro": "账户在窗口中被触动( 来源于 last  login  at),而非原始登录 .",
+        "last24h": "最后24小时",
+        "last7d": "最后一个 7d",
+        "last30d": "倒数 30d",
+        "pctOfAccounts": "占账户的{{pct}}%"
+      },
+      "pwa": {
+        "heading": "PWA 安装拆分",
+        "installed": "已安装",
+        "browserOnly": "仅浏览器",
+        "summary": "{{installed}}的{{total}}账户({{pct}}%)在他们的家用屏幕上增加了战争室."
+      },
+      "push": {
+        "heading": "推送(最后30d)",
+        "opened": "打开",
+        "ignored": "已忽略",
+        "note": "模拟现在 电线一次推船。 跟踪通知面板上的通知."
+      },
+      "never": {
+        "heading": "从未登录"
+      },
+      "langs": {
+        "heading": "语文分布"
+      },
+      "footnote": "现在在线和活动会话从登录事件读取 。 推送被嘲笑,直到推船."
+    },
+    "catalogue": {
+      "backToAlliance": "返回联盟",
+      "eyebrow": "管理 · 目录",
+      "title": "游戏目录",
+      "intro": "管理电源时间表、变形器、部队指南和统计卡。 这里的更改向每个从<c>heroes</c>,<c>pets</c>,<c>masters</c>和<c>troop tiers</c>读取的公开页面传播.",
+      "cards": {
+        "heroes": {
+          "title": "英雄",
+          "subtitle": "名册、肖像、组建和首选部队分支."
+        },
+        "pets": {
+          "title": "宠物",
+          "subtitle": "按代相传的同伴——肖像,描述,发布."
+        },
+        "masters": {
+          "title": "大师",
+          "subtitle": "战略顾问按解锁序列订购."
+        },
+        "troopTiers": {
+          "title": "兵种等级",
+          "subtitle": "T1..T10和Truegold级——标签,训练,图标."
+        }
+      }
+    },
+    "chat": {
+      "backToAdmin": "返回管理",
+      "eyebrow": "管理",
+      "title": "聊天",
+      "unsaved": "unsaved",
+      "save": "保存",
+      "savedAt": "* {{time}}",
+      "rateLimit": {
+        "title": "费率限制(每个用户)",
+        "subtitle": "软封顶一个账户在一个小时内可以发送多少信件.",
+        "messagesPerHour": "信件/ 小时",
+        "minSeconds": "信件间微秒"
+      },
+      "attachments": {
+        "title": "附录",
+        "subtitle": "哪些成员可以上传. 音频+视频在v1中禁用.",
+        "allowImages": "允许图像上传",
+        "maxFileSize": "最大文件大小"
+      },
+      "purge": {
+        "title": "清除信件",
+        "subtitle": "一次性擦拭所有聊天信息和上传图像. 无法撤销 .",
+        "clearAll": "清除所有信件",
+        "confirmHeading": "确认永久删除",
+        "confirmBody": "每一个聊天消息和上传的图像都会消失. 过去的民意调查、事件和成员都不受影响.",
+        "cancel": "取消",
+        "confirmYes": "是的,擦干净"
+      },
+      "defaults": {
+        "title": "默认",
+        "subtitle": "将每个值重置到推荐的起点 .",
+        "restore": "恢复默认值"
+      },
+      "footnote": "注意:晚点再聊 这些控件今天在当地一直存在,所以面板已经准备好了——一旦消息表启用,这个页面会交换到服务器支持的配置行,而不触及UI."
+    },
+    "eventParticipants": {
+      "backToOccurrences": "回到发生时",
+      "eyebrow": "活动参与者",
+      "eventFallback": "活动",
+      "durationMin": "X",
+      "addHeading": "添加参与者",
+      "memberLabel": "成员",
+      "allAssigned": "已经指派的所有成员",
+      "roleLabel": "角色",
+      "notesLabel": "注解(可选)",
+      "notesPlaceholder": "分队任务,备份计划,特别指示..",
+      "notesInputPlaceholder": "注解(可选)",
+      "adding": "正在添加..",
+      "addButton": "添加参与者",
+      "assignedHeading": "- {{count}}",
+      "emptyState": "尚未指派参加者——增加上面的第一个参加者.",
+      "statusTempOut": "出( 时)",
+      "statusLeft": "左边",
+      "cancel": "取消",
+      "save": "保存",
+      "confirm": "确认",
+      "cancelDelete": "取消删除",
+      "editAria": "编辑 {{nick}}",
+      "removeAria": "删除 {{nick}}",
+      "roles": {
+        "leader": "Leader",
+        "joiner": "Joiner",
+        "standby": "Standby",
+        "unset": "未设置",
+        "unsetOption": "——未设置"
+      },
+      "errors": {
+        "notFound": "未发现事件 .",
+        "failedToLoad": "装入发生失败 .",
+        "failedToAdd": "添加参与者失败 .",
+        "failedToUpdate": "更新参与者失败 .",
+        "failedToRemove": "删除参与者失败 ."
+      },
+      "feedback": {
+        "added": "参加者也加入.",
+        "updated": "参与者最新情况.",
+        "removed": "参加者被取消."
+      }
+    },
+    "events": {
+      "backToAdmin": "返回管理",
+      "eyebrow": "管理",
+      "title": "活动目录",
+      "occurrencesLink": "发生情况",
+      "newEvent": "新活动",
+      "close": "关闭",
+      "confirmArchive": "存档此事件 ? 它将被隐藏在万事全网.",
+      "errorFailed": "失败",
+      "feedback": {
+        "archived": "存档.",
+        "restored": "恢复为即将来临.",
+        "created": "事件创建."
+      },
+      "form": {
+        "heading": "新的季节性活动",
+        "nameLabel": "名称*",
+        "namePlaceholder": "Lunar Festival",
+        "shortNameLabel": "简称",
+        "shortNamePlaceholder": "Lunar",
+        "descriptionLabel": "描述",
+        "iconUrlLabel": "图标 URL",
+        "iconUrlPlaceholder": "/images/events/lunar.png",
+        "seasonal": "一次性/季节性",
+        "create": "创建"
+      },
+      "seasonalBadge": "季节性",
+      "actions": {
+        "restore": "恢复",
+        "archive": "存档"
+      }
+    },
+    "heroes": {
+      "backToCatalogue": "返回目录",
+      "eyebrow": "管理 · 目录",
+      "title": "英雄",
+      "newHero": "新来的英雄",
+      "cancel": "取消",
+      "create": "创建",
+      "edit": "编辑",
+      "cancelEdit": "取消",
+      "save": "保存",
+      "inactive": "inactive",
+      "genLabel": "Gen {{gen}}",
+      "branch": {
+        "none": "—",
+        "infantry": "步兵",
+        "cavalry": "骑兵",
+        "archer": "阿彻"
+      },
+      "errors": {
+        "nameRequired": "输入英雄的名字 .",
+        "invalidSlug": "无效的弹片 。 使用字母和数字.",
+        "failedToCreate": "创建英雄失败",
+        "failedToDelete": "删除失败",
+        "nameRequiredShort": "姓名须知.",
+        "failedToSave": "保存失败"
+      },
+      "confirmDelete": {
+        "heading": "永久删除\"{{name}}\"?",
+        "body": "弹壳{{slug}}和肖像将被移除. 这一行动不能取消.",
+        "yes": "是,删除"
+      },
+      "fields": {
+        "name": "名字",
+        "slugSuggested": "渣(建议:",
+        "slugPlaceholder": "ex: shen-yu",
+        "generation": "生成(1-12)",
+        "role": "角色",
+        "rolePlaceholder": "ưμ㼯A",
+        "preferredBranch": "首选分支",
+        "portrait": "纵向",
+        "portraitUploadLabel": "英雄肖像画",
+        "description": "描述",
+        "releasedAt": "释放时间",
+        "displayOrder": "显示顺序",
+        "active": "活跃"
+      }
+    },
+    "iconPicker": {
+      "groups": {
+        "truegoldTiers": "Truegold tiers",
+        "items": "项目",
+        "buildings": "大楼",
+        "events": "活动",
+        "heroes": "英雄"
+      },
+      "currentIcon": "当前图标",
+      "noOverride": "无覆盖",
+      "autoLabel": "自动 {{path}}",
+      "clear": "清除",
+      "customUrlLabel": "或粘贴自定义 URL( 网络上的任何图像)",
+      "customUrlPlaceholder": "https://wiki.kingshot.gg/.../some-icon.png",
+      "apply": "应用",
+      "uploadOwn": "或者上传你自己的图像"
+    },
+    "masters": {
+      "backToCatalogue": "返回目录",
+      "eyebrow": "管理 · 目录",
+      "title": "大师",
+      "newMaster": "新师父",
+      "cancel": "取消",
+      "create": "创建",
+      "edit": "编辑",
+      "cancelEdit": "取消",
+      "save": "保存",
+      "inactive": "inactive",
+      "unlockOrderLabel": "解锁QQPH0XPH",
+      "errors": {
+        "nameRequired": "输入主人的名字 .",
+        "invalidSlug": "无效的弹片 。 使用字母和数字.",
+        "failedToCreate": "创建主机失败",
+        "failedToDelete": "删除失败",
+        "nameRequiredShort": "姓名须知.",
+        "failedToSave": "保存失败"
+      },
+      "confirmDelete": {
+        "heading": "永久删除\"{{name}}\"?",
+        "body": "弹片{{slug}}将被移除. 这一行动不能取消.",
+        "yes": "是,删除"
+      },
+      "fields": {
+        "name": "名字",
+        "slugSuggested": "渣(建议:",
+        "unlockOrder": "解锁顺序",
+        "portrait": "纵向",
+        "portraitUploadLabel": "大师肖像",
+        "description": "描述",
+        "releasedAt": "释放时间",
+        "active": "活跃"
+      }
+    },
+    "members": {
+      "backToAdmin": "返回管理",
+      "eyebrow": "管理",
+      "title": "成员名册",
+      "statsMembers": "{{count}}成员",
+      "statsTempOut": "{{count}} 临时",
+      "combinedPower": "联合力量",
+      "accountsLink": "账户",
+      "searchPlaceholder": "按昵称搜索…",
+      "filters": {
+        "all": "全部",
+        "out": "出来"
+      },
+      "feedbackSaved": "拯救了{{nick}}.",
+      "emptyState": "没有成员匹配此过滤器 .",
+      "tempOutShort": "临时退出",
+      "leftShort": "left",
+      "lvlLabel": "lvl {{level}}",
+      "editButton": "编辑",
+      "subgroups": {
+        "supreme": "Supreme (R4)",
+        "enforcerer": "Enforcerer (R3)",
+        "alpha": "Alpha (R2)",
+        "lieutenant": "Lieutenant (R1)"
+      },
+      "statuses": {
+        "active": "活跃",
+        "temporaryOut": "时间,出去",
+        "left": "左边"
+      },
+      "errors": {
+        "tgOrTc": "使用 TG 级别 OR 镇中心,而不是两者兼有.",
+        "failedToSave": "保存失败"
+      },
+      "edit": {
+        "heading": "编辑 {{nick}}",
+        "close": "关闭",
+        "nickLabel": "Nick",
+        "rankLabel": "军衔",
+        "subgroupLabel": "分组",
+        "noneOption": "没有",
+        "powerLabel": "电力(百万)",
+        "powerHint": "例如158.7",
+        "tgLabel": "TG 级别",
+        "tgPlaceholder": "1-8",
+        "tcLabel": "镇中心",
+        "tcPlaceholder": "25-30",
+        "statusLabel": "状态",
+        "tempOutNote": "为什么回来( W) ?",
+        "leftNote": "离开的原因",
+        "langHintLabel": "兰暗示",
+        "langHintHint": "- 例如:zh-CN、pt",
+        "optional": "optional",
+        "cancel": "取消",
+        "saving": "正在保存..",
+        "save": "保存"
+      }
+    },
+    "milestones": {
+      "backToAlliance": "返回联盟",
+      "eyebrow": "管理",
+      "title": "王国里程碑",
+      "newMilestone": "新的里程碑",
+      "cancel": "取消",
+      "create": "创建",
+      "edit": "编辑",
+      "cancelEdit": "取消",
+      "save": "保存",
+      "intro": "设定每个里程碑的预期解锁日期 。 然后仪表盘显示 接下来的倒计时.",
+      "view": "视图",
+      "openPublic": "打开公共页面",
+      "deleteTitle": "删除里程碑",
+      "achievedBadge": "achieved",
+      "preview": "预览",
+      "afterCreateHint": "创建后,在下面的列表中打开项目以填充丰富的内容(Tiptap).",
+      "bodyPlaceholder": "写这个里程碑:它是什么,它如何影响联盟,战略变化,有用的链接.....",
+      "errors": {
+        "nameRequired": "输入新里程碑的名称.",
+        "invalidSlug": "弹片生成无效名称 。 使用字母和数字.",
+        "failedToCreate": "创建里程碑失败",
+        "failedToDelete": "删除失败",
+        "nameRequiredShort": "需要里程碑名称.",
+        "failedToSave": "保存失败"
+      },
+      "confirmDelete": {
+        "heading": "永久删除\"{{name}}\"?",
+        "body": "公共页面/timeline/{{slug}}和所有内容将被删除. 这一行动不能取消.",
+        "yes": "是,删除"
+      },
+      "categories": {
+        "truegold": "Truegold",
+        "heroes": "英雄",
+        "pets": "宠物",
+        "pvp": "PvP",
+        "feature": "Feature",
+        "master": "师父",
+        "fog": "Fog",
+        "warAcademy": "War Academy",
+        "other": "其他人员"
+      },
+      "fields": {
+        "name": "名字",
+        "namePlaceholder": "例如Truegold 6(关键升级)",
+        "category": "类别",
+        "unlockDate": "解锁日期( UTC, 可选)",
+        "slugAuto": "粘贴( 自动 :",
+        "slugPlaceholder": "选项 - 只使用字母/ 数字/ 连字符",
+        "notes": "简短说明(可选)",
+        "notesPublic": "短条(在公开列表中显示)",
+        "notesPublicPlaceholder": "例如,解锁关键部队和T8恐怖部队.",
+        "unlockDateUtc": "解锁日期 (UTC)",
+        "achieved": "已达到",
+        "icon": "里程碑图标",
+        "milestoneName": "里程碑名称",
+        "contentFor": "内容/时间线/{{slug}}"
+      }
+    },
+    "notifications": {
+      "backToAdmin": "返回管理",
+      "eyebrow": "管理",
+      "title": "通知",
+      "compose": "撰写",
+      "titleLabel": "标题",
+      "titlePlaceholder": "猎熊阶段3 15分钟后开始",
+      "bodyLabel": "体质",
+      "bodyPlaceholder": "15分钟后开始焚烧集会——在你的城堡里准备游行.",
+      "emojiLabel": "爱莫吉",
+      "imageLabel": "大图像( 可选)",
+      "uploadImage": "上传图像",
+      "orPasteUrl": "...或粘贴一个 URL",
+      "imageUrlPlaceholder": "https://…/banner.png",
+      "audienceLabel": "受众",
+      "tapTargetLabel": "目标",
+      "tapUrlPlaceholder": "https://war-room.local/p/abc",
+      "scheduleLabel": "计划",
+      "recurrencePlaceholder": "例如,协调世界时每星期二20:00",
+      "discard": "丢弃",
+      "sending": "正在发送..",
+      "send": "发送",
+      "scheduling": "日程安排..",
+      "scheduleAction": "计划",
+      "preview": "预览",
+      "previewNow": "现在",
+      "previewDefaultTitle": "通知标题",
+      "previewDefaultBody": "{\\fn黑体\\fs22\\bord1\\shad0\\3aHBE\\4aH00\\fscx67\\fscy66\\2cHFFFFFF\\3cH808080}身体文本在这里显示 {\\fn黑体\\fs22\\bord1\\shad0\\3aHBE\\4aH00\\fscx67\\fscy66\\2cHFFFFFF\\3cH808080}因为成员们会在锁屏幕上看到.",
+      "targetArrow": "目标",
+      "recentPushes": "最近的推动",
+      "loading": "加载中…",
+      "noneSent": "尚未发出通知.",
+      "deliveredCount": "{{count}}交付",
+      "openedCount": "{{count}} 打开了 {{pct}}%",
+      "pushedTo": "推进到 {{audience}} → {{time}}",
+      "audience": {
+        "all": "所有账户",
+        "voting": "表决成员(R1-R5)",
+        "admins": "仅管(R4/R5)",
+        "allies": "只有盟军",
+        "custom": "选成员"
+      },
+      "schedule": {
+        "now": "立即发送",
+        "later": "计划",
+        "recurring": "经常性"
+      },
+      "tap": {
+        "hub": "战争室/ 家",
+        "events": "事件标签",
+        "polls": "选票列表",
+        "alliance": "联盟页面",
+        "url": "自定义 URL"
+      },
+      "errors": {
+        "mustBeSignedIn": "您必须注册才能发送通知 .",
+        "failedToSend": "发送通知失败 ."
+      }
+    },
+    "occurrences": {
+      "backToEvents": "返回到活动",
+      "eyebrow": "管理",
+      "title": "活动日历",
+      "intro": "安排下一个熊,KvK阶段和季节性事件.",
+      "form": {
+        "heading": "新发生",
+        "eventLabel": "活动",
+        "startsAtLabel": "开始时间( 本地时间)",
+        "durationLabel": "会期(分钟)",
+        "phaseLabel": "相位标签( 可选)",
+        "phasePlaceholder": "准备 / 城堡战斗 / 草原",
+        "notesLabel": "注解(可选)",
+        "repeatLabel": "在固定间隔重复",
+        "intervalLabel": "间隔(小时)",
+        "bearHint": "猎熊一般是48岁",
+        "countLabel": "发生次数",
+        "saving": "正在保存...",
+        "submit": "添加发生",
+        "submitMany": "添加 {{count}} 事件"
+      },
+      "feedback": {
+        "added": "事件增加.",
+        "addedMany": "将{{count}}事件增加为每{{hours}}h."
+      },
+      "errors": {
+        "failedToLoad": "装入失败",
+        "failedToSave": "保存失败",
+        "failedToDelete": "删除失败"
+      },
+      "confirmDelete": "删除此事件 ?",
+      "upcomingHeading": "未来30天",
+      "loading": "正在装入...",
+      "emptyState": "接下来30天没有安排.",
+      "durationMin": "X",
+      "cancelled": "cancelled",
+      "manageSquad": "管理小队",
+      "squads": "团队",
+      "delete": "删除"
+    },
+    "pets": {
+      "backToCatalogue": "返回目录",
+      "eyebrow": "管理 · 目录",
+      "title": "宠物",
+      "newPet": "新宠物",
+      "cancel": "取消",
+      "create": "创建",
+      "edit": "编辑",
+      "cancelEdit": "取消",
+      "save": "保存",
+      "inactive": "inactive",
+      "genLabel": "Gen {{gen}}",
+      "errors": {
+        "nameRequired": "输入宠物的名字.",
+        "invalidSlug": "无效的弹片 。 使用字母和数字.",
+        "failedToCreate": "创建宠物失败",
+        "failedToDelete": "删除失败",
+        "nameRequiredShort": "姓名须知.",
+        "failedToSave": "保存失败"
+      },
+      "confirmDelete": {
+        "heading": "永久删除\"{{name}}\"?",
+        "body": "弹片{{slug}}将被移除. 这一行动不能取消.",
+        "yes": "是,删除"
+      },
+      "fields": {
+        "name": "名字",
+        "slugSuggested": "渣(建议:",
+        "generation": "生成",
+        "portrait": "纵向",
+        "portraitUploadLabel": "宠物肖像",
+        "description": "描述",
+        "releasedAt": "释放时间",
+        "displayOrder": "显示顺序",
+        "active": "活跃"
+      }
+    },
+    "polls": {
+      "backToAdmin": "返回管理",
+      "eyebrow": "管理",
+      "title": "投票",
+      "closeForm": "关闭窗体",
+      "newPoll": "新民意调查",
+      "filters": {
+        "all": "all",
+        "open": "open",
+        "closed": "closed",
+        "draft": "draft",
+        "archived": "archived"
+      },
+      "statusTints": {
+        "draft": "草案",
+        "open": "打开",
+        "closed": "已关闭",
+        "archived": "已存档"
+      },
+      "visibility": {
+        "during": {
+          "label": "现场直播(投票期间)",
+          "hint": "成员在更新时看到数"
+        },
+        "afterClose": {
+          "label": "关闭后",
+          "hint": "在民意调查结束前隐藏数"
+        },
+        "adminOnly": {
+          "label": "仅管理",
+          "hint": "数总是隐藏在成员身上"
+        }
+      },
+      "visibilityShort": {
+        "adminOnly": "admin-only",
+        "afterClose": "关闭后"
+      },
+      "errors": {
+        "minOptions": "添加至少 {{min}} 选项.",
+        "duplicates": "不允许复制选项 .",
+        "failedToCreate": "创建民意调查失败",
+        "actionFailed": "动作失败",
+        "clipboardBlocked": "被浏览器屏蔽的剪贴板 ."
+      },
+      "feedback": {
+        "created": "创建了\"{{title}}\"({{status}}).",
+        "published": "出版了\"{{title}}\".",
+        "closed": "关闭\"{{title}}\".",
+        "reopened": "重开\"{{title}}\".",
+        "archived": "存档\"{{title}}\".",
+        "restored": "恢复\"{{title}}\"为关闭状态.",
+        "deleted": "删去\"{{title}}\"."
+      },
+      "confirmDelete": "永久删除\"{{title}}\"? 所有选票都将丢失.",
+      "form": {
+        "heading": "新民意调查",
+        "titleLabel": "标题*",
+        "titlePlaceholder": "我们什么时候去维京复仇?",
+        "descriptionLabel": "描述",
+        "descriptionHint": "- Markdown(** bold**, *italic *, `code', [text](url), - 列表)",
+        "descriptionPlaceholder": "**18:00 UTC**对欧盟+亚投行重叠来说是巨大的. * 请投票,即使你做不到*",
+        "typeLabel": "类型*",
+        "typeSingle": "单身",
+        "typeSingleHint": "一个选择",
+        "typeMulti": "多个",
+        "typeMultiHint": "许多选择",
+        "initialStatusLabel": "初次状况*",
+        "statusOpenOption": "打开... 立即发布",
+        "statusDraftOption": "草案 —— 只有管理人员看到它",
+        "opensAtLabel": "打开时间",
+        "opensAtHint": "· 可选 世界协调时",
+        "closesAtLabel": "关闭于",
+        "closesAtHint": "· 可选 世界协调时",
+        "resultsVisibilityLabel": "成果可见度*",
+        "optionsLabel": "选项*",
+        "optionPlaceholder": "备选案文{{n}}",
+        "removeOption": "删除选项",
+        "addOption": "添加选项",
+        "cancel": "取消",
+        "creating": "正在创建..",
+        "create": "创建民意调查"
+      },
+      "emptyAll": "还没有民调.",
+      "emptyFiltered": "没有{{filter}}民调.",
+      "row": {
+        "closesAt": "关闭 {{date}}",
+        "openIndefinitely": "无限期打开",
+        "closedAt": "关闭 {{date}}"
+      },
+      "actions": {
+        "copyLinkTitle": "复制短共享链接",
+        "copied": "复制",
+        "link": "链接",
+        "publishTitle": "· 成员可以投票",
+        "publish": "发布",
+        "closeTitle": "现在关上",
+        "close": "关闭",
+        "reopenTitle": "重新打开",
+        "reopen": "重新打开",
+        "archiveTitle": "归档 ^ 隐藏默认列表",
+        "archive": "存档",
+        "unarchiveTitle": "无存档( 回封)",
+        "restore": "恢复",
+        "deleteTitle": "删除"
+      }
+    },
+    "richTextEditor": {
+      "placeholder": "讲述这个里程碑的故事..",
+      "title": "标题",
+      "subtitle": "字幕",
+      "bold": "粗体",
+      "italic": "斜体",
+      "underline": "下划线",
+      "bulletList": "项目符号列表",
+      "orderedList": "编号列表",
+      "quote": "引用",
+      "alignLeft": "左对齐",
+      "alignCenter": "对齐中心",
+      "alignRight": "右对齐",
+      "insertImage": "插入图像",
+      "undo": "撤销",
+      "redo": "重装",
+      "close": "关闭",
+      "uploadImage": "上传图像",
+      "or": "or",
+      "imageUrl": "图像 URL",
+      "imageUrlPlaceholder": "https://…/figure.png",
+      "insert": "插入"
+    },
+    "troopTiers": {
+      "backToCatalogue": "返回目录",
+      "eyebrow": "管理 · 目录",
+      "title": "兵种等级",
+      "newTier": "新等级",
+      "cancel": "取消",
+      "create": "创建",
+      "edit": "编辑",
+      "cancelEdit": "取消",
+      "save": "保存",
+      "orderLabel": "命令 QQPH0XPH",
+      "truegoldBadge": "Truegold",
+      "buildingLv": "Building lv {{lv}}",
+      "errors": {
+        "tierLabelRequired": "输入等级标签( 如 T8, TG3) .",
+        "tierLabelRequiredShort": "需要分级标签 .",
+        "failedToCreate": "创建级失败",
+        "failedToDelete": "删除失败",
+        "failedToSave": "保存失败"
+      },
+      "confirmDelete": {
+        "heading": "永久删除\"{{name}}\"?",
+        "body": "此动作无法撤销, 并可能中断该级的引用 .",
+        "yes": "是,删除"
+      },
+      "fields": {
+        "tierLabel": "分级标签",
+        "tierLabelPlaceholder": "例如,T8,TG3",
+        "displayOrder": "显示顺序",
+        "trainingBuildingLevel": "培训建筑级别",
+        "optional": "optional",
+        "truegoldTier": "黄金级",
+        "icon": "图标",
+        "iconUploadLabel": "二级图标",
+        "description": "描述"
+      }
+    }
+  },
+  "alliance": {
+    "timeAgo": {
+      "now": "现在"
+    },
+    "stats": {
+      "rank": "军衔",
+      "members": "成员",
+      "membersSub": "列入名册的{{count}}",
+      "power": "电源",
+      "powerSub": "合并"
+    },
+    "cta": {
+      "open": "打开",
+      "polls": {
+        "title": "投票",
+        "subtitle": "协调活动时间,军团偏好,联盟决定."
+      },
+      "members": {
+        "title": "成员",
+        "subtitle": "浏览名册——昵称,军衔,权力,部队级别."
+      }
+    },
+    "catalogue": {
+      "eyebrow": "参考",
+      "title": "游戏目录",
+      "description": "英雄,宠物,主人公和部队级别——联盟中的每个人都可以浏览的共同参考.",
+      "heroes": "英雄",
+      "pets": "宠物",
+      "masters": "大师",
+      "troopTiers": "军级"
+    },
+    "composition": {
+      "eyebrow": "构成",
+      "title": "集结的军队",
+      "truegoldMembers": "Truegold 成员",
+      "tg5Ready": "TG5+ 准备",
+      "avgPower": "异常电源",
+      "minTroopTier": "部队一级"
+    },
+    "announcements": {
+      "eyebrow": "通知",
+      "title": "最新通知",
+      "emptyHint": "一旦管理者逼迫他们 通知就会出现在这里.",
+      "showing_one": "显示 {{count}} 通知",
+      "showing_other": "显示 {{count}} 通知",
+      "none": "最近没有通知"
+    }
+  },
+  "auth": {
+    "allyChip": {
+      "label": "爱丽",
+      "tooltip": "Ally——来自另一个联盟的客人(只读)"
+    },
+    "signIn": "登录",
+    "signOut": "退出登录",
+    "checkingSession": "正在检查会话.."
+  },
+  "brand": {
+    "name": "DAD War Room",
+    "alliance": "[DAD] BIGDADDYS",
+    "kingdom": "王国 1652年",
+    "motto": "和平中的优雅,战役中的混乱."
+  },
+  "catalogue": {
+    "eyebrow": "目录",
+    "loading": "加载中…",
+    "filter": {
+      "all": "全部",
+      "gen": "Gen {{gen}}"
+    },
+    "genBadge": "Gen {{gen}}",
+    "branch": {
+      "infantry": "步兵",
+      "cavalry": "骑兵",
+      "archer": "阿彻"
+    },
+    "heroes": {
+      "title": "王国英雄",
+      "summary": "{{heroCount}} 历代英雄列表",
+      "empty": {
+        "all": "目录里还没有英雄.",
+        "gen": "在一代{{gen}}还没有英雄.",
+        "subtitle": "管理员可以从目录控制台上添加英雄."
+      },
+      "openAria": "打开 {{name}}(通用 {{gen}})",
+      "backToList": "回到英雄身边",
+      "notFoundTitle": "英雄还没找到.",
+      "notFoundSubtitle": "该目录没有与这颗子弹匹配的记录.",
+      "returnToList": "回到英雄身边",
+      "generation": "Generation {{gen}}",
+      "archivedBadge": "已存档",
+      "noDescription": "还没有记录这个英雄的描述.",
+      "releasedOn": "释放的{{date}}"
+    },
+    "pets": {
+      "title": "王国的宠物",
+      "summary_one": "{{count}} 宠物目录",
+      "summary_other": "编目的{{count}}宠物",
+      "empty": {
+        "nextGen": "与世代 {{gen}} 一起来的宠物",
+        "gen": "在一代{{gen}}还没有宠物.",
+        "subtitle": "管理员可以在目录中注册."
+      },
+      "cardAria": "{{name}}(增生{{gen}})"
+    },
+    "masters": {
+      "title": "国师们",
+      "summary_one": "{{count}} 大师解锁",
+      "summary_other": "{{count}} 解锁主机",
+      "empty": {
+        "title": "目录里还没有主人.",
+        "subtitle": "管理员可以从目录控制台注册主机."
+      },
+      "unlockLabel": "师傅... PH0XPH",
+      "noDescription": "此主机还没有记录描述 .",
+      "releasedOn": "释放的{{date}}"
+    },
+    "tiers": {
+      "title": "兵种等级",
+      "summary_one": "{{count}} 层跨正轨和正轨",
+      "summary_other": "{{count}} 跨正轨和正轨的级别",
+      "empty": {
+        "title": "尚未登记部队级别.",
+        "subtitle": "管理员可以从目录控制台注册层次."
+      },
+      "regular": {
+        "title": "正常等级",
+        "subtitle": "经典的梯子通过部队训练升级解锁."
+      },
+      "truegold": {
+        "title": "Truegold tiers",
+        "subtitle": "Truegold唯一的进化器在铸造转换后解锁."
+      },
+      "standardEyebrow": "标准",
+      "truegoldEyebrow": "Truegold",
+      "noDescription": "无说明",
+      "trainingLevel": "地面培训"
+    }
+  },
+  "chat": {
+    "eyebrow": "作品中",
+    "title": "联盟聊天",
+    "tagline": "[DAD]BigDADYS的直播对话频道——协调跨时区的事件,分享策略,高呼胜负.",
+    "pushHint": "在它开船之前 紧急呼叫作为推进通知发出 在设置中打开它们, 以免错过下一个熊窗口或 KvK 呼叫 .",
+    "enablePush": "启用按键通知",
+    "features": {
+      "images": {
+        "title": "图像附件",
+        "text": "分享熊点击,布局,齿轮构造的截图——直接在聊天内部."
+      },
+      "crossAlliance": {
+        "title": "跨部门协调",
+        "text": "同盟能读能写. 他们的留言被LALLA芯片标记 所以上下文是即时的."
+      },
+      "historyReactions": {
+        "title": "阅读历史、反应",
+        "text": "Ưμ㼯A."
+      }
+    }
+  },
+  "common": {
+    "loading": "加载中…"
+  },
+  "events": {
+    "bear1": {
+      "title": "Bear Hunt 1 — Rally Wave 战略( Rally Wave 战略)",
+      "short": "Bear Hunt 1"
+    },
+    "bear2": {
+      "title": "Bear Hunt 2",
+      "short": "Bear Hunt 2"
+    },
+    "kingsCastle": {
+      "title": "国王城堡之战",
+      "short": "国王城堡"
+    },
+    "kvk": {
+      "title": "KvK 权力王国",
+      "short": "KvK"
+    },
+    "viking": {
+      "title": "Viking Vengeance",
+      "short": "Viking Vengeance"
+    },
+    "swordland": {
+      "title": "Swordland Showdown",
+      "short": "Swordland Showdown"
+    },
+    "triAlliance": {
+      "title": "Tri-Alliance Clash",
+      "short": "Tri-Alliance Clash"
+    },
+    "cesar": {
+      "title": "Cesar's Fury",
+      "short": "Cesar's Fury"
+    },
+    "page": {
+      "eyebrow": "目录",
+      "title": "域内事件",
+      "subtitle": "Bear, KvK, Viking, Tri-Alliance & 季节性活动. 主动向导从这里打开."
+    },
+    "upcoming": {
+      "eyebrow": "接下来",
+      "title": "即将发生的事件",
+      "subtitle": "接下来的14天 横向刷卡.",
+      "empty": "今后14天没有安排任何活动.",
+      "eventCount_one": "{{count}}活动",
+      "eventCount_other": "{{count}}活动",
+      "viewAll": "查看全部",
+      "today": "今天",
+      "tomorrow": "明天"
+    },
+    "filter": {
+      "all": "全部",
+      "active": "活跃",
+      "comingSoon": "马上就来",
+      "archived": "已存档"
+    },
+    "empty": {
+      "filter": "此过滤器中没有事件 ."
+    },
+    "status": {
+      "active": "活跃",
+      "archived": "已存档",
+      "comingSoon": "马上就来"
+    },
+    "card": {
+      "openGuide": "打开指南",
+      "noLongerActive": "不再活动",
+      "stayTuned": "继续听"
+    }
+  },
+  "footer": {
+    "madeWith": "由 QQ 为",
+    "alliance": "[DAD] BIGDADDYS",
+    "kingdom": "1652年-国王肖特",
+    "creator": "由",
+    "creatorName": "Salles",
+    "creatorRole": "联盟成员"
+  },
+  "header": {
+    "kingdomTag": "王国 1652年"
+  },
+  "hub": {
+    "title": "DAD War Room",
+    "tagline": "* 王国1652年",
+    "intro": "每个活动的视觉战略指南。 下面挑个向导.",
+    "comingSoon": "马上就来",
+    "userHero": {
+      "visitorEyebrow": "访客",
+      "visitorTitle": "签名打开战争室",
+      "visitorSubtitle": "成员,军官和盟友——这里的一切取决于你的登录.",
+      "signIn": "登录",
+      "allyBadge": "爱丽",
+      "editProfile": "编辑配置文件",
+      "stat": {
+        "power": "电源",
+        "truegold": "Truegold",
+        "role": "角色"
+      },
+      "role": {
+        "r5": "Leader",
+        "r4": "联合领导",
+        "r3": "R3 Officer",
+        "r2": "R2 Officer",
+        "member": "成员",
+        "ally": "爱丽"
+      }
+    },
+    "nextEvent": {
+      "eyebrow": "下一个活动",
+      "loadError": "无法装入下一个事件",
+      "empty": {
+        "title": "尚未安排活动",
+        "subtitle": "一旦管理员加下一头熊,KvK,或季节性事件,就会在这里以现场倒计时出现."
+      },
+      "addEvent": "添加一个事件",
+      "guide": "指南",
+      "startedAgo": "这一活动在{{days}}d {{hours}}h开始于前期——在加入下一期后刷新.",
+      "countdown": {
+        "days": "天",
+        "hours": "时",
+        "min": "分",
+        "sec": "秒"
+      },
+      "utcTitle": "所有时间都在协调世界时"
+    },
+    "pendingPolls": {
+      "allClearEyebrow": "没事了",
+      "actionEyebrow": "需要采取的行动",
+      "emptyTitle": "没有待投票",
+      "emptySubtitle": "所有公开投票都已收到你的选票.",
+      "waitingTitle_one": "{{count}} 民调等待投票",
+      "waitingTitle_other": "{{count}}投票等待投票",
+      "footerEmpty": "战争室 · 投票",
+      "footerCount": "{{shown}}中最高的{{total}}",
+      "viewAll": "查看全部"
+    },
+    "timeline": {
+      "title": "时间线",
+      "empty": {
+        "title": "没有预定即将到来的里程碑 .",
+        "subtitle": "设定管理员面板上的解锁日期, 它们就会出现在这里 ."
+      },
+      "toGo": "离开",
+      "past": "past"
+    }
+  },
+  "login": {
+    "brandSuffix": "War Room",
+    "changeLanguage": "更改语言",
+    "eyebrow": "联盟司令部",
+    "fields": {
+      "username": "用户名",
+      "usernamePlaceholder": "your_handle",
+      "password": "密码",
+      "showPassword": "显示密码",
+      "hidePassword": "隐藏密码"
+    },
+    "errors": {
+      "required": "需要用户名和密码.",
+      "signInFailed": "签名失败 .",
+      "wrongCredentials": "用户名或密码错误 ."
+    },
+    "submitting": "签名于",
+    "enter": "输入",
+    "forgot": {
+      "prefix": "忘记了?",
+      "askR4R5": "问R4或R5."
+    },
+    "installPwa": "安装 DAD 战争室",
+    "builtBy": "a. 建 议"
+  },
+  "members": {
+    "page": {
+      "eyebrow": "名册",
+      "title": "联盟成员",
+      "loading": "加载中…",
+      "memberCount_one": "{{count}} 成员",
+      "memberCount_other": "{{count}}成员",
+      "combinedPower": "联合力量"
+    },
+    "search": {
+      "placeholder": "按昵称搜索…"
+    },
+    "sort": {
+      "label": "排序",
+      "power": "电源",
+      "tier": "级别",
+      "rank": "军衔",
+      "nick": "Nick"
+    },
+    "empty": {
+      "noMatch": "没有成员匹配\"{{query}}\".",
+      "noMembers": "名册上还没有成员."
+    },
+    "rank": {
+      "r1Title": "征聘人员",
+      "r2Title": "成员",
+      "r3Title": "退伍军人",
+      "r4Title": "主席团成员",
+      "r5Title": "Leader",
+      "defaultTitle": "成员"
+    },
+    "role": {
+      "leader": "Leader",
+      "joiner": "Joiner",
+      "standby": "Standby"
+    },
+    "status": {
+      "temporaryOut": "临时离职",
+      "temporarilyOut": "暂时退出",
+      "out": "出来"
+    },
+    "detail": {
+      "backToList": "返回列表",
+      "notFoundEyebrow": "未找到",
+      "notFoundWithNick": "没有成员有昵称\"{{nick}}\"",
+      "notFoundNoNick": "成员不存在",
+      "notFoundDescription": "成员可能离开了联盟,或者联系是不正确的.",
+      "dadTagLabel": "• {{tag}}",
+      "noteLabel": "说明"
+    },
+    "stat": {
+      "power": "电源",
+      "truegold": "Truegold"
+    },
+    "participation": {
+      "eyebrow": "参与",
+      "title": "事件历史",
+      "empty": "目前还没有记录任何事件——这个成员并没有被任何事件所压制.",
+      "latest": "最新数据"
+    },
+    "card": {
+      "openProfileAria": "{{nick}} 打开配置文件",
+      "tcLevel": "Lv.{{level}} · {{tier}}"
+    },
+    "powerChart": {
+      "eyebrow": "电力随时间演变",
+      "title": "进化",
+      "notEnoughData": "数据还不足——电源变化会随着记录出现在这里.",
+      "snapshotCount_one": "{{count}}快照",
+      "snapshotCount_other": "{{count}}快照"
+    }
+  },
+  "nav": {
+    "home": "首页",
+    "events": "活动",
+    "chat": "聊天",
+    "alliance": "联盟",
+    "settings": "设置",
+    "primaryAriaLabel": "小学",
+    "adminAriaLabel": "管理",
+    "exitAdmin": "退出管理模式",
+    "exitAdminShort": "退出",
+    "adminEvents": "活动",
+    "adminPolls": "投票",
+    "adminMembers": "成员",
+    "adminChat": "聊天",
+    "adminAlliance": "联盟",
+    "adminNotifications": "Notif.",
+    "adminAnalytics": "状态"
+  },
+  "notifications": {
+    "bellAriaLabel": "通知",
+    "bellAriaLabelUnread": "通知, {{count}} 未读",
+    "panelAriaLabel": "最近的通知",
+    "title": "通知",
+    "empty": "最近没有通知.",
+    "timeNow": "现在",
+    "viewAll": "查看全部"
+  },
+  "polls": {
+    "eyebrow": "投票",
+    "title": "联盟民意调查",
+    "loading": "加载中…",
+    "countLine_one": "飞行中的{{count}}民意调查",
+    "countLine_other": "{{count}} 飞行中的民调",
+    "readOnly": "read-only",
+    "empty": {
+      "title": "还没有民意调查",
+      "adminPrefix": "一个管理员可以创建第一个民意测验从",
+      "adminLink": "行政-民调"
+    },
+    "view": "视图",
+    "status": {
+      "closed": "已关闭",
+      "draft": "草案",
+      "open": "打开"
+    },
+    "type": {
+      "single": "单身",
+      "multi": "多个",
+      "singleChoice": "单项选择",
+      "multiChoice": "多选择"
+    },
+    "countdown": {
+      "minutes_one": "{{count}}m 关闭",
+      "minutes_other": "{{count}}m 关闭",
+      "hours_one": "关闭于 {{count}}h",
+      "hours_other": "关闭于 {{count}}h",
+      "days_one": "关闭于 {{count}}d",
+      "days_other": "关闭于 {{count}}d"
+    },
+    "shareToken": {
+      "invalid": "此共享链接无效或民意调查被删除 .",
+      "browse": "浏览民调"
+    },
+    "detail": {
+      "back": "回来",
+      "backToPolls": "回到民调",
+      "notFound": "Poll没有找到.",
+      "countdown": {
+        "archived": "已存档",
+        "draftNotPublished": "草案(未公布)",
+        "closedAt": "关闭 {{date}} {{time}}",
+        "openIndefinitely": "无限期打开"
+      },
+      "draftBanner": {
+        "prefix": "这次民意调查是在",
+        "draft": "draft",
+        "suffix": "——会员还不能投票. 从",
+        "link": "行政-民调"
+      },
+      "resultsHidden": {
+        "adminOnly": "只有在这次民意调查中,管理人员才能看到结果.",
+        "untilClose": "在民意调查结束之前 选票数会被隐藏起来."
+      },
+      "signedOutBanner": "表决。 您可以在签名时查看结果 .",
+      "allyBanner": "账户可以查看结果但不能投票(只读访问).",
+      "voteFailed": "投票失败",
+      "clearFailed": "清除失败",
+      "voterCount_one": "{{count}} 选民",
+      "voterCount_other": "选民",
+      "totalPicks": "{{count}} 选手总数",
+      "resultsHiddenShort": "在民意调查结束之前.",
+      "reVotePrefix": "你可以重新投票,直到",
+      "clearMyVote": "清除我的选票",
+      "shareTitle": "共享民意调查",
+      "share": "份额",
+      "copied": "复制"
+    }
+  },
+  "settings": {
+    "eyebrow": "偏好设置",
+    "title": "设置",
+    "account": {
+      "heading": "账户",
+      "signedInFallback": "签署于",
+      "openAdmin": "打开管理员设置",
+      "openAdminTooltip": "将整个app chrome 切换为admin模式(crimson hairline + 8-tab admin nav)",
+      "signInHint": "成员,盟友,和管理员."
+    },
+    "language": {
+      "eyebrow": "语言",
+      "available_one": "{{count}}语言可用",
+      "available_other": "可用的{{count}}语言",
+      "close": "关闭",
+      "change": "变动"
+    },
+    "pwa": {
+      "eyebrow": "Progressive Web App",
+      "title": "安装战争室",
+      "alreadyInstalled": "已经安装了 —— 从您的家用屏幕上打开离线, 发射 .",
+      "addToHomescreen": "添加到家用屏幕中以快速访问并按下通知.",
+      "openInBrowser": "在 Chrome / Edge / Safari 中打开以安装为应用程序.",
+      "standaloneMode": "独立模式",
+      "browserMode": "浏览器模式",
+      "installed": "已安装",
+      "install": "安装"
+    },
+    "push": {
+      "eyebrow": "通知",
+      "title": "推送通知",
+      "description": "当一个事件开始时,接受应用中的pings,一个新的民意调查打开,或者管理员用你选择的语言发送一个公告.",
+      "notConfigured": "未为此部署配置 。 问联盟行政.",
+      "blocked": "在浏览器设置中被屏蔽的通知——可以重新订阅.",
+      "active": "活跃",
+      "deactivate": "删除",
+      "permissionGranted": "准许",
+      "notSubscribed": "未订阅",
+      "activate": "启动"
+    },
+    "profile": {
+      "eyebrow": "个人资料",
+      "displayName": "显示名称",
+      "password": "密码",
+      "avatar": "阿凡达",
+      "avatarValue": {
+        "custom": "自定义图像",
+        "hero": "Hero: {{slug}}",
+        "default": "默认( hash)"
+      },
+      "edit": "编辑",
+      "newDisplayName": "新建显示名称",
+      "newPassword": "新密码",
+      "passwordMinimum": "最小8个字符.",
+      "confirm": "确认",
+      "passwordsDontMatch": "密码不匹配.",
+      "preview": "预览",
+      "resetTooltip": "返回自动变形器( 用户名的小时)",
+      "reset": "重设",
+      "chooseHero": "选择英雄",
+      "customImage": "自定义图像",
+      "uploadImage": "上传图像",
+      "or": "or",
+      "imageUrl": "图像 URL",
+      "imageUrlHint": "粘贴任何公共链接(Discord, Imgur,wiki等). 将覆盖选定的英雄.",
+      "close": "关闭",
+      "cancel": "取消",
+      "save": "保存",
+      "feedback": {
+        "displayNameUpdated": "显示更新的名称 .",
+        "passwordChanged": "密码已更改 .",
+        "avatarUpdated": "阿凡达最新消息.",
+        "avatarReset": "回到自动阿凡达.",
+        "failed": "失败 .",
+        "failedShort": "失败 ."
+      }
+    }
+  },
+  "timeline": {
+    "detail": {
+      "back": "回来",
+      "loadError": "装入失败",
+      "notFound": "里程碑没有找到.",
+      "reference": "参考",
+      "source": "来源",
+      "daysToGo": "准备出发",
+      "today": "today",
+      "daysAgo": "{{days}}d 早点开始",
+      "noBody": "尚未详细描述这一里程碑。 管理员可以在管理员时间表编辑器中填写丰富的内容(文本,图像,列表,链接)."
+    },
+    "category": {
+      "truegold": "Truegold",
+      "heroes": "英雄",
+      "pets": "宠物",
+      "pvp": "PvP",
+      "feature": "Feature",
+      "master": "师父",
+      "fog": "Fog",
+      "warAcademy": "War Academy",
+      "other": "其他人员"
+    },
+    "relative": {
+      "today": "今天",
+      "tomorrow": "明天",
+      "daysAgo": "{{days}}d 早点开始",
+      "daysCount": "{{count}}日数"
+    }
+  },
+  "ui": {
+    "language": "语言",
+    "back": "回来",
+    "backToHub": "回到中枢",
+    "copy": "复制",
+    "copied": "被复制了!",
+    "toTop": "回到顶端",
+    "skipToContent": "跳到内容",
+    "imageUpload": {
+      "label": "图像上传",
+      "previewAlt": "预览",
+      "currentImage": "当前图像",
+      "swap": "交换",
+      "remove": "移除",
+      "uploading": "正在上传..",
+      "dropOrClick": "拖动图像或单击以选择",
+      "limitsHint": "{{allowedHuman}} 最高为 {{maxMb}} MB",
+      "errorTooLarge": "档案太大了 最大{{maxMb}} MB.",
+      "errorUploadFailed": "上传失败 ."
+    }
+  }
+}

@@ -1,0 +1,1638 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>DAD CODEX — Design Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<!-- Phosphor Icons (DUOTONE weight) — the real icon system spec'd in §3 -->
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css" />
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+<style>
+  :root {
+    /* Inkwell Vault — revised after Salles' info-density feedback.
+       Cards are NOW significantly lighter than BG so they pop as containers. */
+    --ink-void: #13172a;
+    --ink-night: #181d36;
+    --ink-dusk: #1f2542;
+    --ink-charcoal: #2a3158;
+    --ink-elev: #363f6d;
+    --ink-mist: rgba(31, 37, 66, 0.62);
+
+    --gold-glow: #ffe9a3;
+    --gold-soft: #ffdb8a;
+    --gold: #f4cf73;
+    --gold-dim: #c89934;
+    --gold-deep: #876318;
+    --gold-burn: #5e4413;
+
+    --crimson-glow: #e25656;
+    --crimson: #b13838;
+    --crimson-deep: #6d1818;
+
+    --ink-cream: #f0e9d6;
+    --ink-paper: #dcd3bd;
+    --ink-soft: #a89e89;
+    --ink-mute: #7a7464;
+    --ink-dim: #4d4a40;
+
+    --steel: #6c7a92;
+    --troop-inf: #6fa8d6;
+    --troop-cav: #c9883e;
+    --troop-arc: #7fc08a;
+    --conquest: #a85cdb;
+    --expedition: #5cb874;
+
+    --display: 'Cinzel Decorative', 'Cinzel', Georgia, serif;
+    --display-clean: 'Cinzel', Georgia, serif;
+    --sub: 'Cormorant Garamond', Georgia, serif;
+    --body: 'Outfit', system-ui, sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  *,*::before,*::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: var(--body);
+    background: var(--ink-void);
+    color: var(--ink-cream);
+    overflow-x: hidden;
+  }
+
+  /* ANIMATED MESH BACKGROUND */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: -10%;
+    z-index: -3;
+    background:
+      radial-gradient(600px 400px at 20% 20%, rgba(244, 207, 115, 0.10), transparent 60%),
+      radial-gradient(700px 500px at 80% 30%, rgba(177, 56, 56, 0.07), transparent 60%),
+      radial-gradient(800px 500px at 50% 80%, rgba(58, 74, 124, 0.06), transparent 65%);
+    filter: blur(40px);
+    animation: mesh-drift 80s ease-in-out infinite;
+  }
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background:
+      linear-gradient(180deg, var(--ink-void) 0%, var(--ink-night) 100%),
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.95  0 0 0 0 0.91  0 0 0 0 0.83  0 0 0 0.03 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    background-size: auto, 300px 300px;
+    mix-blend-mode: normal;
+    opacity: 0.92;
+  }
+  @keyframes mesh-drift {
+    0%, 100% { transform: translate(0, 0); }
+    33% { transform: translate(30px, -20px); }
+    66% { transform: translate(-25px, 25px); }
+  }
+
+  /* TYPOGRAPHY */
+  h1, h2, h3, h4 { margin: 0; }
+  .h1, h1 {
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: clamp(34px, 6vw, 56px);
+    letter-spacing: 0.02em;
+    line-height: 1.05;
+    color: var(--ink-cream);
+  }
+  .h2, h2 {
+    font-family: var(--display-clean);
+    font-weight: 600;
+    font-size: clamp(22px, 3.5vw, 30px);
+    letter-spacing: 0.025em;
+    color: var(--ink-cream);
+  }
+  .h3 { font-family: var(--display-clean); font-weight: 600; font-size: 18px; letter-spacing: 0.02em; color: var(--ink-cream); }
+  .eyebrow {
+    font-family: var(--body);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.32em;
+    font-size: 11px;
+    color: var(--gold-soft);
+  }
+  .body { font-family: var(--body); font-size: 15px; line-height: 1.6; color: var(--ink-paper); }
+  .body-soft { color: var(--ink-soft); }
+  .micro { font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--ink-mute); }
+  .quote { font-family: var(--sub); font-style: italic; font-size: 18px; color: var(--gold-soft); }
+  .num { font-family: var(--mono); font-weight: 500; }
+
+  /* SHIMMER GOLD TEXT */
+  .shimmer {
+    background: linear-gradient(110deg,
+      var(--gold-dim) 0%,
+      var(--gold) 35%,
+      var(--gold-glow) 50%,
+      var(--gold) 65%,
+      var(--gold-dim) 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 3s linear infinite;
+  }
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  /* DROP CAP */
+  .dropcap::first-letter {
+    font-family: var(--sub);
+    font-weight: 600;
+    font-style: italic;
+    font-size: 3em;
+    line-height: 0.85;
+    float: left;
+    margin: 8px 8px 0 0;
+    background: linear-gradient(180deg, var(--gold-glow), var(--gold-dim));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* CARDS */
+  .card, .card-elev, .card-glass {
+    border-radius: 18px;
+    padding: 20px 22px;
+    position: relative;
+    box-shadow: inset 0 1px 0 0 rgba(255, 219, 138, 0.05);
+  }
+  .card {
+    background:
+      linear-gradient(180deg, rgba(255, 219, 138, 0.06), rgba(255, 219, 138, 0.015)),
+      linear-gradient(180deg, var(--ink-charcoal), var(--ink-dusk));
+    border: 1px solid rgba(244, 207, 115, 0.22);
+    box-shadow: inset 0 1px 0 0 rgba(255, 219, 138, 0.07), 0 20px 36px -22px rgba(0, 0, 0, 0.55);
+  }
+  .card-elev {
+    background:
+      linear-gradient(180deg, rgba(255, 219, 138, 0.09), rgba(255, 219, 138, 0.03)),
+      linear-gradient(180deg, var(--ink-elev), var(--ink-charcoal));
+    border: 1px solid rgba(244, 207, 115, 0.32);
+    box-shadow: inset 0 1px 0 0 rgba(255, 219, 138, 0.09), 0 32px 52px -22px rgba(0, 0, 0, 0.65);
+  }
+  .card-glass {
+    background: var(--ink-mist);
+    backdrop-filter: blur(24px) saturate(160%);
+    -webkit-backdrop-filter: blur(24px) saturate(160%);
+    border: 1px solid rgba(244, 207, 115, 0.20);
+  }
+  /* Top-edge gold line for featured (the new "border beam" replacement) */
+  .card-featured::before {
+    content: '';
+    position: absolute; top: 0; left: 8%; right: 8%; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  /* Corner ornaments for featured */
+  .card-ornament::after {
+    content: '';
+    position: absolute;
+    top: 8px; left: 8px; right: 8px; bottom: 8px;
+    border: 1px solid rgba(244, 207, 115, 0.10);
+    border-radius: 14px;
+    pointer-events: none;
+  }
+
+  /* BUTTONS */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    min-height: 44px; padding: 10px 18px; border-radius: 12px;
+    font-family: var(--body); font-weight: 600; font-size: 13px;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    cursor: pointer; transition: all 200ms cubic-bezier(0.22, 1, 0.36, 1);
+    border: 1px solid transparent; user-select: none; }
+  .btn:active { transform: scale(0.97); }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--gold-soft), var(--gold), var(--gold-dim));
+    color: var(--ink-void);
+    border-color: var(--gold-soft);
+    box-shadow: 0 12px 28px -10px rgba(244, 207, 115, 0.4);
+  }
+  .btn-primary:hover { filter: brightness(1.08); box-shadow: 0 16px 36px -10px rgba(255, 233, 163, 0.5); }
+  .btn-ghost { background: rgba(244, 207, 115, 0.04); color: var(--ink-cream); border-color: rgba(244, 207, 115, 0.18); }
+  .btn-ghost:hover { background: rgba(244, 207, 115, 0.10); border-color: rgba(244, 207, 115, 0.40); }
+  .btn-danger {
+    background: linear-gradient(135deg, var(--crimson-glow), var(--crimson));
+    color: var(--ink-cream);
+    border-color: var(--crimson-glow);
+  }
+
+  /* BADGES */
+  .badge { display: inline-flex; align-items: center; gap: 6px;
+    padding: 4px 10px; border-radius: 999px;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; }
+  .badge-gold { background: rgba(244,207,115,0.14); color: var(--gold-soft); border: 1px solid rgba(244,207,115,0.40); }
+  .badge-active { background: linear-gradient(135deg, var(--gold-soft), var(--gold-dim)); color: var(--ink-void); border: 1px solid var(--gold-soft); }
+  .badge-mute { background: rgba(108,122,146,0.10); color: var(--ink-soft); border: 1px solid rgba(108,122,146,0.28); }
+  .badge-danger { background: rgba(226,86,86,0.14); color: var(--crimson-glow); border: 1px solid rgba(226,86,86,0.42); }
+  .badge-success { background: rgba(92,184,116,0.12); color: #a7d8b3; border: 1px solid rgba(92,184,116,0.36); }
+
+  /* LIVE STATUS RIPPLE */
+  .status-dot { position: relative; display: inline-flex; width: 8px; height: 8px; }
+  .status-dot::before {
+    content: ''; position: absolute; inset: 0;
+    border-radius: 50%; background: var(--gold);
+    animation: ripple 1.6s ease-out infinite;
+  }
+  .status-dot::after {
+    content: ''; position: absolute; inset: 0;
+    border-radius: 50%; background: var(--gold-soft);
+  }
+  @keyframes ripple {
+    0% { transform: scale(0.85); opacity: 0.7; }
+    100% { transform: scale(1.6); opacity: 0; }
+  }
+
+  /* LAYOUT */
+  .wrap { max-width: 880px; margin: 0 auto; padding: 32px 20px 80px; }
+  .section { padding: 36px 0; border-top: 1px solid rgba(244, 207, 115, 0.12); }
+  .section:first-of-type { border-top: 0; }
+  .row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+  .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; }
+
+  /* TOC navbar */
+  .toc {
+    position: sticky;
+    top: 0; z-index: 50;
+    padding: 10px 16px;
+    background: var(--ink-mist);
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    border-bottom: 1px solid rgba(244, 207, 115, 0.20);
+    box-shadow: 0 -6px 26px -6px rgba(244,207,115,0.06) inset;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .toc a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    margin-right: 14px;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: color 200ms;
+  }
+  .toc a:hover { color: var(--gold-soft); }
+
+  .swatch {
+    display: flex; flex-direction: column; gap: 6px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(244, 207, 115, 0.14);
+    background: rgba(244, 207, 115, 0.02);
+  }
+  .swatch-chip { height: 56px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.06); }
+  .swatch-name { font-family: var(--body); font-size: 12px; font-weight: 600; color: var(--ink-cream); letter-spacing: 0.05em; }
+  .swatch-hex { font-family: var(--mono); font-size: 10px; color: var(--ink-mute); }
+
+  /* SVG icon style */
+  .icon-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 10px; }
+  .icon-tile {
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    padding: 14px 8px;
+    border-radius: 12px;
+    border: 1px solid rgba(244,207,115,0.14);
+    background: rgba(244,207,115,0.03);
+  }
+  .icon-tile svg { width: 28px; height: 28px; }
+  .icon-tile span { font-size: 10px; letter-spacing: 0.15em; color: var(--ink-soft); text-align: center; text-transform: uppercase; font-weight: 600; }
+
+  /* Ornament SVG divider */
+  .ornament-divider { display: flex; align-items: center; gap: 10px; margin: 20px 0; }
+  .ornament-divider .line { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, rgba(244,207,115,0.45), transparent); }
+  .ornament-divider .diamond { width: 8px; height: 8px; background: linear-gradient(135deg, var(--gold-soft), var(--gold-dim)); transform: rotate(45deg); box-shadow: 0 0 14px rgba(255,233,163,0.5); }
+
+  /* Hero on Alliance preview */
+  .alliance-hero { position: relative; text-align: center; padding: 36px 16px 28px; overflow: hidden; }
+  .alliance-hero::before {
+    content: ''; position: absolute; inset: -40px; z-index: 0;
+    background: radial-gradient(400px 240px at 50% 50%, rgba(177,56,56,0.18), transparent 60%);
+    filter: blur(30px);
+  }
+  .alliance-hero > * { position: relative; }
+  .crest { width: 88px; height: 100px; margin: 0 auto 12px; display: block; animation: float 4s ease-in-out infinite; }
+  @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+
+  /* Member card preview */
+  /* MEMBER CARD (redesigned — in-game roster aesthetic) */
+  .mem-card {
+    position: relative; display: flex; align-items: center; gap: 14px;
+    padding: 12px 16px 12px 14px;
+    border-radius: 16px;
+    background:
+      linear-gradient(180deg, rgba(255,219,138,0.06), rgba(255,219,138,0.015)),
+      linear-gradient(180deg, var(--ink-charcoal), var(--ink-dusk));
+    border: 1px solid rgba(244,207,115,0.20);
+    box-shadow: inset 0 1px 0 0 rgba(255,219,138,0.06), 0 14px 24px -16px rgba(0,0,0,0.55);
+    overflow: hidden;
+    transition: transform 220ms cubic-bezier(0.22,1,0.36,1), border-color 220ms;
+  }
+  .mem-card:hover { transform: translateY(-2px); border-color: rgba(244,207,115,0.35); }
+  /* rank stripe — left edge color-coded */
+  .mem-card .stripe {
+    position: absolute; left: 0; top: 6px; bottom: 6px; width: 3px;
+    border-radius: 0 3px 3px 0;
+  }
+  .mem-card.r5 .stripe { background: linear-gradient(180deg, var(--gold-soft), var(--gold-dim)); }
+  .mem-card.r4 .stripe { background: var(--gold); }
+  .mem-card.r3 .stripe { background: var(--steel); }
+  .mem-card.r2 .stripe { background: var(--ink-soft); }
+  .mem-card.r1 .stripe { background: var(--gold-deep); }
+  /* portrait box */
+  .mem-portrait {
+    position: relative; width: 56px; height: 56px; border-radius: 10px;
+    overflow: hidden; flex-shrink: 0;
+    border: 1.5px solid rgba(244,207,115,0.45);
+    box-shadow: 0 0 14px -2px rgba(244,207,115,0.18);
+    background: linear-gradient(180deg, rgba(244,207,115,0.05), rgba(0,0,0,0.4));
+  }
+  .mem-card.r3 .mem-portrait { border-color: rgba(108,122,146,0.55); box-shadow: 0 0 14px -2px rgba(108,122,146,0.18); }
+  .mem-card.r2 .mem-portrait { border-color: rgba(168,158,137,0.45); }
+  .mem-card.r1 .mem-portrait { border-color: rgba(135,99,24,0.55); }
+  .mem-portrait img { width: 100%; height: 100%; object-fit: cover; }
+  .mem-portrait .online-dot {
+    position: absolute; bottom: 2px; right: 2px;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: #5cb874;
+    border: 2px solid var(--ink-charcoal);
+    box-shadow: 0 0 6px rgba(92,184,116,0.6);
+  }
+  .mem-portrait .online-dot.offline { background: var(--ink-mute); box-shadow: none; }
+  .mem-portrait .online-dot.out { background: var(--crimson-glow); box-shadow: 0 0 6px rgba(226,86,86,0.6); }
+  /* rank ribbon — top corner of portrait */
+  .mem-portrait .rank-tag {
+    position: absolute; top: -3px; left: -3px;
+    padding: 1px 6px 2px;
+    background: linear-gradient(180deg, var(--gold-soft), var(--gold-dim));
+    border-radius: 4px;
+    font-family: var(--display-clean);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--ink-void);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  }
+  .mem-card.r3 .rank-tag { background: linear-gradient(180deg, var(--steel-soft, #9aa6ba), var(--steel)); color: var(--ink-cream); }
+  .mem-card.r2 .rank-tag { background: linear-gradient(180deg, #c4bda9, var(--ink-soft)); color: var(--ink-void); }
+  .mem-card.r1 .rank-tag { background: linear-gradient(180deg, var(--gold-dim), var(--gold-deep)); color: var(--ink-cream); }
+  /* main column */
+  .mem-main { flex: 1; min-width: 0; }
+  .mem-nick {
+    font-family: var(--body); font-weight: 600;
+    font-size: 16px; color: var(--ink-cream);
+    line-height: 1.1;
+    display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;
+  }
+  .mem-nick .dad-tag {
+    font-family: var(--body); font-size: 9px; font-weight: 600;
+    letter-spacing: 0.18em; color: var(--gold-soft);
+    text-transform: uppercase;
+  }
+  .mem-stats { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
+  .mem-stat {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--mono); font-size: 15px; color: var(--gold);
+    font-weight: 600; line-height: 1;
+    letter-spacing: 0.01em;
+  }
+  /* TG tier badge — uses real game tg1..tg8 gold gem icons */
+  .mem-tier {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 3px 9px 3px 4px; border-radius: 7px;
+    background: rgba(244,207,115,0.14);
+    border: 1px solid rgba(244,207,115,0.40);
+    font-family: var(--display-clean);
+    font-size: 11px; font-weight: 600;
+    color: var(--gold-soft);
+    letter-spacing: 0.06em;
+  }
+  .mem-tier img { width: 18px; height: 18px; object-fit: contain; flex-shrink: 0; filter: drop-shadow(0 0 4px rgba(255,233,163,0.4)); }
+  /* Pre-TG tier badge — neutral steel border, troop gem icon */
+  .mem-tier.pre {
+    background: rgba(108,122,146,0.18);
+    border-color: rgba(108,122,146,0.42);
+    color: var(--ink-soft);
+  }
+  .mem-tier.pre svg { width: 18px; height: 18px; flex-shrink: 0; filter: drop-shadow(0 0 4px rgba(154,166,186,0.45)); }
+  /* "Out" status — only piece of meta we keep, since admin manually sets it */
+  .mem-out-tag {
+    display: inline-flex; align-items: center; gap: 4px;
+    padding: 2px 8px; border-radius: 999px;
+    background: rgba(226,86,86,0.14);
+    border: 1px solid rgba(226,86,86,0.42);
+    font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--crimson-glow); font-weight: 700;
+    margin-left: 8px;
+  }
+  .mem-chev {
+    flex-shrink: 0; color: var(--ink-mute);
+    transition: color 220ms, transform 220ms;
+  }
+  .mem-card:hover .mem-chev { color: var(--gold-soft); transform: translateX(2px); }
+
+  /* Countdown ticker preview */
+  .countdown { display: inline-flex; align-items: center; gap: 8px; }
+  .countdown .seg { display: flex; flex-direction: column; align-items: center; }
+  .countdown .num { font-family: var(--mono); font-weight: 500; font-size: clamp(28px, 7vw, 44px); letter-spacing: 0.02em; color: var(--gold); line-height: 1; }
+  .countdown .lbl { font-size: 9px; letter-spacing: 0.32em; color: var(--ink-mute); text-transform: uppercase; margin-top: 6px; font-weight: 600; }
+  .countdown .sep { font-family: var(--mono); font-size: clamp(22px, 5vw, 36px); color: rgba(244,207,115,0.35); line-height: 1; margin-top: -8px; }
+
+  /* Spotlight effect (desktop only) */
+  .spotlight { position: relative; overflow: hidden; }
+  .spotlight::after {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(400px circle at var(--x, 50%) var(--y, 50%), rgba(244,207,115,0.10), transparent 35%);
+    transition: background 250ms ease-out;
+  }
+
+  /* Sticky-feel preview block */
+  .bottom-nav-preview {
+    margin-top: 24px;
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    padding: 8px 6px;
+    border-radius: 18px;
+    background: rgba(31, 37, 66, 0.78);
+    backdrop-filter: blur(20px) saturate(160%);
+    border: 1px solid rgba(244,207,115,0.22);
+    box-shadow: 0 -10px 30px -10px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,233,163,0.05);
+  }
+  .bn-item { display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 10px 4px 8px; border-radius: 12px; color: var(--ink-mute); position: relative; text-decoration: none; transition: color 220ms; }
+  .bn-item i { font-size: 24px; line-height: 1; transition: transform 220ms, color 220ms; }
+  .bn-item span { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; }
+  .bn-item.active { color: var(--gold); }
+  .bn-item.active i { transform: scale(1.06); filter: drop-shadow(0 0 8px rgba(244, 207, 115, 0.55)); }
+  .bn-item.active::before {
+    content: ''; position: absolute; top: -2px; left: 28%; right: 28%; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    border-radius: 2px;
+  }
+  .bn-item.active::after {
+    content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    width: 56px; height: 42px; border-radius: 50%; filter: blur(16px);
+    background: radial-gradient(circle, rgba(244,207,115,0.45), transparent 70%);
+    z-index: -1;
+  }
+  .bn-item.active span { color: var(--gold-soft); }
+
+  /* TYPE specimen */
+  .specimen-row { display: flex; align-items: baseline; gap: 16px; padding: 14px 0; border-bottom: 1px dashed rgba(244,207,115,0.10); }
+  .specimen-row:last-child { border-bottom: 0; }
+  .specimen-name { font-family: var(--mono); font-size: 11px; color: var(--ink-mute); width: 110px; flex-shrink: 0; }
+  .specimen-sample { flex: 1; }
+
+  /* Skill type pill */
+  .skill-pill { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; }
+  .skill-pill.cq { background: rgba(168,92,219,0.12); color: #d3a8ef; border: 1px solid rgba(168,92,219,0.42); }
+  .skill-pill.ex { background: rgba(92,184,116,0.12); color: #a7d8b3; border: 1px solid rgba(92,184,116,0.42); }
+
+  /* Tier pill */
+  .tier-pill { display: inline-flex; align-items: center; padding: 4px 10px; border-radius: 999px; font-family: var(--display-clean); font-size: 11px; letter-spacing: 0.06em; }
+  .tier-pill.tg { background: rgba(244,207,115,0.14); color: var(--gold-soft); border: 1px solid rgba(244,207,115,0.45); }
+  .tier-pill.t  { background: rgba(108,122,146,0.16); color: var(--ink-soft); border: 1px solid rgba(108,122,146,0.32); }
+
+  .label-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .footnote { font-size: 12px; color: var(--ink-mute); margin-top: 8px; }
+</style>
+</head>
+<body>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+  <a href="#hero">▲ Hero</a>
+  <a href="#palette">§1 Palette</a>
+  <a href="#typo">§2 Typography</a>
+  <a href="#icons">§3 Icons</a>
+  <a href="#cards">§4 Cards</a>
+  <a href="#bg">§5 Background</a>
+  <a href="#motion">§6 Motion</a>
+  <a href="#components">§7 Components</a>
+  <a href="#pages">§8 Pages</a>
+  <a href="#pwa">§10 PWA</a>
+  <a href="#fx">§9 FX</a>
+</div>
+
+<div class="wrap">
+
+  <!-- ========== HERO ========== -->
+  <section id="hero" class="section spotlight" onmousemove="this.style.setProperty('--x', event.offsetX+'px'); this.style.setProperty('--y', event.offsetY+'px');">
+    <div class="eyebrow">Design system · v0.1</div>
+    <h1 style="margin: 14px 0 8px;">
+      <span class="shimmer">DAD</span> <span style="color:var(--ink-cream);">CODEX</span>
+    </h1>
+    <p class="quote">"A royal codex opened on a midnight war table."</p>
+    <p class="body body-soft" style="max-width: 580px; margin-top: 14px;">
+      Single source of truth for the visual system. Scroll through. If you sign
+      off on each section, I rebuild the entire app to match — once, completely.
+    </p>
+    <div class="row" style="margin-top: 24px;">
+      <button class="btn btn-primary">Approve all</button>
+      <button class="btn btn-ghost">Mark for revision</button>
+    </div>
+  </section>
+
+  <!-- ========== §1 COLOR PALETTE ========== -->
+  <section id="palette" class="section">
+    <div class="eyebrow">§1 · Palette</div>
+    <h2>Color tokens</h2>
+    <p class="body body-soft">All values exposed as CSS variables. Two scales (gold + crimson) carry the brand; everything else supports.</p>
+
+    <div class="label-row" style="margin-top: 22px;"><div class="micro">Atmosphere</div></div>
+    <div class="grid-3">
+      <div class="swatch"><div class="swatch-chip" style="background:#13172a"></div><div class="swatch-name">ink-void</div><div class="swatch-hex">#13172a</div></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#181d36"></div><div class="swatch-name">ink-night</div><div class="swatch-hex">#181d36</div></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#1f2542"></div><div class="swatch-name">ink-dusk</div><div class="swatch-hex">#1f2542</div></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#2a3158"></div><div class="swatch-name">ink-charcoal</div><div class="swatch-hex">#2a3158</div></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#363f6d"></div><div class="swatch-name">ink-elev</div><div class="swatch-hex">#363f6d</div></div>
+      <div class="swatch"><div class="swatch-chip" style="background:rgba(15,18,32,0.55);backdrop-filter:blur(10px)"></div><div class="swatch-name">ink-mist (glass)</div><div class="swatch-hex">rgba+blur</div></div>
+    </div>
+
+    <div class="label-row" style="margin-top: 22px;"><div class="micro">Gold scale</div></div>
+    <div class="grid-3">
+      <div class="swatch"><div class="swatch-chip" style="background:#ffe9a3"></div><div class="swatch-name">gold-glow</div><div class="swatch-hex">#ffe9a3</div></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#ffdb8a"></div><div class="swatch-name">gold-soft</div><div class="swatch-hex">#ffdb8a</div></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#f4cf73"></div><div class="swatch-name">gold (primary)</div><div class="swatch-hex">#f4cf73</div></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#c89934"></div><div class="swatch-name">gold-dim</div><div class="swatch-hex">#c89934</div></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#876318"></div><div class="swatch-name">gold-deep</div><div class="swatch-hex">#876318</div></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#5e4413"></div><div class="swatch-name">gold-burn</div><div class="swatch-hex">#5e4413</div></div>
+    </div>
+
+    <div class="label-row" style="margin-top: 22px;"><div class="micro">Crimson (DAD shield) + ink (text)</div></div>
+    <div class="grid-3">
+      <div class="swatch"><div class="swatch-chip" style="background:#e25656"></div><div class="swatch-name">crimson-glow</div><div class="swatch-hex">#e25656</div></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#b13838"></div><div class="swatch-name">crimson</div><div class="swatch-hex">#b13838</div></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#6d1818"></div><div class="swatch-name">crimson-deep</div><div class="swatch-hex">#6d1818</div></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#f0e9d6"></div><div class="swatch-name">ink-cream (text)</div><div class="swatch-hex">#f0e9d6</div></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#a89e89"></div><div class="swatch-name">ink-soft</div><div class="swatch-hex">#a89e89</div></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#7a7464"></div><div class="swatch-name">ink-mute</div><div class="swatch-hex">#7a7464</div></div>
+    </div>
+
+    <div class="label-row" style="margin-top: 22px;"><div class="micro">Game-specific</div></div>
+    <div class="grid-4">
+      <div class="swatch"><div class="swatch-chip" style="background:#6fa8d6"></div><div class="swatch-name">troop-inf</div><div class="swatch-hex">#6fa8d6</div></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#c9883e"></div><div class="swatch-name">troop-cav</div><div class="swatch-hex">#c9883e</div></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#7fc08a"></div><div class="swatch-name">troop-arc</div><div class="swatch-hex">#7fc08a</div></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#a85cdb"></div><div class="swatch-name">conquest</div><div class="swatch-hex">#a85cdb</div></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#5cb874"></div><div class="swatch-name">expedition</div><div class="swatch-hex">#5cb874</div></div>
+    </div>
+  </section>
+
+  <!-- ========== §2 TYPOGRAPHY ========== -->
+  <section id="typo" class="section">
+    <div class="eyebrow">§2 · Typography</div>
+    <h2>Four fonts with character</h2>
+    <p class="body body-soft">
+      Cinzel Decorative for grand display, Cinzel for clean sub-display, Cormorant Garamond italic for quotes and decorative labels, Outfit for body, JetBrains Mono for numbers and code.
+    </p>
+
+    <div style="margin-top: 26px;">
+      <div class="specimen-row">
+        <div class="specimen-name">Cinzel Decorative</div>
+        <div class="specimen-sample">
+          <h1 style="font-size: 42px;"><span class="shimmer">DAD</span> WAR ROOM</h1>
+          <p class="micro" style="margin-top: 6px;">Major hero titles only</p>
+        </div>
+      </div>
+      <div class="specimen-row">
+        <div class="specimen-name">Cinzel (clean)</div>
+        <div class="specimen-sample">
+          <h2 style="font-family: var(--display-clean); font-weight: 600; font-size: 26px;">Bear Hunt 1</h2>
+          <p class="micro" style="margin-top: 6px;">Section headings, h2/h3</p>
+        </div>
+      </div>
+      <div class="specimen-row">
+        <div class="specimen-name">Cormorant Garamond italic</div>
+        <div class="specimen-sample">
+          <p class="quote" style="font-size: 22px;">"Elegance in Peace, Chaos in Battle."</p>
+          <p class="micro" style="margin-top: 6px;">Quotes, motto, drop caps</p>
+        </div>
+      </div>
+      <div class="specimen-row">
+        <div class="specimen-name">Outfit (body)</div>
+        <div class="specimen-sample">
+          <p class="body">How DAD farms the bear with wave-based rallies. The strongest players open first, their troops return quickly, and they can join the next waves again.</p>
+          <p class="micro" style="margin-top: 6px;">All body, UI labels, paragraphs</p>
+        </div>
+      </div>
+      <div class="specimen-row">
+        <div class="specimen-name">JetBrains Mono</div>
+        <div class="specimen-sample">
+          <div class="num" style="font-size: 32px; color: var(--gold);">6,647,408,084</div>
+          <p class="micro" style="margin-top: 6px;">Power values, countdowns, codes</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ornament-divider"><div class="line"></div><div class="diamond"></div><div class="diamond"></div><div class="line"></div></div>
+
+    <h3>Drop cap example</h3>
+    <p class="body dropcap" style="margin-top: 12px;">
+      Before the bear starts, save your seven formations in the game. This way, during the bear you just load each saved formation instantly instead of building squads under pressure. Each slot has a specific hero and troop composition designed for waves of rallies.
+    </p>
+  </section>
+
+  <!-- ========== §3 ICONS ========== -->
+  <section id="icons" class="section">
+    <div class="eyebrow">§3 · Iconography</div>
+    <h2>Phosphor duotone + custom SVG</h2>
+    <p class="body body-soft">Phosphor duotone for general UI (instantly more premium than Lucide outlines). Custom SVG for game-specific concepts. All sized to a 24×24 grid.</p>
+
+    <h3 style="margin-top: 22px;">Navigation icons — Phosphor duotone (real CDN load)</h3>
+    <p class="body body-soft" style="margin-bottom: 12px;">Loaded from <code style="color:var(--gold-soft);font-family:var(--mono);font-size:12px;">@phosphor-icons/web@2.1.1</code> CDN. Two-tone rendering with currentColor controlling primary, ~20% opacity secondary.</p>
+    <div class="icon-grid" style="margin-top: 12px;">
+      <div class="icon-tile" style="color: var(--gold);"><i class="ph-duotone ph-house" style="font-size:32px;"></i><span>Home</span></div>
+      <div class="icon-tile" style="color: var(--gold);"><i class="ph-duotone ph-sword" style="font-size:32px;"></i><span>Events</span></div>
+      <div class="icon-tile" style="color: var(--gold);"><i class="ph-duotone ph-users-three" style="font-size:32px;"></i><span>Members</span></div>
+      <div class="icon-tile" style="color: var(--gold);"><i class="ph-duotone ph-shield-star" style="font-size:32px;"></i><span>Alliance</span></div>
+      <div class="icon-tile" style="color: var(--gold);"><i class="ph-duotone ph-gear-six" style="font-size:32px;"></i><span>Settings</span></div>
+      <div class="icon-tile" style="color: var(--gold);"><i class="ph-duotone ph-bell-ringing" style="font-size:32px;"></i><span>Notification</span></div>
+      <div class="icon-tile" style="color: var(--gold);"><i class="ph-duotone ph-magnifying-glass" style="font-size:32px;"></i><span>Search</span></div>
+      <div class="icon-tile" style="color: var(--gold);"><i class="ph-duotone ph-calendar-blank" style="font-size:32px;"></i><span>Calendar</span></div>
+      <div class="icon-tile" style="color: var(--gold);"><i class="ph-duotone ph-trophy" style="font-size:32px;"></i><span>Trophy</span></div>
+      <div class="icon-tile" style="color: var(--gold);"><i class="ph-duotone ph-crown" style="font-size:32px;"></i><span>Crown</span></div>
+      <div class="icon-tile" style="color: var(--gold);"><i class="ph-duotone ph-shield-check" style="font-size:32px;"></i><span>Admin</span></div>
+      <div class="icon-tile" style="color: var(--gold);"><i class="ph-duotone ph-clock-countdown" style="font-size:32px;"></i><span>Clock</span></div>
+    </div>
+
+    <h3 style="margin-top: 26px;">Game-specific (REAL game icons from the wikis)</h3>
+    <p class="body body-soft" style="margin-bottom: 12px;">
+      Salles' call: don't recreate when the real icon exists. These were
+      scraped from kingshotwiki and live in <code style="color:var(--gold-soft);font-family:var(--mono);font-size:12px;">/public/images/</code>.
+    </p>
+    <div class="icon-grid">
+      <div class="icon-tile"><img src="/images/events/bear-hunt.png" alt="Bear" style="width:40px;height:40px;object-fit:contain;"><span>Bear Hunt</span></div>
+      <div class="icon-tile"><img src="/images/events/kvk.png" alt="KvK" style="width:40px;height:40px;object-fit:contain;"><span>KvK</span></div>
+      <div class="icon-tile"><img src="/images/events/viking-vengeance.png" alt="Viking" style="width:40px;height:40px;object-fit:contain;"><span>Viking</span></div>
+      <div class="icon-tile"><img src="/images/items/truegold.png" alt="Truegold" style="width:40px;height:40px;object-fit:contain;"><span>Truegold</span></div>
+      <div class="icon-tile"><img src="/images/items/truegold-dust.png" alt="Truegold Dust" style="width:40px;height:40px;object-fit:contain;"><span>TG Dust</span></div>
+      <div class="icon-tile"><img src="/images/items/gold.png" alt="Gold" style="width:40px;height:40px;object-fit:contain;"><span>Gold</span></div>
+      <div class="icon-tile"><img src="/images/buildings/town-center.png" alt="Town Center" style="width:40px;height:40px;object-fit:contain;"><span>Town Center</span></div>
+      <div class="icon-tile"><img src="/images/buildings/town-center-tg.png" alt="Town Center TG" style="width:40px;height:40px;object-fit:contain;"><span>Town Center · TG</span></div>
+      <div class="icon-tile"><img src="/images/buildings/war-academy.png" alt="War Academy" style="width:40px;height:40px;object-fit:contain;"><span>War Academy</span></div>
+      <div class="icon-tile"><img src="/images/buildings/barracks.png" alt="Barracks" style="width:40px;height:40px;object-fit:contain;"><span>Barracks · Inf</span></div>
+      <div class="icon-tile"><img src="/images/buildings/stable.png" alt="Stable" style="width:40px;height:40px;object-fit:contain;"><span>Stable · Cav</span></div>
+      <div class="icon-tile"><img src="/images/buildings/range.png" alt="Range" style="width:40px;height:40px;object-fit:contain;"><span>Range · Arc</span></div>
+      <div class="icon-tile"><img src="/images/buildings/truegold-crucible.png" alt="Truegold Crucible" style="width:40px;height:40px;object-fit:contain;"><span>TG Crucible</span></div>
+      <div class="icon-tile"><img src="/images/heroes/zoe.png" alt="Zoe portrait" style="width:40px;height:40px;object-fit:cover;border-radius:6px;border:1px solid rgba(244,207,115,0.4);"><span>Hero portrait</span></div>
+      <div class="icon-tile">
+        <svg viewBox="0 0 256 256" fill="none">
+          <path d="M40 70 L216 70 L216 150 Q216 210 128 232 Q40 210 40 150 Z" fill="#6d1818" stroke="#f4cf73" stroke-width="10"/>
+          <g transform="translate(128, 140)" fill="#f0e9d6">
+            <path d="M0,-50 Q-16,-26 -8,-6 Q0,-22 8,-6 Q16,-26 0,-50Z"/>
+            <path d="M-46,0 Q-46,28 -22,42 Q-28,18 -14,12 Q-36,4 -46,0Z"/>
+            <path d="M46,0 Q46,28 22,42 Q28,18 14,12 Q36,4 46,0Z"/>
+            <path d="M0,8 L10,28 L0,52 L-10,28 Z" fill="#f4cf73"/>
+          </g>
+        </svg>
+        <span>DAD Crest *</span>
+      </div>
+    </div>
+    <p class="footnote" style="margin-top: 14px;">
+      <strong>* DAD Crest is the only SVG kept</strong> — it's the alliance's own mark, not a game asset. Everything else uses the real raster icon.<br><br>
+      <strong>TODO before implementation:</strong> hunting skill-type icons (Conquest sword-shield, Expedition banner), hero star with petals, and per-tier troop badges. If not found on wikis, Salles can screenshot from the game and crop. Until then, typographic tier pills + Phosphor duotone fallbacks.
+    </p>
+  </section>
+
+  <!-- ========== §4 CARDS ========== -->
+  <section id="cards" class="section">
+    <div class="eyebrow">§4 · Surfaces</div>
+    <h2>Cards & layers</h2>
+    <p class="body body-soft">Three variants. Always rounded 18px. Inner top highlight that gives them weight. Featured cards get a top-edge gold gradient line.</p>
+
+    <div class="grid-2" style="margin-top: 22px;">
+      <div class="card">
+        <div class="micro">card · default</div>
+        <h3 style="margin-top: 8px;">Information block</h3>
+        <p class="body body-soft" style="margin-top: 8px;">Subtle gold-tinted gradient. Used for content lists, info tiles, generic display.</p>
+      </div>
+      <div class="card-elev card-featured">
+        <div class="micro">card-elev · featured</div>
+        <h3 style="margin-top: 8px;">Featured block</h3>
+        <p class="body body-soft" style="margin-top: 8px;">Top-edge gold line. Brighter gradient. Used for Next Event, Active Guide.</p>
+      </div>
+    </div>
+
+    <div class="card-glass" style="margin-top: 12px;">
+      <div class="micro">card-glass · floating</div>
+      <h3 style="margin-top: 8px;">Floating surface</h3>
+      <p class="body body-soft" style="margin-top: 8px;">backdrop-blur(24px) + saturate(160%). Used for sticky header, bottom nav, modals.</p>
+    </div>
+
+    <div class="ornament-divider"><div class="line"></div><div class="diamond"></div><div class="diamond"></div><div class="line"></div></div>
+
+    <h3>Card with ornament corners (premium frame)</h3>
+    <div class="card-elev card-featured card-ornament" style="margin-top: 12px;">
+      <div class="micro" style="color: var(--gold-soft);">⌖ The Golden Rule</div>
+      <h2 style="margin-top: 8px; font-size: 22px;">Always join the rally with the LEAST time left.</h2>
+      <p class="body" style="margin-top: 8px;">
+        Not every rally fills immediately, so give priority to the ones that will launch first. This is the only way we reach 50+ rallies per bear.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== §5 BACKGROUND ========== -->
+  <section id="bg" class="section">
+    <div class="eyebrow">§5 · Atmosphere</div>
+    <h2>Animated mesh + grain</h2>
+    <p class="body body-soft">Three radial gold/crimson/blue blobs drift slowly behind everything (60-90s cycle). Grain texture overlay keeps materials honest. Spotlight cursor effect on desktop hero areas.</p>
+
+    <div class="card" style="margin-top: 22px; height: 180px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+      <p class="quote" style="font-size: 20px; z-index: 1;">The mesh is the page background. Open this preview's source to see the animation.</p>
+      <span style="position: absolute; top: 12px; right: 12px; font-family: var(--mono); font-size: 10px; color: var(--ink-mute);">SEE BODY::BEFORE</span>
+    </div>
+  </section>
+
+  <!-- ========== §6 MOTION ========== -->
+  <section id="motion" class="section">
+    <div class="eyebrow">§6 · Motion</div>
+    <h2>Language of movement</h2>
+    <p class="body body-soft">Slow over fast. Everything has a reason. Respects prefers-reduced-motion.</p>
+
+    <h3 style="margin-top: 24px;">Live countdown ticker (the heart of the dashboard)</h3>
+    <div class="card-elev card-featured" style="margin-top: 12px;">
+      <div class="micro" style="color: var(--gold-soft);">⏳ Next event</div>
+      <h2 style="margin-top: 6px; font-size: 24px;">Bear Hunt 1</h2>
+      <div class="countdown" style="margin-top: 16px;">
+        <div class="seg"><div class="num">00</div><div class="lbl">Days</div></div>
+        <div class="sep">:</div>
+        <div class="seg"><div class="num">16</div><div class="lbl">Hours</div></div>
+        <div class="sep">:</div>
+        <div class="seg"><div class="num">22</div><div class="lbl">Min</div></div>
+        <div class="sep">:</div>
+        <div class="seg"><div class="num">05</div><div class="lbl">Sec</div></div>
+      </div>
+      <div class="ornament-divider" style="margin-top: 16px;"><div class="line"></div><div class="diamond"></div><div class="line"></div></div>
+      <div class="row" style="margin-top: 8px; justify-content: space-between;">
+        <div class="micro">Mon 15 Jun · 11:00 UTC</div>
+        <button class="btn btn-primary" style="min-height: 36px; padding: 8px 14px;">Guide →</button>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 32px;">Live status ripple</h3>
+    <div class="row" style="margin-top: 12px;">
+      <div class="badge badge-gold"><span class="status-dot"></span> [DAD] BIGDADDYS · Kingdom 1652</div>
+    </div>
+
+    <h3 style="margin-top: 32px;">Shimmer text</h3>
+    <h1 style="margin-top: 12px; font-size: 36px;"><span class="shimmer">BEAR</span> HUNT 1</h1>
+
+    <p class="footnote">More animations live in the implementation: page transitions, card stagger entrances, letter reveal, hover lift, press scale, float, glow pulse, scroll reveals.</p>
+  </section>
+
+  <!-- ========== §7 COMPONENTS ========== -->
+  <section id="components" class="section">
+    <div class="eyebrow">§7 · Components</div>
+    <h2>Buttons, badges, pills</h2>
+
+    <h3 style="margin-top: 22px;">Buttons</h3>
+    <div class="row" style="margin-top: 12px;">
+      <button class="btn btn-primary">Primary CTA</button>
+      <button class="btn btn-ghost">Ghost</button>
+      <button class="btn btn-danger">Danger</button>
+    </div>
+
+    <h3 style="margin-top: 26px;">Badges</h3>
+    <div class="row" style="margin-top: 12px;">
+      <span class="badge badge-active">✨ Active</span>
+      <span class="badge badge-gold">TG3</span>
+      <span class="badge badge-mute">🔒 Coming soon</span>
+      <span class="badge badge-danger">⏸ Out</span>
+      <span class="badge badge-success">● Online</span>
+    </div>
+
+    <h3 style="margin-top: 26px;">Skill / Tier pills</h3>
+    <div class="row" style="margin-top: 12px;">
+      <span class="skill-pill cq">⚔ Conquest</span>
+      <span class="skill-pill ex">⚑ Expedition</span>
+      <span class="tier-pill tg">TG5</span>
+      <span class="tier-pill tg">TG3</span>
+      <span class="tier-pill t">T10</span>
+      <span class="tier-pill t">T8</span>
+    </div>
+
+    <h3 style="margin-top: 26px;">Member roster cards (redesigned to match in-game aesthetic)</h3>
+    <p class="body body-soft" style="margin-bottom: 12px;">
+      Full-bleed card with portrait + rank-tinted frame + power (with real
+      Gold icon) + tier badge (with real Town Center icon — gold variant for TG players,
+      plain for pre-TG) + live online status + last-seen line.
+    </p>
+
+    <div style="display: grid; grid-template-columns: 1fr; gap: 10px;">
+
+      <!-- R5 JoDee -->
+      <div class="mem-card r5">
+        <span class="stripe"></span>
+        <div class="mem-portrait">
+          <span class="rank-tag">R5</span>
+          <img src="/images/heroes/zoe.png" alt="">
+        </div>
+        <div class="mem-main">
+          <div class="mem-nick">JoDee</div>
+          <div class="mem-stats">
+            <div class="mem-stat">158.7<span style="font-size:11px;color:var(--ink-soft);margin-left:2px;">M</span></div>
+            <span class="mem-tier"><img src="/images/tiers/tg3.png" alt="">TG3</span>
+          </div>
+        </div>
+        <svg class="mem-chev" width="14" height="14" viewBox="0 0 256 256" fill="none"><path d="M96 48L176 128L96 208" stroke="currentColor" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+
+      <!-- R4 Salles with DAD tag -->
+      <div class="mem-card r4">
+        <span class="stripe"></span>
+        <div class="mem-portrait">
+          <span class="rank-tag">R4</span>
+          <img src="/images/heroes/amadeus.png" alt="">
+        </div>
+        <div class="mem-main">
+          <div class="mem-nick">Salles <span class="dad-tag">ᴰᴬᴰ</span></div>
+          <div class="mem-stats">
+            <div class="mem-stat">155.4<span style="font-size:11px;color:var(--ink-soft);margin-left:2px;">M</span></div>
+            <span class="mem-tier"><img src="/images/tiers/tg3.png" alt="">TG3</span>
+          </div>
+        </div>
+        <svg class="mem-chev" width="14" height="14" viewBox="0 0 256 256" fill="none"><path d="M96 48L176 128L96 208" stroke="currentColor" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+
+      <!-- R3 IRØDZ -->
+      <div class="mem-card r3">
+        <span class="stripe"></span>
+        <div class="mem-portrait">
+          <span class="rank-tag">R3</span>
+          <img src="/images/heroes/chenko.png" alt="">
+        </div>
+        <div class="mem-main">
+          <div class="mem-nick">IRØDZ</div>
+          <div class="mem-stats">
+            <div class="mem-stat">150.3<span style="font-size:11px;color:var(--ink-soft);margin-left:2px;">M</span></div>
+            <span class="mem-tier"><img src="/images/tiers/tg3.png" alt="">TG3</span>
+          </div>
+        </div>
+        <svg class="mem-chev" width="14" height="14" viewBox="0 0 256 256" fill="none"><path d="M96 48L176 128L96 208" stroke="currentColor" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+
+      <!-- R4 Barbs — Out status -->
+      <div class="mem-card r4" style="opacity: 0.65;">
+        <span class="stripe"></span>
+        <div class="mem-portrait">
+          <span class="rank-tag">R4</span>
+          <img src="/images/heroes/marlin.png" alt="">
+        </div>
+        <div class="mem-main">
+          <div class="mem-nick">
+            Barbs <span class="dad-tag">ᴰᴬᴰ</span>
+            <span class="mem-out-tag">⏸ Out</span>
+          </div>
+          <div class="mem-stats">
+            <div class="mem-stat">111.1<span style="font-size:11px;color:var(--ink-soft);margin-left:2px;">M</span></div>
+            <span class="mem-tier"><img src="/images/tiers/tg2.png" alt="">TG2</span>
+          </div>
+        </div>
+        <svg class="mem-chev" width="14" height="14" viewBox="0 0 256 256" fill="none"><path d="M96 48L176 128L96 208" stroke="currentColor" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+
+      <!-- R3 Panda (pre-TG) -->
+      <div class="mem-card r3">
+        <span class="stripe"></span>
+        <div class="mem-portrait">
+          <span class="rank-tag">R3</span>
+          <img src="/images/heroes/howard.png" alt="">
+        </div>
+        <div class="mem-main">
+          <div class="mem-nick">Panda</div>
+          <div class="mem-stats">
+            <div class="mem-stat">67.8<span style="font-size:11px;color:var(--ink-soft);margin-left:2px;">M</span></div>
+            <span class="mem-tier pre">
+              <!-- Pre-TG troop gem badge — steel gradient with crossed swords inside.
+                   Same visual mass as the TG gems, but signals "still climbing, no Truegold yet". -->
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="steelGem" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#c4cbd9"/>
+                    <stop offset="50%" stop-color="#8d97aa"/>
+                    <stop offset="100%" stop-color="#5c6679"/>
+                  </linearGradient>
+                  <linearGradient id="steelGemInner" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#aab3c4"/>
+                    <stop offset="100%" stop-color="#3f4658"/>
+                  </linearGradient>
+                </defs>
+                <!-- 8-pointed star/gem outer -->
+                <path d="M32 2 L40 12 L52 8 L54 22 L62 32 L54 42 L52 56 L40 52 L32 62 L24 52 L12 56 L10 42 L2 32 L10 22 L12 8 L24 12 Z"
+                      fill="url(#steelGem)" stroke="#252b42" stroke-width="1.5"/>
+                <!-- Inner facet shadow -->
+                <path d="M32 10 L46 22 L46 42 L32 54 L18 42 L18 22 Z"
+                      fill="url(#steelGemInner)" opacity="0.85"/>
+                <!-- Crossed swords -->
+                <g stroke="#eef2f7" stroke-width="3" stroke-linecap="round" fill="none">
+                  <line x1="22" y1="22" x2="42" y2="42"/>
+                  <line x1="42" y1="22" x2="22" y2="42"/>
+                </g>
+                <!-- Sword hilts -->
+                <circle cx="22" cy="22" r="2.2" fill="#876318"/>
+                <circle cx="42" cy="22" r="2.2" fill="#876318"/>
+                <!-- Center jewel -->
+                <circle cx="32" cy="32" r="3" fill="#f4cf73" stroke="#876318" stroke-width="1"/>
+              </svg>
+              Nv.30 · T10
+            </span>
+          </div>
+        </div>
+        <svg class="mem-chev" width="14" height="14" viewBox="0 0 256 256" fill="none"><path d="M96 48L176 128L96 208" stroke="currentColor" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+
+    </div>
+
+    <p class="footnote" style="margin-top: 16px;">
+      <strong>Power:</strong> shown big in mono gold (no leading icon — the in-game gold-coin asset is currency, not strength). The "M" suffix is muted.<br><br>
+      <strong>Tier badge:</strong> for TG members uses the actual <code style="color:var(--gold-soft);font-family:var(--mono);font-size:12px;">tg1..tg8.png</code> gold gem from kingshot.net/database/truegold-requirements. For pre-TG members uses the plain <code style="color:var(--gold-soft);font-family:var(--mono);font-size:12px;">town-center.png</code> building icon with steel border, showing "Nv.X · TY" (kingdom level and resulting troop tier).<br><br>
+      <strong>NO online status:</strong> the site has no way to know who's logged into the game in real time. Removed.<br><br>
+      <strong>Out status:</strong> the only "status" we keep, inline next to the nick — because Salles manually flags it in the admin panel ("Barbs left temporarily, back today").
+    </p>
+  </section>
+
+  <!-- ========== §8 PAGES ========== -->
+  <section id="pages" class="section">
+    <div class="eyebrow">§8 · Page layouts</div>
+    <h2>Alliance hero (the brand moment)</h2>
+
+    <div class="card-elev card-featured alliance-hero" style="margin-top: 16px;">
+      <svg class="crest" viewBox="0 0 240 280">
+        <defs>
+          <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#ffdb8a"/>
+            <stop offset="50%" stop-color="#f4cf73"/>
+            <stop offset="100%" stop-color="#c89934"/>
+          </linearGradient>
+        </defs>
+        <path d="M20 60 L220 60 L220 175 Q220 220 120 268 Q20 220 20 175 Z" fill="#6d1818" stroke="url(#g)" stroke-width="4"/>
+        <g transform="translate(120, 158)" fill="#f0e9d6" stroke="#f4cf73" stroke-width="1.5">
+          <path d="M0,-70 Q-22,-38 -12,-10 Q0,-28 12,-10 Q22,-38 0,-70Z"/>
+          <path d="M-58,5 Q-58,38 -32,50 Q-40,26 -22,18 Q-46,9 -58,5Z"/>
+          <path d="M58,5 Q58,38 32,50 Q40,26 22,18 Q46,9 58,5Z"/>
+          <path d="M0,5 L14,32 L0,60 L-14,32Z" fill="url(#g)"/>
+        </g>
+      </svg>
+      <h1 style="margin-top: 6px; font-size: clamp(34px, 7vw, 52px);">
+        <span class="shimmer">DAD</span> BIGDADDYS
+      </h1>
+      <p class="quote" style="margin-top: 12px; font-size: 20px;">"Elegance in Peace, Chaos in Battle."</p>
+    </div>
+    <p class="footnote" style="margin-top: 10px;">
+      No chip · no kingdom badge here · no duplicate. The header already shows
+      "DAD War Room · Kingdom 1652" — the page title carries the alliance name,
+      and the typography breathes.
+    </p>
+
+    <h2 style="margin-top: 32px;">Bottom navigation</h2>
+    <p class="body body-soft" style="margin-bottom: 12px;">Using the **Phosphor duotone** icon set spec'd in §3 — house, swords, users-three, shield-star, gear-six.</p>
+    <div class="bottom-nav-preview">
+      <a class="bn-item"><i class="ph-duotone ph-house"></i><span>Home</span></a>
+      <a class="bn-item active"><i class="ph-duotone ph-sword"></i><span>Events</span></a>
+      <a class="bn-item"><i class="ph-duotone ph-users-three"></i><span>Members</span></a>
+      <a class="bn-item"><i class="ph-duotone ph-shield-star"></i><span>Alliance</span></a>
+      <a class="bn-item"><i class="ph-duotone ph-gear-six"></i><span>Settings</span></a>
+    </div>
+
+    <h2 style="margin-top: 36px;">Sticky header — the "plano babilônico"</h2>
+    <p class="body body-soft" style="margin-bottom: 14px;">Glass-blur sticky bar. On mobile it stays compact (no nav — bottom bar handles that). On desktop it shows the 5 nav links inline. Right side always has a notification bell (Phase 6 push opt-in) + admin discreet entry (gated by auth).</p>
+
+    <!-- HEADER MOCKUP — mobile -->
+    <div style="border-radius:18px; overflow:hidden; border: 1px solid rgba(244,207,115,0.18); box-shadow: 0 14px 32px -16px rgba(0,0,0,0.6);">
+      <div style="
+        display: flex; align-items: center; justify-content: space-between; gap: 12px;
+        padding: 12px 16px;
+        background: rgba(31, 37, 66, 0.78);
+        backdrop-filter: blur(20px) saturate(160%);
+        -webkit-backdrop-filter: blur(20px) saturate(160%);
+        border-bottom: 1px solid rgba(244,207,115,0.22);
+      ">
+        <div style="display: flex; align-items: center; gap: 12px; min-width: 0;">
+          <svg width="34" height="40" viewBox="0 0 240 280">
+            <defs>
+              <linearGradient id="hdg" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#ffdb8a"/>
+                <stop offset="100%" stop-color="#c89934"/>
+              </linearGradient>
+            </defs>
+            <path d="M20 60 L220 60 L220 175 Q220 220 120 268 Q20 220 20 175 Z" fill="#6d1818" stroke="url(#hdg)" stroke-width="6"/>
+            <g transform="translate(120, 158)" fill="#f0e9d6">
+              <path d="M0,-50 Q-16,-26 -8,-6 Q0,-22 8,-6 Q16,-26 0,-50Z"/>
+              <path d="M-46,0 Q-46,28 -22,42 Q-28,18 -14,12 Q-36,4 -46,0Z"/>
+              <path d="M46,0 Q46,28 22,42 Q28,18 14,12 Q36,4 46,0Z"/>
+              <path d="M0,8 L10,28 L0,52 L-10,28 Z" fill="url(#hdg)"/>
+            </g>
+          </svg>
+          <div style="min-width: 0;">
+            <div style="font-family: var(--display); font-weight: 700; font-size: 16px; letter-spacing: 0.18em; text-transform: uppercase; line-height: 1.05; white-space: nowrap;">
+              <span class="shimmer">DAD</span> <span style="color: var(--ink-cream);">War Room</span>
+            </div>
+            <div style="display: inline-flex; align-items: center; gap: 5px; font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--ink-mute); margin-top: 3px;">
+              <i class="ph-duotone ph-crown" style="font-size: 11px; color: var(--gold-soft);"></i>
+              Kingdom 1652
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <button class="btn-icon" style="
+            width:38px;height:38px;display:flex;align-items:center;justify-content:center;
+            background: rgba(244,207,115,0.06); border: 1px solid rgba(244,207,115,0.16); border-radius: 10px;
+            color: var(--ink-soft); cursor: pointer; position: relative;">
+            <i class="ph-duotone ph-bell-ringing" style="font-size: 18px;"></i>
+            <span style="position:absolute; top:5px; right:6px; width:8px; height:8px; border-radius:50%; background: var(--crimson-glow); box-shadow: 0 0 6px rgba(226,86,86,0.6);"></span>
+          </button>
+        </div>
+      </div>
+      <!-- Hairline gold beam under header -->
+      <div style="height:1px; background: linear-gradient(90deg, transparent, rgba(244,207,115,0.4), transparent);"></div>
+    </div>
+    <p class="footnote" style="margin-top: 8px;">
+      Mobile layout: crest + title + kingdom tag + notification bell (crimson dot = pending).
+    </p>
+
+    <!-- HEADER MOCKUP — desktop -->
+    <div style="margin-top: 16px; border-radius:18px; overflow:hidden; border: 1px solid rgba(244,207,115,0.18); box-shadow: 0 14px 32px -16px rgba(0,0,0,0.6);">
+      <div style="
+        display: flex; align-items: center; justify-content: space-between; gap: 14px;
+        padding: 14px 20px;
+        background: rgba(31, 37, 66, 0.78);
+        backdrop-filter: blur(20px) saturate(160%);
+        -webkit-backdrop-filter: blur(20px) saturate(160%);
+        border-bottom: 1px solid rgba(244,207,115,0.22);
+      ">
+        <div style="display: flex; align-items: center; gap: 12px; min-width: 0;">
+          <svg width="34" height="40" viewBox="0 0 240 280">
+            <path d="M20 60 L220 60 L220 175 Q220 220 120 268 Q20 220 20 175 Z" fill="#6d1818" stroke="url(#hdg)" stroke-width="6"/>
+            <g transform="translate(120, 158)" fill="#f0e9d6">
+              <path d="M0,-50 Q-16,-26 -8,-6 Q0,-22 8,-6 Q16,-26 0,-50Z"/>
+              <path d="M-46,0 Q-46,28 -22,42 Q-28,18 -14,12 Q-36,4 -46,0Z"/>
+              <path d="M46,0 Q46,28 22,42 Q28,18 14,12 Q36,4 46,0Z"/>
+              <path d="M0,8 L10,28 L0,52 L-10,28 Z" fill="url(#hdg)"/>
+            </g>
+          </svg>
+          <div style="font-family: var(--display); font-weight: 700; font-size: 17px; letter-spacing: 0.18em; text-transform: uppercase;">
+            <span class="shimmer">DAD</span> <span style="color: var(--ink-cream);">War Room</span>
+          </div>
+        </div>
+        <nav style="display: flex; gap: 4px; align-items: center;">
+          <a style="display:inline-flex; align-items:center; gap:6px; padding: 6px 12px; border-radius: 8px; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--ink-soft); text-decoration:none;"><i class="ph-duotone ph-house"></i>Home</a>
+          <a style="display:inline-flex; align-items:center; gap:6px; padding: 6px 12px; border-radius: 8px; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--gold-soft); background: rgba(244,207,115,0.12); border: 1px solid rgba(244,207,115,0.35); text-decoration:none;"><i class="ph-duotone ph-sword"></i>Events</a>
+          <a style="display:inline-flex; align-items:center; gap:6px; padding: 6px 12px; border-radius: 8px; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--ink-soft); text-decoration:none;"><i class="ph-duotone ph-users-three"></i>Members</a>
+          <a style="display:inline-flex; align-items:center; gap:6px; padding: 6px 12px; border-radius: 8px; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--ink-soft); text-decoration:none;"><i class="ph-duotone ph-shield-star"></i>Alliance</a>
+          <a style="display:inline-flex; align-items:center; gap:6px; padding: 6px 12px; border-radius: 8px; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--ink-soft); text-decoration:none;"><i class="ph-duotone ph-gear-six"></i>Settings</a>
+        </nav>
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <button class="btn-icon" style="width:38px;height:38px;display:flex;align-items:center;justify-content:center; background: rgba(244,207,115,0.06); border: 1px solid rgba(244,207,115,0.16); border-radius: 10px; color: var(--ink-soft); cursor: pointer;">
+            <i class="ph-duotone ph-magnifying-glass" style="font-size: 18px;"></i>
+          </button>
+          <button class="btn-icon" style="width:38px;height:38px;display:flex;align-items:center;justify-content:center; background: rgba(244,207,115,0.06); border: 1px solid rgba(244,207,115,0.16); border-radius: 10px; color: var(--ink-soft); cursor: pointer; position: relative;">
+            <i class="ph-duotone ph-bell-ringing" style="font-size: 18px;"></i>
+            <span style="position:absolute; top:5px; right:6px; width:8px; height:8px; border-radius:50%; background: var(--crimson-glow); box-shadow: 0 0 6px rgba(226,86,86,0.6);"></span>
+          </button>
+        </div>
+      </div>
+      <div style="height:1px; background: linear-gradient(90deg, transparent, rgba(244,207,115,0.4), transparent);"></div>
+    </div>
+    <p class="footnote" style="margin-top: 8px;">
+      Desktop layout: crest + title (no Kingdom tag — saves space) + 5 nav links in middle + search + notification bell on right.
+    </p>
+
+    <ul style="margin-top: 14px; padding-left: 20px; line-height: 1.8; color: var(--ink-paper); font-size: 14px;">
+      <li><strong>Sticky</strong> with glass-blur 20px + saturate 160% — content blurs underneath as it scrolls.</li>
+      <li><strong>Gold hairline</strong> at the bottom edge (linear gradient fading at ends).</li>
+      <li><strong>On scroll &gt; 24px:</strong> bg opacity bumps from 0.62 → 0.85, header height shrinks from 64px → 56px. Subtle.</li>
+      <li><strong>Notification bell:</strong> only renders if push subscription is active. Crimson dot = pending unread. Click → list of last 5 announcements (Phase 6).</li>
+      <li><strong>Admin link</strong> never appears in header. Lives in /settings → Advanced.</li>
+      <li><strong>Crest hover</strong> (desktop): subtle 6° rotation + brighten — flavor only.</li>
+    </ul>
+  </section>
+
+  <!-- ========== §10 PWA / FAVICONS / NOTIFICATIONS ========== -->
+  <section id="pwa" class="section">
+    <div class="eyebrow">§10 · PWA · Favicons · Notifications</div>
+    <h2>Install icons across systems</h2>
+    <p class="body body-soft">
+      We ship for browser tabs, iOS Home Screen install (PWA), Android install, and push notifications.
+      Each system reads <strong>different files</strong>. Below is the full asset matrix.
+    </p>
+
+    <h3 style="margin-top: 24px;">Asset matrix</h3>
+    <div style="overflow-x: auto;">
+      <table style="width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 13px;">
+        <thead>
+          <tr style="text-align: left; color: var(--gold-soft); border-bottom: 1px solid rgba(244,207,115,0.30);">
+            <th style="padding: 8px 10px;">Asset</th>
+            <th style="padding: 8px 10px;">Size</th>
+            <th style="padding: 8px 10px;">Format</th>
+            <th style="padding: 8px 10px;">Used by</th>
+          </tr>
+        </thead>
+        <tbody style="color: var(--ink-paper);">
+          <tr style="border-bottom: 1px dashed rgba(244,207,115,0.10);"><td style="padding:8px 10px;">favicon.svg</td><td style="padding:8px 10px;">scalable</td><td style="padding:8px 10px;">SVG</td><td style="padding:8px 10px;">Desktop browsers (Chrome, Firefox, Edge, Safari)</td></tr>
+          <tr style="border-bottom: 1px dashed rgba(244,207,115,0.10);"><td style="padding:8px 10px;">favicon-32.png</td><td style="padding:8px 10px;">32×32</td><td style="padding:8px 10px;">PNG</td><td style="padding:8px 10px;">Legacy browser tab fallback</td></tr>
+          <tr style="border-bottom: 1px dashed rgba(244,207,115,0.10);"><td style="padding:8px 10px;">favicon-16.png</td><td style="padding:8px 10px;">16×16</td><td style="padding:8px 10px;">PNG</td><td style="padding:8px 10px;">Legacy / small tab indicator</td></tr>
+          <tr style="border-bottom: 1px dashed rgba(244,207,115,0.10);"><td style="padding:8px 10px;">apple-touch-icon.png</td><td style="padding:8px 10px;">180×180</td><td style="padding:8px 10px;">PNG</td><td style="padding:8px 10px;"><strong>iOS Home Screen</strong> (Add to Home Screen). Apple ignores manifest icons.</td></tr>
+          <tr style="border-bottom: 1px dashed rgba(244,207,115,0.10);"><td style="padding:8px 10px;">icon-192.png</td><td style="padding:8px 10px;">192×192</td><td style="padding:8px 10px;">PNG</td><td style="padding:8px 10px;"><strong>Android PWA</strong> install icon. Required by manifest.</td></tr>
+          <tr style="border-bottom: 1px dashed rgba(244,207,115,0.10);"><td style="padding:8px 10px;">icon-512.png</td><td style="padding:8px 10px;">512×512</td><td style="padding:8px 10px;">PNG</td><td style="padding:8px 10px;"><strong>Android PWA</strong> splash + high-DPI. Required by manifest.</td></tr>
+          <tr style="border-bottom: 1px dashed rgba(244,207,115,0.10);"><td style="padding:8px 10px;">icon-maskable-192.png</td><td style="padding:8px 10px;">192×192</td><td style="padding:8px 10px;">PNG, 20% safe-zone padding</td><td style="padding:8px 10px;"><strong>Android adaptive</strong> icon (Samsung One UI, Pixel) — Android crops to system shape.</td></tr>
+          <tr style="border-bottom: 1px dashed rgba(244,207,115,0.10);"><td style="padding:8px 10px;">icon-maskable-512.png</td><td style="padding:8px 10px;">512×512</td><td style="padding:8px 10px;">PNG, 20% safe-zone padding</td><td style="padding:8px 10px;">Android adaptive HD</td></tr>
+          <tr style="border-bottom: 1px dashed rgba(244,207,115,0.10);"><td style="padding:8px 10px;">notification-badge.png</td><td style="padding:8px 10px;">96×96</td><td style="padding:8px 10px;">PNG, white-on-transparent silhouette</td><td style="padding:8px 10px;"><strong>Android push</strong> small icon in status bar. Must be monochrome (Android tints it).</td></tr>
+          <tr style="border-bottom: 1px dashed rgba(244,207,115,0.10);"><td style="padding:8px 10px;">notification-large.png</td><td style="padding:8px 10px;">192×192</td><td style="padding:8px 10px;">PNG, full color</td><td style="padding:8px 10px;">Push notification thumbnail / iOS rich notification</td></tr>
+          <tr><td style="padding:8px 10px;">splash-*.png (iOS)</td><td style="padding:8px 10px;">multiple — see below</td><td style="padding:8px 10px;">PNG</td><td style="padding:8px 10px;"><strong>iOS PWA</strong> launch splash per device.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- VISUAL ICON RENDERS -->
+    <h3 style="margin-top: 30px;">Icon renders (mock — what each file looks like)</h3>
+    <p class="body body-soft" style="margin-bottom: 14px;">
+      Master source: the refined DAD crest SVG. All variants below are derived from it.
+      Production assets are generated automatically by <code style="color:var(--gold-soft);font-family:var(--mono);font-size:12px;">@vite-pwa/assets-generator</code>.
+    </p>
+
+    <!-- Shared SVG defs reused below -->
+    <svg width="0" height="0" style="position:absolute;">
+      <defs>
+        <linearGradient id="pwaGold" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#ffe9a3"/>
+          <stop offset="50%" stop-color="#f4cf73"/>
+          <stop offset="100%" stop-color="#c89934"/>
+        </linearGradient>
+        <linearGradient id="pwaCrimson" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#b13838"/>
+          <stop offset="100%" stop-color="#6d1818"/>
+        </linearGradient>
+        <radialGradient id="pwaBg" cx="50%" cy="40%" r="60%">
+          <stop offset="0%" stop-color="#1f2542"/>
+          <stop offset="100%" stop-color="#0a0b14"/>
+        </radialGradient>
+      </defs>
+    </svg>
+
+    <style>
+      .ico-row { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end; }
+      .ico-tile { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px; border-radius: 12px; border: 1px solid rgba(244,207,115,0.16); background: rgba(244,207,115,0.03); min-width: 140px; }
+      .ico-tile .label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.20em; color: var(--ink-soft); font-weight: 600; text-align: center; line-height: 1.4; }
+      .ico-tile .label small { display:block; font-family: var(--mono); letter-spacing: 0; text-transform: none; color: var(--ink-mute); font-size: 10px; margin-top: 2px; font-weight: 400; }
+      /* Standard PWA icon — full-bleed crest on void bg */
+      .ico-pwa { display: block; border-radius: 0; background: var(--ink-void); padding: 0; }
+      /* Maskable visual overlay */
+      .maskable-wrap { position: relative; }
+      .maskable-wrap::after {
+        content: ''; position: absolute; inset: 0; border-radius: 50%;
+        box-shadow: 0 0 0 2px rgba(244,207,115,0.45), 0 0 0 999px rgba(0,0,0,0.55);
+        pointer-events: none;
+      }
+      .maskable-wrap.squircle::after { border-radius: 28%; }
+      /* Apple touch icon — iOS automatically rounds; we save flat */
+      .ico-apple {
+        border-radius: 0;
+        background: var(--ink-void);
+      }
+      .ico-apple-rendered {
+        border-radius: 22%;
+        background: var(--ink-void);
+        box-shadow: 0 6px 24px -8px rgba(0,0,0,0.5);
+      }
+      /* Notification badge mono */
+      .ico-badge {
+        background: rgba(255,255,255,0.05);
+        border: 1px dashed rgba(255,255,255,0.25);
+        border-radius: 0;
+      }
+    </style>
+
+    <!-- Crest as a reusable SVG snippet -->
+    <template id="crest-svg"></template>
+
+    <!-- Favicon / 32 / 16 -->
+    <div class="micro" style="margin-top: 14px; color: var(--gold-soft);">Browser favicons</div>
+    <div class="ico-row" style="margin-top: 8px;">
+      <div class="ico-tile">
+        <svg class="ico-pwa" width="64" height="64" viewBox="0 0 240 280" preserveAspectRatio="xMidYMid meet">
+          <rect width="240" height="280" fill="url(#pwaBg)"/>
+          <path d="M30 70 L210 70 L210 170 Q210 215 120 260 Q30 215 30 170 Z" fill="url(#pwaCrimson)" stroke="url(#pwaGold)" stroke-width="6"/>
+          <g transform="translate(120, 155)" fill="#f0e9d6">
+            <path d="M0,-55 Q-18,-30 -10,-8 Q0,-26 10,-8 Q18,-30 0,-55Z"/>
+            <path d="M-52,3 Q-52,32 -25,46 Q-32,21 -16,14 Q-40,5 -52,3Z"/>
+            <path d="M52,3 Q52,32 25,46 Q32,21 16,14 Q40,5 52,3Z"/>
+            <path d="M0,8 L12,32 L0,55 L-12,32 Z" fill="url(#pwaGold)"/>
+          </g>
+        </svg>
+        <div class="label">favicon.svg<small>scalable · all browsers</small></div>
+      </div>
+      <div class="ico-tile">
+        <svg class="ico-pwa" width="32" height="32" viewBox="0 0 240 280" preserveAspectRatio="xMidYMid meet">
+          <rect width="240" height="280" fill="url(#pwaBg)"/>
+          <path d="M30 70 L210 70 L210 170 Q210 215 120 260 Q30 215 30 170 Z" fill="url(#pwaCrimson)" stroke="url(#pwaGold)" stroke-width="6"/>
+          <g transform="translate(120, 155)" fill="#f0e9d6">
+            <path d="M0,-55 Q-18,-30 -10,-8 Q0,-26 10,-8 Q18,-30 0,-55Z"/>
+            <path d="M-52,3 Q-52,32 -25,46 Q-32,21 -16,14 Q-40,5 -52,3Z"/>
+            <path d="M52,3 Q52,32 25,46 Q32,21 16,14 Q40,5 52,3Z"/>
+            <path d="M0,8 L12,32 L0,55 L-12,32 Z" fill="url(#pwaGold)"/>
+          </g>
+        </svg>
+        <div class="label">favicon-32.png<small>32×32 · legacy fallback</small></div>
+      </div>
+      <div class="ico-tile">
+        <svg class="ico-pwa" width="16" height="16" viewBox="0 0 240 280" preserveAspectRatio="xMidYMid meet">
+          <rect width="240" height="280" fill="url(#pwaBg)"/>
+          <path d="M30 70 L210 70 L210 170 Q210 215 120 260 Q30 215 30 170 Z" fill="url(#pwaCrimson)" stroke="url(#pwaGold)" stroke-width="6"/>
+          <g transform="translate(120, 155)" fill="#f0e9d6">
+            <path d="M0,-55 Q-18,-30 -10,-8 Q0,-26 10,-8 Q18,-30 0,-55Z"/>
+            <path d="M-52,3 Q-52,32 -25,46 Q-32,21 -16,14 Q-40,5 -52,3Z"/>
+            <path d="M52,3 Q52,32 25,46 Q32,21 16,14 Q40,5 52,3Z"/>
+            <path d="M0,8 L12,32 L0,55 L-12,32 Z" fill="url(#pwaGold)"/>
+          </g>
+        </svg>
+        <div class="label">favicon-16.png<small>16×16 · small tab</small></div>
+      </div>
+    </div>
+
+    <!-- iOS apple-touch -->
+    <div class="micro" style="margin-top: 22px; color: var(--gold-soft);">iOS Home Screen (Add to Home Screen)</div>
+    <div class="ico-row" style="margin-top: 8px;">
+      <div class="ico-tile">
+        <svg class="ico-apple" width="120" height="120" viewBox="0 0 240 280" preserveAspectRatio="xMidYMid meet">
+          <rect width="240" height="280" fill="url(#pwaBg)"/>
+          <path d="M30 70 L210 70 L210 170 Q210 215 120 260 Q30 215 30 170 Z" fill="url(#pwaCrimson)" stroke="url(#pwaGold)" stroke-width="6"/>
+          <g transform="translate(120, 155)" fill="#f0e9d6">
+            <path d="M0,-55 Q-18,-30 -10,-8 Q0,-26 10,-8 Q18,-30 0,-55Z"/>
+            <path d="M-52,3 Q-52,32 -25,46 Q-32,21 -16,14 Q-40,5 -52,3Z"/>
+            <path d="M52,3 Q52,32 25,46 Q32,21 16,14 Q40,5 52,3Z"/>
+            <path d="M0,8 L12,32 L0,55 L-12,32 Z" fill="url(#pwaGold)"/>
+          </g>
+        </svg>
+        <div class="label">apple-touch-icon.png<small>180×180 · raw file</small></div>
+      </div>
+      <div class="ico-tile">
+        <svg class="ico-apple-rendered" width="120" height="120" viewBox="0 0 240 280" preserveAspectRatio="xMidYMid meet">
+          <rect width="240" height="280" fill="url(#pwaBg)"/>
+          <path d="M30 70 L210 70 L210 170 Q210 215 120 260 Q30 215 30 170 Z" fill="url(#pwaCrimson)" stroke="url(#pwaGold)" stroke-width="6"/>
+          <g transform="translate(120, 155)" fill="#f0e9d6">
+            <path d="M0,-55 Q-18,-30 -10,-8 Q0,-26 10,-8 Q18,-30 0,-55Z"/>
+            <path d="M-52,3 Q-52,32 -25,46 Q-32,21 -16,14 Q-40,5 -52,3Z"/>
+            <path d="M52,3 Q52,32 25,46 Q32,21 16,14 Q40,5 52,3Z"/>
+            <path d="M0,8 L12,32 L0,55 L-12,32 Z" fill="url(#pwaGold)"/>
+          </g>
+        </svg>
+        <div class="label">how it renders<small>iOS auto-rounds corners</small></div>
+      </div>
+    </div>
+
+    <!-- Android standard + maskable -->
+    <div class="micro" style="margin-top: 22px; color: var(--gold-soft);">Android PWA install icons</div>
+    <div class="ico-row" style="margin-top: 8px;">
+      <div class="ico-tile">
+        <svg class="ico-pwa" width="120" height="120" viewBox="0 0 240 280" preserveAspectRatio="xMidYMid meet">
+          <rect width="240" height="280" fill="url(#pwaBg)"/>
+          <path d="M30 70 L210 70 L210 170 Q210 215 120 260 Q30 215 30 170 Z" fill="url(#pwaCrimson)" stroke="url(#pwaGold)" stroke-width="6"/>
+          <g transform="translate(120, 155)" fill="#f0e9d6">
+            <path d="M0,-55 Q-18,-30 -10,-8 Q0,-26 10,-8 Q18,-30 0,-55Z"/>
+            <path d="M-52,3 Q-52,32 -25,46 Q-32,21 -16,14 Q-40,5 -52,3Z"/>
+            <path d="M52,3 Q52,32 25,46 Q32,21 16,14 Q40,5 52,3Z"/>
+            <path d="M0,8 L12,32 L0,55 L-12,32 Z" fill="url(#pwaGold)"/>
+          </g>
+        </svg>
+        <div class="label">icon-192.png<small>standard install</small></div>
+      </div>
+      <div class="ico-tile">
+        <svg class="ico-pwa" width="100" height="100" viewBox="0 0 240 280" preserveAspectRatio="xMidYMid meet">
+          <rect width="240" height="280" fill="url(#pwaBg)"/>
+          <path d="M30 70 L210 70 L210 170 Q210 215 120 260 Q30 215 30 170 Z" fill="url(#pwaCrimson)" stroke="url(#pwaGold)" stroke-width="6"/>
+          <g transform="translate(120, 155)" fill="#f0e9d6">
+            <path d="M0,-55 Q-18,-30 -10,-8 Q0,-26 10,-8 Q18,-30 0,-55Z"/>
+            <path d="M-52,3 Q-52,32 -25,46 Q-32,21 -16,14 Q-40,5 -52,3Z"/>
+            <path d="M52,3 Q52,32 25,46 Q32,21 16,14 Q40,5 52,3Z"/>
+            <path d="M0,8 L12,32 L0,55 L-12,32 Z" fill="url(#pwaGold)"/>
+          </g>
+        </svg>
+        <div class="label">icon-512.png<small>HD + splash</small></div>
+      </div>
+      <div class="ico-tile">
+        <div class="maskable-wrap" style="position: relative;">
+          <svg class="ico-pwa" width="120" height="120" viewBox="0 0 240 280" preserveAspectRatio="xMidYMid meet" style="background: linear-gradient(135deg, #2a3158, #1d2236);">
+            <!-- Same crest but at 80% scale, centered, to show safe-zone respected -->
+            <g transform="translate(120,140) scale(0.7) translate(-120,-140)">
+              <path d="M30 70 L210 70 L210 170 Q210 215 120 260 Q30 215 30 170 Z" fill="url(#pwaCrimson)" stroke="url(#pwaGold)" stroke-width="6"/>
+              <g transform="translate(120, 155)" fill="#f0e9d6">
+                <path d="M0,-55 Q-18,-30 -10,-8 Q0,-26 10,-8 Q18,-30 0,-55Z"/>
+                <path d="M-52,3 Q-52,32 -25,46 Q-32,21 -16,14 Q-40,5 -52,3Z"/>
+                <path d="M52,3 Q52,32 25,46 Q32,21 16,14 Q40,5 52,3Z"/>
+                <path d="M0,8 L12,32 L0,55 L-12,32 Z" fill="url(#pwaGold)"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="label">icon-maskable-192<small>circle = Android crop</small></div>
+      </div>
+      <div class="ico-tile">
+        <div class="maskable-wrap squircle" style="position: relative;">
+          <svg class="ico-pwa" width="120" height="120" viewBox="0 0 240 280" preserveAspectRatio="xMidYMid meet" style="background: linear-gradient(135deg, #2a3158, #1d2236);">
+            <g transform="translate(120,140) scale(0.7) translate(-120,-140)">
+              <path d="M30 70 L210 70 L210 170 Q210 215 120 260 Q30 215 30 170 Z" fill="url(#pwaCrimson)" stroke="url(#pwaGold)" stroke-width="6"/>
+              <g transform="translate(120, 155)" fill="#f0e9d6">
+                <path d="M0,-55 Q-18,-30 -10,-8 Q0,-26 10,-8 Q18,-30 0,-55Z"/>
+                <path d="M-52,3 Q-52,32 -25,46 Q-32,21 -16,14 Q-40,5 -52,3Z"/>
+                <path d="M52,3 Q52,32 25,46 Q32,21 16,14 Q40,5 52,3Z"/>
+                <path d="M0,8 L12,32 L0,55 L-12,32 Z" fill="url(#pwaGold)"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="label">maskable on squircle<small>e.g. Samsung One UI</small></div>
+      </div>
+    </div>
+
+    <!-- Notification icons -->
+    <div class="micro" style="margin-top: 22px; color: var(--gold-soft);">Push notification icons</div>
+    <div class="ico-row" style="margin-top: 8px;">
+      <div class="ico-tile">
+        <svg class="ico-badge" width="96" height="96" viewBox="0 0 240 280" preserveAspectRatio="xMidYMid meet">
+          <g transform="translate(120, 155)" fill="#ffffff">
+            <path d="M0,-75 Q-22,-42 -14,-8 Q0,-32 14,-8 Q22,-42 0,-75Z"/>
+            <path d="M-65,2 Q-65,38 -32,55 Q-38,26 -20,16 Q-50,5 -65,2Z"/>
+            <path d="M65,2 Q65,38 32,55 Q38,26 20,16 Q50,5 65,2Z"/>
+            <path d="M0,8 L16,38 L0,68 L-16,38 Z"/>
+          </g>
+        </svg>
+        <div class="label">notification-badge.png<small>96×96 · mono white</small></div>
+      </div>
+      <div class="ico-tile">
+        <svg class="ico-pwa" width="96" height="96" viewBox="0 0 240 280" preserveAspectRatio="xMidYMid meet">
+          <rect width="240" height="280" fill="url(#pwaBg)"/>
+          <path d="M30 70 L210 70 L210 170 Q210 215 120 260 Q30 215 30 170 Z" fill="url(#pwaCrimson)" stroke="url(#pwaGold)" stroke-width="6"/>
+          <g transform="translate(120, 155)" fill="#f0e9d6">
+            <path d="M0,-55 Q-18,-30 -10,-8 Q0,-26 10,-8 Q18,-30 0,-55Z"/>
+            <path d="M-52,3 Q-52,32 -25,46 Q-32,21 -16,14 Q-40,5 -52,3Z"/>
+            <path d="M52,3 Q52,32 25,46 Q32,21 16,14 Q40,5 52,3Z"/>
+            <path d="M0,8 L12,32 L0,55 L-12,32 Z" fill="url(#pwaGold)"/>
+          </g>
+        </svg>
+        <div class="label">notification-large.png<small>192×192 · full color</small></div>
+      </div>
+    </div>
+
+    <!-- Mock notifications in OS shells -->
+    <div class="micro" style="margin-top: 28px; color: var(--gold-soft);">How notifications actually look on each system</div>
+    <div class="grid-2" style="margin-top: 10px;">
+      <!-- Android mock -->
+      <div class="card" style="padding: 0; overflow: hidden;">
+        <div style="background: #0e0f12; padding: 10px 16px; color: #b8bcc5; font-family: 'Outfit', sans-serif; font-size: 11px;">
+          <strong style="color: #fff;">Android (Chrome PWA)</strong>
+        </div>
+        <div style="background: linear-gradient(180deg, #1a1d24, #0e0f12); padding: 14px 16px;">
+          <div style="display: flex; gap: 10px; padding: 12px 14px; border-radius: 14px; background: #1f2128; border: 1px solid rgba(255,255,255,0.06);">
+            <div style="display: flex; flex-direction: column; gap: 10px; min-width: 0; flex: 1;">
+              <div style="display: flex; align-items: center; gap: 8px; font-size: 11px; color: #9ba2ac;">
+                <!-- Small monochrome icon (status bar style) -->
+                <svg width="14" height="14" viewBox="0 0 240 280" preserveAspectRatio="xMidYMid meet">
+                  <g transform="translate(120, 155)" fill="#9ba2ac">
+                    <path d="M0,-75 Q-22,-42 -14,-8 Q0,-32 14,-8 Q22,-42 0,-75Z"/>
+                    <path d="M-65,2 Q-65,38 -32,55 Q-38,26 -20,16 Q-50,5 -65,2Z"/>
+                    <path d="M65,2 Q65,38 32,55 Q38,26 20,16 Q50,5 65,2Z"/>
+                    <path d="M0,8 L16,38 L0,68 L-16,38 Z"/>
+                  </g>
+                </svg>
+                <span>War Room · now</span>
+              </div>
+              <div>
+                <div style="font-weight: 600; color: #fff; font-size: 14px; line-height: 1.3;">Bear Hunt 1 starts in 15 min</div>
+                <div style="color: #c0c4cc; font-size: 13px; margin-top: 3px; line-height: 1.4;">Save your formations now. Wave 1 opens at 11:00 UTC.</div>
+              </div>
+            </div>
+            <!-- Large color icon thumbnail -->
+            <svg width="48" height="48" viewBox="0 0 240 280" preserveAspectRatio="xMidYMid meet" style="border-radius: 8px; flex-shrink: 0; align-self: center;">
+              <rect width="240" height="280" fill="url(#pwaBg)"/>
+              <path d="M30 70 L210 70 L210 170 Q210 215 120 260 Q30 215 30 170 Z" fill="url(#pwaCrimson)" stroke="url(#pwaGold)" stroke-width="6"/>
+              <g transform="translate(120, 155)" fill="#f0e9d6">
+                <path d="M0,-55 Q-18,-30 -10,-8 Q0,-26 10,-8 Q18,-30 0,-55Z"/>
+                <path d="M-52,3 Q-52,32 -25,46 Q-32,21 -16,14 Q-40,5 -52,3Z"/>
+                <path d="M52,3 Q52,32 25,46 Q32,21 16,14 Q40,5 52,3Z"/>
+                <path d="M0,8 L12,32 L0,55 L-12,32 Z" fill="url(#pwaGold)"/>
+              </g>
+            </svg>
+          </div>
+          <p style="font-size: 10px; color: #6a6f78; margin-top: 8px; text-align: center;">Material You · system tinted mono icon at top</p>
+        </div>
+      </div>
+
+      <!-- iOS mock -->
+      <div class="card" style="padding: 0; overflow: hidden;">
+        <div style="background: #1c1c1e; padding: 10px 16px; color: #98989f; font-family: -apple-system, 'SF Pro Display', sans-serif; font-size: 11px;">
+          <strong style="color: #fff;">iOS 16.4+ (Safari PWA)</strong>
+        </div>
+        <div style="background: linear-gradient(180deg, #2a2c30, #1a1a1c); padding: 14px 16px;">
+          <div style="display: flex; gap: 10px; padding: 12px 14px; border-radius: 16px; background: rgba(60,60,67,0.5); backdrop-filter: blur(14px); border: 0.5px solid rgba(255,255,255,0.08); font-family: -apple-system, 'SF Pro Display', sans-serif;">
+            <!-- Apple-touch-icon as rounded square -->
+            <svg width="38" height="38" viewBox="0 0 240 280" preserveAspectRatio="xMidYMid meet" style="border-radius: 10px; flex-shrink: 0; background: var(--ink-void);">
+              <rect width="240" height="280" fill="url(#pwaBg)"/>
+              <path d="M30 70 L210 70 L210 170 Q210 215 120 260 Q30 215 30 170 Z" fill="url(#pwaCrimson)" stroke="url(#pwaGold)" stroke-width="6"/>
+              <g transform="translate(120, 155)" fill="#f0e9d6">
+                <path d="M0,-55 Q-18,-30 -10,-8 Q0,-26 10,-8 Q18,-30 0,-55Z"/>
+                <path d="M-52,3 Q-52,32 -25,46 Q-32,21 -16,14 Q-40,5 -52,3Z"/>
+                <path d="M52,3 Q52,32 25,46 Q32,21 16,14 Q40,5 52,3Z"/>
+                <path d="M0,8 L12,32 L0,55 L-12,32 Z" fill="url(#pwaGold)"/>
+              </g>
+            </svg>
+            <div style="flex: 1; min-width: 0;">
+              <div style="display: flex; justify-content: space-between; font-size: 11px; color: #aeaeb2;">
+                <span style="font-weight: 600;">WAR ROOM</span>
+                <span>now</span>
+              </div>
+              <div style="margin-top: 2px;">
+                <div style="font-weight: 600; color: #fff; font-size: 14px; line-height: 1.3;">Bear Hunt 1 starts in 15 min</div>
+                <div style="color: #d1d1d6; font-size: 13px; margin-top: 1px; line-height: 1.4;">Save your formations now. Wave 1 opens at 11:00 UTC.</div>
+              </div>
+            </div>
+          </div>
+          <p style="font-size: 10px; color: #6c6c70; margin-top: 8px; text-align: center;">iOS · single app icon (the touch-icon), no separate thumbnail</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mock Home Screen installed -->
+    <div class="micro" style="margin-top: 28px; color: var(--gold-soft);">How the installed app looks on Home Screen</div>
+    <div class="grid-2" style="margin-top: 10px;">
+      <div class="card" style="padding: 16px;">
+        <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 12px;">
+          <i class="ph-duotone ph-android-logo" style="font-size: 16px; color: var(--gold-soft);"></i>
+          <strong style="font-size: 13px; color: var(--ink-cream);">Android (Pixel launcher · circle)</strong>
+        </div>
+        <div style="display: flex; gap: 12px; align-items: flex-start;">
+          <div style="text-align: center;">
+            <div style="width: 64px; height: 64px; border-radius: 50%; overflow: hidden; background: linear-gradient(135deg, #2a3158, #1d2236); display: flex; align-items: center; justify-content: center;">
+              <svg width="48" height="48" viewBox="0 0 240 280" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(120,140) scale(0.7) translate(-120,-140)">
+                  <path d="M30 70 L210 70 L210 170 Q210 215 120 260 Q30 215 30 170 Z" fill="url(#pwaCrimson)" stroke="url(#pwaGold)" stroke-width="6"/>
+                  <g transform="translate(120, 155)" fill="#f0e9d6">
+                    <path d="M0,-55 Q-18,-30 -10,-8 Q0,-26 10,-8 Q18,-30 0,-55Z"/>
+                    <path d="M-52,3 Q-52,32 -25,46 Q-32,21 -16,14 Q-40,5 -52,3Z"/>
+                    <path d="M52,3 Q52,32 25,46 Q32,21 16,14 Q40,5 52,3Z"/>
+                    <path d="M0,8 L12,32 L0,55 L-12,32 Z" fill="url(#pwaGold)"/>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div style="font-size: 11px; color: var(--ink-cream); margin-top: 6px; font-family: 'Outfit'; font-weight: 500;">War Room</div>
+          </div>
+          <div style="text-align: center;">
+            <div style="width: 64px; height: 64px; border-radius: 22%; overflow: hidden; background: linear-gradient(135deg, #2a3158, #1d2236); display: flex; align-items: center; justify-content: center;">
+              <svg width="48" height="48" viewBox="0 0 240 280" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(120,140) scale(0.7) translate(-120,-140)">
+                  <path d="M30 70 L210 70 L210 170 Q210 215 120 260 Q30 215 30 170 Z" fill="url(#pwaCrimson)" stroke="url(#pwaGold)" stroke-width="6"/>
+                  <g transform="translate(120, 155)" fill="#f0e9d6">
+                    <path d="M0,-55 Q-18,-30 -10,-8 Q0,-26 10,-8 Q18,-30 0,-55Z"/>
+                    <path d="M-52,3 Q-52,32 -25,46 Q-32,21 -16,14 Q-40,5 -52,3Z"/>
+                    <path d="M52,3 Q52,32 25,46 Q32,21 16,14 Q40,5 52,3Z"/>
+                    <path d="M0,8 L12,32 L0,55 L-12,32 Z" fill="url(#pwaGold)"/>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div style="font-size: 11px; color: var(--ink-cream); margin-top: 6px; font-family: 'Outfit'; font-weight: 500;">War Room</div>
+          </div>
+        </div>
+        <p style="font-size: 11px; color: var(--ink-mute); margin-top: 12px; line-height: 1.5;">Pixel: circle mask · Samsung: squircle · OnePlus: teardrop. The maskable variant guarantees the crest stays centered inside the safe-zone.</p>
+      </div>
+
+      <div class="card" style="padding: 16px;">
+        <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 12px;">
+          <i class="ph-duotone ph-apple-logo" style="font-size: 16px; color: var(--gold-soft);"></i>
+          <strong style="font-size: 13px; color: var(--ink-cream);">iOS · always rounded corners</strong>
+        </div>
+        <div style="display: flex; gap: 12px; align-items: flex-start;">
+          <div style="text-align: center;">
+            <div style="width: 64px; height: 64px; border-radius: 22%; overflow: hidden; background: var(--ink-void); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 18px -8px rgba(0,0,0,0.7);">
+              <svg width="64" height="64" viewBox="0 0 240 280" preserveAspectRatio="xMidYMid meet">
+                <rect width="240" height="280" fill="url(#pwaBg)"/>
+                <path d="M30 70 L210 70 L210 170 Q210 215 120 260 Q30 215 30 170 Z" fill="url(#pwaCrimson)" stroke="url(#pwaGold)" stroke-width="6"/>
+                <g transform="translate(120, 155)" fill="#f0e9d6">
+                  <path d="M0,-55 Q-18,-30 -10,-8 Q0,-26 10,-8 Q18,-30 0,-55Z"/>
+                  <path d="M-52,3 Q-52,32 -25,46 Q-32,21 -16,14 Q-40,5 -52,3Z"/>
+                  <path d="M52,3 Q52,32 25,46 Q32,21 16,14 Q40,5 52,3Z"/>
+                  <path d="M0,8 L12,32 L0,55 L-12,32 Z" fill="url(#pwaGold)"/>
+                </g>
+              </svg>
+            </div>
+            <div style="font-size: 11px; color: var(--ink-cream); margin-top: 6px; font-family: -apple-system, sans-serif; font-weight: 400;">War Room</div>
+          </div>
+        </div>
+        <p style="font-size: 11px; color: var(--ink-mute); margin-top: 12px; line-height: 1.5;">iOS rounds ANY app icon to a fixed 22% radius squircle — we don't author the rounding, the OS does. The crest fills edge-to-edge inside.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 26px;">iOS PWA — what's specific</h3>
+    <div class="card" style="margin-top: 10px;">
+      <ul style="padding-left: 20px; line-height: 1.8; color: var(--ink-paper); font-size: 14px;">
+        <li><strong>Apple ignores manifest.json icons.</strong> They read <code style="color:var(--gold-soft); font-family:var(--mono); font-size:12px;">&lt;link rel="apple-touch-icon" href="/apple-touch-icon.png"&gt;</code> — 180×180 PNG, no rounded corners (iOS rounds them).</li>
+        <li><strong>Status bar:</strong> add <code style="color:var(--gold-soft); font-family:var(--mono); font-size:12px;">&lt;meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"&gt;</code> so our dark UI bleeds under the iOS notch.</li>
+        <li><strong>Theme color:</strong> <code style="color:var(--gold-soft); font-family:var(--mono); font-size:12px;">&lt;meta name="theme-color" content="#13172a"&gt;</code> matches our `--ink-void`.</li>
+        <li><strong>App title on Home Screen:</strong> <code style="color:var(--gold-soft); font-family:var(--mono); font-size:12px;">&lt;meta name="apple-mobile-web-app-title" content="War Room"&gt;</code></li>
+        <li><strong>Launch splash screens:</strong> need PNGs per device (iPhone 14 Pro, 15, 15 Pro Max, SE, iPad, etc.) — we generate them from one master 2048×2048 PNG via <code style="color:var(--gold-soft); font-family:var(--mono); font-size:12px;">vite-plugin-pwa</code>'s splash generator.</li>
+        <li><strong>Web Push:</strong> only works on iOS 16.4+ when the user has installed the PWA (Add to Home Screen). Requires user permission. Notification icon shape uses the apple-touch-icon.</li>
+        <li><strong>PWA install:</strong> iOS has NO auto-install banner. We need a custom in-app "Install" hint that shows once per session for iOS Safari users.</li>
+      </ul>
+    </div>
+
+    <h3 style="margin-top: 24px;">Android PWA — what's specific</h3>
+    <div class="card" style="margin-top: 10px;">
+      <ul style="padding-left: 20px; line-height: 1.8; color: var(--ink-paper); font-size: 14px;">
+        <li><strong>Reads manifest.json fully.</strong> The 192 + 512 icons (and maskable variants) are required for "Add to Home Screen" prompt.</li>
+        <li><strong>Auto-install banner:</strong> Chrome shows the install prompt automatically when criteria met (HTTPS, manifest, service worker, valid icons). We can also trigger it manually with <code style="color:var(--gold-soft); font-family:var(--mono); font-size:12px;">window.deferredPrompt.prompt()</code> bound to a button in Settings.</li>
+        <li><strong>Maskable icons:</strong> Android crops adaptive icons into circle/squircle/teardrop depending on launcher. Our maskable PNG must keep the DAD crest inside a 80% center safe zone — anything in the outer 20% can be cropped.</li>
+        <li><strong>Theme color:</strong> sets the toolbar color on Android Chrome AND the install-banner accent.</li>
+        <li><strong>Web Push:</strong> full Web Push API supported. Background sync for notifications when app closed. Notification badge icon must be monochrome white-on-transparent.</li>
+        <li><strong>Splash screen:</strong> auto-generated from manifest theme_color + 512 icon. No separate splash images needed (unlike iOS).</li>
+      </ul>
+    </div>
+
+    <h3 style="margin-top: 24px;">Notification spec — what shows</h3>
+    <div class="grid-2" style="margin-top: 10px;">
+      <div class="card">
+        <div class="micro" style="color: var(--gold-soft);">Android</div>
+        <h3 style="margin-top: 6px; font-size: 16px;">Status-bar layout</h3>
+        <ul style="padding-left: 18px; margin-top: 8px; font-size: 13px; color: var(--ink-paper); line-height: 1.7;">
+          <li><strong>Small icon:</strong> 96×96, mono white-on-transparent (Android tints it). Shows in status bar AND on lock screen badge.</li>
+          <li><strong>Large icon:</strong> 192×192 full-color (the DAD crest in gold/crimson). Shows as the thumbnail next to the notification text.</li>
+          <li><strong>Title:</strong> "Bear Hunt 1 starts in 15 min"</li>
+          <li><strong>Body:</strong> "Save your formations now. Wave 1 opens at 11:00 UTC."</li>
+          <li><strong>Tap action:</strong> opens <code style="color:var(--gold-soft); font-family:var(--mono); font-size:12px;">/bear-1</code> in the PWA.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="micro" style="color: var(--gold-soft);">iOS (16.4+, PWA installed)</div>
+        <h3 style="margin-top: 6px; font-size: 16px;">Notification banner</h3>
+        <ul style="padding-left: 18px; margin-top: 8px; font-size: 13px; color: var(--ink-paper); line-height: 1.7;">
+          <li><strong>App icon</strong> on the banner uses the apple-touch-icon (180×180).</li>
+          <li><strong>Title:</strong> same as Android.</li>
+          <li><strong>Body:</strong> same.</li>
+          <li><strong>No badge count</strong> on the home-screen icon (iOS PWA limitation).</li>
+          <li><strong>No rich images</strong> in notification (iOS PWA can't include image: yet).</li>
+          <li><strong>Tap action:</strong> opens the PWA at the given URL.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 26px;">Implementation TODO (handled in Phase 6 push + Phase 10 deploy)</h3>
+    <ol style="padding-left: 20px; line-height: 1.8; color: var(--ink-paper); font-size: 14px;">
+      <li>Author <strong>1 master crest PNG at 1024×1024</strong> (refined version of DadCrest SVG with proper gold gradients baked in).</li>
+      <li>Generate the full icon set with <code style="color:var(--gold-soft); font-family:var(--mono); font-size:12px;">pwa-assets-generator</code> (CLI bundled with vite-plugin-pwa).</li>
+      <li>Author the monochrome notification badge (96×96 white silhouette of the crest trinity).</li>
+      <li>Update <code style="color:var(--gold-soft); font-family:var(--mono); font-size:12px;">vite.config.ts</code> PWA manifest with full icon array + maskable + apple-touch.</li>
+      <li>Add iOS-specific meta tags in <code style="color:var(--gold-soft); font-family:var(--mono); font-size:12px;">index.html</code>.</li>
+      <li>Generate iOS splash screens (one per device class).</li>
+      <li>Build the in-app "Install" hint (mobile-only, dismissable, shows once per session for non-installed users).</li>
+    </ol>
+
+    <p class="footnote" style="margin-top: 14px;">
+      Total set: ~14 image files (1 SVG + 2 favicons + 1 apple-touch + 4 PWA icons inc. maskable + 2 notification + 4 iOS splashes). All generated from 1 master crest PNG.
+    </p>
+  </section>
+
+  <!-- ========== §9 FX ========== -->
+  <section id="fx" class="section">
+    <div class="eyebrow">§9 · Premium effects (the "uau" list)</div>
+    <h2>What ships in v1</h2>
+    <ul style="margin-top: 14px; padding-left: 20px; line-height: 1.9; color: var(--ink-paper);">
+      <li>Animated mesh gradient background (global, 80s cycle)</li>
+      <li>Spotlight cursor effect on hero areas (desktop)</li>
+      <li>Border-beam (top-edge static gold line) on featured cards</li>
+      <li>Shimmer gold text on hero h1 keywords</li>
+      <li>Letter reveal animation on first paint</li>
+      <li>Number ticker (countdown digits, power values)</li>
+      <li>Float animation on DAD crest in Alliance hero</li>
+      <li>Ripple ring on live status dots</li>
+      <li>Card stagger entrance (60ms between siblings)</li>
+      <li>Page transitions (fade + slide)</li>
+      <li>Custom SVG ornaments at card corners (subtle)</li>
+      <li>Drop caps in major section paragraphs</li>
+      <li>Sticky glass header with backdrop-blur + saturate</li>
+      <li>Bottom-nav active glow + dot indicator</li>
+    </ul>
+
+    <div class="card-elev" style="margin-top: 36px; text-align: center;">
+      <div class="eyebrow">Approval gate</div>
+      <h2 style="margin-top: 10px;">Sign off and I rebuild in one pass.</h2>
+      <p class="body body-soft" style="margin-top: 8px;">~3–4 hours of focused work, after which every page in the app matches this spec.</p>
+      <div class="row" style="justify-content: center; margin-top: 18px;">
+        <button class="btn btn-primary">✓ Approve all</button>
+        <button class="btn btn-ghost">Mark issues</button>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>

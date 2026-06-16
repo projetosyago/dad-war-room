@@ -1,0 +1,1488 @@
+{
+  "admin": {
+    "accounts": {
+      "backToMembers": "メンバーに戻る",
+      "eyebrow": "管理者",
+      "title": "アカウント",
+      "closeForm": "フォームを閉じる",
+      "newAccount": "新しいアカウント",
+      "filters": {
+        "all": "すべて",
+        "members": "DADメンバー",
+        "allies": "同盟者"
+      },
+      "emptyState": "このフィルタのアカウントはありません.",
+      "youLabel": "you",
+      "lastLogin": "最後のログイン {{when}}",
+      "rosterTooltip": "エステル: {{nick}} ({{rank}})",
+      "rosterFallback": "roster",
+      "lvlShort": "lvl {{level}}",
+      "unlinkTitle": "ロスターからのリンク解除",
+      "unlink": "ダウンロード",
+      "linkTitle": "ロースター会員へのリンク",
+      "link": "サイトマップ",
+      "resetTitle": "パスワードの再設定",
+      "reset": "リセット",
+      "deactivateTitle": "無効化",
+      "reactivateTitle": "再活性化",
+      "off": "オフ",
+      "on": "お問い合わせ",
+      "passwordTooShort": "パスワードは6文字以上でなければなりません.",
+      "resetPasswordPrompt": "{{name}} (@{{username}}) 用の新しい TEMPORARY パスワードを設定します。\n会員は、次のサインインで変更を余儀なくされます.",
+      "cantDeactivateSelf": "自分自身を非アクティブにすることはできません - 別のR5にそれを行うように依頼してください.",
+      "confirmDeactivate": "{{name}}を非アクティブ化しますか?",
+      "confirmReactivate": "{{name}}を再活性化しますか?",
+      "errors": {
+        "failedToCreate": "アカウントを作成できない",
+        "failedToReset": "パスワードのリセットに失敗",
+        "failedToLink": "リンクに失敗",
+        "failedToToggle": "アクティブなステータスを更新できなかった"
+      },
+      "feedback": {
+        "created": "「{{name}}」({{role}}) を作成しました.",
+        "passwordReset": "{{name}} のパスワードリセット.",
+        "linked": "{{target}}にリンクされている{{name}}.",
+        "unlinked": "{{name}} はリンクを解除しました.",
+        "reactivated": "{{name}}再活性化.",
+        "deactivated": "{{name}}非アクティブ化."
+      },
+      "form": {
+        "heading": "新しいアカウント",
+        "usernameLabel": "ユーザー名 *",
+        "usernamePlaceholder": "alice",
+        "usernameHint": "ログインするために使用される",
+        "displayNameLabel": "表示名",
+        "displayNameHint": "ユーザー名へのデフォルト",
+        "passwordLabel": "パスワード *",
+        "passwordPlaceholder": "6文字以上",
+        "roleLabel": "役割 *",
+        "languageLabel": "日本語 English",
+        "cancel": "キャンセル",
+        "creating": "作成..",
+        "create": "アカウントの作成"
+      },
+      "roles": {
+        "ally": {
+          "label": "アリー",
+          "description": "ディプロマティック ゲスト — チャットでの読み込みのみ、投稿."
+        },
+        "member": {
+          "label": "会員(R1)",
+          "description": "通常のDADメンバー."
+        },
+        "r2": {
+          "label": "R2",
+          "description": "役員(管理者権限がない)."
+        },
+        "r3": {
+          "label": "R3",
+          "description": "役員(管理者権限がない)."
+        },
+        "r4": {
+          "label": "R4 — Admin",
+          "description": "Polls/events を作成し、同盟国を管理します."
+        },
+        "r5": {
+          "label": "R5 — Admin",
+          "description": "他のアカウントを管理する(他のR5を含む)."
+        }
+      },
+      "relative": {
+        "never": "なし",
+        "justNow": "ただ今",
+        "minutesAgo": "{{count}}m 前に",
+        "hoursAgo": "{{count}}h 前に",
+        "daysAgo": "{{count}}d 前に",
+        "monthsAgo": "{{count}}mo 前に",
+        "yearsAgo": "{{count}}y 前に"
+      },
+      "linkPicker": {
+        "heading": "ロスターへのリンク",
+        "close": "閉じる",
+        "searchPlaceholder": "ロスター検索..",
+        "noMatch": "会員は「{{query}}」と一致しません.",
+        "allLinked": "すべてのロースターメンバーがリンクしています."
+      }
+    },
+    "alliance": {
+      "backToAdmin": "管理者へ戻る",
+      "eyebrow": "管理者",
+      "title": "同盟",
+      "cards": {
+        "timeline": {
+          "title": "王国タイムライン",
+          "subtitle": "TGティア、ヒーロー/ペット生成、マスター、フォグのロック解除日を編集します."
+        },
+        "catalogue": {
+          "title": "カタログ",
+          "subtitle": "英雄、ペット、マスター、トループの層 - すべてのページの背後にあるゲームデータ."
+        },
+        "announcements": {
+          "title": "お知らせ",
+          "subtitle": "プッシュ通知をメンバーにまとめてスケジュールします."
+        }
+      },
+      "metadata": {
+        "eyebrow": "パブリック情報",
+        "title": "メタデータを編集する",
+        "intro": "<allianceLink>/alliance</allianceLink>にランク、モット、タグライン、ブランドカラー、およびキャプチャ日付が表示されます。 これらの値は、<c>alliance settings</c>テーブルに住んでいます.",
+        "rankLabel": "ランキング",
+        "rankPlaceholder": "#2",
+        "taglineLabel": "タグライン",
+        "taglinePlaceholder": "Kingdom 1652",
+        "mottoLabel": "モットー",
+        "mottoPlaceholder": "平和のエレガンス、戦いの混乱.",
+        "brandPrimaryLabel": "ブランドプライマリ(六角)",
+        "brandAccentLabel": "ブランドアクセント(六角)",
+        "capturedAtLabel": "キャプチャ",
+        "loadError": "負荷間違い: {{message}}",
+        "saveError": "保存エラー: {{message}}",
+        "saved": "保存しました",
+        "updatedAt": "{{date}}の更新",
+        "loading": "読み込み中…",
+        "saving": "保存..",
+        "save": "保存"
+      }
+    },
+    "analytics": {
+      "backToAdmin": "管理者へ戻る",
+      "eyebrow": "管理者",
+      "title": "分析",
+      "kpi": {
+        "onlineNow": {
+          "label": "オンライン中",
+          "sub": "最後の5分のサインイン"
+        },
+        "activeSessions": {
+          "label": "アクティブなセッション",
+          "sub": "最後の24時間サインイン"
+        },
+        "totalAccounts": {
+          "label": "総アカウント数",
+          "sub": "{{count}} アクティブ"
+        },
+        "neverLoggedIn": {
+          "label": "未ログイン",
+          "sub": "ニーズオンボーディング"
+        },
+        "failedSignins": {
+          "label": "失敗したサインイン",
+          "sub": "最後の24時間"
+        }
+      },
+      "activity": {
+        "heading": "アクティビティウィンドウ",
+        "intro": "ウィンドウにタッチされたアカウント ( last login at から派生する), 未加工サインインではなく.",
+        "last24h": "最後の 24 時間",
+        "last7d": "最後の 7d",
+        "last30d": "最後 30d",
+        "pctOfAccounts": "{{pct}}%のアカウント"
+      },
+      "pwa": {
+        "heading": "PWA は割れた取付けます",
+        "installed": "インストール済み",
+        "browserOnly": "ブラウザのみ",
+        "summary": "{{total}}アカウントの{{installed}}({{pct}}%)がWar Roomをホーム画面に追加しました."
+      },
+      "push": {
+        "heading": "プッシュデリバリー(最終30d)",
+        "opened": "オープン",
+        "ignored": "無視される",
+        "note": "今すぐモック — 船をプッシュするとワイヤーアップ。 通知パネルに1通知を追跡しました."
+      },
+      "never": {
+        "heading": "未ログイン"
+      },
+      "langs": {
+        "heading": "言語分布"
+      },
+      "footnote": "Login events からオンラインで今やアクティブなセッションが読み込まれます。 プッシュ デリバリーは、プッシュ シップまでモックされます."
+    },
+    "catalogue": {
+      "backToAlliance": "同盟へ戻る",
+      "eyebrow": "管理者・カタログ",
+      "title": "ゲームカタログ",
+      "intro": "タイムライン、アバター、トループガイド、スタットカードを出力するカタログ表を管理します。 ここでは、<c>heroes</c>、<c>pets</c>、<c>masters</c>および<c>troop tiers</c>から読み取るすべての公開ページに移動します.",
+      "cards": {
+        "heroes": {
+          "title": "ヒーロー",
+          "subtitle": "ロスター、肖像画、世代別、好まれたトループブランチ."
+        },
+        "pets": {
+          "title": "ペット",
+          "subtitle": "生成によるコンパニオン — ポートレート、説明、リリース."
+        },
+        "masters": {
+          "title": "マスター",
+          "subtitle": "戦略的アドバイザーは、アンロックシーケンスで注文しました."
+        },
+        "troopTiers": {
+          "title": "兵種ティア",
+          "subtitle": "T1.T10 と Truegold 層 — ラベル、トレーニング、アイコン."
+        }
+      }
+    },
+    "chat": {
+      "backToAdmin": "管理者へ戻る",
+      "eyebrow": "管理者",
+      "title": "チャット",
+      "unsaved": "unsaved",
+      "save": "保存",
+      "savedAt": "保存・{{time}}",
+      "rateLimit": {
+        "title": "レート制限(ユーザごとに)",
+        "subtitle": "単一のアカウントが1時間に投稿できるメッセージの数のソフトキャップ.",
+        "messagesPerHour": "メッセージ/時間",
+        "minSeconds": "メッセージ間の最小秒"
+      },
+      "attachments": {
+        "title": "添付ファイル",
+        "subtitle": "アップロードできるメンバー 音声+ビデオはv1で無効になっています.",
+        "allowImages": "画像のアップロードを許可する",
+        "maxFileSize": "最大ファイルサイズ"
+      },
+      "purge": {
+        "title": "パージメッセージ",
+        "subtitle": "すべてのチャットメッセージとアップロードされた画像のワンショットワイプ。 誰もできない.",
+        "clearAll": "すべてのメッセージをクリアする",
+        "confirmHeading": "永続削除の確認",
+        "confirmBody": "すべてのチャットメッセージとアップロードされた画像が消えます。 過去の投票、イベント、メンバーは無接触にとどまります.",
+        "cancel": "キャンセル",
+        "confirmYes": "はい、すべてを拭く"
+      },
+      "defaults": {
+        "title": "デフォルト",
+        "subtitle": "推奨開始点にすべての値をリセットします.",
+        "restore": "デフォルトを復元する"
+      },
+      "footnote": "注意: チャット自体は後で出荷します。 これらのコントロールは、今日のローカルで永続化されているため、パネルは準備が整っています。メッセージテーブルがライブになったら、このページはUIに触れることなく、サーバーにバックアップされたコンフィグ行にスワップします."
+    },
+    "eventParticipants": {
+      "backToOccurrences": "発生に戻る",
+      "eyebrow": "イベント参加者",
+      "eventFallback": "イベント",
+      "durationMin": "{{count}}min",
+      "addHeading": "参加者の追加",
+      "memberLabel": "メンバー",
+      "allAssigned": "既に割り当てられたすべてのメンバー",
+      "roleLabel": "役割",
+      "notesLabel": "ノート(任意)",
+      "notesPlaceholder": "Squadの割り当て、バックアップ計画、特別な指示..",
+      "notesInputPlaceholder": "ノート(任意)",
+      "adding": "追加..",
+      "addButton": "参加者の追加",
+      "assignedHeading": "受託・{{count}}",
+      "emptyState": "参加者がまだ割り当てられません.",
+      "statusTempOut": "アウト (temp)",
+      "statusLeft": "ふりがな",
+      "cancel": "キャンセル",
+      "save": "保存",
+      "confirm": "確認",
+      "cancelDelete": "キャンセル削除",
+      "editAria": "{{nick}} の編集",
+      "removeAria": "{{nick}}を削除",
+      "roles": {
+        "leader": "Leader",
+        "joiner": "Joiner",
+        "standby": "Standby",
+        "unset": "アンセット",
+        "unsetOption": "— 未設定 —"
+      },
+      "errors": {
+        "notFound": "職業が見つかりません.",
+        "failedToLoad": "負荷発生に失敗しました.",
+        "failedToAdd": "参加者を追加できません.",
+        "failedToUpdate": "参加者の更新に失敗しました.",
+        "failedToRemove": "参加者を削除できません."
+      },
+      "feedback": {
+        "added": "参加者追加.",
+        "updated": "参加者を更新しました.",
+        "removed": "部分的な削除."
+      }
+    },
+    "events": {
+      "backToAdmin": "管理者へ戻る",
+      "eyebrow": "管理者",
+      "title": "イベントカタログ",
+      "occurrencesLink": "職業",
+      "newEvent": "新イベント",
+      "close": "閉じる",
+      "confirmArchive": "イベントのアーカイブ オールエイブンスグリッドから隠されます.",
+      "errorFailed": "失敗した",
+      "feedback": {
+        "archived": "アーカイブ.",
+        "restored": "これからのスーンとして復元.",
+        "created": "イベント作成."
+      },
+      "form": {
+        "heading": "季節のイベント",
+        "nameLabel": "お名前 *",
+        "namePlaceholder": "Lunar Festival",
+        "shortNameLabel": "短縮名",
+        "shortNamePlaceholder": "Lunar",
+        "descriptionLabel": "説明",
+        "iconUrlLabel": "アイコンURL",
+        "iconUrlPlaceholder": "/images/events/lunar.png",
+        "seasonal": "日帰り・季節限定",
+        "create": "作成"
+      },
+      "seasonalBadge": "季節限定",
+      "actions": {
+        "restore": "リストア",
+        "archive": "アーカイブ"
+      }
+    },
+    "heroes": {
+      "backToCatalogue": "カタログに戻る",
+      "eyebrow": "管理者・カタログ",
+      "title": "ヒーロー",
+      "newHero": "新しいヒーロー",
+      "cancel": "キャンセル",
+      "create": "作成",
+      "edit": "編集",
+      "cancelEdit": "キャンセル",
+      "save": "保存",
+      "inactive": "inactive",
+      "genLabel": "Gen {{gen}}",
+      "branch": {
+        "none": "—",
+        "infantry": "インファントリー",
+        "cavalry": "キャバレー",
+        "archer": "アーチャー"
+      },
+      "errors": {
+        "nameRequired": "ヒーローの名前を入力します.",
+        "invalidSlug": "無効なスラグ。 文字と数字を使用します.",
+        "failedToCreate": "ヒーローを作る失敗",
+        "failedToDelete": "削除失敗",
+        "nameRequiredShort": "お名前必須.",
+        "failedToSave": "保存失敗"
+      },
+      "confirmDelete": {
+        "heading": "「{{name}}」を永久に削除しますか?",
+        "body": "Slug {{slug}}および肖像画は取除きます。 このアクションは元に戻すことができません.",
+        "yes": "はい、削除"
+      },
+      "fields": {
+        "name": "名前",
+        "slugSuggested": "スラグ(混雑:",
+        "slugPlaceholder": "ex: shen-yu",
+        "generation": "ジェネレーション (1-12)",
+        "role": "役割",
+        "rolePlaceholder": "例:マーシャル",
+        "preferredBranch": "優先支店",
+        "portrait": "ポートレート",
+        "portraitUploadLabel": "ヒーローポートレート",
+        "description": "説明",
+        "releasedAt": "リリース",
+        "displayOrder": "表示順序",
+        "active": "アクティブ"
+      }
+    },
+    "iconPicker": {
+      "groups": {
+        "truegoldTiers": "Truegold tiers",
+        "items": "アイテム",
+        "buildings": "建物",
+        "events": "イベント",
+        "heroes": "ヒーロー"
+      },
+      "currentIcon": "現在のアイコン",
+      "noOverride": "オーバーライドなし",
+      "autoLabel": "自動・{{path}}",
+      "clear": "クリア",
+      "customUrlLabel": "またはカスタムURLを貼り付ける(ウェブ上の任意の画像)",
+      "customUrlPlaceholder": "https://wiki.kingshot.gg/.../some-icon.png",
+      "apply": "適用",
+      "uploadOwn": "自分の画像をアップロードする"
+    },
+    "masters": {
+      "backToCatalogue": "カタログに戻る",
+      "eyebrow": "管理者・カタログ",
+      "title": "マスター",
+      "newMaster": "新しいマスター",
+      "cancel": "キャンセル",
+      "create": "作成",
+      "edit": "編集",
+      "cancelEdit": "キャンセル",
+      "save": "保存",
+      "inactive": "inactive",
+      "unlockOrderLabel": "ブロック解除 #{{order}}",
+      "errors": {
+        "nameRequired": "マスターの名前を入力してください.",
+        "invalidSlug": "無効なスラグ。 文字と数字を使用します.",
+        "failedToCreate": "マスターを作成する失敗",
+        "failedToDelete": "削除失敗",
+        "nameRequiredShort": "お名前必須.",
+        "failedToSave": "保存失敗"
+      },
+      "confirmDelete": {
+        "heading": "「{{name}}」を永久に削除しますか?",
+        "body": "Slug {{slug}} は削除されます。 このアクションは元に戻すことができません.",
+        "yes": "はい、削除"
+      },
+      "fields": {
+        "name": "名前",
+        "slugSuggested": "スラグ(混雑:",
+        "unlockOrder": "注文のロック解除",
+        "portrait": "ポートレート",
+        "portraitUploadLabel": "マスターポートレート",
+        "description": "説明",
+        "releasedAt": "リリース",
+        "active": "アクティブ"
+      }
+    },
+    "members": {
+      "backToAdmin": "管理者へ戻る",
+      "eyebrow": "管理者",
+      "title": "会員名簿",
+      "statsMembers": "{{count}}メンバー",
+      "statsTempOut": "{{count}} 温度. アウト",
+      "combinedPower": "結合された力",
+      "accountsLink": "アカウント",
+      "searchPlaceholder": "ニックで検索…",
+      "filters": {
+        "all": "すべて",
+        "out": "インフォメーション"
+      },
+      "feedbackSaved": "保存{{nick}}.",
+      "emptyState": "会員がこのフィルターにマッチしません.",
+      "tempOutShort": "テンプアウト",
+      "leftShort": "left",
+      "lvlLabel": "lvl {{level}}",
+      "editButton": "編集",
+      "subgroups": {
+        "supreme": "Supreme (R4)",
+        "enforcerer": "Enforcerer (R3)",
+        "alpha": "Alpha (R2)",
+        "lieutenant": "Lieutenant (R1)"
+      },
+      "statuses": {
+        "active": "アクティブ",
+        "temporaryOut": "温度. アウト",
+        "left": "ふりがな"
+      },
+      "errors": {
+        "tgOrTc": "TGレベルまたはタウンセンターは、どちらも使用しないでください.",
+        "failedToSave": "保存失敗"
+      },
+      "edit": {
+        "heading": "編集・{{nick}}",
+        "close": "閉じる",
+        "nickLabel": "Nick",
+        "rankLabel": "ランキング",
+        "subgroupLabel": "サブグループ",
+        "noneOption": "— なし —",
+        "powerLabel": "パワー(ミリオン)",
+        "powerHint": "— 例: 158.7",
+        "tgLabel": "TGレベル",
+        "tgPlaceholder": "1-8",
+        "tcLabel": "タウンセンター",
+        "tcPlaceholder": "25-30",
+        "statusLabel": "状態",
+        "tempOutNote": "なぜ、いつ、戻るのか?",
+        "leftNote": "離れる理由",
+        "langHintLabel": "Langのヒント",
+        "langHintHint": "— 例:zh-CN、pt",
+        "optional": "optional",
+        "cancel": "キャンセル",
+        "saving": "保存..",
+        "save": "保存"
+      }
+    },
+    "milestones": {
+      "backToAlliance": "同盟へ戻る",
+      "eyebrow": "管理者",
+      "title": "王国のマイルストーン",
+      "newMilestone": "新しいマイルストーン",
+      "cancel": "キャンセル",
+      "create": "作成",
+      "edit": "編集",
+      "cancelEdit": "キャンセル",
+      "save": "保存",
+      "intro": "各マイルストーンのロック解除日を設定します。 ダッシュボードでは、次のダッシュボードのライブ日数カウントダウンが表示されます.",
+      "view": "ニュース",
+      "openPublic": "パブリックページを開く",
+      "deleteTitle": "マイルストーンの削除",
+      "achievedBadge": "achieved",
+      "preview": "プレビュー",
+      "afterCreateHint": "作成後、以下のリストにアイテムを開き、豊富なコンテンツ(Tiptap)を埋めます.",
+      "bodyPlaceholder": "このマイルストーンについて書きます: それが何であるか、それがアライアンス、戦略の変更、有用なリンクにどのように影響するか..",
+      "errors": {
+        "nameRequired": "新しいマイルストーンの名前を入力します.",
+        "invalidSlug": "スラグ生成のための無効な名前。 文字と数字を使用します.",
+        "failedToCreate": "マイルストーンを作成する失敗",
+        "failedToDelete": "削除失敗",
+        "nameRequiredShort": "マイルストーン名が必要です.",
+        "failedToSave": "保存失敗"
+      },
+      "confirmDelete": {
+        "heading": "「{{name}}」を永久に削除しますか?",
+        "body": "公開ページ /timeline/{{slug}} と全てのコンテンツが削除されます。 このアクションは元に戻すことができません.",
+        "yes": "はい、削除"
+      },
+      "categories": {
+        "truegold": "Truegold",
+        "heroes": "ヒーロー",
+        "pets": "ペット",
+        "pvp": "PvP",
+        "feature": "Feature",
+        "master": "マスター",
+        "fog": "Fog",
+        "warAcademy": "War Academy",
+        "other": "その他"
+      },
+      "fields": {
+        "name": "名前",
+        "namePlaceholder": "例:Truegold 6(Crucible Upgrade)",
+        "category": "カテゴリー",
+        "unlockDate": "ロック解除日(UTC、オプション)",
+        "slugAuto": "スラグ(自動):",
+        "slugPlaceholder": "オプション — 文字/数字/ハイフンのみを使用する",
+        "notes": "ショートノート(オプション)",
+        "notesPublic": "ショートノート(公開リストに表示)",
+        "notesPublicPlaceholder": "例えば、十字架とT8のテロ部隊を解凍する.",
+        "unlockDateUtc": "ロック解除日(UTC)",
+        "achieved": "アキシード",
+        "icon": "マイルストーンのアイコン",
+        "milestoneName": "マイルストーン名",
+        "contentFor": "/timeline/{{slug}} のコンテンツ"
+      }
+    },
+    "notifications": {
+      "backToAdmin": "管理者へ戻る",
+      "eyebrow": "管理者",
+      "title": "通知",
+      "compose": "作成",
+      "titleLabel": "タイトル",
+      "titlePlaceholder": "クマハントフェーズ3は15分から始まります",
+      "bodyLabel": "ボディ",
+      "bodyPlaceholder": "城内にある15分で大腸を焼く.",
+      "emojiLabel": "エモジ",
+      "imageLabel": "大きいイメージ(任意)",
+      "uploadImage": "画像をアップロードする",
+      "orPasteUrl": "URLを貼り付ける",
+      "imageUrlPlaceholder": "https://…/banner.png",
+      "audienceLabel": "対象",
+      "tapTargetLabel": "タップターゲット",
+      "tapUrlPlaceholder": "https://war-room.local/p/abc",
+      "scheduleLabel": "予約",
+      "recurrencePlaceholder": "例:毎週火曜日 20:00 UTC",
+      "discard": "マスタード",
+      "sending": "送信..",
+      "send": "送信",
+      "scheduling": "スケジューリング..",
+      "scheduleAction": "予約",
+      "preview": "プレビュー",
+      "previewNow": "今",
+      "previewDefaultTitle": "通知のタイトル",
+      "previewDefaultBody": "ボディテキストは、メンバーがロック画面で表示するようにここに表示されます.",
+      "targetArrow": "ターゲット →",
+      "recentPushes": "最近のプッシュ",
+      "loading": "読み込み中…",
+      "noneSent": "通知がまだ送信されていません.",
+      "deliveredCount": "{{count}}配信",
+      "openedCount": "{{count}} が開き、{{pct}}%",
+      "pushedTo": "{{audience}}・{{time}}にプッシュ",
+      "audience": {
+        "all": "すべてのアカウント",
+        "voting": "投票者(R1-R5)",
+        "admins": "管理者のみ (R4 / R5)",
+        "allies": "アリーズのみ",
+        "custom": "メンバーを選ぶ"
+      },
+      "schedule": {
+        "now": "今すぐ送信",
+        "later": "予約",
+        "recurring": "リサイクル"
+      },
+      "tap": {
+        "hub": "戦争室/ホーム",
+        "events": "イベントタブ",
+        "polls": "投票リスト",
+        "alliance": "アライアンスページ",
+        "url": "カスタムURL"
+      },
+      "errors": {
+        "mustBeSignedIn": "通知を送信するためにサインインする必要があります.",
+        "failedToSend": "通知を送信することができません."
+      }
+    },
+    "occurrences": {
+      "backToEvents": "イベントに戻る",
+      "eyebrow": "管理者",
+      "title": "イベントカレンダー",
+      "intro": "次のクマ、KvKフェーズ、季節イベントをスケジュールします.",
+      "form": {
+        "heading": "新しい発生",
+        "eventLabel": "イベント",
+        "startsAtLabel": "スタート(現地時間)",
+        "durationLabel": "所要時間(分)",
+        "phaseLabel": "段階のラベル(任意)",
+        "phasePlaceholder": "プレプ/キャッスルバトル/ブロール",
+        "notesLabel": "ノート(任意)",
+        "repeatLabel": "固定間隔で繰り返す",
+        "intervalLabel": "インターバル(時間)",
+        "bearHint": "クマハントは通常 48",
+        "countLabel": "発生件数",
+        "saving": "保存...",
+        "submit": "発生の追加",
+        "submitMany": "{{count}} 発生を追加"
+      },
+      "feedback": {
+        "added": "稼働率を追加しました.",
+        "addedMany": "{{count}} は {{hours}}h 毎に発生します."
+      },
+      "errors": {
+        "failedToLoad": "負荷に失敗しました",
+        "failedToSave": "保存失敗",
+        "failedToDelete": "削除失敗"
+      },
+      "confirmDelete": "この発生を削除しますか?",
+      "upcomingHeading": "アップコム・翌日30日",
+      "loading": "ローディング...",
+      "emptyState": "翌日30日は予定しておりません.",
+      "durationMin": "{{count}}min",
+      "cancelled": "cancelled",
+      "manageSquad": "スクワットの管理",
+      "squads": "スクエア",
+      "delete": "削除"
+    },
+    "pets": {
+      "backToCatalogue": "カタログに戻る",
+      "eyebrow": "管理者・カタログ",
+      "title": "ペット",
+      "newPet": "新しいペット",
+      "cancel": "キャンセル",
+      "create": "作成",
+      "edit": "編集",
+      "cancelEdit": "キャンセル",
+      "save": "保存",
+      "inactive": "inactive",
+      "genLabel": "Gen {{gen}}",
+      "errors": {
+        "nameRequired": "ペットの名前を入力してください.",
+        "invalidSlug": "無効なスラグ。 文字と数字を使用します.",
+        "failedToCreate": "ペットを作る失敗",
+        "failedToDelete": "削除失敗",
+        "nameRequiredShort": "お名前必須.",
+        "failedToSave": "保存失敗"
+      },
+      "confirmDelete": {
+        "heading": "「{{name}}」を永久に削除しますか?",
+        "body": "Slug {{slug}} は削除されます。 このアクションは元に戻すことができません.",
+        "yes": "はい、削除"
+      },
+      "fields": {
+        "name": "名前",
+        "slugSuggested": "スラグ(混雑:",
+        "generation": "ジェネレーション",
+        "portrait": "ポートレート",
+        "portraitUploadLabel": "ペットポートレート",
+        "description": "説明",
+        "releasedAt": "リリース",
+        "displayOrder": "表示順序",
+        "active": "アクティブ"
+      }
+    },
+    "polls": {
+      "backToAdmin": "管理者へ戻る",
+      "eyebrow": "管理者",
+      "title": "投票",
+      "closeForm": "フォームを閉じる",
+      "newPoll": "新しい投票",
+      "filters": {
+        "all": "all",
+        "open": "open",
+        "closed": "closed",
+        "draft": "draft",
+        "archived": "archived"
+      },
+      "statusTints": {
+        "draft": "ドラフト",
+        "open": "開く",
+        "closed": "終了",
+        "archived": "アーカイブ"
+      },
+      "visibility": {
+        "during": {
+          "label": "ライブ(ツーリング投票)",
+          "hint": "会員は更新時にカウントが表示される"
+        },
+        "afterClose": {
+          "label": "閉じる",
+          "hint": "投票が閉じるまで隠れたカウント"
+        },
+        "adminOnly": {
+          "label": "管理者専用",
+          "hint": "メンバーから常に隠れるカウント"
+        }
+      },
+      "visibilityShort": {
+        "adminOnly": "admin-only",
+        "afterClose": "閉じる"
+      },
+      "errors": {
+        "minOptions": "少なくとも{{min}}オプションを追加します.",
+        "duplicates": "重複オプションは使用できません.",
+        "failedToCreate": "投票を作成する失敗",
+        "actionFailed": "アクション失敗",
+        "clipboardBlocked": "ブラウザによってブロックされるクリップボード."
+      },
+      "feedback": {
+        "created": "{{title}} ({{status}}) を作成しました.",
+        "published": "「{{title}}」を公開しました.",
+        "closed": "「{{title}}」を閉じます.",
+        "reopened": "「{{title}}」をリニューアルしました.",
+        "archived": "「{{title}}」のアーカイブ.",
+        "restored": "「{{title}}」を閉じる.",
+        "deleted": "\"{{title}}\" を削除しました."
+      },
+      "confirmDelete": "「{{title}}」を永久に削除しますか? すべての投票は失われます.",
+      "form": {
+        "heading": "新しい投票",
+        "titleLabel": "タイトル *",
+        "titlePlaceholder": "Viking Vengeanceを実行する時間は?",
+        "descriptionLabel": "説明",
+        "descriptionHint": "— マークダウン (**bold**, *italic*, `code`, [text](url), - リスト)",
+        "descriptionPlaceholder": "**18:00 UTC**はEU + ASIAの重複のために素晴らしいです。 ※出来ない場合は投票をお願いします。*",
+        "typeLabel": "タイプ *",
+        "typeSingle": "シングル",
+        "typeSingleHint": "1つの選択",
+        "typeMulti": "ユニット",
+        "typeMultiHint": "多くの選択肢",
+        "initialStatusLabel": "初期状態 *",
+        "statusOpenOption": "オープン・公開 すぐに",
+        "statusDraftOption": "ドラフト・管理者のみがそれを見る",
+        "opensAtLabel": "オープニング",
+        "opensAtHint": "— オプション・UTC",
+        "closesAtLabel": "閉じる",
+        "closesAtHint": "— オプション・UTC",
+        "resultsVisibilityLabel": "結果の可視性 *",
+        "optionsLabel": "オプション *",
+        "optionPlaceholder": "オプション {{n}}",
+        "removeOption": "オプションを削除",
+        "addOption": "オプションを追加",
+        "cancel": "キャンセル",
+        "creating": "作成..",
+        "create": "投票を作成する"
+      },
+      "emptyAll": "投票はまだありません.",
+      "emptyFiltered": "{{filter}}の気孔無し.",
+      "row": {
+        "closesAt": "クローズ {{date}}",
+        "openIndefinitely": "無期限",
+        "closedAt": "クローズ{{date}}"
+      },
+      "actions": {
+        "copyLinkTitle": "短い共有リンクをコピーする",
+        "copied": "コピッド",
+        "link": "サイトマップ",
+        "publishTitle": "公開・メンバーは投票することができます",
+        "publish": "出版情報",
+        "closeTitle": "今すぐ見る",
+        "close": "閉じる",
+        "reopenTitle": "再オープン",
+        "reopen": "再オープン",
+        "archiveTitle": "アーカイブ・デフォルトリストから非表示",
+        "archive": "アーカイブ",
+        "unarchiveTitle": "Unarchive(休止)",
+        "restore": "リストア",
+        "deleteTitle": "削除"
+      }
+    },
+    "richTextEditor": {
+      "placeholder": "このマイルストーンのストーリーを聞かせてください",
+      "title": "タイトル",
+      "subtitle": "サブタイトル",
+      "bold": "ボールド",
+      "italic": "イタリック",
+      "underline": "サイトマップ",
+      "bulletList": "箇条書き",
+      "orderedList": "ナンバーリスト",
+      "quote": "インフォメーション",
+      "alignLeft": "左アライナー",
+      "alignCenter": "アランセンター",
+      "alignRight": "右アライナー",
+      "insertImage": "インサートイメージ",
+      "undo": "ログイン",
+      "redo": "ログイン",
+      "close": "閉じる",
+      "uploadImage": "アップロードイメージ",
+      "or": "or",
+      "imageUrl": "サイトマップ",
+      "imageUrlPlaceholder": "https://…/figure.png",
+      "insert": "インサート"
+    },
+    "troopTiers": {
+      "backToCatalogue": "カタログに戻る",
+      "eyebrow": "管理者・カタログ",
+      "title": "兵種ティア",
+      "newTier": "新しい層",
+      "cancel": "キャンセル",
+      "create": "作成",
+      "edit": "編集",
+      "cancelEdit": "キャンセル",
+      "save": "保存",
+      "orderLabel": "注文 #{{order}}",
+      "truegoldBadge": "Truegold",
+      "buildingLv": "Building lv {{lv}}",
+      "errors": {
+        "tierLabelRequired": "ティアラベル(T8、TG3)を入力します.",
+        "tierLabelRequiredShort": "必要な層のラベル.",
+        "failedToCreate": "ティアを作成する失敗",
+        "failedToDelete": "削除失敗",
+        "failedToSave": "保存失敗"
+      },
+      "confirmDelete": {
+        "heading": "「{{name}}」を永久に削除しますか?",
+        "body": "このアクションは、このティアを参照するガイドを破ることはできません.",
+        "yes": "はい、削除"
+      },
+      "fields": {
+        "tierLabel": "層のラベル",
+        "tierLabelPlaceholder": "例:T8、TG3",
+        "displayOrder": "表示順序",
+        "trainingBuildingLevel": "研修棟レベル",
+        "optional": "optional",
+        "truegoldTier": "Truegoldの層",
+        "icon": "アイコン",
+        "iconUploadLabel": "層アイコン",
+        "description": "説明"
+      }
+    }
+  },
+  "alliance": {
+    "timeAgo": {
+      "now": "今"
+    },
+    "stats": {
+      "rank": "ランキング",
+      "members": "メンバー",
+      "membersSub": "ロスターの{{count}}",
+      "power": "パワー",
+      "powerSub": "結合される"
+    },
+    "cta": {
+      "open": "開く",
+      "polls": {
+        "title": "投票",
+        "subtitle": "イベントのタイミング、レギオンの設定、アライアンスの決定を調整します."
+      },
+      "members": {
+        "title": "メンバー",
+        "subtitle": "ロスターをブラウズ — ニックネーム, ランク, パワー, トループティア."
+      }
+    },
+    "catalogue": {
+      "eyebrow": "参考文献",
+      "title": "ゲームカタログ",
+      "description": "英雄、ペット、マスター、トループの層 — 同盟の全員が閲覧できます.",
+      "heroes": "ヒーロー",
+      "pets": "ペット",
+      "masters": "マスター",
+      "troopTiers": "トロプ・チアーズ"
+    },
+    "composition": {
+      "eyebrow": "構成",
+      "title": "集まった力",
+      "truegoldMembers": "Truegoldメンバー",
+      "tg5Ready": "TG5+ の準備",
+      "avgPower": "平均出力",
+      "minTroopTier": "最小トループティア"
+    },
+    "announcements": {
+      "eyebrow": "お知らせ",
+      "title": "最新のお知らせ",
+      "emptyHint": "管理者がそれらをプッシュすると、通知がここに表示されます.",
+      "showing_one": "{{count}}の通知を表示する",
+      "showing_other": "{{count}}の通知を表示する",
+      "none": "最近の通知はありません"
+    }
+  },
+  "auth": {
+    "allyChip": {
+      "label": "アリー",
+      "tooltip": "アリー — 他のアライアンスからのゲスト(読み込み専用)"
+    },
+    "signIn": "ログイン",
+    "signOut": "ログアウト",
+    "checkingSession": "セッションの確認"
+  },
+  "brand": {
+    "name": "DAD War Room",
+    "alliance": "[DAD] BIGDADDYS",
+    "kingdom": "Kingdom 1652",
+    "motto": "平和のエレガンス、戦いの混乱."
+  },
+  "catalogue": {
+    "eyebrow": "カタログ",
+    "loading": "読み込み中…",
+    "filter": {
+      "all": "すべて",
+      "gen": "Gen {{gen}}"
+    },
+    "genBadge": "Gen {{gen}}",
+    "branch": {
+      "infantry": "インファントリー",
+      "cavalry": "キャバレー",
+      "archer": "アーチャー"
+    },
+    "heroes": {
+      "title": "現実の英雄",
+      "summary": "{{genCount}} 世代にわたってカタログ化された {{heroCount}} ヒーロー",
+      "empty": {
+        "all": "まだカタログにヒーローはありません.",
+        "gen": "ジェネレーション{{gen}}のヒーローはまだありません.",
+        "subtitle": "管理者は、カタログコンソールからヒーローを追加することができます."
+      },
+      "openAria": "{{name}} (Generation {{gen}}) を開く",
+      "backToList": "英雄に戻る",
+      "notFoundTitle": "ヒーローが見つかりませんでした.",
+      "notFoundSubtitle": "このスラグに一致するレコードがないカタログ.",
+      "returnToList": "英雄に戻る",
+      "generation": "Generation {{gen}}",
+      "archivedBadge": "アーカイブ",
+      "noDescription": "まだこのヒーローに記録されている説明はありません.",
+      "releasedOn": "{{date}} リリース"
+    },
+    "pets": {
+      "title": "本物のペット",
+      "summary_one": "{{count}}ペットカタログ",
+      "summary_other": "{{count}}ペットカタログ",
+      "empty": {
+        "nextGen": "世代{{gen}}で来るペット",
+        "gen": "{{gen}}のペットはまだ発生しません.",
+        "subtitle": "管理者は、カタログに登録することができます."
+      },
+      "cardAria": "{{name}} (生成 {{gen}})"
+    },
+    "masters": {
+      "title": "現実のマスター",
+      "summary_one": "{{count}}マスターロック解除",
+      "summary_other": "{{count}}マスターロック解除",
+      "empty": {
+        "title": "カタログのマスターはありません.",
+        "subtitle": "管理者は、カタログコンソールからマスターを登録することができます."
+      },
+      "unlockLabel": "マスター #{{order}}",
+      "noDescription": "まだこのマスターのために記録されていない記述.",
+      "releasedOn": "{{date}} リリース"
+    },
+    "tiers": {
+      "title": "兵種ティア",
+      "summary_one": "{{count}} は規則的で、真の金トラックを渡るtier",
+      "summary_other": "{{count}}は、通常のトラックと真のゴールドトラックを渡るティア",
+      "empty": {
+        "title": "まだ登録されていません.",
+        "subtitle": "管理者は、カタログコンソールからティアを登録することができます."
+      },
+      "regular": {
+        "title": "定期的な層",
+        "subtitle": "古典的な梯子はトループの訓練の改善によって鍵を開けました."
+      },
+      "truegold": {
+        "title": "Truegold tiers",
+        "subtitle": "創業変換後、真金のみの進行が解除されました."
+      },
+      "standardEyebrow": "スタンダード",
+      "truegoldEyebrow": "Truegold",
+      "noDescription": "説明なし",
+      "trainingLevel": "訓練の地上のレベル {{level}}"
+    }
+  },
+  "chat": {
+    "eyebrow": "作品紹介",
+    "title": "アライアンス・チャット",
+    "tagline": "[DAD] BIGDADDYSのライブチャットチャンネル — タイムゾーン間でイベントを調整し、戦略を共有し、勝利を誇っています.",
+    "pushHint": "発送までは、プッシュ通知として緊急電話が出てきます。 次のクマウィンドウやKvK呼び出しを見逃しないように、設定でそれらをオンにします.",
+    "enablePush": "プッシュ通知を有効にする",
+    "features": {
+      "images": {
+        "title": "画像添付ファイル",
+        "text": "クマのスクリーンショットをシェアします。, レイアウト, ギアビルド — チャット内で直接."
+      },
+      "crossAlliance": {
+        "title": "クロスアライアンス",
+        "text": "Alliesは読み書きできます。 彼らのメッセージは、ALLYチップでタグ付けされ、コンテキストが瞬時に表示されます."
+      },
+      "historyReactions": {
+        "title": "歴史を読む, 反応",
+        "text": "オフラインで逃したメッセージを見る · emoji で反応する · 作者による検索."
+      }
+    }
+  },
+  "common": {
+    "loading": "読み込み中…"
+  },
+  "events": {
+    "bear1": {
+      "title": "ベアハント1 — ラリーウェーブ戦略",
+      "short": "Bear Hunt 1"
+    },
+    "bear2": {
+      "title": "Bear Hunt 2",
+      "short": "Bear Hunt 2"
+    },
+    "kingsCastle": {
+      "title": "キングズ城バトル",
+      "short": "キングズ城"
+    },
+    "kvk": {
+      "title": "KvK・パワー王国",
+      "short": "KvK"
+    },
+    "viking": {
+      "title": "Viking Vengeance",
+      "short": "Viking Vengeance"
+    },
+    "swordland": {
+      "title": "Swordland Showdown",
+      "short": "Swordland Showdown"
+    },
+    "triAlliance": {
+      "title": "Tri-Alliance Clash",
+      "short": "Tri-Alliance Clash"
+    },
+    "cesar": {
+      "title": "Cesar's Fury",
+      "short": "Cesar's Fury"
+    },
+    "page": {
+      "eyebrow": "カタログ",
+      "title": "リアルムのイベント",
+      "subtitle": "ベア、KvK、バイキング、トライアライアンス、季節のイベント。 アクティブガイドはこちら."
+    },
+    "upcoming": {
+      "eyebrow": "次は",
+      "title": "今後のイベント",
+      "subtitle": "次 14 日 · 水平にスワイプ.",
+      "empty": "翌日14日間予定のイベントはありません.",
+      "eventCount_one": "{{count}}イベント",
+      "eventCount_other": "{{count}}イベント",
+      "viewAll": "すべて表示",
+      "today": "今日",
+      "tomorrow": "明日"
+    },
+    "filter": {
+      "all": "すべて",
+      "active": "アクティブ",
+      "comingSoon": "近日公開",
+      "archived": "アーカイブ"
+    },
+    "empty": {
+      "filter": "このフィルタでのイベントはありません."
+    },
+    "status": {
+      "active": "アクティブ",
+      "archived": "アーカイブ",
+      "comingSoon": "近日公開"
+    },
+    "card": {
+      "openGuide": "オープンガイド",
+      "noLongerActive": "もはやアクティブ",
+      "stayTuned": "宿泊約款"
+    }
+  },
+  "footer": {
+    "madeWith": "♥ で作られて",
+    "alliance": "[DAD] BIGDADDYS",
+    "kingdom": "王国 1652・キングショット",
+    "creator": "によって造られる",
+    "creatorName": "Salles",
+    "creatorRole": "アライアンスメンバー"
+  },
+  "header": {
+    "kingdomTag": "Kingdom 1652"
+  },
+  "hub": {
+    "title": "DAD War Room",
+    "tagline": "[DAD]BIGDADDYS・王国1652のための戦略ハブ",
+    "intro": "各イベントのビジュアル戦略ガイド ガイドをご覧ください.",
+    "comingSoon": "近日公開",
+    "userHero": {
+      "visitorEyebrow": "ビジター",
+      "visitorTitle": "戦争部屋を開くためにサインイン",
+      "visitorSubtitle": "会員、役員、同盟国 — ここにはすべてログインに依存します.",
+      "signIn": "ログイン",
+      "allyBadge": "アリー",
+      "editProfile": "プロファイルの編集",
+      "stat": {
+        "power": "パワー",
+        "truegold": "Truegold",
+        "role": "役割"
+      },
+      "role": {
+        "r5": "Leader",
+        "r4": "コリーダー",
+        "r3": "R3 Officer",
+        "r2": "R2 Officer",
+        "member": "メンバー",
+        "ally": "アリー"
+      }
+    },
+    "nextEvent": {
+      "eyebrow": "次のイベント",
+      "loadError": "次のイベントをロードできませんでした",
+      "empty": {
+        "title": "イベント予定なし",
+        "subtitle": "管理者が次のクマ、KvK、または季節イベントを追加したら、ここでライブカウントダウンが表示されます."
+      },
+      "addEvent": "イベントを追加",
+      "guide": "ガイド",
+      "startedAgo": "このイベントは、{{days}}d {{hours}}h を前に開始しました.",
+      "countdown": {
+        "days": "日",
+        "hours": "時間",
+        "min": "分",
+        "sec": "秒"
+      },
+      "utcTitle": "常に座標化された普遍的な時間にあります"
+    },
+    "pendingPolls": {
+      "allClearEyebrow": "すべてのクリア",
+      "actionEyebrow": "必要なアクション",
+      "emptyTitle": "保留孔なし",
+      "emptySubtitle": "すべてのオープン投票はすでに投票を受けました.",
+      "waitingTitle_one": "あなたの投票を待って{{count}}投票",
+      "waitingTitle_other": "あなたの投票を待って{{count}}投票",
+      "footerEmpty": "戦争室・ポルズ",
+      "footerCount": "{{total}}のトップ{{shown}}",
+      "viewAll": "すべて表示"
+    },
+    "timeline": {
+      "title": "タイムライン",
+      "empty": {
+        "title": "予定されているマイルストーンはありません.",
+        "subtitle": "管理者パネルからロック解除日を設定し、ここに表示します."
+      },
+      "toGo": "行く",
+      "past": "past"
+    }
+  },
+  "login": {
+    "brandSuffix": "War Room",
+    "changeLanguage": "言語変更",
+    "eyebrow": "アライアンスコマンド",
+    "fields": {
+      "username": "ユーザー名",
+      "usernamePlaceholder": "your_handle",
+      "password": "パスワード",
+      "showPassword": "パスワードを表示",
+      "hidePassword": "パスワードを隠す"
+    },
+    "errors": {
+      "required": "ユーザー名とパスワードが必要です.",
+      "signInFailed": "サインイン失敗しました.",
+      "wrongCredentials": "ユーザー名またはパスワードが間違っています."
+    },
+    "submitting": "サインイン",
+    "enter": "お問い合わせ",
+    "forgot": {
+      "prefix": "お問い合わせ?",
+      "askR4R5": "R4 か R5 を要求して下さい."
+    },
+    "installPwa": "DAD War Roomをインストールする",
+    "builtBy": "によって造られる"
+  },
+  "members": {
+    "page": {
+      "eyebrow": "ロスター",
+      "title": "アライアンスメンバー",
+      "loading": "読み込み中…",
+      "memberCount_one": "{{count}}会員",
+      "memberCount_other": "{{count}}メンバー",
+      "combinedPower": "結合された力"
+    },
+    "search": {
+      "placeholder": "ニックで検索…"
+    },
+    "sort": {
+      "label": "ツイート",
+      "power": "パワー",
+      "tier": "ティアー",
+      "rank": "ランキング",
+      "nick": "Nick"
+    },
+    "empty": {
+      "noMatch": "会員は「{{query}}」と一致しません.",
+      "noMembers": "ロースターはまだメンバーはいません."
+    },
+    "rank": {
+      "r1Title": "採用情報",
+      "r2Title": "メンバー",
+      "r3Title": "ベテラン",
+      "r4Title": "執行役員",
+      "r5Title": "Leader",
+      "defaultTitle": "メンバー"
+    },
+    "role": {
+      "leader": "Leader",
+      "joiner": "Joiner",
+      "standby": "Standby"
+    },
+    "status": {
+      "temporaryOut": "臨時休業",
+      "temporarilyOut": "一時的にアウト",
+      "out": "インフォメーション"
+    },
+    "detail": {
+      "backToList": "リストに戻る",
+      "notFoundEyebrow": "見つかりませんでした",
+      "notFoundWithNick": "ニックネーム無し「{{nick}}」",
+      "notFoundNoNick": "メンバーは存在しません",
+      "notFoundDescription": "会員は、アライアンスを退去したり、リンクが間違っている場合があります.",
+      "dadTagLabel": "DADタグ・{{tag}}",
+      "noteLabel": "お問い合わせ"
+    },
+    "stat": {
+      "power": "パワー",
+      "truegold": "Truegold"
+    },
+    "participation": {
+      "eyebrow": "参加申し込み",
+      "title": "イベント履歴",
+      "empty": "記録にはまだイベントはありません。このメンバーはいかなる出来事にもピッタリしていません.",
+      "latest": "最新記事"
+    },
+    "card": {
+      "openProfileAria": "{{nick}}のオープンプロファイル",
+      "tcLevel": "Lv.{{level}} · {{tier}}"
+    },
+    "powerChart": {
+      "eyebrow": "時間の上の力",
+      "title": "エボリューション",
+      "notEnoughData": "まだ十分なデータがないため、記録されているように電力変化がここに表示されます.",
+      "snapshotCount_one": "{{count}} スナップショット",
+      "snapshotCount_other": "{{count}} スナップショット"
+    }
+  },
+  "nav": {
+    "home": "ホーム",
+    "events": "イベント",
+    "chat": "チャット",
+    "alliance": "同盟",
+    "settings": "設定",
+    "primaryAriaLabel": "プライマー",
+    "adminAriaLabel": "管理者",
+    "exitAdmin": "管理者モードを終了",
+    "exitAdminShort": "アクセス",
+    "adminEvents": "イベント",
+    "adminPolls": "投票",
+    "adminMembers": "メンバー",
+    "adminChat": "チャット",
+    "adminAlliance": "同盟",
+    "adminNotifications": "Notif.",
+    "adminAnalytics": "統計情報"
+  },
+  "notifications": {
+    "bellAriaLabel": "通知",
+    "bellAriaLabelUnread": "通知、{{count}}未読",
+    "panelAriaLabel": "最近の通知",
+    "title": "通知",
+    "empty": "最近の通知はありません.",
+    "timeNow": "今",
+    "viewAll": "すべて表示"
+  },
+  "polls": {
+    "eyebrow": "投票",
+    "title": "アライアンスの投票",
+    "loading": "読み込み中…",
+    "countLine_one": "{{count}} は飛行中のポイル",
+    "countLine_other": "{{count}} は飛行中のポイル",
+    "readOnly": "read-only",
+    "empty": {
+      "title": "投票はまだありません",
+      "adminPrefix": "管理者はから最初の投票を作成することができます",
+      "adminLink": "管理者 → 投票"
+    },
+    "view": "ニュース",
+    "status": {
+      "closed": "終了",
+      "draft": "ドラフト",
+      "open": "開く"
+    },
+    "type": {
+      "single": "シングル",
+      "multi": "ユニット",
+      "singleChoice": "シングルチョイス",
+      "multiChoice": "マルチチョイス"
+    },
+    "countdown": {
+      "minutes_one": "{{count}}mで閉じる",
+      "minutes_other": "{{count}}mで閉じる",
+      "hours_one": "{{count}}hで閉じる",
+      "hours_other": "{{count}}hで閉じる",
+      "days_one": "{{count}}dで閉じる",
+      "days_other": "{{count}}dで閉じる"
+    },
+    "shareToken": {
+      "invalid": "この共有リンクは無効か、投票が削除されました.",
+      "browse": "投票を閲覧する"
+    },
+    "detail": {
+      "back": "バックナンバー",
+      "backToPolls": "投票に戻る",
+      "notFound": "見つかりませんでした.",
+      "countdown": {
+        "archived": "アーカイブ",
+        "draftNotPublished": "ドラフト(未公開)",
+        "closedAt": "閉鎖{{date}} {{time}}",
+        "openIndefinitely": "無期限オープン"
+      },
+      "draftBanner": {
+        "prefix": "この投票は、",
+        "draft": "draft",
+        "suffix": "—メンバーは投票できません。 公開から",
+        "link": "管理者 → 投票"
+      },
+      "resultsHidden": {
+        "adminOnly": "結果は、この投票でのみ管理者に表示されます.",
+        "untilClose": "投票数は投票が閉じるまで隠されます."
+      },
+      "signedOutBanner": "投票する サインアップ時に結果を見ることができます.",
+      "allyBanner": "アカウントは、結果を表示することができますが、投票できません (既読のアクセス).",
+      "voteFailed": "投票失敗",
+      "clearFailed": "クリア失敗",
+      "voterCount_one": "{{count}} 投票者",
+      "voterCount_other": "{{count}} 投票者",
+      "totalPicks": "{{count}}合計ピック",
+      "resultsHiddenShort": "投票が閉じるまで隠される結果.",
+      "reVotePrefix": "再送ができるまで",
+      "clearMyVote": "私の投票をクリア",
+      "shareTitle": "シェア投票",
+      "share": "シェア",
+      "copied": "コピッド"
+    }
+  },
+  "settings": {
+    "eyebrow": "環境設定",
+    "title": "設定",
+    "account": {
+      "heading": "パスワード",
+      "signedInFallback": "サインイン",
+      "openAdmin": "管理者設定を開く",
+      "openAdminTooltip": "アプリ全体のクロムを管理者モードに切り替える(クレムソンヘアライン+ 8-tabadmin nav)",
+      "signInHint": "メンバー、味方、管理者."
+    },
+    "language": {
+      "eyebrow": "日本語 English",
+      "available_one": "{{count}}言語対応",
+      "available_other": "{{count}}言語対応",
+      "close": "閉じる",
+      "change": "変更点"
+    },
+    "pwa": {
+      "eyebrow": "Progressive Web App",
+      "title": "戦争部屋をインストールする",
+      "alreadyInstalled": "既にインストールされている — オフラインで開く、ホーム画面から起動します.",
+      "addToHomescreen": "クイックアクセスとプッシュ通知のホーム画面に追加します.",
+      "openInBrowser": "Chrome / Edge / Safariでアプリとしてインストールします.",
+      "standaloneMode": "スタンドアローンモード",
+      "browserMode": "ブラウザモード",
+      "installed": "インストール済み",
+      "install": "インストール"
+    },
+    "push": {
+      "eyebrow": "通知",
+      "title": "プッシュ通知",
+      "description": "イベントが始まるときにアプリ内pingsを受け取る、新しい投票が開き、または管理者は選択した言語で通知を送信します.",
+      "notConfigured": "この展開のために設定されていないプッシュ。 アライアンス管理者に問い合わせてください.",
+      "blocked": "ブラウザの設定でブロックされた通知 — 再登録可能.",
+      "active": "アクティブ",
+      "deactivate": "無効化",
+      "permissionGranted": "許可付与",
+      "notSubscribed": "購読しない",
+      "activate": "アクティブ化"
+    },
+    "profile": {
+      "eyebrow": "プロフィール",
+      "displayName": "表示名",
+      "password": "パスワード",
+      "avatar": "アバター",
+      "avatarValue": {
+        "custom": "カスタムイメージ",
+        "hero": "Hero: {{slug}}",
+        "default": "デフォルト(ハッシュ)"
+      },
+      "edit": "編集",
+      "newDisplayName": "新しい表示名",
+      "newPassword": "新しいパスワード",
+      "passwordMinimum": "最小8文字.",
+      "confirm": "確認",
+      "passwordsDontMatch": "パスワードは一致しません.",
+      "preview": "プレビュー",
+      "resetTooltip": "自動アバター(ユーザー名のハッシュ)に戻る",
+      "reset": "リセット",
+      "chooseHero": "ヒーローを選ぶ",
+      "customImage": "カスタムイメージ",
+      "uploadImage": "アップロードイメージ",
+      "or": "or",
+      "imageUrl": "サイトマップ",
+      "imageUrlHint": "パブリックリンク(Discord、Imgur、wikiなど)を貼り付けます。 選択したヒーローをオーバーライドします.",
+      "close": "閉じる",
+      "cancel": "キャンセル",
+      "save": "保存",
+      "feedback": {
+        "displayNameUpdated": "表示名を更新.",
+        "passwordChanged": "パスワード変更.",
+        "avatarUpdated": "アバターを更新しました.",
+        "avatarReset": "自動アバターに戻ります.",
+        "failed": "失敗しました.",
+        "failedShort": "失敗しました."
+      }
+    }
+  },
+  "timeline": {
+    "detail": {
+      "back": "バックナンバー",
+      "loadError": "負荷に失敗しました",
+      "notFound": "マイルストーンが見つかりません.",
+      "reference": "参考文献",
+      "source": "ソース",
+      "daysToGo": "{{days}}d 行く",
+      "today": "today",
+      "daysAgo": "{{days}}d 前に",
+      "noBody": "このマイルストーンはまだ詳細な説明はありません。 管理者は、管理者のタイムラインエディタで豊富なコンテンツ(テキスト、画像、リスト、リンク)を埋めることができます."
+    },
+    "category": {
+      "truegold": "Truegold",
+      "heroes": "ヒーロー",
+      "pets": "ペット",
+      "pvp": "PvP",
+      "feature": "Feature",
+      "master": "マスター",
+      "fog": "Fog",
+      "warAcademy": "War Academy",
+      "other": "その他"
+    },
+    "relative": {
+      "today": "今日",
+      "tomorrow": "明日",
+      "daysAgo": "{{days}}d 前に",
+      "daysCount": "{{count}}日"
+    }
+  },
+  "ui": {
+    "language": "日本語 English",
+    "back": "バックナンバー",
+    "backToHub": "ハブに戻る",
+    "copy": "コピー",
+    "copied": "コピッド!",
+    "toTop": "トップへ戻る",
+    "skipToContent": "コンテンツへスキップ",
+    "imageUpload": {
+      "label": "画像アップロード",
+      "previewAlt": "プレビュー",
+      "currentImage": "現在の画像",
+      "swap": "スワプ",
+      "remove": "削除",
+      "uploading": "アップロード..",
+      "dropOrClick": "画像をドラッグするか、クリックして選択します",
+      "limitsHint": "{{allowedHuman}}・最大{{maxMb}} MB",
+      "errorTooLarge": "あまりにも大きなファイル。 最大{{maxMb}} MB.",
+      "errorUploadFailed": "アップロードが失敗しました."
+    }
+  }
+}

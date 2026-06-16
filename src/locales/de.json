@@ -1,0 +1,1488 @@
+{
+  "admin": {
+    "accounts": {
+      "backToMembers": "Zurück zu den Mitgliedern",
+      "eyebrow": "Admin",
+      "title": "Konten",
+      "closeForm": "Schließbare Form",
+      "newAccount": "Neues Konto",
+      "filters": {
+        "all": "Alle",
+        "members": "DAD-Mitglieder",
+        "allies": "Verbündete"
+      },
+      "emptyState": "Keine Konten in diesem Filter.",
+      "youLabel": "you",
+      "lastLogin": "letzte Anmeldung {{when}}",
+      "rosterTooltip": "Dienstplan: {{nick}} ({{rank}})",
+      "rosterFallback": "roster",
+      "lvlShort": "lvl {{level}}",
+      "unlinkTitle": "Unlink vom Roster",
+      "unlink": "Unlink",
+      "linkTitle": "Link zu einem Roster Member",
+      "link": "Link",
+      "resetTitle": "Passwort zurücksetzen",
+      "reset": "Zurücksetzen",
+      "deactivateTitle": "Deaktivieren",
+      "reactivateTitle": "Reaktivat",
+      "off": "Ausgeschaltet",
+      "on": "Am",
+      "passwordTooShort": "Das Passwort muss mindestens 6 Zeichen umfassen.",
+      "resetPasswordPrompt": "Legen Sie ein neues TEMPORARY-Passwort für {{name}} (@{{username}}) fest.\nDas mitglied wird gezwungen, es bei der nächsten anmeldung zu ändern.",
+      "cantDeactivateSelf": "Sie können sich nicht deaktivieren - bitten Sie einen anderen R5, dies zu tun.",
+      "confirmDeactivate": "{{name}} deaktivieren?",
+      "confirmReactivate": "{{name}} reaktivieren?",
+      "errors": {
+        "failedToCreate": "Fehler beim Erstellen eines Accounts",
+        "failedToReset": "Fehler beim Zurücksetzen des Passworts",
+        "failedToLink": "Fehlgeschlagen beim Link",
+        "failedToToggle": "Nicht aktualisiert aktiver Status"
+      },
+      "feedback": {
+        "created": "Konto \"{{name}}\" ({{role}}) erstellt.",
+        "passwordReset": "Passwort-Reset für {{name}}.",
+        "linked": "{{name}} verknüpft mit {{target}}.",
+        "unlinked": "{{name}} nicht verknüpft.",
+        "reactivated": "{{name}} reaktiviert.",
+        "deactivated": "{{name}} deaktiviert."
+      },
+      "form": {
+        "heading": "Neues Konto",
+        "usernameLabel": "Benutzername *",
+        "usernamePlaceholder": "alice",
+        "usernameHint": "angemeldet",
+        "displayNameLabel": "Anzeigename",
+        "displayNameHint": "standard für den benutzernamen",
+        "passwordLabel": "Passwort *",
+        "passwordPlaceholder": "mindestens 6 zeichen",
+        "roleLabel": "Rolle *",
+        "languageLabel": "Sprache",
+        "cancel": "Abbrechen",
+        "creating": "Erstellen..",
+        "create": "Konto erstellen"
+      },
+      "roles": {
+        "ally": {
+          "label": "Alliierte",
+          "description": "Diplomatischer gast - nur lesen, posts im chat."
+        },
+        "member": {
+          "label": "Mitglied (R1)",
+          "description": "Reguläres DAD Mitglied."
+        },
+        "r2": {
+          "label": "R2",
+          "description": "Officer (noch keine admin extras)."
+        },
+        "r3": {
+          "label": "R3",
+          "description": "Officer (noch keine admin extras)."
+        },
+        "r4": {
+          "label": "R4 — Admin",
+          "description": "Erstellen Sie Umfragen / Veranstaltungen, verwalten Sie Verbündete."
+        },
+        "r5": {
+          "label": "R5 — Admin",
+          "description": "Verwalten Sie andere Konten (einschließlich anderer R5)."
+        }
+      },
+      "relative": {
+        "never": "nie",
+        "justNow": "gerade jetzt",
+        "minutesAgo": "{{count}}m vor",
+        "hoursAgo": "{{count}}h vor",
+        "daysAgo": "{{count}}d vor",
+        "monthsAgo": "{{count}}mo vor",
+        "yearsAgo": "{{count}}y vor"
+      },
+      "linkPicker": {
+        "heading": "Link zum Dienstplan",
+        "close": "Schließen",
+        "searchPlaceholder": "Suchplan..",
+        "noMatch": "Kein Mitglied passt zu \"{{query}}\".",
+        "allLinked": "Alle Roster-Mitglieder sind verknüpft."
+      }
+    },
+    "alliance": {
+      "backToAdmin": "Zurück zum Admin",
+      "eyebrow": "Admin",
+      "title": "Allianz",
+      "cards": {
+        "timeline": {
+          "title": "Kingdom Timeline",
+          "subtitle": "Bearbeiten Sie die Freischaltdaten für TG-Stufen, Helden- / Haustiergenerationen, Meister, Nebel."
+        },
+        "catalogue": {
+          "title": "Katalog",
+          "subtitle": "Helden, Haustiere, Meister und Truppenstufen - Spieldaten hinter jeder Seite."
+        },
+        "announcements": {
+          "title": "Ankündigungen",
+          "subtitle": "Verfassen und planen Sie Push-Benachrichtigungen an Mitglieder."
+        }
+      },
+      "metadata": {
+        "eyebrow": "Öffentliche Informationen",
+        "title": "Metadaten bearbeiten",
+        "intro": "Rang, Motto, Slogan, Markenfarben und Aufnahmedatum erscheinen auf <allianceLink>/alliance</allianceLink>. Diese Werte befinden sich in der Tabelle <c>alliance settings</c>.",
+        "rankLabel": "Rang",
+        "rankPlaceholder": "#2",
+        "taglineLabel": "Tagline",
+        "taglinePlaceholder": "Königreich 1652",
+        "mottoLabel": "Motto",
+        "mottoPlaceholder": "Eleganz im Frieden, Chaos im Kampf.",
+        "brandPrimaryLabel": "Markenprimär (Hex)",
+        "brandAccentLabel": "Markenakzent (Hex)",
+        "capturedAtLabel": "Gefangen in",
+        "loadError": "Ladefehler: {{message}}",
+        "saveError": "Fehler speichern: {{message}}",
+        "saved": "Gespeichert",
+        "updatedAt": "Aktualisiert {{date}}",
+        "loading": "Lädt…",
+        "saving": "Rettung..",
+        "save": "Speichern"
+      }
+    },
+    "analytics": {
+      "backToAdmin": "Zurück zum Admin",
+      "eyebrow": "Admin",
+      "title": "Analyse",
+      "kpi": {
+        "onlineNow": {
+          "label": "Jetzt online",
+          "sub": "anmeldung in den letzten 5 min"
+        },
+        "activeSessions": {
+          "label": "Aktive Sitzungen",
+          "sub": "anmeldung in den letzten 24 stunden"
+        },
+        "totalAccounts": {
+          "label": "Gesamt-Konten",
+          "sub": "{{count}} aktiv"
+        },
+        "neverLoggedIn": {
+          "label": "Nie eingeloggt",
+          "sub": "bedürfnisse onboarding"
+        },
+        "failedSignins": {
+          "label": "Fehlgeschlagene Anmeldungen",
+          "sub": "letzte 24 stunden"
+        }
+      },
+      "activity": {
+        "heading": "Tätigkeitsfenster",
+        "intro": "Im Fenster berührte Konten (abgeleitet von last login at), nicht rohe Anmeldungen.",
+        "last24h": "Letzte 24 Stunden",
+        "last7d": "Letzte 7d",
+        "last30d": "Letzte 30d",
+        "pctOfAccounts": "{{pct}}% der Konten"
+      },
+      "pwa": {
+        "heading": "PWA install split",
+        "installed": "Installiert",
+        "browserOnly": "Nur Browser",
+        "summary": "{{installed}} von {{total}}-Konten ({{pct}}%) hat War Room zu ihrem Startbildschirm hinzugefügt."
+      },
+      "push": {
+        "heading": "Push-Lieferung (letzte 30d)",
+        "opened": "Geöffnet",
+        "ignored": "Ignoriert",
+        "note": "Mock für jetzt - Drähte einmal schieben Schiffe. Verfolgte per Benachrichtigung auf dem Notifications Panel."
+      },
+      "never": {
+        "heading": "Nie eingeloggt"
+      },
+      "langs": {
+        "heading": "Sprachenverteilung"
+      },
+      "footnote": "Online jetzt und aktive Sitzungen lesen Sie von login events. Push-Lieferung wird verspottet, bis Push-Schiffe."
+    },
+    "catalogue": {
+      "backToAlliance": "Zurück zur Allianz",
+      "eyebrow": "Admin · Katalog",
+      "title": "Spielkatalog",
+      "intro": "Verwalten sie die katalogtabellen, die timeline, avatare, truppenführer und statkarten betreiben. Änderungen hier verbreiten sich auf jede öffentliche Seite, die aus <c>heroes</c>, <c>pets</c>, <c>masters</c> und <c>troop tiers</c> liest.",
+      "cards": {
+        "heroes": {
+          "title": "Helden",
+          "subtitle": "Dienstplan, Porträt, Generation und bevorzugter Truppenzweig."
+        },
+        "pets": {
+          "title": "Begleiter",
+          "subtitle": "Gefährten nach Generation — Porträt, Beschreibung, Freilassung."
+        },
+        "masters": {
+          "title": "Meister",
+          "subtitle": "Strategische Berater geordnet nach Entsperrsequenz."
+        },
+        "troopTiers": {
+          "title": "Truppenstufen",
+          "subtitle": "T1..T10 und Truegold-Stufen — Labels, Training, Icons."
+        }
+      }
+    },
+    "chat": {
+      "backToAdmin": "Zurück zum Admin",
+      "eyebrow": "Admin",
+      "title": "Chat",
+      "unsaved": "unsaved",
+      "save": "Speichern",
+      "savedAt": "Gespeichert · {{time}}",
+      "rateLimit": {
+        "title": "Tariflimit (pro Nutzer)",
+        "subtitle": "Soft cap, wie viele nachrichten ein einzelnes konto in einer stunde posten kann.",
+        "messagesPerHour": "Nachrichten / Stunde",
+        "minSeconds": "Min Sekunden zwischen den Nachrichten"
+      },
+      "attachments": {
+        "title": "Anlagen",
+        "subtitle": "Was Mitglieder hochladen können. Audio + Video bleiben in v1 deaktiviert.",
+        "allowImages": "Bild-Uploads zulassen",
+        "maxFileSize": "Max Dateigröße"
+      },
+      "purge": {
+        "title": "Bereinigungsmeldungen",
+        "subtitle": "One-shot wischen sie alle chat-nachrichten und hochgeladenen bilder. Kann nicht rückgängig gemacht werden.",
+        "clearAll": "Alle Meldungen löschen",
+        "confirmHeading": "Endgültige Löschung bestätigen",
+        "confirmBody": "Jede chat-nachricht und jedes hochgeladene bild wird weg sein. Vergangene Umfragen, Ereignisse und Mitglieder bleiben unberührt.",
+        "cancel": "Abbrechen",
+        "confirmYes": "Ja, wischen Sie alles"
+      },
+      "defaults": {
+        "title": "Ausfälle",
+        "subtitle": "Setzen Sie jeden Wert auf den empfohlenen Startpunkt zurück.",
+        "restore": "Standardabweichungen wiederherstellen"
+      },
+      "footnote": "Hinweis: Chat selbst Schiffe später. Diese Steuerelemente werden heute lokal beibehalten, so dass das Panel bereit ist - sobald die Nachrichtentabelle live geht, wechselt diese Seite in eine servergestützte Konfigurationszeile, ohne die Benutzeroberfläche zu berühren."
+    },
+    "eventParticipants": {
+      "backToOccurrences": "Zurück zu den Ereignissen",
+      "eyebrow": "Teilnehmer an Veranstaltungen",
+      "eventFallback": "Veranstaltung",
+      "durationMin": "{{count}}min",
+      "addHeading": "Teilnehmer hinzufügen",
+      "memberLabel": "Mitglied",
+      "allAssigned": "Alle bereits zugewiesenen Mitglieder",
+      "roleLabel": "Rolle",
+      "notesLabel": "Anmerkungen (fakultativ)",
+      "notesPlaceholder": "Squad-Zuweisung, Backup-Plan, spezielle Anweisungen..",
+      "notesInputPlaceholder": "Anmerkungen (fakultativ)",
+      "adding": "Hinzufügen..",
+      "addButton": "Teilnehmer hinzufügen",
+      "assignedHeading": "Zuweisen · {{count}}",
+      "emptyState": "Noch keine Teilnehmer zugewiesen - fügen Sie die erste oben hinzu.",
+      "statusTempOut": "Out (Temperatur)",
+      "statusLeft": "Links",
+      "cancel": "Abbrechen",
+      "save": "Speichern",
+      "confirm": "Bestätigen",
+      "cancelDelete": "Löschung",
+      "editAria": "Bearbeiten von {{nick}}",
+      "removeAria": "{{nick}} entfernen",
+      "roles": {
+        "leader": "Leader",
+        "joiner": "Joiner",
+        "standby": "Standby",
+        "unset": "Unzerlegt",
+        "unsetOption": "— nicht eingestellt —"
+      },
+      "errors": {
+        "notFound": "Ereignis nicht gefunden.",
+        "failedToLoad": "Fehler beim Laden des Ereignisses.",
+        "failedToAdd": "Teilnehmer nicht hinzugefügt.",
+        "failedToUpdate": "Teilnehmer konnte nicht aktualisiert werden.",
+        "failedToRemove": "Der Teilnehmer konnte nicht entfernt werden."
+      },
+      "feedback": {
+        "added": "Teilnehmer hinzugefügt.",
+        "updated": "Teilnehmer aktualisiert.",
+        "removed": "Teilnehmer entfernt."
+      }
+    },
+    "events": {
+      "backToAdmin": "Zurück zum Admin",
+      "eyebrow": "Admin",
+      "title": "Veranstaltungskatalog",
+      "occurrencesLink": "Ereignisse",
+      "newEvent": "Neue Veranstaltung",
+      "close": "Schließen",
+      "confirmArchive": "Archivieren Sie diese Veranstaltung? Es wird vor dem All-Events-Raster verborgen sein.",
+      "errorFailed": "Fehlgeschlagen",
+      "feedback": {
+        "archived": "Archiviert.",
+        "restored": "Restauriert als Coming-Soon.",
+        "created": "Ereignis geschaffen."
+      },
+      "form": {
+        "heading": "Neues Saisonereignis",
+        "nameLabel": "Name *",
+        "namePlaceholder": "Lunar Festival",
+        "shortNameLabel": "Kurzbezeichnung",
+        "shortNamePlaceholder": "Lunar",
+        "descriptionLabel": "Beschreibung",
+        "iconUrlLabel": "Icon URL",
+        "iconUrlPlaceholder": "/images/events/lunar.png",
+        "seasonal": "Einmalig/saisonal",
+        "create": "Erstellen"
+      },
+      "seasonalBadge": "Saisonal",
+      "actions": {
+        "restore": "Wiederherstellung",
+        "archive": "Archiv"
+      }
+    },
+    "heroes": {
+      "backToCatalogue": "Zurück zum Katalog",
+      "eyebrow": "Admin · Katalog",
+      "title": "Helden",
+      "newHero": "Neuer Held",
+      "cancel": "Abbrechen",
+      "create": "Erstellen",
+      "edit": "Bearbeiten",
+      "cancelEdit": "Abbrechen",
+      "save": "Speichern",
+      "inactive": "inactive",
+      "genLabel": "Gen {{gen}}",
+      "branch": {
+        "none": "—",
+        "infantry": "Infanterie",
+        "cavalry": "Kavallerie",
+        "archer": "Bogenschütze"
+      },
+      "errors": {
+        "nameRequired": "Geben Sie einen Namen für den Helden ein.",
+        "invalidSlug": "Invalidenschnecke. Verwenden Sie Buchstaben und Zahlen.",
+        "failedToCreate": "Es ist nicht gelungen, einen Helden zu erschaffen",
+        "failedToDelete": "Nicht löschen",
+        "nameRequiredShort": "Name erforderlich.",
+        "failedToSave": "Nicht gerettet"
+      },
+      "confirmDelete": {
+        "heading": "Löschen Sie \"{{name}}\" dauerhaft?",
+        "body": "Die Schnecke {{slug}} und das Porträt werden entfernt. Diese Aktion kann nicht rückgängig gemacht werden.",
+        "yes": "Ja, streichen"
+      },
+      "fields": {
+        "name": "Name",
+        "slugSuggested": "Slug (vorgeschlagen):",
+        "slugPlaceholder": "ex: shen-yu",
+        "generation": "Generation (1-12)",
+        "role": "Rolle",
+        "rolePlaceholder": "ex: Marschall",
+        "preferredBranch": "Bevorzugter Zweig",
+        "portrait": "Porträt",
+        "portraitUploadLabel": "Heldenporträt",
+        "description": "Beschreibung",
+        "releasedAt": "Freigelassen am",
+        "displayOrder": "Anzeigeauftrag",
+        "active": "Aktiv"
+      }
+    },
+    "iconPicker": {
+      "groups": {
+        "truegoldTiers": "Truegold tiers",
+        "items": "Positionen",
+        "buildings": "Gebäude",
+        "events": "Ereignisse",
+        "heroes": "Helden"
+      },
+      "currentIcon": "Aktuelles Icon",
+      "noOverride": "keine überschreibung",
+      "autoLabel": "auto · {{path}}",
+      "clear": "Löschen",
+      "customUrlLabel": "Oder fügen Sie eine benutzerdefinierte URL ein (jedes Bild im Web)",
+      "customUrlPlaceholder": "https://wiki.kingshot.gg/.../some-icon.png",
+      "apply": "Anwenden",
+      "uploadOwn": "Oder laden Sie Ihr eigenes Bild hoch"
+    },
+    "masters": {
+      "backToCatalogue": "Zurück zum Katalog",
+      "eyebrow": "Admin · Katalog",
+      "title": "Meister",
+      "newMaster": "Neuer Kapitän",
+      "cancel": "Abbrechen",
+      "create": "Erstellen",
+      "edit": "Bearbeiten",
+      "cancelEdit": "Abbrechen",
+      "save": "Speichern",
+      "inactive": "inactive",
+      "unlockOrderLabel": "Entsperren #{{order}}",
+      "errors": {
+        "nameRequired": "Geben Sie einen Namen für den Master ein.",
+        "invalidSlug": "Invalidenschnecke. Verwenden Sie Buchstaben und Zahlen.",
+        "failedToCreate": "Gescheitert, um Master zu erstellen",
+        "failedToDelete": "Nicht löschen",
+        "nameRequiredShort": "Name erforderlich.",
+        "failedToSave": "Nicht gerettet"
+      },
+      "confirmDelete": {
+        "heading": "Löschen Sie \"{{name}}\" dauerhaft?",
+        "body": "Der Slug {{slug}} wird entfernt. Diese Aktion kann nicht rückgängig gemacht werden.",
+        "yes": "Ja, streichen"
+      },
+      "fields": {
+        "name": "Name",
+        "slugSuggested": "Slug (vorgeschlagen):",
+        "unlockOrder": "Freigabeauftrag",
+        "portrait": "Porträt",
+        "portraitUploadLabel": "Masterporträt",
+        "description": "Beschreibung",
+        "releasedAt": "Freigelassen am",
+        "active": "Aktiv"
+      }
+    },
+    "members": {
+      "backToAdmin": "Zurück zum Admin",
+      "eyebrow": "Admin",
+      "title": "Mitgliederliste",
+      "statsMembers": "{{count}} Mitglieder",
+      "statsTempOut": "{{count}} temp. out",
+      "combinedPower": "kombinierter strom",
+      "accountsLink": "Konten",
+      "searchPlaceholder": "Nach Nick suchen…",
+      "filters": {
+        "all": "Alle",
+        "out": "Aus"
+      },
+      "feedbackSaved": "Gespeichert {{nick}}.",
+      "emptyState": "Keine Mitglieder passen zu diesem Filter.",
+      "tempOutShort": "temperaturausfall",
+      "leftShort": "left",
+      "lvlLabel": "lvl {{level}}",
+      "editButton": "Bearbeiten",
+      "subgroups": {
+        "supreme": "Supreme (R4)",
+        "enforcerer": "Enforcerer (R3)",
+        "alpha": "Alpha (R2)",
+        "lieutenant": "Lieutenant (R1)"
+      },
+      "statuses": {
+        "active": "Aktiv",
+        "temporaryOut": "Temp. aus",
+        "left": "Links"
+      },
+      "errors": {
+        "tgOrTc": "Verwenden Sie TG-Level ODER Stadtzentrum, nicht beides.",
+        "failedToSave": "Nicht gerettet"
+      },
+      "edit": {
+        "heading": "Bearbeiten · {{nick}}",
+        "close": "Schließen",
+        "nickLabel": "Nick",
+        "rankLabel": "Rang",
+        "subgroupLabel": "Untergruppe",
+        "noneOption": "— keine —",
+        "powerLabel": "Power (Millionen)",
+        "powerHint": "— z. b. 158,7",
+        "tgLabel": "TG-Wert",
+        "tgPlaceholder": "1-8",
+        "tcLabel": "Stadtzentrum",
+        "tcPlaceholder": "25-30",
+        "statusLabel": "Status",
+        "tempOutNote": "Warum und wann zurück?",
+        "leftNote": "Ausreisegrund",
+        "langHintLabel": "Langer Hinweis",
+        "langHintHint": "— z. B. zh-CN, pt",
+        "optional": "optional",
+        "cancel": "Abbrechen",
+        "saving": "Rettung..",
+        "save": "Speichern"
+      }
+    },
+    "milestones": {
+      "backToAlliance": "Zurück zur Allianz",
+      "eyebrow": "Admin",
+      "title": "Meilensteine des Königreichs",
+      "newMilestone": "Neuer Meilenstein",
+      "cancel": "Abbrechen",
+      "create": "Erstellen",
+      "edit": "Bearbeiten",
+      "cancelEdit": "Abbrechen",
+      "save": "Speichern",
+      "intro": "Legen Sie das erwartete Freischaltdatum für jeden Meilenstein fest. Das Dashboard zeigt dann Live-Day-to-Go-Countdowns für die nächsten.",
+      "view": "Ansicht",
+      "openPublic": "Offene öffentliche Seite",
+      "deleteTitle": "Meilenstein löschen",
+      "achievedBadge": "achieved",
+      "preview": "Vorschau",
+      "afterCreateHint": "Öffnen Sie nach dem Erstellen das Element in der Liste unten, um den Rich Content (Tiptap) auszufüllen.",
+      "bodyPlaceholder": "Schreiben Sie über diesen Meilenstein: Was es ist, wie es sich auf die Allianz auswirkt, Strategieänderungen, nützliche Links..",
+      "errors": {
+        "nameRequired": "Geben Sie einen Namen für den neuen Meilenstein ein.",
+        "invalidSlug": "Ungültiger Name für Slug Generation. Verwenden Sie Buchstaben und Zahlen.",
+        "failedToCreate": "Fehlgeschlagen, Meilenstein zu schaffen",
+        "failedToDelete": "Nicht löschen",
+        "nameRequiredShort": "Milestone Name ist erforderlich.",
+        "failedToSave": "Nicht gerettet"
+      },
+      "confirmDelete": {
+        "heading": "Löschen Sie \"{{name}}\" dauerhaft?",
+        "body": "Die öffentliche Seite /timeline/{{slug}} und alle Inhalte werden gelöscht. Diese Aktion kann nicht rückgängig gemacht werden.",
+        "yes": "Ja, streichen"
+      },
+      "categories": {
+        "truegold": "Truegold",
+        "heroes": "Helden",
+        "pets": "Begleiter",
+        "pvp": "PvP",
+        "feature": "Feature",
+        "master": "Kapitän",
+        "fog": "Fog",
+        "warAcademy": "War Academy",
+        "other": "Andere"
+      },
+      "fields": {
+        "name": "Name",
+        "namePlaceholder": "z. B. Truegold 6 (Crucible Upgrade)",
+        "category": "Kategorie",
+        "unlockDate": "Entsperrdatum (UTC, fakultativ)",
+        "slugAuto": "Slug (auto):",
+        "slugPlaceholder": "fakultativ — nur buchstaben/zahlen/bindestriche verwenden",
+        "notes": "Kurze Anmerkungen (fakultativ)",
+        "notesPublic": "Kurze Notizen (gezeigt in der öffentlichen Liste)",
+        "notesPublicPlaceholder": "z.B. Entsperrt Crucible und T8 Terror Truppen.",
+        "unlockDateUtc": "Entsperrdatum (UTC)",
+        "achieved": "Erreicht",
+        "icon": "Meilenstein-Icon",
+        "milestoneName": "Name des Meilensteins",
+        "contentFor": "Inhalt für /timeline/{{slug}}"
+      }
+    },
+    "notifications": {
+      "backToAdmin": "Zurück zum Admin",
+      "eyebrow": "Admin",
+      "title": "Benachrichtigungen",
+      "compose": "Verfassen",
+      "titleLabel": "Titel",
+      "titlePlaceholder": "Bear Hunt Phase 3 startet in 15 Minuten",
+      "bodyLabel": "Körper",
+      "bodyPlaceholder": "Burn Rallyes beginnen in 15 Minuten - seien Sie in Ihrem Schloss und bereit zu marschieren.",
+      "emojiLabel": "Emoji",
+      "imageLabel": "Großes Bild (optional)",
+      "uploadImage": "Ein Bild hochladen",
+      "orPasteUrl": "...oder eine URL einfügen",
+      "imageUrlPlaceholder": "https://…/banner.png",
+      "audienceLabel": "Zielgruppe",
+      "tapTargetLabel": "Stichziel",
+      "tapUrlPlaceholder": "https://war-room.local/p/abc",
+      "scheduleLabel": "Planen",
+      "recurrencePlaceholder": "z.B. jeden Dienstag 20:00 UTC",
+      "discard": "Rückwurf",
+      "sending": "Senden..",
+      "send": "Senden",
+      "scheduling": "Zeitplan..",
+      "scheduleAction": "Planen",
+      "preview": "Vorschau",
+      "previewNow": "jetzt",
+      "previewDefaultTitle": "Titel der Anmeldung",
+      "previewDefaultBody": "Body text zeigt hier, wie mitglieder es auf dem sperrbildschirm sehen würden.",
+      "targetArrow": "Ziel →",
+      "recentPushes": "Jüngste Pushs",
+      "loading": "Lädt…",
+      "noneSent": "Noch keine Benachrichtigungen verschickt.",
+      "deliveredCount": "{{count}} geliefert",
+      "openedCount": "{{count}} eröffnet · {{pct}}%",
+      "pushedTo": "Auf {{audience}} gedrückt · {{time}}",
+      "audience": {
+        "all": "Alle Konten",
+        "voting": "Stimmberechtigte Mitglieder (R1-R5)",
+        "admins": "Nur Administratoren (R4 / R5)",
+        "allies": "Nur Verbündete",
+        "custom": "Auswahlmitglieder"
+      },
+      "schedule": {
+        "now": "Jetzt senden",
+        "later": "Planen",
+        "recurring": "Wiederkehrend"
+      },
+      "tap": {
+        "hub": "War Room / Home",
+        "events": "Register der Ereignisse",
+        "polls": "Pollenliste",
+        "alliance": "Allianzseite",
+        "url": "Custom URL"
+      },
+      "errors": {
+        "mustBeSignedIn": "Sie müssen angemeldet sein, um Benachrichtigungen zu senden.",
+        "failedToSend": "Keine Benachrichtigung senden."
+      }
+    },
+    "occurrences": {
+      "backToEvents": "Zurück zu Events",
+      "eyebrow": "Admin",
+      "title": "Veranstaltungskalender",
+      "intro": "Planen Sie den nächsten Bären, KvK-Phasen und saisonale Ereignisse.",
+      "form": {
+        "heading": "Neues Ereignis",
+        "eventLabel": "Veranstaltung",
+        "startsAtLabel": "Beginnt um (Ihre lokale Zeit)",
+        "durationLabel": "Dauer (min)",
+        "phaseLabel": "Phasenetikettierung (fakultativ)",
+        "phasePlaceholder": "Prep / Castle Battle / Brawl",
+        "notesLabel": "Anmerkungen (fakultativ)",
+        "repeatLabel": "Wiederholen im festen Intervall",
+        "intervalLabel": "Intervall (Stunden)",
+        "bearHint": "Bear Hunt ist typischerweise 48",
+        "countLabel": "Zahl der Ereignisse",
+        "saving": "Rettung...",
+        "submit": "Ereignis hinzufügen",
+        "submitMany": "{{count}}-Vorkommnisse hinzufügen"
+      },
+      "feedback": {
+        "added": "Hinzugefügtes Vorkommen.",
+        "addedMany": "Hinzugefügt {{count}} Vorkommen jeder {{hours}}h."
+      },
+      "errors": {
+        "failedToLoad": "Versäumnis zu laden",
+        "failedToSave": "Nicht gerettet",
+        "failedToDelete": "Nicht löschen"
+      },
+      "confirmDelete": "Löschen Sie diesen Vorfall?",
+      "upcomingHeading": "Kommende · nächste 30 Tage",
+      "loading": "Beladung...",
+      "emptyState": "Nichts geplant in den nächsten 30 Tagen.",
+      "durationMin": "{{count}}min",
+      "cancelled": "cancelled",
+      "manageSquad": "Verwalten Sie Squad",
+      "squads": "Squads",
+      "delete": "Löschen"
+    },
+    "pets": {
+      "backToCatalogue": "Zurück zum Katalog",
+      "eyebrow": "Admin · Katalog",
+      "title": "Begleiter",
+      "newPet": "Neues Haustier",
+      "cancel": "Abbrechen",
+      "create": "Erstellen",
+      "edit": "Bearbeiten",
+      "cancelEdit": "Abbrechen",
+      "save": "Speichern",
+      "inactive": "inactive",
+      "genLabel": "Gen {{gen}}",
+      "errors": {
+        "nameRequired": "Geben Sie einen Namen für das Haustier ein.",
+        "invalidSlug": "Invalidenschnecke. Verwenden Sie Buchstaben und Zahlen.",
+        "failedToCreate": "Es ist nicht gelungen, ein Haustier zu erschaffen",
+        "failedToDelete": "Nicht löschen",
+        "nameRequiredShort": "Name erforderlich.",
+        "failedToSave": "Nicht gerettet"
+      },
+      "confirmDelete": {
+        "heading": "Löschen Sie \"{{name}}\" dauerhaft?",
+        "body": "Der Slug {{slug}} wird entfernt. Diese Aktion kann nicht rückgängig gemacht werden.",
+        "yes": "Ja, streichen"
+      },
+      "fields": {
+        "name": "Name",
+        "slugSuggested": "Slug (vorgeschlagen):",
+        "generation": "Generation",
+        "portrait": "Porträt",
+        "portraitUploadLabel": "Pet Portrait",
+        "description": "Beschreibung",
+        "releasedAt": "Freigelassen am",
+        "displayOrder": "Anzeigeauftrag",
+        "active": "Aktiv"
+      }
+    },
+    "polls": {
+      "backToAdmin": "Zurück zum Admin",
+      "eyebrow": "Admin",
+      "title": "Umfragen",
+      "closeForm": "Schließbare Form",
+      "newPoll": "Neue Umfrage",
+      "filters": {
+        "all": "all",
+        "open": "open",
+        "closed": "closed",
+        "draft": "draft",
+        "archived": "archived"
+      },
+      "statusTints": {
+        "draft": "Entwurf",
+        "open": "Öffnen",
+        "closed": "Geschlossen",
+        "archived": "Archiviert"
+      },
+      "visibility": {
+        "during": {
+          "label": "Live (während der Abstimmung)",
+          "hint": "Mitglieder sehen Zählungen, während sie aktualisieren"
+        },
+        "afterClose": {
+          "label": "Erst nach Schließen",
+          "hint": "Zählt versteckt, bis die Umfrage schließt"
+        },
+        "adminOnly": {
+          "label": "Admin-only",
+          "hint": "Zählt immer vor Mitgliedern verborgen"
+        }
+      },
+      "visibilityShort": {
+        "adminOnly": "admin-only",
+        "afterClose": "nach schließung"
+      },
+      "errors": {
+        "minOptions": "Fügen Sie mindestens {{min}} Optionen hinzu.",
+        "duplicates": "Doppelte Optionen sind nicht erlaubt.",
+        "failedToCreate": "Keine Umfrage erstellen",
+        "actionFailed": "Aktion fehlgeschlagen",
+        "clipboardBlocked": "Clipboard vom Browser blockiert."
+      },
+      "feedback": {
+        "created": "Erstellt \"{{title}}\" ({{status}}).",
+        "published": "Veröffentlicht \"{{title}}\".",
+        "closed": "Geschlossen \"{{title}}\".",
+        "reopened": "Wiedereröffnet \"{{title}}\".",
+        "archived": "Archiviert \"{{title}}\".",
+        "restored": "Restauriert \"{{title}}\" zu schließen.",
+        "deleted": "Gelöscht \"{{title}}\"."
+      },
+      "confirmDelete": "Löschen Sie \"{{title}}\" dauerhaft? Alle Stimmen werden verloren gehen.",
+      "form": {
+        "heading": "Neue Umfrage",
+        "titleLabel": "Titel *",
+        "titlePlaceholder": "Zu welcher Zeit sollten wir Viking Vengeance laufen lassen?",
+        "descriptionLabel": "Beschreibung",
+        "descriptionHint": "- Markdown (** fett**, *italic*, `code`, [text](url), - Listen)",
+        "descriptionPlaceholder": "**18:00 UTC** ist ideal für EU + ASIA Überlappung. *Bitte wählen, auch wenn Sie es nicht schaffen.*",
+        "typeLabel": "Typ *",
+        "typeSingle": "Single",
+        "typeSingleHint": "Eine Wahl",
+        "typeMulti": "Mehrfach",
+        "typeMultiHint": "Viele Möglichkeiten",
+        "initialStatusLabel": "Ausgangszustand *",
+        "statusOpenOption": "Open · Sofort veröffentlichen",
+        "statusDraftOption": "Draft · Nur Admins sehen es",
+        "opensAtLabel": "Öffnet bei",
+        "opensAtHint": "— fakultativ · UTC",
+        "closesAtLabel": "Schließt bei",
+        "closesAtHint": "— fakultativ · UTC",
+        "resultsVisibilityLabel": "Sichtbarkeit der Ergebnisse *",
+        "optionsLabel": "Optionen *",
+        "optionPlaceholder": "Option {{n}}",
+        "removeOption": "Option entfernen",
+        "addOption": "Option hinzufügen",
+        "cancel": "Abbrechen",
+        "creating": "Erstellen..",
+        "create": "Umfrage erstellen"
+      },
+      "emptyAll": "Noch keine Umfragen.",
+      "emptyFiltered": "Keine {{filter}}-Umfragen.",
+      "row": {
+        "closesAt": "schließt {{date}}",
+        "openIndefinitely": "unbegrenzt geöffnet",
+        "closedAt": "geschlossen {{date}}"
+      },
+      "actions": {
+        "copyLinkTitle": "Short Share Link kopieren",
+        "copied": "Kopiert",
+        "link": "Link",
+        "publishTitle": "Veröffentlichen · Mitglieder können wählen",
+        "publish": "Veröffentlichen",
+        "closeTitle": "Jetzt schließen",
+        "close": "Schließen",
+        "reopenTitle": "Wiedereröffnung",
+        "reopen": "Wiedereröffnung",
+        "archiveTitle": "Archivieren · Ausblenden aus Standardlisten",
+        "archive": "Archiv",
+        "unarchiveTitle": "Unarchive (zurück zu geschlossen)",
+        "restore": "Wiederherstellung",
+        "deleteTitle": "Löschen"
+      }
+    },
+    "richTextEditor": {
+      "placeholder": "Erzählen Sie die Geschichte dieses Meilensteins..",
+      "title": "Titel",
+      "subtitle": "Untertitel",
+      "bold": "Fett",
+      "italic": "Italisch",
+      "underline": "Unterstrich",
+      "bulletList": "Bullet List",
+      "orderedList": "Nummerierte Liste",
+      "quote": "Zitat",
+      "alignLeft": "Ausrichtung nach links",
+      "alignCenter": "Ausrichtungszentrum",
+      "alignRight": "Rechtsausrichtung",
+      "insertImage": "Bild einfügen",
+      "undo": "Undo",
+      "redo": "Redo",
+      "close": "Schließen",
+      "uploadImage": "Upload-Bild",
+      "or": "or",
+      "imageUrl": "Bild-URL",
+      "imageUrlPlaceholder": "https://…/figure.png",
+      "insert": "Insert"
+    },
+    "troopTiers": {
+      "backToCatalogue": "Zurück zum Katalog",
+      "eyebrow": "Admin · Katalog",
+      "title": "Truppenstufen",
+      "newTier": "Neue Ebene",
+      "cancel": "Abbrechen",
+      "create": "Erstellen",
+      "edit": "Bearbeiten",
+      "cancelEdit": "Abbrechen",
+      "save": "Speichern",
+      "orderLabel": "Auftrag #{{order}}",
+      "truegoldBadge": "Truegold",
+      "buildingLv": "Building lv {{lv}}",
+      "errors": {
+        "tierLabelRequired": "Geben Sie das Tierlabel ein (z. B. T8, TG3).",
+        "tierLabelRequiredShort": "Tier Label erforderlich.",
+        "failedToCreate": "Es ist nicht gelungen, Tier zu erstellen",
+        "failedToDelete": "Nicht löschen",
+        "failedToSave": "Nicht gerettet"
+      },
+      "confirmDelete": {
+        "heading": "Löschen Sie \"{{name}}\" dauerhaft?",
+        "body": "Diese Aktion kann nicht rückgängig gemacht werden und kann Leitfäden brechen, die sich auf diese Ebene beziehen.",
+        "yes": "Ja, streichen"
+      },
+      "fields": {
+        "tierLabel": "Tier-Label",
+        "tierLabelPlaceholder": "z. B. T8, TG3",
+        "displayOrder": "Anzeigeauftrag",
+        "trainingBuildingLevel": "Ausbildungsgebäudeebene",
+        "optional": "optional",
+        "truegoldTier": "Truegold-Klasse",
+        "icon": "Icon",
+        "iconUploadLabel": "Stufensymbol",
+        "description": "Beschreibung"
+      }
+    }
+  },
+  "alliance": {
+    "timeAgo": {
+      "now": "jetzt"
+    },
+    "stats": {
+      "rank": "Rang",
+      "members": "Mitglieder",
+      "membersSub": "{{count}} auf der Liste",
+      "power": "Leistung",
+      "powerSub": "Kombiniert"
+    },
+    "cta": {
+      "open": "Öffnen",
+      "polls": {
+        "title": "Umfragen",
+        "subtitle": "Koordinieren Sie Event-Timing, Legionspräferenzen, Allianzentscheidungen."
+      },
+      "members": {
+        "title": "Mitglieder",
+        "subtitle": "Durchsuchen Sie den Dienstplan - Nick, Rang, Macht, Truppenstufe."
+      }
+    },
+    "catalogue": {
+      "eyebrow": "Referenznummer",
+      "title": "Spielkatalog",
+      "description": "Helden, Haustiere, Meister und Truppenstufen - die gemeinsame Referenz, die jeder in der Allianz durchsuchen kann.",
+      "heroes": "Helden",
+      "pets": "Begleiter",
+      "masters": "Meister",
+      "troopTiers": "Truppentiere"
+    },
+    "composition": {
+      "eyebrow": "Zusammensetzung",
+      "title": "Die versammelte Kraft",
+      "truegoldMembers": "Truegold-Mitglieder",
+      "tg5Ready": "TG5+ bereit",
+      "avgPower": "Avg-Leistung",
+      "minTroopTier": "Mindesttruppenstufe"
+    },
+    "announcements": {
+      "eyebrow": "Ankündigungen",
+      "title": "Neueste Mitteilungen",
+      "emptyHint": "Ankündigungen erscheinen hier, sobald der admin sie drückt.",
+      "showing_one": "Hinweis auf {{count}}",
+      "showing_other": "{{count}}-Benachrichtigungen anzeigen",
+      "none": "Keine aktuellen Bekanntmachungen"
+    }
+  },
+  "auth": {
+    "allyChip": {
+      "label": "Alliierte",
+      "tooltip": "Ally - Gast aus einer anderen Allianz (nur lesen)"
+    },
+    "signIn": "Anmelden",
+    "signOut": "Abmelden",
+    "checkingSession": "Kontrollsitzung.."
+  },
+  "brand": {
+    "name": "DAD War Room",
+    "alliance": "[DAD] BIGDADDYS",
+    "kingdom": "Königreich 1652",
+    "motto": "Eleganz im Frieden, Chaos im Kampf."
+  },
+  "catalogue": {
+    "eyebrow": "Katalog",
+    "loading": "Lädt…",
+    "filter": {
+      "all": "Alle",
+      "gen": "Gen {{gen}}"
+    },
+    "genBadge": "Gen {{gen}}",
+    "branch": {
+      "infantry": "Infanterie",
+      "cavalry": "Kavallerie",
+      "archer": "Bogenschütze"
+    },
+    "heroes": {
+      "title": "Helden des Reiches",
+      "summary": "{{heroCount}} Helden katalogisiert über {{genCount}} Generationen",
+      "empty": {
+        "all": "Noch keine Helden im Katalog.",
+        "gen": "Noch keine Helden in Generation {{gen}}.",
+        "subtitle": "Administratoren können Helden aus der Katalogkonsole hinzufügen."
+      },
+      "openAria": "Open {{name}} (Generation {{gen}})",
+      "backToList": "Zurück zu Helden",
+      "notFoundTitle": "Held nicht gefunden.",
+      "notFoundSubtitle": "Der katalog hat keine aufzeichnungen, die zu dieser schnecke passen.",
+      "returnToList": "Zurück zu Helden",
+      "generation": "Generation {{gen}}",
+      "archivedBadge": "Archiviert",
+      "noDescription": "Keine Beschreibung für diesen Helden aufgezeichnet noch.",
+      "releasedOn": "Veröffentlicht {{date}}"
+    },
+    "pets": {
+      "title": "Haustiere des Reiches",
+      "summary_one": "{{count}} Haustier katalogisiert",
+      "summary_other": "{{count}} Haustiere katalogisiert",
+      "empty": {
+        "nextGen": "Haustiere kommen mit Generation {{gen}}",
+        "gen": "Keine Haustiere in Generation {{gen}} noch.",
+        "subtitle": "Admins können diese im Katalog registrieren."
+      },
+      "cardAria": "{{name}} (Generation {{gen}})"
+    },
+    "masters": {
+      "title": "Meister des Reiches",
+      "summary_one": "{{count}}-Master entsperrt",
+      "summary_other": "{{count}}-Master freigeschaltet",
+      "empty": {
+        "title": "Noch keine Master im Katalog.",
+        "subtitle": "Administratoren können Master über die Katalogkonsole registrieren."
+      },
+      "unlockLabel": "Master #{{order}}",
+      "noDescription": "Keine Beschreibung für diesen Master aufgezeichnet noch.",
+      "releasedOn": "Veröffentlicht {{date}}"
+    },
+    "tiers": {
+      "title": "Truppenstufen",
+      "summary_one": "{{count}} auf regulären und Truegold-Tracks",
+      "summary_other": "{{count}} über reguläre und Truegold-Tracks",
+      "empty": {
+        "title": "Noch sind keine Truppenstufen registriert.",
+        "subtitle": "Administratoren können Tiers über die Katalogkonsole registrieren."
+      },
+      "regular": {
+        "title": "Regelmäßige Ebenen",
+        "subtitle": "Die klassische Leiter entsperrt durch Truppentraining Upgrades."
+      },
+      "truegold": {
+        "title": "Truegold tiers",
+        "subtitle": "Truegold-only Progression wurde nach dem Umbau der Gießerei freigeschaltet."
+      },
+      "standardEyebrow": "Standard",
+      "truegoldEyebrow": "Truegold",
+      "noDescription": "Keine Beschreibung",
+      "trainingLevel": "Ausbildung Bodenniveau {{level}}"
+    }
+  },
+  "chat": {
+    "eyebrow": "In den Werken",
+    "title": "Allianz-Chat",
+    "tagline": "Ein Live-Konversationskanal für [DAD] BIGDADDYS - koordinieren Sie Ereignisse über Zeitzonen hinweg, teilen Sie die Strategie, hypen Sie die Gewinne.",
+    "pushHint": "Bis es ausgeliefert wird, gehen dringende Anrufe als Push-Benachrichtigungen aus. Schalten Sie sie in den Einstellungen ein, damit Sie das nächste Bärenfenster oder den nächsten KvK-Anruf nicht verpassen.",
+    "enablePush": "Push-Benachrichtigungen aktivieren",
+    "features": {
+      "images": {
+        "title": "Bildanhänge",
+        "text": "Teilen sie screenshots von bear-hits, layouts, gear builds - direkt im chat."
+      },
+      "crossAlliance": {
+        "title": "Allianzübergreifende Koordinierung",
+        "text": "Verbündete können lesen und schreiben. Ihre Nachrichten werden mit dem ALLY-Chip markiert, so dass der Kontext sofort ist."
+      },
+      "historyReactions": {
+        "title": "Lesen Sie Geschichte, Reaktionen",
+        "text": "Sehen sie nachrichten, die sie verpasst haben, wenn sie offline waren · reagieren sie mit emoji · suchen sie nach autor."
+      }
+    }
+  },
+  "common": {
+    "loading": "Lädt…"
+  },
+  "events": {
+    "bear1": {
+      "title": "Bear Hunt 1 - Rally Wave Strategie",
+      "short": "Bear Hunt 1"
+    },
+    "bear2": {
+      "title": "Bear Hunt 2",
+      "short": "Bear Hunt 2"
+    },
+    "kingsCastle": {
+      "title": "King's Castle Schlacht",
+      "short": "Schloss des Königs"
+    },
+    "kvk": {
+      "title": "KvK · Königreich der Macht",
+      "short": "KvK"
+    },
+    "viking": {
+      "title": "Viking Vengeance",
+      "short": "Viking Vengeance"
+    },
+    "swordland": {
+      "title": "Swordland Showdown",
+      "short": "Swordland Showdown"
+    },
+    "triAlliance": {
+      "title": "Tri-Alliance Clash",
+      "short": "Tri-Alliance Clash"
+    },
+    "cesar": {
+      "title": "Cesar's Fury",
+      "short": "Cesar's Fury"
+    },
+    "page": {
+      "eyebrow": "Katalog",
+      "title": "Ereignisse des Reiches",
+      "subtitle": "Bear, KvK, Viking, Tri-Alliance & saisonale Veranstaltungen. Aktive Guides öffnen sich von hier aus."
+    },
+    "upcoming": {
+      "eyebrow": "Als Nächstes",
+      "title": "Kommende Veranstaltungen",
+      "subtitle": "Nächste 14 Tage · horizontal wischen.",
+      "empty": "Keine Veranstaltungen für die nächsten 14 Tage geplant.",
+      "eventCount_one": "{{count}} Ereignis",
+      "eventCount_other": "{{count}} Veranstaltungen",
+      "viewAll": "Alle anzeigen",
+      "today": "Heute",
+      "tomorrow": "Morgen"
+    },
+    "filter": {
+      "all": "Alle",
+      "active": "Aktiv",
+      "comingSoon": "Bald kommen",
+      "archived": "Archiviert"
+    },
+    "empty": {
+      "filter": "Keine Ereignisse in diesem Filter."
+    },
+    "status": {
+      "active": "Aktiv",
+      "archived": "Archiviert",
+      "comingSoon": "Bald kommen"
+    },
+    "card": {
+      "openGuide": "Offene Führung",
+      "noLongerActive": "Nicht mehr aktiv",
+      "stayTuned": "Stay tuned"
+    }
+  },
+  "footer": {
+    "madeWith": "Hergestellt mit ♥ für",
+    "alliance": "[DAD] BIGDADDYS",
+    "kingdom": "Königreich 1652 Kingshot",
+    "creator": "Gebaut von",
+    "creatorName": "Salles",
+    "creatorRole": "Allianzmitglied"
+  },
+  "header": {
+    "kingdomTag": "Königreich 1652"
+  },
+  "hub": {
+    "title": "DAD War Room",
+    "tagline": "Strategie-Hub für [DAD] BIGDADDYS · Königreich 1652",
+    "intro": "Visuelle Strategieführer für jedes Ereignis. Wählen Sie unten einen Guide.",
+    "comingSoon": "Bald kommen",
+    "userHero": {
+      "visitorEyebrow": "Besucher",
+      "visitorTitle": "Melden Sie sich an, um den War Room zu öffnen",
+      "visitorSubtitle": "Mitglieder, Offiziere und Verbündete - alles hier hängt von Ihrem Login ab.",
+      "signIn": "Anmelden",
+      "allyBadge": "Alliierte",
+      "editProfile": "Profil bearbeiten",
+      "stat": {
+        "power": "Leistung",
+        "truegold": "Truegold",
+        "role": "Rolle"
+      },
+      "role": {
+        "r5": "Leader",
+        "r4": "Co-Leader",
+        "r3": "R3 Officer",
+        "r2": "R2 Officer",
+        "member": "Mitglied",
+        "ally": "Alliierte"
+      }
+    },
+    "nextEvent": {
+      "eyebrow": "Nächstes Ereignis",
+      "loadError": "Konnte das nächste Event nicht laden",
+      "empty": {
+        "title": "Noch keine Veranstaltung geplant",
+        "subtitle": "Sobald ein Administrator das nächste Bären-, KvK- oder saisonale Ereignis hinzufügt, erscheint es hier mit einem Live-Countdown."
+      },
+      "addEvent": "Hinzufügen eines Events",
+      "guide": "Leitfaden",
+      "startedAgo": "Dieses Ereignis begann vor {{days}}d {{hours}}h - aktualisieren Sie nach dem Hinzufügen des nächsten.",
+      "countdown": {
+        "days": "Tage",
+        "hours": "Stunden",
+        "min": "Min",
+        "sec": "Sek"
+      },
+      "utcTitle": "Alle Zeiten sind in koordinierter Weltzeit"
+    },
+    "pendingPolls": {
+      "allClearEyebrow": "Alles klar",
+      "actionEyebrow": "Handlungsbedarf",
+      "emptyTitle": "Keine ausstehenden Umfragen",
+      "emptySubtitle": "Alle offenen Abstimmungen haben bereits Ihre Stimme erhalten.",
+      "waitingTitle_one": "{{count}}-Umfrage wartet auf Ihre Stimme",
+      "waitingTitle_other": "{{count}}-Umfragen warten auf Ihre Stimme",
+      "footerEmpty": "War Room · Umfragen",
+      "footerCount": "Top {{shown}} von {{total}}",
+      "viewAll": "Alle anzeigen"
+    },
+    "timeline": {
+      "title": "Zeitleiste",
+      "empty": {
+        "title": "Keine bevorstehenden Meilensteine geplant.",
+        "subtitle": "Legen Sie Freischaltdaten aus dem Admin-Panel fest und sie werden hier angezeigt."
+      },
+      "toGo": "zu gehen",
+      "past": "past"
+    }
+  },
+  "login": {
+    "brandSuffix": "War Room",
+    "changeLanguage": "Sprache ändern",
+    "eyebrow": "Allianzkommando",
+    "fields": {
+      "username": "Benutzername",
+      "usernamePlaceholder": "your_handle",
+      "password": "Passwort",
+      "showPassword": "Passwort anzeigen",
+      "hidePassword": "Passwort ausblenden"
+    },
+    "errors": {
+      "required": "Benutzername und Passwort sind erforderlich.",
+      "signInFailed": "Die Anmeldung ist fehlgeschlagen.",
+      "wrongCredentials": "Falscher Benutzername oder Passwort."
+    },
+    "submitting": "Unterzeichnung",
+    "enter": "Eingang",
+    "forgot": {
+      "prefix": "Vergessen?",
+      "askR4R5": "Fragen Sie einen R4 oder R5."
+    },
+    "installPwa": "Installieren Sie DAD War Room",
+    "builtBy": "gebaut von"
+  },
+  "members": {
+    "page": {
+      "eyebrow": "Dienstplan",
+      "title": "Allianzmitglieder",
+      "loading": "Lädt…",
+      "memberCount_one": "{{count}}-Mitglied",
+      "memberCount_other": "{{count}} Mitglieder",
+      "combinedPower": "kombinierter strom"
+    },
+    "search": {
+      "placeholder": "Nach Nick suchen…"
+    },
+    "sort": {
+      "label": "Sort",
+      "power": "Leistung",
+      "tier": "Tier",
+      "rank": "Rang",
+      "nick": "Nick"
+    },
+    "empty": {
+      "noMatch": "Kein Mitglied passt zu \"{{query}}\".",
+      "noMembers": "Noch keine Mitglieder im Kader."
+    },
+    "rank": {
+      "r1Title": "Rekrut",
+      "r2Title": "Mitglied",
+      "r3Title": "Veteran",
+      "r4Title": "Offizier",
+      "r5Title": "Leader",
+      "defaultTitle": "Mitglied"
+    },
+    "role": {
+      "leader": "Leader",
+      "joiner": "Joiner",
+      "standby": "Standby"
+    },
+    "status": {
+      "temporaryOut": "Vorübergehende Ausschaltung",
+      "temporarilyOut": "Vorübergehend ausfallen",
+      "out": "Aus"
+    },
+    "detail": {
+      "backToList": "Zurück zur Liste",
+      "notFoundEyebrow": "Nicht gefunden",
+      "notFoundWithNick": "Kein Mitglied mit Nick \"{{nick}}\"",
+      "notFoundNoNick": "Mitglied existiert nicht",
+      "notFoundDescription": "Das Mitglied hat die Allianz möglicherweise verlassen, oder der Link ist falsch.",
+      "dadTagLabel": "DAD tag · {{tag}}",
+      "noteLabel": "Anmerkung:"
+    },
+    "stat": {
+      "power": "Leistung",
+      "truegold": "Truegold"
+    },
+    "participation": {
+      "eyebrow": "Beteiligung",
+      "title": "Ereignisverlauf",
+      "empty": "Noch keine ereignisse registriert - dieses mitglied wurde an kein ereignis gebunden.",
+      "latest": "Letzte"
+    },
+    "card": {
+      "openProfileAria": "Offenes Profil für {{nick}}",
+      "tcLevel": "Lv.{{level}} · {{tier}}"
+    },
+    "powerChart": {
+      "eyebrow": "Macht über die Zeit",
+      "title": "Evolution",
+      "notEnoughData": "Noch nicht genügend Daten — Stromänderungen werden hier angezeigt, wenn sie aufgezeichnet werden.",
+      "snapshotCount_one": "{{count}} Snapshot",
+      "snapshotCount_other": "{{count}} Snapshots"
+    }
+  },
+  "nav": {
+    "home": "Start",
+    "events": "Ereignisse",
+    "chat": "Chat",
+    "alliance": "Allianz",
+    "settings": "Einstellungen",
+    "primaryAriaLabel": "Primär",
+    "adminAriaLabel": "Admin",
+    "exitAdmin": "Exit-Admin-Modus",
+    "exitAdminShort": "Ausfahrt",
+    "adminEvents": "Ereignisse",
+    "adminPolls": "Umfragen",
+    "adminMembers": "Mitglieder",
+    "adminChat": "Chat",
+    "adminAlliance": "Allianz",
+    "adminNotifications": "Notif.",
+    "adminAnalytics": "Stats"
+  },
+  "notifications": {
+    "bellAriaLabel": "Benachrichtigungen",
+    "bellAriaLabelUnread": "Meldungen, {{count}} ungelesen",
+    "panelAriaLabel": "Jüngste Meldungen",
+    "title": "Benachrichtigungen",
+    "empty": "Keine aktuellen Meldungen.",
+    "timeNow": "jetzt",
+    "viewAll": "Alle anzeigen"
+  },
+  "polls": {
+    "eyebrow": "Abstimmen",
+    "title": "Umfragen der Allianz",
+    "loading": "Lädt…",
+    "countLine_one": "{{count}}-Umfrage im Flug",
+    "countLine_other": "{{count}} Umfragen im Flug",
+    "readOnly": "read-only",
+    "empty": {
+      "title": "Noch keine Umfragen",
+      "adminPrefix": "Ein Admin kann die erste Umfrage von",
+      "adminLink": "admin → umfragen"
+    },
+    "view": "Ansicht",
+    "status": {
+      "closed": "Geschlossen",
+      "draft": "Entwurf",
+      "open": "Öffnen"
+    },
+    "type": {
+      "single": "Single",
+      "multi": "Mehrfach",
+      "singleChoice": "Ausgewählte Wahlmöglichkeit",
+      "multiChoice": "Auswahlmöglichkeiten"
+    },
+    "countdown": {
+      "minutes_one": "Schließt in {{count}}m",
+      "minutes_other": "Schließt in {{count}}m",
+      "hours_one": "Schließt in {{count}}h",
+      "hours_other": "Schließt in {{count}}h",
+      "days_one": "Schließt in {{count}}d",
+      "days_other": "Schließt in {{count}}d"
+    },
+    "shareToken": {
+      "invalid": "Dieser Share Link ist ungültig oder die Umfrage wurde gelöscht.",
+      "browse": "Umfragen durchsuchen"
+    },
+    "detail": {
+      "back": "Rücken",
+      "backToPolls": "Zurück zu den Umfragen",
+      "notFound": "Umfrage nicht gefunden.",
+      "countdown": {
+        "archived": "Archiviert",
+        "draftNotPublished": "Entwurf (nicht veröffentlicht)",
+        "closedAt": "Geschlossen {{date}} {{time}}",
+        "openIndefinitely": "Unbestimmt geöffnet"
+      },
+      "draftBanner": {
+        "prefix": "Diese Umfrage ist in",
+        "draft": "draft",
+        "suffix": "Mitglieder können noch nicht wählen. Veröffentlichen von",
+        "link": "admin → umfragen"
+      },
+      "resultsHidden": {
+        "adminOnly": "Die Ergebnisse sind für Admins nur bei dieser Umfrage sichtbar.",
+        "untilClose": "Stimmenzählungen werden ausgeblendet, bis die Umfrage abgeschlossen ist."
+      },
+      "signedOutBanner": "zur Abstimmung. Sie können Ergebnisse anzeigen, während Sie angemeldet sind.",
+      "allyBanner": "accounts können ergebnisse anzeigen, können aber nicht abstimmen (nur lesezugriff).",
+      "voteFailed": "Abstimmung gescheitert",
+      "clearFailed": "Klar fehlgeschlagen",
+      "voterCount_one": "{{count}} Wähler",
+      "voterCount_other": "{{count}} Wähler",
+      "totalPicks": "{{count}} insgesamt Picks",
+      "resultsHiddenShort": "Ergebnisse versteckt, bis die Umfrage schließt.",
+      "reVotePrefix": "Sie können erneut abstimmen, bis",
+      "clearMyVote": "Klar meine Stimme",
+      "shareTitle": "Aktienumrechnung",
+      "share": "Anteil",
+      "copied": "Kopiert"
+    }
+  },
+  "settings": {
+    "eyebrow": "Einstellungen",
+    "title": "Einstellungen",
+    "account": {
+      "heading": "Konto",
+      "signedInFallback": "Unterzeichnet in",
+      "openAdmin": "Offene Admin Einstellungen",
+      "openAdminTooltip": "Schalten Sie die gesamte App Chrome in den Admin-Modus (Crimson Hairline + 8-Tab Admin Nav)",
+      "signInHint": "Mitglieder, Verbündete und Admins."
+    },
+    "language": {
+      "eyebrow": "Sprache",
+      "available_one": "{{count}} verfügbar",
+      "available_other": "{{count}} Sprachen verfügbar",
+      "close": "Schließen",
+      "change": "Änderung"
+    },
+    "pwa": {
+      "eyebrow": "Progressive Web App",
+      "title": "Installieren Sie War Room",
+      "alreadyInstalled": "Bereits installiert - öffnet sich offline, startet von Ihrem Startbildschirm.",
+      "addToHomescreen": "Hinzufügen zum Startbildschirm für schnellen Zugriff und Push-Benachrichtigungen.",
+      "openInBrowser": "Öffnen Sie Chrome / Edge / Safari, um es als App zu installieren.",
+      "standaloneMode": "Standalone-Modus",
+      "browserMode": "Browsermodus",
+      "installed": "Installiert",
+      "install": "Installieren"
+    },
+    "push": {
+      "eyebrow": "Benachrichtigungen",
+      "title": "Push-Benachrichtigungen",
+      "description": "Erhalten Sie In-App-Pings, wenn ein Ereignis beginnt, eine neue Umfrage öffnet oder der Administrator eine Ankündigung in Ihrer gewählten Sprache sendet.",
+      "notConfigured": "Push nicht für diesen Einsatz konfiguriert. Fragen Sie den Allianz-Admin.",
+      "blocked": "In den Browsereinstellungen blockierte Benachrichtigungen – abonnieren können.",
+      "active": "Aktiv",
+      "deactivate": "Deaktivieren",
+      "permissionGranted": "Bewilligte Genehmigung",
+      "notSubscribed": "Nicht gezeichnet",
+      "activate": "Aktivieren"
+    },
+    "profile": {
+      "eyebrow": "Profil",
+      "displayName": "Anzeigename",
+      "password": "Passwort",
+      "avatar": "Avatar",
+      "avatarValue": {
+        "custom": "Kundenspezifisches Bild",
+        "hero": "Hero: {{slug}}",
+        "default": "Standard (Hash)"
+      },
+      "edit": "Bearbeiten",
+      "newDisplayName": "Neuer Anzeigename",
+      "newPassword": "Neues Passwort",
+      "passwordMinimum": "Mindestens 8 Zeichen.",
+      "confirm": "Bestätigen",
+      "passwordsDontMatch": "Passwörter passen nicht zusammen.",
+      "preview": "Vorschau",
+      "resetTooltip": "Zurück zum automatischen Avatar (Hash des Benutzernamens)",
+      "reset": "Zurücksetzen",
+      "chooseHero": "Wählen Sie den Helden",
+      "customImage": "Kundenspezifisches Bild",
+      "uploadImage": "Upload-Bild",
+      "or": "or",
+      "imageUrl": "Bild-URL",
+      "imageUrlHint": "Fügen Sie einen beliebigen öffentlichen Link ein (Discord, Imgur, Wiki usw.). Wird den ausgewählten Helden außer Kraft setzen.",
+      "close": "Schließen",
+      "cancel": "Abbrechen",
+      "save": "Speichern",
+      "feedback": {
+        "displayNameUpdated": "Anzeigename aktualisiert.",
+        "passwordChanged": "Passwort geändert.",
+        "avatarUpdated": "Avatar aktualisiert.",
+        "avatarReset": "Zurück zum automatischen Avatar.",
+        "failed": "Fehlgeschlagen.",
+        "failedShort": "Fehlgeschlagen."
+      }
+    }
+  },
+  "timeline": {
+    "detail": {
+      "back": "Rücken",
+      "loadError": "Versäumnis zu laden",
+      "notFound": "Meilenstein nicht gefunden.",
+      "reference": "Referenznummer",
+      "source": "Quelle",
+      "daysToGo": "{{days}}d geht",
+      "today": "today",
+      "daysAgo": "{{days}}d vor",
+      "noBody": "Noch keine detaillierte Beschreibung für diesen Meilenstein. Ein Administrator kann Rich Content (Text, Bilder, Listen, Links) im Admin-Timeline-Editor ausfüllen."
+    },
+    "category": {
+      "truegold": "Truegold",
+      "heroes": "Helden",
+      "pets": "Begleiter",
+      "pvp": "PvP",
+      "feature": "Feature",
+      "master": "Kapitän",
+      "fog": "Fog",
+      "warAcademy": "War Academy",
+      "other": "Andere"
+    },
+    "relative": {
+      "today": "Heute",
+      "tomorrow": "Morgen",
+      "daysAgo": "{{days}}d vor",
+      "daysCount": "{{count}} Tage"
+    }
+  },
+  "ui": {
+    "language": "Sprache",
+    "back": "Rücken",
+    "backToHub": "Zurück zum Hub",
+    "copy": "Kopie",
+    "copied": "Kopiert!",
+    "toTop": "Zurück nach oben",
+    "skipToContent": "Zum Inhalt springen",
+    "imageUpload": {
+      "label": "Image Upload",
+      "previewAlt": "Vorschau",
+      "currentImage": "Aktuelles Bild",
+      "swap": "Swap",
+      "remove": "Entfernen",
+      "uploading": "Hochladen..",
+      "dropOrClick": "Ziehen Sie ein Bild oder klicken Sie auf die Wahl",
+      "limitsHint": "{{allowedHuman}} · bis zu {{maxMb}} MB",
+      "errorTooLarge": "Datei zu groß. Maximal {{maxMb}} MB.",
+      "errorUploadFailed": "Upload fehlgeschlagen."
+    }
+  }
+}

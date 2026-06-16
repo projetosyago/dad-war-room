@@ -1,0 +1,1467 @@
+{
+  "admin": {
+    "accounts": {
+      "backToMembers": "Back to Members",
+      "eyebrow": "Admin",
+      "title": "Accounts",
+      "closeForm": "Close form",
+      "newAccount": "New account",
+      "filters": {
+        "all": "All",
+        "members": "DAD Members",
+        "allies": "Allies"
+      },
+      "emptyState": "No accounts in this filter.",
+      "youLabel": "you",
+      "lastLogin": "last login {{when}}",
+      "rosterTooltip": "Roster: {{nick}} ({{rank}})",
+      "rosterFallback": "roster",
+      "lvlShort": "lvl {{level}}",
+      "unlinkTitle": "Unlink from roster",
+      "unlink": "Unlink",
+      "linkTitle": "Link to a roster member",
+      "link": "Link",
+      "resetTitle": "Reset password",
+      "reset": "Reset",
+      "deactivateTitle": "Deactivate",
+      "reactivateTitle": "Reactivate",
+      "off": "Off",
+      "on": "On",
+      "passwordTooShort": "Password must be at least 6 characters.",
+      "resetPasswordPrompt": "Set a new TEMPORARY password for {{name}} (@{{username}}).\nThe member will be forced to change it on next sign-in.",
+      "cantDeactivateSelf": "You can't deactivate yourself — ask another R5 to do it.",
+      "confirmDeactivate": "Deactivate {{name}}?",
+      "confirmReactivate": "Reactivate {{name}}?",
+      "errors": {
+        "failedToCreate": "Failed to create account",
+        "failedToReset": "Failed to reset password",
+        "failedToLink": "Failed to link",
+        "failedToToggle": "Failed to update active status"
+      },
+      "feedback": {
+        "created": "Account \"{{name}}\" ({{role}}) created.",
+        "passwordReset": "Password reset for {{name}}.",
+        "linked": "{{name}} linked to {{target}}.",
+        "unlinked": "{{name}} unlinked.",
+        "reactivated": "{{name}} reactivated.",
+        "deactivated": "{{name}} deactivated."
+      },
+      "form": {
+        "heading": "New account",
+        "usernameLabel": "Username *",
+        "usernamePlaceholder": "alice",
+        "usernameHint": "used to log in",
+        "displayNameLabel": "Display name",
+        "displayNameHint": "defaults to username",
+        "passwordLabel": "Password *",
+        "passwordPlaceholder": "at least 6 characters",
+        "roleLabel": "Role *",
+        "languageLabel": "Language",
+        "cancel": "Cancel",
+        "creating": "Creating…",
+        "create": "Create account"
+      },
+      "roles": {
+        "ally": {
+          "label": "Ally",
+          "description": "Diplomatic guest — read-only, posts in chat."
+        },
+        "member": {
+          "label": "Member (R1)",
+          "description": "Regular DAD member."
+        },
+        "r2": {
+          "label": "R2",
+          "description": "Officer (no admin extras yet)."
+        },
+        "r3": {
+          "label": "R3",
+          "description": "Officer (no admin extras yet)."
+        },
+        "r4": {
+          "label": "R4 — Admin",
+          "description": "Create polls/events, manage allies."
+        },
+        "r5": {
+          "label": "R5 — Admin",
+          "description": "Manage other accounts (incl. other R5)."
+        }
+      },
+      "relative": {
+        "never": "never",
+        "justNow": "just now",
+        "minutesAgo": "{{count}}m ago",
+        "hoursAgo": "{{count}}h ago",
+        "daysAgo": "{{count}}d ago",
+        "monthsAgo": "{{count}}mo ago",
+        "yearsAgo": "{{count}}y ago"
+      },
+      "linkPicker": {
+        "heading": "Link to roster",
+        "close": "Close",
+        "searchPlaceholder": "Search roster…",
+        "noMatch": "No member matches \"{{query}}\".",
+        "allLinked": "All roster members are linked."
+      }
+    },
+    "alliance": {
+      "backToAdmin": "Back to admin",
+      "eyebrow": "Admin",
+      "title": "Alliance",
+      "cards": {
+        "timeline": {
+          "title": "Kingdom Timeline",
+          "subtitle": "Edit unlock dates for TG tiers, hero/pet generations, masters, fog."
+        },
+        "catalogue": {
+          "title": "Catalogue",
+          "subtitle": "Heroes, pets, masters and troop tiers — game data behind every page."
+        },
+        "announcements": {
+          "title": "Announcements",
+          "subtitle": "Compose and schedule push notifications to members."
+        }
+      },
+      "metadata": {
+        "eyebrow": "Public info",
+        "title": "Edit metadata",
+        "intro": "Rank, motto, tagline, brand colors, and capture date appear on <allianceLink>/alliance</allianceLink>. These values live in the <c>alliance_settings</c> table.",
+        "rankLabel": "Rank",
+        "rankPlaceholder": "#2",
+        "taglineLabel": "Tagline",
+        "taglinePlaceholder": "Kingdom 1652",
+        "mottoLabel": "Motto",
+        "mottoPlaceholder": "Elegance in Peace, Chaos in Battle.",
+        "brandPrimaryLabel": "Brand primary (hex)",
+        "brandAccentLabel": "Brand accent (hex)",
+        "capturedAtLabel": "Captured at",
+        "loadError": "Load error: {{message}}",
+        "saveError": "Save error: {{message}}",
+        "saved": "Saved",
+        "updatedAt": "Updated {{date}}",
+        "loading": "Loading…",
+        "saving": "Saving…",
+        "save": "Save"
+      }
+    },
+    "analytics": {
+      "backToAdmin": "Back to admin",
+      "eyebrow": "Admin",
+      "title": "Analytics",
+      "kpi": {
+        "onlineNow": {
+          "label": "Online now",
+          "sub": "sign-in in last 5 min"
+        },
+        "activeSessions": {
+          "label": "Active sessions",
+          "sub": "sign-in in last 24h"
+        },
+        "totalAccounts": {
+          "label": "Total accounts",
+          "sub": "{{count}} active"
+        },
+        "neverLoggedIn": {
+          "label": "Never logged in",
+          "sub": "needs onboarding"
+        },
+        "failedSignins": {
+          "label": "Failed sign-ins",
+          "sub": "last 24h"
+        }
+      },
+      "activity": {
+        "heading": "Activity windows",
+        "intro": "Accounts touched in window (derived from last_login_at), not raw sign-ins.",
+        "last24h": "Last 24h",
+        "last7d": "Last 7d",
+        "last30d": "Last 30d",
+        "pctOfAccounts": "{{pct}}% of accounts"
+      },
+      "pwa": {
+        "heading": "PWA install split",
+        "installed": "Installed",
+        "browserOnly": "Browser only",
+        "summary": "{{installed}} of {{total}} accounts ({{pct}}%) added War Room to their home screen."
+      },
+      "push": {
+        "heading": "Push delivery (last 30d)",
+        "opened": "Opened",
+        "ignored": "Ignored",
+        "note": "Mock for now — wires up once push ships. Tracked per-notification on the Notifications panel."
+      },
+      "never": {
+        "heading": "Never logged in"
+      },
+      "langs": {
+        "heading": "Language distribution"
+      },
+      "footnote": "Online now and active sessions read from login_events. Push delivery is mocked until push ships."
+    },
+    "catalogue": {
+      "backToAlliance": "Back to Alliance",
+      "eyebrow": "Admin · Catalogue",
+      "title": "Game catalogue",
+      "intro": "Manage the catalogue tables that power timeline, avatars, troop guides and stat cards. Changes here propagate to every public page that reads from <c>heroes</c>, <c>pets</c>, <c>masters</c> and <c>troop_tiers</c>.",
+      "cards": {
+        "heroes": {
+          "title": "Heroes",
+          "subtitle": "Roster, portrait, generation and preferred troop branch."
+        },
+        "pets": {
+          "title": "Pets",
+          "subtitle": "Companions by generation — portrait, description, release."
+        },
+        "masters": {
+          "title": "Masters",
+          "subtitle": "Strategic advisors ordered by unlock sequence."
+        },
+        "troopTiers": {
+          "title": "Troop tiers",
+          "subtitle": "T1..T10 and Truegold tiers — labels, training, icons."
+        }
+      }
+    },
+    "chat": {
+      "backToAdmin": "Back to admin",
+      "eyebrow": "Admin",
+      "title": "Chat",
+      "unsaved": "unsaved",
+      "save": "Save",
+      "savedAt": "Saved · {{time}}",
+      "rateLimit": {
+        "title": "Rate limit (per user)",
+        "subtitle": "Soft cap on how many messages a single account can post in one hour.",
+        "messagesPerHour": "Messages / hour",
+        "minSeconds": "Min seconds between messages"
+      },
+      "attachments": {
+        "title": "Attachments",
+        "subtitle": "What members can upload. Audio + video stay disabled in v1.",
+        "allowImages": "Allow image uploads",
+        "maxFileSize": "Max file size"
+      },
+      "purge": {
+        "title": "Purge messages",
+        "subtitle": "One-shot wipe of all chat messages and uploaded images. Cannot be undone.",
+        "clearAll": "Clear all messages",
+        "confirmHeading": "Confirm permanent deletion",
+        "confirmBody": "Every chat message and uploaded image will be gone. Past polls, events and members stay untouched.",
+        "cancel": "Cancel",
+        "confirmYes": "Yes, wipe everything"
+      },
+      "defaults": {
+        "title": "Defaults",
+        "subtitle": "Reset every value to the recommended starting point.",
+        "restore": "Restore defaults"
+      },
+      "footnote": "Note: chat itself ships later. These controls are persisted locally today so the panel is ready — once the messages table goes live, this page swaps to a server-backed config row without touching the UI."
+    },
+    "eventParticipants": {
+      "backToOccurrences": "Back to occurrences",
+      "eyebrow": "Event participants",
+      "eventFallback": "Event",
+      "durationMin": "{{count}}min",
+      "addHeading": "Add participant",
+      "memberLabel": "Member",
+      "allAssigned": "All members already assigned",
+      "roleLabel": "Role",
+      "notesLabel": "Notes (optional)",
+      "notesPlaceholder": "Squad assignment, backup plan, special instructions…",
+      "notesInputPlaceholder": "Notes (optional)",
+      "adding": "Adding…",
+      "addButton": "Add participant",
+      "assignedHeading": "Assigned · {{count}}",
+      "emptyState": "No participants assigned yet — add the first one above.",
+      "statusTempOut": "Out (temp)",
+      "statusLeft": "Left",
+      "cancel": "Cancel",
+      "save": "Save",
+      "confirm": "Confirm",
+      "cancelDelete": "Cancel delete",
+      "editAria": "Edit {{nick}}",
+      "removeAria": "Remove {{nick}}",
+      "roles": {
+        "leader": "Leader",
+        "joiner": "Joiner",
+        "standby": "Standby",
+        "unset": "Unset",
+        "unsetOption": "— Unset —"
+      },
+      "errors": {
+        "notFound": "Occurrence not found.",
+        "failedToLoad": "Failed to load occurrence.",
+        "failedToAdd": "Failed to add participant.",
+        "failedToUpdate": "Failed to update participant.",
+        "failedToRemove": "Failed to remove participant."
+      },
+      "feedback": {
+        "added": "Participant added.",
+        "updated": "Participant updated.",
+        "removed": "Participant removed."
+      }
+    },
+    "events": {
+      "backToAdmin": "Back to admin",
+      "eyebrow": "Admin",
+      "title": "Event catalogue",
+      "occurrencesLink": "Occurrences",
+      "newEvent": "New event",
+      "close": "Close",
+      "confirmArchive": "Archive this event? It will be hidden from the All-events grid.",
+      "errorFailed": "Failed",
+      "feedback": {
+        "archived": "Archived.",
+        "restored": "Restored as coming-soon.",
+        "created": "Event created."
+      },
+      "form": {
+        "heading": "New seasonal event",
+        "nameLabel": "Name *",
+        "namePlaceholder": "Lunar Festival",
+        "shortNameLabel": "Short name",
+        "shortNamePlaceholder": "Lunar",
+        "descriptionLabel": "Description",
+        "iconUrlLabel": "Icon URL",
+        "iconUrlPlaceholder": "/images/events/lunar.png",
+        "seasonal": "One-off / seasonal",
+        "create": "Create"
+      },
+      "seasonalBadge": "Seasonal",
+      "actions": {
+        "restore": "Restore",
+        "archive": "Archive"
+      }
+    },
+    "heroes": {
+      "backToCatalogue": "Back to Catalogue",
+      "eyebrow": "Admin · Catalogue",
+      "title": "Heroes",
+      "newHero": "New hero",
+      "cancel": "Cancel",
+      "create": "Create",
+      "edit": "Edit",
+      "cancelEdit": "Cancel",
+      "save": "Save",
+      "inactive": "inactive",
+      "genLabel": "Gen {{gen}}",
+      "branch": {
+        "none": "—",
+        "infantry": "Infantry",
+        "cavalry": "Cavalry",
+        "archer": "Archer"
+      },
+      "errors": {
+        "nameRequired": "Enter a name for the hero.",
+        "invalidSlug": "Invalid slug. Use letters and numbers.",
+        "failedToCreate": "Failed to create hero",
+        "failedToDelete": "Failed to delete",
+        "nameRequiredShort": "Name required.",
+        "failedToSave": "Failed to save"
+      },
+      "confirmDelete": {
+        "heading": "Delete \"{{name}}\" permanently?",
+        "body": "The slug {{slug}} and portrait will be removed. This action cannot be undone.",
+        "yes": "Yes, delete"
+      },
+      "fields": {
+        "name": "Name",
+        "slugSuggested": "Slug (suggested:",
+        "slugPlaceholder": "ex: shen-yu",
+        "generation": "Generation (1-12)",
+        "role": "Role",
+        "rolePlaceholder": "ex: Marshal",
+        "preferredBranch": "Preferred branch",
+        "portrait": "Portrait",
+        "portraitUploadLabel": "Hero portrait",
+        "description": "Description",
+        "releasedAt": "Released at",
+        "displayOrder": "Display order",
+        "active": "Active"
+      }
+    },
+    "iconPicker": {
+      "groups": {
+        "truegoldTiers": "Truegold tiers",
+        "items": "Items",
+        "buildings": "Buildings",
+        "events": "Events",
+        "heroes": "Heroes"
+      },
+      "currentIcon": "Current icon",
+      "noOverride": "no override",
+      "autoLabel": "auto · {{path}}",
+      "clear": "Clear",
+      "customUrlLabel": "Or paste a custom URL (any image on the web)",
+      "customUrlPlaceholder": "https://wiki.kingshot.gg/.../some-icon.png",
+      "apply": "Apply",
+      "uploadOwn": "Or upload your own image"
+    },
+    "masters": {
+      "backToCatalogue": "Back to Catalogue",
+      "eyebrow": "Admin · Catalogue",
+      "title": "Masters",
+      "newMaster": "New master",
+      "cancel": "Cancel",
+      "create": "Create",
+      "edit": "Edit",
+      "cancelEdit": "Cancel",
+      "save": "Save",
+      "inactive": "inactive",
+      "unlockOrderLabel": "Unlock #{{order}}",
+      "errors": {
+        "nameRequired": "Enter a name for the master.",
+        "invalidSlug": "Invalid slug. Use letters and numbers.",
+        "failedToCreate": "Failed to create master",
+        "failedToDelete": "Failed to delete",
+        "nameRequiredShort": "Name required.",
+        "failedToSave": "Failed to save"
+      },
+      "confirmDelete": {
+        "heading": "Delete \"{{name}}\" permanently?",
+        "body": "The slug {{slug}} will be removed. This action cannot be undone.",
+        "yes": "Yes, delete"
+      },
+      "fields": {
+        "name": "Name",
+        "slugSuggested": "Slug (suggested:",
+        "unlockOrder": "Unlock order",
+        "portrait": "Portrait",
+        "portraitUploadLabel": "Master portrait",
+        "description": "Description",
+        "releasedAt": "Released at",
+        "active": "Active"
+      }
+    },
+    "members": {
+      "backToAdmin": "Back to admin",
+      "eyebrow": "Admin",
+      "title": "Member roster",
+      "statsMembers": "{{count}} members",
+      "statsTempOut": "{{count}} temp. out",
+      "combinedPower": "combined power",
+      "accountsLink": "Accounts",
+      "searchPlaceholder": "Search by nick…",
+      "filters": {
+        "all": "All",
+        "out": "Out"
+      },
+      "feedbackSaved": "Saved {{nick}}.",
+      "emptyState": "No members match this filter.",
+      "tempOutShort": "temp out",
+      "leftShort": "left",
+      "lvlLabel": "lvl {{level}}",
+      "editButton": "Edit",
+      "subgroups": {
+        "supreme": "Supreme (R4)",
+        "enforcerer": "Enforcerer (R3)",
+        "alpha": "Alpha (R2)",
+        "lieutenant": "Lieutenant (R1)"
+      },
+      "statuses": {
+        "active": "Active",
+        "temporaryOut": "Temp. out",
+        "left": "Left"
+      },
+      "errors": {
+        "tgOrTc": "Use TG level OR town center, not both.",
+        "failedToSave": "Failed to save"
+      },
+      "edit": {
+        "heading": "Edit · {{nick}}",
+        "close": "Close",
+        "nickLabel": "Nick",
+        "rankLabel": "Rank",
+        "subgroupLabel": "Subgroup",
+        "noneOption": "— none —",
+        "powerLabel": "Power (millions)",
+        "powerHint": "— e.g. 158.7",
+        "tgLabel": "TG level",
+        "tgPlaceholder": "1-8",
+        "tcLabel": "Town center",
+        "tcPlaceholder": "25-30",
+        "statusLabel": "Status",
+        "tempOutNote": "Why & when back?",
+        "leftNote": "Reason for leaving",
+        "langHintLabel": "Lang hint",
+        "langHintHint": "— e.g. zh-CN, pt",
+        "optional": "optional",
+        "cancel": "Cancel",
+        "saving": "Saving…",
+        "save": "Save"
+      }
+    },
+    "milestones": {
+      "backToAlliance": "Back to Alliance",
+      "eyebrow": "Admin",
+      "title": "Kingdom milestones",
+      "newMilestone": "New milestone",
+      "cancel": "Cancel",
+      "create": "Create",
+      "edit": "Edit",
+      "cancelEdit": "Cancel",
+      "save": "Save",
+      "intro": "Set the expected unlock date for each milestone. The dashboard then shows live days-to-go countdowns for the next ones.",
+      "view": "View",
+      "openPublic": "Open public page",
+      "deleteTitle": "Delete milestone",
+      "achievedBadge": "achieved",
+      "preview": "Preview",
+      "afterCreateHint": "After creating, open the item in the list below to fill in the rich content (Tiptap).",
+      "bodyPlaceholder": "Write about this milestone: what it is, how it affects the alliance, strategy changes, useful links…",
+      "errors": {
+        "nameRequired": "Enter a name for the new milestone.",
+        "invalidSlug": "Invalid name for slug generation. Use letters and numbers.",
+        "failedToCreate": "Failed to create milestone",
+        "failedToDelete": "Failed to delete",
+        "nameRequiredShort": "Milestone name is required.",
+        "failedToSave": "Failed to save"
+      },
+      "confirmDelete": {
+        "heading": "Delete \"{{name}}\" permanently?",
+        "body": "The public page /timeline/{{slug}} and all content will be deleted. This action cannot be undone.",
+        "yes": "Yes, delete"
+      },
+      "categories": {
+        "truegold": "Truegold",
+        "heroes": "Heroes",
+        "pets": "Pets",
+        "pvp": "PvP",
+        "feature": "Feature",
+        "master": "Master",
+        "fog": "Fog",
+        "warAcademy": "War Academy",
+        "other": "Other"
+      },
+      "fields": {
+        "name": "Name",
+        "namePlaceholder": "e.g. Truegold 6 (Crucible upgrade)",
+        "category": "Category",
+        "unlockDate": "Unlock date (UTC, optional)",
+        "slugAuto": "Slug (auto:",
+        "slugPlaceholder": "optional — use only letters/numbers/hyphen",
+        "notes": "Short notes (optional)",
+        "notesPublic": "Short notes (shown in the public list)",
+        "notesPublicPlaceholder": "e.g. Unlocks Crucible and T8 Terror troops.",
+        "unlockDateUtc": "Unlock date (UTC)",
+        "achieved": "Achieved",
+        "icon": "Milestone icon",
+        "milestoneName": "Milestone name",
+        "contentFor": "Content for /timeline/{{slug}}"
+      }
+    },
+    "notifications": {
+      "backToAdmin": "Back to admin",
+      "eyebrow": "Admin",
+      "title": "Notifications",
+      "compose": "Compose",
+      "titleLabel": "Title",
+      "titlePlaceholder": "Bear Hunt Phase 3 starts in 15 min",
+      "bodyLabel": "Body",
+      "bodyPlaceholder": "Burn rallies start in 15 minutes — be in your castle and ready to march.",
+      "emojiLabel": "Emoji",
+      "imageLabel": "Big image (optional)",
+      "uploadImage": "Upload an image",
+      "orPasteUrl": "…or paste a URL",
+      "imageUrlPlaceholder": "https://…/banner.png",
+      "audienceLabel": "Audience",
+      "tapTargetLabel": "Tap target",
+      "tapUrlPlaceholder": "https://war-room.local/p/abc",
+      "scheduleLabel": "Schedule",
+      "recurrencePlaceholder": "e.g. every Tuesday 20:00 UTC",
+      "discard": "Discard",
+      "sending": "Sending…",
+      "send": "Send",
+      "scheduling": "Scheduling…",
+      "scheduleAction": "Schedule",
+      "preview": "Preview",
+      "previewNow": "now",
+      "previewDefaultTitle": "Notification title",
+      "previewDefaultBody": "Body text shows here as members would see it on the lock screen.",
+      "targetArrow": "Target →",
+      "recentPushes": "Recent pushes",
+      "loading": "Loading…",
+      "noneSent": "No notifications sent yet.",
+      "deliveredCount": "{{count}} delivered",
+      "openedCount": "{{count}} opened · {{pct}}%",
+      "pushedTo": "Pushed to {{audience}} · {{time}}",
+      "audience": {
+        "all": "All accounts",
+        "voting": "Voting members (R1-R5)",
+        "admins": "Admins only (R4 / R5)",
+        "allies": "Allies only",
+        "custom": "Pick members"
+      },
+      "schedule": {
+        "now": "Send now",
+        "later": "Schedule",
+        "recurring": "Recurring"
+      },
+      "tap": {
+        "hub": "War Room / Home",
+        "events": "Events tab",
+        "polls": "Polls list",
+        "alliance": "Alliance page",
+        "url": "Custom URL"
+      },
+      "errors": {
+        "mustBeSignedIn": "You must be signed in to send notifications.",
+        "failedToSend": "Failed to send notification."
+      }
+    },
+    "occurrences": {
+      "backToEvents": "Back to Events",
+      "eyebrow": "Admin",
+      "title": "Event calendar",
+      "intro": "Schedule the next bear, KvK phases, and seasonal events.",
+      "form": {
+        "heading": "New occurrence",
+        "eventLabel": "Event",
+        "startsAtLabel": "Starts at (your local time)",
+        "durationLabel": "Duration (min)",
+        "phaseLabel": "Phase label (optional)",
+        "phasePlaceholder": "Prep / Castle Battle / Brawl",
+        "notesLabel": "Notes (optional)",
+        "repeatLabel": "Repeat at fixed interval",
+        "intervalLabel": "Interval (hours)",
+        "bearHint": "Bear Hunt is typically 48",
+        "countLabel": "Number of occurrences",
+        "saving": "Saving...",
+        "submit": "Add occurrence",
+        "submitMany": "Add {{count}} occurrences"
+      },
+      "feedback": {
+        "added": "Occurrence added.",
+        "addedMany": "Added {{count}} occurrences every {{hours}}h."
+      },
+      "errors": {
+        "failedToLoad": "Failed to load",
+        "failedToSave": "Failed to save",
+        "failedToDelete": "Failed to delete"
+      },
+      "confirmDelete": "Delete this occurrence?",
+      "upcomingHeading": "Upcoming · next 30 days",
+      "loading": "Loading...",
+      "emptyState": "Nothing scheduled in the next 30 days.",
+      "durationMin": "{{count}}min",
+      "cancelled": "cancelled",
+      "manageSquad": "Manage squad",
+      "squads": "Squads",
+      "delete": "Delete"
+    },
+    "pets": {
+      "backToCatalogue": "Back to Catalogue",
+      "eyebrow": "Admin · Catalogue",
+      "title": "Pets",
+      "newPet": "New pet",
+      "cancel": "Cancel",
+      "create": "Create",
+      "edit": "Edit",
+      "cancelEdit": "Cancel",
+      "save": "Save",
+      "inactive": "inactive",
+      "genLabel": "Gen {{gen}}",
+      "errors": {
+        "nameRequired": "Enter a name for the pet.",
+        "invalidSlug": "Invalid slug. Use letters and numbers.",
+        "failedToCreate": "Failed to create pet",
+        "failedToDelete": "Failed to delete",
+        "nameRequiredShort": "Name required.",
+        "failedToSave": "Failed to save"
+      },
+      "confirmDelete": {
+        "heading": "Delete \"{{name}}\" permanently?",
+        "body": "The slug {{slug}} will be removed. This action cannot be undone.",
+        "yes": "Yes, delete"
+      },
+      "fields": {
+        "name": "Name",
+        "slugSuggested": "Slug (suggested:",
+        "generation": "Generation",
+        "portrait": "Portrait",
+        "portraitUploadLabel": "Pet portrait",
+        "description": "Description",
+        "releasedAt": "Released at",
+        "displayOrder": "Display order",
+        "active": "Active"
+      }
+    },
+    "polls": {
+      "backToAdmin": "Back to admin",
+      "eyebrow": "Admin",
+      "title": "Polls",
+      "closeForm": "Close form",
+      "newPoll": "New poll",
+      "filters": {
+        "all": "all",
+        "open": "open",
+        "closed": "closed",
+        "draft": "draft",
+        "archived": "archived"
+      },
+      "statusTints": {
+        "draft": "Draft",
+        "open": "Open",
+        "closed": "Closed",
+        "archived": "Archived"
+      },
+      "visibility": {
+        "during": {
+          "label": "Live (during voting)",
+          "hint": "Members see counts as they update"
+        },
+        "afterClose": {
+          "label": "After close only",
+          "hint": "Counts hidden until the poll closes"
+        },
+        "adminOnly": {
+          "label": "Admin-only",
+          "hint": "Counts always hidden from members"
+        }
+      },
+      "visibilityShort": {
+        "adminOnly": "admin-only",
+        "afterClose": "after close"
+      },
+      "errors": {
+        "minOptions": "Add at least {{min}} options.",
+        "duplicates": "Duplicate options are not allowed.",
+        "failedToCreate": "Failed to create poll",
+        "actionFailed": "Action failed",
+        "clipboardBlocked": "Clipboard blocked by the browser."
+      },
+      "feedback": {
+        "created": "Created \"{{title}}\" ({{status}}).",
+        "published": "Published \"{{title}}\".",
+        "closed": "Closed \"{{title}}\".",
+        "reopened": "Reopened \"{{title}}\".",
+        "archived": "Archived \"{{title}}\".",
+        "restored": "Restored \"{{title}}\" to closed.",
+        "deleted": "Deleted \"{{title}}\"."
+      },
+      "confirmDelete": "Delete \"{{title}}\" permanently? All votes will be lost.",
+      "form": {
+        "heading": "New poll",
+        "titleLabel": "Title *",
+        "titlePlaceholder": "What time should we run Viking Vengeance?",
+        "descriptionLabel": "Description",
+        "descriptionHint": "— Markdown (**bold**, *italic*, `code`, [text](url), - lists)",
+        "descriptionPlaceholder": "**18:00 UTC** is great for EU + ASIA overlap. *Please vote even if you can't make it.*",
+        "typeLabel": "Type *",
+        "typeSingle": "Single",
+        "typeSingleHint": "One choice",
+        "typeMulti": "Multi",
+        "typeMultiHint": "Many choices",
+        "initialStatusLabel": "Initial status *",
+        "statusOpenOption": "Open · publish immediately",
+        "statusDraftOption": "Draft · only admins see it",
+        "opensAtLabel": "Opens at",
+        "opensAtHint": "— optional · UTC",
+        "closesAtLabel": "Closes at",
+        "closesAtHint": "— optional · UTC",
+        "resultsVisibilityLabel": "Results visibility *",
+        "optionsLabel": "Options *",
+        "optionPlaceholder": "Option {{n}}",
+        "removeOption": "Remove option",
+        "addOption": "Add option",
+        "cancel": "Cancel",
+        "creating": "Creating…",
+        "create": "Create poll"
+      },
+      "emptyAll": "No polls yet.",
+      "emptyFiltered": "No {{filter}} polls.",
+      "row": {
+        "closesAt": "closes {{date}}",
+        "openIndefinitely": "open indefinitely",
+        "closedAt": "closed {{date}}"
+      },
+      "actions": {
+        "copyLinkTitle": "Copy short share link",
+        "copied": "Copied",
+        "link": "Link",
+        "publishTitle": "Publish · members can vote",
+        "publish": "Publish",
+        "closeTitle": "Close now",
+        "close": "Close",
+        "reopenTitle": "Reopen",
+        "reopen": "Reopen",
+        "archiveTitle": "Archive · hide from default lists",
+        "archive": "Archive",
+        "unarchiveTitle": "Unarchive (back to closed)",
+        "restore": "Restore",
+        "deleteTitle": "Delete"
+      }
+    },
+    "richTextEditor": {
+      "placeholder": "Tell the story of this milestone…",
+      "title": "Title",
+      "subtitle": "Subtitle",
+      "bold": "Bold",
+      "italic": "Italic",
+      "underline": "Underline",
+      "bulletList": "Bullet list",
+      "orderedList": "Numbered list",
+      "quote": "Quote",
+      "alignLeft": "Align left",
+      "alignCenter": "Align center",
+      "alignRight": "Align right",
+      "insertImage": "Insert image",
+      "undo": "Undo",
+      "redo": "Redo",
+      "close": "Close",
+      "uploadImage": "Upload image",
+      "or": "or",
+      "imageUrl": "Image URL",
+      "imageUrlPlaceholder": "https://…/figure.png",
+      "insert": "Insert"
+    },
+    "troopTiers": {
+      "backToCatalogue": "Back to Catalogue",
+      "eyebrow": "Admin · Catalogue",
+      "title": "Troop tiers",
+      "newTier": "New tier",
+      "cancel": "Cancel",
+      "create": "Create",
+      "edit": "Edit",
+      "cancelEdit": "Cancel",
+      "save": "Save",
+      "orderLabel": "Order #{{order}}",
+      "truegoldBadge": "Truegold",
+      "buildingLv": "Building lv {{lv}}",
+      "errors": {
+        "tierLabelRequired": "Enter the tier label (e.g. T8, TG3).",
+        "tierLabelRequiredShort": "Tier label required.",
+        "failedToCreate": "Failed to create tier",
+        "failedToDelete": "Failed to delete",
+        "failedToSave": "Failed to save"
+      },
+      "confirmDelete": {
+        "heading": "Delete \"{{name}}\" permanently?",
+        "body": "This action cannot be undone and may break guides that reference this tier.",
+        "yes": "Yes, delete"
+      },
+      "fields": {
+        "tierLabel": "Tier label",
+        "tierLabelPlaceholder": "e.g. T8, TG3",
+        "displayOrder": "Display order",
+        "trainingBuildingLevel": "Training building level",
+        "optional": "optional",
+        "truegoldTier": "Truegold tier",
+        "icon": "Icon",
+        "iconUploadLabel": "Tier icon",
+        "description": "Description"
+      }
+    }
+  },
+  "alliance": {
+    "timeAgo": {
+      "now": "now"
+    },
+    "stats": {
+      "rank": "Rank",
+      "members": "Members",
+      "membersSub": "{{count}} on roster",
+      "power": "Power",
+      "powerSub": "Combined"
+    },
+    "cta": {
+      "open": "Open",
+      "polls": {
+        "title": "Polls",
+        "subtitle": "Coordinate event timing, legion preferences, alliance decisions."
+      },
+      "members": {
+        "title": "Members",
+        "subtitle": "Browse the roster — nick, rank, power, troop tier."
+      }
+    },
+    "catalogue": {
+      "eyebrow": "Reference",
+      "title": "Game catalogue",
+      "description": "Heroes, pets, masters and troop tiers — the shared reference everyone in the alliance can browse.",
+      "heroes": "Heroes",
+      "pets": "Pets",
+      "masters": "Masters",
+      "troopTiers": "Troop Tiers"
+    },
+    "composition": {
+      "eyebrow": "Composition",
+      "title": "The gathered force",
+      "truegoldMembers": "Truegold members",
+      "tg5Ready": "TG5+ ready",
+      "avgPower": "Avg power",
+      "minTroopTier": "Min troop tier"
+    },
+    "announcements": {
+      "eyebrow": "Announcements",
+      "title": "Latest notices",
+      "emptyHint": "Announcements appear here once admin pushes them.",
+      "showing_one": "Showing {{count}} notice",
+      "showing_other": "Showing {{count}} notices",
+      "none": "No recent notices"
+    }
+  },
+  "auth": {
+    "allyChip": {
+      "label": "Ally",
+      "tooltip": "Ally — guest from another alliance (read-only)"
+    },
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "checkingSession": "Checking session…"
+  },
+  "brand": {
+    "name": "DAD War Room",
+    "alliance": "[DAD] BIGDADDYS",
+    "kingdom": "Kingdom 1652",
+    "motto": "Elegance in Peace, Chaos in Battle."
+  },
+  "catalogue": {
+    "eyebrow": "Catalogue",
+    "loading": "Loading…",
+    "filter": {
+      "all": "All",
+      "gen": "Gen {{gen}}"
+    },
+    "genBadge": "Gen {{gen}}",
+    "branch": {
+      "infantry": "Infantry",
+      "cavalry": "Cavalry",
+      "archer": "Archer"
+    },
+    "heroes": {
+      "title": "Heroes of the realm",
+      "summary": "{{heroCount}} heroes catalogued across {{genCount}} generations",
+      "empty": {
+        "all": "No heroes in the catalogue yet.",
+        "gen": "No heroes in Generation {{gen}} yet.",
+        "subtitle": "Admins can add heroes from the catalogue console."
+      },
+      "openAria": "Open {{name}} (Generation {{gen}})",
+      "backToList": "Back to heroes",
+      "notFoundTitle": "Hero not found.",
+      "notFoundSubtitle": "The catalogue has no record matching this slug.",
+      "returnToList": "Return to heroes",
+      "generation": "Generation {{gen}}",
+      "archivedBadge": "Archived",
+      "noDescription": "No description recorded for this hero yet.",
+      "releasedOn": "Released {{date}}"
+    },
+    "pets": {
+      "title": "Pets of the realm",
+      "summary_one": "{{count}} pet catalogued",
+      "summary_other": "{{count}} pets catalogued",
+      "empty": {
+        "nextGen": "Pets coming with Generation {{gen}}",
+        "gen": "No pets in Generation {{gen}} yet.",
+        "subtitle": "Admins can register them in the catalogue."
+      },
+      "cardAria": "{{name}} (Generation {{gen}})"
+    },
+    "masters": {
+      "title": "Masters of the realm",
+      "summary_one": "{{count}} master unlocked",
+      "summary_other": "{{count}} masters unlocked",
+      "empty": {
+        "title": "No masters in the catalogue yet.",
+        "subtitle": "Admins can register masters from the catalogue console."
+      },
+      "unlockLabel": "Master #{{order}}",
+      "noDescription": "No description recorded for this master yet.",
+      "releasedOn": "Released {{date}}"
+    },
+    "tiers": {
+      "title": "Troop tiers",
+      "summary_one": "{{count}} tier across regular and truegold tracks",
+      "summary_other": "{{count}} tiers across regular and truegold tracks",
+      "empty": {
+        "title": "No troop tiers registered yet.",
+        "subtitle": "Admins can register tiers from the catalogue console."
+      },
+      "regular": {
+        "title": "Regular tiers",
+        "subtitle": "The classic ladder unlocked through troop training upgrades."
+      },
+      "truegold": {
+        "title": "Truegold tiers",
+        "subtitle": "Truegold-only progression unlocked after the foundry conversion."
+      },
+      "standardEyebrow": "Standard",
+      "truegoldEyebrow": "Truegold",
+      "noDescription": "No description",
+      "trainingLevel": "Training ground level {{level}}"
+    }
+  },
+  "chat": {
+    "eyebrow": "In the works",
+    "title": "Alliance chat",
+    "tagline": "A live conversation channel for [DAD] BIGDADDYS — coordinate events across timezones, share strategy, hype the wins.",
+    "pushHint": "Until it ships, urgent calls go out as push notifications. Turn them on in Settings so you don't miss the next bear window or KvK call.",
+    "enablePush": "Enable push notifications",
+    "features": {
+      "images": {
+        "title": "Image attachments",
+        "text": "Share screenshots of bear hits, layouts, gear builds — directly inside the chat."
+      },
+      "crossAlliance": {
+        "title": "Cross-alliance coordination",
+        "text": "Allies can read and write. Their messages get tagged with the ALLY chip so context is instant."
+      },
+      "historyReactions": {
+        "title": "Read history, reactions",
+        "text": "See messages you missed when offline · react with emoji · search by author."
+      }
+    }
+  },
+  "common": {
+    "loading": "Loading…"
+  },
+  "events": {
+    "bear1": {
+      "title": "Bear Hunt 1 — Rally Wave Strategy",
+      "short": "Bear Hunt 1"
+    },
+    "bear2": { "title": "Bear Hunt 2", "short": "Bear Hunt 2" },
+    "kingsCastle": { "title": "King's Castle Battle", "short": "King's Castle" },
+    "kvk": { "title": "KvK · Kingdom of Power", "short": "KvK" },
+    "viking": { "title": "Viking Vengeance", "short": "Viking Vengeance" },
+    "swordland": { "title": "Swordland Showdown", "short": "Swordland Showdown" },
+    "triAlliance": { "title": "Tri-Alliance Clash", "short": "Tri-Alliance Clash" },
+    "cesar": { "title": "Cesar's Fury", "short": "Cesar's Fury" },
+    "page": {
+      "eyebrow": "Catalogue",
+      "title": "Events of the realm",
+      "subtitle": "Bear, KvK, Viking, Tri-Alliance & seasonal events. Active guides open from here."
+    },
+    "upcoming": {
+      "eyebrow": "Up next",
+      "title": "Upcoming events",
+      "subtitle": "Next 14 days · swipe horizontally.",
+      "empty": "No events scheduled for the next 14 days.",
+      "eventCount_one": "{{count}} event",
+      "eventCount_other": "{{count}} events",
+      "viewAll": "View all",
+      "today": "Today",
+      "tomorrow": "Tomorrow"
+    },
+    "filter": {
+      "all": "All",
+      "active": "Active",
+      "comingSoon": "Coming soon",
+      "archived": "Archived"
+    },
+    "empty": {
+      "filter": "No events in this filter."
+    },
+    "status": {
+      "active": "Active",
+      "archived": "Archived",
+      "comingSoon": "Coming soon"
+    },
+    "card": {
+      "openGuide": "Open guide",
+      "noLongerActive": "No longer active",
+      "stayTuned": "Stay tuned"
+    }
+  },
+  "footer": {
+    "madeWith": "Made with ♥ for",
+    "alliance": "[DAD] BIGDADDYS",
+    "kingdom": "Kingdom 1652 · Kingshot",
+    "creator": "Built by",
+    "creatorName": "Salles",
+    "creatorRole": "Alliance member"
+  },
+  "header": {
+    "kingdomTag": "Kingdom 1652"
+  },
+  "hub": {
+    "title": "DAD War Room",
+    "tagline": "Strategy hub for [DAD] BIGDADDYS · Kingdom 1652",
+    "intro": "Visual strategy guides for every event. Pick a guide below.",
+    "comingSoon": "Coming soon",
+    "userHero": {
+      "visitorEyebrow": "Visitor",
+      "visitorTitle": "Sign in to open the War Room",
+      "visitorSubtitle": "Members, officers and allies — everything here depends on your login.",
+      "signIn": "Sign in",
+      "allyBadge": "Ally",
+      "editProfile": "Edit profile",
+      "stat": {
+        "power": "Power",
+        "truegold": "Truegold",
+        "role": "Role"
+      },
+      "role": {
+        "r5": "Leader",
+        "r4": "Co-leader",
+        "r3": "R3 Officer",
+        "r2": "R2 Officer",
+        "member": "Member",
+        "ally": "Ally"
+      }
+    },
+    "nextEvent": {
+      "eyebrow": "Next event",
+      "loadError": "Couldn't load the next event",
+      "empty": {
+        "title": "No event scheduled yet",
+        "subtitle": "Once an admin adds the next bear, KvK, or seasonal event, it will appear here with a live countdown."
+      },
+      "addEvent": "Add an event",
+      "guide": "Guide",
+      "startedAgo": "This event started {{days}}d {{hours}}h ago — refresh after adding the next one.",
+      "countdown": {
+        "days": "Days",
+        "hours": "Hours",
+        "min": "Min",
+        "sec": "Sec"
+      },
+      "utcTitle": "All times are in Coordinated Universal Time"
+    },
+    "pendingPolls": {
+      "allClearEyebrow": "All clear",
+      "actionEyebrow": "Action needed",
+      "emptyTitle": "No pending polls",
+      "emptySubtitle": "All open votes already received your vote.",
+      "waitingTitle_one": "{{count}} poll waiting for your vote",
+      "waitingTitle_other": "{{count}} polls waiting for your vote",
+      "footerEmpty": "War Room · Polls",
+      "footerCount": "Top {{shown}} of {{total}}",
+      "viewAll": "View all"
+    },
+    "timeline": {
+      "title": "Timeline",
+      "empty": {
+        "title": "No upcoming milestones scheduled.",
+        "subtitle": "Set unlock dates from the admin panel and they show up here."
+      },
+      "toGo": "to go",
+      "past": "past"
+    }
+  },
+  "login": {
+    "brandSuffix": "War Room",
+    "changeLanguage": "Change language",
+    "eyebrow": "Alliance Command",
+    "fields": {
+      "username": "Username",
+      "usernamePlaceholder": "your_handle",
+      "password": "Password",
+      "showPassword": "Show password",
+      "hidePassword": "Hide password"
+    },
+    "errors": {
+      "required": "Username and password are required.",
+      "signInFailed": "Sign-in failed.",
+      "wrongCredentials": "Wrong username or password."
+    },
+    "submitting": "Signing in",
+    "enter": "Enter",
+    "forgot": {
+      "prefix": "Forgot?",
+      "askR4R5": "Ask an R4 or R5."
+    },
+    "installPwa": "Install DAD War Room",
+    "builtBy": "built by"
+  },
+  "members": {
+    "page": {
+      "eyebrow": "Roster",
+      "title": "Alliance members",
+      "loading": "Loading…",
+      "memberCount_one": "{{count}} member",
+      "memberCount_other": "{{count}} members",
+      "combinedPower": "combined power"
+    },
+    "search": {
+      "placeholder": "Search by nick…"
+    },
+    "sort": {
+      "label": "Sort",
+      "power": "Power",
+      "tier": "Tier",
+      "rank": "Rank",
+      "nick": "Nick"
+    },
+    "empty": {
+      "noMatch": "No member matches \"{{query}}\".",
+      "noMembers": "No members in the roster yet."
+    },
+    "rank": {
+      "r1Title": "Recruit",
+      "r2Title": "Member",
+      "r3Title": "Veteran",
+      "r4Title": "Officer",
+      "r5Title": "Leader",
+      "defaultTitle": "Member"
+    },
+    "role": {
+      "leader": "Leader",
+      "joiner": "Joiner",
+      "standby": "Standby"
+    },
+    "status": {
+      "temporaryOut": "Temporary out",
+      "temporarilyOut": "Temporarily out",
+      "out": "Out"
+    },
+    "detail": {
+      "backToList": "Back to list",
+      "notFoundEyebrow": "Not found",
+      "notFoundWithNick": "No member with nick \"{{nick}}\"",
+      "notFoundNoNick": "Member does not exist",
+      "notFoundDescription": "The member may have left the alliance, or the link is incorrect.",
+      "dadTagLabel": "DAD tag · {{tag}}",
+      "noteLabel": "Note"
+    },
+    "stat": {
+      "power": "Power",
+      "truegold": "Truegold"
+    },
+    "participation": {
+      "eyebrow": "Participation",
+      "title": "Event history",
+      "empty": "No events on record yet — this member hasn't been pinned to any occurrence.",
+      "latest": "Latest"
+    },
+    "card": {
+      "openProfileAria": "Open profile for {{nick}}",
+      "tcLevel": "Lv.{{level}} · {{tier}}"
+    },
+    "powerChart": {
+      "eyebrow": "Power over time",
+      "title": "Evolution",
+      "notEnoughData": "Not enough data yet — power changes will appear here as they're recorded.",
+      "snapshotCount_one": "{{count}} snapshot",
+      "snapshotCount_other": "{{count}} snapshots"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "events": "Events",
+    "chat": "Chat",
+    "alliance": "Alliance",
+    "settings": "Settings",
+    "primaryAriaLabel": "Primary",
+    "adminAriaLabel": "Admin",
+    "exitAdmin": "Exit admin mode",
+    "exitAdminShort": "Exit",
+    "adminEvents": "Events",
+    "adminPolls": "Polls",
+    "adminMembers": "Members",
+    "adminChat": "Chat",
+    "adminAlliance": "Alliance",
+    "adminNotifications": "Notif.",
+    "adminAnalytics": "Stats"
+  },
+  "notifications": {
+    "bellAriaLabel": "Notifications",
+    "bellAriaLabelUnread": "Notifications, {{count}} unread",
+    "panelAriaLabel": "Recent notifications",
+    "title": "Notifications",
+    "empty": "No recent notifications.",
+    "timeNow": "now",
+    "viewAll": "View all"
+  },
+  "polls": {
+    "eyebrow": "Vote",
+    "title": "Alliance polls",
+    "loading": "Loading…",
+    "countLine_one": "{{count}} poll in flight",
+    "countLine_other": "{{count}} polls in flight",
+    "readOnly": "read-only",
+    "empty": {
+      "title": "No polls yet",
+      "adminPrefix": "An admin can create the first poll from",
+      "adminLink": "admin → polls"
+    },
+    "view": "View",
+    "status": {
+      "closed": "Closed",
+      "draft": "Draft",
+      "open": "Open"
+    },
+    "type": {
+      "single": "Single",
+      "multi": "Multi",
+      "singleChoice": "Single-choice",
+      "multiChoice": "Multi-choice"
+    },
+    "countdown": {
+      "minutes_one": "Closes in {{count}}m",
+      "minutes_other": "Closes in {{count}}m",
+      "hours_one": "Closes in {{count}}h",
+      "hours_other": "Closes in {{count}}h",
+      "days_one": "Closes in {{count}}d",
+      "days_other": "Closes in {{count}}d"
+    },
+    "shareToken": {
+      "invalid": "This share link is invalid or the poll was deleted.",
+      "browse": "Browse polls"
+    },
+    "detail": {
+      "back": "Back",
+      "backToPolls": "Back to polls",
+      "notFound": "Poll not found.",
+      "countdown": {
+        "archived": "Archived",
+        "draftNotPublished": "Draft (not published)",
+        "closedAt": "Closed {{date}} {{time}}",
+        "openIndefinitely": "Open indefinitely"
+      },
+      "draftBanner": {
+        "prefix": "This poll is in",
+        "draft": "draft",
+        "suffix": " — members can't vote yet. Publish from",
+        "link": "admin → polls"
+      },
+      "resultsHidden": {
+        "adminOnly": "Results are visible to admins only on this poll.",
+        "untilClose": "Vote counts are hidden until the poll closes."
+      },
+      "signedOutBanner": "to vote. You can view results while signed out.",
+      "allyBanner": "accounts can view results but cannot vote (read-only access).",
+      "voteFailed": "Vote failed",
+      "clearFailed": "Clear failed",
+      "voterCount_one": "{{count}} voter",
+      "voterCount_other": "{{count}} voters",
+      "totalPicks": "{{count}} total picks",
+      "resultsHiddenShort": "Results hidden until the poll closes.",
+      "reVotePrefix": "You can re-vote until",
+      "clearMyVote": "Clear my vote",
+      "shareTitle": "Share poll",
+      "share": "Share",
+      "copied": "Copied"
+    }
+  },
+  "settings": {
+    "eyebrow": "Preferences",
+    "title": "Settings",
+    "account": {
+      "heading": "Account",
+      "signedInFallback": "Signed in",
+      "openAdmin": "Open admin settings",
+      "openAdminTooltip": "Switch the whole app chrome into admin mode (crimson hairline + 8-tab admin nav)",
+      "signInHint": "Members, allies, and admins."
+    },
+    "language": {
+      "eyebrow": "Language",
+      "available_one": "{{count}} language available",
+      "available_other": "{{count}} languages available",
+      "close": "Close",
+      "change": "Change"
+    },
+    "pwa": {
+      "eyebrow": "Progressive Web App",
+      "title": "Install War Room",
+      "alreadyInstalled": "Already installed — opens offline, launches from your home screen.",
+      "addToHomescreen": "Add to home screen for quick access and push notifications.",
+      "openInBrowser": "Open in Chrome / Edge / Safari to install as an app.",
+      "standaloneMode": "Standalone mode",
+      "browserMode": "Browser mode",
+      "installed": "Installed",
+      "install": "Install"
+    },
+    "push": {
+      "eyebrow": "Notifications",
+      "title": "Push notifications",
+      "description": "Receive in-app pings when an event is starting, a new poll opens, or admin sends an announcement — in your chosen language.",
+      "notConfigured": "Push not configured for this deployment. Ask the alliance admin.",
+      "blocked": "Notifications blocked in browser settings — re-enable to subscribe.",
+      "active": "Active",
+      "deactivate": "Deactivate",
+      "permissionGranted": "Permission granted",
+      "notSubscribed": "Not subscribed",
+      "activate": "Activate"
+    },
+    "profile": {
+      "eyebrow": "Profile",
+      "displayName": "Display name",
+      "password": "Password",
+      "avatar": "Avatar",
+      "avatarValue": {
+        "custom": "Custom image",
+        "hero": "Hero: {{slug}}",
+        "default": "Default (hash)"
+      },
+      "edit": "Edit",
+      "newDisplayName": "New display name",
+      "newPassword": "New password",
+      "passwordMinimum": "Minimum 8 characters.",
+      "confirm": "Confirm",
+      "passwordsDontMatch": "Passwords don't match.",
+      "preview": "Preview",
+      "resetTooltip": "Back to automatic avatar (hash of username)",
+      "reset": "Reset",
+      "chooseHero": "Choose hero",
+      "customImage": "Custom image",
+      "uploadImage": "Upload image",
+      "or": "or",
+      "imageUrl": "Image URL",
+      "imageUrlHint": "Paste any public link (Discord, Imgur, wiki, etc). Will override the selected hero.",
+      "close": "Close",
+      "cancel": "Cancel",
+      "save": "Save",
+      "feedback": {
+        "displayNameUpdated": "Display name updated.",
+        "passwordChanged": "Password changed.",
+        "avatarUpdated": "Avatar updated.",
+        "avatarReset": "Back to automatic avatar.",
+        "failed": "Failed.",
+        "failedShort": "Failed."
+      }
+    }
+  },
+  "timeline": {
+    "detail": {
+      "back": "Back",
+      "loadError": "Failed to load",
+      "notFound": "Milestone not found.",
+      "reference": "Reference",
+      "source": "Source",
+      "daysToGo": "{{days}}d to go",
+      "today": "today",
+      "daysAgo": "{{days}}d ago",
+      "noBody": "No detailed description yet for this milestone. An admin can fill in rich content (text, images, lists, links) in the admin timeline editor."
+    },
+    "category": {
+      "truegold": "Truegold",
+      "heroes": "Heroes",
+      "pets": "Pets",
+      "pvp": "PvP",
+      "feature": "Feature",
+      "master": "Master",
+      "fog": "Fog",
+      "warAcademy": "War Academy",
+      "other": "Other"
+    },
+    "relative": {
+      "today": "Today",
+      "tomorrow": "Tomorrow",
+      "daysAgo": "{{days}}d ago",
+      "daysCount": "{{count}} days"
+    }
+  },
+  "ui": {
+    "language": "Language",
+    "back": "Back",
+    "backToHub": "Back to hub",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "toTop": "Back to top",
+    "skipToContent": "Skip to content",
+    "imageUpload": {
+      "label": "Image upload",
+      "previewAlt": "Preview",
+      "currentImage": "Current image",
+      "swap": "Swap",
+      "remove": "Remove",
+      "uploading": "Uploading…",
+      "dropOrClick": "Drag an image or click to choose",
+      "limitsHint": "{{allowedHuman}} · up to {{maxMb}} MB",
+      "errorTooLarge": "File too large. Maximum {{maxMb}} MB.",
+      "errorUploadFailed": "Upload failed."
+    }
+  }
+}

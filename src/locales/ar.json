@@ -1,0 +1,1488 @@
+{
+  "admin": {
+    "accounts": {
+      "backToMembers": "العودة إلى الأعضاء",
+      "eyebrow": "الإدارة",
+      "title": "الحسابات",
+      "closeForm": "وثيقة",
+      "newAccount": "الحساب الجديد",
+      "filters": {
+        "all": "الكل",
+        "members": "أعضاء الهيئة",
+        "allies": "الحلفاء"
+      },
+      "emptyState": "لا حسابات في هذا المرشح.",
+      "youLabel": "you",
+      "lastLogin": "آخر تسجيل",
+      "rosterTooltip": "Roster: {{nick}} ({{rank}})",
+      "rosterFallback": "roster",
+      "lvlShort": "lvl {{level}}",
+      "unlinkTitle": "عدم ربط القائمة",
+      "unlink": "Unlink",
+      "linkTitle": "الصلة بعضو في القائمة",
+      "link": "Link",
+      "resetTitle": "إعادة صياغة كلمة السر",
+      "reset": "إعادة التوطين",
+      "deactivateTitle": "التطهير",
+      "reactivateTitle": "إعادة النشاط",
+      "off": "قبالة",
+      "on": "على",
+      "passwordTooShort": "كلمة السر يجب أن تكون على الأقل 6 شخصيات.",
+      "resetPasswordPrompt": "Set a new TEMPORARY password for {{name}} (@{{username}}).\nسيجبر العضو على تغييره عند الإشارة القادمة.",
+      "cantDeactivateSelf": "لا يمكنك تعطيل نفسك أطلب من (ار 5) أن يفعلها.",
+      "confirmDeactivate": "إبطال مفعول \"إكس بي إكس بيه\"؟?",
+      "confirmReactivate": "إعادة تأهيل \"إكس بي إكس بيه\"؟?",
+      "errors": {
+        "failedToCreate": "فشل في إنشاء حساب",
+        "failedToReset": "فشل في إعادة صياغة كلمة السر",
+        "failedToLink": "فشل في الربط",
+        "failedToToggle": "عدم استكمال الوضع الفعلي"
+      },
+      "feedback": {
+        "created": "حساب \"{{name}}\" ({{role}}) خلق.",
+        "passwordReset": "اعادة ترتيب كلمة السر لـ (إكس بيه).",
+        "linked": "{{name}} linked to {{target}}.",
+        "unlinked": "{{name}} unlinked.",
+        "reactivated": "{{name}} reactivated.",
+        "deactivated": "{{name}} deactivated."
+      },
+      "form": {
+        "heading": "الحساب الجديد",
+        "usernameLabel": "الاسم المستخدم",
+        "usernamePlaceholder": "alice",
+        "usernameHint": "تستخدم في التسجيل",
+        "displayNameLabel": "اسم التلاعب",
+        "displayNameHint": "التقصير في الاسم المستخدم",
+        "passwordLabel": "كلمة السر",
+        "passwordPlaceholder": "6 شخصيات على الأقل",
+        "roleLabel": "الدور*",
+        "languageLabel": "اللغة",
+        "cancel": "إلغاء",
+        "creating": "خلق..",
+        "create": "حساب الإنشاءات"
+      },
+      "roles": {
+        "ally": {
+          "label": "آلي",
+          "description": "ضيف دبلوماسي - يقرأ فقط، وظائف في الدردشة."
+        },
+        "member": {
+          "label": "Member (R1)",
+          "description": "عضو منتظم في إدارة مكافحة المخدرات."
+        },
+        "r2": {
+          "label": "R2",
+          "description": "موظف (لا يوجد إضافات إضافية بعد)."
+        },
+        "r3": {
+          "label": "R3",
+          "description": "موظف (لا يوجد إضافات إضافية بعد)."
+        },
+        "r4": {
+          "label": "R4 — Admin",
+          "description": "إنشاء صناديق الاقتراع/الأحداث، وإدارة الحلفاء."
+        },
+        "r5": {
+          "label": "R5 — Admin",
+          "description": "إدارة حسابات أخرى (بما في ذلك حسابات R5)."
+        }
+      },
+      "relative": {
+        "never": "أبدًا",
+        "justNow": "الآن",
+        "minutesAgo": "{{count}} منذ",
+        "hoursAgo": "{{count}} ago",
+        "daysAgo": "{{count}}",
+        "monthsAgo": "قبل {{count}}mo",
+        "yearsAgo": "(إكس بي إكس) منذ"
+      },
+      "linkPicker": {
+        "heading": "الصلة بالقائمة",
+        "close": "إغلاق",
+        "searchPlaceholder": "قائمة البحث..",
+        "noMatch": "لا أحد يطابق \"{{query}}\".",
+        "allLinked": "وجميع أعضاء القائمة مترابطون."
+      }
+    },
+    "alliance": {
+      "backToAdmin": "العودة إلى لوحة الإدارة",
+      "eyebrow": "الإدارة",
+      "title": "التحالف",
+      "cards": {
+        "timeline": {
+          "title": "الجدول الزمني للمملكة",
+          "subtitle": "(إد) يُفتح تواريخ لـ (تي جي تي) للأجيال البطولية/الأجيال الرطبة، السادة، الضباب."
+        },
+        "catalogue": {
+          "title": "الكتالوج",
+          "subtitle": "الأبطال، والزيوت، والماجستير، وأطر القوات - بيانات اللعبة وراء كل صفحة."
+        },
+        "announcements": {
+          "title": "إعلانات",
+          "subtitle": "Compose and schedule push notifications to members."
+        }
+      },
+      "metadata": {
+        "eyebrow": "معلومات عامة",
+        "title": "Edit metadata",
+        "intro": "Rank, motto, tagline, brand colors, and capture date appear on <allianceLink>/alliance</allianceLink>. These values live in the <c>alliance tings</c> table.",
+        "rankLabel": "رانك",
+        "rankPlaceholder": "#2",
+        "taglineLabel": "Tagline",
+        "taglinePlaceholder": "المملكة المتحدة 1652",
+        "mottoLabel": "Motto",
+        "mottoPlaceholder": "الإمتياز في السلام، الفوضى في معركة.",
+        "brandPrimaryLabel": "البراند الأول (الجنس)",
+        "brandAccentLabel": "لهجة براند (hex)",
+        "capturedAtLabel": "التقطت في",
+        "loadError": "خطأ العرض: {{message}}",
+        "saveError": "خطأ إنقاذ: {{message}}",
+        "saved": "تم الحفظ",
+        "updatedAt": "Updated {{date}}",
+        "loading": "جارٍ التحميل…",
+        "saving": "إنقاذ..",
+        "save": "حفظ"
+      }
+    },
+    "analytics": {
+      "backToAdmin": "العودة إلى لوحة الإدارة",
+      "eyebrow": "الإدارة",
+      "title": "التحليلات",
+      "kpi": {
+        "onlineNow": {
+          "label": "متصل الآن",
+          "sub": "في آخر 5 دقائق"
+        },
+        "activeSessions": {
+          "label": "الدورات النشطة",
+          "sub": "في آخر 24 ساعة"
+        },
+        "totalAccounts": {
+          "label": "إجمالي الحسابات",
+          "sub": "{{count}}"
+        },
+        "neverLoggedIn": {
+          "label": "لم يسجل دخول قط",
+          "sub": "الاحتياجات على متن السفينة"
+        },
+        "failedSignins": {
+          "label": "اللافتات",
+          "sub": "آخر 24 ساعة"
+        }
+      },
+      "activity": {
+        "heading": "نوافذ النشاط",
+        "intro": "الحسابات التي تم لمسها في النافذة (مستمدة من الشعار الأخير، وليس الإشارات الخام.",
+        "last24h": "آخر 24 ساعة",
+        "last7d": "آخر 7 د",
+        "last30d": "آخر 30 د",
+        "pctOfAccounts": "{{pct}}% من الحسابات"
+      },
+      "pwa": {
+        "heading": "PWA install",
+        "installed": "تم تركيبها",
+        "browserOnly": "بروزر فقط",
+        "summary": "{{installed}} of {{total}} accounts ({{pct}}%) added War room to their home screen."
+      },
+      "push": {
+        "heading": "تسليم الدفع (آخر 30 د)",
+        "opened": "مفتوح",
+        "ignored": "Ignored",
+        "note": "مركب الآن - أسلاك فوق مرة واحدة دفع السفن. Tracked per-notification on the Notifications panel."
+      },
+      "never": {
+        "heading": "لم يسجل دخول قط"
+      },
+      "langs": {
+        "heading": "توزيع اللغات"
+      },
+      "footnote": "على الإنترنت الآن وجلسات نشطة تُقرأ من لوحات الدخول توصيلة الدفع مكتئبة حتى دفع السفن."
+    },
+    "catalogue": {
+      "backToAlliance": "العودة إلى التحالف",
+      "eyebrow": "Admin · Catalogue",
+      "title": "فهرس اللعبة",
+      "intro": "إدارة الطاولات الفهرسة التي تسلسل القوة، الأفاتار، دليل القوات، بطاقات الإحصاء. وتنشر التغييرات هنا على كل صفحة عامة تقرأ من <c>heroes</c>, <c>pets</c>, <c>masters</c> و<c>TGTGT-tiers</c>.",
+      "cards": {
+        "heroes": {
+          "title": "الأبطال",
+          "subtitle": "روستر، صورة، جيل، فرع القوات المفضل."
+        },
+        "pets": {
+          "title": "الحيوانات",
+          "subtitle": "Companions by generation — portrait, description, release."
+        },
+        "masters": {
+          "title": "الأساتذة",
+          "subtitle": "مستشارين استراتيجيين أمرهم بتسلسل الفتح."
+        },
+        "troopTiers": {
+          "title": "مستويات القوات",
+          "subtitle": "T1..T10 and Truegold tiers — labels, training, icons."
+        }
+      }
+    },
+    "chat": {
+      "backToAdmin": "العودة إلى لوحة الإدارة",
+      "eyebrow": "الإدارة",
+      "title": "الدردشة",
+      "unsaved": "unsaved",
+      "save": "حفظ",
+      "savedAt": "محتفظ به",
+      "rateLimit": {
+        "title": "الحد الأقصى للمعدل (لكل مستخدم)",
+        "subtitle": "كم عدد الرسائل التي يمكن أن ينشرها حساب واحد خلال ساعة واحدة.",
+        "messagesPerHour": "الرسائل/الساعة",
+        "minSeconds": "ثواني قليلة بين الرسائل"
+      },
+      "attachments": {
+        "title": "الملاحق",
+        "subtitle": "ما يستطيع الأعضاء تحميله Audio + video stay disabled in v1.",
+        "allowImages": "السماح بتحميل الصور",
+        "maxFileSize": "حجم الملفات"
+      },
+      "purge": {
+        "title": "رسائل مجزأة",
+        "subtitle": "مسح واحد من كل رسائل الدردشة والصور المحملة. لا يمكن أن يكون غير مقصود.",
+        "clearAll": "جميع الرسائل",
+        "confirmHeading": "الحذف الدائم",
+        "confirmBody": "كل رسالة دردشة والصورة المحملة ستختفي وبقيت استطلاعات الرأي والأحداث والأعضاء في الماضي دون مساس.",
+        "cancel": "إلغاء",
+        "confirmYes": "نعم، مسح كل شيء"
+      },
+      "defaults": {
+        "title": "العجز",
+        "subtitle": "Reset every value to the recommended starting point.",
+        "restore": "حالات التخلف عن السداد"
+      },
+      "footnote": "ملاحظة: دردش نفسه السفن فيما بعد. وتستمر هذه الضوابط على الصعيد المحلي اليوم بحيث تكون اللوحة جاهزة - بمجرد أن تبث طاولة الرسائل، تتبادل هذه الصفحة صفا واحدا على ظهر الخادم دون لمس وحدة التفتيش المشتركة."
+    },
+    "eventParticipants": {
+      "backToOccurrences": "العودة إلى الأحداث",
+      "eyebrow": "المشاركون في الاجتماع",
+      "eventFallback": "الحدث",
+      "durationMin": "{{count}}min",
+      "addHeading": "مضافا إليه",
+      "memberLabel": "العضو",
+      "allAssigned": "جميع الأعضاء المعينين بالفعل",
+      "roleLabel": "الدور",
+      "notesLabel": "الحواشي (اختياريا)",
+      "notesPlaceholder": "مهمة فرقة، خطة احتياطية، تعليمات خاصة..",
+      "notesInputPlaceholder": "الحواشي (اختياريا)",
+      "adding": "إضافة..",
+      "addButton": "مضافا إليه",
+      "assignedHeading": "{{count}}",
+      "emptyState": "لا يوجد مشاركون معينون بعد - تضاف الأولى أعلاه.",
+      "statusTempOut": "خارج (مؤقت)",
+      "statusLeft": "يسار",
+      "cancel": "إلغاء",
+      "save": "حفظ",
+      "confirm": "تأكيد",
+      "cancelDelete": "حذف الغاء",
+      "editAria": "Edit {{nick}}",
+      "removeAria": "Remove {{nick}}",
+      "roles": {
+        "leader": "Leader",
+        "joiner": "Joiner",
+        "standby": "Standby",
+        "unset": "Unset",
+        "unsetOption": "- غير مستقر -"
+      },
+      "errors": {
+        "notFound": "(أوكرانس) لم يعثر عليه.",
+        "failedToLoad": "فشل في التحميل.",
+        "failedToAdd": "فشل في إضافة مشارك.",
+        "failedToUpdate": "فشل في تحديث المشترك.",
+        "failedToRemove": "فشل في إزالة المشترك."
+      },
+      "feedback": {
+        "added": "إضافة مشارك.",
+        "updated": "تم تحديث المشاركة.",
+        "removed": "أزيلت المشاركة."
+      }
+    },
+    "events": {
+      "backToAdmin": "العودة إلى لوحة الإدارة",
+      "eyebrow": "الإدارة",
+      "title": "قائمة المناسبات",
+      "occurrencesLink": "العمليات",
+      "newEvent": "مناسبة جديدة",
+      "close": "إغلاق",
+      "confirmArchive": "حفظ هذا الحدث؟ ستكون مخبأة من شبكة كل المناسبات.",
+      "errorFailed": "فشل",
+      "feedback": {
+        "archived": "محفوظة.",
+        "restored": "مُستعاد كشهر قادم.",
+        "created": "حدث خلق."
+      },
+      "form": {
+        "heading": "مناسبة موسمية جديدة",
+        "nameLabel": "الاسم",
+        "namePlaceholder": "Lunar Festival",
+        "shortNameLabel": "الاسم القصير",
+        "shortNamePlaceholder": "Lunar",
+        "descriptionLabel": "الوصف",
+        "iconUrlLabel": "Icon URL",
+        "iconUrlPlaceholder": "/images/events/lunar.png",
+        "seasonal": "واحد مقابل/ الموسمي",
+        "create": "إنشاء"
+      },
+      "seasonalBadge": "Seasonal",
+      "actions": {
+        "restore": "Restore",
+        "archive": "المحفوظات"
+      }
+    },
+    "heroes": {
+      "backToCatalogue": "العودة إلى الكاتالوج",
+      "eyebrow": "Admin · Catalogue",
+      "title": "الأبطال",
+      "newHero": "بطل جديد",
+      "cancel": "إلغاء",
+      "create": "إنشاء",
+      "edit": "تعديل",
+      "cancelEdit": "إلغاء",
+      "save": "حفظ",
+      "inactive": "inactive",
+      "genLabel": "Gen {{gen}}",
+      "branch": {
+        "none": "—",
+        "infantry": "المشاة",
+        "cavalry": "كافاري",
+        "archer": "Archer"
+      },
+      "errors": {
+        "nameRequired": "أدخل اسم البطل.",
+        "invalidSlug": "حشرة غير صالحة استخدم الرسائل والأرقام.",
+        "failedToCreate": "فشل في خلق بطل",
+        "failedToDelete": "عدم حذف",
+        "nameRequiredShort": "الاسم المطلوب.",
+        "failedToSave": "فشل في الإنقاذ"
+      },
+      "confirmDelete": {
+        "heading": "تحذف \"{{name}}\" بشكل دائم؟?",
+        "body": "سيتم إزالة اللوحة هذا العمل لا يمكن أن يزول.",
+        "yes": "نعم، حذف"
+      },
+      "fields": {
+        "name": "الاسم",
+        "slugSuggested": "Slug (sugted:",
+        "slugPlaceholder": "ex: shen-yu",
+        "generation": "التوليد (1-12)",
+        "role": "الدور",
+        "rolePlaceholder": "ex: Marshal",
+        "preferredBranch": "الفرع المؤجل",
+        "portrait": "Portrait",
+        "portraitUploadLabel": "صورة الهيروين",
+        "description": "الوصف",
+        "releasedAt": "أطلق سراحه",
+        "displayOrder": "أمر التلاعب",
+        "active": "نشط"
+      }
+    },
+    "iconPicker": {
+      "groups": {
+        "truegoldTiers": "Truegold tiers",
+        "items": "البنود",
+        "buildings": "المباني",
+        "events": "الأحداث",
+        "heroes": "الأبطال"
+      },
+      "currentIcon": "الرقم الحالي",
+      "noOverride": "لا تجاوز",
+      "autoLabel": "السيارة: {{path}}",
+      "clear": "مسح",
+      "customUrlLabel": "أو ترعى تقليدياً (أي صورة على الشبكة)",
+      "customUrlPlaceholder": "https://wiki.kingshot.gg/.../some-icon.png",
+      "apply": "تطبيق",
+      "uploadOwn": "أو تحميل صورتك الخاصة"
+    },
+    "masters": {
+      "backToCatalogue": "العودة إلى الكاتالوج",
+      "eyebrow": "Admin · Catalogue",
+      "title": "الأساتذة",
+      "newMaster": "سيد جديد",
+      "cancel": "إلغاء",
+      "create": "إنشاء",
+      "edit": "تعديل",
+      "cancelEdit": "إلغاء",
+      "save": "حفظ",
+      "inactive": "inactive",
+      "unlockOrderLabel": "Unlock #{{order}}",
+      "errors": {
+        "nameRequired": "أدخل اسم للسيد.",
+        "invalidSlug": "حشرة غير صالحة استخدم الرسائل والأرقام.",
+        "failedToCreate": "فشل في خلق سيد",
+        "failedToDelete": "عدم حذف",
+        "nameRequiredShort": "الاسم المطلوب.",
+        "failedToSave": "فشل في الإنقاذ"
+      },
+      "confirmDelete": {
+        "heading": "تحذف \"{{name}}\" بشكل دائم؟?",
+        "body": "سيتم إزالة الصمامات هذا العمل لا يمكن أن يزول.",
+        "yes": "نعم، حذف"
+      },
+      "fields": {
+        "name": "الاسم",
+        "slugSuggested": "Slug (sugted:",
+        "unlockOrder": "أمر مفتوح",
+        "portrait": "Portrait",
+        "portraitUploadLabel": "المعلم",
+        "description": "الوصف",
+        "releasedAt": "أطلق سراحه",
+        "active": "نشط"
+      }
+    },
+    "members": {
+      "backToAdmin": "العودة إلى لوحة الإدارة",
+      "eyebrow": "الإدارة",
+      "title": "قائمة الأعضاء",
+      "statsMembers": "{{count}} members",
+      "statsTempOut": "{{count}} temp out",
+      "combinedPower": "القوة المشتركة",
+      "accountsLink": "الحسابات",
+      "searchPlaceholder": "البحث بالاسم…",
+      "filters": {
+        "all": "الكل",
+        "out": "اخرج"
+      },
+      "feedbackSaved": "أنقذ (إكس بي إتش إكس بيه).",
+      "emptyState": "لا يوجد أعضاء يطابقون هذا المرشح.",
+      "tempOutShort": "إغراء",
+      "leftShort": "left",
+      "lvlLabel": "lvl {{level}}",
+      "editButton": "تعديل",
+      "subgroups": {
+        "supreme": "Supreme (R4)",
+        "enforcerer": "Enforcerer (R3)",
+        "alpha": "Alpha (R2)",
+        "lieutenant": "Lieutenant (R1)"
+      },
+      "statuses": {
+        "active": "نشط",
+        "temporaryOut": "معبد",
+        "left": "يسار"
+      },
+      "errors": {
+        "tgOrTc": "استخدمي مستوى (تي جي) أو مركز المدينة ليس كلاهما.",
+        "failedToSave": "فشل في الإنقاذ"
+      },
+      "edit": {
+        "heading": "Edit ; {{nick}}",
+        "close": "إغلاق",
+        "nickLabel": "Nick",
+        "rankLabel": "رانك",
+        "subgroupLabel": "المجموعة الفرعية",
+        "noneOption": "لا شيء",
+        "powerLabel": "الطاقة (بالملايين)",
+        "powerHint": "- مثل 158.7",
+        "tgLabel": "الرتبة خ ع",
+        "tgPlaceholder": "1-8",
+        "tcLabel": "مركز المدينة",
+        "tcPlaceholder": "25-30",
+        "statusLabel": "الحالة",
+        "tempOutNote": "لماذا؟?",
+        "leftNote": "سبب المغادرة",
+        "langHintLabel": "تلميح لانج",
+        "langHintHint": "- مثل zh-CN, pt",
+        "optional": "optional",
+        "cancel": "إلغاء",
+        "saving": "إنقاذ..",
+        "save": "حفظ"
+      }
+    },
+    "milestones": {
+      "backToAlliance": "العودة إلى التحالف",
+      "eyebrow": "الإدارة",
+      "title": "معالم المملكة",
+      "newMilestone": "معلم جديد",
+      "cancel": "إلغاء",
+      "create": "إنشاء",
+      "edit": "تعديل",
+      "cancelEdit": "إلغاء",
+      "save": "حفظ",
+      "intro": "حدد التاريخ المتوقع لفتح كل معلم. اللوحة تظهر العد التنازلي للأيام القادمة.",
+      "view": "View",
+      "openPublic": "صفحة عامة مفتوحة",
+      "deleteTitle": "يحذف التاريخ",
+      "achievedBadge": "achieved",
+      "preview": "معاينة",
+      "afterCreateHint": "وبعد إنشاء هذا البند، يفتح البند في القائمة أدناه لملء المحتوى الغني (Tiptap).",
+      "bodyPlaceholder": "أكتب عن هذا المعلم: ما هو عليه، وكيف يؤثر على التحالف، وتغيير الاستراتيجيات، والروابط المفيدة..",
+      "errors": {
+        "nameRequired": "أدخل اسم للمعلم الجديد.",
+        "invalidSlug": "اسم غير قابل للانقراض لجيل السجق استخدم الرسائل والأرقام.",
+        "failedToCreate": "فشل في خلق معالم",
+        "failedToDelete": "عدم حذف",
+        "nameRequiredShort": "اسم ميلستون مطلوب.",
+        "failedToSave": "فشل في الإنقاذ"
+      },
+      "confirmDelete": {
+        "heading": "تحذف \"{{name}}\" بشكل دائم؟?",
+        "body": "The public page /timeline/{{slug}} and all content will be removed. هذا العمل لا يمكن أن يزول.",
+        "yes": "نعم، حذف"
+      },
+      "categories": {
+        "truegold": "Truegold",
+        "heroes": "الأبطال",
+        "pets": "الحيوانات",
+        "pvp": "PvP",
+        "feature": "Feature",
+        "master": "سيدي",
+        "fog": "Fog",
+        "warAcademy": "War Academy",
+        "other": "Other"
+      },
+      "fields": {
+        "name": "الاسم",
+        "namePlaceholder": "e.g. Truegold 6 (Crucible upgrade)",
+        "category": "الفئة",
+        "unlockDate": "تاريخ الافتتاح (اختياري)",
+        "slugAuto": "Slug (auto):",
+        "slugPlaceholder": "اختياري - لا يستخدم إلا الرسائل/الأرقام/الهيفين",
+        "notes": "مذكرات قصيرة (اختيارية)",
+        "notesPublic": "مذكرات قصيرة (ترد في القائمة العامة)",
+        "notesPublicPlaceholder": "على سبيل المثال، القوات المهددة بالانقراض.",
+        "unlockDateUtc": "تاريخ الافتتاح",
+        "achieved": "أنجز",
+        "icon": "Milestone icon",
+        "milestoneName": "اسم ميليستون",
+        "contentFor": "المحتوى/الخط الزمني/{{slug}}"
+      }
+    },
+    "notifications": {
+      "backToAdmin": "العودة إلى لوحة الإدارة",
+      "eyebrow": "الإدارة",
+      "title": "الإشعارات",
+      "compose": "إنشاء",
+      "titleLabel": "العنوان",
+      "titlePlaceholder": "المرحلة الثالثة من صيد الدببة تبدأ في 15 دقيقة",
+      "bodyLabel": "الهيئة",
+      "bodyPlaceholder": "تبدأ الجراد المحترقة في 15 دقيقة - كن في قلعتك وجاهز للمسيرة.",
+      "emojiLabel": "Emoji",
+      "imageLabel": "صورة كبيرة (اختيارية)",
+      "uploadImage": "تحميل الصورة",
+      "orPasteUrl": "... أو يَعْبرُ a URL",
+      "imageUrlPlaceholder": "https://…/banner.png",
+      "audienceLabel": "الجمهور",
+      "tapTargetLabel": "هدف Tap",
+      "tapUrlPlaceholder": "https://war-room.local/p/abc",
+      "scheduleLabel": "جدولة",
+      "recurrencePlaceholder": "على سبيل المثال، كل ثلاثاء",
+      "discard": "Discard",
+      "sending": "إرسال..",
+      "send": "إرسال",
+      "scheduling": "شدولنج..",
+      "scheduleAction": "جدولة",
+      "preview": "معاينة",
+      "previewNow": "الآن",
+      "previewDefaultTitle": "عنوان الإخطار",
+      "previewDefaultBody": "النص الجسدي يظهر هنا كما يراه الأعضاء على الشاشة القفلية.",
+      "targetArrow": "الهدف",
+      "recentPushes": "الدفعات الأخيرة",
+      "loading": "جارٍ التحميل…",
+      "noneSent": "لم ترسل أي إخطارات بعد.",
+      "deliveredCount": "{{count}}",
+      "openedCount": "{{count}} opened − {{pct}}%",
+      "pushedTo": "Pushed to {{audience}} · {{time}}",
+      "audience": {
+        "all": "جميع الحسابات",
+        "voting": "أعضاء التصويت (R1-R5)",
+        "admins": "Admins only (R4 / R5)",
+        "allies": "الحلفاء فقط",
+        "custom": "الأعضاء المختارون"
+      },
+      "schedule": {
+        "now": "إرسال الآن",
+        "later": "جدولة",
+        "recurring": "متكررة"
+      },
+      "tap": {
+        "hub": "غرفة الحرب/المنزل",
+        "events": "الأحداث",
+        "polls": "قائمة بولز",
+        "alliance": "Alliance page",
+        "url": "Custom URL"
+      },
+      "errors": {
+        "mustBeSignedIn": "يجب أن يتم التوقيع على إرسال الإخطارات.",
+        "failedToSend": "فشل في إرسال إخطار."
+      }
+    },
+    "occurrences": {
+      "backToEvents": "العودة إلى الأحداث",
+      "eyebrow": "الإدارة",
+      "title": "الجدول الزمني للحدث",
+      "intro": "جدول الدب التالي، مراحل KvK، والأحداث الموسمية.",
+      "form": {
+        "heading": "حدث جديد",
+        "eventLabel": "الحدث",
+        "startsAtLabel": "تبدأ في (وقتك المحلية)",
+        "durationLabel": "المدة (م)",
+        "phaseLabel": "بطاقة تعريف المرحلة (اختيارية)",
+        "phasePlaceholder": "الإعداد/ معركة القلعة/براول",
+        "notesLabel": "الحواشي (اختياريا)",
+        "repeatLabel": "تكرار على فترات ثابتة",
+        "intervalLabel": "الفترات الفاصلة (الساعات)",
+        "bearHint": "(بير هانت) عادة 48",
+        "countLabel": "عدد الحالات",
+        "saving": "إنقاذ...",
+        "submit": "إضافة إلى ذلك",
+        "submitMany": "إضافة حالات {{count}}"
+      },
+      "feedback": {
+        "added": "أضاف أوكورنس.",
+        "addedMany": "أضف {{count}} يحدث كل {{hours}}."
+      },
+      "errors": {
+        "failedToLoad": "فشل في التحميل",
+        "failedToSave": "فشل في الإنقاذ",
+        "failedToDelete": "عدم حذف"
+      },
+      "confirmDelete": "تحذف هذه الأحداث؟?",
+      "upcomingHeading": "30 يوما القادمة",
+      "loading": "التعبئة...",
+      "emptyState": "لا شيء مقرر في الثلاثين يوما القادمة.",
+      "durationMin": "{{count}}min",
+      "cancelled": "cancelled",
+      "manageSquad": "فرقة إدارة",
+      "squads": "الفرقة",
+      "delete": "حذف"
+    },
+    "pets": {
+      "backToCatalogue": "العودة إلى الكاتالوج",
+      "eyebrow": "Admin · Catalogue",
+      "title": "الحيوانات",
+      "newPet": "حيوان جديد",
+      "cancel": "إلغاء",
+      "create": "إنشاء",
+      "edit": "تعديل",
+      "cancelEdit": "إلغاء",
+      "save": "حفظ",
+      "inactive": "inactive",
+      "genLabel": "Gen {{gen}}",
+      "errors": {
+        "nameRequired": "أدخل اسماً للأليف.",
+        "invalidSlug": "حشرة غير صالحة استخدم الرسائل والأرقام.",
+        "failedToCreate": "فشل في خلق الحيوانات الأليفة",
+        "failedToDelete": "عدم حذف",
+        "nameRequiredShort": "الاسم المطلوب.",
+        "failedToSave": "فشل في الإنقاذ"
+      },
+      "confirmDelete": {
+        "heading": "تحذف \"{{name}}\" بشكل دائم؟?",
+        "body": "سيتم إزالة الصمامات هذا العمل لا يمكن أن يزول.",
+        "yes": "نعم، حذف"
+      },
+      "fields": {
+        "name": "الاسم",
+        "slugSuggested": "Slug (sugted:",
+        "generation": "التوليد",
+        "portrait": "Portrait",
+        "portraitUploadLabel": "صورة بيت",
+        "description": "الوصف",
+        "releasedAt": "أطلق سراحه",
+        "displayOrder": "أمر التلاعب",
+        "active": "نشط"
+      }
+    },
+    "polls": {
+      "backToAdmin": "العودة إلى لوحة الإدارة",
+      "eyebrow": "الإدارة",
+      "title": "الاستطلاعات",
+      "closeForm": "وثيقة",
+      "newPoll": "الاقتراع الجديد",
+      "filters": {
+        "all": "all",
+        "open": "open",
+        "closed": "closed",
+        "draft": "draft",
+        "archived": "archived"
+      },
+      "statusTints": {
+        "draft": "مشروع",
+        "open": "فتح",
+        "closed": "مغلق",
+        "archived": "المحفوظات"
+      },
+      "visibility": {
+        "during": {
+          "label": "العيش (التصويت أثناء التصويت)",
+          "hint": "الأعضاء يرون العد كما يستكملون"
+        },
+        "afterClose": {
+          "label": "بعد الاقتراب",
+          "hint": "الكونتات مخبأة حتى يغلق الاقتراع"
+        },
+        "adminOnly": {
+          "label": "فقط",
+          "hint": "الكونتات دائما مخبأة من الأعضاء"
+        }
+      },
+      "visibilityShort": {
+        "adminOnly": "admin-only",
+        "afterClose": "بعد إغلاقها"
+      },
+      "errors": {
+        "minOptions": "أضف على الأقل خيارات {{min}}.",
+        "duplicates": "ولا يسمح بخيارات مزدوجة.",
+        "failedToCreate": "فشل في خلق الاقتراع",
+        "actionFailed": "فشل الإجراءات",
+        "clipboardBlocked": "لوح الشفاه مُغلق من قِبل المُصفّح."
+      },
+      "feedback": {
+        "created": "Created \"{{title}}\" ({{status}}).",
+        "published": "نشرت \"{{title}}\".",
+        "closed": "مغلق \"{{title}}\".",
+        "reopened": "إعادة فتح \"{{title}}\".",
+        "archived": "أُقيمت \"إكس بي إكس.",
+        "restored": "أعيدت \"إكس بي إكس بيه\" لغلقها.",
+        "deleted": "محرر \"{{title}}\"."
+      },
+      "confirmDelete": "تحذف \"{{title}}\" بشكل دائم؟ كل الأصوات ستضيع.",
+      "form": {
+        "heading": "الاقتراع الجديد",
+        "titleLabel": "العنوان:",
+        "titlePlaceholder": "في أي وقت يجب أن ندير فيكينجانس؟?",
+        "descriptionLabel": "الوصف",
+        "descriptionHint": "- وضع العلامات (**، و*، و`الرسمية، و[الفرعية](الثانية)، وقوائم)",
+        "descriptionPlaceholder": "**18:00 UTC** عظيم بالنسبة للاتحاد الأوروبي + ASIAتداخل. * من فضلك صوت حتى لو لم تستطع الحضور*",
+        "typeLabel": "النوع",
+        "typeSingle": "عزباء",
+        "typeSingleHint": "خيار واحد",
+        "typeMulti": "متعددة",
+        "typeMultiHint": "خيارات عديدة",
+        "initialStatusLabel": "الحالة الأولية*",
+        "statusOpenOption": "ينشر فوراً",
+        "statusDraftOption": "مشروع الإعلان فقط",
+        "opensAtLabel": "يفتح في",
+        "opensAtHint": "- اختيارية؛",
+        "closesAtLabel": "يغلق في",
+        "closesAtHint": "- اختيارية؛",
+        "resultsVisibilityLabel": "بروز النتائج",
+        "optionsLabel": "الخيارات*",
+        "optionPlaceholder": "الخيار {{n}}",
+        "removeOption": "خيار الإزالة",
+        "addOption": "الخيار",
+        "cancel": "إلغاء",
+        "creating": "خلق..",
+        "create": "تكوين الاقتراع"
+      },
+      "emptyAll": "لا إستطلاعات بعد.",
+      "emptyFiltered": "No {{filter}} polls.",
+      "row": {
+        "closesAt": "xPH0XPH",
+        "openIndefinitely": "مفتوحة إلى أجل غير مسمى",
+        "closedAt": "xPH0XPH"
+      },
+      "actions": {
+        "copyLinkTitle": "وصلة الحصة القصيرة",
+        "copied": "Copied",
+        "link": "Link",
+        "publishTitle": "يمكن للأعضاء التصويت",
+        "publish": "النشر",
+        "closeTitle": "اقترب الآن",
+        "close": "إغلاق",
+        "reopenTitle": "Reopen",
+        "reopen": "Reopen",
+        "archiveTitle": "الاختباء من قوائم التقصير",
+        "archive": "المحفوظات",
+        "unarchiveTitle": "Unarchive (back to closed)",
+        "restore": "Restore",
+        "deleteTitle": "حذف"
+      }
+    },
+    "richTextEditor": {
+      "placeholder": "أخبر قصة هذا المعلم",
+      "title": "العنوان",
+      "subtitle": "ترجمة",
+      "bold": "Bold",
+      "italic": "Italic",
+      "underline": "العنوان",
+      "bulletList": "قائمة النشرات",
+      "orderedList": "القائمة المرقمة",
+      "quote": "Quote",
+      "alignLeft": "على اليسار",
+      "alignCenter": "مركز علين",
+      "alignRight": "Align right",
+      "insertImage": "Insert image",
+      "undo": "Undo",
+      "redo": "Redo",
+      "close": "إغلاق",
+      "uploadImage": "صورة تحميل",
+      "or": "or",
+      "imageUrl": "Image URL",
+      "imageUrlPlaceholder": "https://…/figure.png",
+      "insert": "Insert"
+    },
+    "troopTiers": {
+      "backToCatalogue": "العودة إلى الكاتالوج",
+      "eyebrow": "Admin · Catalogue",
+      "title": "مستويات القوات",
+      "newTier": "المستوى الجديد",
+      "cancel": "إلغاء",
+      "create": "إنشاء",
+      "edit": "تعديل",
+      "cancelEdit": "إلغاء",
+      "save": "حفظ",
+      "orderLabel": "الأمر رقم {{order}}",
+      "truegoldBadge": "Truegold",
+      "buildingLv": "Building lv {{lv}}",
+      "errors": {
+        "tierLabelRequired": "Enter the tier label (e.g. T8, TG3).",
+        "tierLabelRequiredShort": "البطاقة المطلوبة.",
+        "failedToCreate": "فشل في خلق النمور",
+        "failedToDelete": "عدم حذف",
+        "failedToSave": "فشل في الإنقاذ"
+      },
+      "confirmDelete": {
+        "heading": "تحذف \"{{name}}\" بشكل دائم؟?",
+        "body": "ولا يمكن التخلي عن هذا العمل وقد يكسر الأدلة التي تشير إلى هذا المستوى.",
+        "yes": "نعم، حذف"
+      },
+      "fields": {
+        "tierLabel": "بطاقة تعريف",
+        "tierLabelPlaceholder": "e.g. T8, TG3",
+        "displayOrder": "أمر التلاعب",
+        "trainingBuildingLevel": "مستوى بناء التدريب",
+        "optional": "optional",
+        "truegoldTier": "Tier Truegold",
+        "icon": "Icon",
+        "iconUploadLabel": "Tier icon",
+        "description": "الوصف"
+      }
+    }
+  },
+  "alliance": {
+    "timeAgo": {
+      "now": "الآن"
+    },
+    "stats": {
+      "rank": "رانك",
+      "members": "الأعضاء",
+      "membersSub": "{{count}} on roster",
+      "power": "القوة",
+      "powerSub": "مجتمعة"
+    },
+    "cta": {
+      "open": "فتح",
+      "polls": {
+        "title": "الاستطلاعات",
+        "subtitle": "تنسيق توقيت الأحداث، أفضليات الفيلق، قرارات التحالف."
+      },
+      "members": {
+        "title": "الأعضاء",
+        "subtitle": "ضخ القائمة - النيك، الرتبة، القوة، القوات."
+      }
+    },
+    "catalogue": {
+      "eyebrow": "المرجع",
+      "title": "فهرس اللعبة",
+      "description": "والهراوات والزيوت والماجستير والقوى - وهي المرجع المشترك لكل فرد في التحالف يمكن أن يتصفح.",
+      "heroes": "الأبطال",
+      "pets": "الحيوانات",
+      "masters": "الأساتذة",
+      "troopTiers": "الجنود"
+    },
+    "composition": {
+      "eyebrow": "التكوين",
+      "title": "القوة المجمعة",
+      "truegoldMembers": "الأعضاء الحقيقيون",
+      "tg5Ready": "TG5+جاهز",
+      "avgPower": "Avg power",
+      "minTroopTier": "عدد أفراد القوات"
+    },
+    "announcements": {
+      "eyebrow": "إعلانات",
+      "title": "آخر الإشعارات",
+      "emptyHint": "إعلانات تظهر هنا بمجرد أن تدفعهم (الإعلان).",
+      "showing_one": "إشعار {{count}}",
+      "showing_other": "{{count}} notices",
+      "none": "No recent notices"
+    }
+  },
+  "auth": {
+    "allyChip": {
+      "label": "آلي",
+      "tooltip": "ألي - ضيف من تحالف آخر )مباشرة فقط("
+    },
+    "signIn": "تسجيل الدخول",
+    "signOut": "تسجيل الخروج",
+    "checkingSession": "جلسة التحقق.."
+  },
+  "brand": {
+    "name": "DAD War Room",
+    "alliance": "[DAD] BIGDADDYS",
+    "kingdom": "المملكة المتحدة 1652",
+    "motto": "الإمتياز في السلام، الفوضى في معركة."
+  },
+  "catalogue": {
+    "eyebrow": "الكتالوج",
+    "loading": "جارٍ التحميل…",
+    "filter": {
+      "all": "الكل",
+      "gen": "Gen {{gen}}"
+    },
+    "genBadge": "Gen {{gen}}",
+    "branch": {
+      "infantry": "المشاة",
+      "cavalry": "كافاري",
+      "archer": "Archer"
+    },
+    "heroes": {
+      "title": "أبطال العالم",
+      "summary": "أبطال من طراز {{heroCount}} فُصلوا عبر أجيال {{genCount}}",
+      "empty": {
+        "all": "لا أبطال في القائمة بعد.",
+        "gen": "لا أبطال في الجيل {{gen}} بعد.",
+        "subtitle": "يمكن للأعداد أن تضيف أبطالاً من مجموعة الكاتالوج."
+      },
+      "openAria": "{{name}} (Generation {{gen}})",
+      "backToList": "العودة إلى الأبطال",
+      "notFoundTitle": "لم يتم العثور على البطل.",
+      "notFoundSubtitle": "الفهرس ليس لديه سجل يطابق هذه الخدعة.",
+      "returnToList": "العودة إلى الأبطال",
+      "generation": "Generation {{gen}}",
+      "archivedBadge": "المحفوظات",
+      "noDescription": "لا يوجد وصف مسجل لهذا البطل بعد.",
+      "releasedOn": "{{date}}"
+    },
+    "pets": {
+      "title": "رزم المملكة",
+      "summary_one": "{{count}}",
+      "summary_other": "{{count}}",
+      "empty": {
+        "nextGen": "Pets coming with Generation {{gen}}",
+        "gen": "لا حيوانات أليفة في الجيل {{gen}} بعد.",
+        "subtitle": "يمكن للأدمان تسجيلهم في الفهرس."
+      },
+      "cardAria": "{{name}} (Generation {{gen}})"
+    },
+    "masters": {
+      "title": "سادة العالم",
+      "summary_one": "{{count}}",
+      "summary_other": "{{count}} masters unlocked",
+      "empty": {
+        "title": "لا سيدات في القائمة بعد.",
+        "subtitle": "يُمْكِنُ أَنْ يُسجّلَ السادةَ مِنْ كتالوجِ."
+      },
+      "unlockLabel": "Mr #{{order}}",
+      "noDescription": "لا يوجد وصف مسجل لهذا السيد بعد.",
+      "releasedOn": "{{date}}"
+    },
+    "tiers": {
+      "title": "مستويات القوات",
+      "summary_one": "طراز {{count}} tier across regular and Trugold tracks",
+      "summary_other": "عجلات من طراز {{count}} عبر مسارات عادية وحقيقية",
+      "empty": {
+        "title": "لم يسجل حتى الآن أي عجلات من القوات.",
+        "subtitle": "يمكن للأدمان أن يسجلوا تيارات من اتحاد الكاتالوج."
+      },
+      "regular": {
+        "title": "المستوى العادي",
+        "subtitle": "السلالم الكلاسيكية فتحت من خلال تحسين تدريب القوات."
+      },
+      "truegold": {
+        "title": "Truegold tiers",
+        "subtitle": "التطوّر الحقيقي فقط تم فتحه بعد تحويل المؤسس."
+      },
+      "standardEyebrow": "المعيار",
+      "truegoldEyebrow": "Truegold",
+      "noDescription": "لا وصف",
+      "trainingLevel": "مستوى التدريب"
+    }
+  },
+  "chat": {
+    "eyebrow": "في الأشغال",
+    "title": "محادثة التحالف",
+    "tagline": "A live conversation channel for [DAD] BIGDADDYS — coordinate events across timezones, share strategy, hype the wins.",
+    "pushHint": "حتى السفن، المكالمات العاجلة تخرج كإخطارات دفع أدرهم في ستينغز حتى لا تفوتك نافذة الدب التالية أو نداء كاف كي.",
+    "enablePush": "إخطارات الدفع التمكينية",
+    "features": {
+      "images": {
+        "title": "ملحقات الصور",
+        "text": "شاشات شاغرة من ضربات الدببة، المخططات، تركيب المعدات - مباشرة داخل الدردشة."
+      },
+      "crossAlliance": {
+        "title": "التنسيق بين الاعتماد",
+        "text": "الحلفاء يمكنهم القراءة والكتابة رسائلهم تُعلّم برقاقة (آلي) لذا السياق فوري."
+      },
+      "historyReactions": {
+        "title": "قراءة التاريخ، ردود الفعل",
+        "text": "انظر الرسائل التي فوتها عندما تكون خارج الإنترنت ردة فعل مع إيموجي."
+      }
+    }
+  },
+  "common": {
+    "loading": "جارٍ التحميل…"
+  },
+  "events": {
+    "bear1": {
+      "title": "Bear Hunt 1 - Rally Wave Strategy",
+      "short": "Bear Hunt 1"
+    },
+    "bear2": {
+      "title": "Bear Hunt 2",
+      "short": "Bear Hunt 2"
+    },
+    "kingsCastle": {
+      "title": "معركة الملك القلعة",
+      "short": "قلعة الملك"
+    },
+    "kvk": {
+      "title": "KvK · Kingdom of Power",
+      "short": "KvK"
+    },
+    "viking": {
+      "title": "Viking Vengeance",
+      "short": "Viking Vengeance"
+    },
+    "swordland": {
+      "title": "Swordland Showdown",
+      "short": "Swordland Showdown"
+    },
+    "triAlliance": {
+      "title": "Tri-Alliance Clash",
+      "short": "Tri-Alliance Clash"
+    },
+    "cesar": {
+      "title": "Cesar's Fury",
+      "short": "Cesar's Fury"
+    },
+    "page": {
+      "eyebrow": "الكتالوج",
+      "title": "أحداث المملكة",
+      "subtitle": "Bear, KvK, Viking, Tri-Alliance ' seasonal events. أدلة نشطة مفتوحة من هنا."
+    },
+    "upcoming": {
+      "eyebrow": "التالي",
+      "title": "الأحداث المقبلة",
+      "subtitle": "الـ 14 يوماً القادمة أفقياً.",
+      "empty": "لا أحداث مقررة للـ 14 يوم القادمة.",
+      "eventCount_one": "{{count}}",
+      "eventCount_other": "{{count}}أحداث",
+      "viewAll": "عرض الكل",
+      "today": "اليوم",
+      "tomorrow": "غدًا"
+    },
+    "filter": {
+      "all": "الكل",
+      "active": "نشط",
+      "comingSoon": "قريبا",
+      "archived": "المحفوظات"
+    },
+    "empty": {
+      "filter": "لا أحداث في هذا المرشح."
+    },
+    "status": {
+      "active": "نشط",
+      "archived": "المحفوظات",
+      "comingSoon": "قريبا"
+    },
+    "card": {
+      "openGuide": "دليل مفتوح",
+      "noLongerActive": "لم تعد نشطة",
+      "stayTuned": "ابقوا منتبهين"
+    }
+  },
+  "footer": {
+    "madeWith": "مصنوعة من أجل",
+    "alliance": "[DAD] BIGDADDYS",
+    "kingdom": "المملكة 1652 - كينشوت",
+    "creator": "البناء",
+    "creatorName": "Salles",
+    "creatorRole": "عضو في التحالف"
+  },
+  "header": {
+    "kingdomTag": "المملكة المتحدة 1652"
+  },
+  "hub": {
+    "title": "DAD War Room",
+    "tagline": "مركز استراتيجية [DAD] BIGDADDYS · Kingdom 1652",
+    "intro": "إرشادات استراتيجية الرؤية لكل حدث اختر دليل أدناه.",
+    "comingSoon": "قريبا",
+    "userHero": {
+      "visitorEyebrow": "زائر",
+      "visitorTitle": "وقع في لفتح غرفة الحرب",
+      "visitorSubtitle": "الأعضاء والضباط والحلفاء كل شيء هنا يعتمد على دخولك.",
+      "signIn": "تسجيل الدخول",
+      "allyBadge": "آلي",
+      "editProfile": "Edit profile",
+      "stat": {
+        "power": "القوة",
+        "truegold": "Truegold",
+        "role": "الدور"
+      },
+      "role": {
+        "r5": "Leader",
+        "r4": "رئيس مشارك",
+        "r3": "R3 Officer",
+        "r2": "R2 Officer",
+        "member": "العضو",
+        "ally": "آلي"
+      }
+    },
+    "nextEvent": {
+      "eyebrow": "الحدث التالي",
+      "loadError": "لا يمكن تحميل الحدث التالي",
+      "empty": {
+        "title": "No event scheduled yet",
+        "subtitle": "بمجرد أن يضيف الإسمان الدب التالي (كاف كي) أو الحدث الموسمي سيظهر هنا مع العد التنازلي الحي."
+      },
+      "addEvent": "إضافة حدث",
+      "guide": "الدليل",
+      "startedAgo": "وقد بدأ هذا الحدث منذ ذلك الحين، بعد إضافة الحدث التالي.",
+      "countdown": {
+        "days": "أيام",
+        "hours": "ساعات",
+        "min": "د",
+        "sec": "ث"
+      },
+      "utcTitle": "جميع الأوقات في التوقيت العالمي المنسق"
+    },
+    "pendingPolls": {
+      "allClearEyebrow": "كل شيء واضح",
+      "actionEyebrow": "الإجراءات اللازمة",
+      "emptyTitle": "No pending polls",
+      "emptySubtitle": "جميع الأصوات المفتوحة حصلت بالفعل على تصويتك.",
+      "waitingTitle_one": "إستطلاع \"إكس بيه\" ينتظر تصويتك",
+      "waitingTitle_other": "إستطلاعات \"إكس بي إتش\" تنتظر تصويتك",
+      "footerEmpty": "غرفة الحرب",
+      "footerCount": "{{shown}}",
+      "viewAll": "عرض الكل"
+    },
+    "timeline": {
+      "title": "الجدول الزمني",
+      "empty": {
+        "title": "لم يكن من المقرر تحقيق أي معالم.",
+        "subtitle": "ضعوا تواريخ مفتوحة من لوحة الإعلانات وظهروا هنا."
+      },
+      "toGo": "للذهاب",
+      "past": "past"
+    }
+  },
+  "login": {
+    "brandSuffix": "War Room",
+    "changeLanguage": "تغيير اللغة",
+    "eyebrow": "قيادة التحالف",
+    "fields": {
+      "username": "اسم المستخدم",
+      "usernamePlaceholder": "your_handle",
+      "password": "كلمة المرور",
+      "showPassword": "كلمة المرور",
+      "hidePassword": "إخفاء كلمة السر"
+    },
+    "errors": {
+      "required": "ويقتضي الأمر اسم المستخدم وكلمة السر.",
+      "signInFailed": "لقد فشلت الإشارة.",
+      "wrongCredentials": "اسم المستخدم الخاطئ أو كلمة السر."
+    },
+    "submitting": "التوقيع",
+    "enter": "Enter",
+    "forgot": {
+      "prefix": "نسيت؟?",
+      "askR4R5": "إسأل ر-4 أو ر-5."
+    },
+    "installPwa": "Install DAD War Room",
+    "builtBy": "بنيت"
+  },
+  "members": {
+    "page": {
+      "eyebrow": "Roster",
+      "title": "أعضاء التحالف",
+      "loading": "جارٍ التحميل…",
+      "memberCount_one": "{{count}} member",
+      "memberCount_other": "{{count}} members",
+      "combinedPower": "القوة المشتركة"
+    },
+    "search": {
+      "placeholder": "البحث بالاسم…"
+    },
+    "sort": {
+      "label": "Sort",
+      "power": "القوة",
+      "tier": "النمور",
+      "rank": "رانك",
+      "nick": "Nick"
+    },
+    "empty": {
+      "noMatch": "لا أحد يطابق \"{{query}}\".",
+      "noMembers": "ولا يوجد أعضاء في القائمة بعد."
+    },
+    "rank": {
+      "r1Title": "التوظيف",
+      "r2Title": "العضو",
+      "r3Title": "Veteran",
+      "r4Title": "موظف",
+      "r5Title": "Leader",
+      "defaultTitle": "العضو"
+    },
+    "role": {
+      "leader": "Leader",
+      "joiner": "Joiner",
+      "standby": "Standby"
+    },
+    "status": {
+      "temporaryOut": "الموارد الخارجة عن الميزانية",
+      "temporarilyOut": "مؤقتاً",
+      "out": "اخرج"
+    },
+    "detail": {
+      "backToList": "العودة إلى القائمة",
+      "notFoundEyebrow": "لم يعثر عليه",
+      "notFoundWithNick": "لا عضو لديه \"{{nick}}\"",
+      "notFoundNoNick": "العضو غير موجود",
+      "notFoundDescription": "ربما يكون العضو قد ترك التحالف أو الرابط غير صحيح.",
+      "dadTagLabel": "DAD tag − {{tag}}",
+      "noteLabel": "ملاحظة"
+    },
+    "stat": {
+      "power": "القوة",
+      "truegold": "Truegold"
+    },
+    "participation": {
+      "eyebrow": "المشاركة",
+      "title": "تاريخ الحدث",
+      "empty": "لا توجد أحداث مسجلة حتى الآن هذا العضو لم يعلق على أي حدث.",
+      "latest": "آخر"
+    },
+    "card": {
+      "openProfileAria": "نبذة مفتوحة عن {{nick}}",
+      "tcLevel": "Lv.{{level}} · {{tier}}"
+    },
+    "powerChart": {
+      "eyebrow": "القوة عبر الزمن",
+      "title": "التطور",
+      "notEnoughData": "لا توجد بيانات كافية بعد تغيرات الطاقة ستظهر هنا كما تسجل.",
+      "snapshotCount_one": "{{count}}",
+      "snapshotCount_other": "{{count}}"
+    }
+  },
+  "nav": {
+    "home": "الرئيسية",
+    "events": "الأحداث",
+    "chat": "الدردشة",
+    "alliance": "التحالف",
+    "settings": "الإعدادات",
+    "primaryAriaLabel": "الابتدائي",
+    "adminAriaLabel": "الإدارة",
+    "exitAdmin": "Exit admin mode",
+    "exitAdminShort": "Exit",
+    "adminEvents": "الأحداث",
+    "adminPolls": "الاستطلاعات",
+    "adminMembers": "الأعضاء",
+    "adminChat": "الدردشة",
+    "adminAlliance": "التحالف",
+    "adminNotifications": "Notif.",
+    "adminAnalytics": "Stats"
+  },
+  "notifications": {
+    "bellAriaLabel": "الإشعارات",
+    "bellAriaLabelUnread": "الإخطارات، {{count}}",
+    "panelAriaLabel": "الإخطارات الأخيرة",
+    "title": "الإشعارات",
+    "empty": "No recent notifications.",
+    "timeNow": "الآن",
+    "viewAll": "عرض الكل"
+  },
+  "polls": {
+    "eyebrow": "تصويت",
+    "title": "انتخابات التحالف",
+    "loading": "جارٍ التحميل…",
+    "countLine_one": "اقتراع محطة {{count}}",
+    "countLine_other": "استطلاعات الرأي {{count}} في الرحلة",
+    "readOnly": "read-only",
+    "empty": {
+      "title": "لا توجد استطلاعات بعد",
+      "adminPrefix": "يمكن للاعلان ان يخلق أول اقتراع من",
+      "adminLink": "الاقتراعات"
+    },
+    "view": "View",
+    "status": {
+      "closed": "مغلق",
+      "draft": "مشروع",
+      "open": "فتح"
+    },
+    "type": {
+      "single": "عزباء",
+      "multi": "متعددة",
+      "singleChoice": "واحدة",
+      "multiChoice": "التعددية"
+    },
+    "countdown": {
+      "minutes_one": "مقربة من {{count}}m",
+      "minutes_other": "مقربة من {{count}}m",
+      "hours_one": "مقربة من {{count}}h",
+      "hours_other": "مقربة من {{count}}h",
+      "days_one": "مقربة من {{count}}d",
+      "days_other": "مقربة من {{count}}d"
+    },
+    "shareToken": {
+      "invalid": "وهذه الصلة باطلة أو حذفت الاقتراع.",
+      "browse": "استطلاعات الرأي"
+    },
+    "detail": {
+      "back": "العودة",
+      "backToPolls": "العودة إلى الانتخابات",
+      "notFound": "بول لم يعثر عليه.",
+      "countdown": {
+        "archived": "المحفوظات",
+        "draftNotPublished": "مشروع (غير منشور)",
+        "closedAt": "{{date}} {{time}}",
+        "openIndefinitely": "مفتوحة إلى أجل غير مسمى"
+      },
+      "draftBanner": {
+        "prefix": "هذا الاقتراع",
+        "draft": "draft",
+        "suffix": "-الأعضاء لا يستطيعون التصويت بعد النشرة من",
+        "link": "الاقتراعات"
+      },
+      "resultsHidden": {
+        "adminOnly": "وتظهر النتائج في هذا الاقتراع فقط.",
+        "untilClose": "عد الصوت مخبأ حتى يغلق الاقتراع."
+      },
+      "signedOutBanner": "للتصويت يمكنك رؤية النتائج أثناء التوقيع.",
+      "allyBanner": "فالحسابات يمكن أن تنظر إلى النتائج ولكنها لا تستطيع التصويت (النفاذ المباشر فقط).",
+      "voteFailed": "Vote failed",
+      "clearFailed": "فشل واضح",
+      "voterCount_one": "{{count}} voter",
+      "voterCount_other": "ناخبو شركة {{count}}",
+      "totalPicks": "مجموع المختارات",
+      "resultsHiddenShort": "النتائج مخبأة حتى يغلق الاقتراع.",
+      "reVotePrefix": "يمكنك أن تتردد حتى",
+      "clearMyVote": "أفرغ صوتي",
+      "shareTitle": "اقتراع الحصة",
+      "share": "Share",
+      "copied": "Copied"
+    }
+  },
+  "settings": {
+    "eyebrow": "التفضيلات",
+    "title": "الإعدادات",
+    "account": {
+      "heading": "الحساب",
+      "signedInFallback": "وقع",
+      "openAdmin": "الأماكن المخصصة المفتوحة",
+      "openAdminTooltip": "تحويل كل زملاء التذاكر إلى أسلوب آدمين (خط شعر كريمسون + 8-tab admin nav)",
+      "signInHint": "أعضاء، حلفاء، وزملاء."
+    },
+    "language": {
+      "eyebrow": "اللغة",
+      "available_one": "{{count}}",
+      "available_other": "{{count}}",
+      "close": "إغلاق",
+      "change": "التغيير"
+    },
+    "pwa": {
+      "eyebrow": "Progressive Web App",
+      "title": "تركيب غرفة حرب",
+      "alreadyInstalled": "تم تركيبها بالفعل - يفتح قبالة الخط، إطلاقات من الشاشة المنزلية.",
+      "addToHomescreen": "إضافة إلى الشاشة المنزلية للوصول السريع والإخطارات بالدفع.",
+      "openInBrowser": "مفتوح في الكروم/إدج/سافاري لتركيبه كتطبيق.",
+      "standaloneMode": "النموذج الاحتياطي",
+      "browserMode": "أسلوب الحشد",
+      "installed": "تم تركيبها",
+      "install": "Install"
+    },
+    "push": {
+      "eyebrow": "الإشعارات",
+      "title": "إشعارات الدفع",
+      "description": "تلقي الاقتباسات في حالة بدء حدث ما، فتح استطلاع جديد، أو إرسال إعلان - بلغة اختيارك.",
+      "notConfigured": "إدفعْ لَيسَ مهيأَ لهذا النشرِ. إسألي التحالف.",
+      "blocked": "الإخطارات التي تم وقفها في بيئات المستنقعات - يمكن إعادة الاشتراك فيها.",
+      "active": "نشط",
+      "deactivate": "التطهير",
+      "permissionGranted": "منح الإذن",
+      "notSubscribed": "غير مشترك",
+      "activate": "النشاط"
+    },
+    "profile": {
+      "eyebrow": "الملف الشخصي",
+      "displayName": "اسم التلاعب",
+      "password": "كلمة المرور",
+      "avatar": "Avatar",
+      "avatarValue": {
+        "custom": "الصورة العرفية",
+        "hero": "Hero: {{slug}}",
+        "default": "التقصير (ش)"
+      },
+      "edit": "تعديل",
+      "newDisplayName": "اسم العرض الجديد",
+      "newPassword": "كلمة سر جديدة",
+      "passwordMinimum": "أقل من 8 شخصيات.",
+      "confirm": "تأكيد",
+      "passwordsDontMatch": "كلمات السر لا تتطابق.",
+      "preview": "معاينة",
+      "resetTooltip": "العودة إلى الأفاتار التلقائي (نهر اسم المستخدم)",
+      "reset": "إعادة التوطين",
+      "chooseHero": "بطل الإختيار",
+      "customImage": "الصورة العرفية",
+      "uploadImage": "صورة تحميل",
+      "or": "or",
+      "imageUrl": "Image URL",
+      "imageUrlHint": "(د) أن ترعى أي صلة عامة (الدستور، إيمغور، وايكي، وما إلى ذلك). سيتجاوز البطل المختار.",
+      "close": "إغلاق",
+      "cancel": "إلغاء",
+      "save": "حفظ",
+      "feedback": {
+        "displayNameUpdated": "تم تحديث الاسم.",
+        "passwordChanged": "تغيرت كلمة السر.",
+        "avatarUpdated": "Avatar updated.",
+        "avatarReset": "العودة إلى الأفاتار التلقائي.",
+        "failed": "فشلت.",
+        "failedShort": "فشلت."
+      }
+    }
+  },
+  "timeline": {
+    "detail": {
+      "back": "العودة",
+      "loadError": "فشل في التحميل",
+      "notFound": "لم يجد ميليستون.",
+      "reference": "المرجع",
+      "source": "المصدر",
+      "daysToGo": "{{days}}d للذهاب",
+      "today": "today",
+      "daysAgo": "{{days}}",
+      "noBody": "ولا يوجد حتى الآن وصف مفصل لهذا المعلم. ويمكن للعمدة ملء المحتوى الغني (النص والصور والقوائم والوصلات) في محرر الجدول الزمني المخصص."
+    },
+    "category": {
+      "truegold": "Truegold",
+      "heroes": "الأبطال",
+      "pets": "الحيوانات",
+      "pvp": "PvP",
+      "feature": "Feature",
+      "master": "سيدي",
+      "fog": "Fog",
+      "warAcademy": "War Academy",
+      "other": "Other"
+    },
+    "relative": {
+      "today": "اليوم",
+      "tomorrow": "غدًا",
+      "daysAgo": "{{days}}",
+      "daysCount": "{{count}} days"
+    }
+  },
+  "ui": {
+    "language": "اللغة",
+    "back": "العودة",
+    "backToHub": "العودة إلى المركز",
+    "copy": "نسخ",
+    "copied": "!",
+    "toTop": "العودة إلى القمة",
+    "skipToContent": "تخطي إلى المحتوى",
+    "imageUpload": {
+      "label": "تحميل الصور",
+      "previewAlt": "معاينة",
+      "currentImage": "الصورة الحالية",
+      "swap": "Swap",
+      "remove": "إزالة",
+      "uploading": "تحميل..",
+      "dropOrClick": "نرسم صورة أو نقرة للاختيار",
+      "limitsHint": "{{allowedHuman}} ; up to {{maxMb}} MB",
+      "errorTooLarge": "ضخ كبير جدا. (ماكسيموم إكس بيه).",
+      "errorUploadFailed": "لقد فشلت الحمولة."
+    }
+  }
+}

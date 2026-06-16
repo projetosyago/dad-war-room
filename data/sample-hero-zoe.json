@@ -1,0 +1,169 @@
+{
+  "_meta": {
+    "purpose": "Complete sample of a Mythic hero's full data. Use as schema reference when implementing Phase 7 (game catalogue admin) and importing the rest of the heroes.",
+    "captured_from": [
+      "https://kingshotwiki.com/heroes/zoe",
+      "https://www.kingshotguide.com/heroes/zoe",
+      "Salles' in-game screenshots 2026-06-14"
+    ]
+  },
+  "slug": "zoe",
+  "name": "Zoe",
+  "generation": 2,
+  "rarity": "mythic",
+  "branch": "infantry",
+  "max_star_level": 5,
+  "max_hero_level": 80,
+
+  "base_stats": {
+    "_note": "Conquest mode stats at maximum hero level (80) and max star (5). Numbers from in-game screenshot.",
+    "power_combat_full_set": 2999450,
+    "escolta_count": 10,
+    "troop_capacity": 13470,
+    "hero_level_max": 80,
+    "conquest_attack_max": 2073,
+    "conquest_defense_max": 2304,
+    "conquest_health_max": 13824
+  },
+
+  "conquest_skills": [
+    {
+      "slot": 1,
+      "name": "Shield Strike",
+      "name_pt": "Ataque com Escudo",
+      "description": "Unpredictable attacks deal recurring damage every 0.5s and amplify enemy vulnerability for 2s.",
+      "levels": [
+        { "level": 1, "primary_pct": 60, "secondary_pct": 10, "stars_required": 1, "effect_text": "60% damage, +10% enemy damage taken" },
+        { "level": 2, "primary_pct": 66, "secondary_pct": 15, "stars_required": 1, "effect_text": "66% damage, +15% enemy damage taken" },
+        { "level": 3, "primary_pct": 72, "secondary_pct": 20, "stars_required": 2, "effect_text": "72% damage, +20% enemy damage taken" },
+        { "level": 4, "primary_pct": 78, "secondary_pct": 25, "stars_required": 3, "effect_text": "78% damage, +25% enemy damage taken" },
+        { "level": 5, "primary_pct": 84, "secondary_pct": 30, "stars_required": 4, "effect_text": "84% damage, +30% enemy damage taken" }
+      ]
+    },
+    {
+      "slot": 2,
+      "name": "Agony Rush",
+      "description": "Self-healing triggered when HP drops below 50% — activates once per battle.",
+      "levels": [
+        { "level": 1, "primary_pct": 20, "stars_required": 1, "effect_text": "Restores 20% max HP" },
+        { "level": 2, "primary_pct": 25, "stars_required": 1, "effect_text": "Restores 25% max HP" },
+        { "level": 3, "primary_pct": 30, "stars_required": 2, "effect_text": "Restores 30% max HP" },
+        { "level": 4, "primary_pct": 35, "stars_required": 3, "effect_text": "Restores 35% max HP" },
+        { "level": 5, "primary_pct": 40, "stars_required": 4, "effect_text": "Restores 40% max HP" }
+      ]
+    },
+    {
+      "slot": 3,
+      "name": "Holy Might",
+      "description": "Inspires fellow warriors — increases hero attack speed.",
+      "levels": [
+        { "level": 1, "primary_pct": 3, "stars_required": 1, "effect_text": "+3% attack speed" },
+        { "level": 2, "primary_pct": 4, "stars_required": 1, "effect_text": "+4% attack speed" },
+        { "level": 3, "primary_pct": 5, "stars_required": 2, "effect_text": "+5% attack speed" },
+        { "level": 4, "primary_pct": 6, "stars_required": 3, "effect_text": "+6% attack speed" },
+        { "level": 5, "primary_pct": 7, "stars_required": 4, "effect_text": "+7% attack speed" }
+      ]
+    }
+  ],
+
+  "expedition_skills": [
+    {
+      "slot": 1,
+      "name": "Sundering Wound",
+      "description": "Squad attacks inflict damage-over-time debuff with 20% trigger chance.",
+      "levels": [
+        { "level": 1, "primary_pct": 8,  "trigger_pct": 20, "stars_required": 1, "effect_text": "8% damage per turn (3 turns)" },
+        { "level": 2, "primary_pct": 16, "trigger_pct": 20, "stars_required": 1, "effect_text": "16% per turn" },
+        { "level": 3, "primary_pct": 24, "trigger_pct": 20, "stars_required": 2, "effect_text": "24% per turn" },
+        { "level": 4, "primary_pct": 32, "trigger_pct": 20, "stars_required": 3, "effect_text": "32% per turn" },
+        { "level": 5, "primary_pct": 40, "trigger_pct": 20, "stars_required": 4, "effect_text": "40% per turn" }
+      ]
+    },
+    {
+      "slot": 2,
+      "name": "Stoic",
+      "description": "Rousing speeches increase total squad attack power.",
+      "levels": [
+        { "level": 1, "primary_pct": 5,  "stars_required": 1, "effect_text": "+5% squad attack" },
+        { "level": 2, "primary_pct": 10, "stars_required": 1, "effect_text": "+10% squad attack" },
+        { "level": 3, "primary_pct": 15, "stars_required": 2, "effect_text": "+15% squad attack" },
+        { "level": 4, "primary_pct": 20, "stars_required": 3, "effect_text": "+20% squad attack" },
+        { "level": 5, "primary_pct": 25, "stars_required": 4, "effect_text": "+25% squad attack" }
+      ]
+    },
+    {
+      "slot": 3,
+      "name": "Infinite Arsenal",
+      "description": "Squad attacks amplify enemy damage taken with 50% trigger chance.",
+      "levels": [
+        { "level": 1, "primary_pct": 10, "trigger_pct": 50, "stars_required": 1, "effect_text": "10% damage amplification" },
+        { "level": 2, "primary_pct": 20, "trigger_pct": 50, "stars_required": 1, "effect_text": "20% amp" },
+        { "level": 3, "primary_pct": 30, "trigger_pct": 50, "stars_required": 2, "effect_text": "30% amp" },
+        { "level": 4, "primary_pct": 40, "trigger_pct": 50, "stars_required": 3, "effect_text": "40% amp" },
+        { "level": 5, "primary_pct": 50, "trigger_pct": 50, "stars_required": 4, "effect_text": "50% amp" }
+      ]
+    }
+  ],
+
+  "exclusive_equipment": {
+    "name": "The Unrighteous",
+    "name_pt": "Os Injustos",
+    "max_level": 10,
+    "max_power": 270000,
+    "max_level_stats": {
+      "conquest": {
+        "hero_attack": 414,
+        "hero_defense": 540,
+        "hero_health": 8100,
+        "escort_attack": 138,
+        "escort_defense": 180,
+        "escort_health": 2700
+      },
+      "expedition": {
+        "infantry_lethality_pct": 60,
+        "infantry_health_pct": 60
+      }
+    },
+    "level_unlock_pattern": {
+      "_note": "Per Salles: odd equipment levels (1,3,5,7,9) unlock CONQUEST skill rank; even (2,4,6,8,10) unlock EXPEDITION skill rank.",
+      "1": "conquest skill Lv 1",
+      "2": "expedition skill Lv 1",
+      "3": "conquest skill Lv 2",
+      "4": "expedition skill Lv 2",
+      "5": "conquest skill Lv 3",
+      "6": "expedition skill Lv 3",
+      "7": "conquest skill Lv 4",
+      "8": "expedition skill Lv 4",
+      "9": "conquest skill Lv 5",
+      "10": "expedition skill Lv 5"
+    },
+    "bound_skills": [
+      {
+        "name": "Death or Glory",
+        "name_pt": "Morte ou Glória",
+        "type": "conquest",
+        "description": "Zoe's inner demon awakens only through pain — gains stacking Attack until end of battle once 'Agony Rush' triggers.",
+        "levels": [
+          { "level": 1, "primary_pct": 8,  "unlocks_at_equipment_level": 1, "effect_text": "+8% Attack" },
+          { "level": 2, "primary_pct": 12, "unlocks_at_equipment_level": 3, "effect_text": "+12% Attack" },
+          { "level": 3, "primary_pct": 16, "unlocks_at_equipment_level": 5, "effect_text": "+16% Attack" },
+          { "level": 4, "primary_pct": 20, "unlocks_at_equipment_level": 7, "effect_text": "+20% Attack" },
+          { "level": 5, "primary_pct": 24, "unlocks_at_equipment_level": 9, "effect_text": "+24% Attack" }
+        ]
+      },
+      {
+        "name": "Dark Lady",
+        "name_pt": "Dama Sombria",
+        "type": "expedition",
+        "description": "Relentlessly demanding garrison commander — increases Defender Squads' Attack.",
+        "levels": [
+          { "level": 1, "primary_pct": 5,    "unlocks_at_equipment_level": 2,  "effect_text": "+5% defender squad attack" },
+          { "level": 2, "primary_pct": 7.5,  "unlocks_at_equipment_level": 4,  "effect_text": "+7.5%" },
+          { "level": 3, "primary_pct": 10,   "unlocks_at_equipment_level": 6,  "effect_text": "+10%" },
+          { "level": 4, "primary_pct": 12.5, "unlocks_at_equipment_level": 8,  "effect_text": "+12.5%" },
+          { "level": 5, "primary_pct": 15,   "unlocks_at_equipment_level": 10, "effect_text": "+15%" }
+        ]
+      }
+    ]
+  }
+}

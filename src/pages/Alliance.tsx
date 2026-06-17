@@ -8,10 +8,6 @@ import {
   Megaphone,
   CaretRight,
   ListChecks,
-  Crown,
-  PawPrint,
-  Sparkle,
-  BookBookmark,
 } from '@phosphor-icons/react'
 import { DadCrest } from '../components/DadCrest'
 import { I18nText } from '../components/I18nText'
@@ -163,32 +159,10 @@ export function Alliance() {
           />
         </motion.div>
 
-        {/* Catalogue CTA grid — quick access to public game catalogue pages */}
-        <motion.section
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, delay: 0.15 }}
-          className="card-hero overflow-hidden"
-        >
-          <div className="flex items-start gap-3 p-5 sm:p-6 pb-3">
-            <span className="icon-frame icon-frame--sm text-gold-soft">
-              <BookBookmark size={18} weight="duotone" />
-            </span>
-            <div>
-              <div className="eyebrow">{t('alliance.catalogue.eyebrow')}</div>
-              <h2 className="hero-title text-lg sm:text-xl mt-0.5">{t('alliance.catalogue.title')}</h2>
-              <p className="text-[11px] sm:text-xs text-ink-mute mt-1 leading-snug">
-                {t('alliance.catalogue.description')}
-              </p>
-            </div>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 px-5 sm:px-6 pb-5">
-            <CatalogueChip to="/heroes" icon={Shield} label={t('alliance.catalogue.heroes')} />
-            <CatalogueChip to="/pets" icon={PawPrint} label={t('alliance.catalogue.pets')} />
-            <CatalogueChip to="/masters" icon={Crown} label={t('alliance.catalogue.masters')} />
-            <CatalogueChip to="/troop-tiers" icon={Sparkle} label={t('alliance.catalogue.troopTiers')} />
-          </div>
-        </motion.section>
+        {/* Catalogue moved to the Hub dashboard (wave 14) — it's gameplay
+            reference, more useful at-a-glance than as an Alliance subpage.
+            The CatalogueChip helper + Phosphor imports stay until pruned by
+            tree-shake. */}
 
         <div className="card-hero">
           <div className="flex items-start gap-3 p-5 sm:p-6 pb-3">
@@ -326,30 +300,6 @@ function CtaCard({
           className="text-gold-soft group-hover:translate-x-1 transition-transform shrink-0 mt-1"
         />
       </div>
-    </Link>
-  )
-}
-
-function CatalogueChip({
-  to,
-  icon: Icon,
-  label,
-}: {
-  to: string
-  icon: typeof Shield
-  label: string
-}) {
-  return (
-    <Link
-      to={to}
-      className="group flex flex-col items-center justify-center gap-2 rounded-xl border border-gold/20 bg-bg-card/40 px-3 py-4 text-center transition-colors hover:border-gold/55 hover:bg-gold/10"
-    >
-      <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-gold/30 bg-bg-deep/60 text-gold-soft group-hover:text-gold">
-        <Icon size={18} weight="duotone" />
-      </span>
-      <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink-cream">
-        {label}
-      </span>
     </Link>
   )
 }

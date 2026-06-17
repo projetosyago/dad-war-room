@@ -1160,6 +1160,18 @@
       },
       "toGo": "restantes",
       "past": "atrás"
+    },
+    "catalogue": {
+      "eyebrow": "Referência",
+      "title": "Catálogo do Jogo",
+      "description": "Heróis, pets, mestres e tiers de tropa — a referência compartilhada que toda a aliança pode consultar.",
+      "heroes": "Heróis",
+      "pets": "Pets",
+      "masters": "Mestres",
+      "troopTiers": "Tiers de Tropa",
+      "count_one": "{{count}} catalogado",
+      "count_other": "{{count}} catalogados",
+      "empty": "Ainda sem registros"
     }
   },
   "login": {

@@ -1160,6 +1160,18 @@
       },
       "toGo": "离开",
       "past": "past"
+    },
+    "catalogue": {
+      "eyebrow": "Reference",
+      "title": "Game Catalogue",
+      "description": "Heroes, pets, masters and troop tiers — the shared reference everyone in the alliance can browse.",
+      "heroes": "Heroes",
+      "pets": "Pets",
+      "masters": "Masters",
+      "troopTiers": "Troop Tiers",
+      "count_one": "{{count}} catalogued",
+      "count_other": "{{count}} catalogued",
+      "empty": "Not yet catalogued"
     }
   },
   "login": {

@@ -2,6 +2,7 @@ import { NextEventCard } from '../components/dashboard/NextEventCard'
 import { KingdomTimelineCard } from '../components/dashboard/KingdomTimelineCard'
 import { PendingPollsCard } from '../components/dashboard/PendingPollsCard'
 import { UserHeroCard } from '../components/dashboard/UserHeroCard'
+import { GameCatalogueCard } from '../components/dashboard/GameCatalogueCard'
 
 export function Hub() {
   return (
@@ -9,6 +10,7 @@ export function Hub() {
       <UserHeroCard />
       <NextEventCard />
       <PendingPollsCard />
+      <GameCatalogueCard />
       <KingdomTimelineCard />
     </div>
   )

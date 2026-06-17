@@ -114,25 +114,33 @@
   }
 
   /* iOS Safari auto-zooms (and crops the page) whenever a focused input has
-     computed font-size below 16px. Most of our inputs are text-sm (14px), so
-     we override to 16px on touch-only devices. Hover-capable devices (desktop)
-     keep the smaller text since they don't trigger the zoom behavior.
+     computed font-size below 16px. We override to 16px on touch devices for
+     every focusable text surface — not just <input type="text">, but also
+     <input> without type, <textarea>, <select>, and contenteditable hosts
+     (Tiptap uses .ProseMirror divs, not real inputs, which the type-prefixed
+     selector silently missed).
+     Desktop hover-capable devices keep the original smaller text since they
+     don't trigger the zoom behavior.
      DO NOT add maximum-scale=1 to the viewport — it disables user pinch-zoom
      and breaks accessibility. CSS is the correct fix. */
   @media (hover: none) and (pointer: coarse) {
-    input[type='text'],
-    input[type='email'],
-    input[type='password'],
-    input[type='number'],
-    input[type='url'],
-    input[type='tel'],
-    input[type='search'],
-    input[type='date'],
-    input[type='time'],
-    input[type='datetime-local'],
+    input,
     textarea,
-    select {
+    select,
+    [contenteditable='true'],
+    [contenteditable=''],
+    .ProseMirror,
+    .tiptap {
       font-size: 16px !important;
+    }
+    /* Fast-tap response on the same surfaces — kills the 300ms tap delay. */
+    input,
+    textarea,
+    select,
+    button,
+    a,
+    [role='button'] {
+      touch-action: manipulation;
     }
   }
 

@@ -38,29 +38,36 @@ export function BottomNav() {
   const { t } = useTranslation()
   return (
     <nav
-      className="md:hidden fixed inset-x-0 bottom-0 z-40 pb-safe"
+      className="md:hidden fixed inset-x-0 bottom-0 z-40"
       style={{
-        // Bump the top alpha so content stops bleeding through behind the nav.
+        // Solid color (slightly darker than --ink-void body bg) so the nav
+        // reads as a discrete UI surface, not a translucent overlay. Gradient
+        // ends at the body color so the iOS home-indicator safe-area zone
+        // (rendered as paddingBottom below) visually merges with the page
+        // background instead of looking like a "wasted" dark band.
         background:
-          'linear-gradient(180deg, rgba(19,23,42,0.96) 0%, rgba(13,15,28,1) 100%)',
-        backdropFilter: 'blur(24px) saturate(160%)',
-        WebkitBackdropFilter: 'blur(24px) saturate(160%)',
-        borderTop: '1px solid rgba(244, 207, 115, 0.28)',
-        boxShadow: '0 -14px 36px -10px rgba(0,0,0,0.7)',
+          'linear-gradient(180deg, rgb(11,13,25) 0%, rgb(19,23,42) 100%)',
+        borderTop: '1px solid rgba(244, 207, 115, 0.32)',
+        boxShadow: '0 -2px 14px rgba(0,0,0,0.7)',
+        // pb-safe via inline style so the env() doesn't get min()-clamped to
+        // 0.5rem — on devices WITHOUT a home indicator we want 0 padding so
+        // the icons sit flush against the bottom.
+        paddingBottom: 'env(safe-area-inset-bottom, 0px)',
       }}
       aria-label={t('nav.primaryAriaLabel')}
     >
-      {/* Top accent line */}
+      {/* Top accent line — full width edge-to-edge so the nav reads as a
+          continuous bar instead of "floating" inset. */}
       <span
         aria-hidden
-        className="absolute inset-x-8 top-0 h-px"
+        className="absolute inset-x-0 top-0 h-px"
         style={{
           background:
-            'linear-gradient(90deg, transparent, rgba(244,207,115,0.55), transparent)',
+            'linear-gradient(90deg, transparent, rgba(244,207,115,0.55) 20%, rgba(244,207,115,0.55) 80%, transparent)',
         }}
       />
 
-      <ul className="grid grid-cols-5 px-1 pt-1.5 relative">
+      <ul className="grid grid-cols-5 px-1 pt-1 pb-1 relative">
         {NAV.map((item) => (
           <li key={item.to} className="relative">
             <NavLink

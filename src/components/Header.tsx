@@ -98,16 +98,20 @@ function HeaderInner({ adminMode, onExitAdmin }: { adminMode: boolean; onExitAdm
           )}
         >
           {showBack ? (
-            // Internal pages: [back] [centered title] [bell]
-            <button
-              type="button"
-              onClick={() => navigate(-1)}
-              className="flex-1 inline-flex items-center gap-1.5 text-[11px] tracking-[0.22em] uppercase text-ink-mute hover:text-gold-soft transition-colors min-w-0"
-              aria-label={t('nav.back')}
-            >
-              <ArrowLeft size={14} weight="bold" />
-              <span className="truncate">{t('nav.back')}</span>
-            </button>
+            // Internal pages: [back icon] [centered title] [bell]. Wrapping
+            // the icon button in a flex-1 box lets the title sit truly
+            // centered between the leading and trailing slots.
+            <div className="flex-1 flex justify-start">
+              <button
+                type="button"
+                onClick={() => navigate(-1)}
+                className="btn-icon"
+                aria-label={t('nav.back')}
+                title={t('nav.back')}
+              >
+                <ArrowLeft size={18} weight="bold" />
+              </button>
+            </div>
           ) : null}
 
           <Link

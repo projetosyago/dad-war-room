@@ -76,7 +76,7 @@ export function MemberDetail() {
             dadTag={member.dadTag}
             status={member.status}
             statusNote={member.statusNote}
-            avatarUrl={avatarUrl ?? '/images/heroes/howard.png'}
+            avatarUrl={avatarUrl ?? '/images/icons/kingshot/heroes/howard.webp'}
           />
           <PowerChart snapshots={snapshots} />
           <ParticipationCard participations={participations} />

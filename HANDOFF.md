@@ -1,8 +1,54 @@
 # DAD War Room — Session Handoff
 
-> **For the next chat session.** Salles' current session hit the 1M token limit. This file captures the exact state and the resume path. Read this FIRST before doing anything.
+> **For the next chat session.** Read this FIRST. Cross-reference `SESSION_LOG_2026-06-17.md` for full session detail and `WAR_ROOM_LOG.md` for chronological per-wave technical log.
 
-**Last updated:** 2026-06-16 (end of session that ran Waves 1-9 — i18n hardened: parity 1074/locale, browser auto-translate blocked, overflow defenses in place, Docker LibreTranslate run completed)
+**Last updated:** 2026-06-17 (end of session that ran Waves 10-15 — production live at https://dad-war-room.vercel.app, push notifications operational, Council redesign shipped, 243 game icons scraped from kingshotdata.com)
+
+---
+
+## 0 · TL;DR — what's live now
+
+- **Production**: https://dad-war-room.vercel.app (Vercel Auth disabled, OG previews work)
+- **GitHub**: https://github.com/projetosyago/dad-war-room (main branch, CI green)
+- **Push notifications**: pg_cron firing every minute → send-push v6 (verify_jwt=false) → 200
+- **i18n**: 11 locales × 1107 keys (post Wave 15 — Council vocabulary applied)
+- **Council**: redesigned with status tabs, participation rings, countdown hero, results widget, sticky action bar
+- **Page titles**: centralized across 7 feature pages (Polls, Members, Heroes, Pets, Masters, TroopTiers, Events)
+- **Dashboard cards**: tone × glow variation system (gold/crimson/success/steel/violet × tl/tr/c)
+- **Game icons**: 243 assets in `public/images/icons/kingshot/{heroes,pets,masters,buildings,events,items,research,war-academy-research,alliance-tech,database}/` with manifest JSON
+- **Tests**: 13 Vitest smoke tests passing; tsc clean; lint 0 errors
+
+---
+
+## 0.5 · Open items for the next session (priority order)
+
+1. **Apply scraped game icons** to existing components. 243 webp files are sitting in `public/images/icons/kingshot/`. Lookup via `public/images/icons/kingshot-manifest.json`. Best targets:
+   - Heroes catalogue tiles → use `heroes/{slug}.webp` instead of placeholder
+   - Pets / Masters tiles → finally have real artwork (`pets/grizzly-bear.webp`, etc)
+   - Event guides → `events/bear-1-elimination.webp` etc as headers/cards
+   - Research/War Academy → research tree visualizations
+2. **Swap `public/images/icons/timeline.png`** into KingdomTimelineCard.tsx + MilestoneDetail.tsx (replaces the Phosphor icon)
+3. **Rotate the Vercel token** the user pasted in chat (`vcp_...`)
+4. **Verify Wave 15 on iPhone PWA** — check Council list+detail render correctly, page titles look centered, dashboard cards have distinct tones
+5. **AdminAccounts.tsx refactor** (706 lines — split into 3-4 files)
+6. **Pet / Masters portrait artwork** is now available — populate the catalogue admin upload flow
+7. **Login rate-limit** via Supabase Dashboard auth settings
+8. **Discord webhook** for admin notifications (Wave 6 backlog item, still open)
+9. **Event guide pages** — 7 more besides Bear 1 (template exists in Bear1Guide.tsx)
+
+---
+
+## 0.9 · Last updated — Wave 10-15 recap (read SESSION_LOG_2026-06-17.md for full detail)
+
+| Wave | Outcome |
+|---|---|
+| 10 | Audit remediation (6.1→7.7/10): git init, 27 migrations backfilled, ROSTER→useMembers, DOMPurify, FK indexes, Vitest, CI workflow |
+| 11 | User-flagged bugs: send-push CORS fix, admin Sair race, admin nav arrows, BottomNavSpacer recompute, AdminPolls RHF+zod, pg_cron 401 → fixed by verify_jwt=false |
+| 12 | Mobile polish: PWA icon RGBA flatten, header back button, iOS input zoom (v1) |
+| 13 | Full icon system: 14 PNGs from "Bracketed D" SVG, apple-touch + maskable + OG + Windows tile + favicon.svg + mask-icon.svg, ?v=2 cache-bust |
+| 14 | Many UX polish: RequireAuth gate, fixed header (sticky→fixed), bottom nav opacity, back to icon-only, translate=no, iOS input zoom (v2 broader), login lang picker, PWA install hook+modal, Game Catalogue moved to Hub, refinement of cards (drop description/counts/icon fallbacks), Polls subtitle removed, ScrollToTop, notifications View All → /alliance#announcements |
+| 15 | Council redesign + card variation system: 3 new tones (success/steel/violet) × 3 glow positions, Council i18n rename (labels only), centralized titles, dashboard cards distinct tones, Council list with status tabs/participation rings, Council detail with countdown hero/donut/results/voters/timeline/sticky bar |
+| (parallel) | Icon scraper: 243 game icons pulled from kingshotdata.com REST API into `public/images/icons/kingshot/` |
 
 ---
 

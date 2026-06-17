@@ -54,7 +54,7 @@ export function GameCatalogueCard() {
     {
       to: '/heroes',
       labelKey: 'hub.catalogue.heroes',
-      image: '/images/heroes/petra.png',
+      image: '/images/icons/kingshot/heroes/petra.webp',
       tone: 'crimson',
     },
     {

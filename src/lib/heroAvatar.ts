@@ -1,20 +1,21 @@
 /**
  * Hero portrait fallback for accounts without an uploaded avatar.
  *
- * Hashes the username (or any stable id) and maps it to one of the in-game
- * hero portraits we ship under /public/images/heroes/. Same input always
- * returns the same hero — so a user never sees their face "jump" between
- * sessions.
+ * Hashes the username (or any stable id) and maps it to one of the freshly-
+ * scraped hero portraits under /public/images/icons/kingshot/heroes/. Same
+ * input always returns the same hero — so a user never sees their face
+ * "jump" between sessions.
+ *
+ * Wave 16: aligned to the canonical roster (`heroes-roster.ts`) so we cover
+ * all 34 heroes (was 33 + a `jaegar` typo for jaeger) and use the higher-
+ * quality .webp files. Existing legacy /images/heroes/*.png files stay on
+ * disk so any stored avatar URL pointing at them keeps resolving.
  */
+import { ROSTER_INDEX } from '../data/heroes-roster'
 
-export const HERO_SLUGS = [
-  'alcar', 'amadeus', 'amane', 'ava', 'charles', 'chenko', 'diana', 'edwin',
-  'eric', 'fahd', 'forrest', 'gordon', 'helga', 'hilde', 'howard', 'jabel',
-  'jaegar', 'long-fei', 'margot', 'marlin', 'olive', 'petra', 'quinn', 'rosa',
-  'saul', 'seth', 'sophia', 'thrud', 'triton', 'wee-woo', 'yang', 'yeonwoo', 'zoe',
-] as const
+export const HERO_SLUGS = ROSTER_INDEX.map((r) => r.slug)
 
-export type HeroSlug = (typeof HERO_SLUGS)[number]
+export type HeroSlug = string
 
 /** djb2 string hash — deterministic, no deps, good enough for picking a bucket. */
 function djb2(input: string): number {
@@ -31,16 +32,19 @@ export function pickHeroSlugFor(seed: string | null | undefined): HeroSlug {
   return HERO_SLUGS[idx]
 }
 
-export function heroAvatarUrlFor(seed: string | null | undefined): string {
-  return `/images/heroes/${pickHeroSlugFor(seed)}.png`
+/** Canonical portrait path for a hero slug. Uses the scraped .webp library. */
+export function heroPortraitPath(slug: string): string {
+  return `/images/icons/kingshot/heroes/${slug}.webp`
 }
 
-/** Path for a specific hero slug; returns null if the slug isn't shipped. */
+export function heroAvatarUrlFor(seed: string | null | undefined): string {
+  return heroPortraitPath(pickHeroSlugFor(seed))
+}
+
+/** Path for a specific hero slug; returns null if the slug isn't in the roster. */
 export function heroAvatarUrlForSlug(slug: string | null | undefined): string | null {
   if (!slug) return null
-  return (HERO_SLUGS as readonly string[]).includes(slug)
-    ? `/images/heroes/${slug}.png`
-    : null
+  return HERO_SLUGS.includes(slug) ? heroPortraitPath(slug) : null
 }
 
 /**

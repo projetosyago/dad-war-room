@@ -1,8 +1,16 @@
 # DAD War Room — Living Project Log
 
 > **Owner:** Salles ([DAD] BIGDADDYS, Kingdom 1652)
-> **Updated:** 2026-06-16
+> **Updated:** 2026-06-17 (Waves 10-15 added — see `SESSION_LOG_2026-06-17.md` for the comprehensive narrative of those waves; this file keeps Waves 1-9 as historical record + a brief Waves 10-15 pointer in §2.19)
 > **Source of truth.** Always read this before adding features or merging changes. Update it whenever something non-obvious lands.
+
+---
+
+## 0 · Recent session shortcuts
+
+- **2026-06-17 session log** — `SESSION_LOG_2026-06-17.md` is the comprehensive narrative of Waves 10-15 (audit remediation, push notifications shipped, Vercel deploy, full icon system, RequireAuth gate, Council redesign, card variation system, kingshotdata.com icon scrape). Read it before diving into older sections if you need context on what was just shipped.
+- **2026-06-17 session handoff** — `HANDOFF.md` §0 has the TL;DR for the next chat.
+- **Production live** at https://dad-war-room.vercel.app since 2026-06-16.
 
 ---
 
@@ -529,3 +537,95 @@ Per Salles' instruction "ataque com vários agentes as frentes/fases que forem p
 - Schema-affecting DB changes (new tables/columns) trigger a **types regen** within the same agent that did the migration. Other parallel agents that don't depend on the new types proceed normally.
 - The verify agent reads the diff and reconciles.
 - Migrations are named with the agent's prefix so the migration log is traceable per frontier.
+
+---
+
+## 2.19-2.24 · Waves 10-15 (2026-06-16/17) — pointer to SESSION_LOG_2026-06-17.md
+
+The 6 waves shipped in the 2026-06-16/17 session are documented in full at
+`SESSION_LOG_2026-06-17.md`. Capsule below for quick reference:
+
+| Wave | Theme | Headline |
+|---|---|---|
+| 2.19 = Wave 10 | Audit remediation | git init, 27 migrations backfilled, ROSTER→useMembers, DOMPurify, FK indexes, Vitest, GitHub Actions. Score 6.1→7.7/10. |
+| 2.20 = Wave 11 | Bug bash + consolidation | send-push CORS fix (root cause: no OPTIONS handler), admin Sair race fix (effect-order bug), admin nav arrows, BottomNavSpacer additive height, AdminPolls RHF+zod migration, pg_cron 401 → verify_jwt=false rescue. |
+| 2.21 = Wave 12 | Mobile polish | PWA icon RGBA flatten (removed alpha bleed), header back button (icon-only in chrome slot), iOS input zoom CSS (first pass). |
+| 2.22 = Wave 13 | Icon system regenerated | "Bracketed D" SVG master, 14 PNGs (favicon/apple-touch/PWA-maskable+any/macOS-install/Windows-tile/OG-social), favicon.svg + mask-icon.svg, all opaque RGB, ?v=2 cache-bust. |
+| 2.23 = Wave 14 | UX iteration | RequireAuth gate, fixed-position header (replaced sticky — iOS PWA standalone fix), bottom nav opacity, back to icon-only, translate=no on brand spans, iOS input zoom v2 (broader selector), login functional language picker, PWA install hook + platform modal, Game Catalogue moved to Hub + refined (no description/counts/icon fallbacks), Polls subtitle removed, ScrollToTop, notifications View All → /alliance#announcements. |
+| 2.24 = Wave 15 | Council redesign + variation system | 7-agent workflow `wf_09ad0ace-2ff`: CSS tone × glow matrix (3 new tones + 2 glow positions × 5 tones + pulse + reduced-motion guard), Council vocab rename (labels only — URLs/code untouched), centralized titles on 7 pages, dashboard tones applied, Council list with status tabs + participation rings + leading-option preview, Council detail with countdown hero + donut + results widget + voters row + 48h sparkline + sticky bar. |
+| (parallel) | Game icons scrape | 243 webp icons pulled from kingshotdata.com via WordPress REST API `?_embed=wp:featuredmedia`. Organized in `public/images/icons/kingshot/{heroes,pets,masters,buildings,events,items,research,war-academy-research,alliance-tech,database}/` with manifest JSON for programmatic lookup. Polite 250ms delay, idempotent re-run. |
+
+---
+
+## 5 · Lessons learned (extended — Waves 10-15)
+
+These additions to §3 — covering pitfalls discovered in Waves 10-15. The
+full narrative is in `SESSION_LOG_2026-06-17.md`. Capsules:
+
+### Lesson 12 — `position: sticky` breaks in iOS PWA standalone mode
+A sticky element inside a flex column with `pt-safe` works fine in regular
+Safari but silently loses its scroll anchor when the same site runs as a PWA
+in standalone mode (display-mode: standalone). The element scrolls away with
+content. **Fix:** use `fixed top-0 inset-x-0` + sibling spacer with matching
+height. Same pattern bottom nav has always used.
+
+### Lesson 13 — Vercel `cache-control: immutable` + iOS apple-touch-icon
+Vercel ships `cache-control: max-age=31536000, immutable` by default on
+`/icons/*`. iOS Safari honors this aggressively — deleting + re-installing
+the PWA does NOT refetch the icon. **Fix:** cache-bust the icon URLs in
+`index.html` with `?v=N`. iOS treats query-stringed URLs as distinct
+resources. Future icon refreshes bump `v=N+1`.
+
+### Lesson 14 — `BottomNavSpacer` under border-box + safe-area
+`h-[72px] pb-safe` rendered the safe-area inset INSIDE the 72px box (the
+default `box-sizing: border-box`), so a 34px home-indicator inset effectively
+reduced the spacer to 38px. **Fix:**
+`minHeight: calc(64px + max(0.5rem, env(safe-area-inset-bottom)))` — additive
+math, grows with the inset.
+
+### Lesson 15 — i18next plural keys look "missing" to naive grep audits
+`key_one` / `key_other` are i18next's auto-pluralization. A grep for "key"
+won't find them. **Fix for auditors:** before flagging missing keys, search
+for `t(key, { count: N })` call patterns and verify the matching `_one` /
+`_other` forms exist.
+
+### Lesson 16 — pg_cron `service_role_key` setting may be empty
+`current_setting('app.settings.service_role_key', true)` returned NULL in
+this Supabase project — the setting wasn't populated. The cron's
+Authorization header was therefore missing → send-push 401. **Fix:**
+redeploy the called function with `verify_jwt: false` AND have it
+authenticate via its own `SUPABASE_SERVICE_ROLE_KEY` env var internally
+(which is always present in Edge Functions). The caller's JWT becomes
+redundant. Bonus: simpler architecture, no need to manage a shared secret
+across schema boundaries.
+
+### Lesson 17 — Vercel Auth blocks OG scrapers
+Vercel's "Require Log In" Standard Protection means Facebook/Discord/WhatsApp
+crawlers get a 401 challenge they can't pass (no JS execution). Link
+previews show fallback chrome. **Fix:** if the app has its own auth (which
+ours does — RLS protects what matters), disable Vercel Auth. The Vercel
+gate is strictly worse for this app's threat model.
+
+### Lesson 18 — Subagent `sleep` long is an anti-pattern
+Subagents that `sleep` more than a few seconds for a deploy-or-poll scenario
+can stall and waste turns. **Fix:** drive long-running follow-ups from the
+main loop using `Bash run_in_background` or the `Monitor` tool, or schedule
+a follow-up agent for later. Subagents are best for bounded, parallel
+investigation, not for wait-and-verify cycles.
+
+### Lesson 19 — Browser auto-translate vs brand names
+Chrome's auto-translate happily rewrites our brand name "DAD BIGDADDYS" as
+"PAPAI GRANDÃOS" or worse. Our i18n explicitly says don't, but the browser
+doesn't read our dont-translate.json. **Fix:**
+- `<html translate="no">` + `<meta name="google" content="notranslate">` in
+  index.html
+- `translate="no"` on every brand-name span (Header, Alliance, etc)
+
+### Lesson 20 — Card tone system as `tone × glow-position` matrix
+Per-card overrides led to drift (each card had its own bespoke shadow + halo
+combo). Refactored to a matrix: 5 tones (gold/crimson/success/steel/violet)
+× 3 glow positions (top-left default, top-right `--glow-tr`, center-top
+`--glow-c`) + optional `--pulse` (guarded by `prefers-reduced-motion`).
+Now: card chooses semantic tone + visual weight; CSS does the rest. Adding
+a new card variant is one line.
+

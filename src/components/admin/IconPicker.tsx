@@ -1,75 +1,30 @@
-import { useState } from 'react'
-import { Check, X } from '@phosphor-icons/react'
+import { useMemo, useState } from 'react'
+import { Check, X, MagnifyingGlass } from '@phosphor-icons/react'
 import { useTranslation } from 'react-i18next'
 import { ImageUploadField } from '../ui/ImageUploadField'
+import {
+  ICON_GROUPS,
+  ALL_ICON_ENTRIES,
+  ICON_LIBRARY_COUNT,
+  findIconEntry,
+  type IconEntry,
+  type IconGroupKey,
+} from '../../data/icon-library'
 
 /**
- * Browse-and-pick over /public/images assets. Lets the admin choose a built-in
- * icon for a milestone (or any asset-typed entity) OR paste a custom URL.
- * Emits the chosen path string via onChange. Empty string = "no override".
+ * Admin icon picker.
  *
- * Salles 2026-06-15: this resolves the "preciso escolher/mudar/upar o ícone".
+ * Three input modes (stacked, all optional):
+ *   1. Browse the curated + scraped library (~500 icons across ~20 groups,
+ *      grouped by rarity / generation / category, filterable by free-text).
+ *   2. Paste a custom URL.
+ *   3. Upload your own asset to the milestone-bodies bucket.
+ *
+ * Emits the chosen URL via `onChange`. Empty / null = "no override".
+ *
+ * Per Salles 2026-06-17, this is what the rich-text fields will pull from
+ * when picking inline icons (skill books, hero portraits, gear, etc).
  */
-
-interface IconGroup {
-  labelKey: string
-  paths: string[]
-}
-
-const GROUPS: IconGroup[] = [
-  {
-    labelKey: 'admin.iconPicker.groups.truegoldTiers',
-    paths: ['tg1', 'tg2', 'tg3', 'tg4', 'tg5', 'tg6', 'tg7', 'tg8'].map(
-      (t) => `/images/tiers/${t}.png`,
-    ),
-  },
-  {
-    labelKey: 'admin.iconPicker.groups.items',
-    paths: [
-      '/images/items/truegold.png',
-      '/images/items/truegold-dust.png',
-      '/images/items/truegold-tempered.png',
-      '/images/items/hero-xp.png',
-      '/images/items/gold.png',
-    ],
-  },
-  {
-    labelKey: 'admin.iconPicker.groups.buildings',
-    paths: [
-      '/images/buildings/town-center.png',
-      '/images/buildings/town-center-tg.png',
-      '/images/buildings/hero-hall.png',
-      '/images/buildings/war-academy.png',
-      '/images/buildings/barracks.png',
-      '/images/buildings/truegold-barracks.png',
-      '/images/buildings/range.png',
-      '/images/buildings/truegold-range.png',
-      '/images/buildings/stable.png',
-      '/images/buildings/truegold-stable.png',
-      '/images/buildings/truegold-crucible.png',
-    ],
-  },
-  {
-    labelKey: 'admin.iconPicker.groups.events',
-    paths: [
-      '/images/events/bear-hunt.png',
-      '/images/events/kvk.png',
-      '/images/events/viking-vengeance.png',
-      '/images/events/tri-alliance.png',
-      '/images/events/cesars-fury.png',
-      '/images/events/swordland-showdown.png',
-    ],
-  },
-  {
-    labelKey: 'admin.iconPicker.groups.heroes',
-    paths: [
-      'alcar', 'amadeus', 'amane', 'ava', 'charles', 'chenko', 'diana', 'edwin',
-      'eric', 'fahd', 'forrest', 'gordon', 'helga', 'hilde', 'howard', 'jabel',
-      'jaegar', 'long-fei', 'margot', 'marlin', 'olive', 'petra', 'quinn', 'rosa',
-      'saul', 'seth', 'sophia', 'thrud', 'triton', 'wee-woo', 'yang', 'yeonwoo', 'zoe',
-    ].map((slug) => `/images/heroes/${slug}.png`),
-  },
-]
 
 export interface IconPickerProps {
   value: string | null
@@ -78,8 +33,13 @@ export interface IconPickerProps {
   defaultSuggestion?: string | null
 }
 
+const COLLAPSED_PER_GROUP = 18 // show this many before "Show more"
+
 export function IconPicker({ value, onChange, defaultSuggestion }: IconPickerProps) {
   const { t } = useTranslation()
+  const [search, setSearch] = useState('')
+  const [activeGroup, setActiveGroup] = useState<IconGroupKey | 'all'>('all')
+  const [expanded, setExpanded] = useState<Set<IconGroupKey>>(new Set())
   const [customUrl, setCustomUrl] = useState<string>(
     value && !value.startsWith('/images/') ? value : '',
   )
@@ -94,22 +54,58 @@ export function IconPicker({ value, onChange, defaultSuggestion }: IconPickerPro
     onChange(u === '' ? null : u)
   }
 
+  function toggleExpanded(key: IconGroupKey) {
+    setExpanded((prev) => {
+      const next = new Set(prev)
+      if (next.has(key)) next.delete(key)
+      else next.add(key)
+      return next
+    })
+  }
+
+  // Filter the library: by group (all = no filter) + by search term.
+  const filtered = useMemo(() => {
+    const term = search.trim().toLowerCase()
+    return ICON_GROUPS.filter((g) => activeGroup === 'all' || g.key === activeGroup)
+      .map((g) => ({
+        ...g,
+        entries: term
+          ? g.entries.filter((e) => e.searchKey.includes(term))
+          : g.entries,
+      }))
+      .filter((g) => g.entries.length > 0)
+  }, [search, activeGroup])
+
+  const totalMatched = filtered.reduce((s, g) => s + g.entries.length, 0)
+  const currentEntry = value ? findIconEntry(value) : null
+
   return (
     <div className="rounded-lg border border-gold/20 bg-bg-card/60 p-3 space-y-3">
+      {/* Current selection preview */}
       <div className="flex items-center gap-3">
         <span className="h-10 w-10 rounded-md border border-gold/35 bg-bg flex items-center justify-center overflow-hidden">
           {value ? (
             <img src={value} alt="" className="h-8 w-8 object-contain" />
           ) : defaultSuggestion ? (
-            <img src={defaultSuggestion} alt="" className="h-8 w-8 object-contain opacity-50" />
+            <img
+              src={defaultSuggestion}
+              alt=""
+              className="h-8 w-8 object-contain opacity-50"
+            />
           ) : (
             <X size={14} weight="bold" className="text-ink-mute" />
           )}
         </span>
         <div className="min-w-0 flex-1">
-          <div className="text-[10px] tracking-widest uppercase text-ink-mute">{t('admin.iconPicker.currentIcon')}</div>
+          <div className="text-[10px] tracking-widest uppercase text-ink-mute">
+            {t('admin.iconPicker.currentIcon')}
+          </div>
           <div className="text-xs text-ink-cream truncate font-mono">
-            {value ?? (defaultSuggestion ? t('admin.iconPicker.autoLabel', { path: defaultSuggestion }) : t('admin.iconPicker.noOverride'))}
+            {value
+              ? currentEntry?.label ?? value
+              : defaultSuggestion
+                ? t('admin.iconPicker.autoLabel', { path: defaultSuggestion })
+                : t('admin.iconPicker.noOverride')}
           </div>
         </div>
         {value && (
@@ -123,37 +119,104 @@ export function IconPicker({ value, onChange, defaultSuggestion }: IconPickerPro
         )}
       </div>
 
-      {GROUPS.map((g) => (
-        <div key={g.labelKey}>
-          <div className="text-[10px] tracking-widest uppercase text-ink-mute mb-1.5">{t(g.labelKey)}</div>
-          <div className="grid grid-cols-8 sm:grid-cols-10 gap-1.5">
-            {g.paths.map((p) => {
-              const active = value === p
-              return (
-                <button
-                  key={p}
-                  type="button"
-                  onClick={() => pick(p)}
-                  title={p.split('/').pop()}
-                  className={`relative h-10 w-10 rounded-md border flex items-center justify-center overflow-hidden transition-all ${
-                    active
-                      ? 'border-gold/60 bg-gold/15 scale-105'
-                      : 'border-gold/15 bg-bg hover:border-gold/40'
-                  }`}
-                >
-                  <img src={p} alt="" className="h-8 w-8 object-contain" loading="lazy" />
-                  {active && (
-                    <span className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-gold text-bg-deep flex items-center justify-center">
-                      <Check size={9} weight="bold" />
-                    </span>
-                  )}
-                </button>
-              )
+      {/* Search + group pills */}
+      <div className="space-y-2">
+        <div className="relative">
+          <MagnifyingGlass
+            size={14}
+            weight="bold"
+            className="absolute left-2.5 top-1/2 -translate-y-1/2 text-ink-mute pointer-events-none"
+          />
+          <input
+            type="search"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder={t('admin.iconPicker.searchPlaceholder', {
+              defaultValue: `Search ${ICON_LIBRARY_COUNT} icons…`,
+            })}
+            className="w-full pl-8 pr-3 py-1.5 rounded-md bg-bg-card border border-gold/20 text-xs text-ink-cream placeholder:text-ink-mute focus:border-gold/45 outline-none"
+          />
+        </div>
+
+        <div className="flex flex-wrap gap-1.5">
+          <GroupPill
+            label={t('admin.iconPicker.allGroups', { defaultValue: 'All' })}
+            count={ALL_ICON_ENTRIES.length}
+            active={activeGroup === 'all'}
+            onClick={() => setActiveGroup('all')}
+          />
+          {ICON_GROUPS.map((g) => (
+            <GroupPill
+              key={g.key}
+              label={t(g.labelKey)}
+              count={g.entries.length}
+              active={activeGroup === g.key}
+              onClick={() => setActiveGroup(g.key)}
+            />
+          ))}
+        </div>
+
+        <div className="text-[10px] text-ink-mute">
+          {t('admin.iconPicker.matchCount', {
+            defaultValue: '{{count}} matching',
+            count: totalMatched,
+          })}
+        </div>
+      </div>
+
+      {/* Groups */}
+      <div className="space-y-3 max-h-[520px] overflow-y-auto pr-1">
+        {filtered.map((g) => {
+          const isExpanded = expanded.has(g.key) || search.length > 0
+          const visibleEntries = isExpanded
+            ? g.entries
+            : g.entries.slice(0, COLLAPSED_PER_GROUP)
+          const hiddenCount = g.entries.length - visibleEntries.length
+          return (
+            <section key={g.key}>
+              <div className="flex items-center justify-between mb-1.5">
+                <div className="text-[10px] tracking-widest uppercase text-ink-mute">
+                  {t(g.labelKey)}{' '}
+                  <span className="text-ink-dim">({g.entries.length})</span>
+                </div>
+                {!search && g.entries.length > COLLAPSED_PER_GROUP && (
+                  <button
+                    type="button"
+                    onClick={() => toggleExpanded(g.key)}
+                    className="text-[10px] tracking-widest uppercase text-gold-soft hover:text-gold"
+                  >
+                    {isExpanded
+                      ? t('admin.iconPicker.collapse', { defaultValue: 'Less' })
+                      : t('admin.iconPicker.expand', {
+                          defaultValue: `Show ${hiddenCount} more`,
+                          count: hiddenCount,
+                        })}
+                  </button>
+                )}
+              </div>
+              <div className="grid grid-cols-6 sm:grid-cols-8 lg:grid-cols-10 gap-1.5">
+                {visibleEntries.map((entry) => (
+                  <IconTile
+                    key={entry.path}
+                    entry={entry}
+                    active={value === entry.path}
+                    onPick={pick}
+                  />
+                ))}
+              </div>
+            </section>
+          )
+        })}
+        {filtered.length === 0 && (
+          <div className="rounded-md border border-gold/15 bg-bg/30 px-3 py-4 text-center text-xs text-ink-mute">
+            {t('admin.iconPicker.noMatch', {
+              defaultValue: 'No icons match this search.',
             })}
           </div>
-        </div>
-      ))}
+        )}
+      </div>
 
+      {/* Custom URL */}
       <div className="pt-1 border-t border-gold/10">
         <div className="text-[10px] tracking-widest uppercase text-ink-mute mb-1">
           {t('admin.iconPicker.customUrlLabel')}
@@ -176,6 +239,7 @@ export function IconPicker({ value, onChange, defaultSuggestion }: IconPickerPro
         </div>
       </div>
 
+      {/* Upload your own */}
       <div className="pt-1 border-t border-gold/10">
         <ImageUploadField
           bucket="milestone-bodies"
@@ -191,5 +255,67 @@ export function IconPicker({ value, onChange, defaultSuggestion }: IconPickerPro
         />
       </div>
     </div>
+  )
+}
+
+function GroupPill({
+  label,
+  count,
+  active,
+  onClick,
+}: {
+  label: string
+  count: number
+  active: boolean
+  onClick: () => void
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full border text-[10px] tracking-widest uppercase transition-colors ${
+        active
+          ? 'border-gold/55 bg-gold/15 text-gold'
+          : 'border-gold/15 bg-bg-card/40 text-ink-mute hover:border-gold/35 hover:text-gold-soft'
+      }`}
+    >
+      <span>{label}</span>
+      <span className={active ? 'text-gold-soft' : 'text-ink-dim'}>{count}</span>
+    </button>
+  )
+}
+
+function IconTile({
+  entry,
+  active,
+  onPick,
+}: {
+  entry: IconEntry
+  active: boolean
+  onPick: (path: string) => void
+}) {
+  return (
+    <button
+      type="button"
+      onClick={() => onPick(entry.path)}
+      title={`${entry.label}\n${entry.path}`}
+      className={`relative h-10 w-10 rounded-md border flex items-center justify-center overflow-hidden transition-all ${
+        active
+          ? 'border-gold/60 bg-gold/15 scale-105'
+          : 'border-gold/15 bg-bg hover:border-gold/40'
+      }`}
+    >
+      <img
+        src={entry.path}
+        alt={entry.label}
+        className="h-8 w-8 object-contain"
+        loading="lazy"
+      />
+      {active && (
+        <span className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-gold text-bg-deep flex items-center justify-center">
+          <Check size={9} weight="bold" />
+        </span>
+      )}
+    </button>
   )
 }

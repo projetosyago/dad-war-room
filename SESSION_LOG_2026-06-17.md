@@ -646,3 +646,146 @@ implement via direct Edit/Write tools.
 *End of session log. Cross-referenced from `HANDOFF.md` as the wave 9-15 record.
 The next session should read this file first if anything is unclear about why
 something was done a certain way.*
+
+
+---
+
+## 10 · Wave 16 — Heroes catalogue redesign + Hero Detail with real upgrade costs
+
+Replaced the Hub's flat "33 heroes catalogued" page with a rarity-grouped
+layout (Rare → Epic → Mythic Gen 1-7) and built a full Hero Detail page with
+real game data scraped from kingshotdata.com + cost data from kingshotwiki.com.
+
+### Data pipeline
+- `scripts/scrape-hero-details.mjs` — pulls all 34 canonical heroes from
+  kingshotdata.com via WordPress REST API. Parses HTML for skills, base stats,
+  expedition bonuses, exclusive gear, gear skills. 4 parser bugs found and
+  fixed in this session:
+    1. **Amane** is at slug `mikoto` on kingshotdata — added
+       `REMOTE_SLUG_OVERRIDES`. Output JSON keys by canonical slug.
+    2. **Tier extraction returned `[]`** — `p.includes('/')` matched
+       `</mark>` closing tags. Fix: strip HTML before testing.
+    3. **Stats parser returned `atk=6, def=0`** for Gordon — `[^<]*` was
+       greedy and consumed digits. Fix: replace `[^<]*` → `\s*`.
+    4. **Gear name was "Upgrade Preview"** — fix: scan `<strong>` tags in
+       gear section, skip stat-label vocabulary.
+- `src/data/heroes-roster.ts` — canonical 34-hero roster (Rare 4 + Epic 8 +
+  Mythic Gen 1-7 × 3-4 each)
+- `src/data/heroes-data.json` — scraped per-hero data (4476 lines)
+
+### Hero Detail page
+- Banner (rarity-tinted card-hero variant: success / violet / crimson)
+- Tabs: Conquest / Expedition
+- Each tab: base stats + skills with 5-tier upgrade previews
+- Mythic only: Exclusive Gear section (name, max stats, bonuses, 2 gear skills)
+- Upgrade Costs section with REAL data (this was originally a placeholder):
+    - Star Shards (kingshotdata.com/database/hero-shards: ★1=10, ★2=40,
+      ★3=115, ★4=300, ★5=600, ★6=TBC, total to ★5 = 1,065 shards)
+    - Skill Books (kingshotwiki.com/items: Lv1→2 = 10, Lv2→3 = 30,
+      Lv3→4 = 50, Lv4→5 = 75; standardized across rarities)
+    - Widget Chests (kingshotdata.com/database/widgets: 10 levels of
+      5/10/15/.../50 = 275 widgets to max, mythic only)
+  Item icons rendered inline next to quantities (icons scraped from
+  kingshotwiki.com S3 mirror).
+
+### Heroes catalogue list
+- Page-level eyebrow + h1 centered, no descriptive subtitle (user removed)
+- 3 sections: Rare (4) → Epic (8) → Mythic (Gen 1-7 subgrids, 22 heroes)
+- Each tile: portrait + name → link to /heroes/{slug}
+- Tone accent per rarity: success-green / violet / crimson
+- State-driven portrait fallback (no imperative DOM injection)
+
+### Cost calculator
+- `src/data/hero-upgrade-costs.ts` — STAR_SHARD_COSTS / SKILL_BOOK_COSTS /
+  WIDGET_COSTS tables, item-naming functions (special-case Amadeus/Helga for
+  hero-specific shards), summarizeHeroCosts() helper for the KPI tiles.
+
+### i18n
+- 57 new keys under `heroes.detail.*` namespace
+- PT hand-translated, EN canonical, other 9 locales mirror EN
+- Game-data labels (skill books, shards, widgets) intentionally kept in
+  English everywhere — community convention is to call them by their in-game
+  names regardless of locale
+
+---
+
+## 11 · Wave 17 — 459-icon library + site-wide portrait alignment
+
+Two-part wave: (1) scrape the entire kingshotwiki.com/items catalogue
+(186 icons across 13 categories), (2) align the whole site's hero portraits
+to the freshly-scraped .webp library.
+
+### Wiki items scrape
+- `scripts/scrape-kingshotwiki-items.mjs` — fetches kingshotwiki.com/items
+  HTML, splits by tab-pane divs (one per category), per-card extraction of
+  img URL + title + slug. Rejects WordPress Yoast placeholder leaks
+  (`kingshot_wiki_item_name_NNN_kingshot_end`) so we don't import garbage.
+- 13 buckets: basic-resource (2), pet (7), town-skin (9), march-skin (10),
+  avatar-frame (43), nameplate (27), teleport-skin (0), teleporter (5),
+  buff (2), truegold (4), chest (66), hero (10), master (1)
+- 186 PNGs, ~600KB total, manifest at
+  `public/images/icons/kingshotwiki-manifest.json`
+
+### Icon library refactor
+- `src/data/icon-library.ts` — single source of truth for the IconPicker.
+  Loads both manifests dynamically (`kingshot-manifest.json` from earlier
+  in the session + `kingshotwiki-manifest.json` from this wave) so re-running
+  either scraper auto-rebuilds the picker library.
+- Removed the hand-coded `WIKI_SHARDS` / `WIKI_SKILL_BOOKS` / `WIKI_WIDGETS`
+  / `WIKI_MISC` groups — they were redundant once the full scrape landed.
+- IconPicker rewritten with search input, group filter pills (count badges),
+  expand/collapse per group, current-selection preview by human-readable
+  label.
+- Total library: ~459 icons across 30+ groups.
+
+### Hero Detail Upgrade Costs migrated to canonical paths
+- `hero-upgrade-costs.ts` icon helpers now resolve to
+  `/images/icons/kingshotwiki/hero/{slug}.png` (skill books / shards / Hero
+  XP) and `/images/icons/kingshotwiki/chest/gen-{N}-custom-hero-widget-chest.png`
+  (Gen 2-6 specific; non-mythic = generic chest; Gen 7 falls back to Gen 6).
+- Deleted the redundant `/images/icons/kingshotwiki/items/` folder
+  (15 files I hand-curated during Wave 16; same content now lives under the
+  canonical `/hero/` and `/chest/` buckets).
+
+### Site-wide portrait alignment
+- `src/lib/heroAvatar.ts`:
+    - HERO_SLUGS now derives from the canonical `ROSTER_INDEX` (34 heroes,
+      not 33), removing the legacy `jaegar` typo (correct: `jaeger`).
+    - `heroAvatarUrlFor`, `heroAvatarUrlForSlug`, new `heroPortraitPath`
+      helper all return scraped `.webp` paths.
+- 4 consumers updated to use `/images/icons/kingshot/heroes/{slug}.webp`:
+    - `MemberCard.tsx` — fallback avatar
+    - `MemberDetail.tsx` — Howard placeholder
+    - `GameCatalogueCard.tsx` — Petra tile on Hub
+    - `events.ts` — `heroImage(id)` helper + jaegar→jaeger fix in HEROES list
+- Legacy `/public/images/heroes/*.png` files stay on disk so any avatar URL
+  stored in the DB pointing at them keeps resolving — backward-compat without
+  forcing a DB migration.
+
+### Timeline Gen N portrait stack
+- `milestoneIcon.ts` resolver detects `"Gen N"` / `"Generation N"` (Arabic
+  or Roman numerals 1-7) and returns the entire generation's roster as a
+  `heroes: HeroPortrait[]` array. Single-hero milestones still return a
+  single portrait. Caller renders the appropriate visual.
+- `KingdomTimelineCard.tsx` — new `<HeroStack>` component that renders
+  overlapping circular portraits (max 4) with crimson rings when the
+  resolver returns multiple heroes. Single-icon milestones keep the original
+  framed-icon look.
+
+### i18n
+- 13 new wiki bucket keys + earlier IconPicker enhancements
+- Parity: 1208 leaf keys across 11 locales
+
+### Build
+- 1080 PWA precache entries (~26 MB) — large because we ship 459 icons
+- tsc -b clean, lint 0 errors
+
+### What stayed legacy (intentionally)
+- Truegold tier icons `/images/tiers/tg{N}.png` — wiki has 4 generic
+  truegold variants (Truegold / Dust / Lesser / Tempered) but no tier-
+  specific art. Keep legacy.
+- Building icons `/images/buildings/*.png` — wiki only has skins
+  (decorative town skins, not the buildings themselves). Keep legacy.
+- Event icons `/images/events/*.png` — kingshotdata.com scraped 32 event
+  icons under `kingshot/events/`. Both visible in IconPicker for now —
+  follow-up could swap NextEventCard fallback if desired.

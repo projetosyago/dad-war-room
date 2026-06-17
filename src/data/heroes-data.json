@@ -1,0 +1,4476 @@
+{
+  "olive": {
+    "name": "Olive",
+    "slug": "olive",
+    "rarity": "rare",
+    "generation": null,
+    "class": null,
+    "sources": [
+      "Hero Recruitment",
+      "Intel Missions",
+      "Conquest Battles"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2025/07/olive-avatar.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 1752,
+        "def": 2220,
+        "hp": 10822
+      },
+      "skills": [
+        {
+          "name": "Rain of Arrows",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/rain-of-arrows.webp",
+          "description": "Olive launches a hail of arrows, dealing Attack * 252% Area of Effect Damage around the target.",
+          "upgradeTiers": [
+            "180%",
+            "198%",
+            "216%",
+            "234%",
+            "252%"
+          ]
+        },
+        {
+          "name": "Target Lock",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/target-lock.webp",
+          "description": "Olive paints a bullseye on a target, raising damage inflicted on the target by 30% for this attack.",
+          "upgradeTiers": [
+            "10%",
+            "15%",
+            "20%",
+            "25%",
+            "30%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Green Thumb",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/green-thumb.webp",
+          "description": "Olive's unmatched baking skills increase the Town's Mill Output by 25%.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        },
+        {
+          "name": "Forager's Luck",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/foragers-luck.webp",
+          "description": "Olive's expertise in logistics increases her Resource Gathering Speed in the Wilderness by 25%.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Archer Attack",
+          "value": "+90.07%"
+        },
+        {
+          "label": "Archer Defense",
+          "value": "+90.07%"
+        }
+      ]
+    },
+    "exclusiveGear": null,
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/olive/"
+  },
+  "edwin": {
+    "name": "Edwin",
+    "slug": "edwin",
+    "rarity": "rare",
+    "generation": null,
+    "class": null,
+    "sources": [
+      "Hero Recruitment",
+      "Intel Missions",
+      "Conquest Battles"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2025/07/edwin-avatar.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 1442,
+        "def": 2220,
+        "hp": 14430
+      },
+      "skills": [
+        {
+          "name": "Shrapnel Load",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/shrapnel-load.webp",
+          "description": "Edwin throws out a homemade explosive, dealing Attack * 196% Area of Effect Damage to the target and its nearby enemies.",
+          "upgradeTiers": [
+            "140%",
+            "154%",
+            "168%",
+            "182%",
+            "196%"
+          ]
+        },
+        {
+          "name": "Detonate",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/detonate.webp",
+          "description": "Edwin's explosives have a 20% chance of stunning the targets for 1.5s.",
+          "upgradeTiers": [
+            "10%",
+            "15%",
+            "15%",
+            "20%",
+            "20%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Demolitions Expert",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/demolitions-expert.webp",
+          "description": "Edwin uses his knowledge of minerals, increasing the Town's Quarry Output by 25%.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        },
+        {
+          "name": "Stone Mining",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/stone-mining.webp",
+          "description": "Edwin's expert quarrying techniques increase his Stone Mining Speed in the Wilderness by 25%.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Cavalry Attack",
+          "value": "+90.07%"
+        },
+        {
+          "label": "Cavalry Defense",
+          "value": "+90.07%"
+        }
+      ]
+    },
+    "exclusiveGear": null,
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/edwin/"
+  },
+  "seth": {
+    "name": "Seth",
+    "slug": "seth",
+    "rarity": "rare",
+    "generation": null,
+    "class": null,
+    "sources": [
+      "Hero Recruitment",
+      "Intel Missions",
+      "Conquest Battles"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2025/07/seth-avatar.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 1106,
+        "def": 2220,
+        "hp": 21644
+      },
+      "skills": [
+        {
+          "name": "Hammer Burn",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/hammer-burn.webp",
+          "description": "Seth swings his hammer forward in a devastating arc, dealing Attack * 280% damage.",
+          "upgradeTiers": [
+            "200%",
+            "220%",
+            "240%",
+            "260%",
+            "280%"
+          ]
+        },
+        {
+          "name": "Armor Enhancement",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/armor-enhancement.webp",
+          "description": "Seth upgrades his armor to reduce damage taken by 30%.",
+          "upgradeTiers": [
+            "10%",
+            "15%",
+            "20%",
+            "25%",
+            "30%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Burnished Iron",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/burnished-iron.webp",
+          "description": "Seth passes on his passion for iron mining to everyone, increasing the Town's Iron Output by 25%.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        },
+        {
+          "name": "Craftsmanship",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/craftsmanship.webp",
+          "description": "Seth has a special bond with Iron, increasing his Iron Mining Speed in the Wilderness by 25%.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Infantry Attack",
+          "value": "+90.07%"
+        },
+        {
+          "label": "Infantry Defense",
+          "value": "+90.07%"
+        }
+      ]
+    },
+    "exclusiveGear": null,
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/seth/"
+  },
+  "forrest": {
+    "name": "Forrest",
+    "slug": "forrest",
+    "rarity": "rare",
+    "generation": null,
+    "class": null,
+    "sources": [
+      "Hero Recruitment",
+      "Intel Missions",
+      "Conquest Battles"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2025/07/forrest-avatar.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 1106,
+        "def": 2220,
+        "hp": 21644
+      },
+      "skills": [
+        {
+          "name": "Axe Whirl",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/axe-whirl.webp",
+          "description": "Forrest's axe pirouette deals damage of Attack * 110% per 0.5s to nearby enemies for 3s.",
+          "upgradeTiers": [
+            "80%",
+            "88%",
+            "96%",
+            "104%",
+            "110%"
+          ]
+        },
+        {
+          "name": "Razor Sharp",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/razor-sharp.webp",
+          "description": "Forrest's sharpened axe deals 30% more damage per second.",
+          "upgradeTiers": [
+            "10%",
+            "15%",
+            "20%",
+            "25%",
+            "30%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Woodland Inheritor",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/woodland-inheritor.webp",
+          "description": "Forrest's expert lumberjack skills increase the Town's Sawmill Output by 25%.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        },
+        {
+          "name": "Master Woodcutter",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/master-woodcutter.webp",
+          "description": "Forrest utilizes his logging expertise, increasing Wood Gathering Speed in the Wilderness by 25%.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Infantry Attack",
+          "value": "+90.07%"
+        },
+        {
+          "label": "Infantry Defense",
+          "value": "+90.07%"
+        }
+      ]
+    },
+    "exclusiveGear": null,
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/forrest/"
+  },
+  "amane": {
+    "name": "Amane",
+    "slug": "mikoto",
+    "rarity": "epic",
+    "generation": null,
+    "class": null,
+    "sources": [
+      "Hero Recruitment",
+      "Oasis & Beyond Event"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2025/06/mikoto-amane-kingshot.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 2157,
+        "def": 2220,
+        "hp": 13320
+      },
+      "skills": [
+        {
+          "name": "Sakura Blossom",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/sakura-blossom.webp",
+          "description": "Amane summons a protective enchantment, increasing all Hero and Escorts' Attack by 3.5% and Attack Speed by 4.5% for 4s.",
+          "upgradeTiers": [
+            "1.5%",
+            "2%",
+            "2.5%",
+            "3%",
+            "3.5%"
+          ]
+        },
+        {
+          "name": "Fire Sigil",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/fire-sigil.webp",
+          "description": "Amane lobs a fiery sigil against the enemy, dealing Attack * 210% damage.",
+          "upgradeTiers": [
+            "150%",
+            "165%",
+            "180%",
+            "195%",
+            "210%"
+          ]
+        },
+        {
+          "name": "Divine Melody",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/divine-melody.webp",
+          "description": "The dance of the umbrella is the dance of the Blade. Every 3 basic attacks increases Amane's Attack Speed by 5% until the end of the battle.",
+          "upgradeTiers": [
+            "1%",
+            "2%",
+            "3%",
+            "4%",
+            "5%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Tri-Phalanx",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/tri-phalanx.webp",
+          "description": "Amane's trademark formation increases all Squads' total Attack by 25%.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        },
+        {
+          "name": "Exorcism",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/exorcism.webp",
+          "description": "Amane's skill at warding off evil increases Infirmary Healing Speed by 50%.",
+          "upgradeTiers": [
+            "10%",
+            "20%",
+            "30%",
+            "40%",
+            "50%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Archer Attack",
+          "value": "+140.11%"
+        },
+        {
+          "label": "Archer Defense",
+          "value": "+140.11%"
+        }
+      ]
+    },
+    "exclusiveGear": null,
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/mikoto/"
+  },
+  "yeonwoo": {
+    "name": "Yeonwoo",
+    "slug": "yeonwoo",
+    "rarity": "epic",
+    "generation": null,
+    "class": null,
+    "sources": [
+      "Hero Recruitment",
+      "Oasis & Beyond Event"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2025/06/yeanwoo.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 2157,
+        "def": 2220,
+        "hp": 13320
+      },
+      "skills": [
+        {
+          "name": "Petalbloom",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/petalbloom.png",
+          "description": "Yeonwoo arcs Petalbloom outward in three waves, dealing Attack * 100%, Attack * 175%, and Attack * 210% damage respectively, with the third being area of effect damage.",
+          "upgradeTiers": [
+            "125%",
+            "137.5%",
+            "150%",
+            "162.5%",
+            "175%"
+          ]
+        },
+        {
+          "name": "Falling Swallow",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/falling-swallow.webp",
+          "description": "The Falling Swallow technique weaves confusion in enemy ranks, dealing Attack * 140% damage and reducing the target's Attack Speed by 50% for 2s.",
+          "upgradeTiers": [
+            "100%",
+            "110%",
+            "120%",
+            "130%",
+            "140%"
+          ]
+        },
+        {
+          "name": "Twin Fangs",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/twin-fangs.webp",
+          "description": "Yeonwoo's unusual duel form is devilishly difficult to defend against, increasing Attack by 24%.",
+          "upgradeTiers": [
+            "8%",
+            "12%",
+            "16%",
+            "20%",
+            "24%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "On Guard",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/on-guard.png",
+          "description": "\"My blade and I are one\". Yeonwoo's sword skills increase all Squads' total Lethality by 25%.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        },
+        {
+          "name": "Well-Traveled",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/well-traveled.webp",
+          "description": "Yeonwoo's travels have secured a technological edge, increasing Research Speed by 15%.",
+          "upgradeTiers": [
+            "3%",
+            "6%",
+            "9%",
+            "12%",
+            "15%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Archer Attack",
+          "value": "+140.11%"
+        },
+        {
+          "label": "Archer Defense",
+          "value": "+140.11%"
+        }
+      ]
+    },
+    "exclusiveGear": null,
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/yeonwoo/"
+  },
+  "fahd": {
+    "name": "Fahd",
+    "slug": "fahd",
+    "rarity": "epic",
+    "generation": null,
+    "class": null,
+    "sources": [
+      "Hero Recruitment",
+      "Oasis & Beyond Event"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2025/06/fahd-kingshot.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 1776,
+        "def": 2220,
+        "hp": 17760
+      },
+      "skills": [
+        {
+          "name": "Sandstorm",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/sandstorm.png",
+          "description": "The blinding sandstorm reduces Enemy Squads' Attack by 5% for 2s.",
+          "upgradeTiers": [
+            "1%",
+            "2%",
+            "3%",
+            "4%",
+            "5%"
+          ]
+        },
+        {
+          "name": "Eagle Wings",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/eagle-wings.png",
+          "description": "After unleashing the \"Sandstorm\", Fahd's eagle directs allies' attack, increasing his and nearby friendly Squads' Attack by 35% for 2s.",
+          "upgradeTiers": [
+            "15%",
+            "20%",
+            "25%",
+            "30%",
+            "35%"
+          ]
+        },
+        {
+          "name": "Dune General",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/dune-general.png",
+          "description": "The harsh desert has given Fahd a strong sense for when to pounce, increasing his Attack Speed by 30%.",
+          "upgradeTiers": [
+            "10%",
+            "15%",
+            "20%",
+            "25%",
+            "30%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Desert Eclipse",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/desert-eclipse.webp",
+          "description": "A rising cloud of sand is terrible for visibility, reducing all Enemy Squads' Damage Dealt by 20%.",
+          "upgradeTiers": [
+            "4%",
+            "8%",
+            "12%",
+            "16%",
+            "20%"
+          ]
+        },
+        {
+          "name": "Pathfinder",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/pathfinder.webp",
+          "description": "Fahd has always been a pathfinder for his warriors, increasing Solo Hunting March Speed by 100%.",
+          "upgradeTiers": [
+            "20%",
+            "40%",
+            "60%",
+            "80%",
+            "100%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Cavalry Attack",
+          "value": "+140.11%"
+        },
+        {
+          "label": "Cavalry Defense",
+          "value": "+140.11%"
+        }
+      ]
+    },
+    "exclusiveGear": null,
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/fahd/"
+  },
+  "chenko": {
+    "name": "Chenko",
+    "slug": "chenko",
+    "rarity": "epic",
+    "generation": null,
+    "class": null,
+    "sources": [
+      "Path of Growth Event",
+      "Hero Recruitment",
+      "Intel Missions – Watchtower"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2025/04/chenko-avatar.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 1776,
+        "def": 2220,
+        "hp": 17760
+      },
+      "skills": [
+        {
+          "name": "Burst Fire",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/04/burst-fire.webp",
+          "description": "Unleashes a rapid barrage, dealing Attack * 75% damage to enemies in front every 0.5s for 2s.",
+          "upgradeTiers": [
+            "55%",
+            "60%",
+            "65%",
+            "70%",
+            "75%"
+          ]
+        },
+        {
+          "name": "Defense Upgrade",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/04/defense-upgrade.webp",
+          "description": "Chenko upgrades her armor, increasing Defense by 70%.",
+          "upgradeTiers": [
+            "25%",
+            "37.5%",
+            "50%",
+            "62.5%",
+            "70%"
+          ]
+        },
+        {
+          "name": "Weapon Upgrade",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/04/weapon-upgrade.webp",
+          "description": "Chenko's upgraded weapon boosts Attack by 24%.",
+          "upgradeTiers": [
+            "8%",
+            "12%",
+            "16%",
+            "20%",
+            "24%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Stand of Arms",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/04/stand-of-arms.webp",
+          "description": "Chenko implements advanced weaponry for our soldiers, increasing the total Squads' Lethality by 25%.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        },
+        {
+          "name": "Shield Wall",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/04/shield-wall.webp",
+          "description": "Enhances troop armor with a keen engineering eye, reducing damage taken by 20% for all troops.",
+          "upgradeTiers": [
+            "4%",
+            "8%",
+            "12%",
+            "16%",
+            "20%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Cavalry Attack",
+          "value": "+140.11%"
+        },
+        {
+          "label": "Cavalry Defense",
+          "value": "+140.11%"
+        }
+      ]
+    },
+    "exclusiveGear": null,
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/chenko/"
+  },
+  "gordon": {
+    "name": "Gordon",
+    "slug": "gordon",
+    "rarity": "epic",
+    "generation": null,
+    "class": null,
+    "sources": [
+      "Hero Recruitment",
+      "Intel Missions",
+      "Alliance Championship Store"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2025/07/gordon-avatar.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 1776,
+        "def": 2220,
+        "hp": 17760
+      },
+      "skills": [
+        {
+          "name": "BBQ Feast",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/bbq-feast.webp",
+          "description": "Gordon prepares a lavish feast, restoring Health by Attack * 280% to all troops and increasing Attack by 7% for all troops for 4s.",
+          "upgradeTiers": [
+            "200%",
+            "220%",
+            "240%",
+            "260%",
+            "280%"
+          ]
+        },
+        {
+          "name": "Culinary Chaos",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/culinary-chaos.webp",
+          "description": "Gordon's life in a chaotic kitchen reduces his damage taken by 30%.",
+          "upgradeTiers": [
+            "10%",
+            "15%",
+            "20%",
+            "25%",
+            "30%"
+          ]
+        },
+        {
+          "name": "Emergency Snack",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/emergency-snakc.webp",
+          "description": "Gordon's regular snacking restores Health equal to Attack * 70% every 5s.",
+          "upgradeTiers": [
+            "50%",
+            "55%",
+            "60%",
+            "65%",
+            "70%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Super Nutrients",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/Super-nutrients.webp",
+          "description": "Gordon's culinary masterpieces invigorate our soldiers, increasing total Squads' Health by 25%.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        },
+        {
+          "name": "Trash Talk",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/trash-talk.webp",
+          "description": "Beyond delicious meals, Gordon's trash talk increases the total Squads' Attack by 25%.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Cavalry Attack",
+          "value": "+140.11%"
+        },
+        {
+          "label": "Cavalry Defense",
+          "value": "+140.11%"
+        }
+      ]
+    },
+    "exclusiveGear": null,
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/gordon/"
+  },
+  "diana": {
+    "name": "Diana",
+    "slug": "diana",
+    "rarity": "epic",
+    "generation": null,
+    "class": null,
+    "sources": [
+      "Desert Trial Event"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2025/03/diana-avatar-icon.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 2157,
+        "def": 2220,
+        "hp": 13320
+      },
+      "skills": [
+        {
+          "name": "Incendiary Arrows",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/icendiary-arrows.webp",
+          "description": "Diana fires an Incendiary Shot, dealing Attack * 290% damage to the target and Attack * 98% damage to nearby enemies.",
+          "upgradeTiers": [
+            "210%",
+            "230%",
+            "250%",
+            "270%",
+            "290%"
+          ]
+        },
+        {
+          "name": "Sharpshooter",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/sharpshooter.webp",
+          "description": "Increases Attack Speed by 30%.",
+          "upgradeTiers": [
+            "10%",
+            "15%",
+            "20%",
+            "25%",
+            "30%"
+          ]
+        },
+        {
+          "name": "Deadly Strike",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/deadly-strike.webp",
+          "description": "With a sharp eye for vulnerabilities, Diana increases her Crit Rate by 20%.",
+          "upgradeTiers": [
+            "7%",
+            "10%",
+            "13%",
+            "16%",
+            "20%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Iron Constitution",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/iron-constitution.webp",
+          "description": "The unique arts of the wilderness rangers reduce Governor Stamina Cost by 20%.",
+          "upgradeTiers": [
+            "10%",
+            "12%",
+            "15%",
+            "18%",
+            "20%"
+          ]
+        },
+        {
+          "name": "Quick Paced",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/quick-paced.webp",
+          "description": "Increases March Speed by 100%.",
+          "upgradeTiers": [
+            "20%",
+            "40%",
+            "60%",
+            "80%",
+            "100%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Archer Attack",
+          "value": "+110.08%"
+        },
+        {
+          "label": "Archer Defense",
+          "value": "+110.08%"
+        }
+      ]
+    },
+    "exclusiveGear": null,
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/diana/"
+  },
+  "howard": {
+    "name": "Howard",
+    "slug": "howard",
+    "rarity": "epic",
+    "generation": null,
+    "class": null,
+    "sources": [
+      "Hero Recruitment",
+      "Conquest Battles",
+      "Intel Missions"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2025/07/howard-avatar.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 1361,
+        "def": 2220,
+        "hp": 26640
+      },
+      "skills": [
+        {
+          "name": "Shielded Strike",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/shielded-strike.webp",
+          "description": "Howard gives an enemy a solid whack with his heavy shield, knocking the target back while dealing Attack * 280% Area of Effect damage.",
+          "upgradeTiers": [
+            "200%",
+            "220%",
+            "240%",
+            "260%",
+            "280%"
+          ]
+        },
+        {
+          "name": "Joint Defense",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/joint-defense.webp",
+          "description": "Howard leads the effort to fortify defenses, increasing Defense by 15% for all heroes",
+          "upgradeTiers": [
+            "5%",
+            "7.5%",
+            "10%",
+            "12.5%",
+            "15%"
+          ]
+        },
+        {
+          "name": "Shield Block",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/shield-block.webp",
+          "description": "Howard trades in his shield for an upgraded model, reducing damage taken by 30%.",
+          "upgradeTiers": [
+            "10%",
+            "15%",
+            "20%",
+            "25%",
+            "30%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Defenders' Edge",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/defenders-edge.webp",
+          "description": "Howard guards our troops with his shield, reducing damage taken by 20% for all troops.",
+          "upgradeTiers": [
+            "4%",
+            "8%",
+            "12%",
+            "16%",
+            "20%"
+          ]
+        },
+        {
+          "name": "Weaken",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/weaken.webp",
+          "description": "Howard's intimidating presence reduces the total Enemy Squads' Attack by 20%.",
+          "upgradeTiers": [
+            "4%",
+            "8%",
+            "12%",
+            "16%",
+            "20%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Infantry Attack",
+          "value": "+140.11%"
+        },
+        {
+          "label": "Infantry Defense",
+          "value": "+140.11%"
+        }
+      ]
+    },
+    "exclusiveGear": null,
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/howard/"
+  },
+  "quinn": {
+    "name": "Quinn",
+    "slug": "quinn",
+    "rarity": "epic",
+    "generation": null,
+    "class": null,
+    "sources": [
+      "Hero Recruitment",
+      "Intel Missions"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2025/07/quinn-avatar.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 2157,
+        "def": 2220,
+        "hp": 13320
+      },
+      "skills": [
+        {
+          "name": "Headshot",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/headshot.webp",
+          "description": "The upgraded Crossbow deals Attack * 560% damage.",
+          "upgradeTiers": [
+            "400%",
+            "440%",
+            "480%",
+            "520%",
+            "560%"
+          ]
+        },
+        {
+          "name": "Quick Shot",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/quick-shot.webp",
+          "description": "Years of training increases Quinn's Attack Speed by 30%.",
+          "upgradeTiers": [
+            "10%",
+            "15%",
+            "20%",
+            "25%",
+            "30%"
+          ]
+        },
+        {
+          "name": "Natural Selection",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/natural-selection.webp",
+          "description": "Quinn's expert survival skills increase his damage dealt by 30%.",
+          "upgradeTiers": [
+            "10%",
+            "15%",
+            "20%",
+            "25%",
+            "30%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Sixth Sense",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/sixth-sense.webp",
+          "description": "Senses for dangers ahead, reducing damage taken by 20% for all troops.",
+          "upgradeTiers": [
+            "4%",
+            "8%",
+            "12%",
+            "16%",
+            "20%"
+          ]
+        },
+        {
+          "name": "Precision Shot",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/07/precision-shot.webp",
+          "description": "Quinn grants all soldiers a 50% chance of dealing 50% more damage when attacking.",
+          "upgradeTiers": [
+            "10%",
+            "20%",
+            "30%",
+            "40%",
+            "50%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Archer Attack",
+          "value": "+140.11%"
+        },
+        {
+          "label": "Archer Defense",
+          "value": "+140.11%"
+        }
+      ]
+    },
+    "exclusiveGear": null,
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/quinn/"
+  },
+  "jabel": {
+    "name": "Jabel",
+    "slug": "jabel",
+    "rarity": "mythic",
+    "generation": 1,
+    "class": null,
+    "sources": [
+      "7-day sign-in gift",
+      "Path of Growth (Event)",
+      "Recruit Heroes",
+      "Watchtower Intel",
+      "Hall of Heroes",
+      "Swordland Shop",
+      "Jabel's Courage – Pack"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2025/03/jabel.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 2220,
+        "def": 2220,
+        "hp": 22200
+      },
+      "skills": [
+        {
+          "name": "Gallant Throw",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/gallant-throw.webp",
+          "description": "Throws a spear that pierces defenses, dealing Attack * 252% area of effect damage and pinning the targets for 1.5s.",
+          "upgradeTiers": [
+            "180%",
+            "198%",
+            "216%",
+            "234%",
+            "252%"
+          ]
+        },
+        {
+          "name": "Brave the Storm",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/brave-the-storm.webp",
+          "description": "A true knight bravely confronts enemies, dealing Attack * 210% damage to the target.",
+          "upgradeTiers": [
+            "150%",
+            "165%",
+            "180%",
+            "195%",
+            "210%"
+          ]
+        },
+        {
+          "name": "Persistence",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/persistence.webp",
+          "description": "Adversity ignites endless potential, increasing Attack Speed by 60% when Health is below 50%.",
+          "upgradeTiers": [
+            "20%",
+            "30%",
+            "40%",
+            "50%",
+            "60%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Rally Flag",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/rally-flag.webp",
+          "description": "Jabel with her banner-like red armor, has a 40% chance of reducing damage taken by 50% for all squads.",
+          "upgradeTiers": [
+            "8%",
+            "16%",
+            "24%",
+            "32%",
+            "40%"
+          ]
+        },
+        {
+          "name": "Hero's Domain",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/heros-domain.webp",
+          "description": "Jabel, a fearless knight, grants all squads a 50% chance of dealing 50% more damage when attacking.",
+          "upgradeTiers": [
+            "10%",
+            "20%",
+            "30%",
+            "40%",
+            "50%"
+          ]
+        },
+        {
+          "name": "Youthful Rage",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/youthful-rage.webp",
+          "description": "Jabel's valiant spirit inspires everyone increasing damage dealt by 25% for all squads.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Cavalry Attack",
+          "value": "+200.16%"
+        },
+        {
+          "label": "Cavalry Defense",
+          "value": "+200.16%"
+        }
+      ]
+    },
+    "exclusiveGear": {
+      "name": "Greaves of Faith",
+      "stats": {
+        "power": 225000,
+        "heroAtk": 450,
+        "heroDef": 450,
+        "heroHp": 4500,
+        "escortAtk": 150,
+        "escortDef": 150,
+        "escortHp": 1500
+      },
+      "bonuses": [
+        "Cavalry Lethality +50.00%",
+        "Cavalry Health +50.00%"
+      ],
+      "skills": [
+        {
+          "name": "Crimson Spirit",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/crimson-spirit.webp",
+          "description": "Jabel's will to win helps breakthrough her limitation, increasing damage dealt by 30%.",
+          "upgradeTiers": [
+            "10%",
+            "15%",
+            "20%",
+            "25%",
+            "30%"
+          ],
+          "mode": "conquest"
+        },
+        {
+          "name": "Divine Strength",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/divine-strength.webp",
+          "description": "Based on steadfast faith, Defender Troops' Lethality is increased by 15%.",
+          "upgradeTiers": [
+            "5%",
+            "7.5%",
+            "10%",
+            "12.5%",
+            "15%"
+          ],
+          "mode": "expedition"
+        }
+      ]
+    },
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/jabel/"
+  },
+  "amadeus": {
+    "name": "Amadeus",
+    "slug": "amadeus",
+    "rarity": "mythic",
+    "generation": 1,
+    "class": null,
+    "sources": [
+      "Hall of Governors (Generation 1)",
+      "VIP packs"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2025/03/amadeus.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 2128,
+        "def": 2220,
+        "hp": 41624
+      },
+      "skills": [
+        {
+          "name": "Combo Slash",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/combo-slash.webp",
+          "description": "Amadeus casts enemies in the target area upward followed by three powerful slashes, each dealing Attack * 224% damage.",
+          "upgradeTiers": [
+            "160%",
+            "176%",
+            "192%",
+            "208%",
+            "224%"
+          ]
+        },
+        {
+          "name": "Arcane Swordship",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/arcane-swordship.webp",
+          "description": "Amadeus releases a burst of arcane energy with each sword slash, dealing Attack * 23% damage to frontal foes.",
+          "upgradeTiers": [
+            "15%",
+            "17%",
+            "19%",
+            "21%",
+            "23%"
+          ]
+        },
+        {
+          "name": "Onslaught",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/onslaught.webp",
+          "description": "Amadeus is a master at pressing his advantage, increasing Attack by 48% when Health is below 50%.",
+          "upgradeTiers": [
+            "16%",
+            "24%",
+            "32%",
+            "40%",
+            "48%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Battle Ready",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/battle-ready.webp",
+          "description": "Young ranger Amadeus excels in boosting morale, increasing the total Squads' Lethality by 25%.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        },
+        {
+          "name": "Way of the Blade",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/way-of-the-blade.webp",
+          "description": "Amadeus imparts the secrets of swordsmanship, increasing the total Squads' Attack by 25%.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        },
+        {
+          "name": "Unrighteous Strike",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/unrighteous-strike.webp",
+          "description": "Amadeus' unique swordplay has a 40% chance of increasing damage dealt by 50% for all squads.",
+          "upgradeTiers": [
+            "8%",
+            "16%",
+            "24%",
+            "32%",
+            "40%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Infantry Attack",
+          "value": "+260.20%"
+        },
+        {
+          "label": "Infantry Defense",
+          "value": "+260.20%"
+        }
+      ]
+    },
+    "exclusiveGear": {
+      "name": "Aegis of Fate",
+      "stats": {
+        "power": 281250,
+        "heroAtk": 431,
+        "heroDef": 562,
+        "heroHp": 8437,
+        "escortAtk": 143,
+        "escortDef": 187,
+        "escortHp": 2812
+      },
+      "bonuses": [
+        "Infantry Lethality +62.50%",
+        "Infantry Health +62.50%"
+      ],
+      "skills": [
+        {
+          "name": "Double Parry",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/double-parry.webp",
+          "description": "Amadeus is a skillful parrier, reducing damage taken by 30%.",
+          "upgradeTiers": [
+            "10%",
+            "15%",
+            "20%",
+            "25%",
+            "30%"
+          ],
+          "mode": "conquest"
+        },
+        {
+          "name": "Discernment",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/discernment.webp",
+          "description": "Amadeus attacks in a sword-tailored formation, increasing Rally Attack by 15%.",
+          "upgradeTiers": [
+            "5%",
+            "7.5%",
+            "10%",
+            "12.5%",
+            "15%"
+          ],
+          "mode": "expedition"
+        }
+      ]
+    },
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/amadeus/"
+  },
+  "helga": {
+    "name": "Helga",
+    "slug": "helga",
+    "rarity": "mythic",
+    "generation": 1,
+    "class": null,
+    "sources": [
+      "1st Purchase",
+      "VIP Special Packs"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2025/03/helga-kingshot.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 1873,
+        "def": 2220,
+        "hp": 36630
+      },
+      "skills": [
+        {
+          "name": "Antler Assault",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/antler-assault.webp",
+          "description": "Performs an antler charge, dealing Attack * 224% area of effect damage, knocking the targets back, and stunning them for 1s.",
+          "upgradeTiers": [
+            "160%",
+            "176%",
+            "192%",
+            "208%",
+            "224%"
+          ]
+        },
+        {
+          "name": "Spear Charge",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/spear-charge.webp",
+          "description": "Deals Attack * 210% damage to the target.",
+          "upgradeTiers": [
+            "150%",
+            "165%",
+            "180%",
+            "195%",
+            "210%"
+          ]
+        },
+        {
+          "name": "Fury",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/fury.webp",
+          "description": "When taking damage, there is a 10% chance of increasing Attack by 12% for 3s. Stacks up to 5 times.",
+          "upgradeTiers": [
+            "4%",
+            "6%",
+            "8%",
+            "10%",
+            "12%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Oath of Guardian",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/oat-of-guardina.webp",
+          "description": "Helga has a 40% chance of reducing damage taken by 50% for all squads.",
+          "upgradeTiers": [
+            "8%",
+            "16%",
+            "24%",
+            "32%",
+            "40%"
+          ]
+        },
+        {
+          "name": "Echoes of Valhalla",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/echoes-of-valhalla.webp",
+          "description": "Helga blows the horn to motivate the squad, increasing the total Squads' Attack by 25%.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        },
+        {
+          "name": "Nature's Balance",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/natures-balance.webp",
+          "description": "Helga invites everyone to embrace nature, increasing the total Squads' Lethality by 25%.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Infantry Attack",
+          "value": "+200.16%"
+        },
+        {
+          "label": "Infantry Defense",
+          "value": "+200.16%"
+        }
+      ]
+    },
+    "exclusiveGear": {
+      "name": "Bands of Tyre",
+      "stats": {
+        "power": 247500,
+        "heroAtk": 379,
+        "heroDef": 495,
+        "heroHp": 7425,
+        "escortAtk": 126,
+        "escortDef": 165,
+        "escortHp": 2475
+      },
+      "bonuses": [
+        "Infantry Lethality +55.50%",
+        "Infantry Health +55.50%"
+      ],
+      "skills": [
+        {
+          "name": "Valiant Fury",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/valiant-fury.webp",
+          "description": "Fueled by fury, Helga increases her damage dealt by 30%.",
+          "upgradeTiers": [
+            "10%",
+            "15%",
+            "20%",
+            "25%",
+            "30%"
+          ],
+          "mode": "conquest"
+        },
+        {
+          "name": "Zeal",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/zeal.webp",
+          "description": "Helga joins the rally, increasing Rally Troops' Lethality by 15%.",
+          "upgradeTiers": [
+            "5%",
+            "7.5%",
+            "10%",
+            "12.5%",
+            "15%"
+          ],
+          "mode": "expedition"
+        }
+      ]
+    },
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/helga/"
+  },
+  "saul": {
+    "name": "Saul",
+    "slug": "saul",
+    "rarity": "mythic",
+    "generation": 1,
+    "class": null,
+    "sources": [
+      "Daily Deals",
+      "Hero Roulette",
+      "Hall of Heroes",
+      "Swordland Shop"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2025/03/saul-kingshot.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 2697,
+        "def": 2220,
+        "hp": 16650
+      },
+      "skills": [
+        {
+          "name": "Rapidfire",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/rapidfire.webp",
+          "description": "Delivers multiple hits, each dealing Attack * 75% damage each and stunning the target for 2s.",
+          "upgradeTiers": [
+            "55%",
+            "60%",
+            "65%",
+            "70%",
+            "75%"
+          ]
+        },
+        {
+          "name": "Final Prayer",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/final-prayer.webp",
+          "description": "When Health is below 50%, Saul's Defense is increased by 150%.",
+          "upgradeTiers": [
+            "50%",
+            "75%",
+            "100%",
+            "125%",
+            "150%"
+          ]
+        },
+        {
+          "name": "Superior Techniques",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/superior-techniques.webp",
+          "description": "Increases Attack Speed by 30%",
+          "upgradeTiers": [
+            "10%",
+            "15%",
+            "20%",
+            "25%",
+            "30%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Taskforce Training",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/taskforce-training.webp",
+          "description": "As a member of the task force, Saul's unique training program is highly empowering, increasing the total Squads' Defense and Health by 10% and 15%.",
+          "upgradeTiers": [
+            "2%",
+            "4%",
+            "6%",
+            "8%",
+            "10%"
+          ]
+        },
+        {
+          "name": "Resourceful",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/resourceful.webp",
+          "description": "Saul's efficient construction management increases Construction Speed by 15%, and his proficiency in maximizing resource utilization reduces Construction Costs by 15%.",
+          "upgradeTiers": [
+            "3%",
+            "6%",
+            "9%",
+            "12%",
+            "15%"
+          ]
+        },
+        {
+          "name": "Positional Batter",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/positional-batter-kingshot.webp",
+          "description": "Sault masterfully manipulates the battlefield, increasing the total Squads' Lethality by 25%.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Archer Attack",
+          "value": "+200.16%"
+        },
+        {
+          "label": "Archer Defense",
+          "value": "+200.16%"
+        }
+      ]
+    },
+    "exclusiveGear": {
+      "name": "Rabbitgear Cannon",
+      "stats": {
+        "power": 225000,
+        "heroAtk": 546,
+        "heroDef": 450,
+        "heroHp": 3375,
+        "escortAtk": 182,
+        "escortDef": 150,
+        "escortHp": 1125
+      },
+      "bonuses": [
+        "Archer Lethality +50.00%",
+        "Archer Health +50.00%"
+      ],
+      "skills": [
+        {
+          "name": "Fearless Advance",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/fearless-advance.webp",
+          "description": "Saul's brust of strong determination under extreme situation increases his attack by 24%.",
+          "upgradeTiers": [
+            "6%",
+            "12%",
+            "16%",
+            "20%",
+            "24%"
+          ],
+          "mode": "conquest"
+        },
+        {
+          "name": "Defend to Attack",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/03/defend-to-attack.webp",
+          "description": "Increases Defender Troops Attack by 15%.",
+          "upgradeTiers": [
+            "5%",
+            "7.5%",
+            "10%",
+            "12.5%",
+            "15%"
+          ],
+          "mode": "expedition"
+        }
+      ]
+    },
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/saul/"
+  },
+  "hilde": {
+    "name": "Hilde",
+    "slug": "hilde",
+    "rarity": "mythic",
+    "generation": 2,
+    "class": "Cavalry",
+    "sources": [
+      "Hall of Governors",
+      "Strongest Governor Event",
+      "Daily Deals",
+      "Hero Rally",
+      "Hall of Heroes (Gen 3 and higher)"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2025/04/hilde-kingshot.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 2664,
+        "def": 2220,
+        "hp": 26640
+      },
+      "skills": [
+        {
+          "name": "Rejuvenating Plea",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/04/rejuvenating-plea.webp",
+          "description": "Immediately restores Health equal to her Attack * 280% to all friendly heroes.",
+          "upgradeTiers": [
+            "200%",
+            "220%",
+            "240%",
+            "260%",
+            "280%"
+          ]
+        },
+        {
+          "name": "Redeemer",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/04/redeemer.webp",
+          "description": "Injury is no match for Hilde's redeeming invocations. Immediately restores Health equal to her Attack * 140% to the weakest friendly hero.",
+          "upgradeTiers": [
+            "100%",
+            "110%",
+            "120%",
+            "130%",
+            "140%"
+          ]
+        },
+        {
+          "name": "Intimidation",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/04/intimidation.webp",
+          "description": "Psychological warfare is an age-old tactic. Disables the enemy target for 1s while dealing Attack * 196% damage.",
+          "upgradeTiers": [
+            "140%",
+            "154%",
+            "168%",
+            "182%",
+            "196%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Noble Path",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/04/nobel-path.webp",
+          "description": "Hilde's exhaustive discipline develops soldiers into true weapons, increasing the total squads' Attack and Defense by 15% and 10%.",
+          "upgradeTiers": [
+            "3%",
+            "6%",
+            "9%",
+            "12%",
+            "15%"
+          ]
+        },
+        {
+          "name": "Elixir of Strength",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/04/elixir-of-strength.webp",
+          "description": "Hilde uses her secret tonic to enhance the warriors' strength, granting all squads' attack a 25% chance of dealing 200% damage.",
+          "upgradeTiers": [
+            "120%",
+            "140%",
+            "160%",
+            "180%",
+            "200%"
+          ]
+        },
+        {
+          "name": "Trial by Fire",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/04/trial-by-fire.webp",
+          "description": "Hilde's devout prayer has a 40% chance of reducing damage taken by 50% for all squads.",
+          "upgradeTiers": [
+            "8%",
+            "16%",
+            "24%",
+            "32%",
+            "40%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Cavalry Attack",
+          "value": "+240.19%"
+        },
+        {
+          "label": "Cavalry Defense",
+          "value": "+240.19%"
+        }
+      ]
+    },
+    "exclusiveGear": {
+      "name": "Revelation",
+      "stats": {
+        "power": 270000,
+        "heroAtk": 540,
+        "heroDef": 540,
+        "heroHp": 5400,
+        "escortAtk": 180,
+        "escortDef": 180,
+        "escortHp": 1800
+      },
+      "bonuses": [
+        "Cavalry Lethality +60.00%",
+        "Cavalry Health +60.00%"
+      ],
+      "skills": [
+        {
+          "name": "Holy Invocation",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/04/holy-invocation.webp",
+          "description": "Soldiers swear by Hilde's everyday miracles, increasing her healing effects by 70%.",
+          "upgradeTiers": [
+            "30%",
+            "40%",
+            "50%",
+            "60%",
+            "70%"
+          ],
+          "mode": "conquest"
+        },
+        {
+          "name": "Fortitude",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/04/fortitude.webp",
+          "description": "Hilde's pious confidence in her cause is infectious, increasing Defender Squads' Health by 15%.",
+          "upgradeTiers": [
+            "5%",
+            "7.5%",
+            "10%",
+            "12.5%",
+            "15%"
+          ],
+          "mode": "expedition"
+        }
+      ]
+    },
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/hilde/"
+  },
+  "zoe": {
+    "name": "Zoe",
+    "slug": "zoe",
+    "rarity": "mythic",
+    "generation": 2,
+    "class": "Infantry",
+    "sources": [
+      "Hero Roulette",
+      "Daily Deals (Gen 3 and higher)",
+      "Hall of Heroes (Gen 3 and higher)"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2025/04/zoe-gen2-kingshot.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 2043,
+        "def": 2664,
+        "hp": 39960
+      },
+      "skills": [
+        {
+          "name": "Shield Strike",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/04/shield-strike.webp",
+          "description": "Zoe's unpredictable attacks easily enweb foes, dealing Attack * 84% damage every 0.5s and amplifying damage taken by the target by 30% for 2s.",
+          "upgradeTiers": [
+            "60%",
+            "66%",
+            "72%",
+            "78%",
+            "84%"
+          ]
+        },
+        {
+          "name": "Agony Rush",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/04/agony-rush.webp",
+          "description": "Zoe requires pain to reach peak physical performance. She immediately regains 40% of max Health under 50% Health. Can only activate once per battle.",
+          "upgradeTiers": [
+            "20%",
+            "25%",
+            "30%",
+            "35%",
+            "40%"
+          ]
+        },
+        {
+          "name": "Holy Might",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/04/holy-might.webp",
+          "description": "Zoe inspires her fellow warriors to battle, boosting your heroes' Attack Speed by 7%.",
+          "upgradeTiers": [
+            "3%",
+            "4%",
+            "5%",
+            "6%",
+            "7%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Sundering Wound",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/04/sundering-wound.webp",
+          "description": "Your squads' attacks gain a 20% chance of inflicting Sunder, dealing 40% damage per turn for 3 turns.",
+          "upgradeTiers": [
+            "8%",
+            "16%",
+            "24%",
+            "32%",
+            "40%"
+          ]
+        },
+        {
+          "name": "Stoic",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/04/stoic.webp",
+          "description": "Zoe is a gifted female orator, and her rousing battle speeches increase the total Squads' Attack by 25%.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        },
+        {
+          "name": "Infinite Arsenal",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/04/infinite-arsenal.webp",
+          "description": "Zoe strikes the enemy so completely and utterly that your squads' attacks gain a 50% chance of amplifying enemy squads' damage taken by 50%.",
+          "upgradeTiers": [
+            "10%",
+            "20%",
+            "30%",
+            "40%",
+            "50%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Infantry Attack",
+          "value": "+240.19%"
+        },
+        {
+          "label": "Infantry Defense",
+          "value": "+240.19%"
+        }
+      ]
+    },
+    "exclusiveGear": {
+      "name": "The Unrighteous",
+      "stats": {
+        "power": 270000,
+        "heroAtk": 414,
+        "heroDef": 540,
+        "heroHp": 8100,
+        "escortAtk": 138,
+        "escortDef": 180,
+        "escortHp": 2700
+      },
+      "bonuses": [
+        "Infantry Lethality +60.00%",
+        "Infantry Health +60.00%"
+      ],
+      "skills": [
+        {
+          "name": "Death or Glory",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/04/death-or-glory.webp",
+          "description": "Zoe's inner demon is awakened only by pain. Gaining a 24% increased Attack until the end of the Battle once &#8216;Agony Rush' is triggered.",
+          "upgradeTiers": [
+            "8%",
+            "12%",
+            "16%",
+            "20%",
+            "24%"
+          ],
+          "mode": "conquest"
+        },
+        {
+          "name": "Dark Lady",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/04/dark-lady.png",
+          "description": "Zoe is a relentlessly demanding garrison commander, increasing Defender Squads' Attack by 15%.",
+          "upgradeTiers": [
+            "5%",
+            "7.5%",
+            "10%",
+            "12.5%",
+            "15%"
+          ],
+          "mode": "expedition"
+        }
+      ]
+    },
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/zoe/"
+  },
+  "marlin": {
+    "name": "Marlin",
+    "slug": "marlin",
+    "rarity": "mythic",
+    "generation": 2,
+    "class": "Archer",
+    "sources": [
+      "Hall of Heroes",
+      "Daily Deals (Gen 3 and higher)"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2025/04/marlin-kingshot.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 3235,
+        "def": 2220,
+        "hp": 19980
+      },
+      "skills": [
+        {
+          "name": "Tidal Rush",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/04/tidal-rush.webp",
+          "description": "Marlin is a tidal force on the battlefield, literally and figuratively, when he unleashes a pulse dealing 280% Area of Effect damage and immobilizing the enemy for 1.5s.",
+          "upgradeTiers": [
+            "200%",
+            "220%",
+            "240%",
+            "260%",
+            "280%"
+          ]
+        },
+        {
+          "name": "Fermented Blow",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/04/fermented-blow.webp",
+          "description": "Marlin's deadly airborne concoction deals Attack * 70% Area of Effect damage.",
+          "upgradeTiers": [
+            "50%",
+            "55%",
+            "60%",
+            "65%",
+            "70%"
+          ]
+        },
+        {
+          "name": "Lucky Hit",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/04/lucky-hit.webp",
+          "description": "Good fortune inevitably follows bad. Marlin stuns targets for 0.5s after every 5 strikes.",
+          "upgradeTiers": [
+            "8",
+            "7",
+            "7",
+            "6",
+            "5"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Wild Card",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/04/wild-card.webp",
+          "description": "Marlin, being unpredictable, has a 40% chance of increasing damage dealt by 50% for all squads.",
+          "upgradeTiers": [
+            "8%",
+            "16%",
+            "24%",
+            "32%",
+            "40%"
+          ]
+        },
+        {
+          "name": "Rumhead",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/04/rumhead.webp",
+          "description": "\"Stiff rum can drown most any battlefield sorrow\". Marlin grants all squads a 20% chance of reducing the total Enemy Squads' Lethality by 50% for 2 turns when attacking.",
+          "upgradeTiers": [
+            "10%",
+            "20%",
+            "30%",
+            "40%",
+            "50%"
+          ]
+        },
+        {
+          "name": "Dynamo",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/04/dynamo.webp",
+          "description": "Grants your squads' attack a 50% chance of increasing damage dealt by 50%.",
+          "upgradeTiers": [
+            "10%",
+            "20%",
+            "30%",
+            "40%",
+            "50%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Archer Attack",
+          "value": "+240.19%"
+        },
+        {
+          "label": "Archer Defense",
+          "value": "+240.19%"
+        }
+      ]
+    },
+    "exclusiveGear": {
+      "name": "Mistweaver",
+      "stats": {
+        "power": 270000,
+        "heroAtk": 655,
+        "heroDef": 540,
+        "heroHp": 4050,
+        "escortAtk": 218,
+        "escortDef": 180,
+        "escortHp": 1350
+      },
+      "bonuses": [
+        "Archer Lethality +60.00%",
+        "Archer Health +60.00%"
+      ],
+      "skills": [
+        {
+          "name": "Servant of Wine",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/04/servant-of-wine.webp",
+          "description": "There's no battlefield pick-me-up like Marlin's special brew, healing your weakest hero by Attack * 15% with each basic attack.",
+          "upgradeTiers": [
+            "5%",
+            "7.5%",
+            "10%",
+            "12.5%",
+            "15%"
+          ],
+          "mode": "conquest"
+        },
+        {
+          "name": "Admiral of the Line",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/04/admiral-of-the-line.webp",
+          "description": "A true admiral leads from the front. Increases Rally Squads' Lethality by 15%.",
+          "upgradeTiers": [
+            "5%",
+            "7.5%",
+            "10%",
+            "12.5%",
+            "15%"
+          ],
+          "mode": "expedition"
+        }
+      ]
+    },
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/marlin/"
+  },
+  "petra": {
+    "name": "Petra",
+    "slug": "petra",
+    "rarity": "mythic",
+    "generation": 3,
+    "class": "Cavalry",
+    "sources": [
+      "Hero Roulette",
+      "Swordland Showdown"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2025/06/petra-avatar-icon.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 3330,
+        "def": 3330,
+        "hp": 33300
+      },
+      "skills": [
+        {
+          "name": "Dichotomoy",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/dichotomy.webp",
+          "description": "Petra throws a tarot card at an enemy, dealing Attack * 378% damage and inflicting one of the following effects: reducing the target's Attack by 20% for 2s or stunning the target for 1.5s.",
+          "upgradeTiers": [
+            "270%",
+            "297%",
+            "324%",
+            "351%",
+            "378%"
+          ]
+        },
+        {
+          "name": "Change of Fate",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/change-of-fate.webp",
+          "description": "Petra curses an enemy, dealing floating damage based on the base value of Petra's Attack * 70%. The final damage is a random amount between 5% and 600% of that base value.",
+          "upgradeTiers": [
+            "50%",
+            "55%",
+            "60%",
+            "65%",
+            "70%"
+          ]
+        },
+        {
+          "name": "Turn Card",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/turn-card.webp",
+          "description": "Petra reverses misfortune by healing a friendly hero with the lowest percentage of Health remaining based on the base value of Petra's Attack * 140%. The final Health restored is a random amount ranging between 5% and 400% of that base value.",
+          "upgradeTiers": [
+            "100%",
+            "110%",
+            "120%",
+            "130%",
+            "140%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Evil Eye",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/evil-eye.webp",
+          "description": "Grants all Squads' Attack a 50% chance of cursing the target, increasing their damage taken by 50%.",
+          "upgradeTiers": [
+            "10%",
+            "20%",
+            "30%",
+            "40%",
+            "50%"
+          ]
+        },
+        {
+          "name": "The Favor",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/the-favor.webp",
+          "description": "Petra is known as a lucky fortune-teller to her soldiers, granting a 50% chance of increasing the Squads' Attack by 50%.",
+          "upgradeTiers": [
+            "10%",
+            "20%",
+            "30%",
+            "40%",
+            "50%"
+          ]
+        },
+        {
+          "name": "The Shield",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/the-shield.webp",
+          "description": "Petra's divination navigates bad outcomes with a 40% chance of reducing damage taken by 50% for all squads.",
+          "upgradeTiers": [
+            "10%",
+            "20%",
+            "30%",
+            "40%",
+            "50%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Cavalry Attack",
+          "value": "+290.23%"
+        },
+        {
+          "label": "Cavalry Defense",
+          "value": "+290.23%"
+        }
+      ]
+    },
+    "exclusiveGear": {
+      "name": "Fate's Writ",
+      "stats": {
+        "power": 315000,
+        "heroAtk": 630,
+        "heroDef": 630,
+        "heroHp": 6300,
+        "escortAtk": 210,
+        "escortDef": 210,
+        "escortHp": 2100
+      },
+      "bonuses": [
+        "Cavalry Lethality +70.00%",
+        "Cavalry Health +70.00%"
+      ],
+      "skills": [
+        {
+          "name": "Weighted Deck",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/weighted-deck.webp",
+          "description": "Petra has become more skilled at weighting the cards of fate in her favor, increasing the upper and lower limit of her fluctuating skills by 150%.",
+          "upgradeTiers": [
+            "30%",
+            "60%",
+            "90%",
+            "120%",
+            "150%"
+          ],
+          "mode": "conquest"
+        },
+        {
+          "name": "Cosmic Eye",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/cosmic-eye.webp",
+          "description": "\"Strike!\" The cards never fail to inform Petra of the right time to act. Petra increases Rally Squad Attack by 15%.",
+          "upgradeTiers": [
+            "5%",
+            "7.5%",
+            "10%",
+            "12.5%",
+            "15%"
+          ],
+          "mode": "expedition"
+        }
+      ]
+    },
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/petra/"
+  },
+  "jaeger": {
+    "name": "Jaeger",
+    "slug": "jaeger",
+    "rarity": "mythic",
+    "generation": 3,
+    "class": "Archer",
+    "sources": [
+      "Daily Deals",
+      "Hero Rally",
+      "Swordland Shop",
+      "Strongest Governor Event"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2025/06/jaeger-icon-kingshot.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 4045,
+        "def": 3330,
+        "hp": 24974
+      },
+      "skills": [
+        {
+          "name": "Fatal Attraction",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/fatal-attraction.webp",
+          "description": "Like a siren's deadly song, Jaeger deals Attack * 224% damage to enemies in the target area and stuns them for 2s.",
+          "upgradeTiers": [
+            "160%",
+            "176%",
+            "192%",
+            "208%",
+            "224%"
+          ]
+        },
+        {
+          "name": "Game of Chance",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/game-of-chance.webp",
+          "description": "Jaeger's deadliest performances are also his most unpredictable. If successful, Jaeger deals Attack * 300% damage or else restores the target's Health equal to his Attack * 50%.",
+          "upgradeTiers": [
+            "220%",
+            "240%",
+            "260%",
+            "280%",
+            "300%"
+          ]
+        },
+        {
+          "name": "Rumormonger",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/rumormonger.webp",
+          "description": "A wandering bard's knows how to take advantage of loose lips, increasing Enemy Damage Taken by 30% for 3s.",
+          "upgradeTiers": [
+            "10%",
+            "15%",
+            "20%",
+            "25%",
+            "30%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "The Tempest",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/the-tempest.webp",
+          "description": "Jaeger's triumphant music is a fine tool of intimidation, granting a 20% chance of increasing Squad's damage dealt by 40% for 3 turns.",
+          "upgradeTiers": [
+            "8%",
+            "16%",
+            "24%",
+            "32%",
+            "40%"
+          ]
+        },
+        {
+          "name": "The Resistance",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/the-resistance.webp",
+          "description": "Music focuses the soldier's mind. Jaeger grants all squads a 20% chance of reducing the total Enemy Squad's Lethality by 50% for 2 turns when attacking.",
+          "upgradeTiers": [
+            "10%",
+            "20%",
+            "30%",
+            "40%",
+            "50%"
+          ]
+        },
+        {
+          "name": "The Celebration",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/the-celeberation.webp",
+          "description": "A rousing song unlocks new reserves of strength. Increases the total Squad's Health by 25%.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Archer Attack",
+          "value": "+290.23%"
+        },
+        {
+          "label": "Archer Defense",
+          "value": "+290.23%"
+        }
+      ]
+    },
+    "exclusiveGear": {
+      "name": "Wanderwail",
+      "stats": {
+        "power": 315000,
+        "heroAtk": 764,
+        "heroDef": 630,
+        "heroHp": 4725,
+        "escortAtk": 254,
+        "escortDef": 210,
+        "escortHp": 1575
+      },
+      "bonuses": [
+        "Archer Lethality +70.00%",
+        "Archer Health +70.00%"
+      ],
+      "skills": [
+        {
+          "name": "Sound of Silence",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/sound-of-silence.webp",
+          "description": "\"Hush now and watch the master work\". Jaeger silences and prevents the target from using skills for 5s (skills already cast are not affected), dealing Attack * 300% damage.",
+          "upgradeTiers": [
+            "220%",
+            "240%",
+            "260%",
+            "280%",
+            "300%"
+          ],
+          "mode": "conquest"
+        },
+        {
+          "name": "Hymn to Survival",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/hymn-to-survival.webp",
+          "description": "No ease or luxury can be enjoyed unless the lives of soldiers are well-guarded. Jaeger increases Defender Squads' Health by 15%.",
+          "upgradeTiers": [
+            "5%",
+            "7.5%",
+            "10%",
+            "12.5%",
+            "15%"
+          ],
+          "mode": "expedition"
+        }
+      ]
+    },
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/jaeger/"
+  },
+  "eric": {
+    "name": "Eric",
+    "slug": "eric",
+    "rarity": "mythic",
+    "generation": 3,
+    "class": "Infantry",
+    "sources": [
+      "Hall of Heroes",
+      "Swordland Shop"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2025/06/eric-avatar-icon.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 2554,
+        "def": 3330,
+        "hp": 49950
+      },
+      "skills": [
+        {
+          "name": "Ground Shock",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/ground-shock.webp",
+          "description": "Eric imperils the ground with an almighty smash of his blessed hammer, dealing Attack * 168% damage to the target ahead while reducing targets' Attack Speed by 50% for 4s.",
+          "upgradeTiers": [
+            "120%",
+            "132%",
+            "144%",
+            "156%",
+            "168%"
+          ]
+        },
+        {
+          "name": "Veterancy",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/veterancy.webp",
+          "description": "Battle blows and armor scars are naught but glory for a paladin. Attacks against Eric have a 16% chance of increasing Defense by 20% for 2 seconds (max 5 stacks).",
+          "upgradeTiers": [
+            "8%",
+            "10%",
+            "12%",
+            "14%",
+            "16%"
+          ]
+        },
+        {
+          "name": "Hammer of Justice",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/hammer-of-justice.webp",
+          "description": "Eric casts his warhammer into the ground, dealing Attack * 112% damage in a fan-shaped arc with a 30% chance of stunning the targets for 1s.",
+          "upgradeTiers": [
+            "80%",
+            "88%",
+            "96%",
+            "104%",
+            "112%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Holy Warrior",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/holy-warrior.webp",
+          "description": "The purity of Eric's faith can cause even his enemies to stumble, reducing the total Enemy Squads' Attack by 20%.",
+          "upgradeTiers": [
+            "4%",
+            "8%",
+            "12%",
+            "16%",
+            "20%"
+          ]
+        },
+        {
+          "name": "Conviction",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/conviction.webp",
+          "description": "Conviction is a shield for the righteous, reducing Squads' Damage Taken by 20%.",
+          "upgradeTiers": [
+            "4%",
+            "8%",
+            "12%",
+            "16%",
+            "20%"
+          ]
+        },
+        {
+          "name": "Exhortation",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/exhortation.webp",
+          "description": "An inspiring leader can unlock new reserves of vitality. Eric increases the total Squads' Health by 25%.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Infantry Attack",
+          "value": "+290.23%"
+        },
+        {
+          "label": "Infantry Defense",
+          "value": "+290.23%"
+        }
+      ]
+    },
+    "exclusiveGear": {
+      "name": "Anvil of Truth",
+      "stats": {
+        "power": 315000,
+        "heroAtk": 482,
+        "heroDef": 630,
+        "heroHp": 9450,
+        "escortAtk": 161,
+        "escortDef": 210,
+        "escortHp": 3150
+      },
+      "bonuses": [
+        "Infantry Lethality +70.00%",
+        "Infantry Health +70.00%"
+      ],
+      "skills": [
+        {
+          "name": "Blessed Hammer",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/blessed-hammer.webp",
+          "description": "Eric trusts not himself but his blessed warhammer, increasing damage by 30%.",
+          "upgradeTiers": [
+            "10%",
+            "15%",
+            "20%",
+            "25%",
+            "30%"
+          ],
+          "mode": "conquest"
+        },
+        {
+          "name": "Vanguard",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/06/vanguard.webp",
+          "description": "A paladin must always lead by example from the front. Eric increases Defender Squad Defense by 15%.",
+          "upgradeTiers": [
+            "5%",
+            "7.5%",
+            "10%",
+            "12.5%",
+            "15%"
+          ],
+          "mode": "expedition"
+        }
+      ]
+    },
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/eric/"
+  },
+  "rosa": {
+    "name": "Rosa",
+    "slug": "rosa",
+    "rarity": "mythic",
+    "generation": 4,
+    "class": "Archer",
+    "sources": [
+      "Hero Roulette",
+      "Swordland Showdown Shop"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2025/09/rosa-avatar-image.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 4989,
+        "def": 4106,
+        "hp": 30802
+      },
+      "skills": [
+        {
+          "name": "Battle Focus",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/09/battle-focus.webp",
+          "description": "A voluptuous figure, Rosa is used to drawing battlefield attention. Rosa clears all debuffs (control effects, etc.) for all squads and increases their Attack by 7% for 5s, during which they remain immune to debuffs.",
+          "upgradeTiers": [
+            "3%",
+            "4%",
+            "5%",
+            "6%",
+            "7%"
+          ]
+        },
+        {
+          "name": "Flutterfang",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/09/flutterfang.webp",
+          "description": "Rosa spins her fan blade out with dazzling ferocity, dealing Attack * 300% damage to enemies in its path.",
+          "upgradeTiers": [
+            "220%",
+            "240%",
+            "260%",
+            "280%",
+            "300%"
+          ]
+        },
+        {
+          "name": "Swoon Chakra",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/09/swoon-chakra.webp",
+          "description": "Rosa's dancing is a wonderful distraction from the tyranny of the battlefield, reducing Attack Speed by 3% and healing effects by 60% for all enemy squads.",
+          "upgradeTiers": [
+            "1%",
+            "1.5%",
+            "2%",
+            "2.5%",
+            "3%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Chaos Gambit",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/09/chaos-gambit.webp",
+          "description": "Well-placed chaos is prologue to success. Rosa grants a 40% chance of increasing all Squads' Damage Dealt by 50%.",
+          "upgradeTiers": [
+            "10%",
+            "20%",
+            "30%",
+            "40%",
+            "50%"
+          ]
+        },
+        {
+          "name": "Rose of War",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/09/rose-of-war.webp",
+          "description": "No soldier wishes to harm this wild rose of war, reducing damage dealt by 20% for all enemy squads.",
+          "upgradeTiers": [
+            "4%",
+            "8%",
+            "12%",
+            "16%",
+            "20%"
+          ]
+        },
+        {
+          "name": "Golden Rhythm",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/09/golden-rhythm.webp",
+          "description": "A dance of distraction is the perfect complement to archer fire, increasing Archers' total Attack by 30%.",
+          "upgradeTiers": [
+            "6%",
+            "12%",
+            "18%",
+            "24%",
+            "30%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Archer Attack",
+          "value": "+370.29%"
+        },
+        {
+          "label": "Archer Defense",
+          "value": "+370.29%"
+        }
+      ]
+    },
+    "exclusiveGear": {
+      "name": "Aeolian",
+      "stats": {
+        "power": 416250,
+        "heroAtk": 1010,
+        "heroDef": 832,
+        "heroHp": 6243,
+        "escortAtk": 336,
+        "escortDef": 277,
+        "escortHp": 2081
+      },
+      "bonuses": [
+        "Archer Lethality +92.50%",
+        "Archer Health +92.50%"
+      ],
+      "skills": [
+        {
+          "name": "Night Reverie",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/09/night-reverie.webp",
+          "description": "Upon casting Battle Focus, Rosa increases her Attack by 15% until the end of the battle.",
+          "upgradeTiers": [
+            "5%",
+            "7.5%",
+            "10%",
+            "12.5%",
+            "15%"
+          ],
+          "mode": "conquest"
+        },
+        {
+          "name": "Perihelion",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/09/perihelion.webp",
+          "description": "Rosa's performances greatly increase your soldiers' willingness to fight, increasing Rally Squad's Lethality by 15%.",
+          "upgradeTiers": [
+            "5%",
+            "7.5%",
+            "10%",
+            "12.5%",
+            "15%"
+          ],
+          "mode": "expedition"
+        }
+      ]
+    },
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/rosa/"
+  },
+  "alcar": {
+    "name": "Alcar",
+    "slug": "alcar",
+    "rarity": "mythic",
+    "generation": 4,
+    "class": "Infantry",
+    "sources": [
+      "Hero Rally",
+      "Daily Deals",
+      "Strongest Governor Event",
+      "Kingdom of Power Event",
+      "Swordland Showdown Shop"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2025/08/alcar-avatar-image.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 3150,
+        "def": 4106,
+        "hp": 61604
+      },
+      "skills": [
+        {
+          "name": "Glorious Mark",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/08/glorious-mark.png",
+          "description": "A Praetorian's glory is his strength. Alcar enters an invulnerable state (unable to move or cast skills, immune to control effects) and reduces Damage Taken by 70% for nearby friendly squads for 2s.",
+          "upgradeTiers": [
+            "30%",
+            "40%",
+            "50%",
+            "60%",
+            "70%"
+          ]
+        },
+        {
+          "name": "Boneshatter",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/08/boneshatter.webp",
+          "description": "Alcar spears a line of enemies, dealing Attack * 98% damage and increases the Damage Taken for enemies hit by 20% for 2s.",
+          "upgradeTiers": [
+            "70%",
+            "77%",
+            "84%",
+            "91%",
+            "98%"
+          ]
+        },
+        {
+          "name": "Second Wind",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/08/second-wind.webp",
+          "description": "Alcar's loyalty to the old ways gives him strength. \"Glorious Mark\" restores Attack * 42% Health every second for 5s.",
+          "upgradeTiers": [
+            "30%",
+            "33%",
+            "36%",
+            "39%",
+            "42%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Rescuing Hands",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/08/rescuing-hands.webp",
+          "description": "Alcar's utter dedication to keeping his men safe is well-proved. Reduces Infantry and Archer's Damage Taken by 70% every 5 turns for 2 turns.",
+          "upgradeTiers": [
+            "14%",
+            "28%",
+            "42%",
+            "56%",
+            "70%"
+          ]
+        },
+        {
+          "name": "Praetorian Will",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/08/praetorian-will.webp",
+          "description": "The fighting belligerence of a Praetorian is something for others to study. Increases Infantry Damage Dealt by 100% and Cavalry and Archer's Damage Dealt by 10%.",
+          "upgradeTiers": [
+            "20%",
+            "40%",
+            "60%",
+            "80%",
+            "100%"
+          ]
+        },
+        {
+          "name": "Capre Diem",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/08/capre-diem.webp",
+          "description": "Years of training have taught Alcar how to exploit enemy weakness, increasing Infantry Damage Dealt per attack by 60% and target Damage Taken by 25% for 1 turn.",
+          "upgradeTiers": [
+            "12%",
+            "24%",
+            "36%",
+            "48%",
+            "60%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Infantry Attack",
+          "value": "+370.29%"
+        },
+        {
+          "label": "Infantry Defense",
+          "value": "+370.29%"
+        }
+      ]
+    },
+    "exclusiveGear": {
+      "name": "Praetorian Guard",
+      "stats": {
+        "power": 416250,
+        "heroAtk": 638,
+        "heroDef": 832,
+        "heroHp": 12487,
+        "escortAtk": 212,
+        "escortDef": 277,
+        "escortHp": 4162
+      },
+      "bonuses": [
+        "Infantry Lethality +92.50%",
+        "Infantry Health +92.50%"
+      ],
+      "skills": [
+        {
+          "name": "Flagbearer",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/08/flagbearer.webp",
+          "description": "Glory is best shared. &#8216;Glorious Mark' increases friendly Squads' Attack by 42% for 2.5s.",
+          "upgradeTiers": [
+            "30%",
+            "33%",
+            "36%",
+            "39%",
+            "42%"
+          ],
+          "mode": "conquest"
+        },
+        {
+          "name": "Vow of Honor",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/08/vow-of-honor.webp",
+          "description": "There is power in the steadfast vow. Alcar increases Defender Squads' Health by 15%.",
+          "upgradeTiers": [
+            "5%",
+            "7.5%",
+            "10%",
+            "12.5%",
+            "15%"
+          ],
+          "mode": "expedition"
+        }
+      ]
+    },
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/alcar/"
+  },
+  "margot": {
+    "name": "Margot",
+    "slug": "margot",
+    "rarity": "mythic",
+    "generation": 4,
+    "class": "Cavalry",
+    "sources": [
+      "Hall of Heroes",
+      "Swordland Showdown Shop"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2025/09/margot-avatar.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 4106,
+        "def": 4106,
+        "hp": 41070
+      },
+      "skills": [
+        {
+          "name": "Ambush",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/09/ambush.webp",
+          "description": "Margot ambushes an enemy with bombs, dealing Attack * 420% Area of Effect damage.",
+          "upgradeTiers": [
+            "300%",
+            "330%",
+            "360%",
+            "390%",
+            "420%"
+          ]
+        },
+        {
+          "name": "Parry",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/09/parry.webp",
+          "description": "Swords can be used offensively and defensively. Margot has 25% chance of parrying, avoiding all damage from enemy attacks.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        },
+        {
+          "name": "Stiletto",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/09/stiletto.webp",
+          "description": "Margot head-gouges the enemy (heroes first), dealing Attack * 140% damage and immobilizing them for 1.5s.",
+          "upgradeTiers": [
+            "100%",
+            "110%",
+            "120%",
+            "130%",
+            "140%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Warbringer",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/09/warbringer.webp",
+          "description": "Margot's focus on armor-penetration increases total Squads' Attack by 25%.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        },
+        {
+          "name": "Subterfuge",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/09/subterfuge.webp",
+          "description": "Within Margot's haphazard positioning lies careful strategy. Her presents grants all Squads a 20% chance of dodging Normal Attacks.",
+          "upgradeTiers": [
+            "4%",
+            "8%",
+            "12%",
+            "16%",
+            "20%"
+          ]
+        },
+        {
+          "name": "Sleight Hand",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/09/sleight-hand.webp",
+          "description": "Margot's Cavalry have a 25% chance of performing an extra attack, dealing 200% damage.",
+          "upgradeTiers": [
+            "120%",
+            "140%",
+            "160%",
+            "180%",
+            "200%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Cavalry Attack",
+          "value": "+370.29%"
+        },
+        {
+          "label": "Cavalry Defense",
+          "value": "+370.29%"
+        }
+      ]
+    },
+    "exclusiveGear": {
+      "name": "Revel Fang",
+      "stats": {
+        "power": 416250,
+        "heroAtk": 832,
+        "heroDef": 832,
+        "heroHp": 8325,
+        "escortAtk": 277,
+        "escortDef": 277,
+        "escortHp": 2775
+      },
+      "bonuses": [
+        "Cavalry Lethality +92.50%",
+        "Cavalry Health +92.50%"
+      ],
+      "skills": [
+        {
+          "name": "Indefensible",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/09/indefensible.webp",
+          "description": "\"You can't duck both blades\". Margot has a 40% chance of launching a second attack with each Normal Attack, dealing Attack * 45% damage.",
+          "upgradeTiers": [
+            "25%",
+            "30%",
+            "35%",
+            "40%",
+            "45%"
+          ],
+          "mode": "conquest"
+        },
+        {
+          "name": "Pugilist",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/09/pugilist.webp",
+          "description": "Margot never lets her guard down on the battlements even for a moment, increasing Defender Squads' Lethality by 15%.",
+          "upgradeTiers": [
+            "5%",
+            "7.5%",
+            "10%",
+            "12.5%",
+            "15%"
+          ],
+          "mode": "expedition"
+        }
+      ]
+    },
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/margot/"
+  },
+  "vivian": {
+    "name": "Vivian",
+    "slug": "vivian",
+    "rarity": "mythic",
+    "generation": 5,
+    "class": "Archer",
+    "sources": [
+      "Hall of Heroes",
+      "Swordland Showdown Shop"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2025/11/vivian-avatar-icon.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 5987,
+        "def": 4928,
+        "hp": 36962
+      },
+      "skills": [
+        {
+          "name": "Gilded Barrage",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/11/gilded-barrage.webp",
+          "description": "Vivian fires a coin bullet at the enemy back row (heroes first), dealing Attack * 252% Area of Effect damage and reducing the targets' Attack Speed by 50% for 2 seconds.",
+          "upgradeTiers": [
+            "180%",
+            "198%",
+            "216%",
+            "234%",
+            "252%"
+          ]
+        },
+        {
+          "name": "Lucky Strike",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/11/lucky-strike.webp",
+          "description": "Luck can turn the tide. Vivian fires at an enemy (heroes first), dealing Attack * 140% damage with a 50% chance of dealing double damage.",
+          "upgradeTiers": [
+            "100%",
+            "110%",
+            "120%",
+            "130%",
+            "140%"
+          ]
+        },
+        {
+          "name": "Priceless Shot",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/11/priceless-shot.webp",
+          "description": "Vivian unleashes a devastating hail of massive coin bullets, dealing Attack * 49% damage per second to enemies within range for 3s.",
+          "upgradeTiers": [
+            "35%",
+            "38.5%",
+            "42%",
+            "45.5%",
+            "49%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Crouching Tiger",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/11/crouching-tiger.webp",
+          "description": "Vivian is a patient commander willing to wait for just the right moment to strike. All squads' attacks increase enemy damage taken by 25%.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        },
+        {
+          "name": "Focus Fire",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/11/focus-fire.webp",
+          "description": "Vivian's sharp focus exposes enemy weaknesses, granting all squads' attack 100% extra damage after every four attacks, and causes the target to receive 15% extra damage for its next attack received.",
+          "upgradeTiers": [
+            "20%",
+            "40%",
+            "60%",
+            "80%",
+            "100%"
+          ]
+        },
+        {
+          "name": "Trap of Greed",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/11/trap-of-greed.webp",
+          "description": "Vivian equips her Archers with custom coin traps, dealing 60% extra damage to all enemies on the next attack of every 4 attacks.",
+          "upgradeTiers": [
+            "12%",
+            "24%",
+            "36%",
+            "48%",
+            "60%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Archer Attack",
+          "value": "+444.35%"
+        },
+        {
+          "label": "Archer Defense",
+          "value": "+444.35%"
+        }
+      ]
+    },
+    "exclusiveGear": null,
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/vivian/"
+  },
+  "long-fei": {
+    "name": "Long Fei",
+    "slug": "long-fei",
+    "rarity": "mythic",
+    "generation": 5,
+    "class": "Infantry",
+    "sources": [
+      "Hero Roulette",
+      "Swordland Showdown Shop"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2025/11/long-fei-avatar-icon.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 3780,
+        "def": 4928,
+        "hp": 73926
+      },
+      "skills": [
+        {
+          "name": "Ambrosia",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/11/ambrosia.webp",
+          "description": "Long Fei becomes one with the battlefield upon drinking his signature ambrosia, gaining 120% Attack Speed and Immunity to control effects for 4s.",
+          "upgradeTiers": [
+            "80%",
+            "90%",
+            "100%",
+            "110%",
+            "120%"
+          ]
+        },
+        {
+          "name": "Above and Beyond",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/11/above-and-beyond.webp",
+          "description": "The overconfidence of Long Fei's enemies is their weakness. Damage taken by Long Fei reduces by 60% when under 50% health.",
+          "upgradeTiers": [
+            "20%",
+            "30%",
+            "40%",
+            "50%",
+            "60%"
+          ]
+        },
+        {
+          "name": "Mountain Mover",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/11/mountain-mover.webp",
+          "description": "The warriors of the ancient way have taught Long Fei many secrets to survival. Long Fei gains 48% Attack when under 50% health.",
+          "upgradeTiers": [
+            "16%",
+            "24%",
+            "32%",
+            "40%",
+            "48%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Mighty Paragon",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/11/mighty-paragon.webp",
+          "description": "Long Fei's courage in the teeth of the enemy points the way toward the warrior within, granting a 40% chance of reducing damage taken by all squads by 50%.",
+          "upgradeTiers": [
+            "10%",
+            "20%",
+            "30%",
+            "40%",
+            "50%"
+          ]
+        },
+        {
+          "name": "Celestial Sustenance",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/11/celestial-sustanance.webp",
+          "description": "The sweet nectar of Long Fei's potions have born fruit in soldiers' vitality, increasing total Squads' Defense by 25%.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        },
+        {
+          "name": "Art of War",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/11/art-of-war.webp",
+          "description": "\"All warfare is based on deception\". Long Fei's war wisdom is ingrained in his soldiers, granting all squads' attacks a 25% chance of dealing 200% damage.",
+          "upgradeTiers": [
+            "120%",
+            "140%",
+            "160%",
+            "180%",
+            "200%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Infantry Attack",
+          "value": "+444.35%"
+        },
+        {
+          "label": "Infantry Defense",
+          "value": "+444.35%"
+        }
+      ]
+    },
+    "exclusiveGear": {
+      "name": "Immortal's Flask",
+      "stats": {
+        "power": 499500,
+        "heroAtk": 765,
+        "heroDef": 999,
+        "heroHp": 14985,
+        "escortAtk": 255,
+        "escortDef": 333,
+        "escortHp": 4995
+      },
+      "bonuses": [
+        "Infantry Lethality +111.00%",
+        "Infantry Health +111.00%"
+      ],
+      "skills": [
+        {
+          "name": "Strong Brew",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/11/strong-brew.webp",
+          "description": "Extends Ambrosia by 1.5s and restores Long Fei's health by 15% of damage dealt.",
+          "upgradeTiers": [
+            "7%",
+            "9%",
+            "11%",
+            "13%",
+            "15%"
+          ],
+          "mode": "conquest"
+        },
+        {
+          "name": "Strategic Strike",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/11/strategic-strike.webp",
+          "description": "\"Appear unable when able; appear inactive when active.\" Long Fei's war wisdom increases Defender Squads' Attack by 15%.",
+          "upgradeTiers": [
+            "5%",
+            "7.5%",
+            "10%",
+            "12.5%",
+            "15%"
+          ],
+          "mode": "expedition"
+        }
+      ]
+    },
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/long-fei/"
+  },
+  "thrud": {
+    "name": "Thrud",
+    "slug": "thrud",
+    "rarity": "mythic",
+    "generation": 5,
+    "class": "Cavalry",
+    "sources": [
+      "Hero Rally",
+      "Daily Deals",
+      "Strongest Governor Event",
+      "Kingdom of Power Event",
+      "Swordland Showdown Shop"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2025/11/thrud-avatar-icon.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 4928,
+        "def": 4928,
+        "hp": 49284
+      },
+      "skills": [
+        {
+          "name": "Axe Flurry",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/11/axe-flurry.webp",
+          "description": "Thrud hurls five axes at random targets (heroes first), dealing Attack * 84% Area of Effect damage.",
+          "upgradeTiers": [
+            "60%",
+            "66%",
+            "72%",
+            "78%",
+            "84%"
+          ]
+        },
+        {
+          "name": "Brutal Throw",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/11/brutal-throw.webp",
+          "description": "Thrud throws a spinning axe, dealing Attack * 70% damage to enemies within range and stunning them for 1.5s.",
+          "upgradeTiers": [
+            "50%",
+            "55%",
+            "60%",
+            "65%",
+            "70%"
+          ]
+        },
+        {
+          "name": "Feast of the Pack",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/11/feast-of-the-pack.webp",
+          "description": "Thrud lets out a primal howl, increasing all squads' attack by 5%.",
+          "upgradeTiers": [
+            "3%",
+            "3.5%",
+            "4%",
+            "4.5%",
+            "5%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Battle Hunger",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/11/battle-hunger.webp",
+          "description": "Thrud's battle fever inspires her Infantry and Archers, reducing their damage taken by 15% and increasing their damage dealt by 15%.",
+          "upgradeTiers": [
+            "3%",
+            "6%",
+            "9%",
+            "12%",
+            "15%"
+          ]
+        },
+        {
+          "name": "Reckless Charge",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/11/reckless-charge.webp",
+          "description": "No plans. No finesse. Just brutally charging into battle. Thrud's Cavalry has a 20% chance of dealing 100% extra damage to all enemies on attack.",
+          "upgradeTiers": [
+            "20%",
+            "40%",
+            "60%",
+            "80%",
+            "100%"
+          ]
+        },
+        {
+          "name": "Ancestral Guidance",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/11/ancestral-guidance.webp",
+          "description": "Ancestral spirits guide the brave to Valhalla. For every 4 attacks made by Cavalry, all squads' damage dealt is increased by 25% and damage taken is reduced by 25% for 2 turns.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Cavalry Attack",
+          "value": "+444.35%"
+        },
+        {
+          "label": "Cavalry Defense",
+          "value": "+444.35%"
+        }
+      ]
+    },
+    "exclusiveGear": {
+      "name": "Bloodfang",
+      "stats": {
+        "power": 499500,
+        "heroAtk": 999,
+        "heroDef": 999,
+        "heroHp": 9990,
+        "escortAtk": 333,
+        "escortDef": 333,
+        "escortHp": 3330
+      },
+      "bonuses": [
+        "Cavalry Lethality +111.00%",
+        "Cavalry Health +111.00%"
+      ],
+      "skills": [
+        {
+          "name": "Berserker's Edge",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/11/berserkers-edge.webp",
+          "description": "While releasing Axe Flurry, Thrud has 35% chance of stunning the targets for 1s.",
+          "upgradeTiers": [
+            "25%",
+            "27.5%",
+            "30%",
+            "32.5%",
+            "35%"
+          ],
+          "mode": "conquest"
+        },
+        {
+          "name": "Wolf-Kissed",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2025/11/wolf-kissed.webp",
+          "description": "Thrud lives up to her title, \"Wolf-Kissed.\" Increases rally squads' lethality by 15%.",
+          "upgradeTiers": [
+            "5%",
+            "7.5%",
+            "10%",
+            "12.5%",
+            "15%"
+          ],
+          "mode": "expedition"
+        }
+      ]
+    },
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/thrud/"
+  },
+  "yang": {
+    "name": "Yang",
+    "slug": "yang",
+    "rarity": "mythic",
+    "generation": 6,
+    "class": "Archer",
+    "sources": [
+      "Hero Rally",
+      "Daily Deals",
+      "Strongest Governor Event",
+      "Kingdom of Power Event",
+      "Swordland Showdown Shop"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2026/02/yang-avatar-icon.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 7200,
+        "def": 5926,
+        "hp": 44454
+      },
+      "skills": [
+        {
+          "name": "Kin Throw",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/02/kin-throw.webp",
+          "description": "Yang delivers a rip-roaring Frostkin in a straight line against enemies, dealing Attack * 140% area of effect damage plus the same amount on its return path.",
+          "upgradeTiers": [
+            "100%",
+            "110%",
+            "120%",
+            "130%",
+            "140%"
+          ]
+        },
+        {
+          "name": "Combo",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/02/combo.webp",
+          "description": "Yang's special firearm has a 35% chance of inflicting a combo shot, dealing another round of damage to enemies.",
+          "upgradeTiers": [
+            "15%",
+            "20%",
+            "25%",
+            "30%",
+            "35%"
+          ]
+        },
+        {
+          "name": "Deadshot",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/02/deadshot.webp",
+          "description": "Any bullet can inflict the critical blow to a hunter's prey when aimed just right. Yang enjoys a 15% Crit Rate when dealing damage.",
+          "upgradeTiers": [
+            "3%",
+            "6%",
+            "9%",
+            "12%",
+            "15%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Avalanche",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/02/avalanche.webp",
+          "description": "An avalanche for Yang is just another weapon in his arsenal, resulting in an additional strike against a target by all Squads every 4 turns for 100% damage.",
+          "upgradeTiers": [
+            "20%",
+            "40%",
+            "60%",
+            "80%",
+            "100%"
+          ]
+        },
+        {
+          "name": "Ice Zone",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/02/ice-zone.webp",
+          "description": "Years of arctic adversity have taught Yang to seize advantages. Yang's Archers have a 40% chance of dealing 100% extra damage with every attack.",
+          "upgradeTiers": [
+            "20%",
+            "40%",
+            "60%",
+            "80%",
+            "100%"
+          ]
+        },
+        {
+          "name": "Ambush",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/02/ambush-1.webp",
+          "description": "Yang is an advanced thinker who can easily grasp the principles of almost any phenomena, giving all Squads a 40% chance of dealing increased damage every turn.",
+          "upgradeTiers": [
+            "8%",
+            "16%",
+            "24%",
+            "32%",
+            "40%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Archer Attack",
+          "value": "+540.43%"
+        },
+        {
+          "label": "Archer Defense",
+          "value": "+540.43%"
+        }
+      ]
+    },
+    "exclusiveGear": {
+      "name": "Frostkin",
+      "stats": {
+        "power": 600750,
+        "heroAtk": 1457,
+        "heroDef": 1201,
+        "heroHp": 9011,
+        "escortAtk": 485,
+        "escortDef": 400,
+        "escortHp": 3003
+      },
+      "bonuses": [
+        "Archer Lethality +133.50%",
+        "Archer Health +133.50%"
+      ],
+      "skills": [
+        {
+          "name": "Quick Draw",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/02/quick-draw.webp",
+          "description": "Yang's impressive muscle memory enables a five-shot barrage, dealing Attack * 56% damage to a random enemy. If the target is an Escort, there is a 100% chance of instantly knocking them down.",
+          "upgradeTiers": [
+            "40%",
+            "44%",
+            "48%",
+            "52%",
+            "56%"
+          ],
+          "mode": "conquest"
+        },
+        {
+          "name": "Offenseive Defense",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/02/offensive-defense.webp",
+          "description": "Yang puts the maxim that the best defense is a good offense to good use, increasing Rally Squad's Lethality by 15%.",
+          "upgradeTiers": [
+            "5%",
+            "7.5%",
+            "10%",
+            "12.5%",
+            "15%"
+          ],
+          "mode": "expedition"
+        }
+      ]
+    },
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/yang/"
+  },
+  "triton": {
+    "name": "Triton",
+    "slug": "triton",
+    "rarity": "mythic",
+    "generation": 6,
+    "class": "Infantry",
+    "sources": [
+      "Hall of Heroes",
+      "Swordland Showdown Shop"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2026/02/triton-avatar-icon.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 4546,
+        "def": 5926,
+        "hp": 99910
+      },
+      "skills": [
+        {
+          "name": "Tidewill",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/02/tidewill.webp",
+          "description": "Triton surrounds himself with a barrier of waves that surges forward, gaining invulnerability for 2s before dealing Attack * 140% Area of Effect damage.",
+          "upgradeTiers": [
+            "100%",
+            "110%",
+            "120%",
+            "130%",
+            "140%"
+          ]
+        },
+        {
+          "name": "Regal Wrath",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/02/regal-wrath.webp",
+          "description": "Triton channels the rage of the ruler within, increasing Attack by 24% and Defense by 48% for 4s.",
+          "upgradeTiers": [
+            "8%",
+            "12%",
+            "16%",
+            "20%",
+            "24%"
+          ]
+        },
+        {
+          "name": "Striking Hit",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/02/striking-hit.webp",
+          "description": "Triton lashes the disobedient with shattering violence, dealing Attack * 28% damage to a random enemy with every normal attack.",
+          "upgradeTiers": [
+            "20%",
+            "22%",
+            "24%",
+            "26%",
+            "28%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Command of Power",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/02/command-of-power.webp",
+          "description": "Acceptance of Triton's authority enables the fruits to be shared thereof, increasing total Squads' Defense by 25%.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        },
+        {
+          "name": "Warfare of Power",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/02/warfare-of-power.webp",
+          "description": "The power of warfare lies in shared fearlessness in the face of battle, increasing total Squads' skill damage dealt by 30%.",
+          "upgradeTiers": [
+            "6%",
+            "12%",
+            "18%",
+            "24%",
+            "30%"
+          ]
+        },
+        {
+          "name": "Oath of Power",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/02/oath-of-power.webp",
+          "description": "Great power stems from a willingness to keep oaths, increasing Infantry Health by 20% as well as Cavalry and Archer Health by 30%.",
+          "upgradeTiers": [
+            "4%",
+            "8%",
+            "12%",
+            "16%",
+            "20%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Infantry Attack",
+          "value": "+540.43%"
+        },
+        {
+          "label": "Infantry Defense",
+          "value": "+540.43%"
+        }
+      ]
+    },
+    "exclusiveGear": {
+      "name": "Tidal Scepter",
+      "stats": {
+        "power": 600750,
+        "heroAtk": 921,
+        "heroDef": 1201,
+        "heroHp": 18022,
+        "escortAtk": 307,
+        "escortDef": 400,
+        "escortHp": 6007
+      },
+      "bonuses": [
+        "Infantry Lethality +133.50%",
+        "Infantry Health +133.50%"
+      ],
+      "skills": [
+        {
+          "name": "Magnetic Reformation",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/02/magnetic-reformation.webp",
+          "description": "An artifice of ancient modification, the scepter grants Triton 30% increased damage.",
+          "upgradeTiers": [
+            "10%",
+            "15%",
+            "20%",
+            "25%",
+            "30%"
+          ],
+          "mode": "conquest"
+        },
+        {
+          "name": "Whale Call",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/02/whale-call.webp",
+          "description": "Triton's ancient whale-calls echo through the barricades, filling soldiers with unshakable resolve and increasing Defender Squad Defense by 15%.",
+          "upgradeTiers": [
+            "5%",
+            "7.5%",
+            "10%",
+            "12.5%",
+            "15%"
+          ],
+          "mode": "expedition"
+        }
+      ]
+    },
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/triton/"
+  },
+  "sophia": {
+    "name": "Sophia",
+    "slug": "sophia",
+    "rarity": "mythic",
+    "generation": 6,
+    "class": "Cavalry",
+    "sources": [
+      "Hero Roulette",
+      "Swordland Showdown Shop"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2026/02/sophia-avatar-icon.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 5926,
+        "def": 5926,
+        "hp": 59274
+      },
+      "skills": [
+        {
+          "name": "Puppet Master",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/02/puppet-master.webp",
+          "description": "Sophia's subtle rose-magic saps enemy soldiers' resolve, dealing Attack * 140% Area of Effect damage to enemies and confuses them for 1s. Confused enemies attacks all surrounding targets, friend and foe.",
+          "upgradeTiers": [
+            "100%",
+            "110%",
+            "120%",
+            "130%",
+            "140%"
+          ]
+        },
+        {
+          "name": "Scalding Mark",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/02/scalding-mark.webp",
+          "description": "Sophia attacks with her enchanted rose, dealing Attack * 70% damage to targets and applies Scalding Mark, increasing target's damage taken by 6% for 4s.",
+          "upgradeTiers": [
+            "50%",
+            "55%",
+            "60%",
+            "65%",
+            "70%"
+          ]
+        },
+        {
+          "name": "Scalding Mark – Lash",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/02/scalding-mark-lash.webp",
+          "description": "Scalding Marks boost Sophia's Attack by 24% and allows her to Lash afflicted targets, dealing 12% increased damage.",
+          "upgradeTiers": [
+            "8%",
+            "12%",
+            "16%",
+            "20%",
+            "24%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Arcane Pact",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/02/arcane-pact.webp",
+          "description": "The arcane pact grants Sophia the protection of night, and a 40% chance of reducing all squad damage received by 50% every turn.",
+          "upgradeTiers": [
+            "8%",
+            "16%",
+            "24%",
+            "32%",
+            "40%"
+          ]
+        },
+        {
+          "name": "Terror – Deathblow",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/02/terror-deathblow.webp",
+          "description": "Sophia radiates a fearsome aura that has a chance to inflict Terror on enemy targets. Enemy targets suffer the effects of Terror every 2 turns and will receive 200% increased Cavalry damage on the following turn. Terror lasts 1 turn.",
+          "upgradeTiers": [
+            "40%",
+            "80%",
+            "120%",
+            "160%",
+            "200%"
+          ]
+        },
+        {
+          "name": "Terror – Annihilation",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/02/terror-annihilation.webp",
+          "description": "Terror increases fragility. All Squads deal 75% increased damage to Terrified targets.",
+          "upgradeTiers": [
+            "15%",
+            "30%",
+            "45%",
+            "60%",
+            "75%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Cavalry Attack",
+          "value": "+540.43%"
+        },
+        {
+          "label": "Cavalry Defense",
+          "value": "+540.43%"
+        }
+      ]
+    },
+    "exclusiveGear": {
+      "name": "Scarlet Rose",
+      "stats": {
+        "power": 600750,
+        "heroAtk": 1201,
+        "heroDef": 1201,
+        "heroHp": 12015,
+        "escortAtk": 400,
+        "escortDef": 400,
+        "escortHp": 4005
+      },
+      "bonuses": [
+        "Cavalry Lethality +133.50%",
+        "Cavalry Health +133.50%"
+      ],
+      "skills": [
+        {
+          "name": "Eyes of Obedience",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/02/eyes-of-obedience.webp",
+          "description": "\"Loyalty to our Queen is your one and only purpose.\" Sophia's attacks have a 8% chance of confusing the target for 1s. Confused enemies attack all surrounding targets, friend and foe.",
+          "upgradeTiers": [
+            "2%",
+            "3.5%",
+            "5%",
+            "6.5%",
+            "8%"
+          ],
+          "mode": "conquest"
+        },
+        {
+          "name": "Queen of Night",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/02/queen-of-night.webp",
+          "description": "Sophia draws upon her avatar as Queen of the Night to enhance soldiers' Attack, increasing Defender Squad's Lethality by 15%.",
+          "upgradeTiers": [
+            "5%",
+            "7.5%",
+            "10%",
+            "12.5%",
+            "15%"
+          ],
+          "mode": "expedition"
+        }
+      ]
+    },
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/sophia/"
+  },
+  "wee-woo": {
+    "name": "Wee & Woo",
+    "slug": "wee-woo",
+    "rarity": "mythic",
+    "generation": 7,
+    "class": "Archer",
+    "sources": [
+      "Hero Roulette",
+      "Swordland Showdown Shop"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2026/05/wee-woo.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 8656,
+        "def": 7126,
+        "hp": 53446
+      },
+      "skills": [
+        {
+          "name": "High Ground",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/05/high-ground.webp",
+          "description": "Wee & Woo follow the artillery principle of \"high ground, long shots\" to the letter, dealing Attack * 420% Area of Effect damage.",
+          "upgradeTiers": [
+            "300%",
+            "330%",
+            "360%",
+            "390%",
+            "420%"
+          ]
+        },
+        {
+          "name": "Incendiaries",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/05/incendiaries.webp",
+          "description": "Wee & Woo fire a special incendiary round from the Royal Foundry, dealing Attack * 84% Area of Effect damage. The flaming crater in its wake also deals Attack * 25% damage to nearby enemies every 0.5s for 2s.",
+          "upgradeTiers": [
+            "60%",
+            "66%",
+            "72%",
+            "78%",
+            "84%"
+          ]
+        },
+        {
+          "name": "Frontal Support",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/05/frontal-support.webp",
+          "description": "Article 30 of the artilleryman's code provides a role for non-essential personnel at the front when necessary, increasing Attack by 26%.",
+          "upgradeTiers": [
+            "10%",
+            "14%",
+            "18%",
+            "22%",
+            "26%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Artillerymen",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/05/artillerymen.webp",
+          "description": "The inclusion of the artillerymen has an overall helpful effect of increasing Squad's total Attack by 15% and total Lethality by 10%.",
+          "upgradeTiers": [
+            "3%",
+            "6%",
+            "9%",
+            "12%",
+            "15%"
+          ]
+        },
+        {
+          "name": "Chain Shelling",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/05/chain-shelling.webp",
+          "description": "Wee & Woo's devastating back-to-back rounds tear shreds through the enemy lines, increasing Squad's Damage Dealt to Archer by 30% and to Infantry by 25%.",
+          "upgradeTiers": [
+            "6%",
+            "12%",
+            "18%",
+            "24%",
+            "30%"
+          ]
+        },
+        {
+          "name": "Boom Boom",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/05/boom-boom.webp",
+          "description": "\"There's always someone in every cannon duo who can aim well.\" Wee & Woo's presence gives Squad's Attack a 50% chance of dealing 50% extra damage.",
+          "upgradeTiers": [
+            "10%",
+            "20%",
+            "30%",
+            "40%",
+            "50%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Archer Attack",
+          "value": "+650.52%"
+        },
+        {
+          "label": "Archer Defense",
+          "value": "+650.52%"
+        }
+      ]
+    },
+    "exclusiveGear": {
+      "name": "Mortar",
+      "stats": {
+        "power": 722250,
+        "heroAtk": 1752,
+        "heroDef": 1444,
+        "heroHp": 10833,
+        "escortAtk": null,
+        "escortDef": null,
+        "escortHp": null
+      },
+      "bonuses": [
+        "Archer Lethality +160.50%",
+        "Archer Health +160.50%"
+      ],
+      "skills": [
+        {
+          "name": "Zero Sympathy",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/05/zero-sympathy.webp",
+          "description": "Truly, Wee & Woo's knowledge of modern ranged techniques has boosted morale. Wee & Woo also increase the Attack Speeds by 14% for Heroes and Escorts for 5s.",
+          "upgradeTiers": [
+            "6%",
+            "8%",
+            "10%",
+            "12%",
+            "14%"
+          ],
+          "mode": "conquest"
+        },
+        {
+          "name": "Landmines",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/05/landmines.webp",
+          "description": "Smart artillerymen always keep mines in reserve in case of unwelcomed friends. Wee & Woo increase Defender Squads' Attack by 15%.",
+          "upgradeTiers": [
+            "5%",
+            "7.5%",
+            "10%",
+            "12.5%",
+            "15%"
+          ],
+          "mode": "expedition"
+        }
+      ]
+    },
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/wee-woo/"
+  },
+  "charles": {
+    "name": "Charles",
+    "slug": "charles",
+    "rarity": "mythic",
+    "generation": 7,
+    "class": "Infantry",
+    "sources": [
+      "Hero Rally",
+      "Daily Deals",
+      "Strongest Governor Event",
+      "Kingdom of Power Event",
+      "Swordland Showdown Shop"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2026/05/charles-avatar.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 5466,
+        "def": 7126,
+        "hp": 106892
+      },
+      "skills": [
+        {
+          "name": "Vengeance",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/05/vengeance.webp",
+          "description": "Charles unleashes a Vengeance strike from the Angel of Justice against enemies in a fan-shaped area ahead, dealing Attack * 140% damage and stunning targets for 1s while increasing his own Attack by 100% for 2s.",
+          "upgradeTiers": [
+            "100%",
+            "110%",
+            "120%",
+            "130%",
+            "140%Attack Up: 20%",
+            "40%",
+            "60%",
+            "80%",
+            "100%"
+          ]
+        },
+        {
+          "name": "Parting Gift",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/05/parting-gift.webp",
+          "description": "Charles minefields the area after his mech's destruction, dealing Attack * 280% Area of Effect damage to nearby enemies as a parting gift.",
+          "upgradeTiers": [
+            "200%",
+            "220%",
+            "240%",
+            "260%",
+            "280%"
+          ]
+        },
+        {
+          "name": "Nimble Soul",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/05/nimble-soul.webp",
+          "description": "Charles has always been gifted with lightning-fast reactions, granting a 50% chance of reducing damage taken by 50%.",
+          "upgradeTiers": [
+            "10%",
+            "20%",
+            "30%",
+            "40%",
+            "50%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Intimidation",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/05/intimidation.webp",
+          "description": "The terrifying presence of the massive Angel of Justice on the battlefield reduces enemy Squad's Total Lethality by 20%.",
+          "upgradeTiers": [
+            "4%",
+            "8%",
+            "12%",
+            "16%",
+            "20%"
+          ]
+        },
+        {
+          "name": "Iron Bodies",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/05/iron-bodies.webp",
+          "description": "Superior metal armor forging blunts the impact of conventional weapons, reducing Squad's Damage Taken by 20%.",
+          "upgradeTiers": [
+            "4%",
+            "8%",
+            "12%",
+            "16%",
+            "20%"
+          ]
+        },
+        {
+          "name": "Great Justice",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/05/great-justice.webp",
+          "description": "The Angel of Justice comes outfitted with state-of-the-art battlefield medkits, increasing Squad's total Health by 25%.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Infantry Attack",
+          "value": "+650.52%"
+        },
+        {
+          "label": "Infantry Defense",
+          "value": "+650.52%"
+        }
+      ]
+    },
+    "exclusiveGear": {
+      "name": "Justice Fist",
+      "stats": {
+        "power": 722250,
+        "heroAtk": 1107,
+        "heroDef": 1444,
+        "heroHp": 21667,
+        "escortAtk": 369,
+        "escortDef": 481,
+        "escortHp": 7222
+      },
+      "bonuses": [
+        "Infantry Lethality +160.50%",
+        "Infantry Health +160.50%"
+      ],
+      "skills": [
+        {
+          "name": "Mechanic",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/05/mechanic.webp",
+          "description": "Charles takes good care of Angel and restores a certain amount of health (35% of Max Health) when first under 50% Health while increasing Defense by 30% until the end of battle. This skill can only be triggered once per battle.",
+          "upgradeTiers": [],
+          "mode": "conquest"
+        },
+        {
+          "name": "Shock and Awe",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/05/shock-and-awe.webp",
+          "description": "Charles knows how to make a roaring entrance worthy of the massive Angel of Justice mech, increasing Defender Squad's Health by 15%.",
+          "upgradeTiers": [],
+          "mode": "expedition"
+        }
+      ]
+    },
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/charles/"
+  },
+  "ava": {
+    "name": "Ava",
+    "slug": "ava",
+    "rarity": "mythic",
+    "generation": 7,
+    "class": "Cavalry",
+    "sources": [
+      "Hall of Heroes",
+      "Swordland Showdown Shop"
+    ],
+    "portrait": "https://kingshotdata.com/wp-content/uploads/2026/05/ava-avatar-image.webp",
+    "conquest": {
+      "baseStats": {
+        "atk": 7126,
+        "def": 7126,
+        "hp": 71262
+      },
+      "skills": [
+        {
+          "name": "Color Bomb",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/05/color-bomb.webp",
+          "description": "Some of the most visible colors can be the most poisonous. Ava's color bomb envelops an area, dealing Attack* 70% damage to nearby enemies every 0.5s for 3s.",
+          "upgradeTiers": [
+            "50%",
+            "55%",
+            "60%",
+            "65%",
+            "70%"
+          ]
+        },
+        {
+          "name": "Corruption Bomb",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/05/corruption-bomb.webp",
+          "description": "Ava detonates a corrosive pigment combo in the target's face, dealing Attack * 35% damage every 0.5s and increasing the target's damage taken by 25% for 2s.",
+          "upgradeTiers": [
+            "25%",
+            "27.5%",
+            "30%",
+            "32.5%",
+            "35%"
+          ]
+        },
+        {
+          "name": "Disguise Pigment",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/05/disguise-pigment.webp",
+          "description": "The right color combo will confuse enemies, granting Ava 75% increased Defense.",
+          "upgradeTiers": [
+            "25%",
+            "37.5%",
+            "50%",
+            "62.5%",
+            "75%"
+          ]
+        }
+      ]
+    },
+    "expedition": {
+      "skills": [
+        {
+          "name": "Dissolution",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/05/dissolution.webp",
+          "description": "An artist sees what others cannot. Ava's deconstructive gaze sees vulnerabilities, reducing total Enemy Squad's Defense by 25%.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        },
+        {
+          "name": "Chiaroscuro",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/05/chiaroscuro.webp",
+          "description": "Bright light and dark shadow can blind enemies who do not expect it. All enemy soldiers receive 50% increased damage for 2 turns every 4 turns.",
+          "upgradeTiers": [
+            "10%",
+            "20%",
+            "30%",
+            "40%",
+            "50%"
+          ]
+        },
+        {
+          "name": "Light and Cold",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/05/light-and-cold.webp",
+          "description": "Ava's weapons are like twin beacons for all to follow, increasing soldiers' Lethality by 25%.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        }
+      ],
+      "bonuses": [
+        {
+          "label": "Cavalry Attack",
+          "value": "+650.52%"
+        },
+        {
+          "label": "Cavalry Defense",
+          "value": "+650.52%"
+        }
+      ]
+    },
+    "exclusiveGear": {
+      "name": "Chameleos",
+      "stats": {
+        "power": 722250,
+        "heroAtk": 1444,
+        "heroDef": 1444,
+        "heroHp": 14445,
+        "escortAtk": null,
+        "escortDef": null,
+        "escortHp": null
+      },
+      "bonuses": [
+        "Cavalry Lethality +160.50%",
+        "Cavalry Health +160.50%"
+      ],
+      "skills": [
+        {
+          "name": "Irradiance",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/05/irradiance.webp",
+          "description": "Young Ava's pigment arsenal increases her damage dealt by 25% and reduces the Attack of affected targets by 25%.",
+          "upgradeTiers": [
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ],
+          "mode": "conquest"
+        },
+        {
+          "name": "Color Storm",
+          "iconUrl": "https://kingshotdata.com/wp-content/uploads/2026/05/color-storm.png",
+          "description": "Ava's unique color dispatching system increases Rally Squads' Lethality by 15% when initiating a rally.",
+          "upgradeTiers": [
+            "5%",
+            "7.5%",
+            "10%",
+            "12.5%",
+            "15%"
+          ],
+          "mode": "expedition"
+        }
+      ]
+    },
+    "scrapedAt": "2026-06-17",
+    "sourceUrl": "https://kingshotdata.com/heroes/ava/"
+  }
+}

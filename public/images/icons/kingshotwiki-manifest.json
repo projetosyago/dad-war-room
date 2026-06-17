@@ -1,0 +1,1147 @@
+{
+  "generated_at": "2026-06-17T19:41:49.582Z",
+  "source": "https://kingshotwiki.com/items/",
+  "buckets": {
+    "basic-resource": [
+      {
+        "slug": "gold",
+        "title": "Gold",
+        "local": "/images/icons/kingshotwiki/basic-resource/gold.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_106-2.png"
+      },
+      {
+        "slug": "governor-stamina",
+        "title": "Governor Stamina",
+        "local": "/images/icons/kingshotwiki/basic-resource/governor-stamina.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_610002.png"
+      }
+    ],
+    "pet": [
+      {
+        "slug": "advanced-taming-mark",
+        "title": "Advanced Taming Mark",
+        "local": "/images/icons/kingshotwiki/pet/advanced-taming-mark.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_600047.png"
+      },
+      {
+        "slug": "common-taming-mark",
+        "title": "Common Taming Mark",
+        "local": "/images/icons/kingshotwiki/pet/common-taming-mark.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_600046.png"
+      },
+      {
+        "slug": "growth-manual",
+        "title": "Growth Manual",
+        "local": "/images/icons/kingshotwiki/pet/growth-manual.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_600043-1.png"
+      },
+      {
+        "slug": "nutrient-potion",
+        "title": "Nutrient Potion",
+        "local": "/images/icons/kingshotwiki/pet/nutrient-potion.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_600044-1.png"
+      },
+      {
+        "slug": "pet-advancement-material-custom-chest",
+        "title": "Pet Advancement Material Custom Chest",
+        "local": "/images/icons/kingshotwiki/pet/pet-advancement-material-custom-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_510019.png"
+      },
+      {
+        "slug": "pet-food",
+        "title": "Pet Food",
+        "local": "/images/icons/kingshotwiki/pet/pet-food.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_115.png"
+      },
+      {
+        "slug": "promotion-medallion",
+        "title": "Promotion Medallion",
+        "local": "/images/icons/kingshotwiki/pet/promotion-medallion.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_600045-1.png"
+      }
+    ],
+    "town-skin": [
+      {
+        "slug": "burst-of-life",
+        "title": "Burst of Life",
+        "local": "/images/icons/kingshotwiki/town-skin/burst-of-life.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302502.png"
+      },
+      {
+        "slug": "golden-throne",
+        "title": "Golden Throne",
+        "local": "/images/icons/kingshotwiki/town-skin/golden-throne.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302509.png"
+      },
+      {
+        "slug": "guard-of-the-allies",
+        "title": "Guard of the Allies (14-Day)",
+        "local": "/images/icons/kingshotwiki/town-skin/guard-of-the-allies.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302504.png"
+      },
+      {
+        "slug": "mega-rocket",
+        "title": "Mega Rocket",
+        "local": "/images/icons/kingshotwiki/town-skin/mega-rocket.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302616.png"
+      },
+      {
+        "slug": "spring-workshop",
+        "title": "Spring Workshop",
+        "local": "/images/icons/kingshotwiki/town-skin/spring-workshop.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302510.png"
+      },
+      {
+        "slug": "star-spangled-victory",
+        "title": "Star-Spangled Victory",
+        "local": "/images/icons/kingshotwiki/town-skin/star-spangled-victory.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302505.png"
+      },
+      {
+        "slug": "the-elysium",
+        "title": "The Elysium",
+        "local": "/images/icons/kingshotwiki/town-skin/the-elysium.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_2302601.png"
+      },
+      {
+        "slug": "throne-bastion",
+        "title": "Throne Bastion (7-Day)",
+        "local": "/images/icons/kingshotwiki/town-skin/throne-bastion.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302514.png"
+      },
+      {
+        "slug": "treasure-dock",
+        "title": "Treasure Dock",
+        "local": "/images/icons/kingshotwiki/town-skin/treasure-dock.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302508.png"
+      }
+    ],
+    "march-skin": [
+      {
+        "slug": "angry-cactus",
+        "title": "Angry Cactus",
+        "local": "/images/icons/kingshotwiki/march-skin/angry-cactus.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302727.png"
+      },
+      {
+        "slug": "clockwork-pufferfish",
+        "title": "Clockwork Pufferfish",
+        "local": "/images/icons/kingshotwiki/march-skin/clockwork-pufferfish.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302712.png"
+      },
+      {
+        "slug": "ginos-determination",
+        "title": "Gino's Determination",
+        "local": "/images/icons/kingshotwiki/march-skin/ginos-determination.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302702.png"
+      },
+      {
+        "slug": "great-golden-glutton",
+        "title": "Great Golden Glutton",
+        "local": "/images/icons/kingshotwiki/march-skin/great-golden-glutton.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302703.png"
+      },
+      {
+        "slug": "hexed-marauder",
+        "title": "Hexed Marauder",
+        "local": "/images/icons/kingshotwiki/march-skin/hexed-marauder.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302704.png"
+      },
+      {
+        "slug": "imperial-airship",
+        "title": "Imperial Airship (14-Day)",
+        "local": "/images/icons/kingshotwiki/march-skin/imperial-airship.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302708.png"
+      },
+      {
+        "slug": "lion-dance",
+        "title": "Lion Dance",
+        "local": "/images/icons/kingshotwiki/march-skin/lion-dance.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303188.png"
+      },
+      {
+        "slug": "northsea-siren",
+        "title": "Northsea Siren",
+        "local": "/images/icons/kingshotwiki/march-skin/northsea-siren.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302713.png"
+      },
+      {
+        "slug": "spring-outing",
+        "title": "Spring Outing",
+        "local": "/images/icons/kingshotwiki/march-skin/spring-outing.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_2302605.png"
+      },
+      {
+        "slug": "temple-officiator",
+        "title": "Temple Officiator",
+        "local": "/images/icons/kingshotwiki/march-skin/temple-officiator.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302715.png"
+      }
+    ],
+    "avatar-frame": [
+      {
+        "slug": "anniversary-fiesta-avatar-frame",
+        "title": "Anniversary Fiesta Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/anniversary-fiesta-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_781904.png"
+      },
+      {
+        "slug": "anniversary-jubilee-avatar-frame",
+        "title": "Anniversary Jubilee Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/anniversary-jubilee-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_781905.png"
+      },
+      {
+        "slug": "auspicious-dragon-avatar-frame",
+        "title": "Auspicious Dragon Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/auspicious-dragon-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303176.png"
+      },
+      {
+        "slug": "birthday-avatar-frame",
+        "title": "Birthday Avatar Frame (30-Day)",
+        "local": "/images/icons/kingshotwiki/avatar-frame/birthday-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303131.png"
+      },
+      {
+        "slug": "christmas-carol-avatar-frame",
+        "title": "Christmas Carol Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/christmas-carol-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303174.png"
+      },
+      {
+        "slug": "cloudbordne-splendor-avatar-frame",
+        "title": "Cloudborne Splendor Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/cloudbordne-splendor-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_2303127.png"
+      },
+      {
+        "slug": "community-star-avatar-frame",
+        "title": "Community Star Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/community-star-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_2303104.png"
+      },
+      {
+        "slug": "cosmic-heart-avatar-frame",
+        "title": "Cosmic Heart Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/cosmic-heart-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303143.png"
+      },
+      {
+        "slug": "creative-vision-avatar-frame",
+        "title": "Creative Vision Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/creative-vision-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_2303107.png"
+      },
+      {
+        "slug": "desert-flower-avatar-frame",
+        "title": "Desert Flower Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/desert-flower-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303159.png"
+      },
+      {
+        "slug": "discord-mentor-avatar-frame",
+        "title": "Discord Mentor Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/discord-mentor-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303141.png"
+      },
+      {
+        "slug": "discord-mod-avatar-frame",
+        "title": "Discord Mod Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/discord-mod-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_2303115.png"
+      },
+      {
+        "slug": "endless-dreams-nameplate",
+        "title": "Endless Dreams Nameplate",
+        "local": "/images/icons/kingshotwiki/avatar-frame/endless-dreams-nameplate.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303206.png"
+      },
+      {
+        "slug": "facebook-honorary-player-avatar-frame",
+        "title": "Facebook Honorary Player Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/facebook-honorary-player-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303107.png"
+      },
+      {
+        "slug": "feastival-avatar-frame",
+        "title": "Feastival Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/feastival-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303136.png"
+      },
+      {
+        "slug": "fiery-dragonborne-avatar-frame",
+        "title": "Fiery Dragonborn Avatar Frame (30-Day)",
+        "local": "/images/icons/kingshotwiki/avatar-frame/fiery-dragonborne-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_2303171.png"
+      },
+      {
+        "slug": "forest-crown-avatar-frame",
+        "title": "Forest Crown Avatar Frame (14-Day)",
+        "local": "/images/icons/kingshotwiki/avatar-frame/forest-crown-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303133.png"
+      },
+      {
+        "slug": "great-artisans-avatar-frame",
+        "title": "Great Artisan Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/great-artisans-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303105.png"
+      },
+      {
+        "slug": "guts-glory-avatar-frame",
+        "title": "Guts & Glory Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/guts-glory-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303162.png"
+      },
+      {
+        "slug": "heart-beat-avatar-frame",
+        "title": "Heart Beat Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/heart-beat-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303139.png"
+      },
+      {
+        "slug": "iridescent-avatar-frame",
+        "title": "Iridescent Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/iridescent-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303121.png"
+      },
+      {
+        "slug": "kingdom-founding-avatar-frame",
+        "title": "Kingdom Founding Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/kingdom-founding-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303142.png"
+      },
+      {
+        "slug": "knights-glory-avatar-frame-14d",
+        "title": "Knight's Glory Avatar Frame (14d)",
+        "local": "/images/icons/kingshotwiki/avatar-frame/knights-glory-avatar-frame-14d.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303103.png"
+      },
+      {
+        "slug": "lucky-egg-avatar-frame",
+        "title": "Lucky Egg Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/lucky-egg-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303154.png"
+      },
+      {
+        "slug": "luminous-governor-avatar-frame",
+        "title": "Luminous Governor Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/luminous-governor-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303166.png"
+      },
+      {
+        "slug": "lunar-astra-avatar-frame",
+        "title": "Lunar Astra Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/lunar-astra-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303144.png"
+      },
+      {
+        "slug": "master-builder-avatar-frame",
+        "title": "Master Builder Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/master-builder-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303127.png"
+      },
+      {
+        "slug": "midnight-revelry-avatar-frame",
+        "title": "Midnight Revelry Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/midnight-revelry-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303134.png"
+      },
+      {
+        "slug": "moonlight-stream-avatar-frame",
+        "title": "Moonlight Stream Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/moonlight-stream-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303137.png"
+      },
+      {
+        "slug": "naver-honorary-player-avatar-frame",
+        "title": "Naver Honorary Player Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/naver-honorary-player-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303146.png"
+      },
+      {
+        "slug": "raiders-of-the-loot-avatar-frame",
+        "title": "Raiders of the Loot Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/raiders-of-the-loot-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303132.png"
+      },
+      {
+        "slug": "sanctuarys-glory-avatar-frame-3-day",
+        "title": "Sanctuary's Glory Avatar Frame (3-Day)",
+        "local": "/images/icons/kingshotwiki/avatar-frame/sanctuarys-glory-avatar-frame-3-day.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303102.png"
+      },
+      {
+        "slug": "sea-fisher-avatar-frame",
+        "title": "Sea Fisher Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/sea-fisher-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303128.png"
+      },
+      {
+        "slug": "sky-guardian-avatar-frame-7-day",
+        "title": "Sky Guardian Avatar Frame (7-Day)",
+        "local": "/images/icons/kingshotwiki/avatar-frame/sky-guardian-avatar-frame-7-day.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303125.png"
+      },
+      {
+        "slug": "song-of-the-sea-avatar-frame",
+        "title": "Song of the Sea Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/song-of-the-sea-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303129.png"
+      },
+      {
+        "slug": "sparkling-2026-avatar-frame",
+        "title": "Sparkling 2026 Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/sparkling-2026-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_26080410.png"
+      },
+      {
+        "slug": "splendid-youth-avatar-frame",
+        "title": "Splendid Youth Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/splendid-youth-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303126.png"
+      },
+      {
+        "slug": "strongest-governor-avatar-frame-7-day",
+        "title": "Strongest Governor Avatar Frame (7-Day)",
+        "local": "/images/icons/kingshotwiki/avatar-frame/strongest-governor-avatar-frame-7-day.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303122.png"
+      },
+      {
+        "slug": "supreme-flamedragon-tyrant-avatar-skin",
+        "title": "Supreme Flamedragon Tyrant  Avatar Skin",
+        "local": "/images/icons/kingshotwiki/avatar-frame/supreme-flamedragon-tyrant-avatar-skin.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303171.png"
+      },
+      {
+        "slug": "thanksgiving-portfolio-avatar-frame",
+        "title": "Thanksgiving Portfolio Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/thanksgiving-portfolio-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303135.png"
+      },
+      {
+        "slug": "tidebringer-avatar-frame-30-day",
+        "title": "Tidebringer Avatar Frame (30-Day)",
+        "local": "/images/icons/kingshotwiki/avatar-frame/tidebringer-avatar-frame-30-day.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303153.png"
+      },
+      {
+        "slug": "unending-love-avatar-frame",
+        "title": "Unending Love Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/unending-love-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303140.png"
+      },
+      {
+        "slug": "x-honorary-player-avatar-frame",
+        "title": "X Honorary Player Avatar Frame",
+        "local": "/images/icons/kingshotwiki/avatar-frame/x-honorary-player-avatar-frame.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_303145.png"
+      }
+    ],
+    "nameplate": [
+      {
+        "slug": "anniversary-party-nameplate",
+        "title": "Anniversary Party Nameplate",
+        "local": "/images/icons/kingshotwiki/nameplate/anniversary-party-nameplate.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_781504.png"
+      },
+      {
+        "slug": "auspicious-dragon-nameplate",
+        "title": "Auspicious Dragon Nameplate",
+        "local": "/images/icons/kingshotwiki/nameplate/auspicious-dragon-nameplate.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302946.png"
+      },
+      {
+        "slug": "birthday-nameplate",
+        "title": "Birthday Nameplate (30-Day)",
+        "local": "/images/icons/kingshotwiki/nameplate/birthday-nameplate.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302921.png"
+      },
+      {
+        "slug": "christmas-carol-nameplate",
+        "title": "Christmas Carol Nameplate",
+        "local": "/images/icons/kingshotwiki/nameplate/christmas-carol-nameplate.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302944.png"
+      },
+      {
+        "slug": "cloudborne-splendor-nameplate",
+        "title": "Cloudborne Splendor Nameplate",
+        "local": "/images/icons/kingshotwiki/nameplate/cloudborne-splendor-nameplate.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_2302904.png"
+      },
+      {
+        "slug": "desert-flower-nameplate",
+        "title": "Desert Flower Nameplate",
+        "local": "/images/icons/kingshotwiki/nameplate/desert-flower-nameplate.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302935.png"
+      },
+      {
+        "slug": "endless-dreams-nameplate",
+        "title": "Endless Dreams Nameplate",
+        "local": "/images/icons/kingshotwiki/nameplate/endless-dreams-nameplate.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302947.png"
+      },
+      {
+        "slug": "feastival-nameplate",
+        "title": "Feastival Nameplate",
+        "local": "/images/icons/kingshotwiki/nameplate/feastival-nameplate.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302925.png"
+      },
+      {
+        "slug": "great-artisan-nameplate",
+        "title": "Great Artisan Nameplate",
+        "local": "/images/icons/kingshotwiki/nameplate/great-artisan-nameplate.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302905.png"
+      },
+      {
+        "slug": "guts-glory-nameplate",
+        "title": "Guts & Glory Nameplate",
+        "local": "/images/icons/kingshotwiki/nameplate/guts-glory-nameplate.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302938.png"
+      },
+      {
+        "slug": "heart-beat-nameplate",
+        "title": "Heart Beat Nameplate",
+        "local": "/images/icons/kingshotwiki/nameplate/heart-beat-nameplate.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302928.png"
+      },
+      {
+        "slug": "honor-feather-nameplate",
+        "title": "Sky Guardian Nameplate (7-Day)",
+        "local": "/images/icons/kingshotwiki/nameplate/honor-feather-nameplate.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302916.png"
+      },
+      {
+        "slug": "iridescent-nameplate",
+        "title": "Iridescent Nameplate",
+        "local": "/images/icons/kingshotwiki/nameplate/iridescent-nameplate.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302911.png"
+      },
+      {
+        "slug": "kingdom-founding-nameplate",
+        "title": "Kingdom Founding Nameplate",
+        "local": "/images/icons/kingshotwiki/nameplate/kingdom-founding-nameplate.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302930.png"
+      },
+      {
+        "slug": "knights-glory-nameplate",
+        "title": "Knight's Glory Nameplate (14d)",
+        "local": "/images/icons/kingshotwiki/nameplate/knights-glory-nameplate.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302903.png"
+      },
+      {
+        "slug": "lucky-egg-nameplate",
+        "title": "Lucky Egg Nameplate",
+        "local": "/images/icons/kingshotwiki/nameplate/lucky-egg-nameplate.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302933.png"
+      },
+      {
+        "slug": "lunar-astra-nameplate",
+        "title": "Lunar Astra Nameplate",
+        "local": "/images/icons/kingshotwiki/nameplate/lunar-astra-nameplate.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302932.png"
+      },
+      {
+        "slug": "master-builder-nameplate",
+        "title": "Master Builder Nameplate",
+        "local": "/images/icons/kingshotwiki/nameplate/master-builder-nameplate.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302917.png"
+      },
+      {
+        "slug": "midnight-revelry-nameplate",
+        "title": "Midnight Revelry Nameplate",
+        "local": "/images/icons/kingshotwiki/nameplate/midnight-revelry-nameplate.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302923.png"
+      },
+      {
+        "slug": "moonlight-stream-nameplate",
+        "title": "Moonlight Stream Nameplate",
+        "local": "/images/icons/kingshotwiki/nameplate/moonlight-stream-nameplate.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302926.png"
+      },
+      {
+        "slug": "raiders-of-the-loot-nameplate",
+        "title": "Raiders of the Loot Nameplate",
+        "local": "/images/icons/kingshotwiki/nameplate/raiders-of-the-loot-nameplate.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302922.png"
+      },
+      {
+        "slug": "sanctuarys-glory-nameplate",
+        "title": "Sanctuary's Glory Nameplate",
+        "local": "/images/icons/kingshotwiki/nameplate/sanctuarys-glory-nameplate.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302902.png"
+      },
+      {
+        "slug": "sea-fisher-nameplate",
+        "title": "Sea Fisher Nameplate",
+        "local": "/images/icons/kingshotwiki/nameplate/sea-fisher-nameplate.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302918.png"
+      },
+      {
+        "slug": "splendid-youth-nameplate",
+        "title": "Splendid Youth Nameplate",
+        "local": "/images/icons/kingshotwiki/nameplate/splendid-youth-nameplate.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302912.png"
+      },
+      {
+        "slug": "strongest-governor-nameplate",
+        "title": "Strongest Governor Nameplate (30-Day)",
+        "local": "/images/icons/kingshotwiki/nameplate/strongest-governor-nameplate.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302913.png"
+      },
+      {
+        "slug": "thanksgiving-portfolio-nameplate",
+        "title": "Thanksgiving Portfolio Nameplate",
+        "local": "/images/icons/kingshotwiki/nameplate/thanksgiving-portfolio-nameplate.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302924.png"
+      },
+      {
+        "slug": "unending-love-nameplate",
+        "title": "Unending Love Nameplate",
+        "local": "/images/icons/kingshotwiki/nameplate/unending-love-nameplate.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_302929.png"
+      }
+    ],
+    "teleport-skin": [],
+    "teleporter": [
+      {
+        "slug": "advanced-teleporter",
+        "title": "Advanced Teleporter",
+        "local": "/images/icons/kingshotwiki/teleporter/advanced-teleporter.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_610104.png"
+      },
+      {
+        "slug": "alliance-teleporter",
+        "title": "Alliance Teleporter",
+        "local": "/images/icons/kingshotwiki/teleporter/alliance-teleporter.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_610102.png"
+      },
+      {
+        "slug": "random-teleporter",
+        "title": "Random Teleporter",
+        "local": "/images/icons/kingshotwiki/teleporter/random-teleporter.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_610101.png"
+      },
+      {
+        "slug": "sanctuary-teleporter",
+        "title": "Sanctuary Teleport",
+        "local": "/images/icons/kingshotwiki/teleporter/sanctuary-teleporter.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_610105.png"
+      },
+      {
+        "slug": "territory-teleporter",
+        "title": "Territory Teleporter",
+        "local": "/images/icons/kingshotwiki/teleporter/territory-teleporter.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_610103.png"
+      }
+    ],
+    "buff": [
+      {
+        "slug": "flamedragon-battlefield-rally-speedup-i",
+        "title": "Flamedragon Battlefield Rally Speedup I",
+        "local": "/images/icons/kingshotwiki/buff/flamedragon-battlefield-rally-speedup-i.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_301950.png"
+      },
+      {
+        "slug": "flamedragon-battlefield-rally-speedup-ii",
+        "title": "Flamedragon Battlefield Rally Speedup II",
+        "local": "/images/icons/kingshotwiki/buff/flamedragon-battlefield-rally-speedup-ii.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_301951.png"
+      }
+    ],
+    "truegold": [
+      {
+        "slug": "lesser-truegold",
+        "title": "Lesser  Truegold",
+        "local": "/images/icons/kingshotwiki/truegold/lesser-truegold.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_720001.png"
+      },
+      {
+        "slug": "tempered-truegold",
+        "title": "Tempered  Truegold",
+        "local": "/images/icons/kingshotwiki/truegold/tempered-truegold.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_100082-2.png"
+      },
+      {
+        "slug": "truegold",
+        "title": "Truegold",
+        "local": "/images/icons/kingshotwiki/truegold/truegold.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_100081-1.png"
+      },
+      {
+        "slug": "truegold-dust",
+        "title": "Truegold Dust",
+        "local": "/images/icons/kingshotwiki/truegold/truegold-dust.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_100083-2.png"
+      }
+    ],
+    "chest": [
+      {
+        "slug": "alcar-lucky-chest",
+        "title": "Alcar Lucky Chest",
+        "local": "/images/icons/kingshotwiki/chest/alcar-lucky-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_600018.png"
+      },
+      {
+        "slug": "arena-star-chest",
+        "title": "Arena Star Chest",
+        "local": "/images/icons/kingshotwiki/chest/arena-star-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_700023.png"
+      },
+      {
+        "slug": "badland-treasure",
+        "title": "Badland Treasure",
+        "local": "/images/icons/kingshotwiki/chest/badland-treasure.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_510027.png"
+      },
+      {
+        "slug": "box-chest",
+        "title": "Truegold Booster Chest",
+        "local": "/images/icons/kingshotwiki/chest/box-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_700007.png"
+      },
+      {
+        "slug": "cesared-aid-chest",
+        "title": "Cesares Aid Chest",
+        "local": "/images/icons/kingshotwiki/chest/cesared-aid-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_600031.png"
+      },
+      {
+        "slug": "challenger-pouch",
+        "title": "Challenger Pouch",
+        "local": "/images/icons/kingshotwiki/chest/challenger-pouch.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_600007.png"
+      },
+      {
+        "slug": "custom-epic-hero-gear-chest",
+        "title": "Custom Epic Hero Gear Chest",
+        "local": "/images/icons/kingshotwiki/chest/custom-epic-hero-gear-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_501000.png"
+      },
+      {
+        "slug": "custom-epic-hero-shard-chest",
+        "title": "Custom Epic Hero Shard Chest",
+        "local": "/images/icons/kingshotwiki/chest/custom-epic-hero-shard-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_501006.png"
+      },
+      {
+        "slug": "custom-hero-widget-chest",
+        "title": "Custom Hero Widget Chest",
+        "local": "/images/icons/kingshotwiki/chest/custom-hero-widget-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_501004.png"
+      },
+      {
+        "slug": "custom-mythic-hero-gear-chest",
+        "title": "Custom Mythic Hero Gear Chest",
+        "local": "/images/icons/kingshotwiki/chest/custom-mythic-hero-gear-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_501001.png"
+      },
+      {
+        "slug": "custom-mythic-hero-shard-chest",
+        "title": "Custom Mythic Hero Shard Chest",
+        "local": "/images/icons/kingshotwiki/chest/custom-mythic-hero-shard-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_501002.png"
+      },
+      {
+        "slug": "eric-lucky-chest",
+        "title": "Eric Lucky Chest",
+        "local": "/images/icons/kingshotwiki/chest/eric-lucky-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_600016.png"
+      },
+      {
+        "slug": "forsaken-temple-chest",
+        "title": "Lucky Adventure Chest",
+        "local": "/images/icons/kingshotwiki/chest/forsaken-temple-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_700013.png"
+      },
+      {
+        "slug": "gen-2-combat-award",
+        "title": "Gen 2 Combat Award",
+        "local": "/images/icons/kingshotwiki/chest/gen-2-combat-award.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_502000.png"
+      },
+      {
+        "slug": "gen-2-custom-hero-widget-chest",
+        "title": "Gen 2  Custom Hero Widget Chest",
+        "local": "/images/icons/kingshotwiki/chest/gen-2-custom-hero-widget-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_501005.png"
+      },
+      {
+        "slug": "gen-2-custom-mythic-hero-shard-chest",
+        "title": "Gen 2  Custom Mythic Hero Shard Chest",
+        "local": "/images/icons/kingshotwiki/chest/gen-2-custom-mythic-hero-shard-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_501003.png"
+      },
+      {
+        "slug": "gen-3-combat-award",
+        "title": "Gen 3 Combat Award",
+        "local": "/images/icons/kingshotwiki/chest/gen-3-combat-award.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_502001.png"
+      },
+      {
+        "slug": "gen-3-custom-hero-widget-chest",
+        "title": "Gen 3  Custom Hero Widget Chest",
+        "local": "/images/icons/kingshotwiki/chest/gen-3-custom-hero-widget-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_501010.png"
+      },
+      {
+        "slug": "gen-3-custom-mythic-hero-shard-chest",
+        "title": "Gen 3  Custom Mythic Hero Shard Chest",
+        "local": "/images/icons/kingshotwiki/chest/gen-3-custom-mythic-hero-shard-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_501009.png"
+      },
+      {
+        "slug": "gen-4-combat-award",
+        "title": "Gen 4 Combat Award",
+        "local": "/images/icons/kingshotwiki/chest/gen-4-combat-award.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_502002.png"
+      },
+      {
+        "slug": "gen-4-custom-hero-widget-chest",
+        "title": "Gen 4  Custom Hero Widget Chest",
+        "local": "/images/icons/kingshotwiki/chest/gen-4-custom-hero-widget-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_501013.png"
+      },
+      {
+        "slug": "gen-4-custom-mythic-hero-shard-chest",
+        "title": "Gen 4 Custom Mythic Hero Shard Chest",
+        "local": "/images/icons/kingshotwiki/chest/gen-4-custom-mythic-hero-shard-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_501014.png"
+      },
+      {
+        "slug": "gen-5-combat-award",
+        "title": "Gen 5 Combat Award",
+        "local": "/images/icons/kingshotwiki/chest/gen-5-combat-award.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_502003.png"
+      },
+      {
+        "slug": "gen-5-custom-hero-widget-chest",
+        "title": "Gen 5  Custom Hero Widget Chest",
+        "local": "/images/icons/kingshotwiki/chest/gen-5-custom-hero-widget-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_501015.png"
+      },
+      {
+        "slug": "gen-5-custom-mythic-hero-shard-chest",
+        "title": "Gen 5  Custom Mythic Hero Shard Chest",
+        "local": "/images/icons/kingshotwiki/chest/gen-5-custom-mythic-hero-shard-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_501016.png"
+      },
+      {
+        "slug": "gen-6-combat-award",
+        "title": "Gen 6 Combat Award",
+        "local": "/images/icons/kingshotwiki/chest/gen-6-combat-award.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_502004.png"
+      },
+      {
+        "slug": "gen-6-custom-hero-widget-chest",
+        "title": "Gen 6  Custom Hero Widget Chest",
+        "local": "/images/icons/kingshotwiki/chest/gen-6-custom-hero-widget-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_501015.png"
+      },
+      {
+        "slug": "gen-6-custom-mythic-hero-shard-chest",
+        "title": "Gen 6  Custom Mythic Hero Shard Chest",
+        "local": "/images/icons/kingshotwiki/chest/gen-6-custom-mythic-hero-shard-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_501018.png"
+      },
+      {
+        "slug": "governor-gear-materials-chest",
+        "title": "Governor Gear Materials Chest",
+        "local": "/images/icons/kingshotwiki/chest/governor-gear-materials-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_510000.png"
+      },
+      {
+        "slug": "governor-gear-variety-chest",
+        "title": "Governor Gear Variety Chest",
+        "local": "/images/icons/kingshotwiki/chest/governor-gear-variety-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_510002.png"
+      },
+      {
+        "slug": "helm-chest",
+        "title": "Enhancement XP Component Chest",
+        "local": "/images/icons/kingshotwiki/chest/helm-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_700006.png"
+      },
+      {
+        "slug": "hilde-lucky-chest",
+        "title": "Hilde Lucky Chest",
+        "local": "/images/icons/kingshotwiki/chest/hilde-lucky-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_600012.png"
+      },
+      {
+        "slug": "jaeger-lucky-chest",
+        "title": "Jaeger Lucky chest",
+        "local": "/images/icons/kingshotwiki/chest/jaeger-lucky-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_600013.png"
+      },
+      {
+        "slug": "long-fei-lucky-chest",
+        "title": "Long Fei Lucky Chest",
+        "local": "/images/icons/kingshotwiki/chest/long-fei-lucky-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_600048.png"
+      },
+      {
+        "slug": "lucky-hero-gear-chest",
+        "title": "Lucky Hero Gear Chest",
+        "local": "/images/icons/kingshotwiki/chest/lucky-hero-gear-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_510001.png"
+      },
+      {
+        "slug": "margot-lucky-chest",
+        "title": "Margot Lucky Chest",
+        "local": "/images/icons/kingshotwiki/chest/margot-lucky-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_600040.png"
+      },
+      {
+        "slug": "marlin-lucky-chest",
+        "title": "Marlin Lucky Chest",
+        "local": "/images/icons/kingshotwiki/chest/marlin-lucky-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_600015.png"
+      },
+      {
+        "slug": "mobilization-chest",
+        "title": "Mobilization Chest",
+        "local": "/images/icons/kingshotwiki/chest/mobilization-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_800015.png"
+      },
+      {
+        "slug": "ocean-construction-chest",
+        "title": "Ocean Construction Chest",
+        "local": "/images/icons/kingshotwiki/chest/ocean-construction-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_510011.png"
+      },
+      {
+        "slug": "ocean-fishing-chest",
+        "title": "Ocean Fishing Chest",
+        "local": "/images/icons/kingshotwiki/chest/ocean-fishing-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_510018.png"
+      },
+      {
+        "slug": "ocean-gear-chest",
+        "title": "Ocean Gear Chest",
+        "local": "/images/icons/kingshotwiki/chest/ocean-gear-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_510012.png"
+      },
+      {
+        "slug": "ocean-governor-chest",
+        "title": "Ocean Governor Chest",
+        "local": "/images/icons/kingshotwiki/chest/ocean-governor-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_510017.png"
+      },
+      {
+        "slug": "ocean-hero-chest",
+        "title": "Ocean Hero Chest",
+        "local": "/images/icons/kingshotwiki/chest/ocean-hero-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_510016.png"
+      },
+      {
+        "slug": "ocean-mastery-chest",
+        "title": "Ocean Mastery Chest",
+        "local": "/images/icons/kingshotwiki/chest/ocean-mastery-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_510015.png"
+      },
+      {
+        "slug": "ocean-research-chest",
+        "title": "Ocean Tech Chest",
+        "local": "/images/icons/kingshotwiki/chest/ocean-research-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_510010.png"
+      },
+      {
+        "slug": "ocean-resource-chest",
+        "title": "Ocean Resource Chest",
+        "local": "/images/icons/kingshotwiki/chest/ocean-resource-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_510008.png"
+      },
+      {
+        "slug": "ocean-speedup-chest",
+        "title": "Ocean Speedup Chest",
+        "local": "/images/icons/kingshotwiki/chest/ocean-speedup-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_510013.png"
+      },
+      {
+        "slug": "ocean-training-chest",
+        "title": "Ocean Training Chest",
+        "local": "/images/icons/kingshotwiki/chest/ocean-training-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_510009.png"
+      },
+      {
+        "slug": "ocean-xp-chest",
+        "title": "Ocean XP Chest",
+        "local": "/images/icons/kingshotwiki/chest/ocean-xp-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_510014.png"
+      },
+      {
+        "slug": "pet-advancement-materials-custom-chest",
+        "title": "Pet Advancement Materials Custom Chest",
+        "local": "/images/icons/kingshotwiki/chest/pet-advancement-materials-custom-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_510019.png"
+      },
+      {
+        "slug": "petra-lucky-chest",
+        "title": "Petra Lucky Chest",
+        "local": "/images/icons/kingshotwiki/chest/petra-lucky-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_600017.png"
+      },
+      {
+        "slug": "praetoria-chest",
+        "title": "Praetoria Chest",
+        "local": "/images/icons/kingshotwiki/chest/praetoria-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_620007.png"
+      },
+      {
+        "slug": "precious-keepsake",
+        "title": "Precious Keepsake",
+        "local": "/images/icons/kingshotwiki/chest/precious-keepsake.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_600009.png"
+      },
+      {
+        "slug": "random-governor-charm-material-chest",
+        "title": "Random Governor Charm Material Chest",
+        "local": "/images/icons/kingshotwiki/chest/random-governor-charm-material-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_510003.png"
+      },
+      {
+        "slug": "reserve-chest",
+        "title": "Reserve Chest",
+        "local": "/images/icons/kingshotwiki/chest/reserve-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/04/item_icon_700022.png"
+      },
+      {
+        "slug": "rosa-lucky-chest",
+        "title": "Rosa Lucky Chest",
+        "local": "/images/icons/kingshotwiki/chest/rosa-lucky-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_600041.png"
+      },
+      {
+        "slug": "saul-lucky-chest",
+        "title": "Saul Lucky Chest",
+        "local": "/images/icons/kingshotwiki/chest/saul-lucky-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_600010.png"
+      },
+      {
+        "slug": "splendid-trial-chest",
+        "title": "Splendid Trial Chest",
+        "local": "/images/icons/kingshotwiki/chest/splendid-trial-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_510025.png"
+      },
+      {
+        "slug": "thrud-lucky-chest",
+        "title": "Thrud Lucky chest",
+        "local": "/images/icons/kingshotwiki/chest/thrud-lucky-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_600042.png"
+      },
+      {
+        "slug": "treasure-hunt-chest",
+        "title": "Treasure Hunt Chest",
+        "local": "/images/icons/kingshotwiki/chest/treasure-hunt-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_510006.png"
+      },
+      {
+        "slug": "trial-chest",
+        "title": "Trial Chest",
+        "local": "/images/icons/kingshotwiki/chest/trial-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_510025.png"
+      },
+      {
+        "slug": "true-gold-weekly-card-chest",
+        "title": "Truegold Weekly Card Chest",
+        "local": "/images/icons/kingshotwiki/chest/true-gold-weekly-card-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_510007.png"
+      },
+      {
+        "slug": "truegold-chest",
+        "title": "Truegold Chest",
+        "local": "/images/icons/kingshotwiki/chest/truegold-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_720002.png"
+      },
+      {
+        "slug": "vivian-lucky-chest",
+        "title": "Vivian Lucky chest",
+        "local": "/images/icons/kingshotwiki/chest/vivian-lucky-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_600049.png"
+      },
+      {
+        "slug": "war-chant-custom-chest",
+        "title": "War Chant Custom Chest",
+        "local": "/images/icons/kingshotwiki/chest/war-chant-custom-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_501012.png"
+      },
+      {
+        "slug": "zoe-lucky-chest",
+        "title": "Zoe Lucky Chest",
+        "local": "/images/icons/kingshotwiki/chest/zoe-lucky-chest.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_600014.png"
+      }
+    ],
+    "hero": [
+      {
+        "slug": "epic-conquest-skill-book",
+        "title": "Epic Conquest Skill Book",
+        "local": "/images/icons/kingshotwiki/hero/epic-conquest-skill-book.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_500201.png"
+      },
+      {
+        "slug": "epic-expedition-skill-book",
+        "title": "Epic  Expedition Skill Book",
+        "local": "/images/icons/kingshotwiki/hero/epic-expedition-skill-book.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_500211.png"
+      },
+      {
+        "slug": "epic-general-hero-shard",
+        "title": "Epic General Hero Shard",
+        "local": "/images/icons/kingshotwiki/hero/epic-general-hero-shard.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_500221-1.png"
+      },
+      {
+        "slug": "hero-xp",
+        "title": "Hero XP",
+        "local": "/images/icons/kingshotwiki/hero/hero-xp.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_107-1.png"
+      },
+      {
+        "slug": "mythic-conquest-skill-book",
+        "title": "Mythic Conquest Skill Book",
+        "local": "/images/icons/kingshotwiki/hero/mythic-conquest-skill-book.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_500200.png"
+      },
+      {
+        "slug": "mythic-expedition-skill-book",
+        "title": "Mythic  Expedition Skill Book",
+        "local": "/images/icons/kingshotwiki/hero/mythic-expedition-skill-book.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_500210.png"
+      },
+      {
+        "slug": "mythic-general-hero-shard",
+        "title": "Mythic General Hero Shard",
+        "local": "/images/icons/kingshotwiki/hero/mythic-general-hero-shard.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_500220-1.png"
+      },
+      {
+        "slug": "rare-conquest-skill-book",
+        "title": "Rare Conquest Skill Book",
+        "local": "/images/icons/kingshotwiki/hero/rare-conquest-skill-book.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_500202.png"
+      },
+      {
+        "slug": "rare-expedition-skill-book",
+        "title": "Rare  Expedition Skill Book",
+        "local": "/images/icons/kingshotwiki/hero/rare-expedition-skill-book.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_500212.png"
+      },
+      {
+        "slug": "rare-general-hero-shard",
+        "title": "Rare General Hero Shard",
+        "local": "/images/icons/kingshotwiki/hero/rare-general-hero-shard.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2025/10/item_icon_500222-1.png"
+      }
+    ],
+    "master": [
+      {
+        "slug": "adventure-supply",
+        "title": "Adventure Supply",
+        "local": "/images/icons/kingshotwiki/master/adventure-supply.png",
+        "source": "https://got-global-wiki.s3.us-west-1.amazonaws.com/wp-content/uploads/2026/05/item_icon_570310.png"
+      }
+    ]
+  }
+}

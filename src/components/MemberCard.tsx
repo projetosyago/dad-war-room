@@ -47,8 +47,11 @@ export function MemberCard({ m, index = 0, heroSlug, avatarUrl, to }: MemberCard
   const isOut = m.status === 'temporary_out'
   const rankClass = RANK_CLASS[m.rank]
   // Resolver order: explicit avatarUrl > heroSlug prop > rank-default hero.
+  // Hero slug uses the scraped portrait library (.webp), aligned with
+  // heroAvatar.ts.
   const portrait =
-    avatarUrl ?? `/images/heroes/${heroSlug ?? DEFAULT_HERO_BY_RANK[m.rank]}.png`
+    avatarUrl ??
+    `/images/icons/kingshot/heroes/${heroSlug ?? DEFAULT_HERO_BY_RANK[m.rank]}.webp`
 
   // The clickable variant wraps the card body in a Link with a slightly
   // bigger hover lift + gold border emphasis. AdminMembers (no `to` prop)

@@ -386,7 +386,40 @@
         "items": "Elementos",
         "buildings": "- Edificios",
         "events": "Eventos",
-        "heroes": "Héroes"
+        "heroes": "Héroes",
+        "heroesRare": "Heroes — Rare",
+        "heroesEpic": "Heroes — Epic",
+        "heroesMythicGen1": "Heroes — Mythic Gen 1",
+        "heroesMythicGen2": "Heroes — Mythic Gen 2",
+        "heroesMythicGen3": "Heroes — Mythic Gen 3",
+        "heroesMythicGen4": "Heroes — Mythic Gen 4",
+        "heroesMythicGen5": "Heroes — Mythic Gen 5",
+        "heroesMythicGen6": "Heroes — Mythic Gen 6",
+        "heroesMythicGen7": "Heroes — Mythic Gen 7",
+        "pets": "Pets",
+        "masters": "Masters",
+        "kingshotBuildings": "Buildings (Kingshot)",
+        "kingshotEvents": "Events (Kingshot)",
+        "kingshotItems": "Items (Kingshot)",
+        "warAcademy": "War Academy",
+        "research": "Research",
+        "wikiShards": "Hero Shards (wiki)",
+        "wikiSkillBooks": "Skill Books (wiki)",
+        "wikiWidgets": "Widget Chests (wiki)",
+        "wikiMisc": "Misc Items (wiki)",
+        "wikiBasicResource": "Basic Resource (wiki)",
+        "wikiPet": "Pet items (wiki)",
+        "wikiTownSkin": "Town Skins (wiki)",
+        "wikiMarchSkin": "March Skins (wiki)",
+        "wikiAvatarFrame": "Avatar Frames (wiki)",
+        "wikiNameplate": "Nameplates (wiki)",
+        "wikiTeleportSkin": "Teleport Skins (wiki)",
+        "wikiTeleporter": "Teleporters (wiki)",
+        "wikiBuff": "Buffs (wiki)",
+        "wikiTruegold": "Truegold (wiki)",
+        "wikiChest": "Chests (wiki)",
+        "wikiHero": "Hero items (wiki)",
+        "wikiMaster": "Master items (wiki)"
       },
       "currentIcon": "Icono actual",
       "noOverride": "no sobrescribir",
@@ -395,7 +428,13 @@
       "customUrlLabel": "O pega una URL personalizada (cualquier imagen en la web)",
       "customUrlPlaceholder": "https://wiki.kingshot.gg/.../some-icon.png",
       "apply": "Aplicar",
-      "uploadOwn": "Sube tu propia imagen"
+      "uploadOwn": "Sube tu propia imagen",
+      "searchPlaceholder": "Search {{count}} icons…",
+      "allGroups": "All",
+      "matchCount": "{{count}} matching",
+      "collapse": "Less",
+      "expand": "Show more",
+      "noMatch": "No icons match this search."
     },
     "masters": {
       "backToCatalogue": "Volver a Catálogo",
@@ -1529,6 +1568,90 @@
         "subtitle": "Firefox doesn't install web apps natively on desktop. Open in Chrome or Edge for one-click install.",
         "step1": "On Android Firefox: tap the menu (three dots) → Install.",
         "step2": "On desktop: bookmark the page, or open it in Chrome / Edge to install."
+      }
+    }
+  },
+  "heroes": {
+    "rarity": {
+      "rare": "Raro",
+      "epic": "Épico",
+      "mythic": "Mítico"
+    },
+    "gen": {
+      "label": "Generación {{gen}}"
+    },
+    "openCardAria": "Abrir {{name}}",
+    "detail": {
+      "unlock": "Unlock",
+      "notFoundTitle": "Hero not found",
+      "notFoundSubtitle": "We couldn't locate this hero in the roster.",
+      "returnToList": "Back to heroes",
+      "gen": "Gen {{gen}}",
+      "tab": {
+        "conquest": "Conquest",
+        "expedition": "Expedition"
+      },
+      "baseStats": "Base Stats",
+      "stat": {
+        "atk": "ATK",
+        "def": "DEF",
+        "hp": "HP"
+      },
+      "conquestSkills": "Conquest Skills",
+      "expeditionSkills": "Expedition Skills",
+      "expeditionBonuses": "Expedition Bonuses",
+      "upgradePreview": "Upgrade Preview",
+      "exclusiveGear": "Exclusive Gear",
+      "gearMaxStats": "Max Level Stats",
+      "gearBonuses": "Bonuses",
+      "gearSkills": "Gear Skills",
+      "upgradeCosts": "Upgrade Costs",
+      "upgradeCostsPlaceholder": "Costs will be added soon.",
+      "sources": "Sources",
+      "rarity": {
+        "rare": "Rare",
+        "epic": "Epic",
+        "mythic": "Mythic"
+      },
+      "mode": {
+        "conquest": "Conquest",
+        "expedition": "Expedition"
+      },
+      "gearStat": {
+        "power": "Power",
+        "heroAtk": "Hero ATK",
+        "heroDef": "Hero DEF",
+        "heroHp": "Hero HP",
+        "escortAtk": "Escort ATK",
+        "escortDef": "Escort DEF",
+        "escortHp": "Escort HP"
+      },
+      "cost": {
+        "starsTotal": "Star Shards (★5)",
+        "skillBooksTotal": "Skill Books",
+        "widgetsTotal": "Widgets (max gear)",
+        "skillBooksMixed": "mixed conquest + expedition",
+        "noWidgets": "Widgets — Mythic only",
+        "starUpgrades": "Star Upgrades",
+        "shards": "shards",
+        "totalKnown": "Total to ★5 (known): {{qty}} {{item}}",
+        "tier6Tbc": "★6 cost not yet published by kingshotdata — Salles will update.",
+        "skillUpgrades": "Skill Upgrades",
+        "skillItems": "{{conquest}} & {{expedition}}",
+        "books": "books per skill",
+        "skillTotalBreakdown": "Per skill: {{per}} books. Conquest ({{cqty}}× {{citem}}) + Expedition ({{eqty}}× {{eitem}}) = {{total}}",
+        "skillFootnote": "Quantities are the same across rarities — only the book item changes (Rare / Epic / Mythic × Conquest / Expedition).",
+        "widgetUpgrades": "Widget Upgrades",
+        "widgets": "widgets",
+        "widgetTotal": "Total to max gear: {{qty}} {{item}}",
+        "widgetSources": "Sources: Buccaneer Bounty event, Mystery Shop, Hall of Heroes, Special Events, Packs.",
+        "col": {
+          "tier": "Tier",
+          "qty": "Qty",
+          "cumulative": "Cumulative"
+        },
+        "tbc": "TBC",
+        "dataSource": "Quantities from kingshotdata.com (hero-shards, widgets) and kingshotwiki.com (skill books), confirmed by Salles 2026-06-17."
       }
     }
   }

@@ -16,8 +16,56 @@ import { differenceInCalendarDays, format } from 'date-fns'
 import { useUpcomingMilestones } from '../../hooks/useMilestones'
 import type { MilestoneCategory } from '../../types/domain'
 import { ImageWithFallback } from '../ui/ImageWithFallback'
-import { resolveMilestoneIcon } from '../../lib/milestoneIcon'
+import { resolveMilestoneIcon, type HeroPortrait } from '../../lib/milestoneIcon'
 import { cn } from '../../lib/cn'
+
+/**
+ * Stack of 3-4 hero portraits, rendered overlapped for compactness — used
+ * when a milestone refers to a hero generation (e.g. "Generation 4 Heroes").
+ * Width grows with portrait count but stays bounded so the row layout doesn't
+ * jump. Each circle uses the same crimson ring that brands Mythic heroes
+ * across the rest of the app.
+ */
+function HeroStack({
+  portraits,
+  altLabel,
+  tint,
+}: {
+  portraits: HeroPortrait[]
+  altLabel: string
+  tint: string
+}) {
+  // Cap at 4 — beyond that the stack gets noisy. The full list shows up on
+  // the detail page anyway.
+  const shown = portraits.slice(0, 4)
+  return (
+    <div
+      className="relative shrink-0 flex items-center"
+      style={{ width: `${28 + (shown.length - 1) * 16}px`, height: 40 }}
+      aria-label={altLabel}
+    >
+      {shown.map((p, i) => (
+        <span
+          key={p.slug}
+          className="absolute inline-flex h-10 w-10 sm:h-11 sm:w-11 rounded-full border overflow-hidden bg-bg-deep"
+          style={{
+            left: `${i * 16}px`,
+            zIndex: shown.length - i,
+            borderColor: `${tint}88`,
+            boxShadow: `0 0 8px -2px ${tint}66`,
+          }}
+        >
+          <ImageWithFallback
+            src={p.src}
+            alt={p.slug}
+            className="h-full w-full object-cover"
+            fallbackClassName="h-full w-full bg-bg-card"
+          />
+        </span>
+      ))}
+    </div>
+  )
+}
 
 const CATEGORY_ICON: Record<MilestoneCategory, typeof Shield> = {
   truegold: Sparkle,
@@ -139,26 +187,40 @@ export function KingdomTimelineCard() {
                 to={`/timeline/${m.slug}`}
                 className="flex items-center gap-3 px-5 sm:px-6 py-3 hover:bg-gold/[0.04] transition-colors group"
               >
-                <span
-                  className="shrink-0 h-10 w-10 sm:h-11 sm:w-11 rounded-lg flex items-center justify-center border overflow-hidden"
-                  style={{
-                    background: `${tint}1A`,
-                    borderColor: `${tint}55`,
-                    color: tint,
-                    boxShadow: `0 0 10px -4px ${tint}55`,
-                  }}
-                >
-                  {iconHit ? (
-                    <ImageWithFallback
-                      src={iconHit.src}
-                      alt={CATEGORY_LABEL[m.category]}
-                      className="h-7 w-7 sm:h-8 sm:w-8 object-contain"
-                      fallbackClassName="h-7 w-7"
-                    />
-                  ) : (
-                    <Icon size={18} weight="duotone" />
-                  )}
-                </span>
+                {/* Icon / portrait stack.
+                    When the resolver finds a "Gen N" milestone the heroes
+                    array carries 3-4 portraits — we render them as a small
+                    overlapping stack instead of a single avatar so the user
+                    immediately sees who's coming. Single-hit milestones keep
+                    the original framed-icon look. */}
+                {iconHit?.heroes && iconHit.heroes.length > 1 ? (
+                  <HeroStack
+                    portraits={iconHit.heroes}
+                    altLabel={CATEGORY_LABEL[m.category]}
+                    tint={tint}
+                  />
+                ) : (
+                  <span
+                    className="shrink-0 h-10 w-10 sm:h-11 sm:w-11 rounded-lg flex items-center justify-center border overflow-hidden"
+                    style={{
+                      background: `${tint}1A`,
+                      borderColor: `${tint}55`,
+                      color: tint,
+                      boxShadow: `0 0 10px -4px ${tint}55`,
+                    }}
+                  >
+                    {iconHit ? (
+                      <ImageWithFallback
+                        src={iconHit.src}
+                        alt={CATEGORY_LABEL[m.category]}
+                        className="h-7 w-7 sm:h-8 sm:w-8 object-contain"
+                        fallbackClassName="h-7 w-7"
+                      />
+                    ) : (
+                      <Icon size={18} weight="duotone" />
+                    )}
+                  </span>
+                )}
                 <div className="min-w-0 flex-1">
                   <div className="text-sm text-ink-cream font-medium leading-tight truncate">
                     {m.name}

@@ -1,258 +1,221 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
+import { User } from '@phosphor-icons/react'
 import {
-  Sword,
-  Horse,
-  Crosshair as BowIcon,
-  User,
-  WarningCircle,
-  Crown,
-} from '@phosphor-icons/react'
-import { supabase } from '../lib/supabase'
-import { ImageWithFallback } from '../components/ui/ImageWithFallback'
+  RARE_HEROES,
+  EPIC_HEROES,
+  MYTHIC_GENERATIONS,
+  type RosterEntry,
+} from '../data/heroes-roster'
+import heroesData from '../data/heroes-data.json'
 import { cn } from '../lib/cn'
 
-type Branch = 'infantry' | 'cavalry' | 'archer'
+/**
+ * Heroes catalogue.
+ *
+ * Wave 16 redesign per Salles:
+ *   - No descriptive subtitle ("33 heroes catalogued…") — gone.
+ *   - Grouped by rarity: Rare → Epic → Mythic.
+ *   - Mythic subdivided into Generations 1-7.
+ *   - Each tile: portrait + name, links to /heroes/{slug} detail page.
+ *
+ * Data flow:
+ *   - Roster + display order: src/data/heroes-roster.ts (canonical, hand-maintained)
+ *   - Names + portraits: src/data/heroes-data.json (scraped from kingshotdata.com)
+ *   - Portrait file path: /images/icons/kingshot/heroes/{slug}.webp
+ *     (Amane is aliased from mikoto.webp — see scrape-hero-details.mjs)
+ */
 
-interface HeroRow {
-  id: string
-  slug: string
-  name: string
-  generation: number
-  preferred_branch: Branch | null
-  portrait_url: string | null
-  active: boolean
-  display_order: number
-  role: string | null
-}
+type HeroJson = { name?: string; portrait?: string | null }
+const heroes = heroesData as Record<string, HeroJson>
 
-const BRANCH_ICON: Record<Branch, typeof Sword> = {
-  infantry: Sword,
-  cavalry: Horse,
-  archer: BowIcon,
+/** Tone class per rarity — drives card border + glow accent. */
+const RARITY_TONE: Record<'rare' | 'epic' | 'mythic', { tile: string; accent: string }> = {
+  rare: {
+    tile: 'hover:border-success/55 hover:shadow-[0_0_22px_-6px_rgba(127,192,138,0.50)]',
+    accent: 'text-success',
+  },
+  epic: {
+    tile: 'hover:border-[rgba(180,165,255,0.6)] hover:shadow-[0_0_22px_-6px_rgba(155,140,255,0.50)]',
+    accent: 'text-[rgba(180,165,255,1)]',
+  },
+  mythic: {
+    tile: 'hover:border-crimson-glow/65 hover:shadow-[0_0_22px_-6px_rgba(226,86,86,0.55)]',
+    accent: 'text-crimson-glow',
+  },
 }
 
 export function Heroes() {
   const { t } = useTranslation()
-  // Branch labels are looked up at render time inside HeroCard via t() — this
-  // outer copy was unused; kept the t hook in scope.
-  const [heroes, setHeroes] = useState<HeroRow[]>([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<Error | null>(null)
-  const [genFilter, setGenFilter] = useState<number | 'all'>('all')
-
-  useEffect(() => {
-    let alive = true
-    ;(async () => {
-      try {
-        setLoading(true)
-        setError(null)
-        const { data, error: e } = await supabase
-          .from('heroes')
-          .select(
-            'id, slug, name, generation, preferred_branch, portrait_url, active, display_order, role',
-          )
-          .eq('active', true)
-          .order('generation', { ascending: true })
-          .order('display_order', { ascending: true })
-          .order('name', { ascending: true })
-        if (e) throw e
-        if (alive) setHeroes((data ?? []) as HeroRow[])
-      } catch (e) {
-        if (alive) setError(e as Error)
-      } finally {
-        if (alive) setLoading(false)
-      }
-    })()
-    return () => {
-      alive = false
-    }
-  }, [])
-
-  const generations = useMemo(() => {
-    const set = new Set<number>()
-    for (const h of heroes) set.add(h.generation)
-    return Array.from(set).sort((a, b) => a - b)
-  }, [heroes])
-
-  const visible = useMemo(
-    () => (genFilter === 'all' ? heroes : heroes.filter((h) => h.generation === genFilter)),
-    [heroes, genFilter],
-  )
-
   return (
     <div className="container-wide pt-5 pb-12 sm:pt-10 sm:pb-16">
+      {/* Page header — centered eyebrow + title only. Subtitle removed per Salles. */}
       <motion.header
         initial={{ opacity: 0, y: -6 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="mb-5 sm:mb-6"
+        className="mb-8 sm:mb-10 text-center"
       >
-        <div className="eyebrow mb-1 text-center">{t('catalogue.eyebrow')}</div>
-        <h1 className="font-display text-2xl sm:text-3xl text-ink-cream tracking-wider leading-none text-center">
+        <div className="eyebrow mb-1">{t('catalogue.eyebrow')}</div>
+        <h1 className="font-display text-2xl sm:text-3xl text-ink-cream tracking-wider leading-none">
           {t('catalogue.heroes.title')}
         </h1>
-        <p className="text-xs sm:text-sm text-ink-mute mt-1.5">
-          {loading
-            ? t('catalogue.loading')
-            : t('catalogue.heroes.summary', { heroCount: heroes.length, genCount: generations.length })}
-        </p>
-        {error && (
-          <div className="callout-warn mt-3 flex items-start gap-2 text-sm">
-            <WarningCircle size={14} weight="duotone" className="text-danger shrink-0 mt-0.5" />
-            <span>{error.message}</span>
-          </div>
-        )}
       </motion.header>
 
-      {generations.length > 0 && (
-        <div className="flex flex-wrap items-center gap-2 mb-5">
-          <FilterChip active={genFilter === 'all'} onClick={() => setGenFilter('all')}>
-            {t('catalogue.filter.all')}
-          </FilterChip>
-          {generations.map((gen) => (
-            <FilterChip key={gen} active={genFilter === gen} onClick={() => setGenFilter(gen)}>
-              {t('catalogue.filter.gen', { gen })}
-            </FilterChip>
-          ))}
-        </div>
-      )}
+      {/* Section: Rare */}
+      <RaritySection rarity="rare" title={t('heroes.rarity.rare')} heroes={RARE_HEROES} />
 
-      {loading ? (
-        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
-          {Array.from({ length: 12 }).map((_, i) => (
-            <div
-              key={i}
-              className="card-hero aspect-[3/4] animate-pulse"
-              style={{ animationDelay: `${i * 60}ms` }}
-            />
+      {/* Section: Epic */}
+      <RaritySection rarity="epic" title={t('heroes.rarity.epic')} heroes={EPIC_HEROES} />
+
+      {/* Section: Mythic — single bucket header + nested gen subgroups */}
+      <section className="mt-10 sm:mt-12">
+        <SectionHeading title={t('heroes.rarity.mythic')} rarity="mythic" />
+        <div className="space-y-7 sm:space-y-9 mt-5">
+          {MYTHIC_GENERATIONS.map((g, idx) => (
+            <motion.div
+              key={g.gen}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: idx * 0.04 }}
+            >
+              <div className="mb-3 flex items-center gap-3">
+                <span className="font-display-clean text-[11px] sm:text-[12px] uppercase tracking-[0.22em] text-crimson-glow/90">
+                  {t('heroes.gen.label', { gen: g.gen })}
+                </span>
+                <span aria-hidden className="flex-1 h-px bg-gradient-to-r from-crimson/35 to-transparent" />
+              </div>
+              <HeroGrid heroes={g.heroes} rarity="mythic" />
+            </motion.div>
           ))}
         </div>
-      ) : visible.length === 0 ? (
-        <EmptyState
-          icon={<Crown size={28} weight="duotone" className="text-gold-soft" />}
-          title={
-            genFilter === 'all'
-              ? t('catalogue.heroes.empty.all')
-              : t('catalogue.heroes.empty.gen', { gen: genFilter })
-          }
-          subtitle={t('catalogue.heroes.empty.subtitle')}
-        />
-      ) : (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.4 }}
-          className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4"
-        >
-          {visible.map((hero) => (
-            <HeroCard key={hero.id} hero={hero} />
-          ))}
-        </motion.div>
-      )}
+      </section>
     </div>
   )
 }
 
-function HeroCard({ hero }: { hero: HeroRow }) {
+function RaritySection({
+  rarity,
+  title,
+  heroes,
+}: {
+  rarity: 'rare' | 'epic'
+  title: string
+  heroes: RosterEntry[]
+}) {
+  return (
+    <section className="mt-2 sm:mt-4">
+      <SectionHeading title={title} rarity={rarity} />
+      <div className="mt-4">
+        <HeroGrid heroes={heroes} rarity={rarity} />
+      </div>
+    </section>
+  )
+}
+
+function SectionHeading({
+  title,
+  rarity,
+}: {
+  title: string
+  rarity: 'rare' | 'epic' | 'mythic'
+}) {
+  const accent = RARITY_TONE[rarity].accent
+  return (
+    <div className="flex items-center gap-3">
+      <h2 className={cn('font-display text-lg sm:text-xl tracking-wider', accent)}>{title}</h2>
+      <span aria-hidden className="flex-1 h-px bg-gold/12" />
+    </div>
+  )
+}
+
+function HeroGrid({
+  heroes,
+  rarity,
+}: {
+  heroes: RosterEntry[]
+  rarity: 'rare' | 'epic' | 'mythic'
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.4 }}
+      className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4"
+    >
+      {heroes.map((h) => (
+        <HeroCard key={h.slug} entry={h} rarity={rarity} />
+      ))}
+    </motion.div>
+  )
+}
+
+function HeroCard({ entry, rarity }: { entry: RosterEntry; rarity: 'rare' | 'epic' | 'mythic' }) {
   const { t } = useTranslation()
-  const BRANCH_LABEL: Record<Branch, string> = {
-    infantry: t('catalogue.branch.infantry'),
-    cavalry: t('catalogue.branch.cavalry'),
-    archer: t('catalogue.branch.archer'),
-  }
-  const BranchIcon = hero.preferred_branch ? BRANCH_ICON[hero.preferred_branch] : null
+  const data = heroes[entry.slug]
+  const displayName = data?.name || entry.fallbackName
+  // Local portrait first (scraped from kingshotdata.com into kingshot/heroes/),
+  // remote source as a fallback if the local file ever drifts out of sync.
+  const localPortrait = `/images/icons/kingshot/heroes/${entry.slug}.webp`
+  const remotePortrait = data?.portrait || null
+  const tone = RARITY_TONE[rarity]
+
   return (
     <Link
-      to={`/heroes/${hero.slug}`}
-      className="card-hero group block hover:-translate-y-0.5 transition-transform"
-      aria-label={t('catalogue.heroes.openAria', { name: hero.name, gen: hero.generation })}
+      to={`/heroes/${entry.slug}`}
+      aria-label={t('heroes.openCardAria', { name: displayName })}
+      className={cn(
+        'group relative block aspect-[3/4] overflow-hidden rounded-2xl',
+        'border border-gold/15 bg-bg-card/40 backdrop-blur-sm transition-all duration-300',
+        tone.tile,
+      )}
     >
-      <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
-        {hero.portrait_url ? (
-          <ImageWithFallback
-            src={hero.portrait_url}
-            alt={hero.name}
-            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.04]"
-          />
-        ) : (
-          <div className="flex h-full w-full items-center justify-center bg-bg-card/60">
-            <User size={36} weight="duotone" className="text-gold-soft/60" />
-          </div>
-        )}
+      <Portrait local={localPortrait} remote={remotePortrait} alt={displayName} />
 
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent"
-        />
-
-        <span className="absolute top-2 left-2 badge-gold text-[9px] px-2 py-0.5">
-          {t('catalogue.genBadge', { gen: hero.generation })}
-        </span>
-
-        {BranchIcon && (
-          <span
-            className="absolute top-2 right-2 inline-flex h-7 w-7 items-center justify-center rounded-lg border border-gold/40 bg-bg-deep/70 text-gold-soft"
-            title={hero.preferred_branch ? BRANCH_LABEL[hero.preferred_branch] : undefined}
-          >
-            <BranchIcon size={14} weight="duotone" />
-          </span>
-        )}
-
-        <div className="absolute inset-x-0 bottom-0 p-2.5">
-          <div className="hero-title text-sm sm:text-base leading-tight truncate">
-            {hero.name}
-          </div>
-          {hero.role && (
-            <div className="text-[10px] text-ink-mute mt-0.5 truncate">{hero.role}</div>
-          )}
+      {/* Bottom-overlay scrim + name */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"
+      />
+      <div className="absolute inset-x-0 bottom-0 p-2.5">
+        <div className="hero-title text-sm sm:text-base leading-tight truncate text-center">
+          {displayName}
         </div>
       </div>
     </Link>
   )
 }
 
-function FilterChip({
-  active,
-  onClick,
-  children,
-}: {
-  active: boolean
-  onClick: () => void
-  children: React.ReactNode
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      className={cn(
-        'inline-flex items-center rounded-full border px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wider transition-colors',
-        active
-          ? 'bg-gold/20 border-gold/55 text-gold'
-          : 'border-gold/15 bg-bg-card/40 text-ink-mute hover:border-gold/35 hover:text-gold-soft',
-      )}
-    >
-      {children}
-    </button>
-  )
-}
+function Portrait({ local, remote, alt }: { local: string; remote: string | null; alt: string }) {
+  // State-driven fallback chain: try local first, then remote, then a styled
+  // empty frame with a User glyph. Keeps the React tree honest — no imperative
+  // DOM injection.
+  type Stage = 'local' | 'remote' | 'fallback'
+  const [stage, setStage] = useState<Stage>('local')
 
-function EmptyState({
-  icon,
-  title,
-  subtitle,
-}: {
-  icon: React.ReactNode
-  title: string
-  subtitle?: string
-}) {
+  const onError = () => {
+    if (stage === 'local' && remote) setStage('remote')
+    else setStage('fallback')
+  }
+
+  if (stage === 'fallback') {
+    return (
+      <div className="flex h-full w-full items-center justify-center bg-bg-card/60">
+        <User size={36} weight="duotone" className="text-gold-soft/60" />
+      </div>
+    )
+  }
+
   return (
-    <div className="card-hero flex flex-col items-center justify-center gap-3 py-10 px-6 text-center">
-      <span className="icon-frame icon-frame--sm">{icon}</span>
-      <div className="hero-title text-base sm:text-lg">{title}</div>
-      {subtitle && <p className="text-xs text-ink-mute max-w-md">{subtitle}</p>}
-    </div>
+    <img
+      src={stage === 'local' ? local : (remote as string)}
+      alt={alt}
+      loading="lazy"
+      decoding="async"
+      onError={onError}
+      className="h-full w-full object-cover select-none transition-transform duration-300 group-hover:scale-[1.04]"
+    />
   )
 }

@@ -386,7 +386,40 @@
         "items": "Itens",
         "buildings": "Construções",
         "events": "Eventos",
-        "heroes": "Heróis"
+        "heroes": "Heróis",
+        "heroesRare": "Heróis — Raros",
+        "heroesEpic": "Heróis — Épicos",
+        "heroesMythicGen1": "Heróis — Místicos Gen 1",
+        "heroesMythicGen2": "Heróis — Místicos Gen 2",
+        "heroesMythicGen3": "Heróis — Místicos Gen 3",
+        "heroesMythicGen4": "Heróis — Místicos Gen 4",
+        "heroesMythicGen5": "Heróis — Místicos Gen 5",
+        "heroesMythicGen6": "Heróis — Místicos Gen 6",
+        "heroesMythicGen7": "Heróis — Místicos Gen 7",
+        "pets": "Pets",
+        "masters": "Mestres",
+        "kingshotBuildings": "Construções (Kingshot)",
+        "kingshotEvents": "Eventos (Kingshot)",
+        "kingshotItems": "Itens (Kingshot)",
+        "warAcademy": "Academia de Guerra",
+        "research": "Pesquisas",
+        "wikiShards": "Hero Shards (wiki)",
+        "wikiSkillBooks": "Skill Books (wiki)",
+        "wikiWidgets": "Baús de Widget (wiki)",
+        "wikiMisc": "Itens diversos (wiki)",
+        "wikiBasicResource": "Recursos básicos (wiki)",
+        "wikiPet": "Itens de Pet (wiki)",
+        "wikiTownSkin": "Skins da Cidade (wiki)",
+        "wikiMarchSkin": "Skins de March (wiki)",
+        "wikiAvatarFrame": "Avatares (wiki)",
+        "wikiNameplate": "Nameplates (wiki)",
+        "wikiTeleportSkin": "Skins de Teleporte (wiki)",
+        "wikiTeleporter": "Teleporters (wiki)",
+        "wikiBuff": "Buffs (wiki)",
+        "wikiTruegold": "Truegold (wiki)",
+        "wikiChest": "Baús (wiki)",
+        "wikiHero": "Itens de Herói (wiki)",
+        "wikiMaster": "Itens de Mestre (wiki)"
       },
       "currentIcon": "Ícone atual",
       "noOverride": "sem override",
@@ -395,7 +428,13 @@
       "customUrlLabel": "Ou cole uma URL personalizada (qualquer imagem da web)",
       "customUrlPlaceholder": "https://wiki.kingshot.gg/.../some-icon.png",
       "apply": "Aplicar",
-      "uploadOwn": "Ou envie sua própria imagem"
+      "uploadOwn": "Ou envie sua própria imagem",
+      "searchPlaceholder": "Buscar {{count}} ícones…",
+      "allGroups": "Todos",
+      "matchCount": "{{count}} encontrado(s)",
+      "collapse": "Menos",
+      "expand": "Mostrar mais",
+      "noMatch": "Nenhum ícone para essa busca."
     },
     "masters": {
       "backToCatalogue": "Voltar ao Catálogo",
@@ -1529,6 +1568,90 @@
         "subtitle": "Firefox desktop não instala web apps nativamente. Abra no Chrome ou Edge para instalar em um clique.",
         "step1": "No Firefox Android: menu (três pontos) → Instalar.",
         "step2": "No desktop: salve nos favoritos ou abra no Chrome / Edge para instalar."
+      }
+    }
+  },
+  "heroes": {
+    "rarity": {
+      "rare": "Raro",
+      "epic": "Épico",
+      "mythic": "Místico"
+    },
+    "gen": {
+      "label": "Geração {{gen}}"
+    },
+    "openCardAria": "Abrir {{name}}",
+    "detail": {
+      "unlock": "Como obter",
+      "notFoundTitle": "Herói não encontrado",
+      "notFoundSubtitle": "Não conseguimos localizar este herói no roster.",
+      "returnToList": "Voltar para heróis",
+      "gen": "Gen {{gen}}",
+      "tab": {
+        "conquest": "Conquista",
+        "expedition": "Expedição"
+      },
+      "baseStats": "Stats base",
+      "stat": {
+        "atk": "ATK",
+        "def": "DEF",
+        "hp": "HP"
+      },
+      "conquestSkills": "Habilidades de Conquista",
+      "expeditionSkills": "Habilidades de Expedição",
+      "expeditionBonuses": "Bônus de Expedição",
+      "upgradePreview": "Prévia de upgrade",
+      "exclusiveGear": "Equipamento Exclusivo",
+      "gearMaxStats": "Stats no nível máximo",
+      "gearBonuses": "Bônus",
+      "gearSkills": "Habilidades do equipamento",
+      "upgradeCosts": "Custos de Upgrade",
+      "upgradeCostsPlaceholder": "Os custos serão adicionados em breve.",
+      "sources": "Como obter",
+      "rarity": {
+        "rare": "Raro",
+        "epic": "Épico",
+        "mythic": "Místico"
+      },
+      "mode": {
+        "conquest": "Conquista",
+        "expedition": "Expedição"
+      },
+      "gearStat": {
+        "power": "Poder",
+        "heroAtk": "ATK herói",
+        "heroDef": "DEF herói",
+        "heroHp": "HP herói",
+        "escortAtk": "ATK escolta",
+        "escortDef": "DEF escolta",
+        "escortHp": "HP escolta"
+      },
+      "cost": {
+        "starsTotal": "Star Shards (★5)",
+        "skillBooksTotal": "Livros de Habilidade",
+        "widgetsTotal": "Widgets (gear máx)",
+        "skillBooksMixed": "conquista + expedição",
+        "noWidgets": "Widgets — só Místicos",
+        "starUpgrades": "Upgrade de Estrelas",
+        "shards": "shards",
+        "totalKnown": "Total até ★5 (conhecido): {{qty}} {{item}}",
+        "tier6Tbc": "Custo do ★6 ainda não publicado — Salles vai atualizar.",
+        "skillUpgrades": "Upgrade de Habilidades",
+        "skillItems": "{{conquest}} & {{expedition}}",
+        "books": "livros por habilidade",
+        "skillTotalBreakdown": "Por habilidade: {{per}} livros. Conquista ({{cqty}}× {{citem}}) + Expedição ({{eqty}}× {{eitem}}) = {{total}}",
+        "skillFootnote": "Quantidades são iguais entre raridades — só muda o item (Raro / Épico / Místico × Conquista / Expedição).",
+        "widgetUpgrades": "Upgrade de Widgets",
+        "widgets": "widgets",
+        "widgetTotal": "Total para gear máx: {{qty}} {{item}}",
+        "widgetSources": "Fontes: evento Buccaneer Bounty, Mystery Shop, Hall of Heroes, eventos especiais, pacotes.",
+        "col": {
+          "tier": "Tier",
+          "qty": "Qtd",
+          "cumulative": "Acumulado"
+        },
+        "tbc": "TBC",
+        "dataSource": "Quantidades de kingshotdata.com (hero-shards, widgets) e kingshotwiki.com (skill books), confirmadas por Salles 17/06/2026."
       }
     }
   }

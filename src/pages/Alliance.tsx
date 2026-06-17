@@ -185,7 +185,7 @@ export function Alliance() {
           </div>
         </div>
 
-        <section className="card-hero">
+        <section id="announcements" className="card-hero scroll-mt-24">
           <div className="flex items-start gap-3 p-5 sm:p-6 pb-3">
             <span className="icon-frame icon-frame--sm text-gold-soft">
               <Megaphone size={18} weight="duotone" />

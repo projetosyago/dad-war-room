@@ -160,7 +160,11 @@ export function NotificationsPanel({ open, onClose }: NotificationsPanelProps) {
           type="button"
           onClick={() => {
             onClose()
-            navigate('/settings')
+            // Was a `/settings` placeholder. The real full-history view is the
+            // Announcements section on /alliance — same data, same hook
+            // (useMyNotifications). The hash triggers ScrollToTop to smooth-
+            // scroll to the section once Alliance mounts.
+            navigate('/alliance#announcements')
           }}
           className="text-[11px] font-semibold uppercase tracking-[0.18em] text-gold-soft hover:text-gold"
         >

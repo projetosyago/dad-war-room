@@ -126,7 +126,24 @@ export function BottomNav() {
   )
 }
 
-/** Spacer so page content doesn't sit under the bottom bar. */
+/** Spacer so page content doesn't sit under the bottom bar.
+ *
+ * Sizing logic — the fixed BottomNav above measures:
+ *   pt-1.5 (6px) + min-h-[58px] icon row + pb-safe (max(0.5rem, env(safe-area-inset-bottom)))
+ * On an iPhone Pro that's ~98px (6 + 58 + 34). The previous `h-[72px] pb-safe`
+ * relied on padding inside a 72px box, which under border-box meant the safe-area
+ * padding ATE INTO the spacer instead of extending it — so the last ~20-26px of
+ * page content rendered behind the nav on notched iPhones. Fix: use min-height
+ * (so the box can grow) and an additive calc that mirrors the nav exactly.
+ */
 export function BottomNavSpacer() {
-  return <div aria-hidden className="md:hidden h-[72px] pb-safe" />
+  return (
+    <div
+      aria-hidden
+      className="md:hidden"
+      style={{
+        minHeight: 'calc(64px + max(0.5rem, env(safe-area-inset-bottom)))',
+      }}
+    />
+  )
 }

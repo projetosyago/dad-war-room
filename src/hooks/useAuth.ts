@@ -84,12 +84,34 @@ export function useAuth(): AuthState & {
   // Initial load on mount + auth subscription — async fetch pattern, not a
   // render-loop. The new react-hooks/set-state-in-effect rule doesn't model this.
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    refresh()
+    let alive = true
+    ;(async () => {
+      try {
+        const { data: { user } } = await supabase.auth.getUser()
+        if (!alive) return
+        if (!user) {
+          setState(SIGNED_OUT)
+          return
+        }
+        const account = await getCurrentAccount()
+        if (!alive) return
+        const role: AccountRole | null = account?.role ?? null
+        setState({
+          status: 'signed-in',
+          user: { id: user.id, email: user.email ?? '' },
+          account,
+          role,
+          ...deriveFlags(role),
+        })
+      } catch {
+        if (alive) setState(SIGNED_OUT)
+      }
+    })()
     const { data: sub } = supabase.auth.onAuthStateChange(() => {
-      refresh()
+      if (alive) refresh()
     })
     return () => {
+      alive = false
       sub.subscription.unsubscribe()
     }
   }, [refresh])

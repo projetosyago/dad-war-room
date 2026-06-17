@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { useFieldArray, useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
 import {
   ArrowLeft,
   ArrowCounterClockwise,
@@ -29,11 +32,57 @@ import {
   reopenPoll,
   unarchivePoll,
 } from '../../repositories/polls'
-import type { Poll, PollStatus, PollType, ResultsVisibility } from '../../types/domain'
+import type { Poll, PollStatus, ResultsVisibility } from '../../types/domain'
 import { cn } from '../../lib/cn'
 
 const MIN_OPTIONS = 2
 const MAX_OPTIONS = 12
+
+// ── Form schema ──────────────────────────────────────────────────
+const pollFormSchema = z
+  .object({
+    title: z.string().trim().min(1, { message: 'required' }).max(140),
+    description: z.string().trim().max(2000).optional().or(z.literal('')),
+    type: z.enum(['single', 'multi']),
+    status: z.enum(['draft', 'open']),
+    opensAt: z.string().optional().or(z.literal('')),
+    closesAt: z.string().optional().or(z.literal('')),
+    resultsVisibility: z.enum(['during', 'after_close', 'admin_only']),
+    options: z
+      .array(z.object({ label: z.string() }))
+      .min(MIN_OPTIONS)
+      .max(MAX_OPTIONS),
+  })
+  .superRefine((data, ctx) => {
+    const trimmed = data.options.map((o) => o.label.trim()).filter(Boolean)
+    if (trimmed.length < MIN_OPTIONS) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['options'],
+        message: 'minOptions',
+      })
+    }
+    if (new Set(trimmed.map((o) => o.toLowerCase())).size !== trimmed.length) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['options'],
+        message: 'duplicates',
+      })
+    }
+  })
+
+type PollFormValues = z.infer<typeof pollFormSchema>
+
+const DEFAULT_FORM_VALUES: PollFormValues = {
+  title: '',
+  description: '',
+  type: 'single',
+  status: 'open',
+  opensAt: '',
+  closesAt: '',
+  resultsVisibility: 'during',
+  options: [{ label: '' }, { label: '' }],
+}
 
 type StatusFilter = 'all' | 'open' | 'closed' | 'draft' | 'archived'
 
@@ -60,16 +109,25 @@ export function AdminPolls() {
   const [feedback, setFeedback] = useState<string | null>(null)
   const [copiedId, setCopiedId] = useState<string | null>(null)
 
-  // ── New-poll form state ──────────────────────────────────────────
-  const [title, setTitle] = useState('')
-  const [description, setDescription] = useState('')
-  const [type, setType] = useState<PollType>('single')
-  const [status, setStatus] = useState<PollStatus>('open')
-  const [opensAt, setOpensAt] = useState('')
-  const [closesAt, setClosesAt] = useState('')
-  const [resultsVisibility, setResultsVisibility] = useState<ResultsVisibility>('during')
-  const [options, setOptions] = useState<string[]>(['', ''])
-  const [submitting, setSubmitting] = useState(false)
+  // ── New-poll form (react-hook-form + zod) ────────────────────────
+  const {
+    register,
+    handleSubmit,
+    control,
+    watch,
+    setValue,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm<PollFormValues>({
+    resolver: zodResolver(pollFormSchema),
+    mode: 'onTouched',
+    defaultValues: DEFAULT_FORM_VALUES,
+  })
+  const { fields: optionFields, append: appendOption, remove: removeOption } = useFieldArray({
+    control,
+    name: 'options',
+  })
+  const watchedType = watch('type')
 
   const filtered = polls.filter((p) => (filter === 'all' ? true : p.status === filter))
   const counts: Record<StatusFilter, number> = {
@@ -81,37 +139,30 @@ export function AdminPolls() {
   }
 
   function resetForm() {
-    setTitle('')
-    setDescription('')
-    setType('single')
-    setStatus('open')
-    setOpensAt('')
-    setClosesAt('')
-    setResultsVisibility('during')
-    setOptions(['', ''])
+    reset(DEFAULT_FORM_VALUES)
   }
 
-  async function submitNew(e: React.FormEvent) {
-    e.preventDefault()
-    if (submitting) return
+  /** Map zod error-message codes to localised strings. */
+  function optionsErrorMessage(): string | null {
+    const msg = errors.options?.message ?? errors.options?.root?.message
+    if (!msg) return null
+    if (msg === 'minOptions') return t('admin.polls.errors.minOptions', { min: MIN_OPTIONS })
+    if (msg === 'duplicates') return t('admin.polls.errors.duplicates')
+    return msg
+  }
+
+  const onSubmit = handleSubmit(async (values) => {
     setError(null); setFeedback(null)
-    const trimmed = options.map((o) => o.trim()).filter(Boolean)
-    if (trimmed.length < MIN_OPTIONS) {
-      setError(t('admin.polls.errors.minOptions', { min: MIN_OPTIONS })); return
-    }
-    if (new Set(trimmed.map((o) => o.toLowerCase())).size !== trimmed.length) {
-      setError(t('admin.polls.errors.duplicates')); return
-    }
-    setSubmitting(true)
+    const trimmed = values.options.map((o) => o.label.trim()).filter(Boolean)
     try {
       const created = await createPoll({
-        title: title.trim(),
-        description: description.trim() || undefined,
-        type,
-        status,
-        opensAt: opensAt ? new Date(opensAt).toISOString() : null,
-        closesAt: closesAt ? new Date(closesAt).toISOString() : null,
-        resultsVisibility,
+        title: values.title.trim(),
+        description: values.description?.trim() || undefined,
+        type: values.type,
+        status: values.status,
+        opensAt: values.opensAt ? new Date(values.opensAt).toISOString() : null,
+        closesAt: values.closesAt ? new Date(values.closesAt).toISOString() : null,
+        resultsVisibility: values.resultsVisibility,
         options: trimmed.map((label) => ({ label })),
       })
       setFeedback(t('admin.polls.feedback.created', { title: created.title, status: created.status }))
@@ -120,10 +171,8 @@ export function AdminPolls() {
       refetch()
     } catch (e) {
       setError(e instanceof Error ? e.message : t('admin.polls.errors.failedToCreate'))
-    } finally {
-      setSubmitting(false)
     }
-  }
+  })
 
   async function runAction(pollId: string, label: string, fn: () => Promise<void>) {
     setBusyId(pollId); setError(null); setFeedback(null)
@@ -192,16 +241,23 @@ export function AdminPolls() {
       </div>
 
       {showForm && (
-        <form onSubmit={submitNew} className="card-elev p-4 sm:p-6 mb-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <form onSubmit={onSubmit} className="card-elev p-4 sm:p-6 mb-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
           <h2 className="sm:col-span-2 font-display-clean text-base text-gold tracking-wider uppercase">{t('admin.polls.form.heading')}</h2>
 
           <label className="flex flex-col gap-1.5 sm:col-span-2 min-w-0">
             <span className="text-[11px] tracking-widest uppercase text-ink-mute">{t('admin.polls.form.titleLabel')}</span>
             <input
-              required value={title} onChange={(e) => setTitle(e.target.value)}
+              {...register('title')}
               placeholder={t('admin.polls.form.titlePlaceholder')} maxLength={140}
-              className="w-full min-w-0 rounded-xl bg-bg-card border border-gold/20 px-3 py-2.5 text-sm text-ink-cream focus:outline-none focus:border-gold/60 transition-colors"
+              aria-invalid={errors.title ? 'true' : undefined}
+              className={cn(
+                'w-full min-w-0 rounded-xl bg-bg-card border px-3 py-2.5 text-sm text-ink-cream focus:outline-none transition-colors',
+                errors.title ? 'border-danger/60 focus:border-danger' : 'border-gold/20 focus:border-gold/60',
+              )}
             />
+            {errors.title && (
+              <span className="text-[11px] text-danger">{t('admin.polls.form.titleLabel')}</span>
+            )}
           </label>
 
           <label className="flex flex-col gap-1.5 sm:col-span-2 min-w-0">
@@ -209,24 +265,32 @@ export function AdminPolls() {
               {t('admin.polls.form.descriptionLabel')} <span className="text-ink-dim normal-case tracking-normal">{t('admin.polls.form.descriptionHint')}</span>
             </span>
             <textarea
-              rows={3} value={description} onChange={(e) => setDescription(e.target.value)}
+              rows={3}
+              {...register('description')}
               placeholder={t('admin.polls.form.descriptionPlaceholder')}
-              className="w-full min-w-0 rounded-xl bg-bg-card border border-gold/20 px-3 py-2.5 text-sm text-ink-cream font-mono leading-snug focus:outline-none focus:border-gold/60 transition-colors"
+              aria-invalid={errors.description ? 'true' : undefined}
+              className={cn(
+                'w-full min-w-0 rounded-xl bg-bg-card border px-3 py-2.5 text-sm text-ink-cream font-mono leading-snug focus:outline-none transition-colors',
+                errors.description ? 'border-danger/60 focus:border-danger' : 'border-gold/20 focus:border-gold/60',
+              )}
             />
+            {errors.description?.message && (
+              <span className="text-[11px] text-danger">{errors.description.message}</span>
+            )}
           </label>
 
           <fieldset className="flex flex-col gap-1.5 min-w-0">
             <legend className="text-[11px] tracking-widest uppercase text-ink-mute mb-1">{t('admin.polls.form.typeLabel')}</legend>
             <div className="flex gap-2">
-              <TypePick active={type === 'single'} onClick={() => setType('single')} Icon={RadioButton} label={t('admin.polls.form.typeSingle')} hint={t('admin.polls.form.typeSingleHint')} />
-              <TypePick active={type === 'multi'}  onClick={() => setType('multi')}  Icon={ListChecks}  label={t('admin.polls.form.typeMulti')}  hint={t('admin.polls.form.typeMultiHint')} />
+              <TypePick active={watchedType === 'single'} onClick={() => setValue('type', 'single', { shouldDirty: true })} Icon={RadioButton} label={t('admin.polls.form.typeSingle')} hint={t('admin.polls.form.typeSingleHint')} />
+              <TypePick active={watchedType === 'multi'}  onClick={() => setValue('type', 'multi',  { shouldDirty: true })} Icon={ListChecks}  label={t('admin.polls.form.typeMulti')}  hint={t('admin.polls.form.typeMultiHint')} />
             </div>
           </fieldset>
 
           <label className="flex flex-col gap-1.5 min-w-0">
             <span className="text-[11px] tracking-widest uppercase text-ink-mute">{t('admin.polls.form.initialStatusLabel')}</span>
             <select
-              required value={status} onChange={(e) => setStatus(e.target.value as PollStatus)}
+              {...register('status')}
               className="w-full min-w-0 max-w-full rounded-xl bg-bg-card border border-gold/20 px-3 py-2.5 text-sm text-ink-cream focus:outline-none focus:border-gold/60 transition-colors"
             >
               <option value="open">{t('admin.polls.form.statusOpenOption')}</option>
@@ -239,7 +303,8 @@ export function AdminPolls() {
               {t('admin.polls.form.opensAtLabel')} <span className="text-ink-dim normal-case tracking-normal">{t('admin.polls.form.opensAtHint')}</span>
             </span>
             <input
-              type="datetime-local" value={opensAt} onChange={(e) => setOpensAt(e.target.value)}
+              type="datetime-local"
+              {...register('opensAt')}
               className="w-full min-w-0 rounded-xl bg-bg-card border border-gold/20 px-3 py-2.5 text-sm text-ink-cream font-mono focus:outline-none focus:border-gold/60 transition-colors"
             />
           </label>
@@ -249,7 +314,8 @@ export function AdminPolls() {
               {t('admin.polls.form.closesAtLabel')} <span className="text-ink-dim normal-case tracking-normal">{t('admin.polls.form.closesAtHint')}</span>
             </span>
             <input
-              type="datetime-local" value={closesAt} onChange={(e) => setClosesAt(e.target.value)}
+              type="datetime-local"
+              {...register('closesAt')}
               className="w-full min-w-0 rounded-xl bg-bg-card border border-gold/20 px-3 py-2.5 text-sm text-ink-cream font-mono focus:outline-none focus:border-gold/60 transition-colors"
             />
           </label>
@@ -257,7 +323,7 @@ export function AdminPolls() {
           <label className="flex flex-col gap-1.5 min-w-0 sm:col-span-2">
             <span className="text-[11px] tracking-widest uppercase text-ink-mute">{t('admin.polls.form.resultsVisibilityLabel')}</span>
             <select
-              required value={resultsVisibility} onChange={(e) => setResultsVisibility(e.target.value as ResultsVisibility)}
+              {...register('resultsVisibility')}
               className="w-full min-w-0 max-w-full rounded-xl bg-bg-card border border-gold/20 px-3 py-2.5 text-sm text-ink-cream focus:outline-none focus:border-gold/60 transition-colors"
             >
               {Object.entries(VISIBILITY_LABELS).map(([key, info]) => (
@@ -272,21 +338,20 @@ export function AdminPolls() {
               <span className="text-ink-dim normal-case tracking-normal ml-1.5">— {MIN_OPTIONS}–{MAX_OPTIONS}</span>
             </div>
             <div className="flex flex-col gap-2">
-              {options.map((opt, i) => (
-                <div key={i} className="flex items-center gap-2">
+              {optionFields.map((field, i) => (
+                <div key={field.id} className="flex items-center gap-2">
                   <span className="text-[10px] tracking-widest uppercase text-ink-mute w-6 shrink-0">
                     {String(i + 1).padStart(2, '0')}
                   </span>
                   <input
-                    value={opt}
-                    onChange={(e) => setOptions((arr) => arr.map((o, idx) => (idx === i ? e.target.value : o)))}
+                    {...register(`options.${i}.label` as const)}
                     placeholder={t('admin.polls.form.optionPlaceholder', { n: i + 1 })} maxLength={80}
                     className="flex-1 min-w-0 rounded-xl bg-bg-card border border-gold/20 px-3 py-2 text-sm text-ink-cream focus:outline-none focus:border-gold/60 transition-colors"
                   />
                   <button
                     type="button"
-                    onClick={() => setOptions((arr) => arr.filter((_, idx) => idx !== i))}
-                    disabled={options.length <= MIN_OPTIONS}
+                    onClick={() => removeOption(i)}
+                    disabled={optionFields.length <= MIN_OPTIONS}
                     className="btn-ghost !min-h-[36px] !p-2 disabled:opacity-30"
                     aria-label={t('admin.polls.form.removeOption')}
                   >
@@ -294,8 +359,11 @@ export function AdminPolls() {
                   </button>
                 </div>
               ))}
-              {options.length < MAX_OPTIONS && (
-                <button type="button" onClick={() => setOptions((arr) => [...arr, ''])} className="btn-ghost text-xs self-start">
+              {optionsErrorMessage() && (
+                <span className="text-[11px] text-danger">{optionsErrorMessage()}</span>
+              )}
+              {optionFields.length < MAX_OPTIONS && (
+                <button type="button" onClick={() => appendOption({ label: '' })} className="btn-ghost text-xs self-start">
                   <Plus size={12} weight="bold" /> {t('admin.polls.form.addOption')}
                 </button>
               )}
@@ -303,11 +371,11 @@ export function AdminPolls() {
           </div>
 
           <div className="sm:col-span-2 flex justify-end gap-2 mt-2">
-            <button type="button" onClick={() => { resetForm(); setShowForm(false) }} className="btn-ghost text-xs" disabled={submitting}>
+            <button type="button" onClick={() => { resetForm(); setShowForm(false) }} className="btn-ghost text-xs" disabled={isSubmitting}>
               {t('admin.polls.form.cancel')}
             </button>
-            <button type="submit" className="btn-gold disabled:opacity-60" disabled={submitting}>
-              <Plus size={16} weight="bold" /> {submitting ? t('admin.polls.form.creating') : t('admin.polls.form.create')}
+            <button type="submit" className="btn-gold disabled:opacity-60" disabled={isSubmitting}>
+              <Plus size={16} weight="bold" /> {isSubmitting ? t('admin.polls.form.creating') : t('admin.polls.form.create')}
             </button>
           </div>
         </form>

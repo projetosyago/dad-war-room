@@ -23,9 +23,21 @@ export function useTroopTiers() {
   // Initial load on mount — async fetch pattern, not a render-loop. The new
   // react-hooks/set-state-in-effect rule doesn't model this case yet.
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    refetch()
-  }, [refetch])
+    let alive = true
+    ;(async () => {
+      try {
+        const data = await listTroopTiers()
+        if (alive) setItems(data)
+      } catch (e) {
+        if (alive) setError(e as Error)
+      } finally {
+        if (alive) setLoading(false)
+      }
+    })()
+    return () => {
+      alive = false
+    }
+  }, [])
 
   return { items, loading, error, refetch }
 }

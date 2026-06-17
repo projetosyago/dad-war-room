@@ -30,7 +30,12 @@ const TOP_NAV = [
 export function Header() {
   const { adminMode, exit } = useAdminMode()
   const navigate = useNavigate()
-  const onExit = () => { exit(); navigate('/settings') }
+  // Navigate FIRST, then exit admin mode. If we flip the order, the auto-enter
+  // effect in App.tsx (gated on pathname.startsWith('/admin/') && !adminMode)
+  // fires during the same render with the new adminMode=false but the still-stale
+  // /admin/* pathname, re-entering admin mode and forcing the user to click Sair
+  // twice. Navigating first guarantees pathname is /settings by the time exit() lands.
+  const onExit = () => { navigate('/settings'); exit() }
   return <HeaderInner adminMode={adminMode} onExitAdmin={onExit} />
 }
 

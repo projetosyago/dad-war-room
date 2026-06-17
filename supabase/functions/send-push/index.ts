@@ -6,13 +6,34 @@
 // records every attempt in `public.push_message_deliveries`, and stamps the
 // message's `sent_at` so it is not picked up again.
 //
-// Trigger this Function periodically (e.g. every minute via pg_cron or an
-// external scheduler). Idempotent: a row is locked by `sent_at IS NULL` and
-// gets stamped before the next invocation can reach it.
+// Called two ways:
+//   1. pg_cron every minute — no body, processes all due messages.
+//   2. Browser via supabase.functions.invoke('send-push', { body: { message_id } })
+//      from `sendPushImmediately()` — processes just that message regardless of
+//      scheduled_for (admin "send now" flow).
+//
+// Idempotent: a row is locked by `sent_at IS NULL` and gets stamped before the
+// next invocation can reach it.
 
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import { createClient } from "npm:@supabase/supabase-js@2.45.0";
 import webpush from "npm:web-push@3.6.7";
+
+// CORS — must include every custom header the browser will send.
+// `x-application-name` is set globally by our supabase client (src/lib/supabase.ts).
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers":
+    "authorization, x-client-info, apikey, content-type, x-application-name",
+  "Access-Control-Allow-Methods": "POST, OPTIONS",
+};
+
+function json(data: unknown, status = 200) {
+  return new Response(JSON.stringify(data), {
+    status,
+    headers: { ...corsHeaders, "Content-Type": "application/json" },
+  });
+}
 
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
 const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
@@ -55,12 +76,33 @@ function audienceRoles(audience: PushMessage["audience"]): string[] | null {
   }
 }
 
-Deno.serve(async () => {
+Deno.serve(async (req: Request) => {
+  // 0) CORS preflight.
+  if (req.method === "OPTIONS") {
+    return new Response(null, { status: 204, headers: corsHeaders });
+  }
+
   if (!VAPID_PUBLIC_KEY || !VAPID_PRIVATE_KEY) {
-    return new Response(
-      JSON.stringify({ error: "VAPID keys not configured. Set VAPID_PUBLIC_KEY and VAPID_PRIVATE_KEY as Supabase secrets." }),
-      { status: 500, headers: { "Content-Type": "application/json" } },
+    return json(
+      { error: "VAPID keys not configured. Set VAPID_PUBLIC_KEY and VAPID_PRIVATE_KEY as Supabase secrets." },
+      500,
     );
+  }
+
+  // Optional body — { message_id } means "send this one now" regardless of scheduled_for.
+  let onlyMessageId: string | null = null;
+  if (req.method === "POST") {
+    try {
+      const text = await req.text();
+      if (text) {
+        const parsed = JSON.parse(text) as { message_id?: string };
+        if (parsed?.message_id && typeof parsed.message_id === "string") {
+          onlyMessageId = parsed.message_id;
+        }
+      }
+    } catch {
+      // Ignore body parse errors — fall through to scheduled-sweep mode.
+    }
   }
 
   webpush.setVapidDetails(VAPID_SUBJECT, VAPID_PUBLIC_KEY, VAPID_PRIVATE_KEY);
@@ -71,22 +113,27 @@ Deno.serve(async () => {
 
   const nowIso = new Date().toISOString();
 
-  // 1) Pick up due messages.
-  const { data: messages, error: msgErr } = await supabase
+  // 1) Pick up due messages (or just the one requested).
+  let msgQuery = supabase
     .from("push_messages")
     .select("id,title,body,emoji,image_url,audience,custom_account_ids,tap_target,tap_url")
     .is("sent_at", null)
-    .eq("cancelled", false)
-    .not("scheduled_for", "is", null)
-    .lte("scheduled_for", nowIso)
-    .order("scheduled_for", { ascending: true })
-    .limit(50);
+    .eq("cancelled", false);
+
+  if (onlyMessageId) {
+    msgQuery = msgQuery.eq("id", onlyMessageId);
+  } else {
+    msgQuery = msgQuery
+      .not("scheduled_for", "is", null)
+      .lte("scheduled_for", nowIso)
+      .order("scheduled_for", { ascending: true })
+      .limit(50);
+  }
+
+  const { data: messages, error: msgErr } = await msgQuery;
 
   if (msgErr) {
-    return new Response(JSON.stringify({ error: msgErr.message }), {
-      status: 500,
-      headers: { "Content-Type": "application/json" },
-    });
+    return json({ error: msgErr.message }, 500);
   }
 
   let totalProcessed = 0;
@@ -227,13 +274,10 @@ Deno.serve(async () => {
     }
   }
 
-  return new Response(
-    JSON.stringify({
-      processed: totalProcessed,
-      delivered: totalDelivered,
-      failed: totalFailed,
-      errors,
-    }),
-    { headers: { "Content-Type": "application/json" } },
-  );
+  return json({
+    processed: totalProcessed,
+    delivered: totalDelivered,
+    failed: totalFailed,
+    errors,
+  });
 });

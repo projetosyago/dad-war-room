@@ -1,8 +1,11 @@
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import {
   BellRinging,
   CalendarPlus,
+  CaretLeft,
+  CaretRight,
   ChartBar,
   ChatCircle,
   ListChecks,
@@ -40,9 +43,51 @@ export function AdminBottomNav() {
   const { exit } = useAdminMode()
   const { t } = useTranslation()
 
+  // Scroll-overflow affordance: the 7-tab strip rarely fits on phones, so we
+  // surface chevron buttons whenever there's content hidden off-screen on
+  // either side. The previous nav silently cut tabs off — users didn't realise
+  // they could scroll horizontally to reach them.
+  const scrollRef = useRef<HTMLUListElement>(null)
+  const [showLeft, setShowLeft] = useState(false)
+  const [showRight, setShowRight] = useState(false)
+
+  const updateChevrons = useCallback(() => {
+    const el = scrollRef.current
+    if (!el) return
+    const { scrollLeft, scrollWidth, clientWidth } = el
+    // 4px tolerance so sub-pixel rounding doesn't keep the chevron lit at edges.
+    setShowLeft(scrollLeft > 4)
+    setShowRight(scrollWidth - clientWidth - scrollLeft > 4)
+  }, [])
+
+  useEffect(() => {
+    const el = scrollRef.current
+    if (!el) return
+    updateChevrons()
+    el.addEventListener('scroll', updateChevrons, { passive: true })
+    const ro = new ResizeObserver(updateChevrons)
+    ro.observe(el)
+    return () => {
+      el.removeEventListener('scroll', updateChevrons)
+      ro.disconnect()
+    }
+  }, [updateChevrons])
+
+  function scrollBy(direction: 'left' | 'right') {
+    const el = scrollRef.current
+    if (!el) return
+    const delta = Math.max(120, Math.round(el.clientWidth * 0.6))
+    el.scrollBy({ left: direction === 'left' ? -delta : delta, behavior: 'smooth' })
+  }
+
   function handleExit() {
-    exit()
+    // Navigate FIRST, then exit admin mode. The auto-enter effect in App.tsx
+    // (gated on pathname.startsWith('/admin/') && !adminMode) would otherwise
+    // re-flip adminMode back to true during the same render — because adminMode
+    // becomes false before pathname leaves /admin/* — forcing the user to click
+    // Sair twice. Navigating first lands pathname on /settings before exit() runs.
     navigate('/settings')
+    exit()
   }
 
   return (
@@ -84,9 +129,67 @@ export function AdminBottomNav() {
           </button>
         </div>
 
-        {/* Scrollable 7-tab strip */}
-        <ul className="flex flex-1 items-stretch gap-0.5 overflow-x-auto no-scrollbar snap-x">
-          {ADMIN_NAV.map((item) => (
+        {/* Scrollable 7-tab strip with edge chevron affordances */}
+        <div className="relative flex-1 min-w-0">
+          {/* Left fade + chevron — only visible when scrolled in from the left */}
+          <div
+            aria-hidden
+            className={cn(
+              'pointer-events-none absolute inset-y-0 left-0 w-10 z-10 transition-opacity duration-200',
+              showLeft ? 'opacity-100' : 'opacity-0',
+            )}
+            style={{
+              background:
+                'linear-gradient(90deg, rgba(19,23,42,0.92) 0%, rgba(19,23,42,0.65) 55%, rgba(19,23,42,0) 100%)',
+            }}
+          />
+          <button
+            type="button"
+            onClick={() => scrollBy('left')}
+            tabIndex={showLeft ? 0 : -1}
+            aria-label={t('nav.scrollLeft')}
+            aria-hidden={!showLeft}
+            className={cn(
+              'absolute left-0.5 top-1/2 -translate-y-1/2 z-20 flex h-8 w-7 items-center justify-center rounded-full transition-opacity duration-200 active:scale-90',
+              'bg-crimson/15 text-crimson-glow shadow-[0_0_10px_-2px_rgba(226,86,86,0.45)] backdrop-blur-sm',
+              showLeft ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none',
+            )}
+          >
+            <CaretLeft size={16} weight="bold" />
+          </button>
+
+          {/* Right fade + chevron — only visible when there's more strip off-screen to the right */}
+          <div
+            aria-hidden
+            className={cn(
+              'pointer-events-none absolute inset-y-0 right-0 w-10 z-10 transition-opacity duration-200',
+              showRight ? 'opacity-100' : 'opacity-0',
+            )}
+            style={{
+              background:
+                'linear-gradient(270deg, rgba(19,23,42,0.92) 0%, rgba(19,23,42,0.65) 55%, rgba(19,23,42,0) 100%)',
+            }}
+          />
+          <button
+            type="button"
+            onClick={() => scrollBy('right')}
+            tabIndex={showRight ? 0 : -1}
+            aria-label={t('nav.scrollRight')}
+            aria-hidden={!showRight}
+            className={cn(
+              'absolute right-0.5 top-1/2 -translate-y-1/2 z-20 flex h-8 w-7 items-center justify-center rounded-full transition-opacity duration-200 active:scale-90',
+              'bg-crimson/15 text-crimson-glow shadow-[0_0_10px_-2px_rgba(226,86,86,0.45)] backdrop-blur-sm',
+              showRight ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none',
+            )}
+          >
+            <CaretRight size={16} weight="bold" />
+          </button>
+
+          <ul
+            ref={scrollRef}
+            className="flex items-stretch gap-0.5 overflow-x-auto no-scrollbar snap-x"
+          >
+            {ADMIN_NAV.map((item) => (
             <li key={item.to} className="shrink-0 snap-start">
               <NavLink
                 to={item.to}
@@ -140,7 +243,8 @@ export function AdminBottomNav() {
               </NavLink>
             </li>
           ))}
-        </ul>
+          </ul>
+        </div>
       </div>
     </nav>
   )

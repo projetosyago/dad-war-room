@@ -25,12 +25,24 @@ export function useHeroes(opts: { includeInactive?: boolean } = {}) {
     }
   }, [includeInactive])
 
-  // Initial load on mount — async fetch pattern, not a render-loop. The new
-  // react-hooks/set-state-in-effect rule doesn't model this case yet.
+  // Initial load on mount / option change — async fetch pattern, not a
+  // render-loop. The new react-hooks/set-state-in-effect rule doesn't model this.
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    refetch()
-  }, [refetch])
+    let alive = true
+    ;(async () => {
+      try {
+        const data = await listHeroes({ includeInactive })
+        if (alive) setItems(data)
+      } catch (e) {
+        if (alive) setError(e as Error)
+      } finally {
+        if (alive) setLoading(false)
+      }
+    })()
+    return () => {
+      alive = false
+    }
+  }, [includeInactive])
 
   return { items, loading, error, refetch }
 }

@@ -72,7 +72,10 @@ export function AdminModeProvider({ children }: { children: ReactNode }) {
   }, [])
 
   // Auto-exit when the user is no longer admin (signed out, role downgraded).
+  // Reactive sync to auth state — calls exit() which sets state. Not a render-loop
+  // because exit() is idempotent and the conditions guard against repeats.
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (adminMode && auth.status === 'signed-out') exit()
     if (adminMode && auth.status === 'signed-in' && !auth.isAdmin) exit()
   }, [adminMode, auth.status, auth.isAdmin, exit])

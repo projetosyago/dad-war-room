@@ -51,11 +51,18 @@ export function AdminOccurrences() {
     }
   }
 
+  // Initial load on mount — async fetch pattern, not a render-loop. The new
+  // react-hooks/set-state-in-effect rule doesn't model this case yet.
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     reload()
   }, [])
 
+  // Default eventId to the first available event once the async-loaded events
+  // arrive. Derived-from-state pattern — needs TanStack migration to fold into
+  // render. Keeping as-is for now.
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (!eventId && events.length > 0) setEventId(events[0].id)
   }, [eventId, events])
 

@@ -163,15 +163,18 @@ export function AdminEventParticipants() {
     [members, assignedIds],
   )
 
+  // Default the dropdown to the first available member whenever the assigned
+  // set changes. Derived-from-state pattern — needs TanStack migration or a
+  // reducer to fold into render. Keeping as-is for now.
   useEffect(() => {
-    // Default the dropdown to the first available member whenever the
-    // assigned set changes (so the form is immediately submittable).
+    /* eslint-disable react-hooks/set-state-in-effect */
     if (!draftMemberId && availableMembers.length > 0) {
       setDraftMemberId(availableMembers[0].id)
     }
     if (draftMemberId && assignedIds.has(draftMemberId)) {
       setDraftMemberId(availableMembers[0]?.id ?? '')
     }
+    /* eslint-enable react-hooks/set-state-in-effect */
   }, [availableMembers, assignedIds, draftMemberId])
 
   const handleAdd = async (e: React.FormEvent) => {

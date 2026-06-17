@@ -15,8 +15,9 @@ import {
 } from '@phosphor-icons/react'
 import { DadCrest } from '../components/DadCrest'
 import { I18nText } from '../components/I18nText'
-import { ROSTER, formatPower } from '../data/roster'
+import { formatPower } from '../data/roster'
 import { useAllianceSettings } from '../hooks/useAllianceSettings'
+import { useMembers } from '../hooks/useMembers'
 import { useMyNotifications, type PushMessageRow, type PushTapTarget } from '../hooks/useMyNotifications'
 
 // Mirrors the routing table in NotificationsPanel — kept inline (5 entries)
@@ -65,6 +66,7 @@ export function Alliance() {
   const { t } = useTranslation()
   const announcementTimeAgo = useAnnouncementTimeAgo()
   const { settings } = useAllianceSettings()
+  const { members } = useMembers()
   const rank = settings?.rank ?? FALLBACK_RANK
   const motto = settings?.motto ?? FALLBACK_MOTTO
   const tagline = settings?.tagline ?? FALLBACK_TAGLINE
@@ -72,10 +74,10 @@ export function Alliance() {
   const { messages: announcements, loading: announcementsLoading } = useMyNotifications()
   const recentAnnouncements = announcements.slice(0, 5)
 
-  const totalPower = ROSTER.reduce((s, m) => s + m.power_m, 0)
-  const active = ROSTER.filter((m) => m.status !== 'temporary_out').length
-  const tg5plus = ROSTER.filter((m) => (m.tg_level ?? 0) >= 5).length
-  const tgAny = ROSTER.filter((m) => m.tg_level != null).length
+  const totalPower = members.reduce((s, m) => s + (m.powerM ?? 0), 0)
+  const active = members.filter((m) => m.status !== 'temporary_out').length
+  const tg5plus = members.filter((m) => (m.tgLevel ?? 0) >= 5).length
+  const tgAny = members.filter((m) => m.tgLevel != null).length
 
   return (
     <div className="relative">
@@ -128,7 +130,7 @@ export function Alliance() {
             icon={UsersThree}
             labelKey="alliance.stats.members"
             value={`${active}`}
-            sub={t('alliance.stats.membersSub', { count: ROSTER.length })}
+            sub={t('alliance.stats.membersSub', { count: members.length })}
             tint="crimson"
           />
           <StatTile
@@ -199,9 +201,12 @@ export function Alliance() {
             </div>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 px-5 sm:px-6 pb-4">
-            <Compo label={t('alliance.composition.truegoldMembers')} value={`${tgAny} / ${ROSTER.length}`} />
+            <Compo label={t('alliance.composition.truegoldMembers')} value={`${tgAny} / ${members.length}`} />
             <Compo label={t('alliance.composition.tg5Ready')} value={`${tg5plus}`} />
-            <Compo label={t('alliance.composition.avgPower')} value={formatPower(totalPower / ROSTER.length)} />
+            <Compo
+              label={t('alliance.composition.avgPower')}
+              value={members.length > 0 ? formatPower(totalPower / members.length) : formatPower(0)}
+            />
             <Compo label={t('alliance.composition.minTroopTier')} value="T8" />
           </div>
         </div>

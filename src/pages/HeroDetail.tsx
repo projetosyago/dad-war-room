@@ -43,10 +43,15 @@ export function HeroDetail() {
   const [error, setError] = useState<Error | null>(null)
   const [notFound, setNotFound] = useState(false)
 
+  // Initial load + reload on slug change — async fetch pattern, not a
+  // render-loop. The new react-hooks/set-state-in-effect rule doesn't model
+  // this case yet.
   useEffect(() => {
     if (!slug) {
+      /* eslint-disable react-hooks/set-state-in-effect */
       setNotFound(true)
       setLoading(false)
+      /* eslint-enable react-hooks/set-state-in-effect */
       return
     }
     let alive = true

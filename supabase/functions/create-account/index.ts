@@ -38,6 +38,13 @@ function json(data: unknown, status = 200) {
   })
 }
 
+// Redact PII (emails, usernames) before writing to logs.
+function redact(s: string | null | undefined): string {
+  if (!s) return '<none>'
+  if (s.includes('@')) return s.split('@')[0].slice(0, 2) + '***@' + s.split('@')[1].slice(-4)
+  return s.slice(0, 2) + '***'
+}
+
 Deno.serve(async (req) => {
   if (req.method === 'OPTIONS') return new Response('ok', { headers: corsHeaders })
   if (req.method !== 'POST') return json({ error: 'POST only' }, 405)
@@ -99,7 +106,7 @@ Deno.serve(async (req) => {
       auth: { autoRefreshToken: false, persistSession: false },
     })
 
-    console.log('[create-account] Calling auth.admin.createUser for', email)
+    console.log('[create-account] Calling auth.admin.createUser for', redact(email))
     const { data: authData, error: authError } = await adminClient.auth.admin.createUser({
       email,
       password: body.password,
@@ -134,7 +141,7 @@ Deno.serve(async (req) => {
       return json({ error: accountError.message }, 400)
     }
 
-    console.log('[create-account] Success for username', username)
+    console.log('[create-account] Success for username', redact(username))
     return json({ account }, 201)
   } catch (err) {
     const message = err instanceof Error ? err.message : 'Internal error'

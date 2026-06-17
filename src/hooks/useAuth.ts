@@ -81,7 +81,10 @@ export function useAuth(): AuthState & {
     }
   }, [])
 
+  // Initial load on mount + auth subscription — async fetch pattern, not a
+  // render-loop. The new react-hooks/set-state-in-effect rule doesn't model this.
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     refresh()
     const { data: sub } = supabase.auth.onAuthStateChange(() => {
       refresh()

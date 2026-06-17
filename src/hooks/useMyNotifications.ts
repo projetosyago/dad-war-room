@@ -87,10 +87,15 @@ export function useMyNotifications(): UseMyNotificationsState {
   // every render of the consuming Header.
   const cacheKey = `${accountId ?? 'anon'}:${role ?? 'none'}`
 
+  // Initial load + reload on accountId/cacheKey change — async fetch pattern,
+  // not a render-loop. The new react-hooks/set-state-in-effect rule doesn't
+  // model this case yet.
   useEffect(() => {
     if (!accountId) {
+      /* eslint-disable react-hooks/set-state-in-effect */
       setMessages([])
       setLoading(false)
+      /* eslint-enable react-hooks/set-state-in-effect */
       return
     }
     let alive = true

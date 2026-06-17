@@ -6,6 +6,7 @@ import { format, differenceInCalendarDays } from 'date-fns'
 import { ArrowLeft, ArrowSquareOut, CalendarBlank, Crown } from '@phosphor-icons/react'
 import { getMilestoneBySlug } from '../repositories/milestones'
 import { resolveMilestoneIcon } from '../lib/milestoneIcon'
+import { sanitizeAdminHtml } from '../lib/sanitize'
 import { ImageWithFallback } from '../components/ui/ImageWithFallback'
 import type { KingdomMilestone } from '../types/domain'
 
@@ -157,8 +158,8 @@ function Detail({ milestone }: { milestone: KingdomMilestone }) {
         {milestone.bodyHtml && milestone.bodyHtml.trim().length > 0 ? (
           <article
             className="prose prose-invert prose-headings:font-display-clean prose-headings:tracking-wider prose-headings:text-gold-shimmer prose-a:text-gold-soft max-w-none"
-            // Salles authored — trusted source.
-            dangerouslySetInnerHTML={{ __html: milestone.bodyHtml }}
+            // Salles authored — sanitized via DOMPurify (audit finding #09).
+            dangerouslySetInnerHTML={{ __html: sanitizeAdminHtml(milestone.bodyHtml) }}
           />
         ) : (
           <div className="text-sm text-ink-mute">

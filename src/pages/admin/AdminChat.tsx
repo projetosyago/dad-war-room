@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import {
@@ -54,14 +54,12 @@ function saveConfig(c: ChatConfig) {
 
 export function AdminChat() {
   const { t } = useTranslation()
-  const [config, setConfig] = useState<ChatConfig>(DEFAULT_CONFIG)
+  // Lazy initializer reads from localStorage exactly once on mount — no effect
+  // needed (and the new react-hooks/set-state-in-effect rule would flag it).
+  const [config, setConfig] = useState<ChatConfig>(() => loadConfig())
   const [dirty, setDirty] = useState(false)
   const [confirmingClear, setConfirmingClear] = useState(false)
   const [savedAt, setSavedAt] = useState<Date | null>(null)
-
-  useEffect(() => {
-    setConfig(loadConfig())
-  }, [])
 
   function patch(p: Partial<ChatConfig>) {
     setConfig((c) => ({ ...c, ...p }))

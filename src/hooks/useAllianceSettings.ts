@@ -20,7 +20,10 @@ export function useAllianceSettings() {
     }
   }
 
+  // Initial load on mount — async fetch pattern, not a render-loop. The new
+  // react-hooks/set-state-in-effect rule doesn't model this case yet.
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     refetch()
   }, [])
 

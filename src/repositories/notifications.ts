@@ -2,20 +2,7 @@ import { supabase } from '../lib/supabase'
 
 /**
  * Notifications repository — push_messages persistence + send-push trigger.
- *
- * NOTE: `public.push_messages` and `public.push_message_deliveries` were added
- * in Fase 6 of the schema rollout and are NOT yet present in the generated
- * `src/types/database/supabase.ts`. Until the typegen is refreshed, we go
- * through a thin `supabaseUntyped` cast for these two tables. Every value
- * crossing that boundary is typed explicitly in this file so the rest of the
- * codebase stays strict.
  */
-
-// Cast the typed client to an untyped variant ONLY for tables not yet in the
-// generated Database type. Limited to push_messages / push_message_deliveries
-// access inside this file.
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const supabaseUntyped = supabase as unknown as any
 
 export type PushAudience = 'all' | 'voting' | 'admins' | 'allies' | 'custom'
 export type PushTapTarget = 'hub' | 'events' | 'polls' | 'alliance' | 'url'
@@ -130,7 +117,7 @@ export async function createPushMessage(
     created_by: input.createdBy,
   }
 
-  const { data, error } = await supabaseUntyped
+  const { data, error } = await supabase
     .from('push_messages')
     .insert(insertRow)
     .select('*')
@@ -148,7 +135,7 @@ export async function createPushMessage(
 export async function listRecentPushMessages(
   limit = 20,
 ): Promise<PushMessageSummary[]> {
-  const { data: messageRows, error: msgErr } = await supabaseUntyped
+  const { data: messageRows, error: msgErr } = await supabase
     .from('push_messages')
     .select('*')
     .order('created_at', { ascending: false })
@@ -159,7 +146,7 @@ export async function listRecentPushMessages(
   if (rows.length === 0) return []
 
   const messageIds = rows.map((r) => r.id)
-  const { data: deliveryRows, error: delErr } = await supabaseUntyped
+  const { data: deliveryRows, error: delErr } = await supabase
     .from('push_message_deliveries')
     .select('message_id, delivered_at, opened_at')
     .in('message_id', messageIds)

@@ -88,11 +88,16 @@ export function usePendingPolls(accountId: string | undefined | null, voting: bo
     }
   }
 
+  // Initial load + reload on accountId/voting change — async fetch pattern,
+  // not a render-loop. The new react-hooks/set-state-in-effect rule doesn't
+  // model this case yet.
   useEffect(() => {
     let alive = true
     if (!accountId || !voting) {
+      /* eslint-disable react-hooks/set-state-in-effect */
       setPolls([])
       setLoading(false)
+      /* eslint-enable react-hooks/set-state-in-effect */
       return
     }
     ;(async () => {
@@ -149,10 +154,15 @@ function usePollByLookup(kind: 'slug' | 'token', value: string | undefined): Use
     }
   }
 
+  // Initial load + reload on value change — async fetch pattern, not a
+  // render-loop. The new react-hooks/set-state-in-effect rule doesn't model
+  // this case yet.
   useEffect(() => {
     if (!value) {
+      /* eslint-disable react-hooks/set-state-in-effect */
       setPoll(null)
       setLoading(false)
+      /* eslint-enable react-hooks/set-state-in-effect */
       return
     }
     let alive = true

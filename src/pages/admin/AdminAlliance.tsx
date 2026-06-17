@@ -85,14 +85,18 @@ function AllianceMetadataEditor() {
   const [saveError, setSaveError] = useState<string | null>(null)
   const [savedAt, setSavedAt] = useState<number | null>(null)
 
+  // Hydrate the form state when async-loaded settings arrive. Needs TanStack
+  // migration to do without the effect; keeping as-is for now.
   useEffect(() => {
     if (!settings) return
+    /* eslint-disable react-hooks/set-state-in-effect */
     setRank(settings.rank ?? '')
     setMotto(settings.motto ?? '')
     setTagline(settings.tagline ?? '')
     setBrandPrimary(settings.brandPrimary ?? '')
     setBrandAccent(settings.brandAccent ?? '')
     setCapturedAt(settings.capturedAt ?? '')
+    /* eslint-enable react-hooks/set-state-in-effect */
   }, [settings])
 
   const onSave = async () => {

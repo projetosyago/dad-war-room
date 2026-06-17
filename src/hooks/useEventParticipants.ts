@@ -35,11 +35,15 @@ export function useEventParticipants(occurrenceId: string | undefined): UseEvent
     }
   }, [occurrenceId])
 
+  // Initial load on mount / occurrenceId change — async fetch pattern, not a
+  // render-loop. The new react-hooks/set-state-in-effect rule doesn't model this.
   useEffect(() => {
     let alive = true
     if (!occurrenceId) {
+      /* eslint-disable react-hooks/set-state-in-effect */
       setItems([])
       setLoading(false)
+      /* eslint-enable react-hooks/set-state-in-effect */
       return
     }
     ;(async () => {

@@ -55,7 +55,7 @@ function audienceRoles(audience: PushMessage["audience"]): string[] | null {
   }
 }
 
-Deno.serve(async (_req: Request) => {
+Deno.serve(async () => {
   if (!VAPID_PUBLIC_KEY || !VAPID_PRIVATE_KEY) {
     return new Response(
       JSON.stringify({ error: "VAPID keys not configured. Set VAPID_PUBLIC_KEY and VAPID_PRIVATE_KEY as Supabase secrets." }),

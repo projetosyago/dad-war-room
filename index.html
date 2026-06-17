@@ -20,16 +20,38 @@
     <meta name="apple-mobile-web-app-title" content="DAD War Room" />
     <meta name="mobile-web-app-capable" content="yes" />
 
-    <!-- Icons -->
+    <!-- Icons — full platform coverage (wave 13 rebuild) -->
+    <!-- Modern browsers prefer the SVG; PNGs are the fallback ladder. -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/icons/favicon-48.png" />
+
+    <!-- Apple Touch — iPhone (120), iPad (152), iPad Pro (167), default (180) -->
+    <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-touch-icon-120.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-touch-icon-152.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="/icons/apple-touch-icon-167.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
-    <link rel="mask-icon" href="/favicon.svg" color="#f4cf73" />
+
+    <!-- Safari pinned-tab (monochrome) -->
+    <link rel="mask-icon" href="/mask-icon.svg" color="#f4cf73" />
 
     <meta name="description" content="DAD War Room — Strategy hub for [DAD] BIGDADDYS, Kingdom 1652 (Kingshot). Visual, multilingual guides for every event." />
+
+    <!-- Open Graph (Facebook, LinkedIn, Discord, Slack) -->
     <meta property="og:title" content="DAD War Room — Kingdom 1652" />
     <meta property="og:description" content="Strategy hub for the Kingshot alliance [DAD] BIGDADDYS. Visual, multilingual guides." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/icons/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="DAD War Room — Kingdom 1652 · Kingshot" />
+
+    <!-- Twitter / X cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DAD War Room — Kingdom 1652" />
+    <meta name="twitter:description" content="Strategy hub for the Kingshot alliance [DAD] BIGDADDYS. Visual, multilingual guides." />
+    <meta name="twitter:image" content="/icons/og-image.png" />
 
     <!-- Fonts: DAD CODEX §2 — Cinzel Decorative + Cinzel + Cormorant Garamond + Outfit + JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

@@ -1,0 +1,10 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100" height="100" fill="#13172a"/>
+
+  <!-- Brackets pulled inward — content occupies x=31..69 (38 wide, 62% of canvas) -->
+  <path d="M 31 38 L 36.5 38 L 36.5 40.5 L 33 40.5 L 33 59.5 L 36.5 59.5 L 36.5 62 L 31 62 Z" fill="#f4cf73"/>
+  <path d="M 69 38 L 63.5 38 L 63.5 40.5 L 67 40.5 L 67 59.5 L 63.5 59.5 L 63.5 62 L 69 62 Z" fill="#f4cf73"/>
+
+  <!-- Smaller D — same shape, scaled and centered -->
+  <path fill-rule="evenodd" fill="#f4cf73" d="M 40 42 L 53 42 C 59 42 62 46 62 50 C 62 54 59 58 53 58 L 40 58 L 40 56.5 L 42 56.5 L 42 43.5 L 40 43.5 Z M 45 45 L 53 45 C 57 45 59 47 59 50 C 59 53 57 55 53 55 L 45 55 Z"/>
+</svg>

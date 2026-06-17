@@ -65,11 +65,9 @@ export function PendingPollsCard() {
               ? t('hub.pendingPolls.emptyTitle')
               : t('hub.pendingPolls.waitingTitle', { count: polls.length })}
           </h2>
-          {isEmpty && (
-            <p className="text-xs text-ink-mute mt-1">
-              {t('hub.pendingPolls.emptySubtitle')}
-            </p>
-          )}
+          {/* Subtitle removed per user (wave 14 refinement) — matches the
+              Game Catalogue card cleanup: eyebrow + title is enough; the
+              extra prose was visual noise. */}
         </div>
       </div>
 

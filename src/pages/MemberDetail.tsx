@@ -27,7 +27,6 @@ const RANK_LABEL: Record<string, string> = {
 }
 
 export function MemberDetail() {
-  const { t } = useTranslation()
   const { nick: rawNick } = useParams<{ nick: string }>()
   const nick = rawNick ? decodeURIComponent(rawNick) : ''
   const { member, snapshots, participations, loading, error } = useMemberDetail(nick)
@@ -51,13 +50,9 @@ export function MemberDetail() {
 
   return (
     <div className="container-narrow pt-5 pb-12 sm:pt-8 sm:pb-16 space-y-4">
-      <Link
-        to="/alliance/members"
-        className="inline-flex items-center gap-1.5 text-[11px] tracking-[0.22em] uppercase text-ink-mute hover:text-gold-soft transition-colors"
-      >
-        <ArrowLeft size={12} weight="bold" /> {t('members.detail.backToList')}
-      </Link>
-
+      {/* Back affordance lives in the sticky Header now. The NotFoundCard below
+          keeps its own "back to list" CTA because it's an empty-state action, not
+          a header-style breadcrumb. */}
       {loading ? (
         <>
           <div className="card-hero h-[200px] animate-pulse" />

@@ -1264,6 +1264,7 @@
     "chat": "Chat",
     "alliance": "Alliance",
     "settings": "Paramètres",
+    "back": "Retour",
     "primaryAriaLabel": "Enseignement primaire",
     "adminAriaLabel": "Administrateur",
     "exitAdmin": "Sortie du mode administrateur",

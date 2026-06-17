@@ -1264,6 +1264,7 @@
     "chat": "チャット",
     "alliance": "同盟",
     "settings": "設定",
+    "back": "戻る",
     "primaryAriaLabel": "プライマー",
     "adminAriaLabel": "管理者",
     "exitAdmin": "管理者モードを終了",

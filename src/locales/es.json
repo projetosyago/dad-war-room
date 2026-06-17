@@ -1264,6 +1264,7 @@
     "chat": "Chat",
     "alliance": "Alianza",
     "settings": "Ajustes",
+    "back": "Atrás",
     "primaryAriaLabel": "Principal",
     "adminAriaLabel": "Administrador",
     "exitAdmin": "Salir del modo de administración",

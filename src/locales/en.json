@@ -1243,6 +1243,7 @@
     "chat": "Chat",
     "alliance": "Alliance",
     "settings": "Settings",
+    "back": "Back",
     "primaryAriaLabel": "Primary",
     "adminAriaLabel": "Admin",
     "exitAdmin": "Exit admin mode",

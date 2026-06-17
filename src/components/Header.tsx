@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
-import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { ADMIN_TOP_NAV } from './AdminBottomNav'
 import {
+  ArrowLeft,
   House,
   Sword,
   ChatCircle,
@@ -41,10 +42,16 @@ export function Header() {
 
 function HeaderInner({ adminMode, onExitAdmin }: { adminMode: boolean; onExitAdmin: () => void }) {
   const { t } = useTranslation()
+  const navigate = useNavigate()
+  const { pathname } = useLocation()
   const [scrolled, setScrolled] = useState(false)
   const [bellOpen, setBellOpen] = useState(false)
   const { unreadCount, markAllAsSeen } = useMyNotifications()
   const hasUnreadNotifications = unreadCount > 0
+  // Show a generic browser-back affordance on every internal page. Hub (/) keeps
+  // its branded layout, and /login renders bare (Header isn't mounted there) but
+  // we guard it anyway in case the bare-route list ever changes.
+  const showBack = pathname !== '/' && pathname !== '/login'
 
   const handleBellClick = () => {
     setBellOpen((prev) => {
@@ -81,13 +88,38 @@ function HeaderInner({ adminMode, onExitAdmin }: { adminMode: boolean; onExitAdm
       >
         <div
           className={cn(
-            'container-wide flex items-center justify-between gap-3 transition-all duration-300',
+            'container-wide flex items-center gap-3 transition-all duration-300',
+            // Hub keeps justify-between (brand left, actions right). Internal
+            // pages use a 3-slot layout (back · centered title · actions) which
+            // needs the leading and trailing slots to claim equal width via
+            // flex-1 — we do that on the slots themselves below.
+            showBack ? '' : 'justify-between',
             scrolled ? 'h-14' : 'h-16',
           )}
         >
+          {showBack ? (
+            // Internal pages: [back] [centered title] [bell]
+            <button
+              type="button"
+              onClick={() => navigate(-1)}
+              className="flex-1 inline-flex items-center gap-1.5 text-[11px] tracking-[0.22em] uppercase text-ink-mute hover:text-gold-soft transition-colors min-w-0"
+              aria-label={t('nav.back')}
+            >
+              <ArrowLeft size={14} weight="bold" />
+              <span className="truncate">{t('nav.back')}</span>
+            </button>
+          ) : null}
+
           <Link
             to="/"
-            className="group flex flex-col leading-none min-w-0"
+            className={cn(
+              'group leading-none min-w-0',
+              // On Hub: brand sits at the start, kingdom chip stacks beneath on mobile.
+              // On internal pages: brand becomes a centered title (no chip, no stack).
+              showBack
+                ? 'flex items-center justify-center text-center'
+                : 'flex flex-col',
+            )}
             aria-label={t('brand.name')}
           >
             <span
@@ -96,15 +128,21 @@ function HeaderInner({ adminMode, onExitAdmin }: { adminMode: boolean; onExitAdm
             >
               DAD BIGDADDYS
             </span>
-            {/* Kingdom tag only on mobile — desktop has the nav links */}
-            <span className="md:hidden flex items-center gap-1 text-[10px] text-ink-mute tracking-[0.28em] uppercase mt-0.5">
-              <Crown size={11} weight="duotone" className="text-gold-soft" />
-              {t('header.kingdomTag')}
-            </span>
+            {/* Kingdom tag only on mobile, and only on Hub — internal pages get a
+                cleaner centered title with no secondary chip. */}
+            {!showBack && (
+              <span className="md:hidden flex items-center gap-1 text-[10px] text-ink-mute tracking-[0.28em] uppercase mt-0.5">
+                <Crown size={11} weight="duotone" className="text-gold-soft" />
+                {t('header.kingdomTag')}
+              </span>
+            )}
           </Link>
 
-          {/* Desktop nav — member (5 tabs) OR admin (Sair + 7 tabs), swapped by adminMode */}
-          {adminMode ? (
+          {/* Desktop nav — member (5 tabs) OR admin (Sair + 7 tabs), swapped by
+              adminMode. Suppressed on internal pages so the back-title-bell
+              triptych stays clean; users still have the bottom nav + admin top
+              nav remains reachable via /admin/* breadcrumbs. */}
+          {showBack ? null : adminMode ? (
             <nav className="hidden md:flex items-center gap-1">
               <button
                 type="button"
@@ -161,7 +199,30 @@ function HeaderInner({ adminMode, onExitAdmin }: { adminMode: boolean; onExitAdm
           {/* Global search (Cmd-K) intentionally deferred — revisit once the
               dataset (members + events + milestones + polls) is large enough
               to need it. Until then, fewer chrome icons = cleaner header. */}
-          <div className="flex items-center gap-2 shrink-0">
+          {/* On internal pages we take flex-1 + justify-end so the centered
+              title (also flex-1) lands in the optical middle of the bar. */}
+          <div
+            className={cn(
+              'flex items-center gap-2',
+              showBack ? 'flex-1 justify-end' : 'shrink-0',
+            )}
+          >
+            {/* In admin mode on internal pages, keep the Exit affordance reachable
+                — the full admin top nav is suppressed (spec calls for a clean
+                back · title · bell triptych), but losing the only way out of
+                admin mode would strand the user. */}
+            {showBack && adminMode && (
+              <button
+                type="button"
+                onClick={onExitAdmin}
+                className="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold uppercase tracking-[0.18em] border border-crimson/40 bg-crimson/10 text-crimson-glow hover:bg-crimson/20 transition-colors"
+                title={t('nav.exitAdmin')}
+                aria-label={t('nav.exitAdmin')}
+              >
+                <SignOut size={14} weight="duotone" />
+                {t('nav.exitAdminShort')}
+              </button>
+            )}
             <div className="relative">
               <button
                 type="button"

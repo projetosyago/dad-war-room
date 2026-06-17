@@ -1264,6 +1264,7 @@
     "chat": "채팅",
     "alliance": "동맹",
     "settings": "설정",
+    "back": "뒤로",
     "primaryAriaLabel": "주요 특징",
     "adminAriaLabel": "관리자",
     "exitAdmin": "Exit 관리자 모드",

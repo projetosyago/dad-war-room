@@ -3,7 +3,6 @@ import { Link, useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import {
-  ArrowLeft,
   Sword,
   Horse,
   Crosshair as BowIcon,
@@ -87,14 +86,9 @@ export function HeroDetail() {
 
   return (
     <div className="container-narrow pt-5 pb-12 sm:pt-8 sm:pb-16">
-      <Link
-        to="/heroes"
-        className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.25em] text-gold-soft hover:text-gold mb-4"
-      >
-        <ArrowLeft size={14} weight="bold" />
-        {t('catalogue.heroes.backToList')}
-      </Link>
-
+      {/* Back affordance lives in the sticky Header now. The not-found empty
+          state below keeps its own "return to list" CTA since that's an inline
+          action, not a header-style breadcrumb. */}
       {loading && (
         <div className="card-hero p-6 sm:p-8">
           <div className="animate-pulse space-y-4">

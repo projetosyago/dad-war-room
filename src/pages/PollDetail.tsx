@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import {
@@ -64,7 +64,6 @@ export function PollDetail() {
   const { t } = useTranslation()
   const formatCountdown = useFormatCountdown()
   const { slug } = useParams<{ slug: string }>()
-  const navigate = useNavigate()
   const auth = useAuth()
   const { poll, loading, error: loadError, refetch } = usePoll(slug)
   const [busy, setBusy] = useState(false)
@@ -168,13 +167,9 @@ export function PollDetail() {
 
   return (
     <div className="container-narrow py-5 sm:py-10">
-      <button
-        onClick={() => navigate(-1)}
-        className="inline-flex items-center gap-1.5 text-xs text-ink-mute hover:text-gold mb-4"
-      >
-        <ArrowLeft size={14} weight="bold" /> {t('polls.detail.back')}
-      </button>
-
+      {/* Back affordance lives in the sticky Header now (see Header.tsx). The
+          NotFound branch above keeps its inline "back to polls" CTA — that's an
+          empty-state action, not a header-style breadcrumb. */}
       <motion.header
         initial={{ opacity: 0, y: -6 }}
         animate={{ opacity: 1, y: 0 }}

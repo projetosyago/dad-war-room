@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { format, differenceInCalendarDays } from 'date-fns'
-import { ArrowLeft, ArrowSquareOut, CalendarBlank, Crown } from '@phosphor-icons/react'
+import { ArrowSquareOut, CalendarBlank, Crown } from '@phosphor-icons/react'
 import { getMilestoneBySlug } from '../repositories/milestones'
 import { resolveMilestoneIcon } from '../lib/milestoneIcon'
 import { sanitizeAdminHtml } from '../lib/sanitize'
@@ -39,13 +39,7 @@ export function MilestoneDetail() {
 
   return (
     <div className="container-narrow pt-5 pb-12 sm:pt-8 sm:pb-16 space-y-4">
-      <Link
-        to="/"
-        className="inline-flex items-center gap-1.5 text-[11px] tracking-[0.22em] uppercase text-ink-mute hover:text-gold-soft"
-      >
-        <ArrowLeft size={12} weight="bold" /> {t('timeline.detail.back')}
-      </Link>
-
+      {/* Back affordance lives in the sticky Header now (see src/components/Header.tsx) */}
       {loading ? (
         <div className="card-hero h-[180px] animate-pulse" />
       ) : error ? (

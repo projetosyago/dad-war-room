@@ -1264,6 +1264,7 @@
     "chat": "聊天",
     "alliance": "联盟",
     "settings": "设置",
+    "back": "返回",
     "primaryAriaLabel": "小学",
     "adminAriaLabel": "管理",
     "exitAdmin": "退出管理模式",

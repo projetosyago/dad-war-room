@@ -81,6 +81,7 @@ export function NotificationsPanel({ open, onClose }: NotificationsPanelProps) {
     const dest = resolveTarget(msg)
     // External URL → real navigation; internal route → react-router.
     if (/^https?:\/\//i.test(dest)) {
+      // eslint-disable-next-line react-hooks/immutability
       window.location.href = dest
     } else {
       navigate(dest)

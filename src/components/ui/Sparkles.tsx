@@ -13,11 +13,13 @@ interface SparklesProps {
  */
 export function Sparkles({ count = 24, className, seed = 1 }: SparklesProps) {
   const particles = useMemo(() => {
-    // deterministic pseudo-random based on seed so SSR/hydration are stable
-    let s = seed * 9301 + 49297
+    // Deterministic pseudo-random based on seed so SSR/hydration are stable.
+    // Use a self-contained PRNG state in an object so we don't reassign a
+    // local `let` after render (react-hooks/immutability).
+    const state = { value: seed * 9301 + 49297 }
     const next = () => {
-      s = (s * 9301 + 49297) % 233280
-      return s / 233280
+      state.value = (state.value * 9301 + 49297) % 233280
+      return state.value / 233280
     }
     return Array.from({ length: count }, (_, i) => ({
       id: i,

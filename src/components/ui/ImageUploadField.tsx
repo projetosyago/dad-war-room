@@ -59,6 +59,11 @@ export function ImageUploadField({
     .map((t) => t.replace('image/', '').toUpperCase())
     .join(' · ')
 
+  // React Compiler can't preserve the manual memoization here because `busy`
+  // is a setState target that's also read inside the callback. The memoization
+  // isn't critical (React 19 Compiler auto-memoizes at runtime). Block-disable
+  // covers both the callback body and the dependency array.
+  /* eslint-disable react-hooks/preserve-manual-memoization */
   const handleFile = useCallback(
     async (file: File | undefined) => {
       if (!file || disabled || busy) return
@@ -84,6 +89,7 @@ export function ImageUploadField({
     },
     [bucket, busy, disabled, effectiveMax, maxMb, onChange, pathPrefix, t],
   )
+  /* eslint-enable react-hooks/preserve-manual-memoization */
 
   function openPicker() {
     if (disabled || busy) return

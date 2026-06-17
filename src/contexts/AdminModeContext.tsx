@@ -88,6 +88,7 @@ export function AdminModeProvider({ children }: { children: ReactNode }) {
   return <AdminModeContext.Provider value={value}>{children}</AdminModeContext.Provider>
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useAdminMode(): AdminModeContextValue {
   const ctx = useContext(AdminModeContext)
   if (!ctx) {

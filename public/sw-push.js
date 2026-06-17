@@ -1,5 +1,5 @@
-/* eslint-env serviceworker */
-/* global clients */
+/* global self, clients, ServiceWorkerGlobalScope */
+// Service Worker context — `self`, `clients`, etc. provided by the SW global.
 
 // DAD War Room — Web Push handler.
 //

@@ -261,7 +261,9 @@ function pct(n: number, total: number) {
 }
 
 function useNowTicker() {
-  const [now, setNow] = useState(Date.now())
+  // Lazy initializer — Date.now() is impure, so calling it via () => Date.now()
+  // defers it to mount instead of every render (react-hooks/purity).
+  const [now, setNow] = useState(() => Date.now())
   useEffect(() => {
     const id = window.setInterval(() => setNow(Date.now()), 30_000)
     return () => window.clearInterval(id)

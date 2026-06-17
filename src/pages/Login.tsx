@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import {
   ArrowRight,
   CaretDown,
+  Check,
   CircleNotch,
   DeviceMobile,
   Eye,
@@ -14,7 +15,27 @@ import {
 import { EmbersBackground } from '../components/login/EmbersBackground'
 import { ForgeTitle } from '../components/login/ForgeTitle'
 import { OrnamentStamp } from '../components/login/OrnamentStamp'
+import { PwaInstallModal } from '../components/PwaInstallModal'
 import { useAuth } from '../hooks/useAuth'
+import { usePwaInstall } from '../hooks/usePwaInstall'
+import { SUPPORTED_LANGUAGES, LANGUAGE_STORAGE_KEY } from '../i18n'
+
+// Compact flag + native name table — used for the inline dropdown on the
+// login page. Mirrors src/components/settings/LanguagePicker so swapping
+// from one to the other is consistent.
+const LANG_META: Record<string, { native: string; flag: string }> = {
+  en: { native: 'English', flag: '🇬🇧' },
+  pt: { native: 'Português', flag: '🇧🇷' },
+  es: { native: 'Español', flag: '🇪🇸' },
+  fr: { native: 'Français', flag: '🇫🇷' },
+  de: { native: 'Deutsch', flag: '🇩🇪' },
+  ru: { native: 'Русский', flag: '🇷🇺' },
+  tr: { native: 'Türkçe', flag: '🇹🇷' },
+  ar: { native: 'العربية', flag: '🇸🇦' },
+  zh: { native: '中文', flag: '🇨🇳' },
+  ko: { native: '한국어', flag: '🇰🇷' },
+  ja: { native: '日本語', flag: '🇯🇵' },
+}
 
 /**
  * Login — Throne Hall design. Wires up Fase B Supabase auth: username +
@@ -26,19 +47,43 @@ import { useAuth } from '../hooks/useAuth'
  * an underline-style form. No header/footer/bottom-nav — App.tsx skips them.
  */
 export function Login() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const navigate = useNavigate()
   const location = useLocation() as { state?: { from?: string } }
   const auth = useAuth()
   const videoRef = useRef<HTMLVideoElement>(null)
+  const pwa = usePwaInstall()
 
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [showPassword, setShowPassword] = useState(false)
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [langOpen, setLangOpen] = useState(false)
+  const [installModalOpen, setInstallModalOpen] = useState(false)
+
+  const currentLang = (i18n.language?.slice(0, 2) ?? 'en') as keyof typeof LANG_META
+  const currentMeta = LANG_META[currentLang] ?? LANG_META.en
 
   const redirectTo = location.state?.from ?? '/'
+
+  async function chooseLang(code: string) {
+    await i18n.changeLanguage(code)
+    try {
+      window.localStorage.setItem(LANGUAGE_STORAGE_KEY, code)
+    } catch {
+      /* private mode etc — ignore */
+    }
+    setLangOpen(false)
+  }
+
+  async function handleInstallClick() {
+    const outcome = await pwa.install()
+    // 'manual' means the platform has no programmatic prompt (iOS Safari,
+    // macOS Safari, Firefox) — show the tutorial modal instead. 'installed',
+    // 'dismissed', and 'already' all need no further UI here.
+    if (outcome === 'manual') setInstallModalOpen(true)
+  }
 
   // Toggle body class so global mesh-drift backgrounds don't fight our scene.
   useEffect(() => {
@@ -117,11 +162,107 @@ export function Login() {
             {t('login.brandSuffix')}
           </span>
         </div>
-        <button type="button" className="login-lang" aria-label={t('login.changeLanguage')}>
-          <span className="login-lang-flag" aria-hidden="true">🇬🇧</span>
-          <span>EN</span>
-          <CaretDown size={11} weight="regular" />
-        </button>
+        <div className="login-lang-wrap" style={{ position: 'relative' }}>
+          <button
+            type="button"
+            className="login-lang"
+            aria-label={t('login.changeLanguage')}
+            aria-expanded={langOpen}
+            aria-haspopup="listbox"
+            onClick={() => setLangOpen((v) => !v)}
+          >
+            <span className="login-lang-flag" aria-hidden="true">{currentMeta.flag}</span>
+            <span>{currentLang.toUpperCase()}</span>
+            <CaretDown size={11} weight="regular" />
+          </button>
+          {langOpen && (
+            <>
+              {/* Click-away overlay — invisible, covers viewport so any tap
+                  outside the menu closes it. Mobile-friendly alternative to
+                  document-level mousedown listeners. */}
+              <button
+                type="button"
+                aria-hidden="true"
+                onClick={() => setLangOpen(false)}
+                style={{
+                  position: 'fixed',
+                  inset: 0,
+                  background: 'transparent',
+                  border: 0,
+                  zIndex: 40,
+                }}
+              />
+              <ul
+                role="listbox"
+                aria-label={t('login.changeLanguage')}
+                style={{
+                  position: 'absolute',
+                  top: 'calc(100% + 8px)',
+                  right: 0,
+                  zIndex: 50,
+                  minWidth: 200,
+                  maxHeight: '60vh',
+                  overflowY: 'auto',
+                  background: 'rgba(13,15,28,0.96)',
+                  backdropFilter: 'blur(18px) saturate(160%)',
+                  WebkitBackdropFilter: 'blur(18px) saturate(160%)',
+                  border: '1px solid rgba(244,207,115,0.32)',
+                  borderRadius: 12,
+                  padding: 6,
+                  boxShadow: '0 14px 36px rgba(0,0,0,0.7)',
+                  margin: 0,
+                  listStyle: 'none',
+                }}
+              >
+                {SUPPORTED_LANGUAGES.map((code) => {
+                  const meta = LANG_META[code]
+                  const active = code === currentLang
+                  return (
+                    <li key={code}>
+                      <button
+                        type="button"
+                        role="option"
+                        aria-selected={active}
+                        onClick={() => chooseLang(code)}
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: 10,
+                          width: '100%',
+                          padding: '8px 12px',
+                          borderRadius: 8,
+                          background: active ? 'rgba(244,207,115,0.12)' : 'transparent',
+                          border: active
+                            ? '1px solid rgba(244,207,115,0.45)'
+                            : '1px solid transparent',
+                          color: active ? '#ffdb8a' : '#f0e9d6',
+                          fontSize: 14,
+                          textAlign: 'left',
+                          cursor: 'pointer',
+                          transition: 'background 120ms, border-color 120ms',
+                        }}
+                      >
+                        <span style={{ fontSize: 16, lineHeight: 1 }}>{meta?.flag ?? '🏳️'}</span>
+                        <span style={{ flex: 1 }}>{meta?.native ?? code}</span>
+                        <span
+                          style={{
+                            fontSize: 10,
+                            letterSpacing: '0.18em',
+                            textTransform: 'uppercase',
+                            color: '#7a7464',
+                          }}
+                        >
+                          {code}
+                        </span>
+                        {active && <Check size={14} weight="bold" style={{ color: '#ffdb8a' }} />}
+                      </button>
+                    </li>
+                  )
+                })}
+              </ul>
+            </>
+          )}
+        </div>
       </div>
 
       {/* — Stage — */}
@@ -214,17 +355,27 @@ export function Login() {
         </form>
 
         <div className="login-bottom">
-          <button type="button" className="login-pwa">
-            <DeviceMobile size={14} weight="duotone" />
-            <span>
-              <strong>{t('login.installPwa')}</strong>
-            </span>
-          </button>
+          {!pwa.installed && (
+            <button type="button" className="login-pwa" onClick={handleInstallClick}>
+              <DeviceMobile size={14} weight="duotone" />
+              <span>
+                <strong>{t('login.installPwa')}</strong>
+              </span>
+            </button>
+          )}
           <div className="login-credit">
             {t('login.builtBy')} <span>Salles</span>
           </div>
         </div>
       </main>
+
+      {/* Manual-install tutorial modal — only opened when the browser doesn't
+          fire `beforeinstallprompt` (iOS Safari, macOS Safari, Firefox). */}
+      <PwaInstallModal
+        open={installModalOpen}
+        platform={pwa.platform}
+        onClose={() => setInstallModalOpen(false)}
+      />
     </div>
   )
 }

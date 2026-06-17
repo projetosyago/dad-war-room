@@ -1014,20 +1014,42 @@
     }
   },
   "common": {
-    "loading": "Loading…"
+    "loading": "Loading…",
+    "close": "Close"
   },
   "events": {
     "bear1": {
       "title": "Bear Hunt 1 — Rally Wave Strategy",
       "short": "Bear Hunt 1"
     },
-    "bear2": { "title": "Bear Hunt 2", "short": "Bear Hunt 2" },
-    "kingsCastle": { "title": "King's Castle Battle", "short": "King's Castle" },
-    "kvk": { "title": "KvK · Kingdom of Power", "short": "KvK" },
-    "viking": { "title": "Viking Vengeance", "short": "Viking Vengeance" },
-    "swordland": { "title": "Swordland Showdown", "short": "Swordland Showdown" },
-    "triAlliance": { "title": "Tri-Alliance Clash", "short": "Tri-Alliance Clash" },
-    "cesar": { "title": "Cesar's Fury", "short": "Cesar's Fury" },
+    "bear2": {
+      "title": "Bear Hunt 2",
+      "short": "Bear Hunt 2"
+    },
+    "kingsCastle": {
+      "title": "King's Castle Battle",
+      "short": "King's Castle"
+    },
+    "kvk": {
+      "title": "KvK · Kingdom of Power",
+      "short": "KvK"
+    },
+    "viking": {
+      "title": "Viking Vengeance",
+      "short": "Viking Vengeance"
+    },
+    "swordland": {
+      "title": "Swordland Showdown",
+      "short": "Swordland Showdown"
+    },
+    "triAlliance": {
+      "title": "Tri-Alliance Clash",
+      "short": "Tri-Alliance Clash"
+    },
+    "cesar": {
+      "title": "Cesar's Fury",
+      "short": "Cesar's Fury"
+    },
     "page": {
       "eyebrow": "Catalogue",
       "title": "Events of the realm",
@@ -1465,6 +1487,37 @@
       "limitsHint": "{{allowedHuman}} · up to {{maxMb}} MB",
       "errorTooLarge": "File too large. Maximum {{maxMb}} MB.",
       "errorUploadFailed": "Upload failed."
+    }
+  },
+  "pwa": {
+    "install": {
+      "eyebrow": "Install",
+      "fallback": {
+        "title": "Install DAD War Room",
+        "subtitle": "Follow these steps to add the app to your device.",
+        "step1": "Use your browser menu to install or add this site as an app.",
+        "step2": "If you don't see an install option, try opening this site in Chrome or Edge."
+      },
+      "ios-safari": {
+        "title": "Install on iPhone",
+        "subtitle": "iOS doesn't expose an automatic install. Two taps and it's on your home screen.",
+        "step1": "Tap the Share button in Safari (the square with an arrow at the bottom).",
+        "step2": "Choose 'Add to Home Screen'.",
+        "step3": "Tap 'Add' in the top right — the app appears on your home screen."
+      },
+      "mac-safari": {
+        "title": "Install on Mac",
+        "subtitle": "Safari 17+ supports installing web apps to the Dock.",
+        "step1": "From Safari's File menu, choose 'Add to Dock…'",
+        "step2": "Confirm the name and icon, then click 'Add'.",
+        "step3": "The app shows up in your Dock and Launchpad as a standalone window."
+      },
+      "firefox": {
+        "title": "Install on Firefox",
+        "subtitle": "Firefox doesn't install web apps natively on desktop. Open in Chrome or Edge for one-click install.",
+        "step1": "On Android Firefox: tap the menu (three dots) → Install.",
+        "step2": "On desktop: bookmark the page, or open it in Chrome / Edge to install."
+      }
     }
   }
 }

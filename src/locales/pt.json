@@ -1014,7 +1014,8 @@
     }
   },
   "common": {
-    "loading": "Carregando…"
+    "loading": "Carregando…",
+    "close": "Fechar"
   },
   "events": {
     "bear1": {
@@ -1486,6 +1487,37 @@
       "limitsHint": "{{allowedHuman}} · até {{maxMb}} MB",
       "errorTooLarge": "Arquivo muito grande. Máximo {{maxMb}} MB.",
       "errorUploadFailed": "Falha no envio."
+    }
+  },
+  "pwa": {
+    "install": {
+      "eyebrow": "Instalar",
+      "fallback": {
+        "title": "Instalar DAD War Room",
+        "subtitle": "Siga os passos para adicionar o app ao seu dispositivo.",
+        "step1": "Use o menu do navegador para instalar ou adicionar este site como app.",
+        "step2": "Se não aparecer opção de instalar, tente abrir no Chrome ou Edge."
+      },
+      "ios-safari": {
+        "title": "Instalar no iPhone",
+        "subtitle": "O iOS não tem instalação automática. Dois toques e está na sua tela inicial.",
+        "step1": "Toque no botão Compartilhar do Safari (o quadrado com uma seta na parte inferior).",
+        "step2": "Escolha 'Adicionar à Tela de Início'.",
+        "step3": "Toque em 'Adicionar' no canto superior direito — o app aparece na tela inicial."
+      },
+      "mac-safari": {
+        "title": "Instalar no Mac",
+        "subtitle": "Safari 17+ permite instalar web apps no Dock.",
+        "step1": "No menu Arquivo do Safari, escolha 'Adicionar ao Dock…'",
+        "step2": "Confirme nome e ícone, depois clique em 'Adicionar'.",
+        "step3": "O app aparece no Dock e no Launchpad como janela independente."
+      },
+      "firefox": {
+        "title": "Instalar no Firefox",
+        "subtitle": "Firefox desktop não instala web apps nativamente. Abra no Chrome ou Edge para instalar em um clique.",
+        "step1": "No Firefox Android: menu (três pontos) → Instalar.",
+        "step2": "No desktop: salve nos favoritos ou abra no Chrome / Edge para instalar."
+      }
     }
   }
 }

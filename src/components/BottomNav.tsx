@@ -40,11 +40,13 @@ export function BottomNav() {
     <nav
       className="md:hidden fixed inset-x-0 bottom-0 z-40 pb-safe"
       style={{
-        background: 'linear-gradient(180deg, rgba(31,37,66,0.82) 0%, rgba(19,23,42,0.97) 100%)',
-        backdropFilter: 'blur(20px) saturate(160%)',
-        WebkitBackdropFilter: 'blur(20px) saturate(160%)',
-        borderTop: '1px solid rgba(244, 207, 115, 0.22)',
-        boxShadow: '0 -10px 30px -10px rgba(0,0,0,0.6)',
+        // Bump the top alpha so content stops bleeding through behind the nav.
+        background:
+          'linear-gradient(180deg, rgba(19,23,42,0.96) 0%, rgba(13,15,28,1) 100%)',
+        backdropFilter: 'blur(24px) saturate(160%)',
+        WebkitBackdropFilter: 'blur(24px) saturate(160%)',
+        borderTop: '1px solid rgba(244, 207, 115, 0.28)',
+        boxShadow: '0 -14px 36px -10px rgba(0,0,0,0.7)',
       }}
       aria-label={t('nav.primaryAriaLabel')}
     >

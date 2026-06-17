@@ -6,6 +6,7 @@ import { Footer } from './components/Footer'
 import { BottomNav, BottomNavSpacer } from './components/BottomNav'
 import { AdminBottomNav } from './components/AdminBottomNav'
 import { ProtectedAdminRoute } from './components/ProtectedAdminRoute'
+import { RequireAuth } from './components/RequireAuth'
 import { useAdminMode } from './contexts/AdminModeContext'
 import { useAuth } from './hooks/useAuth'
 import { Hub } from './pages/Hub'
@@ -124,35 +125,41 @@ function App() {
       <main id="main-content" className={isBare ? '' : 'flex-1'}>
         <Suspense fallback={<RouteFallback />}>
         <Routes>
-          {/* Public / member-facing */}
+          {/* Public — only /login is reachable signed-out. */}
           <Route path="/login" element={<Login />} />
-          <Route path="/" element={<Hub />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/chat" element={<Chat />} />
-          <Route path="/alliance" element={<Alliance />} />
-          <Route path="/alliance/members" element={<Members />} />
-          <Route path="/alliance/members/:nick" element={<MemberDetail />} />
-          <Route path="/alliance/polls" element={<Polls />} />
-          <Route path="/alliance/polls/:slug" element={<PollDetail />} />
-          <Route path="/heroes" element={<Heroes />} />
-          <Route path="/heroes/:slug" element={<HeroDetail />} />
-          <Route path="/pets" element={<Pets />} />
-          <Route path="/masters" element={<Masters />} />
-          <Route path="/troop-tiers" element={<TroopTiers />} />
-          <Route path="/about" element={<Navigate to="/alliance" replace />} />
-          <Route path="/settings" element={<Settings />} />
-          <Route path="/bear-1" element={<Bear1Guide />} />
 
-          {/* Short share link for in-game chat: /p/<token> → resolves & redirects */}
-          <Route path="/p/:token" element={<PollByToken />} />
+          {/* Everything else lives behind RequireAuth — signed-out visitors
+              get redirected to /login with the requested path stored in
+              location.state.from so they bounce back after auth. */}
+          <Route element={<RequireAuth />}>
+            <Route path="/" element={<Hub />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/chat" element={<Chat />} />
+            <Route path="/alliance" element={<Alliance />} />
+            <Route path="/alliance/members" element={<Members />} />
+            <Route path="/alliance/members/:nick" element={<MemberDetail />} />
+            <Route path="/alliance/polls" element={<Polls />} />
+            <Route path="/alliance/polls/:slug" element={<PollDetail />} />
+            <Route path="/heroes" element={<Heroes />} />
+            <Route path="/heroes/:slug" element={<HeroDetail />} />
+            <Route path="/pets" element={<Pets />} />
+            <Route path="/masters" element={<Masters />} />
+            <Route path="/troop-tiers" element={<TroopTiers />} />
+            <Route path="/about" element={<Navigate to="/alliance" replace />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="/bear-1" element={<Bear1Guide />} />
 
-          {/* Kingdom Timeline — admin-authored milestone detail page */}
-          <Route path="/timeline/:slug" element={<MilestoneDetail />} />
+            {/* Short share link for in-game chat: /p/<token> → resolves & redirects */}
+            <Route path="/p/:token" element={<PollByToken />} />
 
-          {/* Legacy redirects */}
-          <Route path="/members" element={<Navigate to="/alliance/members" replace />} />
-          <Route path="/polls" element={<Navigate to="/alliance/polls" replace />} />
-          <Route path="/polls/:slug" element={<PollSlugRedirect />} />
+            {/* Kingdom Timeline — admin-authored milestone detail page */}
+            <Route path="/timeline/:slug" element={<MilestoneDetail />} />
+
+            {/* Legacy redirects */}
+            <Route path="/members" element={<Navigate to="/alliance/members" replace />} />
+            <Route path="/polls" element={<Navigate to="/alliance/polls" replace />} />
+            <Route path="/polls/:slug" element={<PollSlugRedirect />} />
+          </Route>
 
           {/* Legacy admin login → unified per-account /login */}
           <Route path="/admin/login" element={<Navigate to="/login" replace />} />

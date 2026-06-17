@@ -59,14 +59,19 @@ function HeaderInner({ adminMode, onExitAdmin }: { adminMode: boolean; onExitAdm
   }, [])
 
   return (
-    <header className="sticky top-0 z-50">
+    <header className="sticky top-0 z-50 pt-safe">
       <div
         className={cn(
           'glass-strong transition-all duration-300',
           scrolled ? 'border-b border-gold/30' : 'border-b border-gold/20',
         )}
         style={{
-          backgroundColor: scrolled ? 'rgba(31,37,66,0.85)' : 'rgba(31,37,66,0.62)',
+          // Stronger floor color so the bar stays readable against any page
+          // background. The previous .62 alpha let the dark page bleed through
+          // and made the title look like it had disappeared.
+          backgroundColor: scrolled ? 'rgba(19,23,42,0.95)' : 'rgba(19,23,42,0.88)',
+          backdropFilter: 'blur(18px) saturate(160%)',
+          WebkitBackdropFilter: 'blur(18px) saturate(160%)',
         }}
       >
         <div

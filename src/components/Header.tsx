@@ -71,7 +71,12 @@ function HeaderInner({ adminMode, onExitAdmin }: { adminMode: boolean; onExitAdm
   }, [])
 
   return (
-    <header className="sticky top-0 z-50 pt-safe">
+    // `fixed` (not `sticky`) so iOS PWA standalone mode doesn't lose the anchor
+    // and let the header scroll away. Anchoring to the viewport is unconditional;
+    // a sibling <HeaderSpacer/> rendered just below in App.tsx claims the same
+    // vertical real estate inside the flex column so page content sits BELOW
+    // the bar instead of UNDER it. Same battle-tested pattern as BottomNav.
+    <header className="fixed top-0 inset-x-0 z-50 pt-safe">
       <div
         className={cn(
           'glass-strong transition-all duration-300',
@@ -266,5 +271,27 @@ function HeaderInner({ adminMode, onExitAdmin }: { adminMode: boolean; onExitAdm
         <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-crimson/20 to-transparent" />
       )}
     </header>
+  )
+}
+
+/** Spacer matching the Header's vertical footprint so page content sits BELOW
+ *  the fixed bar instead of UNDER it. Mirrors the BottomNavSpacer pattern.
+ *
+ *  Sizing:
+ *    pt-safe (env(safe-area-inset-top)) + h-16 (64px main bar)
+ *    + 1px hairline divider + 2px crimson under-divider (admin mode only,
+ *      ignored here — 3px error budget is negligible).
+ *  We size against the SCROLLED-FALSE state (h-16) so when the user is at the
+ *  top of the page there's zero offset gap, and during scrolled state (h-14)
+ *  there's a harmless 8px breathing strip between header and first content.
+ */
+export function HeaderSpacer() {
+  return (
+    <div
+      aria-hidden
+      style={{
+        minHeight: 'calc(4rem + 1px + env(safe-area-inset-top, 0px))',
+      }}
+    />
   )
 }

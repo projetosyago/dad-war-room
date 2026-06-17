@@ -1,7 +1,7 @@
 import { lazy, Suspense, useEffect } from 'react'
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { Header } from './components/Header'
+import { Header, HeaderSpacer } from './components/Header'
 import { Footer } from './components/Footer'
 import { BottomNav, BottomNavSpacer } from './components/BottomNav'
 import { AdminBottomNav } from './components/AdminBottomNav'
@@ -122,6 +122,11 @@ function App() {
         </a>
       )}
       {!isBare && <Header />}
+      {/* Spacer matches the FIXED Header's footprint so page content sits
+          BELOW the bar (and not under it) on every route. iOS PWA standalone
+          mode broke `position: sticky` on the Header in a flex column — fixed
+          + spacer is the bulletproof equivalent. */}
+      {!isBare && <HeaderSpacer />}
       <main id="main-content" className={isBare ? '' : 'flex-1'}>
         <Suspense fallback={<RouteFallback />}>
         <Routes>

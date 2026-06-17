@@ -1274,7 +1274,9 @@
     "adminChat": "채팅",
     "adminAlliance": "동맹",
     "adminNotifications": "Notif.",
-    "adminAnalytics": "통계 정보"
+    "adminAnalytics": "통계 정보",
+    "scrollLeft": "탭을 왼쪽으로 스크롤",
+    "scrollRight": "탭을 오른쪽으로 스크롤"
   },
   "notifications": {
     "bellAriaLabel": "알림",

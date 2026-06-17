@@ -1274,7 +1274,9 @@
     "adminChat": "Чат",
     "adminAlliance": "Альянс",
     "adminNotifications": "Notif.",
-    "adminAnalytics": "Статистика"
+    "adminAnalytics": "Статистика",
+    "scrollLeft": "Прокрутить вкладки влево",
+    "scrollRight": "Прокрутить вкладки вправо"
   },
   "notifications": {
     "bellAriaLabel": "Уведомления",

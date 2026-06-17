@@ -1274,7 +1274,9 @@
     "adminChat": "الدردشة",
     "adminAlliance": "التحالف",
     "adminNotifications": "Notif.",
-    "adminAnalytics": "Stats"
+    "adminAnalytics": "Stats",
+    "scrollLeft": "تمرير علامات التبويب إلى اليسار",
+    "scrollRight": "تمرير علامات التبويب إلى اليمين"
   },
   "notifications": {
     "bellAriaLabel": "الإشعارات",

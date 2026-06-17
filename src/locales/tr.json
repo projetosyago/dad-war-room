@@ -1274,7 +1274,9 @@
     "adminChat": "Chat",
     "adminAlliance": "İttifak",
     "adminNotifications": "Notif.",
-    "adminAnalytics": "Stats"
+    "adminAnalytics": "Stats",
+    "scrollLeft": "Sekmeleri sola kaydır",
+    "scrollRight": "Sekmeleri sağa kaydır"
   },
   "notifications": {
     "bellAriaLabel": "Bildirimler",

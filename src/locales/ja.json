@@ -1274,7 +1274,9 @@
     "adminChat": "チャット",
     "adminAlliance": "同盟",
     "adminNotifications": "Notif.",
-    "adminAnalytics": "統計情報"
+    "adminAnalytics": "統計情報",
+    "scrollLeft": "タブを左にスクロール",
+    "scrollRight": "タブを右にスクロール"
   },
   "notifications": {
     "bellAriaLabel": "通知",

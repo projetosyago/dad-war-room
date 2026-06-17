@@ -1274,7 +1274,9 @@
     "adminChat": "Chat",
     "adminAlliance": "Alliance",
     "adminNotifications": "Notif.",
-    "adminAnalytics": "Statistiques"
+    "adminAnalytics": "Statistiques",
+    "scrollLeft": "Faire défiler les onglets vers la gauche",
+    "scrollRight": "Faire défiler les onglets vers la droite"
   },
   "notifications": {
     "bellAriaLabel": "Notifications",

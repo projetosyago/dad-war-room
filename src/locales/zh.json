@@ -1274,7 +1274,9 @@
     "adminChat": "聊天",
     "adminAlliance": "联盟",
     "adminNotifications": "Notif.",
-    "adminAnalytics": "状态"
+    "adminAnalytics": "状态",
+    "scrollLeft": "向左滚动标签",
+    "scrollRight": "向右滚动标签"
   },
   "notifications": {
     "bellAriaLabel": "通知",

@@ -1274,7 +1274,9 @@
     "adminChat": "Chat",
     "adminAlliance": "Alianza",
     "adminNotifications": "Notif.",
-    "adminAnalytics": "Estadísticas"
+    "adminAnalytics": "Estadísticas",
+    "scrollLeft": "Desplazar pestañas a la izquierda",
+    "scrollRight": "Desplazar pestañas a la derecha"
   },
   "notifications": {
     "bellAriaLabel": "Notificaciones",

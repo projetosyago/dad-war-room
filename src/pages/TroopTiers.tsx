@@ -55,8 +55,8 @@ export function TroopTiers() {
         transition={{ duration: 0.5 }}
         className="mb-5 sm:mb-6"
       >
-        <div className="eyebrow mb-1">{t('catalogue.eyebrow')}</div>
-        <h1 className="font-display text-2xl sm:text-3xl text-ink-cream tracking-wider leading-none">
+        <div className="eyebrow mb-1 text-center">{t('catalogue.eyebrow')}</div>
+        <h1 className="font-display text-2xl sm:text-3xl text-ink-cream tracking-wider leading-none text-center">
           {t('catalogue.tiers.title')}
         </h1>
         <p className="text-xs sm:text-sm text-ink-mute mt-1.5">

@@ -87,8 +87,8 @@ export function Members() {
         transition={{ duration: 0.5 }}
         className="mb-5 sm:mb-6"
       >
-        <div className="text-[10px] tracking-[0.3em] uppercase text-gold-soft mb-1">{t('members.page.eyebrow')}</div>
-        <h1 className="font-display text-2xl sm:text-3xl text-ink-cream tracking-wider leading-none">
+        <div className="text-[10px] tracking-[0.3em] uppercase text-gold-soft mb-1 text-center">{t('members.page.eyebrow')}</div>
+        <h1 className="font-display text-2xl sm:text-3xl text-ink-cream tracking-wider leading-none text-center">
           {t('members.page.title')}
         </h1>
         <p className="text-xs sm:text-sm text-ink-mute mt-1.5">

@@ -80,7 +80,7 @@
         },
         "r4": {
           "label": "R4 — Admin",
-          "description": "Create polls/events, manage allies."
+          "description": "Create motions/events, manage allies."
         },
         "r5": {
           "label": "R5 — Admin",
@@ -246,7 +246,7 @@
         "subtitle": "One-shot wipe of all chat messages and uploaded images. Cannot be undone.",
         "clearAll": "Clear all messages",
         "confirmHeading": "Confirm permanent deletion",
-        "confirmBody": "Every chat message and uploaded image will be gone. Past polls, events and members stay untouched.",
+        "confirmBody": "Every chat message and uploaded image will be gone. Past motions, events and members stay untouched.",
         "cancel": "Cancel",
         "confirmYes": "Yes, wipe everything"
       },
@@ -600,7 +600,7 @@
       "tap": {
         "hub": "War Room / Home",
         "events": "Events tab",
-        "polls": "Polls list",
+        "polls": "Council list",
         "alliance": "Alliance page",
         "url": "Custom URL"
       },
@@ -689,9 +689,9 @@
     "polls": {
       "backToAdmin": "Back to admin",
       "eyebrow": "Admin",
-      "title": "Polls",
+      "title": "Council",
       "closeForm": "Close form",
-      "newPoll": "New poll",
+      "newPoll": "New motion",
       "filters": {
         "all": "all",
         "open": "open",
@@ -712,7 +712,7 @@
         },
         "afterClose": {
           "label": "After close only",
-          "hint": "Counts hidden until the poll closes"
+          "hint": "Counts hidden until the motion closes"
         },
         "adminOnly": {
           "label": "Admin-only",
@@ -726,7 +726,7 @@
       "errors": {
         "minOptions": "Add at least {{min}} options.",
         "duplicates": "Duplicate options are not allowed.",
-        "failedToCreate": "Failed to create poll",
+        "failedToCreate": "Failed to create motion",
         "actionFailed": "Action failed",
         "clipboardBlocked": "Clipboard blocked by the browser."
       },
@@ -741,7 +741,7 @@
       },
       "confirmDelete": "Delete \"{{title}}\" permanently? All votes will be lost.",
       "form": {
-        "heading": "New poll",
+        "heading": "New motion",
         "titleLabel": "Title *",
         "titlePlaceholder": "What time should we run Viking Vengeance?",
         "descriptionLabel": "Description",
@@ -766,10 +766,10 @@
         "addOption": "Add option",
         "cancel": "Cancel",
         "creating": "Creating…",
-        "create": "Create poll"
+        "create": "Create motion"
       },
-      "emptyAll": "No polls yet.",
-      "emptyFiltered": "No {{filter}} polls.",
+      "emptyAll": "No motions yet.",
+      "emptyFiltered": "No {{filter}} motions.",
       "row": {
         "closesAt": "closes {{date}}",
         "openIndefinitely": "open indefinitely",
@@ -867,7 +867,7 @@
     "cta": {
       "open": "Open",
       "polls": {
-        "title": "Polls",
+        "title": "Council",
         "subtitle": "Coordinate event timing, legion preferences, alliance decisions."
       },
       "members": {
@@ -1142,13 +1142,13 @@
       "utcTitle": "All times are in Coordinated Universal Time"
     },
     "pendingPolls": {
-      "allClearEyebrow": "All clear",
+      "allClearEyebrow": "Council clear",
       "actionEyebrow": "Action needed",
-      "emptyTitle": "No pending polls",
+      "emptyTitle": "No open motions",
       "emptySubtitle": "All open votes already received your vote.",
-      "waitingTitle_one": "{{count}} poll waiting for your vote",
-      "waitingTitle_other": "{{count}} polls waiting for your vote",
-      "footerEmpty": "War Room · Polls",
+      "waitingTitle_one": "{{count}} motion waiting for your vote",
+      "waitingTitle_other": "{{count}} motions waiting for your vote",
+      "footerEmpty": "War Room · Council",
       "footerCount": "Top {{shown}} of {{total}}",
       "viewAll": "View all"
     },
@@ -1283,7 +1283,7 @@
     "exitAdmin": "Exit admin mode",
     "exitAdminShort": "Exit",
     "adminEvents": "Events",
-    "adminPolls": "Polls",
+    "adminPolls": "Council",
     "adminMembers": "Members",
     "adminChat": "Chat",
     "adminAlliance": "Alliance",
@@ -1303,15 +1303,15 @@
   },
   "polls": {
     "eyebrow": "Vote",
-    "title": "Alliance polls",
+    "title": "Alliance Council",
     "loading": "Loading…",
-    "countLine_one": "{{count}} poll in flight",
-    "countLine_other": "{{count}} polls in flight",
+    "countLine_one": "{{count}} motion in flight",
+    "countLine_other": "{{count}} motions in flight",
     "readOnly": "read-only",
     "empty": {
-      "title": "No polls yet",
-      "adminPrefix": "An admin can create the first poll from",
-      "adminLink": "admin → polls"
+      "title": "No motions yet",
+      "adminPrefix": "An admin can create the first motion from",
+      "adminLink": "admin → motions"
     },
     "view": "View",
     "status": {
@@ -1334,13 +1334,13 @@
       "days_other": "Closes in {{count}}d"
     },
     "shareToken": {
-      "invalid": "This share link is invalid or the poll was deleted.",
-      "browse": "Browse polls"
+      "invalid": "This share link is invalid or the motion was deleted.",
+      "browse": "Browse motions"
     },
     "detail": {
       "back": "Back",
-      "backToPolls": "Back to polls",
-      "notFound": "Poll not found.",
+      "backToPolls": "Back to motions",
+      "notFound": "Motion not found.",
       "countdown": {
         "archived": "Archived",
         "draftNotPublished": "Draft (not published)",
@@ -1348,14 +1348,14 @@
         "openIndefinitely": "Open indefinitely"
       },
       "draftBanner": {
-        "prefix": "This poll is in",
+        "prefix": "This motion is in",
         "draft": "draft",
         "suffix": " — members can't vote yet. Publish from",
-        "link": "admin → polls"
+        "link": "admin → motions"
       },
       "resultsHidden": {
-        "adminOnly": "Results are visible to admins only on this poll.",
-        "untilClose": "Vote counts are hidden until the poll closes."
+        "adminOnly": "Results are visible to admins only on this motion.",
+        "untilClose": "Vote counts are hidden until the motion closes."
       },
       "signedOutBanner": "to vote. You can view results while signed out.",
       "allyBanner": "accounts can view results but cannot vote (read-only access).",
@@ -1364,10 +1364,10 @@
       "voterCount_one": "{{count}} voter",
       "voterCount_other": "{{count}} voters",
       "totalPicks": "{{count}} total picks",
-      "resultsHiddenShort": "Results hidden until the poll closes.",
+      "resultsHiddenShort": "Results hidden until the motion closes.",
       "reVotePrefix": "You can re-vote until",
       "clearMyVote": "Clear my vote",
-      "shareTitle": "Share poll",
+      "shareTitle": "Share motion",
       "share": "Share",
       "copied": "Copied"
     }
@@ -1403,7 +1403,7 @@
     "push": {
       "eyebrow": "Notifications",
       "title": "Push notifications",
-      "description": "Receive in-app pings when an event is starting, a new poll opens, or admin sends an announcement — in your chosen language.",
+      "description": "Receive in-app pings when an event is starting, a new motion opens, or admin sends an announcement — in your chosen language.",
       "notConfigured": "Push not configured for this deployment. Ask the alliance admin.",
       "blocked": "Notifications blocked in browser settings — re-enable to subscribe.",
       "active": "Active",

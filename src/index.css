@@ -232,17 +232,84 @@
   }
   .card-hero--success {
     background-image: radial-gradient(620px 260px at 0% 0%, rgba(127,192,138,0.16), transparent 65%);
-    border-color: rgba(127, 192, 138, 0.34);
+    border-color: rgba(127, 192, 138, 0.42);
   }
   .card-hero--success::before {
-    background: linear-gradient(90deg, transparent, #7fc08a, transparent);
+    background: linear-gradient(90deg, transparent, rgba(127,192,138,0.6), transparent);
   }
   .card-hero--steel {
-    background-image: radial-gradient(620px 260px at 0% 0%, rgba(159,178,204,0.16), transparent 65%);
-    border-color: rgba(159, 178, 204, 0.32);
+    background-image: radial-gradient(620px 260px at 0% 0%, rgba(154,166,186,0.14), transparent 65%);
+    border-color: rgba(154, 166, 186, 0.38);
   }
   .card-hero--steel::before {
-    background: linear-gradient(90deg, transparent, #9fb2cc, transparent);
+    background: linear-gradient(90deg, transparent, rgba(154,166,186,0.55), transparent);
+  }
+  .card-hero--violet {
+    background-image: radial-gradient(620px 260px at 0% 0%, rgba(155,140,255,0.16), transparent 65%);
+    border-color: rgba(155, 140, 255, 0.4);
+  }
+  .card-hero--violet::before {
+    background: linear-gradient(90deg, transparent, rgba(155,140,255,0.6), transparent);
+  }
+
+  /* GLOW POSITION modifiers — explicit pairs per tone × position.
+     Default (no modifier) keeps glow at top-left (0% 0%).
+     --glow-tr moves the radial center to top-right (100% 0%).
+     --glow-c  moves the radial center to center-top (50% 0%).
+     Written explicitly because background-position cannot relocate a
+     radial-gradient's anchor reliably across browsers. */
+  .card-hero.card-hero--glow-tr {
+    background-image: radial-gradient(620px 260px at 100% 0%, rgba(244,207,115,0.16), transparent 65%);
+  }
+  .card-hero.card-hero--glow-c {
+    background-image: radial-gradient(620px 260px at 50% 0%, rgba(244,207,115,0.16), transparent 65%);
+  }
+  .card-hero--crimson.card-hero--glow-tr {
+    background-image: radial-gradient(620px 260px at 100% 0%, rgba(226,86,86,0.18), transparent 65%);
+  }
+  .card-hero--crimson.card-hero--glow-c {
+    background-image: radial-gradient(620px 260px at 50% 0%, rgba(226,86,86,0.18), transparent 65%);
+  }
+  .card-hero--success.card-hero--glow-tr {
+    background-image: radial-gradient(620px 260px at 100% 0%, rgba(127,192,138,0.16), transparent 65%);
+  }
+  .card-hero--success.card-hero--glow-c {
+    background-image: radial-gradient(620px 260px at 50% 0%, rgba(127,192,138,0.16), transparent 65%);
+  }
+  .card-hero--steel.card-hero--glow-tr {
+    background-image: radial-gradient(620px 260px at 100% 0%, rgba(154,166,186,0.14), transparent 65%);
+  }
+  .card-hero--steel.card-hero--glow-c {
+    background-image: radial-gradient(620px 260px at 50% 0%, rgba(154,166,186,0.14), transparent 65%);
+  }
+  .card-hero--violet.card-hero--glow-tr {
+    background-image: radial-gradient(620px 260px at 100% 0%, rgba(155,140,255,0.16), transparent 65%);
+  }
+  .card-hero--violet.card-hero--glow-c {
+    background-image: radial-gradient(620px 260px at 50% 0%, rgba(155,140,255,0.16), transparent 65%);
+  }
+
+  /* PULSE modifier — for "closing soon" attention motions.
+     Layers a soft crimson outer halo on top of the base box-shadow. */
+  @keyframes card-pulse {
+    0%, 100% {
+      box-shadow:
+        inset 0 1px 0 0 rgba(255,219,138,0.06),
+        0 36px 56px -22px rgba(0,0,0,0.72),
+        0 0 0 0 rgba(226,86,86,0.0);
+    }
+    50% {
+      box-shadow:
+        inset 0 1px 0 0 rgba(255,219,138,0.06),
+        0 36px 56px -22px rgba(0,0,0,0.72),
+        0 0 24px -4px rgba(226,86,86,0.45);
+    }
+  }
+  .card-hero--pulse {
+    animation: card-pulse 2.4s ease-in-out infinite;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .card-hero--pulse { animation: none; }
   }
 
   /* "Framed portrait" variant — Salles 2026-06-15. Replaces the failed

@@ -84,7 +84,7 @@ export function NextEventCard() {
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-      className="card-hero card-hero--crimson"
+      className="card-hero card-hero--crimson card-hero--glow-tr"
     >
       <div className="flex items-start justify-between gap-3 p-5 sm:p-6 pb-2">
         <div className="flex items-center gap-3">

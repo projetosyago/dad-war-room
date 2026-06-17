@@ -1142,9 +1142,9 @@
       "utcTitle": "Todas las horas están en Hora Universal Coordinada"
     },
     "pendingPolls": {
-      "allClearEyebrow": "Todo despejado.",
+      "allClearEyebrow": "Consejo despejado",
       "actionEyebrow": "Acción necesaria",
-      "emptyTitle": "No hay encuestas pendientes",
+      "emptyTitle": "No hay mociones abiertas",
       "emptySubtitle": "Todos los votos abiertos ya han recibido su voto.",
       "waitingTitle_one": "Encuesta {{count}} esperando su voto",
       "waitingTitle_other": "Encuestas {{count}} esperando tu voto",
@@ -1303,7 +1303,7 @@
   },
   "polls": {
     "eyebrow": "Votar",
-    "title": "Encuestas de Alliance",
+    "title": "Consejo de la Alianza",
     "loading": "Cargando…",
     "countLine_one": "Encuesta {{count}} en vuelo",
     "countLine_other": "Encuestas {{count}} en vuelo",

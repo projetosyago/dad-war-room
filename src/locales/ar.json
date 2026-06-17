@@ -1142,9 +1142,9 @@
       "utcTitle": "جميع الأوقات في التوقيت العالمي المنسق"
     },
     "pendingPolls": {
-      "allClearEyebrow": "كل شيء واضح",
+      "allClearEyebrow": "المجلس خالٍ",
       "actionEyebrow": "الإجراءات اللازمة",
-      "emptyTitle": "No pending polls",
+      "emptyTitle": "لا توجد اقتراحات مفتوحة",
       "emptySubtitle": "جميع الأصوات المفتوحة حصلت بالفعل على تصويتك.",
       "waitingTitle_one": "إستطلاع \"إكس بيه\" ينتظر تصويتك",
       "waitingTitle_other": "إستطلاعات \"إكس بي إتش\" تنتظر تصويتك",
@@ -1303,7 +1303,7 @@
   },
   "polls": {
     "eyebrow": "تصويت",
-    "title": "انتخابات التحالف",
+    "title": "مجلس التحالف",
     "loading": "جارٍ التحميل…",
     "countLine_one": "اقتراع محطة {{count}}",
     "countLine_other": "استطلاعات الرأي {{count}} في الرحلة",

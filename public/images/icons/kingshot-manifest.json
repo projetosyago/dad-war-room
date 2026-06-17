@@ -1,0 +1,1726 @@
+{
+  "generated_at": "2026-06-17T17:44:13.659Z",
+  "buckets": {
+    "pets": [
+      {
+        "slug": "alpha-black-panther",
+        "title": "Alpha Black Panther",
+        "link": "https://kingshotdata.com/pets/alpha-black-panther/",
+        "local": "/images/icons/kingshot/pets/alpha-black-panther.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/11/alpha-black-panther-avatar.webp"
+      },
+      {
+        "slug": "bison",
+        "title": "Bison",
+        "link": "https://kingshotdata.com/pets/bison/",
+        "local": "/images/icons/kingshot/pets/bison.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/bison-icon-kingshot.webp"
+      },
+      {
+        "slug": "cheetah",
+        "title": "Cheetah",
+        "link": "https://kingshotdata.com/pets/cheetah/",
+        "local": "/images/icons/kingshot/pets/cheetah.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/05/cheetah-pet-icon.webp"
+      },
+      {
+        "slug": "giant-rhino",
+        "title": "Giant Rhino",
+        "link": "https://kingshotdata.com/pets/giant-rhino/",
+        "local": "/images/icons/kingshot/pets/giant-rhino.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/giant-rhino-avatar.webp"
+      },
+      {
+        "slug": "gray-wolf",
+        "title": "Gray Wolf",
+        "link": "https://kingshotdata.com/pets/gray-wolf/",
+        "local": "/images/icons/kingshot/pets/gray-wolf.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/gray-wolf-icon-kingshot.webp"
+      },
+      {
+        "slug": "great-moose",
+        "title": "Great Moose",
+        "link": "https://kingshotdata.com/pets/great-moose/",
+        "local": "/images/icons/kingshot/pets/great-moose.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/11/great-moose-avatar.webp"
+      },
+      {
+        "slug": "grizzly-bear",
+        "title": "Grizzly Bear",
+        "link": "https://kingshotdata.com/pets/grizzly-bear/",
+        "local": "/images/icons/kingshot/pets/grizzly-bear.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/06/grizzly-bear-avatar-icon.webp"
+      },
+      {
+        "slug": "ironclad-war-bear",
+        "title": "Ironclad War Bear",
+        "link": "https://kingshotdata.com/pets/ironclad-war-bear/",
+        "local": "/images/icons/kingshot/pets/ironclad-war-bear.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2026/05/ironclad-war-bear.webp"
+      },
+      {
+        "slug": "ironclad-war-elephant",
+        "title": "Ironclad War Elephant",
+        "link": "https://kingshotdata.com/pets/ironclad-war-elephant/",
+        "local": "/images/icons/kingshot/pets/ironclad-war-elephant.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2026/02/ironclad-war-elephant-icon.webp"
+      },
+      {
+        "slug": "lion",
+        "title": "Lion",
+        "link": "https://kingshotdata.com/pets/lion/",
+        "local": "/images/icons/kingshot/pets/lion.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/06/lion-pet-avatar-icon.webp"
+      },
+      {
+        "slug": "lynx",
+        "title": "Lynx",
+        "link": "https://kingshotdata.com/pets/lynx/",
+        "local": "/images/icons/kingshot/pets/lynx.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/lynx-icon-kingshot.webp"
+      },
+      {
+        "slug": "mighty-bison",
+        "title": "Mighty Bison",
+        "link": "https://kingshotdata.com/pets/mighty-bison/",
+        "local": "/images/icons/kingshot/pets/mighty-bison.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/mighty-bison.webp"
+      },
+      {
+        "slug": "moose",
+        "title": "Moose",
+        "link": "https://kingshotdata.com/pets/moose/",
+        "local": "/images/icons/kingshot/pets/moose.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/05/giant-moose-icon.webp"
+      },
+      {
+        "slug": "regal-white-lion",
+        "title": "Regal White Lion",
+        "link": "https://kingshotdata.com/pets/regal-white-lion/",
+        "local": "/images/icons/kingshot/pets/regal-white-lion.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2026/02/regal-white-lion-icon.webp"
+      }
+    ],
+    "masters": [
+      {
+        "slug": "cassia",
+        "title": "Cassia",
+        "link": "https://kingshotdata.com/masters/cassia/",
+        "local": "/images/icons/kingshot/masters/cassia.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2026/05/cassia.webp"
+      },
+      {
+        "slug": "pan",
+        "title": "Pan",
+        "link": "https://kingshotdata.com/masters/pan/",
+        "local": "/images/icons/kingshot/masters/pan.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2026/04/pan-avatar-image.webp"
+      },
+      {
+        "slug": "roman",
+        "title": "Roman",
+        "link": "https://kingshotdata.com/masters/roman/",
+        "local": "/images/icons/kingshot/masters/roman.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2026/04/roman-avatar-image.webp"
+      },
+      {
+        "slug": "valora",
+        "title": "Valora",
+        "link": "https://kingshotdata.com/masters/valora/",
+        "local": "/images/icons/kingshot/masters/valora.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2026/04/valora-avatar-image.webp"
+      }
+    ],
+    "heroes": [
+      {
+        "slug": "alcar",
+        "title": "Alcar",
+        "link": "https://kingshotdata.com/heroes/alcar/",
+        "local": "/images/icons/kingshot/heroes/alcar.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/08/alcar-avatar-image.webp"
+      },
+      {
+        "slug": "amadeus",
+        "title": "Amadeus",
+        "link": "https://kingshotdata.com/heroes/amadeus/",
+        "local": "/images/icons/kingshot/heroes/amadeus.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/amadeus.webp"
+      },
+      {
+        "slug": "ava",
+        "title": "Ava",
+        "link": "https://kingshotdata.com/heroes/ava/",
+        "local": "/images/icons/kingshot/heroes/ava.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2026/05/ava-avatar-image.webp"
+      },
+      {
+        "slug": "charles",
+        "title": "Charles",
+        "link": "https://kingshotdata.com/heroes/charles/",
+        "local": "/images/icons/kingshot/heroes/charles.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2026/05/charles-avatar.webp"
+      },
+      {
+        "slug": "chenko",
+        "title": "Chenko",
+        "link": "https://kingshotdata.com/heroes/chenko/",
+        "local": "/images/icons/kingshot/heroes/chenko.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/chenko-avatar.webp"
+      },
+      {
+        "slug": "diana",
+        "title": "Diana",
+        "link": "https://kingshotdata.com/heroes/diana/",
+        "local": "/images/icons/kingshot/heroes/diana.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/diana-avatar-icon.webp"
+      },
+      {
+        "slug": "edwin",
+        "title": "Edwin",
+        "link": "https://kingshotdata.com/heroes/edwin/",
+        "local": "/images/icons/kingshot/heroes/edwin.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/07/edwin-avatar.webp"
+      },
+      {
+        "slug": "eric",
+        "title": "Eric",
+        "link": "https://kingshotdata.com/heroes/eric/",
+        "local": "/images/icons/kingshot/heroes/eric.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/06/eric-avatar-icon.webp"
+      },
+      {
+        "slug": "fahd",
+        "title": "Fahd",
+        "link": "https://kingshotdata.com/heroes/fahd/",
+        "local": "/images/icons/kingshot/heroes/fahd.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/06/fahd-kingshot.webp"
+      },
+      {
+        "slug": "forrest",
+        "title": "Forrest",
+        "link": "https://kingshotdata.com/heroes/forrest/",
+        "local": "/images/icons/kingshot/heroes/forrest.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/07/forrest-avatar.webp"
+      },
+      {
+        "slug": "generation-2-heroes",
+        "title": "Generation 2 Heroes",
+        "link": "https://kingshotdata.com/heroes/generation-2-heroes/",
+        "local": "/images/icons/kingshot/heroes/generation-2-heroes.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/zoe-kingshot-full.webp"
+      },
+      {
+        "slug": "generation-3-heroes",
+        "title": "Generation 3 Heroes",
+        "link": "https://kingshotdata.com/heroes/generation-3-heroes/",
+        "local": "/images/icons/kingshot/heroes/generation-3-heroes.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/06/jaeger-full-image.webp"
+      },
+      {
+        "slug": "generation-4-heroes",
+        "title": "Generation 4 Heroes",
+        "link": "https://kingshotdata.com/heroes/generation-4-heroes/",
+        "local": "/images/icons/kingshot/heroes/generation-4-heroes.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/alcar-full-image.webp"
+      },
+      {
+        "slug": "generation-5-heroes",
+        "title": "Generation 5 Heroes",
+        "link": "https://kingshotdata.com/heroes/generation-5-heroes/",
+        "local": "/images/icons/kingshot/heroes/generation-5-heroes.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/11/thrud-full-image.webp"
+      },
+      {
+        "slug": "generation-6-heroes",
+        "title": "Generation 6 Heroes",
+        "link": "https://kingshotdata.com/heroes/generation-6-heroes/",
+        "local": "/images/icons/kingshot/heroes/generation-6-heroes.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2026/02/yang-full-image.webp"
+      },
+      {
+        "slug": "generation-7-heroes",
+        "title": "Generation 7 Heroes",
+        "link": "https://kingshotdata.com/heroes/generation-7-heroes/",
+        "local": "/images/icons/kingshot/heroes/generation-7-heroes.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2026/05/charles-full-image.webp"
+      },
+      {
+        "slug": "gordon",
+        "title": "Gordon",
+        "link": "https://kingshotdata.com/heroes/gordon/",
+        "local": "/images/icons/kingshot/heroes/gordon.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/07/gordon-avatar.webp"
+      },
+      {
+        "slug": "helga",
+        "title": "Helga",
+        "link": "https://kingshotdata.com/heroes/helga/",
+        "local": "/images/icons/kingshot/heroes/helga.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/helga-kingshot.webp"
+      },
+      {
+        "slug": "hilde",
+        "title": "Hilde",
+        "link": "https://kingshotdata.com/heroes/hilde/",
+        "local": "/images/icons/kingshot/heroes/hilde.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/hilde-kingshot.webp"
+      },
+      {
+        "slug": "howard",
+        "title": "Howard",
+        "link": "https://kingshotdata.com/heroes/howard/",
+        "local": "/images/icons/kingshot/heroes/howard.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/07/howard-avatar.webp"
+      },
+      {
+        "slug": "jabel",
+        "title": "Jabel",
+        "link": "https://kingshotdata.com/heroes/jabel/",
+        "local": "/images/icons/kingshot/heroes/jabel.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/jabel.webp"
+      },
+      {
+        "slug": "jaeger",
+        "title": "Jaeger",
+        "link": "https://kingshotdata.com/heroes/jaeger/",
+        "local": "/images/icons/kingshot/heroes/jaeger.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/06/jaeger-icon-kingshot.webp"
+      },
+      {
+        "slug": "long-fei",
+        "title": "Long Fei",
+        "link": "https://kingshotdata.com/heroes/long-fei/",
+        "local": "/images/icons/kingshot/heroes/long-fei.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/11/long-fei-avatar-icon.webp"
+      },
+      {
+        "slug": "margot",
+        "title": "Margot",
+        "link": "https://kingshotdata.com/heroes/margot/",
+        "local": "/images/icons/kingshot/heroes/margot.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/margot-avatar.webp"
+      },
+      {
+        "slug": "marlin",
+        "title": "Marlin",
+        "link": "https://kingshotdata.com/heroes/marlin/",
+        "local": "/images/icons/kingshot/heroes/marlin.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/marlin-kingshot.webp"
+      },
+      {
+        "slug": "mikoto",
+        "title": "Amane",
+        "link": "https://kingshotdata.com/heroes/mikoto/",
+        "local": "/images/icons/kingshot/heroes/mikoto.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/06/mikoto-amane-kingshot.webp"
+      },
+      {
+        "slug": "olive",
+        "title": "Olive",
+        "link": "https://kingshotdata.com/heroes/olive/",
+        "local": "/images/icons/kingshot/heroes/olive.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/07/olive-avatar.webp"
+      },
+      {
+        "slug": "petra",
+        "title": "Petra",
+        "link": "https://kingshotdata.com/heroes/petra/",
+        "local": "/images/icons/kingshot/heroes/petra.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/06/petra-avatar-icon.webp"
+      },
+      {
+        "slug": "quinn",
+        "title": "Quinn",
+        "link": "https://kingshotdata.com/heroes/quinn/",
+        "local": "/images/icons/kingshot/heroes/quinn.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/07/quinn-avatar.webp"
+      },
+      {
+        "slug": "rosa",
+        "title": "Rosa",
+        "link": "https://kingshotdata.com/heroes/rosa/",
+        "local": "/images/icons/kingshot/heroes/rosa.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/rosa-avatar-image.webp"
+      },
+      {
+        "slug": "saul",
+        "title": "Saul",
+        "link": "https://kingshotdata.com/heroes/saul/",
+        "local": "/images/icons/kingshot/heroes/saul.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/saul-kingshot.webp"
+      },
+      {
+        "slug": "seth",
+        "title": "Seth",
+        "link": "https://kingshotdata.com/heroes/seth/",
+        "local": "/images/icons/kingshot/heroes/seth.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/07/seth-avatar.webp"
+      },
+      {
+        "slug": "sophia",
+        "title": "Sophia",
+        "link": "https://kingshotdata.com/heroes/sophia/",
+        "local": "/images/icons/kingshot/heroes/sophia.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2026/02/sophia-avatar-icon.webp"
+      },
+      {
+        "slug": "thrud",
+        "title": "Thrud",
+        "link": "https://kingshotdata.com/heroes/thrud/",
+        "local": "/images/icons/kingshot/heroes/thrud.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/11/thrud-avatar-icon.webp"
+      },
+      {
+        "slug": "triton",
+        "title": "Triton",
+        "link": "https://kingshotdata.com/heroes/triton/",
+        "local": "/images/icons/kingshot/heroes/triton.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2026/02/triton-avatar-icon.webp"
+      },
+      {
+        "slug": "vivian",
+        "title": "Vivian",
+        "link": "https://kingshotdata.com/heroes/vivian/",
+        "local": "/images/icons/kingshot/heroes/vivian.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/11/vivian-avatar-icon.webp"
+      },
+      {
+        "slug": "wee-woo",
+        "title": "Wee &amp; Woo",
+        "link": "https://kingshotdata.com/heroes/wee-woo/",
+        "local": "/images/icons/kingshot/heroes/wee-woo.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2026/05/wee-woo.webp"
+      },
+      {
+        "slug": "yang",
+        "title": "Yang",
+        "link": "https://kingshotdata.com/heroes/yang/",
+        "local": "/images/icons/kingshot/heroes/yang.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2026/02/yang-avatar-icon.webp"
+      },
+      {
+        "slug": "yeonwoo",
+        "title": "Yeonwoo",
+        "link": "https://kingshotdata.com/heroes/yeonwoo/",
+        "local": "/images/icons/kingshot/heroes/yeonwoo.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/06/yeanwoo.webp"
+      },
+      {
+        "slug": "zoe",
+        "title": "Zoe",
+        "link": "https://kingshotdata.com/heroes/zoe/",
+        "local": "/images/icons/kingshot/heroes/zoe.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/zoe-gen2-kingshot.webp"
+      }
+    ],
+    "items": [
+      {
+        "slug": "artisans-vision",
+        "title": "Artisan&#8217;s Vision",
+        "link": "https://kingshotdata.com/items/artisans-vision/",
+        "local": "/images/icons/kingshot/items/artisans-vision.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/05/artisans-vision-icon.webp"
+      },
+      {
+        "slug": "charm-design",
+        "title": "Charm Design",
+        "link": "https://kingshotdata.com/items/charm-design/",
+        "local": "/images/icons/kingshot/items/charm-design.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/charm-design-icon-kingshot.webp"
+      },
+      {
+        "slug": "charm-guide",
+        "title": "Charm Guide",
+        "link": "https://kingshotdata.com/items/charm-guide/",
+        "local": "/images/icons/kingshot/items/charm-guide.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/charm-guide-icon-kingshot.webp"
+      },
+      {
+        "slug": "forgehammer",
+        "title": "Forgehammer",
+        "link": "https://kingshotdata.com/items/forgehammer/",
+        "local": "/images/icons/kingshot/items/forgehammer.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/forgehammer-icon.webp"
+      },
+      {
+        "slug": "gilded-threads",
+        "title": "Gilded Threads",
+        "link": "https://kingshotdata.com/items/gilded-threads/",
+        "local": "/images/icons/kingshot/items/gilded-threads.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/gilded-threads-icon.webp"
+      },
+      {
+        "slug": "governor-stamina",
+        "title": "Governor Stamina",
+        "link": "https://kingshotdata.com/items/governor-stamina/",
+        "local": "/images/icons/kingshot/items/governor-stamina.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/governor-stamina-kingshot.webp"
+      },
+      {
+        "slug": "mithril",
+        "title": "Mithril",
+        "link": "https://kingshotdata.com/items/mithril/",
+        "local": "/images/icons/kingshot/items/mithril.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/05/mithril-icon-kingshot.webp"
+      },
+      {
+        "slug": "satin",
+        "title": "Satin",
+        "link": "https://kingshotdata.com/items/satin/",
+        "local": "/images/icons/kingshot/items/satin.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/satin-icon.webp"
+      },
+      {
+        "slug": "tempered-truegold",
+        "title": "Tempered Truegold",
+        "link": "https://kingshotdata.com/items/tempered-truegold/",
+        "local": "/images/icons/kingshot/items/tempered-truegold.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2026/01/tempered-Truegold.webp"
+      },
+      {
+        "slug": "truegold",
+        "title": "Truegold",
+        "link": "https://kingshotdata.com/items/truegold/",
+        "local": "/images/icons/kingshot/items/truegold.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/truegold-icon-kingshot.webp"
+      }
+    ],
+    "events": [
+      {
+        "slug": "all-out-event",
+        "title": "All Out Event",
+        "link": "https://kingshotdata.com/events/all-out-event/",
+        "local": "/images/icons/kingshot/events/all-out-event.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/all-out-event-icon.webp"
+      },
+      {
+        "slug": "alliance-brawl-event",
+        "title": "Alliance Brawl Event",
+        "link": "https://kingshotdata.com/events/alliance-brawl-event/",
+        "local": "/images/icons/kingshot/events/alliance-brawl-event.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/07/alliance-brawl-event-icon.webp"
+      },
+      {
+        "slug": "armament-competition",
+        "title": "Armament Competition",
+        "link": "https://kingshotdata.com/events/armament-competition/",
+        "local": "/images/icons/kingshot/events/armament-competition.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/city-development-event-icon.webp"
+      },
+      {
+        "slug": "beast-whisperer-event",
+        "title": "Beast Whisperer Event",
+        "link": "https://kingshotdata.com/events/beast-whisperer-event/",
+        "local": "/images/icons/kingshot/events/beast-whisperer-event.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/05/beast-whisperer-event.webp"
+      },
+      {
+        "slug": "buccaneer-bounty-event",
+        "title": "Buccaneer Bounty Event",
+        "link": "https://kingshotdata.com/events/buccaneer-bounty-event/",
+        "local": "/images/icons/kingshot/events/buccaneer-bounty-event.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/05/buccaneer-county-event-icon.webp"
+      },
+      {
+        "slug": "call-of-the-sovereign",
+        "title": "Call of the Sovereign",
+        "link": "https://kingshotdata.com/events/call-of-the-sovereign/",
+        "local": "/images/icons/kingshot/events/call-of-the-sovereign.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/call-of-the-sovereign-event-icon.webp"
+      },
+      {
+        "slug": "cesares-fury",
+        "title": "Cesares Fury",
+        "link": "https://kingshotdata.com/events/cesares-fury/",
+        "local": "/images/icons/kingshot/events/cesares-fury.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/cesares-fury-event-icon.webp"
+      },
+      {
+        "slug": "champagne-fair",
+        "title": "Champagne Fair",
+        "link": "https://kingshotdata.com/events/champagne-fair/",
+        "local": "/images/icons/kingshot/events/champagne-fair.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/champagne-fair-event-icon.webp"
+      },
+      {
+        "slug": "champions-way-event",
+        "title": "Champion&#8217;s Way Event",
+        "link": "https://kingshotdata.com/events/champions-way-event/",
+        "local": "/images/icons/kingshot/events/champions-way-event.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/champions-way-event-icon.webp"
+      },
+      {
+        "slug": "city-development-event",
+        "title": "City Development Event",
+        "link": "https://kingshotdata.com/events/city-development-event/",
+        "local": "/images/icons/kingshot/events/city-development-event.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/city-development-event-icon.webp"
+      },
+      {
+        "slug": "defeat-nearby-beasts-event",
+        "title": "Defeat Nearby Beasts Event",
+        "link": "https://kingshotdata.com/events/defeat-nearby-beasts-event/",
+        "local": "/images/icons/kingshot/events/defeat-nearby-beasts-event.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/defeat-nearby-beasts-event-icon.webp"
+      },
+      {
+        "slug": "desert-trial-event",
+        "title": "Desert Trial Event",
+        "link": "https://kingshotdata.com/events/desert-trial-event/",
+        "local": "/images/icons/kingshot/events/desert-trial-event.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/desert-trial-event-icon.webp"
+      },
+      {
+        "slug": "develop-new-tech-event",
+        "title": "Develop new tech Event",
+        "link": "https://kingshotdata.com/events/develop-new-tech-event/",
+        "local": "/images/icons/kingshot/events/develop-new-tech-event.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/develop-new-tech-event-icon.webp"
+      },
+      {
+        "slug": "golden-glaives-event",
+        "title": "Golden Glaives Event",
+        "link": "https://kingshotdata.com/events/golden-glaives-event/",
+        "local": "/images/icons/kingshot/events/golden-glaives-event.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/05/golden-glaives-event-icon.webp"
+      },
+      {
+        "slug": "grow-your-heroes-event",
+        "title": "Grow Your Heroes Event",
+        "link": "https://kingshotdata.com/events/grow-your-heroes-event/",
+        "local": "/images/icons/kingshot/events/grow-your-heroes-event.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/war-preparation-event-icon-1.webp"
+      },
+      {
+        "slug": "hall-of-governors",
+        "title": "Hall of Governors",
+        "link": "https://kingshotdata.com/events/hall-of-governors/",
+        "local": "/images/icons/kingshot/events/hall-of-governors.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/hall-of-governors-icon.webp"
+      },
+      {
+        "slug": "hall-of-heroes",
+        "title": "Hall of Heroes",
+        "link": "https://kingshotdata.com/events/hall-of-heroes/",
+        "local": "/images/icons/kingshot/events/hall-of-heroes.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/hall-of-heroes-event-icon.webp"
+      },
+      {
+        "slug": "hero-roulette",
+        "title": "Hero Roulette",
+        "link": "https://kingshotdata.com/events/hero-roulette/",
+        "local": "/images/icons/kingshot/events/hero-roulette.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/hero-roulette-event-icon.webp"
+      },
+      {
+        "slug": "kingdom-of-power-kvk-event",
+        "title": "Kingdom of Power (KvK) Event",
+        "link": "https://kingshotdata.com/events/kingdom-of-power-kvk-event/",
+        "local": "/images/icons/kingshot/events/kingdom-of-power-kvk-event.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/05/kingdom-of-power-event-icon.webp"
+      },
+      {
+        "slug": "kingdom-transfer-event",
+        "title": "Kingdom Transfer Event",
+        "link": "https://kingshotdata.com/events/kingdom-transfer-event/",
+        "local": "/images/icons/kingshot/events/kingdom-transfer-event.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/kingdom-transfer-event-icon.webp"
+      },
+      {
+        "slug": "merchant-empire-event",
+        "title": "Merchant Empire Event",
+        "link": "https://kingshotdata.com/events/merchant-empire-event/",
+        "local": "/images/icons/kingshot/events/merchant-empire-event.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/07/merchant-empire-event-icon.webp"
+      },
+      {
+        "slug": "mystic-divination-event",
+        "title": "Mystic Divination Event",
+        "link": "https://kingshotdata.com/events/mystic-divination-event/",
+        "local": "/images/icons/kingshot/events/mystic-divination-event.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/mystic-divination-event-icon.webp"
+      },
+      {
+        "slug": "mystic-trial",
+        "title": "Mystic Trial",
+        "link": "https://kingshotdata.com/events/mystic-trial/",
+        "local": "/images/icons/kingshot/events/mystic-trial.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/10/mystrical-trial.webp"
+      },
+      {
+        "slug": "officer-project-event",
+        "title": "Officer Project Event",
+        "link": "https://kingshotdata.com/events/officer-project-event/",
+        "local": "/images/icons/kingshot/events/officer-project-event.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/power-up-event-icon.webp"
+      },
+      {
+        "slug": "path-of-growth-event",
+        "title": "Path of Growth Event",
+        "link": "https://kingshotdata.com/events/path-of-growth-event/",
+        "local": "/images/icons/kingshot/events/path-of-growth-event.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/05/path-of-growth-icon.webp"
+      },
+      {
+        "slug": "plan-your-city-event",
+        "title": "Plan your City Event",
+        "link": "https://kingshotdata.com/events/plan-your-city-event/",
+        "local": "/images/icons/kingshot/events/plan-your-city-event.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/working-overtime-icon.webp"
+      },
+      {
+        "slug": "power-up-event",
+        "title": "Power Up Event",
+        "link": "https://kingshotdata.com/events/power-up-event/",
+        "local": "/images/icons/kingshot/events/power-up-event.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/power-up-event-icon.webp"
+      },
+      {
+        "slug": "stand-of-arms-event",
+        "title": "Stand of Arms Event",
+        "link": "https://kingshotdata.com/events/stand-of-arms-event/",
+        "local": "/images/icons/kingshot/events/stand-of-arms-event.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/stand-of-arms-event-icon.webp"
+      },
+      {
+        "slug": "steel-edge-event",
+        "title": "Steel Edge Event",
+        "link": "https://kingshotdata.com/events/steel-edge-event/",
+        "local": "/images/icons/kingshot/events/steel-edge-event.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/05/steel-edge-event-icon-kingshot.webp"
+      },
+      {
+        "slug": "strongest-governor-event",
+        "title": "Strongest Governor Event",
+        "link": "https://kingshotdata.com/events/strongest-governor-event/",
+        "local": "/images/icons/kingshot/events/strongest-governor-event.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/06/strongest-governor-event-icon.webp"
+      },
+      {
+        "slug": "war-preparation-event",
+        "title": "War Preparation Event",
+        "link": "https://kingshotdata.com/events/war-preparation-event/",
+        "local": "/images/icons/kingshot/events/war-preparation-event.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/war-preparation-event-icon.webp"
+      },
+      {
+        "slug": "working-overtime-event",
+        "title": "Working Overtime Event",
+        "link": "https://kingshotdata.com/events/working-overtime-event/",
+        "local": "/images/icons/kingshot/events/working-overtime-event.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/working-overtime-icon.webp"
+      }
+    ],
+    "war-academy-research": [
+      {
+        "slug": "truegold-archer-aid",
+        "title": "Truegold Archer Aid",
+        "link": "https://kingshotdata.com/war-academy-research/truegold-archer-aid/",
+        "local": "/images/icons/kingshot/war-academy-research/truegold-archer-aid.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/truegold-archer-aid.webp"
+      },
+      {
+        "slug": "truegold-archer-healing",
+        "title": "Truegold Archer Healing",
+        "link": "https://kingshotdata.com/war-academy-research/truegold-archer-healing/",
+        "local": "/images/icons/kingshot/war-academy-research/truegold-archer-healing.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/truegold-archer-healing.webp"
+      },
+      {
+        "slug": "truegold-archer-training",
+        "title": "Truegold Archer Training",
+        "link": "https://kingshotdata.com/war-academy-research/truegold-archer-training/",
+        "local": "/images/icons/kingshot/war-academy-research/truegold-archer-training.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/truegold-archer-training.webp"
+      },
+      {
+        "slug": "truegold-archers",
+        "title": "Truegold Archers",
+        "link": "https://kingshotdata.com/war-academy-research/truegold-archers/",
+        "local": "/images/icons/kingshot/war-academy-research/truegold-archers.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/truegold-archer.webp"
+      },
+      {
+        "slug": "truegold-arrows",
+        "title": "Truegold Arrows",
+        "link": "https://kingshotdata.com/war-academy-research/truegold-arrows/",
+        "local": "/images/icons/kingshot/war-academy-research/truegold-arrows.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/truegold-arrows.webp"
+      },
+      {
+        "slug": "truegold-battalion",
+        "title": "Truegold Battalion",
+        "link": "https://kingshotdata.com/war-academy-research/truegold-battalion/",
+        "local": "/images/icons/kingshot/war-academy-research/truegold-battalion.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/truegold-battalion.webp"
+      },
+      {
+        "slug": "truegold-battalion-archer",
+        "title": "Truegold Battalion (Archer)",
+        "link": "https://kingshotdata.com/war-academy-research/truegold-battalion-archer/",
+        "local": "/images/icons/kingshot/war-academy-research/truegold-battalion-archer.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/truegold-battalion-archer.webp"
+      },
+      {
+        "slug": "truegold-battalion-cavalry",
+        "title": "Truegold Battalion (Cavalry)",
+        "link": "https://kingshotdata.com/war-academy-research/truegold-battalion-cavalry/",
+        "local": "/images/icons/kingshot/war-academy-research/truegold-battalion-cavalry.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/truegold-battalion-cavalry.webp"
+      },
+      {
+        "slug": "truegold-blades",
+        "title": "Truegold Blades",
+        "link": "https://kingshotdata.com/war-academy-research/truegold-blades/",
+        "local": "/images/icons/kingshot/war-academy-research/truegold-blades.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/truegold-blades.webp"
+      },
+      {
+        "slug": "truegold-bows",
+        "title": "Truegold Bows",
+        "link": "https://kingshotdata.com/war-academy-research/truegold-bows/",
+        "local": "/images/icons/kingshot/war-academy-research/truegold-bows.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/truegold-bows.webp"
+      },
+      {
+        "slug": "truegold-bracers",
+        "title": "Truegold Bracers",
+        "link": "https://kingshotdata.com/war-academy-research/truegold-bracers/",
+        "local": "/images/icons/kingshot/war-academy-research/truegold-bracers.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/truegold-bracers.webp"
+      },
+      {
+        "slug": "truegold-cavalry",
+        "title": "Truegold Cavalry",
+        "link": "https://kingshotdata.com/war-academy-research/truegold-cavalry/",
+        "local": "/images/icons/kingshot/war-academy-research/truegold-cavalry.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/truegold-cavalry.webp"
+      },
+      {
+        "slug": "truegold-cavalry-aid",
+        "title": "Truegold Cavalry Aid",
+        "link": "https://kingshotdata.com/war-academy-research/truegold-cavalry-aid/",
+        "local": "/images/icons/kingshot/war-academy-research/truegold-cavalry-aid.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/truegold-cavalry-aid.webp"
+      },
+      {
+        "slug": "truegold-cavalry-healing",
+        "title": "Truegold Cavalry Healing",
+        "link": "https://kingshotdata.com/war-academy-research/truegold-cavalry-healing/",
+        "local": "/images/icons/kingshot/war-academy-research/truegold-cavalry-healing.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/truegold-cavalry-healing.webp"
+      },
+      {
+        "slug": "truegold-cavalry-training",
+        "title": "Truegold Cavalry Training",
+        "link": "https://kingshotdata.com/war-academy-research/truegold-cavalry-training/",
+        "local": "/images/icons/kingshot/war-academy-research/truegold-cavalry-training.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/truegold-cavalry-training.webp"
+      },
+      {
+        "slug": "truegold-charge",
+        "title": "Truegold Charge",
+        "link": "https://kingshotdata.com/war-academy-research/truegold-charge/",
+        "local": "/images/icons/kingshot/war-academy-research/truegold-charge.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/truegold-charge.webp"
+      },
+      {
+        "slug": "truegold-farriery",
+        "title": "Truegold Farriery",
+        "link": "https://kingshotdata.com/war-academy-research/truegold-farriery/",
+        "local": "/images/icons/kingshot/war-academy-research/truegold-farriery.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/truegold-farriery.webp"
+      },
+      {
+        "slug": "truegold-infantry",
+        "title": "Truegold Infantry",
+        "link": "https://kingshotdata.com/war-academy-research/truegold-infantry/",
+        "local": "/images/icons/kingshot/war-academy-research/truegold-infantry.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/truegold-infantry.webp"
+      },
+      {
+        "slug": "truegold-infantry-aid",
+        "title": "Truegold Infantry Aid",
+        "link": "https://kingshotdata.com/war-academy-research/truegold-infantry-aid/",
+        "local": "/images/icons/kingshot/war-academy-research/truegold-infantry-aid.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/truegold-infantry-aid.webp"
+      },
+      {
+        "slug": "truegold-infantry-healing",
+        "title": "Truegold Infantry Healing",
+        "link": "https://kingshotdata.com/war-academy-research/truegold-infantry-healing/",
+        "local": "/images/icons/kingshot/war-academy-research/truegold-infantry-healing.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/truegold-infantry-healing.webp"
+      },
+      {
+        "slug": "truegold-infantry-training",
+        "title": "Truegold Infantry Training",
+        "link": "https://kingshotdata.com/war-academy-research/truegold-infantry-training/",
+        "local": "/images/icons/kingshot/war-academy-research/truegold-infantry-training.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/truegold-infantry-training.webp"
+      },
+      {
+        "slug": "truegold-lances",
+        "title": "Truegold Lances",
+        "link": "https://kingshotdata.com/war-academy-research/truegold-lances/",
+        "local": "/images/icons/kingshot/war-academy-research/truegold-lances.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/truegold-lances.webp"
+      },
+      {
+        "slug": "truegold-legionaries",
+        "title": "Truegold Legionaries",
+        "link": "https://kingshotdata.com/war-academy-research/truegold-legionaries/",
+        "local": "/images/icons/kingshot/war-academy-research/truegold-legionaries.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/truegold-legionaries.webp"
+      },
+      {
+        "slug": "truegold-legionaries-archer",
+        "title": "Truegold Legionaries (Archer)",
+        "link": "https://kingshotdata.com/war-academy-research/truegold-legionaries-archer/",
+        "local": "/images/icons/kingshot/war-academy-research/truegold-legionaries-archer.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/truegold-legionaries-archer.webp"
+      },
+      {
+        "slug": "truegold-legionaries-cavalry",
+        "title": "Truegold Legionaries (Cavalry)",
+        "link": "https://kingshotdata.com/war-academy-research/truegold-legionaries-cavalry/",
+        "local": "/images/icons/kingshot/war-academy-research/truegold-legionaries-cavalry.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/truegold-legionaries-cavalry.webp"
+      },
+      {
+        "slug": "truegold-mauls",
+        "title": "Truegold Mauls",
+        "link": "https://kingshotdata.com/war-academy-research/truegold-mauls/",
+        "local": "/images/icons/kingshot/war-academy-research/truegold-mauls.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/truegold-mauls.webp"
+      },
+      {
+        "slug": "truegold-platecraft",
+        "title": "Truegold Platecraft",
+        "link": "https://kingshotdata.com/war-academy-research/truegold-platecraft/",
+        "local": "/images/icons/kingshot/war-academy-research/truegold-platecraft.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/truegold-platecraft.webp"
+      },
+      {
+        "slug": "truegold-plating",
+        "title": "Truegold Plating",
+        "link": "https://kingshotdata.com/war-academy-research/truegold-plating/",
+        "local": "/images/icons/kingshot/war-academy-research/truegold-plating.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/truegold-plating.webp"
+      },
+      {
+        "slug": "truegold-shields",
+        "title": "Truegold Shields",
+        "link": "https://kingshotdata.com/war-academy-research/truegold-shields/",
+        "local": "/images/icons/kingshot/war-academy-research/truegold-shields.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/truegold-shields.webp"
+      },
+      {
+        "slug": "truegold-vests",
+        "title": "Truegold Vests",
+        "link": "https://kingshotdata.com/war-academy-research/truegold-vests/",
+        "local": "/images/icons/kingshot/war-academy-research/truegold-vests.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/truegold-vests.webp"
+      }
+    ],
+    "buildings": [
+      {
+        "slug": "academy",
+        "title": "Academy",
+        "link": "https://kingshotdata.com/buildings/academy/",
+        "local": "/images/icons/kingshot/buildings/academy.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/academy-kingshot.webp"
+      },
+      {
+        "slug": "barracks",
+        "title": "Barracks",
+        "link": "https://kingshotdata.com/buildings/barracks/",
+        "local": "/images/icons/kingshot/buildings/barracks.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/barracks-kingshot.webp"
+      },
+      {
+        "slug": "command-center",
+        "title": "Command Center",
+        "link": "https://kingshotdata.com/buildings/command-center/",
+        "local": "/images/icons/kingshot/buildings/command-center.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/command-center-kingshot.webp"
+      },
+      {
+        "slug": "embassy",
+        "title": "Embassy",
+        "link": "https://kingshotdata.com/buildings/embassy/",
+        "local": "/images/icons/kingshot/buildings/embassy.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/embassy-kingshot.webp"
+      },
+      {
+        "slug": "guard-station",
+        "title": "Guard Station",
+        "link": "https://kingshotdata.com/buildings/guard-station/",
+        "local": "/images/icons/kingshot/buildings/guard-station.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/guard-building.webp"
+      },
+      {
+        "slug": "kitchen",
+        "title": "Kitchen",
+        "link": "https://kingshotdata.com/buildings/kitchen/",
+        "local": "/images/icons/kingshot/buildings/kitchen.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/kitchen-kingshot.webp"
+      },
+      {
+        "slug": "range",
+        "title": "Range",
+        "link": "https://kingshotdata.com/buildings/range/",
+        "local": "/images/icons/kingshot/buildings/range.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/range-kingshot.webp"
+      },
+      {
+        "slug": "stable",
+        "title": "Stable",
+        "link": "https://kingshotdata.com/buildings/stable/",
+        "local": "/images/icons/kingshot/buildings/stable.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/stable-kingshot.webp"
+      },
+      {
+        "slug": "storehouse",
+        "title": "Storehouse",
+        "link": "https://kingshotdata.com/buildings/storehouse/",
+        "local": "/images/icons/kingshot/buildings/storehouse.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/storehouse-kingshot.webp"
+      },
+      {
+        "slug": "town-center",
+        "title": "Town Center",
+        "link": "https://kingshotdata.com/buildings/town-center/",
+        "local": "/images/icons/kingshot/buildings/town-center.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/town-center-kingshot.webp"
+      },
+      {
+        "slug": "truegold-crucible",
+        "title": "Truegold Crucible",
+        "link": "https://kingshotdata.com/buildings/truegold-crucible/",
+        "local": "/images/icons/kingshot/buildings/truegold-crucible.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/07/truegold-crucible.webp"
+      },
+      {
+        "slug": "war-academy",
+        "title": "War Academy",
+        "link": "https://kingshotdata.com/buildings/war-academy/",
+        "local": "/images/icons/kingshot/buildings/war-academy.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/09/war-academy-1.webp"
+      }
+    ],
+    "database": [
+      {
+        "slug": "governor-charm",
+        "title": "Governor Charm",
+        "link": "https://kingshotdata.com/database/governor-charm/",
+        "local": "/images/icons/kingshot/database/governor-charm.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/governor-charms.webp"
+      },
+      {
+        "slug": "governor-gear",
+        "title": "Governor Gear",
+        "link": "https://kingshotdata.com/database/governor-gear/",
+        "local": "/images/icons/kingshot/database/governor-gear.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/governor-gear-icon.webp"
+      },
+      {
+        "slug": "hero-gear-enhancement-chart",
+        "title": "Hero Gear Enhancement Chart",
+        "link": "https://kingshotdata.com/database/hero-gear-enhancement-chart/",
+        "local": "/images/icons/kingshot/database/hero-gear-enhancement-chart.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/05/purple-enhancement-xp-parts.webp"
+      },
+      {
+        "slug": "hero-shards",
+        "title": "Hero Shards",
+        "link": "https://kingshotdata.com/database/hero-shards/",
+        "local": "/images/icons/kingshot/database/hero-shards.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/mythic-hero-shard.webp"
+      },
+      {
+        "slug": "mastery-forging",
+        "title": "Mastery Forging",
+        "link": "https://kingshotdata.com/database/mastery-forging/",
+        "local": "/images/icons/kingshot/database/mastery-forging.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/forgehammer.webp"
+      },
+      {
+        "slug": "max-levels",
+        "title": "Max Levels",
+        "link": "https://kingshotdata.com/database/max-levels/",
+        "local": "/images/icons/kingshot/database/max-levels.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/max-levels.webp"
+      },
+      {
+        "slug": "server-timeline-state-age",
+        "title": "Server Timeline (State Age)",
+        "link": "https://kingshotdata.com/database/server-timeline-state-age/",
+        "local": "/images/icons/kingshot/database/server-timeline-state-age.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/state-age-kingshot.webp"
+      },
+      {
+        "slug": "widgets",
+        "title": "Widgets",
+        "link": "https://kingshotdata.com/database/widgets/",
+        "local": "/images/icons/kingshot/database/widgets.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/03/widget-helgas-exclusive-gear.webp"
+      }
+    ],
+    "alliance-tech": [
+      {
+        "slug": "adaptive-tools",
+        "title": "Adaptive Tools",
+        "link": "https://kingshotdata.com/alliance-tech/adaptive-tools/",
+        "local": "/images/icons/kingshot/alliance-tech/adaptive-tools.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/05/adaptive-tools-alliance-research.webp"
+      },
+      {
+        "slug": "alliance-regimentation",
+        "title": "Alliance Regimentation",
+        "link": "https://kingshotdata.com/alliance-tech/alliance-regimentation/",
+        "local": "/images/icons/kingshot/alliance-tech/alliance-regimentation.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/05/alliance-regimentation-1.webp"
+      },
+      {
+        "slug": "cooperative-protocols-i",
+        "title": "Cooperative Protocols",
+        "link": "https://kingshotdata.com/alliance-tech/cooperative-protocols-i/",
+        "local": "/images/icons/kingshot/alliance-tech/cooperative-protocols-i.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/05/cooperative-protocols-I.webp"
+      },
+      {
+        "slug": "treaties",
+        "title": "Treaties",
+        "link": "https://kingshotdata.com/alliance-tech/treaties/",
+        "local": "/images/icons/kingshot/alliance-tech/treaties.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/05/treaties-alliance-research.webp"
+      }
+    ],
+    "research": [
+      {
+        "slug": "bandaging-i",
+        "title": "Bandaging I",
+        "link": "https://kingshotdata.com/research/bandaging-i/",
+        "local": "/images/icons/kingshot/research/bandaging-i.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/bandaging-research-icon.webp"
+      },
+      {
+        "slug": "bandaging-ii",
+        "title": "Bandaging II",
+        "link": "https://kingshotdata.com/research/bandaging-ii/",
+        "local": "/images/icons/kingshot/research/bandaging-ii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/bandaging-research-icon.webp"
+      },
+      {
+        "slug": "bandaging-iii",
+        "title": "Bandaging III",
+        "link": "https://kingshotdata.com/research/bandaging-iii/",
+        "local": "/images/icons/kingshot/research/bandaging-iii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/bandaging-research-icon.webp"
+      },
+      {
+        "slug": "bandaging-iv",
+        "title": "Bandaging IV",
+        "link": "https://kingshotdata.com/research/bandaging-iv/",
+        "local": "/images/icons/kingshot/research/bandaging-iv.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/bandaging-research-icon.webp"
+      },
+      {
+        "slug": "bandaging-v",
+        "title": "Bandaging V",
+        "link": "https://kingshotdata.com/research/bandaging-v/",
+        "local": "/images/icons/kingshot/research/bandaging-v.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/bandaging-research-icon.webp"
+      },
+      {
+        "slug": "bandaging-vi",
+        "title": "Bandaging VI",
+        "link": "https://kingshotdata.com/research/bandaging-vi/",
+        "local": "/images/icons/kingshot/research/bandaging-vi.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/bandaging-research-icon.webp"
+      },
+      {
+        "slug": "bandaging-vii",
+        "title": "Bandaging VII",
+        "link": "https://kingshotdata.com/research/bandaging-vii/",
+        "local": "/images/icons/kingshot/research/bandaging-vii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/bandaging-research-icon.webp"
+      },
+      {
+        "slug": "bread-output-i",
+        "title": "Bread Output I",
+        "link": "https://kingshotdata.com/research/bread-output-i/",
+        "local": "/images/icons/kingshot/research/bread-output-i.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/bread-output-research-icon.webp"
+      },
+      {
+        "slug": "bread-output-ii",
+        "title": "Bread Output II",
+        "link": "https://kingshotdata.com/research/bread-output-ii/",
+        "local": "/images/icons/kingshot/research/bread-output-ii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/bread-output-research-icon.webp"
+      },
+      {
+        "slug": "bread-output-iii",
+        "title": "Bread Output III",
+        "link": "https://kingshotdata.com/research/bread-output-iii/",
+        "local": "/images/icons/kingshot/research/bread-output-iii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/bread-output-research-icon.webp"
+      },
+      {
+        "slug": "bread-output-iv",
+        "title": "Bread Output IV",
+        "link": "https://kingshotdata.com/research/bread-output-iv/",
+        "local": "/images/icons/kingshot/research/bread-output-iv.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/bread-output-research-icon.webp"
+      },
+      {
+        "slug": "bread-output-v",
+        "title": "Bread Output V",
+        "link": "https://kingshotdata.com/research/bread-output-v/",
+        "local": "/images/icons/kingshot/research/bread-output-v.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/bread-output-research-icon.webp"
+      },
+      {
+        "slug": "bread-output-vi",
+        "title": "Bread Output VI",
+        "link": "https://kingshotdata.com/research/bread-output-vi/",
+        "local": "/images/icons/kingshot/research/bread-output-vi.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/bread-output-research-icon.webp"
+      },
+      {
+        "slug": "camp-expansion-i",
+        "title": "Camp Expansion I",
+        "link": "https://kingshotdata.com/research/camp-expansion-i/",
+        "local": "/images/icons/kingshot/research/camp-expansion-i.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/camp-expansion-research-icon.webp"
+      },
+      {
+        "slug": "camp-expansion-ii",
+        "title": "Camp Expansion II",
+        "link": "https://kingshotdata.com/research/camp-expansion-ii/",
+        "local": "/images/icons/kingshot/research/camp-expansion-ii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/camp-expansion-research-icon.webp"
+      },
+      {
+        "slug": "camp-expansion-iii",
+        "title": "Camp Expansion III",
+        "link": "https://kingshotdata.com/research/camp-expansion-iii/",
+        "local": "/images/icons/kingshot/research/camp-expansion-iii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/camp-expansion-research-icon.webp"
+      },
+      {
+        "slug": "camp-expansion-iv",
+        "title": "Camp Expansion IV",
+        "link": "https://kingshotdata.com/research/camp-expansion-iv/",
+        "local": "/images/icons/kingshot/research/camp-expansion-iv.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/camp-expansion-research-icon.webp"
+      },
+      {
+        "slug": "camp-expansion-v",
+        "title": "Camp Expansion V",
+        "link": "https://kingshotdata.com/research/camp-expansion-v/",
+        "local": "/images/icons/kingshot/research/camp-expansion-v.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/camp-expansion-research-icon.webp"
+      },
+      {
+        "slug": "camp-expansion-vi",
+        "title": "Camp Expansion VI",
+        "link": "https://kingshotdata.com/research/camp-expansion-vi/",
+        "local": "/images/icons/kingshot/research/camp-expansion-vi.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/camp-expansion-research-icon.webp"
+      },
+      {
+        "slug": "camp-expansion-vii",
+        "title": "Camp Expansion VII",
+        "link": "https://kingshotdata.com/research/camp-expansion-vii/",
+        "local": "/images/icons/kingshot/research/camp-expansion-vii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/camp-expansion-research-icon.webp"
+      },
+      {
+        "slug": "command-tactics-i",
+        "title": "Command Tactics I",
+        "link": "https://kingshotdata.com/research/command-tactics-i/",
+        "local": "/images/icons/kingshot/research/command-tactics-i.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/command-tactics.webp"
+      },
+      {
+        "slug": "command-tactics-ii",
+        "title": "Command Tactics II",
+        "link": "https://kingshotdata.com/research/command-tactics-ii/",
+        "local": "/images/icons/kingshot/research/command-tactics-ii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/command-tactics.webp"
+      },
+      {
+        "slug": "command-tactics-iii",
+        "title": "Command Tactics III",
+        "link": "https://kingshotdata.com/research/command-tactics-iii/",
+        "local": "/images/icons/kingshot/research/command-tactics-iii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/command-tactics.webp"
+      },
+      {
+        "slug": "food-foraging-i",
+        "title": "Food Foraging I",
+        "link": "https://kingshotdata.com/research/food-foraging-i/",
+        "local": "/images/icons/kingshot/research/food-foraging-i.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/food-foraging-research-icon.webp"
+      },
+      {
+        "slug": "food-foraging-ii",
+        "title": "Food Foraging II",
+        "link": "https://kingshotdata.com/research/food-foraging-ii/",
+        "local": "/images/icons/kingshot/research/food-foraging-ii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/food-foraging-research-icon.webp"
+      },
+      {
+        "slug": "food-foraging-iii",
+        "title": "Food Foraging III",
+        "link": "https://kingshotdata.com/research/food-foraging-iii/",
+        "local": "/images/icons/kingshot/research/food-foraging-iii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/food-foraging-research-icon.webp"
+      },
+      {
+        "slug": "food-foraging-iv",
+        "title": "Food Foraging IV",
+        "link": "https://kingshotdata.com/research/food-foraging-iv/",
+        "local": "/images/icons/kingshot/research/food-foraging-iv.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/food-foraging-research-icon.webp"
+      },
+      {
+        "slug": "food-foraging-v",
+        "title": "Food Foraging V",
+        "link": "https://kingshotdata.com/research/food-foraging-v/",
+        "local": "/images/icons/kingshot/research/food-foraging-v.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/food-foraging-research-icon.webp"
+      },
+      {
+        "slug": "food-foraging-vi",
+        "title": "Food Foraging VI",
+        "link": "https://kingshotdata.com/research/food-foraging-vi/",
+        "local": "/images/icons/kingshot/research/food-foraging-vi.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/food-foraging-research-icon.webp"
+      },
+      {
+        "slug": "iron-mining-i",
+        "title": "Iron Mining I",
+        "link": "https://kingshotdata.com/research/iron-mining-i/",
+        "local": "/images/icons/kingshot/research/iron-mining-i.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/iron-mining-research-icon.webp"
+      },
+      {
+        "slug": "iron-mining-ii",
+        "title": "Iron Mining II",
+        "link": "https://kingshotdata.com/research/iron-mining-ii/",
+        "local": "/images/icons/kingshot/research/iron-mining-ii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/iron-mining-research-icon.webp"
+      },
+      {
+        "slug": "iron-mining-iii",
+        "title": "Iron Mining III",
+        "link": "https://kingshotdata.com/research/iron-mining-iii/",
+        "local": "/images/icons/kingshot/research/iron-mining-iii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/iron-mining-research-icon.webp"
+      },
+      {
+        "slug": "iron-mining-iv",
+        "title": "Iron Mining IV",
+        "link": "https://kingshotdata.com/research/iron-mining-iv/",
+        "local": "/images/icons/kingshot/research/iron-mining-iv.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/iron-mining-research-icon.webp"
+      },
+      {
+        "slug": "iron-mining-v",
+        "title": "Iron Mining V",
+        "link": "https://kingshotdata.com/research/iron-mining-v/",
+        "local": "/images/icons/kingshot/research/iron-mining-v.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/iron-mining-research-icon.webp"
+      },
+      {
+        "slug": "iron-output-i",
+        "title": "Iron Output I",
+        "link": "https://kingshotdata.com/research/iron-output-i/",
+        "local": "/images/icons/kingshot/research/iron-output-i.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/iron-output-research-icon.webp"
+      },
+      {
+        "slug": "iron-output-ii",
+        "title": "Iron Output II",
+        "link": "https://kingshotdata.com/research/iron-output-ii/",
+        "local": "/images/icons/kingshot/research/iron-output-ii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/iron-output-research-icon.webp"
+      },
+      {
+        "slug": "iron-output-iii",
+        "title": "Iron Output III",
+        "link": "https://kingshotdata.com/research/iron-output-iii/",
+        "local": "/images/icons/kingshot/research/iron-output-iii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/iron-output-research-icon.webp"
+      },
+      {
+        "slug": "iron-output-iv",
+        "title": "Iron Output IV",
+        "link": "https://kingshotdata.com/research/iron-output-iv/",
+        "local": "/images/icons/kingshot/research/iron-output-iv.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/iron-output-research-icon.webp"
+      },
+      {
+        "slug": "iron-output-v",
+        "title": "Iron Output V",
+        "link": "https://kingshotdata.com/research/iron-output-v/",
+        "local": "/images/icons/kingshot/research/iron-output-v.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/iron-output-research-icon.webp"
+      },
+      {
+        "slug": "stone-mining-i",
+        "title": "Stone Mining I",
+        "link": "https://kingshotdata.com/research/stone-mining-i/",
+        "local": "/images/icons/kingshot/research/stone-mining-i.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/stone-mining-research-icon.webp"
+      },
+      {
+        "slug": "stone-mining-ii",
+        "title": "Stone Mining II",
+        "link": "https://kingshotdata.com/research/stone-mining-ii/",
+        "local": "/images/icons/kingshot/research/stone-mining-ii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/stone-mining-research-icon.webp"
+      },
+      {
+        "slug": "stone-mining-iii",
+        "title": "Stone Mining III",
+        "link": "https://kingshotdata.com/research/stone-mining-iii/",
+        "local": "/images/icons/kingshot/research/stone-mining-iii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/stone-mining-research-icon.webp"
+      },
+      {
+        "slug": "stone-mining-iv",
+        "title": "Stone Mining IV",
+        "link": "https://kingshotdata.com/research/stone-mining-iv/",
+        "local": "/images/icons/kingshot/research/stone-mining-iv.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/stone-mining-research-icon.webp"
+      },
+      {
+        "slug": "stone-mining-v",
+        "title": "Stone Mining V",
+        "link": "https://kingshotdata.com/research/stone-mining-v/",
+        "local": "/images/icons/kingshot/research/stone-mining-v.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/stone-mining-research-icon.webp"
+      },
+      {
+        "slug": "stone-output-i",
+        "title": "Stone Output I",
+        "link": "https://kingshotdata.com/research/stone-output-i/",
+        "local": "/images/icons/kingshot/research/stone-output-i.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/stone-output-research-icon.webp"
+      },
+      {
+        "slug": "stone-output-ii",
+        "title": "Stone Output II",
+        "link": "https://kingshotdata.com/research/stone-output-ii/",
+        "local": "/images/icons/kingshot/research/stone-output-ii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/stone-output-research-icon.webp"
+      },
+      {
+        "slug": "stone-output-iii",
+        "title": "Stone Output III",
+        "link": "https://kingshotdata.com/research/stone-output-iii/",
+        "local": "/images/icons/kingshot/research/stone-output-iii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/stone-output-research-icon.webp"
+      },
+      {
+        "slug": "stone-output-iv",
+        "title": "Stone Output IV",
+        "link": "https://kingshotdata.com/research/stone-output-iv/",
+        "local": "/images/icons/kingshot/research/stone-output-iv.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/stone-output-research-icon.webp"
+      },
+      {
+        "slug": "stone-output-v",
+        "title": "Stone Output V",
+        "link": "https://kingshotdata.com/research/stone-output-v/",
+        "local": "/images/icons/kingshot/research/stone-output-v.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/stone-output-research-icon.webp"
+      },
+      {
+        "slug": "tool-enhancement-i",
+        "title": "Tool Enhancement I",
+        "link": "https://kingshotdata.com/research/tool-enhancement-i/",
+        "local": "/images/icons/kingshot/research/tool-enhancement-i.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/tool-enhancement-research-icon.webp"
+      },
+      {
+        "slug": "tool-enhancement-ii",
+        "title": "Tool Enhancement II",
+        "link": "https://kingshotdata.com/research/tool-enhancement-ii/",
+        "local": "/images/icons/kingshot/research/tool-enhancement-ii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/tool-enhancement-research-icon.webp"
+      },
+      {
+        "slug": "tool-enhancement-iii",
+        "title": "Tool Enhancement III",
+        "link": "https://kingshotdata.com/research/tool-enhancement-iii/",
+        "local": "/images/icons/kingshot/research/tool-enhancement-iii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/tool-enhancement-research-icon.webp"
+      },
+      {
+        "slug": "tool-enhancement-iv",
+        "title": "Tool Enhancement IV",
+        "link": "https://kingshotdata.com/research/tool-enhancement-iv/",
+        "local": "/images/icons/kingshot/research/tool-enhancement-iv.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/tool-enhancement-research-icon.webp"
+      },
+      {
+        "slug": "tool-enhancement-v",
+        "title": "Tool Enhancement V",
+        "link": "https://kingshotdata.com/research/tool-enhancement-v/",
+        "local": "/images/icons/kingshot/research/tool-enhancement-v.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/tool-enhancement-research-icon.webp"
+      },
+      {
+        "slug": "tool-enhancement-vi",
+        "title": "Tool Enhancement VI",
+        "link": "https://kingshotdata.com/research/tool-enhancement-vi/",
+        "local": "/images/icons/kingshot/research/tool-enhancement-vi.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/tool-enhancement-research-icon.webp"
+      },
+      {
+        "slug": "tool-enhancement-vii",
+        "title": "Tool Enhancement VII",
+        "link": "https://kingshotdata.com/research/tool-enhancement-vii/",
+        "local": "/images/icons/kingshot/research/tool-enhancement-vii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/tool-enhancement-research-icon.webp"
+      },
+      {
+        "slug": "tooling-up-i",
+        "title": "Tooling Up I",
+        "link": "https://kingshotdata.com/research/tooling-up-i/",
+        "local": "/images/icons/kingshot/research/tooling-up-i.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/tooling-up-research-icon.webp"
+      },
+      {
+        "slug": "tooling-up-ii",
+        "title": "Tooling Up II",
+        "link": "https://kingshotdata.com/research/tooling-up-ii/",
+        "local": "/images/icons/kingshot/research/tooling-up-ii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/tooling-up-research-icon.webp"
+      },
+      {
+        "slug": "tooling-up-iii",
+        "title": "Tooling Up III",
+        "link": "https://kingshotdata.com/research/tooling-up-iii/",
+        "local": "/images/icons/kingshot/research/tooling-up-iii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/tooling-up-research-icon.webp"
+      },
+      {
+        "slug": "tooling-up-iv",
+        "title": "Tooling Up IV",
+        "link": "https://kingshotdata.com/research/tooling-up-iv/",
+        "local": "/images/icons/kingshot/research/tooling-up-iv.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/tooling-up-research-icon.webp"
+      },
+      {
+        "slug": "tooling-up-v",
+        "title": "Tooling Up V",
+        "link": "https://kingshotdata.com/research/tooling-up-v/",
+        "local": "/images/icons/kingshot/research/tooling-up-v.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/tooling-up-research-icon.webp"
+      },
+      {
+        "slug": "tooling-up-vi",
+        "title": "Tooling Up VI",
+        "link": "https://kingshotdata.com/research/tooling-up-vi/",
+        "local": "/images/icons/kingshot/research/tooling-up-vi.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/tooling-up-research-icon.webp"
+      },
+      {
+        "slug": "tooling-up-vii",
+        "title": "Tooling Up VII",
+        "link": "https://kingshotdata.com/research/tooling-up-vii/",
+        "local": "/images/icons/kingshot/research/tooling-up-vii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/tooling-up-research-icon.webp"
+      },
+      {
+        "slug": "trainer-tools-i",
+        "title": "Trainer Tools I",
+        "link": "https://kingshotdata.com/research/trainer-tools-i/",
+        "local": "/images/icons/kingshot/research/trainer-tools-i.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/trainer-tools-research-icon.webp"
+      },
+      {
+        "slug": "trainer-tools-ii",
+        "title": "Trainer Tools II",
+        "link": "https://kingshotdata.com/research/trainer-tools-ii/",
+        "local": "/images/icons/kingshot/research/trainer-tools-ii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/trainer-tools-research-icon.webp"
+      },
+      {
+        "slug": "trainer-tools-iii",
+        "title": "Trainer Tools III",
+        "link": "https://kingshotdata.com/research/trainer-tools-iii/",
+        "local": "/images/icons/kingshot/research/trainer-tools-iii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/trainer-tools-research-icon.webp"
+      },
+      {
+        "slug": "trainer-tools-iv",
+        "title": "Trainer Tools IV",
+        "link": "https://kingshotdata.com/research/trainer-tools-iv/",
+        "local": "/images/icons/kingshot/research/trainer-tools-iv.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/trainer-tools-research-icon.webp"
+      },
+      {
+        "slug": "trainer-tools-v",
+        "title": "Trainer Tools V",
+        "link": "https://kingshotdata.com/research/trainer-tools-v/",
+        "local": "/images/icons/kingshot/research/trainer-tools-v.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/trainer-tools-research-icon.webp"
+      },
+      {
+        "slug": "trainer-tools-vi",
+        "title": "Trainer Tools VI",
+        "link": "https://kingshotdata.com/research/trainer-tools-vi/",
+        "local": "/images/icons/kingshot/research/trainer-tools-vi.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/trainer-tools-research-icon.webp"
+      },
+      {
+        "slug": "trainer-tools-vii",
+        "title": "Trainer Tools VII",
+        "link": "https://kingshotdata.com/research/trainer-tools-vii/",
+        "local": "/images/icons/kingshot/research/trainer-tools-vii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/trainer-tools-research-icon.webp"
+      },
+      {
+        "slug": "ward-expansion-i",
+        "title": "Ward Expansion I",
+        "link": "https://kingshotdata.com/research/ward-expansion-i/",
+        "local": "/images/icons/kingshot/research/ward-expansion-i.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/ward-expansion-research-icon.webp"
+      },
+      {
+        "slug": "ward-expansion-ii",
+        "title": "Ward Expansion II",
+        "link": "https://kingshotdata.com/research/ward-expansion-ii/",
+        "local": "/images/icons/kingshot/research/ward-expansion-ii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/ward-expansion-research-icon.webp"
+      },
+      {
+        "slug": "ward-expansion-iii",
+        "title": "Ward Expansion III",
+        "link": "https://kingshotdata.com/research/ward-expansion-iii/",
+        "local": "/images/icons/kingshot/research/ward-expansion-iii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/ward-expansion-research-icon.webp"
+      },
+      {
+        "slug": "ward-expansion-iv",
+        "title": "Ward Expansion IV",
+        "link": "https://kingshotdata.com/research/ward-expansion-iv/",
+        "local": "/images/icons/kingshot/research/ward-expansion-iv.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/ward-expansion-research-icon.webp"
+      },
+      {
+        "slug": "ward-expansion-v",
+        "title": "Ward Expansion V",
+        "link": "https://kingshotdata.com/research/ward-expansion-v/",
+        "local": "/images/icons/kingshot/research/ward-expansion-v.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/ward-expansion-research-icon.webp"
+      },
+      {
+        "slug": "ward-expansion-vi",
+        "title": "Ward Expansion VI",
+        "link": "https://kingshotdata.com/research/ward-expansion-vi/",
+        "local": "/images/icons/kingshot/research/ward-expansion-vi.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/ward-expansion-research-icon.webp"
+      },
+      {
+        "slug": "ward-expansion-vii",
+        "title": "Ward Expansion VII",
+        "link": "https://kingshotdata.com/research/ward-expansion-vii/",
+        "local": "/images/icons/kingshot/research/ward-expansion-vii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/ward-expansion-research-icon.webp"
+      },
+      {
+        "slug": "wood-gathering-i",
+        "title": "Wood Gathering I",
+        "link": "https://kingshotdata.com/research/wood-gathering-i/",
+        "local": "/images/icons/kingshot/research/wood-gathering-i.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/wood-gathering-research-icon.webp"
+      },
+      {
+        "slug": "wood-gathering-ii",
+        "title": "Wood Gathering II",
+        "link": "https://kingshotdata.com/research/wood-gathering-ii/",
+        "local": "/images/icons/kingshot/research/wood-gathering-ii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/wood-gathering-research-icon.webp"
+      },
+      {
+        "slug": "wood-gathering-iii",
+        "title": "Wood Gathering III",
+        "link": "https://kingshotdata.com/research/wood-gathering-iii/",
+        "local": "/images/icons/kingshot/research/wood-gathering-iii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/wood-gathering-research-icon.webp"
+      },
+      {
+        "slug": "wood-gathering-iv",
+        "title": "Wood Gathering IV",
+        "link": "https://kingshotdata.com/research/wood-gathering-iv/",
+        "local": "/images/icons/kingshot/research/wood-gathering-iv.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/wood-gathering-research-icon.webp"
+      },
+      {
+        "slug": "wood-gathering-v",
+        "title": "Wood Gathering V",
+        "link": "https://kingshotdata.com/research/wood-gathering-v/",
+        "local": "/images/icons/kingshot/research/wood-gathering-v.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/wood-gathering-research-icon.webp"
+      },
+      {
+        "slug": "wood-gathering-vi",
+        "title": "Wood Gathering VI",
+        "link": "https://kingshotdata.com/research/wood-gathering-vi/",
+        "local": "/images/icons/kingshot/research/wood-gathering-vi.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/wood-gathering-research-icon.webp"
+      },
+      {
+        "slug": "wood-output-i",
+        "title": "Wood Output I",
+        "link": "https://kingshotdata.com/research/wood-output-i/",
+        "local": "/images/icons/kingshot/research/wood-output-i.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/wood-output-research-icon.webp"
+      },
+      {
+        "slug": "wood-output-ii",
+        "title": "Wood Output II",
+        "link": "https://kingshotdata.com/research/wood-output-ii/",
+        "local": "/images/icons/kingshot/research/wood-output-ii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/wood-output-research-icon.webp"
+      },
+      {
+        "slug": "wood-output-iii",
+        "title": "Wood Output III",
+        "link": "https://kingshotdata.com/research/wood-output-iii/",
+        "local": "/images/icons/kingshot/research/wood-output-iii.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/wood-output-research-icon.webp"
+      },
+      {
+        "slug": "wood-output-iv",
+        "title": "Wood Output IV",
+        "link": "https://kingshotdata.com/research/wood-output-iv/",
+        "local": "/images/icons/kingshot/research/wood-output-iv.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/wood-output-research-icon.webp"
+      },
+      {
+        "slug": "wood-output-v",
+        "title": "Wood Output V",
+        "link": "https://kingshotdata.com/research/wood-output-v/",
+        "local": "/images/icons/kingshot/research/wood-output-v.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/wood-output-research-icon.webp"
+      },
+      {
+        "slug": "wood-output-vi",
+        "title": "Wood Output VI",
+        "link": "https://kingshotdata.com/research/wood-output-vi/",
+        "local": "/images/icons/kingshot/research/wood-output-vi.webp",
+        "source": "https://kingshotdata.com/wp-content/uploads/2025/04/wood-output-research-icon.webp"
+      }
+    ]
+  }
+}

@@ -1142,9 +1142,9 @@
       "utcTitle": "Все времена в скоординированное универсальное время"
     },
     "pendingPolls": {
-      "allClearEyebrow": "Все чисто",
+      "allClearEyebrow": "Совет свободен",
       "actionEyebrow": "Необходимые меры",
-      "emptyTitle": "Никаких предварительных опросов",
+      "emptyTitle": "Нет открытых предложений",
       "emptySubtitle": "Все открытые голоса уже получили ваши голоса.",
       "waitingTitle_one": "Опрос {{count}} ждет вашего голоса",
       "waitingTitle_other": "Опросы {{count}} ждут вашего голоса",
@@ -1303,7 +1303,7 @@
   },
   "polls": {
     "eyebrow": "Голосовать",
-    "title": "Опросы Альянса",
+    "title": "Совет Альянса",
     "loading": "Загрузка…",
     "countLine_one": "Опрос {{count}} в полете",
     "countLine_other": "Опросы {{count}} в полете",

@@ -1142,9 +1142,9 @@
       "utcTitle": "常に座標化された普遍的な時間にあります"
     },
     "pendingPolls": {
-      "allClearEyebrow": "すべてのクリア",
+      "allClearEyebrow": "評議会クリア",
       "actionEyebrow": "必要なアクション",
-      "emptyTitle": "保留孔なし",
+      "emptyTitle": "オープン議案なし",
       "emptySubtitle": "すべてのオープン投票はすでに投票を受けました.",
       "waitingTitle_one": "あなたの投票を待って{{count}}投票",
       "waitingTitle_other": "あなたの投票を待って{{count}}投票",
@@ -1303,7 +1303,7 @@
   },
   "polls": {
     "eyebrow": "投票",
-    "title": "アライアンスの投票",
+    "title": "同盟評議会",
     "loading": "読み込み中…",
     "countLine_one": "{{count}} は飛行中のポイル",
     "countLine_other": "{{count}} は飛行中のポイル",

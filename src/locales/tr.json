@@ -1142,9 +1142,9 @@
       "utcTitle": "Tüm zamanlarda Evrensel Zamanları koordine edilir"
     },
     "pendingPolls": {
-      "allClearEyebrow": "Tüm açık",
+      "allClearEyebrow": "Konsey temiz",
       "actionEyebrow": "Eylem gerekiyordu",
-      "emptyTitle": "Hiç beklemezler",
+      "emptyTitle": "Açık önerge yok",
       "emptySubtitle": "Tüm açık oylar zaten oy aldı.",
       "waitingTitle_one": "{{count}} anketi oylamanızı bekliyor",
       "waitingTitle_other": "{{count}} anketleri oylarınızı bekliyor",
@@ -1303,7 +1303,7 @@
   },
   "polls": {
     "eyebrow": "Oy ver",
-    "title": "Alliance polls",
+    "title": "İttifak Konseyi",
     "loading": "Yükleniyor…",
     "countLine_one": "{{count}} uçağında anket",
     "countLine_other": "{{count}} uçuşlarında anketler",

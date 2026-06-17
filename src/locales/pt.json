@@ -80,7 +80,7 @@
         },
         "r4": {
           "label": "R4 — Admin",
-          "description": "Cria enquetes/eventos, gerencia aliados."
+          "description": "Cria moções/eventos, gerencia aliados."
         },
         "r5": {
           "label": "R5 — Admin",
@@ -246,7 +246,7 @@
         "subtitle": "Apaga de uma vez todas as mensagens de chat e imagens enviadas. Não pode ser desfeito.",
         "clearAll": "Limpar todas as mensagens",
         "confirmHeading": "Confirmar exclusão permanente",
-        "confirmBody": "Toda mensagem de chat e imagem enviada será apagada. Enquetes, eventos e membros passados permanecem intocados.",
+        "confirmBody": "Toda mensagem de chat e imagem enviada será apagada. Moções, eventos e membros passados permanecem intocados.",
         "cancel": "Cancelar",
         "confirmYes": "Sim, apagar tudo"
       },
@@ -600,7 +600,7 @@
       "tap": {
         "hub": "War Room / Início",
         "events": "Aba de Eventos",
-        "polls": "Lista de enquetes",
+        "polls": "Lista de moções",
         "alliance": "Página da Aliança",
         "url": "URL personalizada"
       },
@@ -689,9 +689,9 @@
     "polls": {
       "backToAdmin": "Voltar ao admin",
       "eyebrow": "Administrador",
-      "title": "Enquetes",
+      "title": "Conselho",
       "closeForm": "Fechar formulário",
-      "newPoll": "Nova enquete",
+      "newPoll": "Nova moção",
       "filters": {
         "all": "todas",
         "open": "aberta",
@@ -712,7 +712,7 @@
         },
         "afterClose": {
           "label": "Apenas após encerrar",
-          "hint": "Contagens ocultas até a enquete encerrar"
+          "hint": "Contagens ocultas até a moção encerrar"
         },
         "adminOnly": {
           "label": "Apenas admin",
@@ -726,7 +726,7 @@
       "errors": {
         "minOptions": "Adicione pelo menos {{min}} opções.",
         "duplicates": "Opções duplicadas não são permitidas.",
-        "failedToCreate": "Falha ao criar enquete",
+        "failedToCreate": "Falha ao criar moção",
         "actionFailed": "Ação falhou",
         "clipboardBlocked": "Área de transferência bloqueada pelo navegador."
       },
@@ -741,7 +741,7 @@
       },
       "confirmDelete": "Excluir \"{{title}}\" permanentemente? Todos os votos serão perdidos.",
       "form": {
-        "heading": "Nova enquete",
+        "heading": "Nova moção",
         "titleLabel": "Título *",
         "titlePlaceholder": "Que horas devemos rodar Viking Vengeance?",
         "descriptionLabel": "Descrição",
@@ -766,10 +766,10 @@
         "addOption": "Adicionar opção",
         "cancel": "Cancelar",
         "creating": "Criando…",
-        "create": "Criar enquete"
+        "create": "Criar moção"
       },
-      "emptyAll": "Nenhuma enquete ainda.",
-      "emptyFiltered": "Nenhuma enquete {{filter}}.",
+      "emptyAll": "Nenhuma moção ainda.",
+      "emptyFiltered": "Nenhuma moção {{filter}}.",
       "row": {
         "closesAt": "encerra {{date}}",
         "openIndefinitely": "aberta indefinidamente",
@@ -867,7 +867,7 @@
     "cta": {
       "open": "Abrir",
       "polls": {
-        "title": "Enquetes",
+        "title": "Conselho",
         "subtitle": "Coordene timing de eventos, preferências de legião, decisões da aliança."
       },
       "members": {
@@ -1144,11 +1144,11 @@
     "pendingPolls": {
       "allClearEyebrow": "Tudo em ordem",
       "actionEyebrow": "Ação necessária",
-      "emptyTitle": "Nenhuma enquete pendente",
+      "emptyTitle": "Nenhuma moção aberta",
       "emptySubtitle": "Todas as votações em aberto já receberam o seu voto.",
-      "waitingTitle_one": "Enquete {{count}} aguardando seu voto",
-      "waitingTitle_other": "Enquetes {{count}} aguardando seu voto",
-      "footerEmpty": "War Room · Enquetes",
+      "waitingTitle_one": "Moção {{count}} aguardando seu voto",
+      "waitingTitle_other": "Moções {{count}} aguardando seu voto",
+      "footerEmpty": "War Room · Conselho",
       "footerCount": "Top {{shown}} de {{total}}",
       "viewAll": "Ver todos"
     },
@@ -1283,7 +1283,7 @@
     "exitAdmin": "Sair do modo admin",
     "exitAdminShort": "Sair",
     "adminEvents": "Eventos",
-    "adminPolls": "Enquetes",
+    "adminPolls": "Conselho",
     "adminMembers": "Membros",
     "adminChat": "Chat",
     "adminAlliance": "Aliança",
@@ -1303,15 +1303,15 @@
   },
   "polls": {
     "eyebrow": "Votar",
-    "title": "Enquetes da aliança",
+    "title": "Conselho da aliança",
     "loading": "Carregando…",
-    "countLine_one": "{{count}} enquete em andamento",
-    "countLine_other": "{{count}} enquetes em andamento",
+    "countLine_one": "{{count}} moção em andamento",
+    "countLine_other": "{{count}} moções em andamento",
     "readOnly": "somente leitura",
     "empty": {
-      "title": "Nenhuma enquete ainda",
-      "adminPrefix": "Um admin pode criar a primeira enquete em",
-      "adminLink": "admin → enquetes"
+      "title": "Nenhuma moção ainda",
+      "adminPrefix": "Um admin pode criar a primeira moção em",
+      "adminLink": "admin → moções"
     },
     "view": "Ver",
     "status": {
@@ -1334,13 +1334,13 @@
       "days_other": "Encerra em {{count}}d"
     },
     "shareToken": {
-      "invalid": "Este link de compartilhamento é inválido ou a enquete foi excluída.",
-      "browse": "Navegar enquetes"
+      "invalid": "Este link de compartilhamento é inválido ou a moção foi excluída.",
+      "browse": "Navegar moções"
     },
     "detail": {
       "back": "Voltar",
-      "backToPolls": "Voltar às enquetes",
-      "notFound": "Enquete não encontrada.",
+      "backToPolls": "Voltar às moções",
+      "notFound": "Moção não encontrada.",
       "countdown": {
         "archived": "Arquivado",
         "draftNotPublished": "Rascunho (não publicada)",
@@ -1348,14 +1348,14 @@
         "openIndefinitely": "Aberta indefinidamente"
       },
       "draftBanner": {
-        "prefix": "Esta enquete está em",
+        "prefix": "Esta moção está em",
         "draft": "rascunho",
         "suffix": " — membros ainda não podem votar. Publique em",
-        "link": "admin → enquetes"
+        "link": "admin → moções"
       },
       "resultsHidden": {
-        "adminOnly": "Resultados visíveis apenas para admins nesta enquete.",
-        "untilClose": "Contagens de votos ficam ocultas até a enquete encerrar."
+        "adminOnly": "Resultados visíveis apenas para admins nesta moção.",
+        "untilClose": "Contagens de votos ficam ocultas até a moção encerrar."
       },
       "signedOutBanner": "para votar. Você pode ver resultados desconectado.",
       "allyBanner": "contas podem ver resultados mas não votar (acesso somente leitura).",
@@ -1364,10 +1364,10 @@
       "voterCount_one": "{{count}} votante",
       "voterCount_other": "{{count}} votantes",
       "totalPicks": "Total DE picaretas {{count}}",
-      "resultsHiddenShort": "Resultados ocultos até a enquete encerrar.",
+      "resultsHiddenShort": "Resultados ocultos até a moção encerrar.",
       "reVotePrefix": "Você pode votar de novo até",
       "clearMyVote": "Limpar meu voto",
-      "shareTitle": "Compartilhar enquete",
+      "shareTitle": "Compartilhar moção",
       "share": "Compartilhar",
       "copied": "Copiado"
     }
@@ -1403,7 +1403,7 @@
     "push": {
       "eyebrow": "Notificações",
       "title": "Notificações push",
-      "description": "Receba avisos quando um evento começa, uma nova enquete abre, ou o admin envia um anúncio — no seu idioma escolhido.",
+      "description": "Receba avisos quando um evento começa, uma nova moção abre, ou o admin envia um anúncio — no seu idioma escolhido.",
       "notConfigured": "Push não configurado neste deploy. Pergunte ao admin da aliança.",
       "blocked": "Notificações bloqueadas nas configurações do navegador — reative para se inscrever.",
       "active": "Ativo",

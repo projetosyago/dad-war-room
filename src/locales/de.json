@@ -1142,9 +1142,9 @@
       "utcTitle": "Alle Zeiten sind in koordinierter Weltzeit"
     },
     "pendingPolls": {
-      "allClearEyebrow": "Alles klar",
+      "allClearEyebrow": "Rat frei",
       "actionEyebrow": "Handlungsbedarf",
-      "emptyTitle": "Keine ausstehenden Umfragen",
+      "emptyTitle": "Keine offenen Anträge",
       "emptySubtitle": "Alle offenen Abstimmungen haben bereits Ihre Stimme erhalten.",
       "waitingTitle_one": "{{count}}-Umfrage wartet auf Ihre Stimme",
       "waitingTitle_other": "{{count}}-Umfragen warten auf Ihre Stimme",
@@ -1303,7 +1303,7 @@
   },
   "polls": {
     "eyebrow": "Abstimmen",
-    "title": "Umfragen der Allianz",
+    "title": "Rat der Allianz",
     "loading": "Lädt…",
     "countLine_one": "{{count}}-Umfrage im Flug",
     "countLine_other": "{{count}} Umfragen im Flug",

@@ -1142,9 +1142,9 @@
       "utcTitle": "所有时间都在协调世界时"
     },
     "pendingPolls": {
-      "allClearEyebrow": "没事了",
+      "allClearEyebrow": "议会清空",
       "actionEyebrow": "需要采取的行动",
-      "emptyTitle": "没有待投票",
+      "emptyTitle": "没有开放议案",
       "emptySubtitle": "所有公开投票都已收到你的选票.",
       "waitingTitle_one": "{{count}} 民调等待投票",
       "waitingTitle_other": "{{count}}投票等待投票",
@@ -1303,7 +1303,7 @@
   },
   "polls": {
     "eyebrow": "投票",
-    "title": "联盟民意调查",
+    "title": "联盟议会",
     "loading": "加载中…",
     "countLine_one": "飞行中的{{count}}民意调查",
     "countLine_other": "{{count}} 飞行中的民调",

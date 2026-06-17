@@ -1142,9 +1142,9 @@
       "utcTitle": "모든 시간은 우주 비행 시간에 있습니다"
     },
     "pendingPolls": {
-      "allClearEyebrow": "모든 명확한",
+      "allClearEyebrow": "협의회 정리됨",
       "actionEyebrow": "자주 묻는 질문",
-      "emptyTitle": "자주 묻는 질문",
+      "emptyTitle": "열린 안건 없음",
       "emptySubtitle": "모든 오픈 투표는 이미 투표를 받았습니다.",
       "waitingTitle_one": "{{count}} 투표 대기",
       "waitingTitle_other": "{{count}} 투표를 기다리고 있습니다",
@@ -1303,7 +1303,7 @@
   },
   "polls": {
     "eyebrow": "투표",
-    "title": "Alliance 투표",
+    "title": "동맹 협의회",
     "loading": "로드 중…",
     "countLine_one": "비행에 {{count}} 설문 조사",
     "countLine_other": "비행에서 {{count}} 설문 조사",

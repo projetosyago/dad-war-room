@@ -211,10 +211,9 @@ function Portrait({ local, remote, alt }: { local: string; remote: string | null
     )
   }
 
-  // Scraped portraits from kingshotdata.com ship with a thin off-white frame
-  // baked into the original asset. We zoom past it with a baseline scale-110
-  // (≈5% crop per edge) so the tile fills with the actual face. Hover bumps
-  // the zoom an extra hair for the lift effect.
+  // Portraits are physically cropped at build time by
+  // scripts/process-hero-images.mjs (Wave 18) — no CSS scale hack needed
+  // anymore. Hover bumps a tiny lift for the click affordance.
   return (
     <img
       src={stage === 'local' ? local : (remote as string)}
@@ -222,7 +221,7 @@ function Portrait({ local, remote, alt }: { local: string; remote: string | null
       loading="lazy"
       decoding="async"
       onError={onError}
-      className="h-full w-full object-cover object-center select-none scale-110 transition-transform duration-300 group-hover:scale-[1.16]"
+      className="h-full w-full object-cover object-center select-none transition-transform duration-300 group-hover:scale-[1.04]"
     />
   )
 }

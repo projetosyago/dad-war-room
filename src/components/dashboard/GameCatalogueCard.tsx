@@ -146,9 +146,9 @@ function CategoryTile({
             src={image}
             alt=""
             loading="lazy"
-            // Scraped kingshotdata portraits ship with a thin off-white frame —
-            // scale-110 crops it past the visible area (matches Heroes catalogue).
-            className="h-full w-full object-cover object-center select-none scale-110"
+            // Portraits are physically cropped at build time
+            // (scripts/process-hero-images.mjs). No CSS scale needed.
+            className="h-full w-full object-cover object-center select-none"
           />
         ) : (
           // Empty-state placeholder. Subtle gold radial wash, no glyph.

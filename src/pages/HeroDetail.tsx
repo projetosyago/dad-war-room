@@ -129,29 +129,32 @@ export function HeroDetail() {
   const localPortrait = `/images/icons/kingshot/heroes/${hero.slug}.webp`
 
   return (
-    <div className="container-narrow pt-5 pb-12 sm:pt-8 sm:pb-16 space-y-4 sm:space-y-5">
-      {/* ── Hero banner ── */}
+    <div className="container-narrow pt-4 pb-12 sm:pt-6 sm:pb-16 space-y-3 sm:space-y-4">
+      {/* ── Hero banner — compact side-by-side on every breakpoint.
+          Mobile: 110px square portrait + chips/name/sources stack to the right,
+          so the tabs and first stat card stay above the fold. Larger screens
+          get a slightly bigger portrait but the layout stays horizontal. */}
       <motion.section
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
         className={cn('card-hero overflow-hidden', RARITY_CARD[hero.rarity])}
       >
-        <div className="grid grid-cols-1 sm:grid-cols-[220px_1fr] gap-5 sm:gap-7 p-5 sm:p-7">
-          <div className="relative aspect-[3/4] overflow-hidden rounded-xl border border-gold/30 bg-bg-card/60">
+        <div className="grid grid-cols-[110px_1fr] sm:grid-cols-[180px_1fr] gap-3 sm:gap-5 p-3 sm:p-5 items-start">
+          <div className="relative aspect-square sm:aspect-[3/4] overflow-hidden rounded-xl border border-gold/25 bg-bg-card/60">
             <ChainedImage
               sources={[localPortrait, hero.portrait]}
               alt={hero.name}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover object-center"
               fallback={
                 <div className="flex h-full w-full items-center justify-center">
-                  <User size={48} weight="duotone" className="text-gold-soft/60" />
+                  <User size={36} weight="duotone" className="text-gold-soft/60" />
                 </div>
               }
             />
           </div>
-          <div className="min-w-0 flex flex-col gap-3">
-            <div className="flex flex-wrap items-center gap-2">
+          <div className="min-w-0 flex flex-col gap-2 sm:gap-2.5">
+            <div className="flex flex-wrap items-center gap-1.5">
               <RarityChip rarity={hero.rarity} />
               {hero.rarity === 'mythic' && hero.generation != null && (
                 <span className="badge-gold text-[10px] px-2 py-0.5">
@@ -160,9 +163,9 @@ export function HeroDetail() {
               )}
               {hero.class && <span className="badge-mute text-[10px] px-2 py-0.5">{hero.class}</span>}
             </div>
-            <h1 className="font-display hero-title text-3xl sm:text-4xl leading-tight">{hero.name}</h1>
+            <h1 className="font-display hero-title text-2xl sm:text-3xl leading-tight">{hero.name}</h1>
             {hero.sources.length > 0 && (
-              <p className="text-sm text-ink-mute leading-relaxed">
+              <p className="text-xs sm:text-sm text-ink-mute leading-snug">
                 <span className="eyebrow mr-1.5">{t('heroes.detail.unlock', { defaultValue: 'Unlock' })}:</span>
                 {hero.sources.join(', ')}
               </p>
@@ -196,20 +199,8 @@ export function HeroDetail() {
       {/* ── Upgrade Costs ── */}
       <UpgradeCostsSection hero={hero} />
 
-      {/* ── Sources ── */}
-      {hero.sources.length > 0 && (
-        <section className="card-hero card-hero--steel p-5 sm:p-6">
-          <SectionHeading>{t('heroes.detail.sources', { defaultValue: 'Sources' })}</SectionHeading>
-          <ul className="mt-3 space-y-1.5 text-sm text-ink-cream">
-            {hero.sources.map((src) => (
-              <li key={src} className="flex items-start gap-2">
-                <span aria-hidden className="mt-2 h-1 w-1 rounded-full bg-gold-soft/70" />
-                <span>{src}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
+      {/* Sources are surfaced in the banner as "Unlock: …" — no standalone
+          card here on purpose. */}
     </div>
   )
 }
@@ -382,7 +373,7 @@ function StatTile({ label, value }: { label: string; value: number | null }) {
     <div className="rounded-xl border border-gold/15 bg-bg-card/40 px-3 py-2.5 text-center">
       <div className="eyebrow text-[10px]">{label}</div>
       <div className="font-mono text-base sm:text-lg text-gold-soft mt-0.5">
-        {value != null ? value.toLocaleString() : '—'}
+        {value != null ? value.toLocaleString('en-US') : '—'}
       </div>
     </div>
   )
@@ -486,7 +477,7 @@ function collectGearStats(
   for (const [key, i18nKey, fallback] of order) {
     const raw = stats[key]
     if (raw == null) continue
-    out.push({ key, label: t(i18nKey, { defaultValue: fallback }), value: raw.toLocaleString() })
+    out.push({ key, label: t(i18nKey, { defaultValue: fallback }), value: raw.toLocaleString('en-US') })
   }
   return out
 }
@@ -525,7 +516,7 @@ function UpgradeCostsSection({ hero }: { hero: HeroData }) {
         <CostKpi
           icon={<Star size={18} weight="duotone" />}
           itemIcon={starShardIcon(hero.rarity, hero.name)}
-          label={t('heroes.detail.cost.starsTotal', { defaultValue: 'Star Shards (★5)' })}
+          label={t('heroes.detail.cost.starsTotal', { defaultValue: 'Star Shards' })}
           qty={summary.starShards.qty}
           item={summary.starShards.item}
           tone="gold"
@@ -542,7 +533,7 @@ function UpgradeCostsSection({ hero }: { hero: HeroData }) {
           <CostKpi
             icon={<PuzzlePiece size={18} weight="duotone" />}
             itemIcon={widgetChestIcon(hero.generation)}
-            label={t('heroes.detail.cost.widgetsTotal', { defaultValue: 'Widgets (max gear)' })}
+            label={t('heroes.detail.cost.widgetsTotal', { defaultValue: 'Widgets' })}
             qty={summary.widgets.qty}
             item={summary.widgets.item}
             tone="crimson"

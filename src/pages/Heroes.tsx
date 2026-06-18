@@ -143,7 +143,10 @@ function HeroGrid({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.4 }}
-      className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4"
+      // 3 cols on mobile by design — Mythic Gen 2-7 each have exactly 3
+      // heroes, so a single row holds an entire generation. Gen 1 has 4
+      // heroes and wraps to a second row by 1, which still reads cleanly.
+      className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2 sm:gap-3"
     >
       {heroes.map((h) => (
         <HeroCard key={h.slug} entry={h} rarity={rarity} />
@@ -208,6 +211,10 @@ function Portrait({ local, remote, alt }: { local: string; remote: string | null
     )
   }
 
+  // Scraped portraits from kingshotdata.com ship with a thin off-white frame
+  // baked into the original asset. We zoom past it with a baseline scale-110
+  // (≈5% crop per edge) so the tile fills with the actual face. Hover bumps
+  // the zoom an extra hair for the lift effect.
   return (
     <img
       src={stage === 'local' ? local : (remote as string)}
@@ -215,7 +222,7 @@ function Portrait({ local, remote, alt }: { local: string; remote: string | null
       loading="lazy"
       decoding="async"
       onError={onError}
-      className="h-full w-full object-cover select-none transition-transform duration-300 group-hover:scale-[1.04]"
+      className="h-full w-full object-cover object-center select-none scale-110 transition-transform duration-300 group-hover:scale-[1.16]"
     />
   )
 }

@@ -58,6 +58,8 @@ interface ExclusiveGearStats {
 }
 interface ExclusiveGear {
   name: string | null
+  /** Local public path to the widget icon (Wave 19 — see scripts/scrape-mythic-gear-icons.mjs). */
+  iconUrl?: string | null
   stats: ExclusiveGearStats
   bonuses: string[]
   skills: HeroSkill[]
@@ -222,28 +224,45 @@ function ConquestPanel({ data }: { data: HeroData['conquest'] }) {
 }
 
 /**
- * Compact ATK / DEF / HP pills, rendered inline in the hero banner.
- * Matches the UserHero card style on the dashboard — big mono numeral
- * over a tracked-out small-caps label.
+ * ATK / DEF / HP pill cards, rendered inline in the hero banner.
+ *
+ * Wave 19 review: previous "loose text in a grid" version felt unframed and
+ * cramped against the card edge. This version puts each stat in a small
+ * framed pill with its own bg + border so the numbers breathe and read as
+ * "stats", not floating text. Color-coded for at-a-glance recognition:
+ * ATK = crimson, DEF = steel-blue, HP = success-green.
  */
 function BannerStats({ stats }: { stats: HeroData['conquest']['baseStats'] }) {
   const { t } = useTranslation()
-  const entries: Array<{ key: string; label: string; value: number | null }> = [
-    { key: 'atk', label: t('heroes.detail.stat.atk', { defaultValue: 'ATK' }), value: stats.atk },
-    { key: 'def', label: t('heroes.detail.stat.def', { defaultValue: 'DEF' }), value: stats.def },
-    { key: 'hp',  label: t('heroes.detail.stat.hp',  { defaultValue: 'HP'  }), value: stats.hp  },
+  const entries: Array<{
+    key: string
+    label: string
+    value: number | null
+    tone: 'crimson' | 'steel' | 'success'
+  }> = [
+    { key: 'atk', label: t('heroes.detail.stat.atk', { defaultValue: 'ATK' }), value: stats.atk, tone: 'crimson' },
+    { key: 'def', label: t('heroes.detail.stat.def', { defaultValue: 'DEF' }), value: stats.def, tone: 'steel'   },
+    { key: 'hp',  label: t('heroes.detail.stat.hp',  { defaultValue: 'HP'  }), value: stats.hp,  tone: 'success' },
   ]
   if (entries.every((e) => e.value == null)) return null
+  const toneCls = {
+    crimson: 'border-crimson/30 text-crimson-glow',
+    steel:   'border-[rgba(159,178,204,0.35)] text-[#9fb2cc]',
+    success: 'border-success/35 text-[#7fc08a]',
+  }
   return (
-    <div className="mt-1 grid grid-cols-3 gap-3 pt-2 border-t border-gold/15">
+    <div className="mt-1 grid grid-cols-3 gap-1.5 sm:gap-2">
       {entries.map((e) => (
-        <div key={e.key} className="flex flex-col items-start">
-          <span className="font-mono text-xl sm:text-2xl tabular-nums leading-none text-ink-cream">
+        <div
+          key={e.key}
+          className={`rounded-lg border bg-bg-deep/50 px-2 py-2 text-center backdrop-blur-sm ${toneCls[e.tone]}`}
+        >
+          <div className="font-mono text-base sm:text-xl tabular-nums leading-none text-ink-cream">
             {e.value != null ? e.value.toLocaleString('en-US') : '—'}
-          </span>
-          <span className="mt-1 text-[9px] sm:text-[10px] tracking-[0.28em] uppercase font-semibold text-ink-mute">
+          </div>
+          <div className={`mt-1 text-[9px] sm:text-[10px] tracking-[0.22em] uppercase font-semibold ${toneCls[e.tone].split(' ').find((c) => c.startsWith('text-')) ?? 'text-ink-mute'}`}>
             {e.label}
-          </span>
+          </div>
         </div>
       ))}
     </div>
@@ -285,17 +304,47 @@ function ExpeditionPanel({ data }: { data: HeroData['expedition'] }) {
 function ExclusiveGearSection({ gear }: { gear: ExclusiveGear }) {
   const { t } = useTranslation()
   const stats = useMemo(() => collectGearStats(gear.stats, t), [gear.stats, t])
+  const [gearTab, setGearTab] = useState<'conquest' | 'expedition'>('conquest')
+
+  // Gear skills always come as 1 conquest + 1 expedition for mythics; the
+  // tab interaction mirrors the main Conquest/Expedition tabs above so the
+  // page reads consistently. Falls back gracefully if a hero has them in
+  // a different shape (filters by mode).
+  const conquestGearSkills = gear.skills.filter((s) => s.mode === 'conquest')
+  const expeditionGearSkills = gear.skills.filter((s) => s.mode === 'expedition')
+
   return (
     <section className="card-hero card-hero--violet p-5 sm:p-6">
-      <SectionHeading>{t('heroes.detail.exclusiveGear', { defaultValue: 'Exclusive Gear' })}</SectionHeading>
-      {gear.name && <div className="mt-2 hero-title text-xl sm:text-2xl">{gear.name}</div>}
+      {/* Header — centered icon + label + gear name, like a featured item card. */}
+      <div className="flex flex-col items-center text-center gap-3">
+        {gear.iconUrl && (
+          <div className="relative h-24 w-24 sm:h-28 sm:w-28 rounded-2xl overflow-hidden border border-violet-400/40 bg-bg-deep/60 shadow-[0_0_18px_-4px_rgba(155,140,255,0.45)]">
+            <img
+              src={gear.iconUrl}
+              alt={gear.name ?? 'Exclusive Gear'}
+              loading="lazy"
+              className="h-full w-full object-contain"
+            />
+          </div>
+        )}
+        <div>
+          <div className="eyebrow" style={{ color: 'rgba(180,165,255,1)' }}>
+            {t('heroes.detail.exclusiveGear', { defaultValue: 'Exclusive Gear' })}
+          </div>
+          {gear.name && (
+            <h2 className="font-display hero-title text-xl sm:text-2xl mt-0.5">
+              {gear.name}
+            </h2>
+          )}
+        </div>
+      </div>
 
       {stats.length > 0 && (
-        <div className="mt-4 rounded-xl border border-gold/15 bg-bg-card/40 p-4">
-          <div className="eyebrow mb-2">{t('heroes.detail.gearMaxStats', { defaultValue: 'Max Level Stats' })}</div>
+        <div className="mt-5 rounded-xl border border-gold/15 bg-bg-card/40 p-4">
+          <div className="eyebrow mb-2 text-center">{t('heroes.detail.gearMaxStats', { defaultValue: 'Max Level Stats' })}</div>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {stats.map((e) => (
-              <div key={e.key} className="flex flex-col">
+              <div key={e.key} className="flex flex-col items-center text-center">
                 <span className="eyebrow text-[10px]">{e.label}</span>
                 <span className="font-mono text-sm text-gold-soft">{e.value}</span>
               </div>
@@ -306,11 +355,11 @@ function ExclusiveGearSection({ gear }: { gear: ExclusiveGear }) {
 
       {gear.bonuses.length > 0 && (
         <div className="mt-4">
-          <div className="eyebrow mb-2">{t('heroes.detail.gearBonuses', { defaultValue: 'Bonuses' })}</div>
+          <div className="eyebrow mb-2 text-center">{t('heroes.detail.gearBonuses', { defaultValue: 'Bonuses' })}</div>
           <ul className="space-y-1.5">
             {gear.bonuses.map((b) => (
-              <li key={b} className="flex items-start gap-2 text-sm text-ink-cream">
-                <span aria-hidden className="mt-2 h-1 w-1 rounded-full bg-gold-soft/70" />
+              <li key={b} className="flex items-center justify-center gap-2 text-sm text-ink-cream">
+                <span aria-hidden className="h-1 w-1 rounded-full bg-gold-soft/70" />
                 <span>{b}</span>
               </li>
             ))}
@@ -319,10 +368,25 @@ function ExclusiveGearSection({ gear }: { gear: ExclusiveGear }) {
       )}
 
       {gear.skills.length > 0 && (
-        <div className="mt-4">
-          <div className="eyebrow mb-2">{t('heroes.detail.gearSkills', { defaultValue: 'Gear Skills' })}</div>
+        <div className="mt-5">
+          <div className="eyebrow mb-2 text-center">{t('heroes.detail.gearSkills', { defaultValue: 'Gear Skills' })}</div>
+          <div className="flex items-center justify-center gap-2 mb-3">
+            <TabButton active={gearTab === 'conquest'} onClick={() => setGearTab('conquest')}>
+              {t('heroes.detail.tab.conquest', { defaultValue: 'Conquest' })}
+            </TabButton>
+            <TabButton active={gearTab === 'expedition'} onClick={() => setGearTab('expedition')}>
+              {t('heroes.detail.tab.expedition', { defaultValue: 'Expedition' })}
+            </TabButton>
+          </div>
           <div className="space-y-3">
-            {gear.skills.map((s) => <SkillRow key={s.name} skill={s} showMode />)}
+            {(gearTab === 'conquest' ? conquestGearSkills : expeditionGearSkills).map((s) => (
+              <SkillRow key={s.name} skill={s} />
+            ))}
+            {(gearTab === 'conquest' ? conquestGearSkills : expeditionGearSkills).length === 0 && (
+              <p className="text-center text-xs text-ink-mute italic py-4">
+                {t('heroes.detail.gearNoSkillForMode', { defaultValue: 'No gear skill in this mode.' })}
+              </p>
+            )}
           </div>
         </div>
       )}

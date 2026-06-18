@@ -137,16 +137,15 @@ async function processSkillIcons() {
       const { width = 0, height = 0 } = meta
 
       // Asymmetric crop — the kingshotdata source bakes a "Lv. 5" / X badge
-      // in the bottom-left corner. We cut more off the bottom than the
-      // top/sides so the badge falls outside the visible area. The skill
-      // art is typically centered or slightly upper-half of the asset, so
-      // the bottom crop doesn't hurt it.
+      // in the bottom-left corner. Wave 19 review: previous 22% bottom crop
+      // still left badge fragments visible on some icons. Bumped to 32%.
+      // Sides also widened to 10% to ensure the X corner is gone.
       //   Top: 8%
-      //   Bottom: 22%
-      //   Sides: 8% each
+      //   Bottom: 32%
+      //   Sides: 10% each
       const cropTop = Math.round(height * 0.08)
-      const cropBottom = Math.round(height * 0.22)
-      const cropSide = Math.round(width * 0.08)
+      const cropBottom = Math.round(height * 0.32)
+      const cropSide = Math.round(width * 0.10)
       const w = width - 2 * cropSide
       const h = height - cropTop - cropBottom
       const out = await img

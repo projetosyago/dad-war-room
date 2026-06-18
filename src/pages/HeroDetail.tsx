@@ -80,13 +80,12 @@ interface HeroData {
 // JSON record keyed by slug; scrape script adds scrapedAt / sourceUrl we ignore.
 const HEROES = heroesData as unknown as Record<string, HeroData>
 
-const RARITY_CARD: Record<Rarity, string> = {
-  rare: 'card-hero--success',
-  epic: 'card-hero--violet',
-  mythic: 'card-hero--crimson',
-}
+// Wave 22: card frame is the same gold-trimmed UserHero variant for EVERY
+// hero — rarity differentiation now lives only in the small rarity chip
+// (rare = success-green, epic = violet, mythic = crimson) so the page reads
+// like the dashboard hero card. Previous per-rarity card tints felt loud.
 const RARITY_CHIP: Record<Rarity, string> = {
-  rare: 'bg-gold/15 border-gold/45 text-gold',
+  rare: 'bg-success/15 border-success/45 text-[#7fc08a]',
   epic: 'bg-violet-500/15 border-violet-400/45 text-violet-200',
   mythic: 'bg-crimson/20 border-crimson/55 text-crimson-glow',
 }
@@ -127,52 +126,78 @@ export function HeroDetail() {
 
   return (
     <div className="container-narrow pt-4 pb-12 sm:pt-6 sm:pb-16 space-y-3 sm:space-y-4">
-      {/* ── Hero banner — compact side-by-side on every breakpoint.
-          Mobile: 110px square portrait + chips/name/sources stack to the right,
-          so the tabs and first stat card stay above the fold. Larger screens
-          get a slightly bigger portrait but the layout stays horizontal. */}
+      {/* ── Hero banner — mirrors the dashboard UserHero card visual:
+          card-hero--portrait gold-trimmed frame, circular avatar medallion
+          with a gold double-ring, inline UserHero-style stats, card-foot
+          band for unlock sources. The rarity color now lives only in the
+          rarity chip above the name. */}
       <motion.section
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
-        className={cn('card-hero overflow-hidden', RARITY_CARD[hero.rarity])}
+        className="card-hero card-hero--portrait"
       >
-        <div className="grid grid-cols-[110px_1fr] sm:grid-cols-[180px_1fr] gap-3 sm:gap-5 p-3 sm:p-5 items-start">
-          <div className="relative aspect-square sm:aspect-[3/4] overflow-hidden rounded-xl border border-gold/25 bg-bg-card/60">
-            <ChainedImage
-              sources={[localPortrait, hero.portrait]}
-              alt={hero.name}
-              className="h-full w-full object-cover object-center"
-              fallback={
-                <div className="flex h-full w-full items-center justify-center">
-                  <User size={36} weight="duotone" className="text-gold-soft/60" />
-                </div>
-              }
-            />
+        <div className="relative flex items-center gap-4 p-5 sm:p-6 pb-4">
+          {/* Avatar medallion — gold double-ring matching UserHero exactly */}
+          <div className="relative shrink-0">
+            <span aria-hidden className="absolute -inset-1.5 rounded-full bg-gold/25 blur-md" />
+            <div
+              className="relative h-20 w-20 sm:h-24 sm:w-24 rounded-full p-[2px]"
+              style={{
+                background:
+                  'linear-gradient(135deg, #ffe9a3 0%, #f4cf73 50%, #c89934 100%)',
+              }}
+            >
+              <div
+                className="rounded-full p-[1.5px] h-full w-full"
+                style={{ background: '#0d1124' }}
+              >
+                <ChainedImage
+                  sources={[localPortrait, hero.portrait]}
+                  alt={hero.name}
+                  className="rounded-full h-full w-full object-cover"
+                  fallback={
+                    <div className="rounded-full h-full w-full flex items-center justify-center bg-bg-card/60">
+                      <User size={32} weight="duotone" className="text-gold-soft/60" />
+                    </div>
+                  }
+                />
+              </div>
+            </div>
           </div>
-          <div className="min-w-0 flex flex-col gap-2 sm:gap-2.5">
-            <div className="flex flex-wrap items-center gap-1.5">
+
+          {/* Right column — chips, name, inline stats */}
+          <div className="min-w-0 flex-1">
+            <div className="flex flex-wrap items-center gap-1.5 mb-1">
               <RarityChip rarity={hero.rarity} />
               {hero.rarity === 'mythic' && hero.generation != null && (
                 <span className="badge-gold text-[10px] px-2 py-0.5">
                   {t('heroes.detail.gen', { defaultValue: 'Gen {{gen}}', gen: hero.generation })}
                 </span>
               )}
-              {hero.class && <span className="badge-mute text-[10px] px-2 py-0.5">{hero.class}</span>}
+              {hero.class && (
+                <span className="badge-mute text-[10px] px-2 py-0.5">{hero.class}</span>
+              )}
             </div>
-            <h1 className="font-display hero-title text-2xl sm:text-3xl leading-tight">{hero.name}</h1>
-            {hero.sources.length > 0 && (
-              <p className="text-xs sm:text-sm text-ink-mute leading-snug">
-                <span className="eyebrow mr-1.5">{t('heroes.detail.unlock', { defaultValue: 'Unlock' })}:</span>
-                {hero.sources.join(', ')}
-              </p>
-            )}
-            {/* Base stats inline in the banner — same visual as the UserHero
-                stat pills on the dashboard so the hero card feels familiar.
-                Wave 19: dropped the separate "BASE STATS" card. */}
+            <h1 className="font-display tracking-[0.06em] text-2xl sm:text-3xl text-gold-shimmer truncate leading-tight">
+              {hero.name}
+            </h1>
             <BannerStats stats={hero.conquest.baseStats} />
           </div>
         </div>
+
+        {hero.sources.length > 0 && (
+          <div className="card-foot relative">
+            <span className="text-[11px] text-ink-mute truncate inline-flex items-center gap-2 min-w-0">
+              <span className="eyebrow shrink-0">
+                {t('heroes.detail.unlock', { defaultValue: 'Unlock' })}
+              </span>
+              <span className="truncate text-ink-cream/85">
+                {hero.sources.join(', ')}
+              </span>
+            </span>
+          </div>
+        )}
       </motion.section>
 
       {/* ── Skills card — tabs + active mode all wrapped in one container.
@@ -222,13 +247,12 @@ function ConquestPanel({ data, heroName }: { data: HeroData['conquest']; heroNam
 }
 
 /**
- * ATK / DEF / HP pill cards, rendered inline in the hero banner.
+ * ATK / DEF / HP stats inline in the hero banner.
  *
- * Wave 19 review: previous "loose text in a grid" version felt unframed and
- * cramped against the card edge. This version puts each stat in a small
- * framed pill with its own bg + border so the numbers breathe and read as
- * "stats", not floating text. Color-coded for at-a-glance recognition:
- * ATK = crimson, DEF = steel-blue, HP = success-green.
+ * Wave 22: matches the dashboard UserHero <Stat /> component EXACTLY — big
+ * mono numeral with a tracked small-caps label below, no framed pills, no
+ * colored card-style backgrounds. Tints are subtle on the numeral only so
+ * the card still feels gold-trimmed and warm (not a colorful dashboard).
  */
 function BannerStats({ stats }: { stats: HeroData['conquest']['baseStats'] }) {
   const { t } = useTranslation()
@@ -236,31 +260,28 @@ function BannerStats({ stats }: { stats: HeroData['conquest']['baseStats'] }) {
     key: string
     label: string
     value: number | null
-    tone: 'crimson' | 'steel' | 'success'
+    tint: 'crimson' | 'steel' | 'cream'
   }> = [
-    { key: 'atk', label: t('heroes.detail.stat.atk', { defaultValue: 'ATK' }), value: stats.atk, tone: 'crimson' },
-    { key: 'def', label: t('heroes.detail.stat.def', { defaultValue: 'DEF' }), value: stats.def, tone: 'steel'   },
-    { key: 'hp',  label: t('heroes.detail.stat.hp',  { defaultValue: 'HP'  }), value: stats.hp,  tone: 'success' },
+    { key: 'atk', label: t('heroes.detail.stat.atk', { defaultValue: 'ATK' }), value: stats.atk, tint: 'crimson' },
+    { key: 'def', label: t('heroes.detail.stat.def', { defaultValue: 'DEF' }), value: stats.def, tint: 'steel'   },
+    { key: 'hp',  label: t('heroes.detail.stat.hp',  { defaultValue: 'HP'  }), value: stats.hp,  tint: 'cream'   },
   ]
   if (entries.every((e) => e.value == null)) return null
-  const toneCls = {
-    crimson: 'border-crimson/30 text-crimson-glow',
-    steel:   'border-[rgba(159,178,204,0.35)] text-[#9fb2cc]',
-    success: 'border-success/35 text-[#7fc08a]',
+  const tintCls = {
+    crimson: 'text-crimson-glow',
+    steel:   'text-[#9fb2cc]',
+    cream:   'text-ink-cream',
   }
   return (
-    <div className="mt-1 grid grid-cols-3 gap-1.5 sm:gap-2">
+    <div className="mt-3 flex items-end gap-5 sm:gap-7">
       {entries.map((e) => (
-        <div
-          key={e.key}
-          className={`rounded-lg border bg-bg-deep/50 px-2 py-2 text-center backdrop-blur-sm ${toneCls[e.tone]}`}
-        >
-          <div className="font-mono text-base sm:text-xl tabular-nums leading-none text-ink-cream">
+        <div key={e.key} className="flex flex-col items-start">
+          <span className={`font-mono text-xl sm:text-2xl tabular-nums leading-none ${tintCls[e.tint]}`}>
             {e.value != null ? e.value.toLocaleString('en-US') : '—'}
-          </div>
-          <div className={`mt-1 text-[9px] sm:text-[10px] tracking-[0.22em] uppercase font-semibold ${toneCls[e.tone].split(' ').find((c) => c.startsWith('text-')) ?? 'text-ink-mute'}`}>
+          </span>
+          <span className="mt-1 text-[9px] sm:text-[10px] tracking-[0.28em] uppercase font-semibold text-ink-mute">
             {e.label}
-          </div>
+          </span>
         </div>
       ))}
     </div>

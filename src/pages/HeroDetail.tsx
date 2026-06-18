@@ -175,26 +175,29 @@ export function HeroDetail() {
         </div>
       </motion.section>
 
-      {/* ── Tabs ── */}
-      <div className="flex items-center gap-2">
-        <TabButton active={tab === 'conquest'} onClick={() => setTab('conquest')}>
-          {t('heroes.detail.tab.conquest', { defaultValue: 'Conquest' })}
-        </TabButton>
-        <TabButton active={tab === 'expedition'} onClick={() => setTab('expedition')}>
-          {t('heroes.detail.tab.expedition', { defaultValue: 'Expedition' })}
-        </TabButton>
-      </div>
-
-      {/* ── Tab content ── */}
-      {tab === 'conquest' ? (
-        <ConquestPanel data={hero.conquest} />
-      ) : (
-        <ExpeditionPanel data={hero.expedition} />
-      )}
+      {/* ── Skills card — tabs + active mode all wrapped in one container.
+          Wave 21: previously the Conquest/Expedition tabs floated above two
+          separate cards; now they live inside a single skills card so the
+          page reads as one cohesive block. */}
+      <section className="card-hero p-4 sm:p-5">
+        <div className="flex items-center justify-center gap-2 mb-4">
+          <TabButton active={tab === 'conquest'} onClick={() => setTab('conquest')}>
+            {t('heroes.detail.tab.conquest', { defaultValue: 'Conquest' })}
+          </TabButton>
+          <TabButton active={tab === 'expedition'} onClick={() => setTab('expedition')}>
+            {t('heroes.detail.tab.expedition', { defaultValue: 'Expedition' })}
+          </TabButton>
+        </div>
+        {tab === 'conquest' ? (
+          <ConquestPanel data={hero.conquest} heroName={hero.name} />
+        ) : (
+          <ExpeditionPanel data={hero.expedition} heroName={hero.name} />
+        )}
+      </section>
 
       {/* ── Mythic-only Exclusive Gear ── */}
       {hero.rarity === 'mythic' && hero.exclusiveGear && (
-        <ExclusiveGearSection gear={hero.exclusiveGear} />
+        <ExclusiveGearSection gear={hero.exclusiveGear} heroName={hero.name} />
       )}
 
       {/* ── Upgrade Costs ── */}
@@ -208,17 +211,12 @@ export function HeroDetail() {
 
 // ─── Sub-components ─────────────────────────────────────────────────────────
 
-function ConquestPanel({ data }: { data: HeroData['conquest'] }) {
-  const { t } = useTranslation()
-  // Wave 19: BASE STATS moved into the hero banner — no separate card here.
+function ConquestPanel({ data, heroName }: { data: HeroData['conquest']; heroName: string }) {
+  // Wave 19: BASE STATS moved into the hero banner.
+  // Wave 21: now rendered INSIDE the parent skills card — no own card.
   return (
-    <div className="space-y-4 sm:space-y-5">
-      <section className="card-hero p-5 sm:p-6">
-        <SectionHeading>{t('heroes.detail.conquestSkills', { defaultValue: 'Conquest Skills' })}</SectionHeading>
-        <div className="mt-3 space-y-3">
-          {data.skills.map((s) => <SkillRow key={s.name} skill={s} />)}
-        </div>
-      </section>
+    <div className="space-y-3">
+      {data.skills.map((s) => <SkillRow key={s.name} skill={s} heroName={heroName} />)}
     </div>
   )
 }
@@ -269,22 +267,21 @@ function BannerStats({ stats }: { stats: HeroData['conquest']['baseStats'] }) {
   )
 }
 
-function ExpeditionPanel({ data }: { data: HeroData['expedition'] }) {
+function ExpeditionPanel({ data, heroName }: { data: HeroData['expedition']; heroName: string }) {
   const { t } = useTranslation()
+  // Wave 21: skills + bonuses now rendered as sub-sections inside the parent
+  // tabbed card. Bonuses get a soft divider above them instead of a new card.
   return (
-    <div className="space-y-4 sm:space-y-5">
-      <section className="card-hero p-5 sm:p-6">
-        <SectionHeading>{t('heroes.detail.expeditionSkills', { defaultValue: 'Expedition Skills' })}</SectionHeading>
-        <div className="mt-3 space-y-3">
-          {data.skills.map((s) => <SkillRow key={s.name} skill={s} />)}
-        </div>
-      </section>
+    <div className="space-y-4">
+      <div className="space-y-3">
+        {data.skills.map((s) => <SkillRow key={s.name} skill={s} heroName={heroName} />)}
+      </div>
       {data.bonuses.length > 0 && (
-        <section className="card-hero p-5 sm:p-6">
-          <SectionHeading>
+        <div className="pt-3 border-t border-gold/10">
+          <div className="eyebrow mb-2">
             {t('heroes.detail.expeditionBonuses', { defaultValue: 'Expedition Bonuses' })}
-          </SectionHeading>
-          <ul className="mt-3 divide-y divide-gold/10">
+          </div>
+          <ul className="divide-y divide-gold/10">
             {data.bonuses.map((b) => (
               <li
                 key={b.label}
@@ -295,13 +292,13 @@ function ExpeditionPanel({ data }: { data: HeroData['expedition'] }) {
               </li>
             ))}
           </ul>
-        </section>
+        </div>
       )}
     </div>
   )
 }
 
-function ExclusiveGearSection({ gear }: { gear: ExclusiveGear }) {
+function ExclusiveGearSection({ gear, heroName }: { gear: ExclusiveGear; heroName: string }) {
   const { t } = useTranslation()
   const stats = useMemo(() => collectGearStats(gear.stats, t), [gear.stats, t])
   const [gearTab, setGearTab] = useState<'conquest' | 'expedition'>('conquest')
@@ -380,7 +377,7 @@ function ExclusiveGearSection({ gear }: { gear: ExclusiveGear }) {
           </div>
           <div className="space-y-3">
             {(gearTab === 'conquest' ? conquestGearSkills : expeditionGearSkills).map((s) => (
-              <SkillRow key={s.name} skill={s} />
+              <SkillRow key={s.name} skill={s} heroName={heroName} />
             ))}
             {(gearTab === 'conquest' ? conquestGearSkills : expeditionGearSkills).length === 0 && (
               <p className="text-center text-xs text-ink-mute italic py-4">
@@ -394,7 +391,71 @@ function ExclusiveGearSection({ gear }: { gear: ExclusiveGear }) {
   )
 }
 
-function SkillRow({ skill, showMode = false }: { skill: HeroSkill; showMode?: boolean }) {
+/**
+ * Strip narrative fluff from a scraped skill description so it reads as a
+ * crisp game-mechanic line. Two rules, applied in order:
+ *   1. Strip a leading "{Hero}[s|'s]? " prefix.
+ *   2. If the text contains "followed by …", drop everything before it.
+ *   3. If the text has a ", dealing/increasing/etc" clause at offset ≥35,
+ *      drop the prose lead-in and convert the verb to imperative form.
+ * Short descriptions where the action IS the mechanic (e.g. "Throws her
+ * spear, dealing …") are preserved.
+ *
+ * Wave 21 — Salles' direction: focus only on what the skill DOES, not its
+ * cinematic setup.
+ */
+const EFFECT_VERB_RE =
+  /\b(dealing|increasing|reducing|healing|restoring|boosting|granting|causing|inflicting|recovering|preventing|stunning|knocking|gaining)\b/i
+const IMPERATIVE_MAP: Record<string, string> = {
+  dealing: 'Deal',
+  increasing: 'Increase',
+  reducing: 'Reduce',
+  healing: 'Heal',
+  restoring: 'Restore',
+  boosting: 'Boost',
+  granting: 'Grant',
+  causing: 'Cause',
+  inflicting: 'Inflict',
+  recovering: 'Recover',
+  preventing: 'Prevent',
+  stunning: 'Stun',
+  knocking: 'Knock',
+  gaining: 'Gain',
+}
+
+function simplifyDescription(text: string, heroName: string): string {
+  if (!text) return ''
+  let t = text.trim()
+  // Strip "Hero " or "Hero's " or "Heros " from the start (case-insensitive).
+  const escaped = heroName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  t = t.replace(new RegExp(`^${escaped}(?:'s|s|s')?\\s+`, 'i'), '')
+
+  // Followed-by collapses long narrative leads → keep what's actionable.
+  const fb = t.match(/\bfollowed by\s+/i)
+  if (fb && fb.index !== undefined) {
+    t = t.slice(fb.index + fb[0].length)
+  }
+
+  // Comma + effect verb at offset ≥35 = lead-in is mostly prose; strip it
+  // and convert the verb to imperative.
+  const em = t.match(new RegExp(`,\\s+(${EFFECT_VERB_RE.source.slice(2, -2)})`, 'i'))
+  if (em && em.index !== undefined && em.index >= 35) {
+    const after = t.slice(em.index + 2) // skip ", "
+    t = after.replace(EFFECT_VERB_RE, (m) => IMPERATIVE_MAP[m.toLowerCase()] ?? m)
+  }
+
+  return t.charAt(0).toUpperCase() + t.slice(1)
+}
+
+function SkillRow({
+  skill,
+  heroName,
+  showMode = false,
+}: {
+  skill: HeroSkill
+  heroName: string
+  showMode?: boolean
+}) {
   const { t } = useTranslation()
   return (
     <div className="flex items-start gap-3 rounded-xl border border-gold/10 bg-bg-card/40 p-3">
@@ -430,7 +491,7 @@ function SkillRow({ skill, showMode = false }: { skill: HeroSkill; showMode?: bo
             </span>
           )}
         </div>
-        <p className="mt-1 text-sm text-ink-cream leading-relaxed">{skill.description}</p>
+        <p className="mt-1 text-sm text-ink-cream leading-relaxed">{simplifyDescription(skill.description, heroName)}</p>
         {skill.upgradeTiers.length > 0 && (
           <div className="mt-2">
             <div className="eyebrow text-[10px] mb-1">

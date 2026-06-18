@@ -9,7 +9,6 @@ import {
   ArrowLeft,
   Star,
   BookOpen,
-  Coins,
   PuzzlePiece,
 } from '@phosphor-icons/react'
 import { cn } from '../lib/cn'
@@ -18,14 +17,10 @@ import {
   STAR_SHARD_COSTS,
   SKILL_BOOK_COSTS,
   WIDGET_COSTS,
-  STAR_SHARD_TOTAL_KNOWN,
-  SKILL_BOOK_TOTAL_PER_SKILL,
-  WIDGET_TOTAL,
   skillBookItemName,
   skillBookIcon,
   starShardIcon,
   widgetChestIcon,
-  summarizeHeroCosts,
 } from '../data/hero-upgrade-costs'
 
 // Hero detail — STATIC, data-driven from heroes-data.json. Upgrade Costs is a
@@ -170,6 +165,10 @@ export function HeroDetail() {
                 {hero.sources.join(', ')}
               </p>
             )}
+            {/* Base stats inline in the banner — same visual as the UserHero
+                stat pills on the dashboard so the hero card feels familiar.
+                Wave 19: dropped the separate "BASE STATS" card. */}
+            <BannerStats stats={hero.conquest.baseStats} />
           </div>
         </div>
       </motion.section>
@@ -209,22 +208,44 @@ export function HeroDetail() {
 
 function ConquestPanel({ data }: { data: HeroData['conquest'] }) {
   const { t } = useTranslation()
+  // Wave 19: BASE STATS moved into the hero banner — no separate card here.
   return (
     <div className="space-y-4 sm:space-y-5">
-      <section className="card-hero p-5 sm:p-6">
-        <SectionHeading>{t('heroes.detail.baseStats', { defaultValue: 'Base Stats' })}</SectionHeading>
-        <div className="mt-3 grid grid-cols-3 gap-3">
-          <StatTile label={t('heroes.detail.stat.atk', { defaultValue: 'ATK' })} value={data.baseStats.atk} />
-          <StatTile label={t('heroes.detail.stat.def', { defaultValue: 'DEF' })} value={data.baseStats.def} />
-          <StatTile label={t('heroes.detail.stat.hp', { defaultValue: 'HP' })} value={data.baseStats.hp} />
-        </div>
-      </section>
       <section className="card-hero p-5 sm:p-6">
         <SectionHeading>{t('heroes.detail.conquestSkills', { defaultValue: 'Conquest Skills' })}</SectionHeading>
         <div className="mt-3 space-y-3">
           {data.skills.map((s) => <SkillRow key={s.name} skill={s} />)}
         </div>
       </section>
+    </div>
+  )
+}
+
+/**
+ * Compact ATK / DEF / HP pills, rendered inline in the hero banner.
+ * Matches the UserHero card style on the dashboard — big mono numeral
+ * over a tracked-out small-caps label.
+ */
+function BannerStats({ stats }: { stats: HeroData['conquest']['baseStats'] }) {
+  const { t } = useTranslation()
+  const entries: Array<{ key: string; label: string; value: number | null }> = [
+    { key: 'atk', label: t('heroes.detail.stat.atk', { defaultValue: 'ATK' }), value: stats.atk },
+    { key: 'def', label: t('heroes.detail.stat.def', { defaultValue: 'DEF' }), value: stats.def },
+    { key: 'hp',  label: t('heroes.detail.stat.hp',  { defaultValue: 'HP'  }), value: stats.hp  },
+  ]
+  if (entries.every((e) => e.value == null)) return null
+  return (
+    <div className="mt-1 grid grid-cols-3 gap-3 pt-2 border-t border-gold/15">
+      {entries.map((e) => (
+        <div key={e.key} className="flex flex-col items-start">
+          <span className="font-mono text-xl sm:text-2xl tabular-nums leading-none text-ink-cream">
+            {e.value != null ? e.value.toLocaleString('en-US') : '—'}
+          </span>
+          <span className="mt-1 text-[9px] sm:text-[10px] tracking-[0.28em] uppercase font-semibold text-ink-mute">
+            {e.label}
+          </span>
+        </div>
+      ))}
     </div>
   )
 }
@@ -368,16 +389,8 @@ function SkillRow({ skill, showMode = false }: { skill: HeroSkill; showMode?: bo
   )
 }
 
-function StatTile({ label, value }: { label: string; value: number | null }) {
-  return (
-    <div className="rounded-xl border border-gold/15 bg-bg-card/40 px-3 py-2.5 text-center">
-      <div className="eyebrow text-[10px]">{label}</div>
-      <div className="font-mono text-base sm:text-lg text-gold-soft mt-0.5">
-        {value != null ? value.toLocaleString('en-US') : '—'}
-      </div>
-    </div>
-  )
-}
+// StatTile removed in Wave 19 — base stats now render as <BannerStats /> in
+// the hero banner card. Standalone tile is no longer needed.
 
 function SectionHeading({ children }: { children: React.ReactNode }) {
   return (
@@ -483,276 +496,148 @@ function collectGearStats(
 }
 
 // ─── Upgrade Costs ─────────────────────────────────────────────────────────
-// Three-track upgrade cost panel. Data lives in src/data/hero-upgrade-costs.ts
-// and is the same formula across all heroes — quantity tables don't vary by
-// hero, only the item-name token changes per rarity (and per-hero for the two
-// shard exclusives, Amadeus + Helga).
+// Tabbed cost panel (Stars / Skills / Widgets) — same TabButton interaction
+// as Conquest/Expedition above so the page reads consistently. Widgets tab
+// only renders for Mythic heroes. All editorial footnotes and the KPI
+// summary tiles were dropped in Wave 19 — the cost tables stand on their own.
+
+type CostTab = 'stars' | 'skills' | 'widgets'
 
 function UpgradeCostsSection({ hero }: { hero: HeroData }) {
   const { t } = useTranslation()
-  const summary = useMemo(
-    () =>
-      summarizeHeroCosts({
-        rarity: hero.rarity,
-        name: hero.name,
-        conquestSkillCount: hero.conquest.skills.length,
-        expeditionSkillCount: hero.expedition.skills.length,
-        exclusiveGearName: hero.exclusiveGear?.name ?? null,
-      }),
-    [hero],
-  )
+  const [tab, setTab] = useState<CostTab>('stars')
+  const hasWidgets = hero.rarity === 'mythic'
 
   return (
-    <section className="card-hero card-hero--steel p-5 sm:p-6">
+    <section className="card-hero card-hero--steel p-4 sm:p-5">
       <SectionHeading>
         {t('heroes.detail.upgradeCosts', { defaultValue: 'Upgrade Costs' })}
       </SectionHeading>
 
-      {/* Summary tiles — at-a-glance totals for the full max-out journey.
-          Each tile renders the actual in-game item icon (scraped from
-          kingshotwiki.com) — that's what Salles wants to see, not generic
-          Phosphor glyphs. Phosphor icon kept as eyebrow accent. */}
-      <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-2.5">
-        <CostKpi
-          icon={<Star size={18} weight="duotone" />}
-          itemIcon={starShardIcon(hero.rarity, hero.name)}
-          label={t('heroes.detail.cost.starsTotal', { defaultValue: 'Star Shards' })}
-          qty={summary.starShards.qty}
-          item={summary.starShards.item}
-          tone="gold"
-        />
-        <CostKpi
-          icon={<BookOpen size={18} weight="duotone" />}
-          itemIcon={skillBookIcon(hero.rarity, 'conquest')}
-          label={t('heroes.detail.cost.skillBooksTotal', { defaultValue: 'Skill Books' })}
-          qty={summary.totalSkillBooks}
-          item={t('heroes.detail.cost.skillBooksMixed', { defaultValue: 'mixed conquest + expedition' })}
-          tone="violet"
-        />
-        {summary.widgets ? (
-          <CostKpi
-            icon={<PuzzlePiece size={18} weight="duotone" />}
-            itemIcon={widgetChestIcon(hero.generation)}
-            label={t('heroes.detail.cost.widgetsTotal', { defaultValue: 'Widgets' })}
-            qty={summary.widgets.qty}
-            item={summary.widgets.item}
-            tone="crimson"
-          />
-        ) : (
-          <div className="rounded-xl border border-gold/10 bg-bg-card/40 p-3 flex items-center justify-center text-[10px] uppercase tracking-[0.16em] text-ink-mute text-center">
-            {t('heroes.detail.cost.noWidgets', { defaultValue: 'Widgets — Mythic only' })}
-          </div>
+      {/* Tabs — Stars / Skills / Widgets (Widgets hidden on non-mythic). */}
+      <div className="mt-3 flex flex-wrap items-center gap-2">
+        <TabButton active={tab === 'stars'} onClick={() => setTab('stars')}>
+          <Star size={12} weight="fill" className="mr-1.5 inline" />
+          {t('heroes.detail.cost.tab.stars', { defaultValue: 'Stars' })}
+        </TabButton>
+        <TabButton active={tab === 'skills'} onClick={() => setTab('skills')}>
+          <BookOpen size={12} weight="fill" className="mr-1.5 inline" />
+          {t('heroes.detail.cost.tab.skills', { defaultValue: 'Skills' })}
+        </TabButton>
+        {hasWidgets && (
+          <TabButton active={tab === 'widgets'} onClick={() => setTab('widgets')}>
+            <PuzzlePiece size={12} weight="fill" className="mr-1.5 inline" />
+            {t('heroes.detail.cost.tab.widgets', { defaultValue: 'Widgets' })}
+          </TabButton>
         )}
       </div>
 
-      {/* Star upgrades */}
-      <div className="mt-5">
-        <CostSubHeading
-          icon={<Star size={14} weight="fill" className="text-gold-soft" />}
-          title={t('heroes.detail.cost.starUpgrades', { defaultValue: 'Star Upgrades' })}
-          item={summary.starShards.item}
-          itemIcons={[starShardIcon(hero.rarity, hero.name)]}
-        />
-        <CostTable
-          rows={STAR_SHARD_COSTS.map((tier) => ({
-            label: `★${tier.tier}`,
-            qty: tier.qty,
-            cumulative: tier.cumulative,
-          }))}
-          unit={t('heroes.detail.cost.shards', { defaultValue: 'shards' })}
-          totalLabel={t(
-            'heroes.detail.cost.totalKnown',
-            'Total to ★5 (known): {{qty}} {{item}}',
-            {
-              qty: STAR_SHARD_TOTAL_KNOWN.toLocaleString('en-US'),
-              item: summary.starShards.item,
-            },
-          )}
-          footnote={t(
-            'heroes.detail.cost.tier6Tbc',
-            '★6 cost not yet published by kingshotdata — Salles will update.',
-          )}
-        />
+      {/* Active tab content */}
+      <div className="mt-4">
+        {tab === 'stars' && <StarsPanel hero={hero} />}
+        {tab === 'skills' && <SkillsPanel hero={hero} />}
+        {tab === 'widgets' && hasWidgets && <WidgetsPanel hero={hero} />}
       </div>
-
-      {/* Skill upgrades */}
-      <div className="mt-5">
-        <CostSubHeading
-          icon={<BookOpen size={14} weight="fill" className="text-gold-soft" />}
-          title={t('heroes.detail.cost.skillUpgrades', { defaultValue: 'Skill Upgrades' })}
-          item={t(
-            'heroes.detail.cost.skillItems',
-            '{{conquest}} & {{expedition}}',
-            {
-              conquest: skillBookItemName(hero.rarity, 'conquest'),
-              expedition: skillBookItemName(hero.rarity, 'expedition'),
-            },
-          )}
-          itemIcons={[
-            skillBookIcon(hero.rarity, 'conquest'),
-            skillBookIcon(hero.rarity, 'expedition'),
-          ]}
-        />
-        <CostTable
-          rows={SKILL_BOOK_COSTS.map((s) => ({
-            label: `Lv ${s.from} → ${s.to}`,
-            qty: s.qty,
-            cumulative: null,
-          }))}
-          unit={t('heroes.detail.cost.books', { defaultValue: 'books per skill' })}
-          totalLabel={t(
-            'heroes.detail.cost.skillTotalBreakdown',
-            'Per skill: {{per}} books. Conquest ({{cqty}}× {{citem}}) + Expedition ({{eqty}}× {{eitem}}) = {{total}}',
-            {
-              per: SKILL_BOOK_TOTAL_PER_SKILL,
-              cqty: summary.conquestBooks.qty.toLocaleString('en-US'),
-              citem: summary.conquestBooks.item,
-              eqty: summary.expeditionBooks.qty.toLocaleString('en-US'),
-              eitem: summary.expeditionBooks.item,
-              total: summary.totalSkillBooks.toLocaleString('en-US'),
-            },
-          )}
-          footnote={t(
-            'heroes.detail.cost.skillFootnote',
-            'Quantities are the same across rarities — only the book item changes (Rare / Epic / Mythic × Conquest / Expedition).',
-          )}
-        />
-      </div>
-
-      {/* Widget upgrades (Mythic only) */}
-      {summary.widgets && (
-        <div className="mt-5">
-          <CostSubHeading
-            icon={
-              <PuzzlePiece size={14} weight="fill" className="text-gold-soft" />
-            }
-            title={t('heroes.detail.cost.widgetUpgrades', { defaultValue: 'Widget Upgrades' })}
-            item={summary.widgets.item}
-            itemIcons={[widgetChestIcon(hero.generation)]}
-          />
-          <CostTable
-            rows={WIDGET_COSTS.map((w) => ({
-              label: `Lv ${w.level}`,
-              qty: w.qty,
-              cumulative: WIDGET_COSTS.slice(0, w.level).reduce(
-                (s, c) => s + c.qty,
-                0,
-              ),
-            }))}
-            unit={t('heroes.detail.cost.widgets', { defaultValue: 'widgets' })}
-            totalLabel={t(
-              'heroes.detail.cost.widgetTotal',
-              'Total to max gear: {{qty}} {{item}}',
-              { qty: WIDGET_TOTAL, item: summary.widgets.item },
-            )}
-            footnote={t(
-              'heroes.detail.cost.widgetSources',
-              'Sources: Buccaneer Bounty event, Mystery Shop, Hall of Heroes, Special Events, Packs.',
-            )}
-          />
-        </div>
-      )}
-
-      {/* Confidence note — anchors the data trail for future contributors. */}
-      <p className="mt-5 text-[10px] text-ink-mute italic">
-        <Coins size={11} weight="duotone" className="inline mr-1" />
-        {t(
-          'heroes.detail.cost.dataSource',
-          'Quantities from kingshotdata.com (hero-shards, widgets) and kingshotwiki.com (skill books), confirmed by Salles 2026-06-17.',
-        )}
-      </p>
     </section>
   )
 }
 
-function CostKpi({
-  icon,
-  itemIcon,
-  label,
-  qty,
-  item,
-  tone,
-}: {
-  icon: React.ReactNode
-  /** Public path to the actual in-game item image, e.g. shard png. */
-  itemIcon?: string | null
-  label: string
-  qty: number
-  item: string
-  tone: 'gold' | 'violet' | 'crimson'
-}) {
-  const toneCls = {
-    gold: 'border-gold/30 text-gold-soft',
-    violet: 'border-[rgba(155,140,255,0.30)] text-[rgba(180,165,255,1)]',
-    crimson: 'border-crimson/35 text-crimson-glow',
-  }[tone]
+function StarsPanel({ hero }: { hero: HeroData }) {
+  const itemName = starShardItemNameSafe(hero)
+  const icon = starShardIcon(hero.rarity, hero.name)
   return (
-    <div
-      className={cn(
-        'rounded-xl border bg-bg-card/40 p-3 backdrop-blur-sm relative',
-        toneCls,
-      )}
-    >
-      <div className="flex items-center gap-1.5 text-[10px] uppercase tracking-[0.16em]">
-        {icon}
-        <span className="truncate">{label}</span>
-      </div>
-      <div className="mt-1 flex items-center gap-2">
-        {itemIcon && (
-          <img
-            src={itemIcon}
-            alt={item}
-            loading="lazy"
-            className="h-9 w-9 sm:h-10 sm:w-10 rounded-md object-contain border border-gold/15 bg-bg-deep/50 shrink-0"
-          />
-        )}
-        <span className="font-mono text-lg text-ink-cream">
-          {qty.toLocaleString('en-US')}
-        </span>
-      </div>
-      <div className="mt-1 text-[10px] text-ink-mute truncate" title={item}>
-        {item}
-      </div>
+    <div className="space-y-3">
+      <ItemHeader icon={icon} name={itemName} />
+      <CostTable
+        rows={STAR_SHARD_COSTS.map((tier) => ({
+          label: `★${tier.tier}`,
+          qty: tier.qty,
+          cumulative: tier.cumulative,
+        }))}
+      />
     </div>
   )
 }
 
-function CostSubHeading({
-  icon,
-  title,
-  item,
-  itemIcons,
-}: {
-  icon: React.ReactNode
-  title: string
-  item: string
-  /** Small inline icons rendered after the title — e.g. both skill book
-   *  rarities for the Skill Upgrades sub-section. */
-  itemIcons?: Array<string | null | undefined>
-}) {
+function SkillsPanel({ hero }: { hero: HeroData }) {
   return (
-    <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
-      <span className="inline-flex items-center gap-1.5 font-display-clean text-[12px] uppercase tracking-[0.20em] text-gold-soft">
-        {icon}
-        {title}
-      </span>
-      {itemIcons && itemIcons.filter(Boolean).length > 0 && (
-        <span className="inline-flex items-center gap-1">
-          {itemIcons.filter(Boolean).map((src) => (
-            <img
-              key={src as string}
-              src={src as string}
-              alt=""
-              loading="lazy"
-              className="h-5 w-5 rounded-sm border border-gold/15 bg-bg-deep/50 object-contain"
-            />
-          ))}
-        </span>
-      )}
-      <span className="text-[10px] text-ink-mute">— {item}</span>
+    <div className="space-y-3">
+      <ItemHeader
+        icons={[skillBookIcon(hero.rarity, 'conquest'), skillBookIcon(hero.rarity, 'expedition')]}
+        name={`${skillBookItemName(hero.rarity, 'conquest')} · ${skillBookItemName(hero.rarity, 'expedition')}`}
+      />
+      <CostTable
+        rows={SKILL_BOOK_COSTS.map((s) => ({
+          label: `Lv ${s.from} → ${s.to}`,
+          qty: s.qty,
+          cumulative: null,
+        }))}
+      />
     </div>
   )
 }
+
+function WidgetsPanel({ hero }: { hero: HeroData }) {
+  const gearName = hero.exclusiveGear?.name ?? null
+  const name = gearName ? `${gearName} Widget` : `${hero.name}'s Widget`
+  return (
+    <div className="space-y-3">
+      <ItemHeader icon={widgetChestIcon(hero.generation)} name={name} />
+      <CostTable
+        rows={WIDGET_COSTS.map((w) => ({
+          label: `Lv ${w.level}`,
+          qty: w.qty,
+          cumulative: WIDGET_COSTS.slice(0, w.level).reduce((s, c) => s + c.qty, 0),
+        }))}
+      />
+    </div>
+  )
+}
+
+/** Item icon + name strip rendered at the top of each cost tab. */
+function ItemHeader({
+  icon,
+  icons,
+  name,
+}: {
+  icon?: string | null
+  icons?: Array<string | null | undefined>
+  name: string
+}) {
+  const list = (icons ?? [icon]).filter(Boolean) as string[]
+  return (
+    <div className="flex items-center gap-2.5 rounded-xl border border-gold/12 bg-bg-deep/40 p-2.5">
+      {list.length > 0 && (
+        <div className="flex items-center gap-1.5 shrink-0">
+          {list.map((src) => (
+            <img
+              key={src}
+              src={src}
+              alt=""
+              loading="lazy"
+              className="h-8 w-8 rounded-md object-contain border border-gold/15 bg-bg-deep/60"
+            />
+          ))}
+        </div>
+      )}
+      <span className="text-sm text-ink-cream truncate" title={name}>
+        {name}
+      </span>
+    </div>
+  )
+}
+
+/** Hero shard item name with a safe fallback for the Amadeus/Helga exclusives. */
+function starShardItemNameSafe(hero: HeroData): string {
+  return (
+    starShardIcon(hero.rarity, hero.name)
+      ? `${hero.rarity[0].toUpperCase()}${hero.rarity.slice(1)} General Hero Shard`
+      : `${hero.name} Shards`
+  )
+}
+
+// CostKpi + CostSubHeading removed in Wave 19. The 3-tab UpgradeCostsSection
+// renders the cost tables on their own — no summary tiles, no editorial notes.
 
 interface CostRow {
   label: string
@@ -760,20 +645,15 @@ interface CostRow {
   cumulative: number | null
 }
 
-function CostTable({
-  rows,
-  unit,
-  totalLabel,
-  footnote,
-}: {
-  rows: CostRow[]
-  unit: string
-  totalLabel?: string
-  footnote?: string
-}) {
+/**
+ * Tier / Qty / Cumulative table used inside the cost tabs. No more `unit`
+ * column header label or footnotes — those were noise. The cumulative column
+ * is hidden on mobile to keep the row readable.
+ */
+function CostTable({ rows }: { rows: CostRow[] }) {
   const { t } = useTranslation()
   return (
-    <div className="mt-2 overflow-hidden rounded-xl border border-gold/12 bg-bg-deep/40">
+    <div className="overflow-hidden rounded-xl border border-gold/12 bg-bg-deep/40">
       <table className="w-full text-left text-sm">
         <thead className="border-b border-gold/10 text-[10px] uppercase tracking-[0.18em] text-ink-mute">
           <tr>
@@ -781,7 +661,7 @@ function CostTable({
               {t('heroes.detail.cost.col.tier', { defaultValue: 'Tier' })}
             </th>
             <th className="px-3 py-1.5 text-right font-medium">
-              {t('heroes.detail.cost.col.qty', { defaultValue: 'Qty' })} ({unit})
+              {t('heroes.detail.cost.col.qty', { defaultValue: 'Qty' })}
             </th>
             <th className="px-3 py-1.5 text-right font-medium hidden sm:table-cell">
               {t('heroes.detail.cost.col.cumulative', { defaultValue: 'Cumulative' })}
@@ -793,29 +673,15 @@ function CostTable({
             <tr key={row.label} className="text-ink-cream">
               <td className="px-3 py-1.5 font-mono text-gold-soft">{row.label}</td>
               <td className="px-3 py-1.5 text-right font-mono">
-                {row.qty === null ? (
-                  <span className="text-ink-mute italic">
-                    {t('heroes.detail.cost.tbc', { defaultValue: 'TBC' })}
-                  </span>
-                ) : (
-                  row.qty.toLocaleString('en-US')
-                )}
+                {row.qty == null ? '—' : row.qty.toLocaleString('en-US')}
               </td>
               <td className="px-3 py-1.5 text-right font-mono text-ink-mute hidden sm:table-cell">
-                {row.cumulative === null
-                  ? '—'
-                  : row.cumulative.toLocaleString('en-US')}
+                {row.cumulative == null ? '—' : row.cumulative.toLocaleString('en-US')}
               </td>
             </tr>
           ))}
         </tbody>
       </table>
-      {(totalLabel || footnote) && (
-        <div className="border-t border-gold/10 bg-bg-deep/60 px-3 py-2 text-[10px] text-ink-mute space-y-0.5">
-          {totalLabel && <p className="text-ink-cream/85">{totalLabel}</p>}
-          {footnote && <p>{footnote}</p>}
-        </div>
-      )}
     </div>
   )
 }

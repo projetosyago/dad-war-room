@@ -19,17 +19,15 @@ export type SkillMode = 'conquest' | 'expedition'
 
 // ─── Star upgrade costs ──────────────────────────────────────────────────────
 // Hero Shards needed to advance each star tier. Values from
-// kingshotdata.com/database/hero-shards/.
-// NOTE: tier 6 quantity is not exposed on kingshotdata's public table — the
-// row is left as `null` so the UI can render an explicit "TBC" cell instead
-// of a wrong number. Update once Salles confirms the in-game value.
+// kingshotdata.com/database/hero-shards/. The game caps heroes at ★5 — no
+// ★6 in-game (per Salles 2026-06-17), so the table stops at tier 5.
 export interface StarTierCost {
   /** Tier you are ADVANCING TO (★1 means going from base to ★1). */
   tier: number
-  /** Shards required to take this single step. `null` = unknown. */
-  qty: number | null
+  /** Shards required to take this single step. */
+  qty: number
   /** Running total to reach this tier from base. */
-  cumulative: number | null
+  cumulative: number
 }
 
 export const STAR_SHARD_COSTS: StarTierCost[] = [
@@ -38,10 +36,9 @@ export const STAR_SHARD_COSTS: StarTierCost[] = [
   { tier: 3, qty: 115, cumulative: 165 },
   { tier: 4, qty: 300, cumulative: 465 },
   { tier: 5, qty: 600, cumulative: 1065 },
-  { tier: 6, qty: null, cumulative: null }, // TBC — not on kingshotdata table yet
 ]
 
-/** Total shards to reach the highest tier with a known cost. */
+/** Total shards to reach the max tier (★5). */
 export const STAR_SHARD_TOTAL_KNOWN = 1065
 
 /**

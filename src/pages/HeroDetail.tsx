@@ -22,6 +22,7 @@ import {
   starShardIcon,
   widgetChestIcon,
 } from '../data/hero-upgrade-costs'
+import { ChainedImage } from '../components/ui/ChainedImage'
 
 // Hero detail — STATIC, data-driven from heroes-data.json. Upgrade Costs is a
 // deliberate placeholder (data isn't scraped; curated by hand).
@@ -580,37 +581,6 @@ function RarityChip({ rarity }: { rarity: Rarity }) {
     >
       {label}
     </span>
-  )
-}
-
-/**
- * Image that walks down a list of candidate URLs (skipping nulls), showing the
- * first that loads. Falls back to a provided node when all candidates fail.
- * Used so we prefer the locally bundled asset and fall through to the scraped
- * remote portrait, then to an icon placeholder.
- */
-function ChainedImage({
-  sources, alt, className, fallback,
-}: {
-  sources: Array<string | null | undefined>
-  alt: string
-  className?: string
-  fallback: React.ReactNode
-}) {
-  const candidates = useMemo(
-    () => sources.filter((s): s is string => typeof s === 'string' && s.length > 0),
-    [sources],
-  )
-  const [index, setIndex] = useState(0)
-  if (candidates.length === 0 || index >= candidates.length) return <>{fallback}</>
-  return (
-    <img
-      src={candidates[index]}
-      alt={alt}
-      loading="lazy"
-      className={cn('select-none', className)}
-      onError={() => setIndex((i) => i + 1)}
-    />
   )
 }
 

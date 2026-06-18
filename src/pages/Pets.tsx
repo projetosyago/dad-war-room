@@ -3,7 +3,8 @@ import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { PawPrint, WarningCircle } from '@phosphor-icons/react'
 import { supabase } from '../lib/supabase'
-import { ImageWithFallback } from '../components/ui/ImageWithFallback'
+import { ChainedImage } from '../components/ui/ChainedImage'
+import { catalogueIconPath } from '../lib/catalogueIcon'
 import { cn } from '../lib/cn'
 
 interface PetRow {
@@ -150,17 +151,16 @@ function PetCard({ pet }: { pet: PetRow }) {
       aria-label={t('catalogue.pets.cardAria', { name: pet.name, gen: pet.generation })}
     >
       <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
-        {pet.portrait_url ? (
-          <ImageWithFallback
-            src={pet.portrait_url}
-            alt={pet.name}
-            className="h-full w-full object-cover"
-          />
-        ) : (
-          <div className="flex h-full w-full items-center justify-center bg-bg-card/60">
-            <PawPrint size={36} weight="duotone" className="text-gold-soft/60" />
-          </div>
-        )}
+        <ChainedImage
+          sources={[catalogueIconPath('pets', pet.slug), pet.portrait_url]}
+          alt={pet.name}
+          className="h-full w-full object-cover"
+          fallback={
+            <div className="flex h-full w-full items-center justify-center bg-bg-card/60">
+              <PawPrint size={36} weight="duotone" className="text-gold-soft/60" />
+            </div>
+          }
+        />
 
         <div
           aria-hidden

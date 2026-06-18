@@ -17,7 +17,10 @@ This file catalogues **debt** — code that works but creates future cost. For k
 **Fix path**: see **ROADMAP.md P0.1 + P1.1**. Awaiting Claude.ai/design mockup approval.
 **Origin**: Waves 16-22.
 
-### 🏗 P1.2 · `AdminAccounts.tsx` at 706 lines, single file
+### 🏗 P1.2 (TECH_DEBT) · `AdminAccounts.tsx` at 706 lines, single file
+*Numbering note: TECH_DEBT priorities are independent of ROADMAP priorities.
+ROADMAP.md has its own P1.2 (apply icon library across pages). When citing,
+specify which doc: "TECH_DEBT P1.2" vs "ROADMAP P1.2".*
 **File**: `src/pages/admin/AdminAccounts.tsx`.
 **Problem**: project's own rule is "files ≤ 300 lines". This file is 2.3× over. Holds Create / List / Edit / Roles management for the admin's most critical workflow. High blast-radius if it breaks.
 **Cost of leaving it**: every change is risky. Hard to grep for sub-features. Tests have to cover the whole monolith to be useful.

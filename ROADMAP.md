@@ -18,10 +18,13 @@ These must be resolved before substantial new development. Skipping them creates
 **Effort**: M (1 week) once a design is approved.
 **Owner-ask required**: the design choice. Engineering work is unlocked the moment a mockup is approved.
 
-### P0.2 · Rotate exposed Vercel token
-**Status**: token was pasted in chat during Wave 10 for non-interactive deploy.
-**Risk**: low (token-scoped, project-scoped), but should rotate as hygiene.
-**Effort**: S (10 minutes). User goes to Vercel → Settings → Tokens → revoke + regenerate.
+### ~~P0.2 · Rotate exposed Vercel token~~ — DEFERRED (owner decision 2026-06-18)
+**Status**: token was pasted in chat during Wave 10.
+**Decision**: explicitly NOT rotating. Salles 2026-06-18: "é um projeto de uma
+aliança de um jogo, pelo amor de deus." Risk model doesn't justify the hygiene
+cost. Future sessions: don't re-propose unless the token is actually abused
+OR the project's threat model changes (e.g., goes commercial / multi-tenant).
+**Effort skipped**: S (10 min).
 
 ### P0.3 · `claude.ai/design` access for `/design-sync`
 **Status**: skill is loaded; auth not configured in current CLI session (CLAUDE_CODE_OAUTH_TOKEN can't be expanded with design scopes).
@@ -40,12 +43,54 @@ These must be resolved before substantial new development. Skipping them creates
 **Effort**: M (1 week)
 **Dependencies**: P0.1
 
-### P1.2 · Apply the 459-icon library across remaining pages
-Currently the icon library is built but only Hero Detail uses it deeply. Spread:
-- Pets / Masters / TroopTiers catalogues — use scraped portraits from `kingshot/`
-- Members page — use hero portraits as avatar fallbacks (already mostly done; verify edge cases)
-- Event icons in NextEventCard + UpcomingEvents — swap to `kingshot/events/*.webp` from current legacy assets
-**Effort**: M (1 week)
+### P1.2 · Apply the 459-icon library across remaining pages (2 fases)
+**Reality check (per Wave 24 nova-feature analysis 2026-06-18)**: Pets/Masters/
+TroopTiers are NOT placeholders — they are functional DB-connected catalogue
+pages that already render from `portrait_url`/`icon_url` columns, falling back
+to Phosphor icons (PawPrint/Crown/Shield) when those are null. The actual gap
+is that the fallback chain doesn't try the local kingshot library first.
+
+**Available art on disk**: events (32 webp), pets (14), masters (4 — cassia,
+pan, roman, valora). TroopTiers has NO kingshot art (legacy `/images/tiers/`
++ DB `troop_tier_branch_icons`).
+
+**Risk discovered**: slug vs filename divergence (e.g. DB `cesars-fury` vs
+disk `cesares-fury`). Mitigation: read-only Supabase query as step 0 to map
+divergences before implementation.
+
+**Phase 1 — DONE (wave 24)** (revised + Salles-approved 2026-06-18):
+- **Masters**: real swap — 4/4 kingshot art matches DB slugs (cassia, pan,
+  roman, valora). Implement local-first chain.
+- **Pets**: wire dormant — `pets` table is empty (0 rows) but 14 webp on disk.
+  Implement the fallback now in PetCard so it just works when admin populates
+  the table later. Zero retrabalho.
+- **Events**: REMOVED from P1.2 scope. The `kingshot/events/` library (32
+  webp) contains GENERIC game events (Castle Battle, Lunar Festival,
+  Champagne Fair, etc) — different taxonomy from the alliance's curated 8
+  events in the DB (Bear 1/2, KvK, Cesar's Fury, etc). The naming
+  coincidence "cesars-fury" (DB) vs "cesares-fury" (disk) is NOT a match —
+  forcing it would mix concepts.
+- **Members**: verify-only — `resolveAvatarUrl` already correct.
+- **New helper**: `src/lib/catalogueIcon.ts` mirroring `heroAvatar.ts` pattern
+- **Shared primitive**: extracted `<ChainedImage>` from HeroDetail into `src/components/ui/ChainedImage.tsx` (Masters + Pets now reuse it; also trims HeroDetail's over-cap line count — TECH_DEBT P2.3)
+- **No migration, no new repo/hook, no new i18n keys**
+- Effort: S (1-2 days, scope smaller after analysis)
+
+**Spinoff (future, P3-P4)**: the unused `kingshot/events/` 32-icon library is
+inventory for a "Game Events Reference" page — a separate feature that
+catalogues all generic Kingshot events (not just the alliance's curated 8).
+Different taxonomy, different page, different P-item.
+
+**Phase 2 — BLOCKED (TroopTiers): no source art found.** Both sources
+investigated 2026-06-18 (wave 24): kingshotwiki.com `/items/` has no troop/tier
+category (only consumables/cosmetics — basic-resource, pet, chest, hero, master,
+truegold, …); the kingshotdata.com scrape has no tier bucket; local manifests
+have none. Existing tier art = legacy `/images/tiers/tg1-8.png` (truegold only,
+no T1-T10) + DB `troop_tier_branch_icons` (per-branch).
+**Decision pending (owner)** — (a) keep legacy `/images/tiers/*` indefinitely, or
+(b) commission custom tier art. Do not start Phase 2 until decided.
+- If later unblocked: extend scraper → `public/images/icons/kingshot/troop-tiers/`,
+  update `src/data/icon-library.ts` (new group + manifest), wire TierGroup.
 
 ### P1.3 · Login rate-limit configuration
 **Status**: planned in Wave 10 audit, not yet configured.

@@ -409,6 +409,38 @@ OR for small additions (1-5 keys), write them manually in all 11 locales in one 
 
 ---
 
+## 26. Claude Code permission matchers: Bash uses prefix, file tools use glob
+
+**Wave 23 (setup debug).**
+
+**Symptom**: tried to make `Bash(node scripts/:*)` cover sub-folders like
+`scripts/i18n/translate.mjs`. Recommended switching to `Bash(node scripts/**)`
+for "recursion". Wrong — `**` is glob syntax for `Read`/`Write`/`Edit` matchers,
+NOT for `Bash`. `Bash(node scripts/**)` would either fail to match anything
+or behave inconsistently across versions.
+
+**Why it actually works without `**`**: `Bash(prefix:*)` uses simple string-prefix
+matching. `:*` is "anything after the prefix", which naturally INCLUDES sub-paths
+like `scripts/i18n/translate.mjs`. The pattern `Bash(node scripts/:*)` already
+covers all sub-folders. No `**` needed.
+
+**Empirical proof**: tested with `node scripts/i18n/translate.mjs --help` —
+ran without prompt, despite being in a sub-folder. The agent that
+discovered this also accidentally triggered the script (it doesn't have a
+`--help` flag and started actually translating to es/pt locales) — see
+recovery procedure below.
+
+**Rule for next time**:
+- File matchers (`Read(/path/**)`, `Write(/path/**)`, `Edit(/path/**)`): use glob
+- Bash matchers (`Bash(cmd prefix:*)`): use simple prefix only
+- Never use `**` inside a `Bash(...)` pattern
+
+**Recovery from accidental translate.mjs run**: if it writes to locale files
+unintentionally, `git checkout -- src/locales/{file}.json` reverts. Parity
+check after (`node -e` script in HANDOFF_GUIDE §4) confirms 1208 keys × 11.
+
+---
+
 ## Meta-lesson: the documentation file pays for itself in ~3 prevented re-debugs
 
 **This file.** Wave 23 (today).

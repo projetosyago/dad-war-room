@@ -3,7 +3,8 @@ import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { Crown, WarningCircle } from '@phosphor-icons/react'
 import { supabase } from '../lib/supabase'
-import { ImageWithFallback } from '../components/ui/ImageWithFallback'
+import { ChainedImage } from '../components/ui/ChainedImage'
+import { catalogueIconPath } from '../lib/catalogueIcon'
 
 interface MasterRow {
   id: string
@@ -113,17 +114,16 @@ function MasterCard({ master }: { master: MasterRow }) {
     <article className="card-hero card-hero--portrait overflow-hidden">
       <div className="grid grid-cols-[100px_1fr] sm:grid-cols-[120px_1fr] gap-4 p-4 sm:p-5">
         <div className="relative aspect-[3/4] overflow-hidden rounded-xl border border-gold/30">
-          {master.portrait_url ? (
-            <ImageWithFallback
-              src={master.portrait_url}
-              alt={master.name}
-              className="h-full w-full object-cover"
-            />
-          ) : (
-            <div className="flex h-full w-full items-center justify-center bg-bg-card/60">
-              <Crown size={28} weight="duotone" className="text-gold-soft/60" />
-            </div>
-          )}
+          <ChainedImage
+            sources={[catalogueIconPath('masters', master.slug), master.portrait_url]}
+            alt={master.name}
+            className="h-full w-full object-cover"
+            fallback={
+              <div className="flex h-full w-full items-center justify-center bg-bg-card/60">
+                <Crown size={28} weight="duotone" className="text-gold-soft/60" />
+              </div>
+            }
+          />
         </div>
 
         <div className="min-w-0 flex flex-col gap-1.5">
